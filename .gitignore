@@ -1,0 +1,114 @@
+# ============================================================================
+# DATOS PESADOS / SENSIBLES (NO subir a GitHub — usar Releases o bucket externo)
+# ============================================================================
+
+# Microdatos CNPV 2018 (DANE, 1.2 GB)
+microdatos_cnpv2018/
+05_Antioquia.zip
+
+# Shapefile viviendas DANE (306 MB descomprimido + 6.6 MB .rar)
+Viviendas_2018/
+Viviendas 2018_Comprimido.rar
+
+# Geodatabase ONIC (209 MB + 97 MB .rar)
+my_smt_cmp_gdb_ambito_onic/
+my_smt_cmp_gdb_ambito_onic.rar
+
+# RUV victimas (8.6 GB, datos personales anonimizados — solo por release con auth)
+victimas/
+
+# Referencia/docs grandes (>10 MB)
+manual*corona*minujin*.pdf
+visor-pueblos-indigenas-*.xlsx
+
+# ============================================================================
+# VERSIONES LEGACY DEL PROYECTO
+# ============================================================================
+onic-smt-dashboard/
+onic-smt-dashboard-FIXED/
+onic-smt-dashboard discapacidad/
+
+# ============================================================================
+# SECRETOS
+# ============================================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+!.env.example
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg
+
+# ============================================================================
+# NODE.JS
+# ============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+frontend/dist/
+frontend/.vite/
+
+# ============================================================================
+# IDE / OS
+# ============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+# CLAUDE CODE
+# ============================================================================
+.claude/
+
+# ============================================================================
+# TEMPORAL / LOGS
+# ============================================================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ============================================================================
+# ARCHIVOS GRANDES (>100 MB hard limit GitHub)
+# ============================================================================
+*.rar
+*.7z
+*.tar.gz
+# .zip permitido solo si < 50 MB, verificar antes de agregar
+
+# ============================================================================
+# OUTPUTS GENERADOS
+# ============================================================================
+backend/salidas/
+backend/output/
+exports/
+*.csv.gz
+*.parquet

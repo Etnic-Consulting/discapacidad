@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: smt-onic-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: smt_onic
+      POSTGRES_USER: smt_admin
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-smt_onic_2026}
+    ports:
+      - "5450:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/sql/001_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U smt_admin -d smt_onic"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    shm_size: '2gb'
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: smt-onic-api
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+asyncpg://smt_admin:${DB_PASSWORD:-smt_onic_2026}@db:5432/smt_onic
+      DATABASE_URL_SYNC: postgresql://smt_admin:${DB_PASSWORD:-smt_onic_2026}@db:5432/smt_onic
+      CORS_ORIGINS: '["http://localhost:5173","http://localhost:3000"]'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/app:/code/app
+      - ./backend/scripts:/code/scripts
+      - ${DISCAPACIDAD_DIR:-C:/Users/wilso/Desktop/discapacidad}:/data/discapacidad:ro
+      - ${VICTIMAS_DIR:-D:/1.Programacion/1.onic-smt-dashboard/victimas}:/data/victimas:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  pgdata:
+    driver: local
