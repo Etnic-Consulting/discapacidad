@@ -32,7 +32,7 @@ services:
       DATABASE_URL_SYNC: postgresql://smt_admin:${DB_PASSWORD:-smt_onic_2026}@db:5432/smt_onic
       CORS_ORIGINS: '["http://localhost:5173","http://localhost:3000"]'
     ports:
-      - "8000:8000"
+      - "8095:8000"
     volumes:
       - ./backend/app:/code/app
       - ./backend/scripts:/code/scripts
