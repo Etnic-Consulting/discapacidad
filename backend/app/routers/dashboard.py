@@ -311,8 +311,22 @@ async def brecha_certificacion(
         """))
         registrados = r2.scalar() or 0
 
-        # Step 3: SMT characterized
-        r3 = await db.execute(text("SELECT COUNT(*) FROM smt.caracterizacion"))
+        # Step 3: SMT characterized — legacy caracterizacion + formulario nuevo
+        # Filtra por depto si aplica (caracterizacion tiene cod_dpto, respuestas_formulario tambien)
+        smt_params = {}
+        if cod_dpto:
+            smt_filter_car = "WHERE LEFT(cod_mpio, 2) = :cod_dpto"
+            smt_filter_resp = "WHERE cod_dpto = :cod_dpto AND cpli_consentimiento = 'si'"
+            smt_params["cod_dpto"] = cod_dpto
+        else:
+            smt_filter_car = ""
+            smt_filter_resp = "WHERE cpli_consentimiento = 'si'"
+        r3 = await db.execute(text(f"""
+            SELECT
+              (SELECT COUNT(*) FROM smt.caracterizacion {smt_filter_car})
+              + (SELECT COUNT(*) FROM smt.respuestas_formulario {smt_filter_resp})
+            AS total
+        """), smt_params)
         smt_count = r3.scalar() or 0
 
         # Estimate indigenous proportion of RLCPD (~15% nationally)
@@ -325,8 +339,8 @@ async def brecha_certificacion(
                 {"label": "Poblacion indigena total", "valor": int(row1["pob_total"]), "fuente": "CNPV 2018"},
                 {"label": "Con capacidades diversas", "valor": int(row1["pob_disc"]), "fuente": "CNPV 2018"},
                 {"label": "Registrados RLCPD (est. indigena)", "valor": rlcpd_indigena, "fuente": "RLCPD/MinSalud"},
-                {"label": "Caracterizados SMT-ONIC", "valor": smt_count if not cod_dpto else 0, "fuente": "SMT-ONIC 2026"},
-                {"label": "Con certificado oficial (est.)", "valor": certificados if not cod_dpto else 0, "fuente": "SMT-ONIC, calculado"},
+                {"label": "Caracterizados SMT-ONIC", "valor": smt_count, "fuente": "SMT-ONIC 2026"},
+                {"label": "Con certificado oficial (est.)", "valor": certificados, "fuente": "SMT-ONIC, calculado"},
             ]
         }
     except Exception as e:
@@ -422,3 +436,339 @@ async def smt_resumen(
     except Exception as e:
         logger.error("Error en smt_resumen: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/panorama-kpis")
+async def panorama_kpis(
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_pueblo: str | None = Query(None),
+    cod_resguardo: str | None = Query(None),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC (NORTE, OCCIDENTE, CENTRO - ORIENTE, AMAZONIA, ORINOQUIA)"),
+    db: AsyncSession = Depends(get_db),
+):
+    """KPIs consolidados del Panorama. Filtrables por macro/dpto/mpio/pueblo/resguardo.
+
+    Fuentes:
+      - total_personas / prevalencia / pob_total: cnpv.prevalencia_etnia_* / pueblo.disc_nacional / cnpv.disc_resguardo;
+        para macro se agrega via smt_geo.resguardos (mpios de la zona).
+      - pueblos: count distinct pueblo.pueblo_municipio dentro del scope
+      - caracterizados_smt / cobertura_smt: smt.respuestas_formulario con cpli='si' (live source),
+        filtrado por cod_dpto/cod_mpio/cod_pueblo o por mpios del resguardo/macro
+      - brecha_certificacion: calculado en vivo desde respuestas_formulario cert_cd
+      - victimas_conflicto / pueblos_con_victimas: victimas.universo filtrable
+    """
+    try:
+        # --- pob_total, pob_disc, tasa segun nivel ---
+        total_personas = 0
+        pob_total = 0
+        prevalencia = 0.0
+        scope = "nacional"
+        resguardo_mpios: list[str] = []
+        macro_mpios: list[str] = []
+
+        # Si se pasó cod_macro, resolver lista de mpios de la zona (usa smt_geo.resguardos.macro)
+        if cod_macro:
+            r = await db.execute(
+                text("""
+                    SELECT DISTINCT mpio_cdpmp
+                    FROM smt_geo.resguardos
+                    WHERE UPPER(TRIM(macro)) = UPPER(TRIM(:cm))
+                      AND mpio_cdpmp IS NOT NULL
+                """),
+                {"cm": cod_macro},
+            )
+            macro_mpios = [x[0] for x in r.fetchall()]
+
+        resguardo_pueblo_onic: str | None = None
+        # cod_macro tiene precedencia más baja que dpto/mpio/pueblo/resguardo
+        if cod_resguardo:
+            scope = "resguardo"
+            r = await db.execute(
+                text("""
+                    SELECT con_cap_diversas, pob_total_visor, tasa_x_1000
+                    FROM cnpv.disc_resguardo
+                    WHERE cod_resguardo = :cr AND periodo = '2018'
+                    LIMIT 1
+                """),
+                {"cr": cod_resguardo},
+            )
+            row = r.first()
+            if row:
+                total_personas = int(row[0] or 0)
+                pob_total = int(row[1] or 0)
+                prevalencia = float(row[2] or 0)
+            rm = await db.execute(
+                text("""
+                    SELECT DISTINCT mpio_cdpmp, pueblo_onic
+                    FROM smt_geo.resguardos
+                    WHERE ccdgo_terr = :cr
+                """),
+                {"cr": cod_resguardo},
+            )
+            rows_sg = rm.fetchall()
+            resguardo_mpios = [x[0] for x in rows_sg if x[0]]
+            for x in rows_sg:
+                if x[1]:
+                    resguardo_pueblo_onic = x[1]
+                    break
+        elif cod_pueblo:
+            scope = "pueblo"
+            r = await db.execute(
+                text("""
+                    SELECT COALESCE(SUM(poblacion),0) AS pob_total
+                    FROM pueblo.pueblo_municipio
+                    WHERE cod_pueblo::text = :cp
+                """),
+                {"cp": cod_pueblo},
+            )
+            row = r.first()
+            pob_total = int(row[0] or 0) if row else 0
+            r2 = await db.execute(
+                text("""
+                    SELECT con_discapacidad, total, tasa_x_1000
+                    FROM pueblo.disc_nacional
+                    WHERE cod_pueblo::text = :cp AND periodo = '2018'
+                    LIMIT 1
+                """),
+                {"cp": cod_pueblo},
+            )
+            row2 = r2.first()
+            if row2:
+                total_personas = int(row2[0] or 0)
+                pob_total = int(row2[1] or 0) or pob_total
+                prevalencia = float(row2[2] or 0)
+        elif cod_mpio:
+            scope = "mpio"
+            r = await db.execute(
+                text("""
+                    SELECT pob_total, pob_disc, tasa_x_1000
+                    FROM cnpv.prevalencia_etnia_mpio
+                    WHERE cod_mpio = :cm AND grupo_etnico = 'Indigena' AND periodo = '2018'
+                    LIMIT 1
+                """),
+                {"cm": cod_mpio},
+            )
+            row = r.first()
+            if row:
+                pob_total = int(row[0] or 0)
+                total_personas = int(row[1] or 0)
+                prevalencia = float(row[2] or 0)
+        elif cod_dpto:
+            scope = "dpto"
+            r = await db.execute(
+                text("""
+                    SELECT pob_total, pob_disc, tasa_x_1000
+                    FROM cnpv.prevalencia_etnia_dpto
+                    WHERE cod_dpto = :cd AND grupo_etnico = 'Indigena' AND periodo = '2018'
+                    LIMIT 1
+                """),
+                {"cd": cod_dpto},
+            )
+            row = r.first()
+            if row:
+                pob_total = int(row[0] or 0)
+                total_personas = int(row[1] or 0)
+                prevalencia = float(row[2] or 0)
+        elif cod_macro and macro_mpios:
+            scope = "macro"
+            r = await db.execute(
+                text("""
+                    SELECT COALESCE(SUM(pob_total),0)  AS pob_total,
+                           COALESCE(SUM(pob_disc),0)   AS pob_disc
+                    FROM cnpv.prevalencia_etnia_mpio
+                    WHERE cod_mpio = ANY(:mpios)
+                      AND grupo_etnico = 'Indigena'
+                      AND periodo = '2018'
+                """),
+                {"mpios": macro_mpios},
+            )
+            row = r.first()
+            if row:
+                pob_total = int(row[0] or 0)
+                total_personas = int(row[1] or 0)
+                prevalencia = round(1000.0 * total_personas / pob_total, 2) if pob_total else 0.0
+        else:
+            r = await db.execute(
+                text("""
+                    SELECT pob_total, pob_disc, tasa_x_1000
+                    FROM cnpv.resumen_nacional_etnico
+                    WHERE grupo_etnico = 'Indigena' AND periodo = '2018'
+                    LIMIT 1
+                """)
+            )
+            row = r.first()
+            if row:
+                pob_total = int(row[0] or 0)
+                total_personas = int(row[1] or 0)
+                prevalencia = float(row[2] or 0)
+
+        # --- pueblos (count distinct) ---
+        if cod_resguardo:
+            if resguardo_mpios:
+                r = await db.execute(
+                    text("""
+                        SELECT COUNT(DISTINCT cod_pueblo)
+                        FROM pueblo.pueblo_municipio
+                        WHERE cod_mpio = ANY(:mpios) AND periodo = '2018' AND poblacion > 0
+                    """),
+                    {"mpios": resguardo_mpios},
+                )
+                pueblos_count = int(r.scalar() or 0)
+            else:
+                pueblos_count = 0
+        elif cod_pueblo:
+            pueblos_count = 1
+        elif cod_mpio:
+            r = await db.execute(
+                text("""
+                    SELECT COUNT(DISTINCT cod_pueblo)
+                    FROM pueblo.pueblo_municipio
+                    WHERE cod_mpio = :cm AND periodo = '2018'
+                """),
+                {"cm": cod_mpio},
+            )
+            pueblos_count = int(r.scalar() or 0)
+        elif cod_dpto:
+            r = await db.execute(
+                text("""
+                    SELECT COUNT(DISTINCT cod_pueblo)
+                    FROM pueblo.pueblo_municipio
+                    WHERE LEFT(cod_mpio::text, 2) = :cd AND periodo = '2018'
+                """),
+                {"cd": cod_dpto},
+            )
+            pueblos_count = int(r.scalar() or 0)
+        elif cod_macro and macro_mpios:
+            r = await db.execute(
+                text("""
+                    SELECT COUNT(DISTINCT cod_pueblo)
+                    FROM pueblo.pueblo_municipio
+                    WHERE cod_mpio = ANY(:mpios) AND periodo = '2018' AND poblacion > 0
+                """),
+                {"mpios": macro_mpios},
+            )
+            pueblos_count = int(r.scalar() or 0)
+        else:
+            r = await db.execute(
+                text("""
+                    SELECT COUNT(DISTINCT cod_pueblo)
+                    FROM pueblo.pueblo_municipio
+                    WHERE periodo = '2018'
+                """)
+            )
+            pueblos_count = int(r.scalar() or 0)
+
+        # --- caracterizados SMT y brecha certificacion ---
+        # Fuente en vivo: smt.respuestas_formulario (consentimiento 'si').
+        # A medida que entren formularios web, los KPIs se recalculan automaticamente.
+        # Aplicable a TODOS los scopes (nacional / macro / dpto / mpio / pueblo / resguardo).
+        s_params: dict = {}
+        s_filtros = ["cpli_consentimiento = 'si'"]
+        if cod_resguardo and resguardo_mpios:
+            s_filtros.append("cod_mpio = ANY(:rmpios)")
+            s_params["rmpios"] = resguardo_mpios
+        if cod_macro and macro_mpios and not cod_resguardo:
+            s_filtros.append("cod_mpio = ANY(:mmpios)")
+            s_params["mmpios"] = macro_mpios
+        if cod_dpto:
+            s_filtros.append("cod_dpto = :cd")
+            s_params["cd"] = cod_dpto
+        if cod_mpio:
+            s_filtros.append("cod_mpio = :cm")
+            s_params["cm"] = cod_mpio
+        if cod_pueblo:
+            s_filtros.append("cod_pueblo = :cp")
+            s_params["cp"] = cod_pueblo
+        s_where = "WHERE " + " AND ".join(s_filtros)
+
+        r = await db.execute(
+            text(f"SELECT COUNT(*) FROM smt.respuestas_formulario {s_where}"),
+            s_params,
+        )
+        caracterizados_smt = int(r.scalar() or 0)
+
+        # Cobertura: caracterizados_smt como % de personas con capacidades diversas en el scope
+        cobertura_smt = (
+            round(caracterizados_smt / total_personas * 100, 2)
+            if total_personas
+            else None
+        )
+
+        # Brecha de certificacion: % de respuestas con cert_cd vacio o distinto de 'si'
+        # Sobre el universo caracterizado en el scope. Si caracterizados_smt = 0, brecha = None.
+        if caracterizados_smt > 0:
+            r = await db.execute(
+                text(f"""
+                    SELECT
+                      COUNT(*) FILTER (
+                        WHERE COALESCE(NULLIF(TRIM(LOWER(datos->>'cert_cd')), ''), 'sin_dato')
+                              NOT IN ('si','sí','yes','true')
+                      ) AS sin_cert
+                    FROM smt.respuestas_formulario {s_where}
+                """),
+                s_params,
+            )
+            sin_cert = int(r.scalar() or 0)
+            brecha_certificacion = round(100.0 * sin_cert / caracterizados_smt, 2)
+        else:
+            brecha_certificacion = None
+
+        # --- victimas conflicto (filtrable) ---
+        v_params: dict = {}
+        v_filtros = []
+        if cod_resguardo and resguardo_mpios:
+            v_filtros.append("cod_mpio_ocurrencia = ANY(:rmpios)")
+            v_params["rmpios"] = resguardo_mpios
+        if cod_macro and macro_mpios and not cod_resguardo:
+            v_filtros.append("cod_mpio_ocurrencia = ANY(:vmmpios)")
+            v_params["vmmpios"] = macro_mpios
+        if cod_dpto:
+            v_filtros.append("LEFT(cod_mpio_ocurrencia, 2) = :cd")
+            v_params["cd"] = cod_dpto
+        if cod_mpio:
+            v_filtros.append("cod_mpio_ocurrencia = :cm")
+            v_params["cm"] = cod_mpio
+        if cod_pueblo:
+            v_filtros.append("cod_pueblo_imputado = :cp")
+            v_params["cp"] = cod_pueblo
+        v_where = ("WHERE " + " AND ".join(v_filtros)) if v_filtros else ""
+        r = await db.execute(
+            text(f"SELECT COUNT(*) FROM victimas.universo {v_where}"),
+            v_params,
+        )
+        victimas_conflicto = int(r.scalar() or 0)
+
+        r = await db.execute(
+            text(f"""
+                SELECT COUNT(DISTINCT pueblo_imputado)
+                FROM victimas.universo
+                {v_where}
+                {'AND' if v_filtros else 'WHERE'} pueblo_imputado IS NOT NULL
+            """),
+            v_params,
+        )
+        pueblos_con_victimas = int(r.scalar() or 0)
+
+        return {
+            "scope": scope,
+            "filtros": {
+                "cod_dpto": cod_dpto,
+                "cod_mpio": cod_mpio,
+                "cod_pueblo": cod_pueblo,
+                "cod_resguardo": cod_resguardo,
+                "cod_macro": cod_macro,
+            },
+            "total_personas": total_personas,
+            "pob_total": pob_total,
+            "pueblos": pueblos_count,
+            "prevalencia": round(prevalencia, 2),
+            "caracterizados_smt": caracterizados_smt,
+            "cobertura_smt": cobertura_smt,
+            "brecha_certificacion": brecha_certificacion,
+            "victimas_conflicto": victimas_conflicto,
+            "pueblos_con_victimas": pueblos_con_victimas,
+        }
+    except Exception as e:
+        logger.error("Error en panorama_kpis: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Error consultando KPIs: {str(e)}")

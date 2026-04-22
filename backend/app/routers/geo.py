@@ -146,6 +146,27 @@ async def listar_resguardos(
 # ---- SMT-ONIC spatial layers (smt_geo schema, loaded via geopandas) ----
 
 
+@router.get("/macrorregiones")
+async def listar_macrorregiones(db: AsyncSession = Depends(get_db)):
+    """Lista de las 5 macrorregiones ONIC con conteo de municipios asociados."""
+    try:
+        result = await db.execute(text("""
+            SELECT m.id, m.macro,
+                   COUNT(DISTINCT r.mpio_cdpmp) AS municipios,
+                   COUNT(DISTINCT r.ccdgo_terr) AS resguardos,
+                   COUNT(DISTINCT r.pueblo_onic) AS pueblos
+            FROM smt_geo.macrorregiones m
+            LEFT JOIN smt_geo.resguardos r ON r.macro = m.macro
+            GROUP BY m.id, m.macro
+            ORDER BY m.id
+        """))
+        rows = [dict(r._mapping) for r in result]
+        return {"total": len(rows), "data": rows}
+    except Exception as e:
+        logger.error("Error en listar_macrorregiones: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Error consultando macrorregiones: {str(e)}")
+
+
 @router.get("/smt/macrorregiones")
 async def get_macrorregiones(db: AsyncSession = Depends(get_db)):
     """GeoJSON of 5 ONIC macroregions."""

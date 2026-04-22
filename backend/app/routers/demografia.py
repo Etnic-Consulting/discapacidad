@@ -1243,3 +1243,297 @@ async def piramide_disc_por_tipo(
     except Exception as e:
         logger.error("Error en piramide_disc_tipo('%s'): %s", cod_pueblo, e, exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# ---------------------------------------------------------------------------
+# Piramides AGREGADAS NACIONAL — suma sobre todos los pueblos indigenas
+# ---------------------------------------------------------------------------
+AGE_GROUPS_VISOR = [
+    '0-4','5-9','10-14','15-19','20-24','25-29','30-34','35-39',
+    '40-44','45-49','50-54','55-59','60-64','65-69','70-74','75-79','80-84','85+',
+]
+AGE_GROUPS_PUEBLO = [
+    '00-04','05-09','10-14','15-19','20-24','25-29','30-34','35-39',
+    '40-44','45-49','50-54','55-59','60-64','65-69','70-74','75-79','80-84','85+',
+]
+
+
+@router.get("/piramide-nacional")
+async def piramide_nacional(
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_pueblo: str | None = Query(None),
+    db: AsyncSession = Depends(get_db),
+):
+    """Piramide poblacional indigena (CNPV 2018).
+    Sin filtro -> agregada nacional.
+    cod_pueblo -> exacto (piramide_pueblo filtrada).
+    cod_dpto/cod_mpio -> escalada por share de pob_pueblo en area.
+    """
+    try:
+        # Build filter: share per pueblo in area
+        if cod_pueblo:
+            result = await db.execute(text("""
+                SELECT sexo, edad, SUM(COALESCE(poblacion_2018,0)) AS valor
+                FROM visor_dane.piramide_pueblo
+                WHERE cod_pueblo::text = :cp
+                GROUP BY sexo, edad
+            """), {"cp": str(cod_pueblo)})
+        elif cod_mpio or cod_dpto:
+            # Weighted: for each pueblo, scale national piramide by (pob_in_area / pob_national_pueblo)
+            where_area = "pm.cod_mpio = :area" if cod_mpio else "LEFT(pm.cod_mpio, 2) = :area"
+            area_val = cod_mpio if cod_mpio else cod_dpto
+            result = await db.execute(text(f"""
+                WITH share AS (
+                    SELECT pm.cod_pueblo,
+                           SUM(pm.poblacion)::float / NULLIF(SUM(SUM(pm.poblacion)) OVER (PARTITION BY pm.cod_pueblo), 0) AS w
+                    FROM pueblo.pueblo_municipio pm
+                    WHERE {where_area}
+                    GROUP BY pm.cod_pueblo
+                ),
+                national AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_nat
+                    FROM pueblo.pueblo_municipio pm
+                    GROUP BY pm.cod_pueblo
+                ),
+                area_pob AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_area
+                    FROM pueblo.pueblo_municipio pm
+                    WHERE {where_area}
+                    GROUP BY pm.cod_pueblo
+                )
+                SELECT pp.sexo, pp.edad,
+                       SUM(COALESCE(pp.poblacion_2018,0) * ap.pob_area::float / NULLIF(n.pob_nat,0))::int AS valor
+                FROM visor_dane.piramide_pueblo pp
+                JOIN area_pob ap ON ap.cod_pueblo = pp.cod_pueblo::text
+                JOIN national n ON n.cod_pueblo = pp.cod_pueblo::text
+                GROUP BY pp.sexo, pp.edad
+            """), {"area": area_val})
+        else:
+            result = await db.execute(text("""
+                SELECT sexo, edad, SUM(COALESCE(poblacion_2018,0)) AS valor
+                FROM visor_dane.piramide_pueblo
+                GROUP BY sexo, edad
+            """))
+        rows = [dict(r._mapping) for r in result]
+        hombres, mujeres = {}, {}
+        for r in rows:
+            key = r['edad']
+            if key == '85-121':
+                key = '85+'
+            if r['sexo'] == 'HOMBRE':
+                hombres[key] = hombres.get(key, 0) + int(r['valor'] or 0)
+            elif r['sexo'] == 'MUJER':
+                mujeres[key] = mujeres.get(key, 0) + int(r['valor'] or 0)
+        total_h = sum(hombres.values())
+        total_m = sum(mujeres.values())
+        total = total_h + total_m
+        pyramid = []
+        for ag in AGE_GROUPS_VISOR:
+            h = hombres.get(ag, 0)
+            m = mujeres.get(ag, 0)
+            pyramid.append({
+                'grupo_edad': ag,
+                'hombres': -h,
+                'mujeres': m,
+                'hombres_abs': h,
+                'mujeres_abs': m,
+                'pct_hombres': round(h / total * 100, 2) if total > 0 else 0,
+                'pct_mujeres': round(m / total * 100, 2) if total > 0 else 0,
+            })
+        return {
+            'cod_pueblo': cod_pueblo or 'NACIONAL',
+            'cod_dpto': cod_dpto,
+            'cod_mpio': cod_mpio,
+            'pueblo': 'Nacional indigena' if not cod_pueblo else f'Pueblo {cod_pueblo}',
+            'total': total,
+            'total_hombres': total_h,
+            'total_mujeres': total_m,
+            'razon_masculinidad': round(total_h / total_m * 100, 1) if total_m > 0 else 0,
+            'piramide': pyramid,
+        }
+    except Exception as e:
+        logger.error("Error en piramide_nacional: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/piramide-disc-nacional")
+async def piramide_disc_nacional(
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_pueblo: str | None = Query(None),
+    db: AsyncSession = Depends(get_db),
+):
+    """Piramide de personas con capacidades diversas.
+    Sin filtro -> nacional. cod_pueblo -> exacto. dpto/mpio -> escalada por share.
+    """
+    try:
+        if cod_pueblo:
+            result = await db.execute(text("""
+                SELECT grupo_edad, sexo, SUM(valor) AS valor
+                FROM pueblo.piramide_disc
+                WHERE periodo = '2018' AND cod_pueblo = :cp
+                GROUP BY grupo_edad, sexo
+            """), {"cp": str(cod_pueblo)})
+        elif cod_mpio or cod_dpto:
+            where_area = "pm.cod_mpio = :area" if cod_mpio else "LEFT(pm.cod_mpio, 2) = :area"
+            area_val = cod_mpio if cod_mpio else cod_dpto
+            result = await db.execute(text(f"""
+                WITH national AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_nat
+                    FROM pueblo.pueblo_municipio pm
+                    GROUP BY pm.cod_pueblo
+                ),
+                area_pob AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_area
+                    FROM pueblo.pueblo_municipio pm
+                    WHERE {where_area}
+                    GROUP BY pm.cod_pueblo
+                )
+                SELECT pd.grupo_edad, pd.sexo,
+                       SUM(pd.valor * ap.pob_area::float / NULLIF(n.pob_nat,0))::int AS valor
+                FROM pueblo.piramide_disc pd
+                JOIN area_pob ap ON ap.cod_pueblo = pd.cod_pueblo
+                JOIN national n ON n.cod_pueblo = pd.cod_pueblo
+                WHERE pd.periodo = '2018'
+                GROUP BY pd.grupo_edad, pd.sexo
+            """), {"area": area_val})
+        else:
+            result = await db.execute(text("""
+                SELECT grupo_edad, sexo, SUM(valor) AS valor
+                FROM pueblo.piramide_disc
+                WHERE periodo = '2018'
+                GROUP BY grupo_edad, sexo
+            """))
+        rows = [dict(r._mapping) for r in result]
+        hombres = {r['grupo_edad']: int(r['valor']) for r in rows if r['sexo'] == 'Hombre'}
+        mujeres = {r['grupo_edad']: int(r['valor']) for r in rows if r['sexo'] == 'Mujer'}
+        total_h = sum(hombres.values())
+        total_m = sum(mujeres.values())
+        total = total_h + total_m
+        piramide = []
+        for ag in AGE_GROUPS_PUEBLO:
+            h = hombres.get(ag, 0)
+            m = mujeres.get(ag, 0)
+            piramide.append({
+                'grupo_edad': ag,
+                'hombres': -h,
+                'mujeres': m,
+                'hombres_abs': h,
+                'mujeres_abs': m,
+                'pct_hombres': round(h / total * 100, 2) if total > 0 else 0,
+                'pct_mujeres': round(m / total * 100, 2) if total > 0 else 0,
+            })
+        return {
+            'cod_pueblo': cod_pueblo or 'NACIONAL',
+            'cod_dpto': cod_dpto,
+            'cod_mpio': cod_mpio,
+            'tipo': 'capacidades_diversas',
+            'total': total,
+            'total_hombres': total_h,
+            'total_mujeres': total_m,
+            'razon_masculinidad': round(total_h / total_m * 100, 1) if total_m > 0 else 0,
+            'piramide': piramide,
+        }
+    except Exception as e:
+        logger.error("Error en piramide_disc_nacional: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/piramide-disc-tipo-nacional")
+async def piramide_disc_tipo_nacional(
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_pueblo: str | None = Query(None),
+    db: AsyncSession = Depends(get_db),
+):
+    """Piramide apilada por tipo de limitacion.
+    Sin filtro -> nacional. cod_pueblo -> exacto. dpto/mpio -> escalada por share.
+    """
+    try:
+        if cod_pueblo:
+            result = await db.execute(text("""
+                SELECT tipo_limitacion, grupo_edad, sexo, SUM(valor) AS valor
+                FROM pueblo.piramide_disc_tipo
+                WHERE periodo = '2018' AND cod_pueblo = :cp
+                GROUP BY tipo_limitacion, grupo_edad, sexo
+            """), {"cp": str(cod_pueblo)})
+        elif cod_mpio or cod_dpto:
+            where_area = "pm.cod_mpio = :area" if cod_mpio else "LEFT(pm.cod_mpio, 2) = :area"
+            area_val = cod_mpio if cod_mpio else cod_dpto
+            result = await db.execute(text(f"""
+                WITH national AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_nat
+                    FROM pueblo.pueblo_municipio pm
+                    GROUP BY pm.cod_pueblo
+                ),
+                area_pob AS (
+                    SELECT pm.cod_pueblo, SUM(pm.poblacion) AS pob_area
+                    FROM pueblo.pueblo_municipio pm
+                    WHERE {where_area}
+                    GROUP BY pm.cod_pueblo
+                )
+                SELECT pt.tipo_limitacion, pt.grupo_edad, pt.sexo,
+                       SUM(pt.valor * ap.pob_area::float / NULLIF(n.pob_nat,0))::int AS valor
+                FROM pueblo.piramide_disc_tipo pt
+                JOIN area_pob ap ON ap.cod_pueblo = pt.cod_pueblo
+                JOIN national n ON n.cod_pueblo = pt.cod_pueblo
+                WHERE pt.periodo = '2018'
+                GROUP BY pt.tipo_limitacion, pt.grupo_edad, pt.sexo
+            """), {"area": area_val})
+        else:
+            result = await db.execute(text("""
+                SELECT tipo_limitacion, grupo_edad, sexo, SUM(valor) AS valor
+                FROM pueblo.piramide_disc_tipo
+                WHERE periodo = '2018'
+                GROUP BY tipo_limitacion, grupo_edad, sexo
+            """))
+        rows = [dict(r._mapping) for r in result]
+        if not rows:
+            raise HTTPException(status_code=404, detail="No hay datos nacionales por tipo")
+        tipos = sorted(set(r['tipo_limitacion'] for r in rows))
+        grand_total = sum(int(r['valor']) for r in rows)
+        piramide = []
+        for ag in AGE_GROUPS_PUEBLO:
+            entry = {'grupo_edad': ag}
+            total_h_ag = 0
+            total_m_ag = 0
+            for tipo in tipos:
+                h = sum(int(r['valor']) for r in rows if r['grupo_edad'] == ag and r['sexo'] == 'Hombre' and r['tipo_limitacion'] == tipo)
+                m = sum(int(r['valor']) for r in rows if r['grupo_edad'] == ag and r['sexo'] == 'Mujer' and r['tipo_limitacion'] == tipo)
+                entry[f"h_{tipo}"] = -h
+                entry[f"m_{tipo}"] = m
+                entry[f"abs_h_{tipo}"] = h
+                entry[f"abs_m_{tipo}"] = m
+                total_h_ag += h
+                total_m_ag += m
+            entry['total_h'] = total_h_ag
+            entry['total_m'] = total_m_ag
+            piramide.append(entry)
+        resumen_tipos = []
+        for tipo in tipos:
+            total_tipo = sum(int(r['valor']) for r in rows if r['tipo_limitacion'] == tipo)
+            h_tipo = sum(int(r['valor']) for r in rows if r['tipo_limitacion'] == tipo and r['sexo'] == 'Hombre')
+            m_tipo = sum(int(r['valor']) for r in rows if r['tipo_limitacion'] == tipo and r['sexo'] == 'Mujer')
+            resumen_tipos.append({
+                'tipo': tipo,
+                'total': total_tipo,
+                'hombres': h_tipo,
+                'mujeres': m_tipo,
+                'pct': round(total_tipo / grand_total * 100, 1) if grand_total > 0 else 0,
+            })
+        resumen_tipos.sort(key=lambda x: x['total'], reverse=True)
+        return {
+            'cod_pueblo': cod_pueblo or 'NACIONAL',
+            'cod_dpto': cod_dpto,
+            'cod_mpio': cod_mpio,
+            'total': grand_total,
+            'tipos': tipos,
+            'resumen_tipos': resumen_tipos,
+            'piramide': piramide,
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("Error en piramide_disc_tipo_nacional: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))

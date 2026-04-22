@@ -94,7 +94,7 @@ async def victimas_por_pueblo_ranking(
         params: dict = {"limit": limit}
         filtro_dpto = ""
         if cod_dpto:
-            filtro_dpto = "AND cod_dpto = :cod_dpto"
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
             params["cod_dpto"] = cod_dpto
 
         result = await db.execute(
@@ -135,7 +135,7 @@ async def victimas_por_hecho(
         params: dict = {}
         filtro_dpto = ""
         if cod_dpto:
-            filtro_dpto = "AND cod_dpto = :cod_dpto"
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
             params["cod_dpto"] = cod_dpto
 
         result = await db.execute(
@@ -173,7 +173,7 @@ async def victimas_por_tipo(
         params: dict = {}
         filtro_dpto = ""
         if cod_dpto:
-            filtro_dpto = "AND cod_dpto = :cod_dpto"
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
             params["cod_dpto"] = cod_dpto
 
         result = await db.execute(
