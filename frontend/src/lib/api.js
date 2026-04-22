@@ -4,6 +4,18 @@
    ============================================ */
 
 const BASE = '/api/v1';
+const TOKEN_KEY = 'smt_onic_auth';
+
+function readToken() {
+  try {
+    const raw = localStorage.getItem(TOKEN_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return parsed?.token || null;
+  } catch {
+    return null;
+  }
+}
 
 async function request(path, params = {}) {
   const url = new URL(path, window.location.origin);
@@ -13,7 +25,12 @@ async function request(path, params = {}) {
     }
   });
 
-  const res = await fetch(url.toString());
+  const token = readToken();
+  const headers = token ? { Authorization: `Bearer ${token}` } : {};
+  const res = await fetch(url.toString(), { headers });
+  if (res.status === 401) {
+    try { localStorage.removeItem(TOKEN_KEY); } catch { /* ignore */ }
+  }
   if (!res.ok) {
     const text = await res.text().catch(() => '');
     throw new Error(`API ${res.status}: ${text || res.statusText}`);
@@ -47,6 +64,37 @@ export function fetchSalud(codDpto) {
 
 export function fetchBrecha(codDpto) {
   return request(`${BASE}/dashboard/brecha`, { cod_dpto: codDpto });
+}
+
+export function fetchPanoramaKpis(params = {}) {
+  return request(`${BASE}/dashboard/panorama-kpis`, {
+    cod_dpto: params.cod_dpto,
+    cod_mpio: params.cod_mpio,
+    cod_pueblo: params.cod_pueblo,
+    cod_resguardo: params.cod_resguardo,
+    cod_macro: params.cod_macro,
+  });
+}
+
+export function fetchMacrorregiones() {
+  return request(`${BASE}/geo/macrorregiones`);
+}
+
+// ---- Formulario: territorios cascada ----
+export function fetchFormMacros() {
+  return request(`${BASE}/formulario/territorios/macros`);
+}
+export function fetchFormDptos({ cod_macro, q } = {}) {
+  return request(`${BASE}/formulario/territorios/dptos`, { cod_macro, q });
+}
+export function fetchFormMpios({ cod_dpto, q } = {}) {
+  return request(`${BASE}/formulario/territorios/mpios`, { cod_dpto, q });
+}
+export function fetchFormResguardos({ cod_mpio, cod_dpto, q } = {}) {
+  return request(`${BASE}/formulario/territorios/resguardos`, { cod_mpio, cod_dpto, q });
+}
+export function fetchFormComunidades({ cod_mpio, cod_dpto, cod_resguardo, q } = {}) {
+  return request(`${BASE}/formulario/territorios/comunidades`, { cod_mpio, cod_dpto, cod_resguardo, q });
 }
 
 export function fetchFiltrosCascada(codDpto, codMpio) {
@@ -208,4 +256,29 @@ export function fetchPiramideCapDiversas(codPueblo) {
 
 export function fetchPiramideTipoDisc(codPueblo) {
   return request(`/api/v1/demografia/piramide-disc-tipo/${codPueblo}`);
+}
+
+// ---- Piramides nacionales (agregadas o filtradas por dpto/mpio/pueblo) ----
+export function fetchPiramideNacional(params = {}) {
+  return request(`${BASE}/demografia/piramide-nacional`, {
+    cod_dpto: params.cod_dpto,
+    cod_mpio: params.cod_mpio,
+    cod_pueblo: params.cod_pueblo,
+  });
+}
+
+export function fetchPiramideDiscNacional(params = {}) {
+  return request(`${BASE}/demografia/piramide-disc-nacional`, {
+    cod_dpto: params.cod_dpto,
+    cod_mpio: params.cod_mpio,
+    cod_pueblo: params.cod_pueblo,
+  });
+}
+
+export function fetchPiramideDiscTipoNacional(params = {}) {
+  return request(`${BASE}/demografia/piramide-disc-tipo-nacional`, {
+    cod_dpto: params.cod_dpto,
+    cod_mpio: params.cod_mpio,
+    cod_pueblo: params.cod_pueblo,
+  });
 }

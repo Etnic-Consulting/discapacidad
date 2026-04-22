@@ -206,6 +206,12 @@ export default function ProyeccionesPage() {
         </p>
       </div>
 
+      {isError && (
+        <div style={{padding:'10px 14px',margin:'0 0 12px',background:'#FFF4E5',border:'1px solid #F2A24A',borderRadius:6,color:'#7A4A00',fontSize:'0.9rem'}}>
+          Mostrando datos de respaldo. La conexion con la API fallo o no hay datos historicos disponibles.
+        </div>
+      )}
+
       {/* Data source label */}
       <div style={{
         fontSize: '0.82rem',

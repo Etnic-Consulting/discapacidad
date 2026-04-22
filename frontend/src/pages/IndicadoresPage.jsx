@@ -158,7 +158,7 @@ const ESTADO_BADGES = {
   seguimiento: { bg: '#e8e8e8', color: 'var(--color-gray-600)', label: 'Seguimiento' },
   calculable: { bg: '#e0e7ff', color: '#6366F1', label: 'Calculable' },
   requiere_cruce: { bg: '#fff3cd', color: '#b8860b', label: 'Requiere cruce' },
-  sin_valor: { bg: '#f0f0f0', color: '#999', label: 'Sin valor' },
+  sin_valor: { bg: '#f0f0f0', color: '#999', label: 'En desarrollo' },
 };
 
 /* Semaphore circle colors by status */
@@ -183,18 +183,19 @@ export default function IndicadoresPage() {
   const { dpto, pueblo, dptoNombre, puebloNombre } = useFilters();
   const [selectedIndicador, setSelectedIndicador] = useState(null);
   const { data: apiIndicadores, isLoading, isError } = useIndicadores();
-  const { data: apiValores } = useIndicadorValores('2018', 'nacional');
+  const nivelGeo = pueblo ? 'pueblo' : dpto ? 'dpto' : 'nacional';
+  const codGeoFiltro = pueblo || dpto || null;
+  const { data: apiValores } = useIndicadorValores('2018', nivelGeo);
   const { data: apiSerie } = useIndicadorSerie(selectedIndicador || undefined);
 
-  // Build a map of cod_indicador -> valor from the valores endpoint
+  // Build a map of cod_indicador -> valor (filtrado por cod_geo cuando aplica)
   const valoresMap = {};
   if (apiValores?.data) {
     for (const v of apiValores.data) {
-      if (v.cod_indicador && v.valor != null) {
-        // Keep the first (or nacional-level) value per indicator
-        if (!valoresMap[v.cod_indicador]) {
-          valoresMap[v.cod_indicador] = v;
-        }
+      if (!v.cod_indicador || v.valor == null) continue;
+      if (codGeoFiltro && v.cod_geo !== codGeoFiltro) continue;
+      if (!valoresMap[v.cod_indicador]) {
+        valoresMap[v.cod_indicador] = v;
       }
     }
   }
@@ -387,22 +388,40 @@ export default function IndicadoresPage() {
                     }}
                   >
                     <td style={{ padding: '10px 14px', borderBottom: '1px solid var(--color-gray-200)', textAlign: 'center', width: '36px' }}>
-                      <span
-                        style={{
-                          display: 'inline-block',
-                          width: '14px',
-                          height: '14px',
-                          borderRadius: '50%',
-                          background: SEMAPHORE_COLORS[ind.estado] || SEMAPHORE_COLORS.sin_valor,
-                          boxShadow: '0 0 3px rgba(0,0,0,0.15)',
-                        }}
-                        title={
-                          ind.estado === 'calculable' || ind.valor ? 'Tiene valor calculado'
+                      {(() => {
+                        const semaTitle = ind.estado === 'calculable' || ind.valor
+                          ? 'Tiene valor calculado'
                           : ind.estado === 'requiere_cruce' ? 'Requiere cruce con otra fuente'
                           : ind.estado === 'critico' ? 'Problema critico de calidad'
-                          : 'Sin valor calculado aun'
-                        }
-                      />
+                          : 'Indicador en desarrollo (calculo pendiente)';
+                        const semaIcon = ind.estado === 'calculable' || ind.valor
+                          ? '✓'
+                          : ind.estado === 'requiere_cruce' ? '◐'
+                          : ind.estado === 'critico' ? '✖'
+                          : '○';
+                        return (
+                          <span
+                            role="img"
+                            aria-label={semaTitle}
+                            title={semaTitle}
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              width: '18px',
+                              height: '18px',
+                              borderRadius: '50%',
+                              background: SEMAPHORE_COLORS[ind.estado] || SEMAPHORE_COLORS.sin_valor,
+                              boxShadow: '0 0 3px rgba(0,0,0,0.15)',
+                              color: '#fff',
+                              fontSize: '0.7rem',
+                              lineHeight: 1,
+                            }}
+                          >
+                            <span aria-hidden="true">{semaIcon}</span>
+                          </span>
+                        );
+                      })()}
                     </td>
                     <td style={{ padding: '10px 14px', borderBottom: '1px solid var(--color-gray-200)', fontWeight: 600, fontFamily: 'monospace', fontSize: '0.82rem' }}>
                       {ind.id}

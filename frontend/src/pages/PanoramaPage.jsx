@@ -14,8 +14,10 @@ import GlobalSelector from '../components/GlobalSelector';
 import FilterBreadcrumb from '../components/FilterBreadcrumb';
 import CertificationFunnel from '../components/CertificationFunnel';
 import DidYouKnow from '../components/DidYouKnow';
+import NationalPyramids from '../components/NationalPyramids';
+import Term from '../components/Term';
 import { useFilters } from '../context/FilterContext';
-import { useResumenNacional, usePrevalenciaDpto, usePerfilPueblo, usePueblos, useBrecha, usePerfilResguardo } from '../hooks/useApi';
+import { useResumenNacional, usePrevalenciaDpto, usePerfilPueblo, usePueblos, useBrecha, usePerfilResguardo, useDificultades, usePiramideDiscNacional, usePanoramaKpis } from '../hooks/useApi';
 import { sortAndMergeAgeGroups } from '../lib/ageGroups';
 
 /* ---- Mock Data (real numbers from CNPV 2018 / RUV analysis) ---- */
@@ -307,13 +309,26 @@ function ResguardoPreview({ codResguardo, resguardoNombre }) {
 }
 
 export default function PanoramaPage() {
-  const { dpto, mpio, pueblo, resguardo, dptoNombre, mpioNombre, puebloNombre, resguardoNombre } = useFilters();
+  const { dpto, mpio, pueblo, resguardo, macro, dptoNombre, mpioNombre, puebloNombre, resguardoNombre } = useFilters();
   const [compareNacional, setCompareNacional] = useState(false);
 
   const { data: apiData, isLoading, isError } = useResumenNacional();
   const { data: dptoData } = usePrevalenciaDpto(dpto ? 'Indigena' : undefined);
   const { data: apiPueblos } = usePueblos();
   const { data: brechaData } = useBrecha(dpto || undefined);
+  const { data: dificultadesData } = useDificultades(dpto || undefined, 'Indigena');
+  const { data: piramideDiscData } = usePiramideDiscNacional({
+    cod_dpto: dpto || undefined,
+    cod_mpio: mpio || undefined,
+    cod_pueblo: pueblo || undefined,
+  });
+  const { data: kpisData } = usePanoramaKpis({
+    cod_dpto: dpto || undefined,
+    cod_mpio: mpio || undefined,
+    cod_pueblo: pueblo || undefined,
+    cod_resguardo: resguardo || undefined,
+    cod_macro: macro || undefined,
+  });
 
   // API returns { periodo, data: [{ grupo_etnico, pob_total, pob_disc, prevalencia_pct, tasa_x_1000 }] }
   const resumen = apiData?.data || [];
@@ -327,7 +342,17 @@ export default function PanoramaPage() {
 
   const pueblosCount = apiPueblos?.total ?? MOCK_KPI.pueblos;
 
-  const kpi = selectedDptoRow
+  const kpi = kpisData
+    ? {
+        totalPersonas: kpisData.total_personas,
+        pueblos: kpisData.pueblos,
+        prevalencia: kpisData.prevalencia?.toFixed(1) ?? MOCK_KPI.prevalencia,
+        coberturaRegistro: kpisData.cobertura_smt != null ? kpisData.cobertura_smt.toFixed(2) : null,
+        brechaCertificacion: kpisData.brecha_certificacion != null ? kpisData.brecha_certificacion.toFixed(1) : null,
+        victimasConflicto: kpisData.victimas_conflicto,
+        dptoNombre: dptoNombre,
+      }
+    : selectedDptoRow
     ? {
         totalPersonas: selectedDptoRow.pob_disc || selectedDptoRow.pob_total || 0,
         pueblos: pueblosCount,
@@ -358,6 +383,8 @@ export default function PanoramaPage() {
 
   const scopeLabel = dptoNombre
     ? (mpioNombre ? `Departamento: ${dptoNombre}, Municipio: ${mpioNombre}` : `Departamento: ${dptoNombre}`)
+    : macro
+    ? `Macrorregión ONIC: ${macro}`
     : 'Nacional';
 
   return (
@@ -457,15 +484,15 @@ export default function PanoramaPage() {
           color="var(--color-gold)"
         />
         <KPICard
-          title="Cobertura RLCPD"
-          value={`${kpi.coberturaRegistro || MOCK_KPI.coberturaRegistro}%`}
-          subtitle="Registro certificado"
+          title="Cobertura SMT-ONIC"
+          value={kpi.coberturaRegistro != null ? `${kpi.coberturaRegistro}%` : 'N/D'}
+          subtitle={kpi.coberturaRegistro != null ? 'Caracterizados / censo 2018' : 'Solo nivel nacional'}
           color="var(--color-green-mid)"
         />
         <KPICard
           title="Brecha certificacion"
-          value={`${kpi.brechaCertificacion || MOCK_KPI.brechaCertificacion}%`}
-          subtitle="Sin certificar"
+          value={kpi.brechaCertificacion != null ? `${kpi.brechaCertificacion}%` : 'N/D'}
+          subtitle={kpi.brechaCertificacion != null ? 'Sin certificar' : 'Sin caracterizados en el filtro'}
           color="var(--color-red)"
         />
         <KPICard
@@ -559,23 +586,36 @@ export default function PanoramaPage() {
 
         <div style={cardStyle}>
           <div style={chartTitle}>Dificultades funcionales (Washington Group)</div>
-          <ResponsiveContainer width="100%" height={300}>
-            <RadarChart data={DIFICULTADES_WG} cx="50%" cy="50%" outerRadius="70%">
-              <PolarGrid stroke="#e8e8e8" />
-              <PolarAngleAxis dataKey="dificultad" tick={{ fontSize: 11 }} />
-              <PolarRadiusAxis tick={{ fontSize: 10 }} />
-              <Radar
-                name="% personas"
-                dataKey="value"
-                stroke="#02432D"
-                fill="#02AB44"
-                fillOpacity={0.3}
-              />
-              <Tooltip formatter={(v) => [`${v}%`, 'Prevalencia']} />
-            </RadarChart>
-          </ResponsiveContainer>
+          {(() => {
+            const rows = dificultadesData?.data || [];
+            const indigenaRows = rows.filter((r) => r.grupo_etnico === 'Indigena');
+            const radarData = indigenaRows.length > 0
+              ? indigenaRows.map((r) => ({
+                  dificultad: r.dificultad.charAt(0).toUpperCase() + r.dificultad.slice(1),
+                  value: parseFloat(r.tasa_x_1000) || 0,
+                  fullMark: 300,
+                }))
+              : DIFICULTADES_WG;
+            return (
+              <ResponsiveContainer width="100%" height={300}>
+                <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
+                  <PolarGrid stroke="#e8e8e8" />
+                  <PolarAngleAxis dataKey="dificultad" tick={{ fontSize: 11 }} />
+                  <PolarRadiusAxis tick={{ fontSize: 10 }} />
+                  <Radar
+                    name="Tasa x 1000"
+                    dataKey="value"
+                    stroke="#02432D"
+                    fill="#02AB44"
+                    fillOpacity={0.3}
+                  />
+                  <Tooltip formatter={(v) => [`${v}‰`, 'Tasa']} />
+                </RadarChart>
+              </ResponsiveContainer>
+            );
+          })()}
           <div style={{ fontSize: '0.72rem', color: 'var(--color-gray-400)', textAlign: 'center', marginTop: '4px' }}>
-            (Datos nacionales CNPV 2018)
+            {dificultadesData?.data?.length > 0 ? `CNPV 2018 · ${scopeLabel}` : '(Datos nacionales CNPV 2018)'}
           </div>
         </div>
       </div>
@@ -613,55 +653,75 @@ export default function PanoramaPage() {
         </p>
       </div>
 
-      {/* Charts Row 2: Sex + Age */}
-      <div className="grid-row grid-2">
-        <div style={cardStyle}>
-          <div style={chartTitle}>Distribucion por sexo</div>
-          <ResponsiveContainer width="100%" height={280}>
-            <PieChart>
-              <Pie
-                data={SEXO_DATA}
-                dataKey="value"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                innerRadius={60}
-                outerRadius={100}
-                paddingAngle={3}
-                label={({ name, value }) => `${name}: ${value}%`}
-              >
-                {SEXO_DATA.map((entry, i) => (
-                  <Cell key={i} fill={entry.color} />
-                ))}
-              </Pie>
-              <Tooltip formatter={(v) => [`${v}%`, 'Porcentaje']} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-          <div style={{ fontSize: '0.72rem', color: 'var(--color-gray-400)', textAlign: 'center', marginTop: '4px' }}>
-            (Datos nacionales CNPV 2018)
-          </div>
-        </div>
+      {/* Charts Row 2: Sex + Age (derivados de la piramide con capacidades diversas) */}
+      {(() => {
+        const piramide = piramideDiscData?.piramide || [];
+        const totalH = piramideDiscData?.total_hombres || 0;
+        const totalM = piramideDiscData?.total_mujeres || 0;
+        const totalPD = totalH + totalM;
+        const sexoData = totalPD > 0
+          ? [
+              { name: 'Hombres', value: Number(((totalH / totalPD) * 100).toFixed(1)), absoluto: totalH, color: '#4A90D9' },
+              { name: 'Mujeres', value: Number(((totalM / totalPD) * 100).toFixed(1)), absoluto: totalM, color: '#E74C3C' },
+            ]
+          : SEXO_DATA;
+        const edadData = piramide.length > 0
+          ? piramide.map((r) => ({ rango: r.grupo_edad, personas: (r.hombres_abs || 0) + (r.mujeres_abs || 0) }))
+          : EDAD_DATA;
+        return (
+          <div className="grid-row grid-2">
+            <div style={cardStyle}>
+              <div style={chartTitle}>Distribucion por sexo (con capacidades diversas)</div>
+              <ResponsiveContainer width="100%" height={280}>
+                <PieChart>
+                  <Pie
+                    data={sexoData}
+                    dataKey="value"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={100}
+                    paddingAngle={3}
+                    label={({ name, value }) => `${name}: ${value}%`}
+                  >
+                    {sexoData.map((entry, i) => (
+                      <Cell key={i} fill={entry.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(v, n, p) => [`${v}% (${formatNumber(p.payload.absoluto || 0)})`, p.payload.name]} />
+                  <Legend />
+                </PieChart>
+              </ResponsiveContainer>
+              <div style={{ fontSize: '0.72rem', color: 'var(--color-gray-400)', textAlign: 'center', marginTop: '4px' }}>
+                {totalPD > 0 ? `Total: ${formatNumber(totalPD)} personas · ${scopeLabel}` : '(Datos nacionales CNPV 2018)'}
+              </div>
+            </div>
 
-        <div style={cardStyle}>
-          <div style={chartTitle}>Distribucion por grupo de edad</div>
-          <ResponsiveContainer width="100%" height={280}>
-            <BarChart data={EDAD_DATA} margin={{ top: 10, right: 20, bottom: 5, left: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
-              <XAxis dataKey="rango" tick={{ fontSize: 11 }} />
-              <YAxis tick={{ fontSize: 11 }} />
-              <Tooltip
-                formatter={(v) => [formatNumber(v), 'Personas']}
-                contentStyle={{ fontSize: '0.85rem' }}
-              />
-              <Bar dataKey="personas" fill="#02432D" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-          <div style={{ fontSize: '0.72rem', color: 'var(--color-gray-400)', textAlign: 'center', marginTop: '4px' }}>
-            (Datos nacionales CNPV 2018)
+            <div style={cardStyle}>
+              <div style={chartTitle}>Distribucion por grupo de edad (con capacidades diversas)</div>
+              <ResponsiveContainer width="100%" height={280}>
+                <BarChart data={edadData} margin={{ top: 10, right: 20, bottom: 5, left: 10 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
+                  <XAxis dataKey="rango" tick={{ fontSize: 10 }} angle={-35} textAnchor="end" height={55} />
+                  <YAxis tick={{ fontSize: 11 }} />
+                  <Tooltip
+                    formatter={(v) => [formatNumber(v), 'Personas']}
+                    contentStyle={{ fontSize: '0.85rem' }}
+                  />
+                  <Bar dataKey="personas" fill="#02432D" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+              <div style={{ fontSize: '0.72rem', color: 'var(--color-gray-400)', textAlign: 'center', marginTop: '4px' }}>
+                {piramide.length > 0 ? `CNPV 2018 · ${scopeLabel}` : '(Datos nacionales CNPV 2018)'}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })()}
+
+      {/* Piramides nacionales (3): poblacion total, con CD, apilada por tipo */}
+      <NationalPyramids />
 
       {/* DidYouKnow callouts */}
       <DidYouKnow
@@ -681,9 +741,10 @@ export default function PanoramaPage() {
         marginTop: '12px',
         padding: '12px',
       }}>
-        Fuentes: CNPV 2018 (DANE), Registro Unico de Victimas (RUV),
-        Registro de Localizacion y Caracterizacion de Personas con Capacidades Diversas (RLCPD),
-        Sistema de Monitoreo Territorial ONIC (SMT-ONIC)
+        Fuentes: <Term term="CNPV">CNPV 2018</Term> (<Term term="DANE">DANE</Term>),
+        Registro Unico de Victimas (<Term term="RUV">RUV</Term>),
+        Registro de Localizacion y Caracterizacion de Personas con Capacidades Diversas (<Term term="RLCPD">RLCPD</Term>),
+        Sistema de Monitoreo Territorial ONIC (<Term term="SMT">SMT-ONIC</Term>)
       </div>
     </div>
   );

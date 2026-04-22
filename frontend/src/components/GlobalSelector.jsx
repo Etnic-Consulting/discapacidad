@@ -6,6 +6,7 @@
    ============================================ */
 
 import { useFilters } from '../context/FilterContext';
+import { useMacrorregiones } from '../hooks/useApi';
 
 /* ---- Static department list (DIVIPOLA codes) — used as export for legacy compatibility ---- */
 const DEPARTAMENTOS = [
@@ -160,6 +161,7 @@ export default function GlobalSelector() {
     mpio,
     pueblo,
     resguardo,
+    macro,
     departamentos,
     municipios,
     pueblos,
@@ -168,15 +170,40 @@ export default function GlobalSelector() {
     setMpio,
     setPueblo,
     setResguardo,
+    setMacro,
     clearAll,
     hasFilters,
     activeCount,
     cascadeLoading,
   } = useFilters();
 
+  const { data: macrosData } = useMacrorregiones();
+  const macrorregiones = macrosData?.data || [];
+
   return (
     <div style={styles.bar}>
       <span style={styles.label}>Filtros:</span>
+
+      {/* Macrorregion selector — corte alternativo al de dpto/mpio */}
+      <select
+        value={macro}
+        onChange={(e) => setMacro(e.target.value)}
+        style={styles.select}
+        title="Macrorregiones ONIC: 5 zonas que agrupan resguardos por afinidad territorial"
+        onFocus={(e) => {
+          e.target.style.borderColor = 'var(--color-green-mid)';
+        }}
+        onBlur={(e) => {
+          e.target.style.borderColor = 'var(--color-gray-300)';
+        }}
+      >
+        <option value="">Macrorregión ONIC</option>
+        {macrorregiones.map((m) => (
+          <option key={m.id} value={m.macro}>
+            {m.macro} ({m.resguardos} resg.)
+          </option>
+        ))}
+      </select>
 
       {/* Department selector */}
       <select

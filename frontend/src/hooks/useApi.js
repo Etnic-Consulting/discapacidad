@@ -10,6 +10,7 @@ import {
   fetchDificultades,
   fetchSalud,
   fetchBrecha,
+  fetchPanoramaKpis,
   fetchFiltrosCascada,
   fetchIntercensal,
   fetchSmtResumen,
@@ -22,6 +23,7 @@ import {
   fetchResguardos,
   fetchResguardosList,
   fetchMacrorregionesGeo,
+  fetchMacrorregiones,
   fetchResguardosGeo,
   fetchComunidadesGeo,
   fetchVictimasResumen,
@@ -43,6 +45,9 @@ import {
   fetchPiramideDemografica,
   fetchPiramideCapDiversas,
   fetchPiramideTipoDisc,
+  fetchPiramideNacional,
+  fetchPiramideDiscNacional,
+  fetchPiramideDiscTipoNacional,
   fetchPerfilResguardo,
   fetchResguardosDemografia,
   fetchResguardosPorPueblo,
@@ -101,6 +106,32 @@ export function useBrecha(codDpto) {
     queryKey: ['brecha', codDpto],
     queryFn: () => fetchBrecha(codDpto),
     staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+export function usePanoramaKpis(filters = {}) {
+  const { cod_dpto, cod_mpio, cod_pueblo, cod_resguardo, cod_macro } = filters;
+  return useQuery({
+    queryKey: [
+      'panorama-kpis',
+      cod_dpto || null,
+      cod_mpio || null,
+      cod_pueblo || null,
+      cod_resguardo || null,
+      cod_macro || null,
+    ],
+    queryFn: () => fetchPanoramaKpis({ cod_dpto, cod_mpio, cod_pueblo, cod_resguardo, cod_macro }),
+    staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+export function useMacrorregiones() {
+  return useQuery({
+    queryKey: ['macrorregiones-list'],
+    queryFn: fetchMacrorregiones,
+    staleTime: 30 * 60 * 1000,
     retry: 1,
   });
 }
@@ -390,6 +421,36 @@ export function usePiramideTipoDisc(codPueblo) {
     queryKey: ['piramide-tipo-disc', codPueblo],
     queryFn: () => fetchPiramideTipoDisc(codPueblo),
     enabled: !!codPueblo,
+    staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+export function usePiramideNacional(filters = {}) {
+  const { cod_dpto, cod_mpio, cod_pueblo } = filters;
+  return useQuery({
+    queryKey: ['piramide-nacional', cod_dpto || null, cod_mpio || null, cod_pueblo || null],
+    queryFn: () => fetchPiramideNacional({ cod_dpto, cod_mpio, cod_pueblo }),
+    staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+export function usePiramideDiscNacional(filters = {}) {
+  const { cod_dpto, cod_mpio, cod_pueblo } = filters;
+  return useQuery({
+    queryKey: ['piramide-disc-nacional', cod_dpto || null, cod_mpio || null, cod_pueblo || null],
+    queryFn: () => fetchPiramideDiscNacional({ cod_dpto, cod_mpio, cod_pueblo }),
+    staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+export function usePiramideDiscTipoNacional(filters = {}) {
+  const { cod_dpto, cod_mpio, cod_pueblo } = filters;
+  return useQuery({
+    queryKey: ['piramide-disc-tipo-nacional', cod_dpto || null, cod_mpio || null, cod_pueblo || null],
+    queryFn: () => fetchPiramideDiscTipoNacional({ cod_dpto, cod_mpio, cod_pueblo }),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });

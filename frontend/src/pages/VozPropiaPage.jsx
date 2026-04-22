@@ -272,8 +272,8 @@ export default function VozPropiaPage() {
           condicion.
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {calidadData.map((campo) => (
-            <div key={campo.campo}>
+          {calidadData.map((campo, idx) => (
+            <div key={`${campo.campo ?? 'sin-campo'}-${idx}`}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
                 <span style={{ fontSize: '0.85rem' }}>{campo.campo}</span>
                 <span style={{

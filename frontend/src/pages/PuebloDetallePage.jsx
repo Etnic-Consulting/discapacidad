@@ -97,23 +97,31 @@ function PopulationPyramid({ piramideData, nombrePueblo, compact = false }) {
   const pctH = total > 0 ? ((total_hombres / total) * 100).toFixed(1) : '0.0';
   const pctM = total > 0 ? ((total_mujeres / total) * 100).toFixed(1) : '0.0';
 
-  // Build percentage-based data: hombres as negative %, mujeres as positive %
+  // Build data using absolute counts (Recharts v3 domain calc works better this way)
   // REVERSE: Recharts layout=vertical pinta [0] arriba. 85+ debe estar arriba, 0-4 abajo.
-  const pctData = piramide.map((row) => ({
-    grupo_edad: row.grupo_edad,
-    hombres_pct: -(row.pct_hombres || (total > 0 ? (Math.abs(row.hombres_abs || row.hombres || 0) / total) * 100 : 0)),
-    mujeres_pct: row.pct_mujeres || (total > 0 ? (Math.abs(row.mujeres_abs || row.mujeres || 0) / total) * 100 : 0),
-    hombres_abs: row.hombres_abs || Math.abs(row.hombres || 0),
-    mujeres_abs: row.mujeres_abs || Math.abs(row.mujeres || 0),
-    pct_hombres_raw: row.pct_hombres || (total > 0 ? (Math.abs(row.hombres_abs || row.hombres || 0) / total) * 100 : 0),
-    pct_mujeres_raw: row.pct_mujeres || (total > 0 ? (Math.abs(row.mujeres_abs || row.mujeres || 0) / total) * 100 : 0),
-  })).slice().reverse();
+  const pctData = piramide.map((row) => {
+    const hAbs = row.hombres_abs || Math.abs(row.hombres || 0);
+    const mAbs = row.mujeres_abs || Math.abs(row.mujeres || 0);
+    const pctH = row.pct_hombres || (total > 0 ? (hAbs / total) * 100 : 0);
+    const pctM = row.pct_mujeres || (total > 0 ? (mAbs / total) * 100 : 0);
+    return {
+      grupo_edad: row.grupo_edad,
+      hombres_pct: -hAbs,
+      mujeres_pct: mAbs,
+      hombres_abs: hAbs,
+      mujeres_abs: mAbs,
+      pct_hombres_raw: pctH,
+      pct_mujeres_raw: pctM,
+    };
+  }).slice().reverse();
 
-  // Symmetric axis based on max percentage
-  const maxPct = Math.max(
+  // Symmetric axis based on max absolute value
+  const maxAbs = Math.max(
     ...pctData.map((r) => Math.max(Math.abs(r.hombres_pct), Math.abs(r.mujeres_pct)))
   );
-  const axisBound = Math.ceil(maxPct + 1);
+  // Round up to a nice number
+  const magnitude = Math.pow(10, Math.floor(Math.log10(maxAbs)));
+  const axisBound = Math.ceil(maxAbs / magnitude) * magnitude;
 
   // Grandes grupos de edad
   const gruposInfantil = ['0-4', '5-9', '10-14'];
@@ -175,7 +183,6 @@ function PopulationPyramid({ piramideData, nombrePueblo, compact = false }) {
           layout="vertical"
           data={pctData}
           margin={{ top: 5, right: 30, bottom: 20, left: 10 }}
-          stackOffset="sign"
           barCategoryGap="6%"
           barGap={0}
           barSize={20}
@@ -184,8 +191,11 @@ function PopulationPyramid({ piramideData, nombrePueblo, compact = false }) {
           <XAxis
             type="number"
             domain={[-axisBound, axisBound]}
-            ticks={Array.from({length: Math.floor(axisBound)*2 + 1}, (_, i) => i - Math.floor(axisBound))}
-            tickFormatter={(v) => `${Math.abs(v)}`}
+            tickFormatter={(v) => {
+              const abs = Math.abs(v);
+              if (abs >= 1000) return (abs/1000).toFixed(abs >= 10000 ? 0 : 1) + 'K';
+              return abs.toString();
+            }}
             tick={{ fontSize: 11 }}
             axisLine={{ stroke: '#999' }}
           />
@@ -233,8 +243,8 @@ function PopulationPyramid({ piramideData, nombrePueblo, compact = false }) {
               return value;
             }}
           />
-          <Bar dataKey="hombres_pct" name="Hombres" fill="#4A90D9" stackId="pyramid" />
-          <Bar dataKey="mujeres_pct" name="Mujeres" fill="#E74C3C" stackId="pyramid" />
+          <Bar dataKey="hombres_pct" name="Hombres" fill="#4A90D9" />
+          <Bar dataKey="mujeres_pct" name="Mujeres" fill="#E74C3C" />
         </BarChart>
       </ResponsiveContainer>
 
@@ -505,14 +515,14 @@ function StackedTypePyramid({ data, nombrePueblo }) {
   // Sort tipos by total descending (most frequent first) - ALWAYS same order
   const tiposOrdenados = [...resumen_tipos].sort((a, b) => b.total - a.total).map(t => t.tipo);
 
-  // Build chart data with PERCENTAGES (like the other pyramids)
+  // Build chart data using absolute counts (Recharts v3 handles absolutes better than %)
   const chartData = [...piramide].reverse().map(row => {
     const entry = { grupo_edad: row.grupo_edad };
     tiposOrdenados.forEach(tipo => {
       const hAbs = Math.abs(row[`h_${tipo}`] || 0);
       const mAbs = row[`m_${tipo}`] || row[`abs_m_${tipo}`] || 0;
-      entry[`h_${tipo}`] = total > 0 ? -(hAbs / total * 100) : 0;
-      entry[`m_${tipo}`] = total > 0 ? (mAbs / total * 100) : 0;
+      entry[`h_${tipo}`] = -hAbs;
+      entry[`m_${tipo}`] = mAbs;
       entry[`abs_h_${tipo}`] = hAbs;
       entry[`abs_m_${tipo}`] = mAbs;
     });
@@ -521,12 +531,13 @@ function StackedTypePyramid({ data, nombrePueblo }) {
     return entry;
   });
 
-  // Find max percentage for axis
-  const maxPct = Math.max(
+  // Find max total (summed over tipos) per side for symmetric axis
+  const maxAbs = Math.max(
     ...chartData.map(r => tiposOrdenados.reduce((s, t) => s + Math.abs(r[`h_${t}`] || 0), 0)),
     ...chartData.map(r => tiposOrdenados.reduce((s, t) => s + (r[`m_${t}`] || 0), 0)),
   );
-  const axisBound = Math.ceil(maxPct + 1);
+  const magnitude = Math.pow(10, Math.floor(Math.log10(Math.max(maxAbs, 1))));
+  const axisBound = Math.ceil(maxAbs / magnitude) * magnitude;
 
   return (
     <div>
@@ -559,13 +570,17 @@ function StackedTypePyramid({ data, nombrePueblo }) {
           stackOffset="sign"
           barCategoryGap="6%"
           barGap={0}
+          barSize={20}
         >
           <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#ddd" />
           <XAxis
             type="number"
             domain={[-axisBound, axisBound]}
-            ticks={Array.from({length: Math.floor(axisBound)*2 + 1}, (_, i) => i - Math.floor(axisBound))}
-            tickFormatter={(v) => `${Math.abs(v)}`}
+            tickFormatter={(v) => {
+              const abs = Math.abs(v);
+              if (abs >= 1000) return (abs/1000).toFixed(abs >= 10000 ? 0 : 1) + 'K';
+              return abs.toString();
+            }}
             tick={{ fontSize: 11 }}
             axisLine={{ stroke: '#999' }}
           />

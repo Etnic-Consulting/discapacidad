@@ -105,7 +105,7 @@ const S = {
   /* ---- page wrapper: map takes full available height ---- */
   wrapper: {
     position: 'relative',
-    height: 'calc(100vh - 60px)',
+    height: 'calc(100vh - 90px)',
     minHeight: '500px',
     borderRadius: 'var(--radius-md)',
     overflow: 'hidden',

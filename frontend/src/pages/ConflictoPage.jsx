@@ -12,12 +12,14 @@ import KPICard from '../components/KPICard';
 import GlobalSelector from '../components/GlobalSelector';
 import FilterBreadcrumb from '../components/FilterBreadcrumb';
 import DidYouKnow from '../components/DidYouKnow';
+import ChartSkeleton from '../components/ChartSkeleton';
 import { useFilters } from '../context/FilterContext';
 import {
   useVictimasPorPueblo,
   useVictimasPorHecho,
   useVictimasPorTipo,
   useVictimasPueblo,
+  usePanoramaKpis,
 } from '../hooks/useApi';
 
 function fmt(n) {
@@ -73,7 +75,13 @@ const spinnerSmall = {
 };
 
 export default function ConflictoPage() {
-  const { dpto, pueblo, dptoNombre, puebloNombre } = useFilters();
+  const { dpto, mpio, pueblo, macro, dptoNombre, puebloNombre } = useFilters();
+  const { data: kpisData } = usePanoramaKpis({
+    cod_dpto: dpto || undefined,
+    cod_mpio: mpio || undefined,
+    cod_pueblo: pueblo || undefined,
+    cod_macro: macro || undefined,
+  });
 
   /* ---- API hooks — filter by dpto when selected ---- */
   const codDpto = dpto || undefined;
@@ -160,11 +168,11 @@ export default function ConflictoPage() {
   }, [tipoData, tipoChart, pueblo, puebloVictimasData]);
 
   const pueblosAfectados = useMemo(() => {
+    if (kpisData?.pueblos_con_victimas != null) return kpisData.pueblos_con_victimas;
     if (pueblo) return 1;
-    // Total distinct pueblos from pueblosData (could be more than limit=10)
     if (pueblosData?.total) return pueblosData.total;
     return topPueblos.length;
-  }, [pueblosData, topPueblos, pueblo]);
+  }, [kpisData, pueblosData, topPueblos, pueblo]);
 
   const hechoPrincipal = useMemo(() => {
     if (hechosChart.length === 0) return { nombre: '---', porcentaje: '0%' };
@@ -300,50 +308,54 @@ export default function ConflictoPage() {
             Top {topPueblos.length} pueblos por numero de victimas con capacidades diversas
           </div>
           {loadingPueblos ? (
-            <div style={spinnerSmall}><div className="spinner" /></div>
+            <ChartSkeleton height={380} label="Cargando top de pueblos" />
           ) : errorPueblos ? (
             <div style={spinnerSmall}>Error cargando datos de pueblos</div>
           ) : topPueblos.length === 0 ? (
             <div style={spinnerSmall}>Sin datos disponibles</div>
           ) : (
-            <ResponsiveContainer width="100%" height={380}>
-              <BarChart
-                data={topPueblos}
-                layout="vertical"
-                margin={{ top: 10, right: 30, bottom: 5, left: 120 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
-                <XAxis type="number" tick={{ fontSize: 11 }} />
-                <YAxis type="category" dataKey="pueblo" tick={{ fontSize: 11 }} width={110} />
-                <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
-                <Bar dataKey="victimas" fill="#E8262A" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
+            <div role="img" aria-label={`Grafico de barras: top ${topPueblos.length} pueblos por numero de victimas con capacidades diversas`}>
+              <ResponsiveContainer width="100%" height={380}>
+                <BarChart
+                  data={topPueblos}
+                  layout="vertical"
+                  margin={{ top: 10, right: 30, bottom: 5, left: 120 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
+                  <XAxis type="number" tick={{ fontSize: 11 }} />
+                  <YAxis type="category" dataKey="pueblo" tick={{ fontSize: 11 }} width={110} />
+                  <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
+                  <Bar dataKey="victimas" fill="#E8262A" radius={[0, 4, 4, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           )}
         </div>
 
         <div style={cardStyle}>
           <div style={chartTitle}>Hechos victimizantes — victimas con capacidades diversas</div>
           {loadingHechos ? (
-            <div style={spinnerSmall}><div className="spinner" /></div>
+            <ChartSkeleton height={380} label="Cargando hechos victimizantes" />
           ) : errorHechos ? (
             <div style={spinnerSmall}>Error cargando datos de hechos</div>
           ) : hechosChart.length === 0 ? (
             <div style={spinnerSmall}>Sin datos disponibles</div>
           ) : (
-            <ResponsiveContainer width="100%" height={380}>
-              <BarChart
-                data={hechosChart}
-                layout="vertical"
-                margin={{ top: 10, right: 30, bottom: 5, left: 160 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
-                <XAxis type="number" tick={{ fontSize: 11 }} />
-                <YAxis type="category" dataKey="hecho" tick={{ fontSize: 11 }} width={150} />
-                <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
-                <Bar dataKey="cantidad" fill="#02432D" radius={[0, 4, 4, 0]} />
-              </BarChart>
-            </ResponsiveContainer>
+            <div role="img" aria-label="Grafico de barras: hechos victimizantes para victimas con capacidades diversas">
+              <ResponsiveContainer width="100%" height={380}>
+                <BarChart
+                  data={hechosChart}
+                  layout="vertical"
+                  margin={{ top: 10, right: 30, bottom: 5, left: 160 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
+                  <XAxis type="number" tick={{ fontSize: 11 }} />
+                  <YAxis type="category" dataKey="hecho" tick={{ fontSize: 11 }} width={150} />
+                  <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
+                  <Bar dataKey="cantidad" fill="#02432D" radius={[0, 4, 4, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           )}
         </div>
       </div>
@@ -353,25 +365,27 @@ export default function ConflictoPage() {
         <div style={cardStyle}>
           <div style={chartTitle}>Victimas por tipo de capacidad diversa</div>
           {loadingTipo ? (
-            <div style={spinnerSmall}><div className="spinner" /></div>
+            <ChartSkeleton height={320} label="Cargando victimas por tipo" />
           ) : errorTipo ? (
             <div style={spinnerSmall}>Error cargando datos por tipo</div>
           ) : tipoChart.length === 0 ? (
             <div style={spinnerSmall}>Sin datos disponibles</div>
           ) : (
-            <ResponsiveContainer width="100%" height={320}>
-              <BarChart data={tipoChart} margin={{ top: 10, right: 30, bottom: 5, left: 10 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
-                <XAxis dataKey="tipo" tick={{ fontSize: 11 }} angle={-10} textAnchor="end" height={60} />
-                <YAxis tick={{ fontSize: 11 }} />
-                <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
-                <Bar dataKey="cantidad" radius={[4, 4, 0, 0]}>
-                  {tipoChart.map((entry, i) => (
-                    <Cell key={i} fill={entry.color} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+            <div role="img" aria-label="Grafico de barras: victimas por tipo de capacidad diversa">
+              <ResponsiveContainer width="100%" height={320}>
+                <BarChart data={tipoChart} margin={{ top: 10, right: 30, bottom: 5, left: 10 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
+                  <XAxis dataKey="tipo" tick={{ fontSize: 11 }} angle={-10} textAnchor="end" height={60} />
+                  <YAxis tick={{ fontSize: 11 }} />
+                  <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
+                  <Bar dataKey="cantidad" radius={[4, 4, 0, 0]}>
+                    {tipoChart.map((entry, i) => (
+                      <Cell key={i} fill={entry.color} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           )}
         </div>
       </div>

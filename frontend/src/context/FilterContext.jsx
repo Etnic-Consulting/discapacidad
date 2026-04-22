@@ -55,6 +55,7 @@ export function FilterProvider({ children }) {
   const mpio = searchParams.get('mpio') || '';
   const pueblo = searchParams.get('pueblo') || '';
   const resguardo = searchParams.get('resguardo') || '';
+  const macro = searchParams.get('macro') || '';
 
   /* ---- Fetch cascading options from API ---- */
   const { data: cascadeData, isLoading: cascadeLoading } = useFiltrosCascada(
@@ -130,8 +131,16 @@ export function FilterProvider({ children }) {
   /* ---- Cascading setters ---- */
   const setDpto = useCallback(
     (val) => {
-      // Clear downstream: mpio, pueblo, resguardo
-      updateParams({ dpto: val, mpio: '', pueblo: '', resguardo: '' });
+      // Seleccionar dpto limpia macro (corte alternativo) y downstream
+      updateParams({ dpto: val, mpio: '', pueblo: '', resguardo: '', macro: '' });
+    },
+    [updateParams]
+  );
+
+  const setMacro = useCallback(
+    (val) => {
+      // Macro y dpto/mpio son cortes geograficos alternativos: limpiar uno al otro
+      updateParams({ macro: val, dpto: '', mpio: '', pueblo: '', resguardo: '' });
     },
     [updateParams]
   );
@@ -159,12 +168,15 @@ export function FilterProvider({ children }) {
   );
 
   const clearAll = useCallback(() => {
-    updateParams({ dpto: '', mpio: '', pueblo: '', resguardo: '' });
+    updateParams({ dpto: '', mpio: '', pueblo: '', resguardo: '', macro: '' });
   }, [updateParams]);
 
   /* ---- Breadcrumb segments ---- */
   const breadcrumbs = useMemo(() => {
     const parts = [{ label: 'Nacional', level: 'nacional' }];
+    if (macro) {
+      parts.push({ label: `Macrorregión ${macro}`, level: 'macro', value: macro });
+    }
     if (dpto && dptoNombre) {
       parts.push({ label: dptoNombre, level: 'dpto', value: dpto });
     }
@@ -178,10 +190,10 @@ export function FilterProvider({ children }) {
       parts.push({ label: resguardoNombre, level: 'resguardo', value: resguardo });
     }
     return parts;
-  }, [dpto, dptoNombre, mpio, mpioNombre, pueblo, puebloNombre, resguardo, resguardoNombre]);
+  }, [macro, dpto, dptoNombre, mpio, mpioNombre, pueblo, puebloNombre, resguardo, resguardoNombre]);
 
-  const hasFilters = !!(dpto || mpio || pueblo || resguardo);
-  const activeCount = [dpto, mpio, pueblo, resguardo].filter(Boolean).length;
+  const hasFilters = !!(dpto || mpio || pueblo || resguardo || macro);
+  const activeCount = [dpto, mpio, pueblo, resguardo, macro].filter(Boolean).length;
 
   const value = useMemo(
     () => ({
@@ -190,6 +202,7 @@ export function FilterProvider({ children }) {
       mpio,
       pueblo,
       resguardo,
+      macro,
       // Resolved names
       dptoNombre,
       mpioNombre,
@@ -205,6 +218,7 @@ export function FilterProvider({ children }) {
       setMpio,
       setPueblo,
       setResguardo,
+      setMacro,
       clearAll,
       // Utility
       hasFilters,
@@ -213,10 +227,10 @@ export function FilterProvider({ children }) {
       cascadeLoading,
     }),
     [
-      dpto, mpio, pueblo, resguardo,
+      dpto, mpio, pueblo, resguardo, macro,
       dptoNombre, mpioNombre, puebloNombre, resguardoNombre,
       departamentos, municipios, pueblos, resguardos,
-      setDpto, setMpio, setPueblo, setResguardo, clearAll,
+      setDpto, setMpio, setPueblo, setResguardo, setMacro, clearAll,
       hasFilters, activeCount, breadcrumbs, cascadeLoading,
     ]
   );
