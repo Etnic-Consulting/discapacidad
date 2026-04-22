@@ -1,0 +1,54 @@
+```jsx
+import React from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+// Fix for default marker icons in Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
+
+const ColombiaMap = ({ valuesByDept = {}, selected, onSelect, colorScale = 'green' }) => {
+  const max = Math.max(...Object.values(valuesByDept), 1);
+  const pal = {
+    green: ["#F0F7F2","#C9E5D0","#8FCA9F","#4FAE6E","#0EA84C","#02432D"],
+    red: ["#F9E1DB","#EFBBAE","#D98B76","#C65A45","#B33A2F","#7A231C"],
+  }[colorScale] || pal.green;
+
+  const getColor = (v) => {
+    if (!v) return 'var(--line)';
+    const idx = Math.min(pal.length - 1, Math.floor((v / max) * pal.length));
+    return pal[idx];
+  };
+
+  const handleMapClick = (e) => {
+    // Handle map click if needed
+  };
+
+  return (
+    <div className="map-wrapper" style={{ maxHeight: '50vh', overflow: 'hidden' }}>
+      <MapContainer
+        center={[4.5709, -74.2973]}
+        zoom={6}
+        style={{ height: '100%', width: '100%' }}
+        touchZoom={true}
+        zoomControl={true}
+        attributionControl={true}
+        onClick={handleMapClick}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        {/* Add your custom layers or markers here */}
+      </MapContainer>
+    </div>
+  );
+};
+
+export default ColombiaMap;
+```

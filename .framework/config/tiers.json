@@ -1,0 +1,98 @@
+{
+  "_meta": {
+    "description": "Catalogo de tiers y modelos. Editable por Wilson Herrera. Mapea task_type -> modelo Ollama y triggers de escalado a Claude.",
+    "source": ".framework/ROUTING.md",
+    "last_updated": "2026-04-21"
+  },
+  "tiers": [
+    {
+      "id": 0,
+      "name": "Ollama local",
+      "provider": "ollama",
+      "endpoint": "http://localhost:11434",
+      "cost_label": "free",
+      "task_types": {
+        "simple_edit": "qwen3-coder:30b-a3b-q4_K_M",
+        "standard_code": "qwen2.5-coder:32b-instruct-q5_K_M",
+        "complex_code": "qwen3-coder-next:q4_K_M",
+        "reasoning": "deepseek-r1:32b",
+        "agentic": "devstral:latest",
+        "vision": "qwen2.5vl:7b"
+      },
+      "triggers": [
+        "spec 100% cerrada",
+        "edicion <=3 lineas",
+        "test happy-path",
+        "dominio SMT-ONIC (cnpv, victimas, smt_geo)"
+      ],
+      "max_files": 2,
+      "concurrency_max": 6,
+      "timeout_seconds": 90
+    },
+    {
+      "id": 1,
+      "name": "Claude Sonnet 4.6",
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-4-6",
+      "cost_label": "low",
+      "triggers": [
+        ">=3 archivos con dependencias",
+        "refactor con invariantes globales",
+        "frontend Next.js con state complejo",
+        "code review pre-merge",
+        "Ollama fallo 2 veces"
+      ],
+      "max_files": 10
+    },
+    {
+      "id": 2,
+      "name": "Claude Opus 4.6",
+      "provider": "anthropic",
+      "model_id": "claude-opus-4-6",
+      "cost_label": "medium-high",
+      "triggers": [
+        "decision arquitectural alto costo de error",
+        "race condition / problema distribuido",
+        "seguridad: auth, tokens, autorizacion",
+        "migracion con downtime potencial",
+        "cross-impacto >5 archivos"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Claude Opus 4.7",
+      "provider": "anthropic",
+      "model_id": "claude-opus-4-7",
+      "cost_label": "high",
+      "triggers": [
+        "crown jewel con logica nueva",
+        "orquestacion multi-agente",
+        "postmortem P0 causa raiz no obvia",
+        "decision irreversible: borrado masivo, cambio proveedor LLM",
+        "audit punta-a-punta"
+      ]
+    }
+  ],
+  "escalation_rules": [
+    {"from_tier": 0, "to_tier": 1, "condition": "ollama_failures >= 2 mismo task_type"},
+    {"from_tier": 1, "to_tier": 2, "condition": "bug logico en review post-Sonnet"},
+    {"from_tier": 2, "to_tier": 3, "condition": "Opus 4.6 rompio gate produccion"}
+  ],
+  "degradation_rules": [
+    {"from_tier": 3, "to_tier": 0, "condition": "tarea es simple_edit"},
+    {"from_tier": 1, "to_tier": 0, "condition": "tarea es busqueda no escalado"},
+    {"from_tier": "any", "to_tier": "minus_1", "condition": "3 tareas seguidas mismo tier salieron perfectas"}
+  ],
+  "crown_jewel_permissions": {
+    "backend/app/main.py": {"ollama": false, "sonnet": "audit_required", "opus_4_6": true, "opus_4_7": true},
+    "backend/app/database.py": {"ollama": false, "sonnet": "audit_required", "opus_4_6": true, "opus_4_7": true},
+    "backend/app/services/auth.py": {"ollama": false, "sonnet": "audit_required", "opus_4_6": true, "opus_4_7": true},
+    "backend/app/routers/dashboard.py": {"ollama": false, "sonnet": true, "opus_4_6": true, "opus_4_7": true},
+    "backend/app/routers/formulario.py": {"ollama": false, "sonnet": true, "opus_4_6": true, "opus_4_7": true},
+    "backend/scripts/load_*.py": {"ollama": false, "sonnet": "audit_required", "opus_4_6": true, "opus_4_7": true},
+    "docker-compose.yml": {"ollama": false, "sonnet": false, "opus_4_6": "director_required", "opus_4_7": true},
+    "backend/requirements.txt": {"ollama": false, "sonnet": false, "opus_4_6": true, "opus_4_7": true},
+    "frontend/package.json": {"ollama": false, "sonnet": false, "opus_4_6": true, "opus_4_7": true},
+    "frontend/src/context/FilterContext.jsx": {"ollama": false, "sonnet": true, "opus_4_6": true, "opus_4_7": true}
+  }
+}

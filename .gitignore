@@ -112,3 +112,24 @@ backend/output/
 exports/
 *.csv.gz
 *.parquet
+
+# ============================================================================
+# Diseño handoff (binarios pesados — entregable externo del diseñador)
+# ============================================================================
+Trabajo_desing.zip
+Trabajo_desing/
+
+# Screenshots sueltos en raíz (referencia visual durante desarrollo)
+/*.png
+
+# ============================================================================
+# Framework v2.1 — runtime se trackea, pero NO logs ni screenshots de auditoría
+# ============================================================================
+.framework/comms/log.jsonl
+.framework/research/*/screenshots/
+.framework/__pycache__/
+.framework/api/__pycache__/
+.framework/api/services/__pycache__/
+
+# Backups locales de versiones previas (no versionar)
+frontend/src/pages/_v2_backup/

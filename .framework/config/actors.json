@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "description": "Equipo del framework. Editable por Wilson Herrera.",
+    "last_updated": "2026-04-21"
+  },
+  "director": {
+    "id": "wilson",
+    "name": "Wilson Herrera",
+    "alias": ["wilson", "WilsonHerrera", "director"],
+    "role": "director",
+    "responsibilities": [
+      "prioridades de negocio",
+      "firma de gates",
+      "presupuesto",
+      "decisiones irreversibles"
+    ],
+    "color": "#22c55e"
+  },
+  "agents": [
+    {
+      "id": "clip",
+      "name": "clip",
+      "role": "builder + auditor + orquestador",
+      "default_provider": "anthropic",
+      "default_model": "claude-sonnet-4-6",
+      "escalation_models": ["claude-opus-4-6", "claude-opus-4-7"],
+      "color": "#3b82f6",
+      "responsibilities": [
+        "diagnostico complejo",
+        "arquitectura",
+        "audit crown jewels",
+        "orquestacion multi-agente",
+        "fallback de Ollama"
+      ]
+    },
+    {
+      "id": "ollama",
+      "name": "ollama",
+      "role": "builder tareas cerradas",
+      "default_provider": "ollama",
+      "default_model": "qwen2.5-coder:32b-instruct-q5_K_M",
+      "color": "#a855f7",
+      "responsibilities": [
+        "spec 100% cerrada",
+        "edicion simple",
+        "docs runbooks",
+        "test happy-path",
+        "dominio SMT-ONIC (cnpv, victimas, smt_geo)"
+      ]
+    }
+  ],
+  "comms": {
+    "pizarra_path": ".framework/comms/log.jsonl",
+    "queue_path": ".framework/tasks/queue.jsonl",
+    "state_path": ".framework/STATE.md",
+    "tags": [
+      "EMPEZANDO",
+      "ENTREGADO",
+      "PRE-MERGE-AUDIT-REQ",
+      "APROBADO",
+      "RECHAZADO",
+      "HALLAZGO",
+      "HEARTBEAT",
+      "BLOQUEADO",
+      "VERIFICADO",
+      "CHAT-HUMANO",
+      "CHAT-CLIP",
+      "CHAT-OLLAMA",
+      "NL-PARSE",
+      "ROUTING-DECISION",
+      "TASK-CREATED",
+      "CONFIG-CHANGED",
+      "CONFIG-MISSING",
+      "SESSION-START",
+      "SESSION-END"
+    ]
+  }
+}

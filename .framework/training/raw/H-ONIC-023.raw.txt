@@ -1,0 +1,34 @@
+```jsx
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '24px 32px',
+        background: 'var(--bg-elev,#0F1B14)',
+        color: 'var(--ink-soft,#D8D4CC)',
+        fontSize: '0.82rem',
+        marginTop: '48px',
+        borderTop: '1px solid var(--line,#2a2a2a)'
+      }}>
+        <div>
+          <div>
+            <img src="/logo.png" alt="Logo ONIC" style={{ height: '40px', marginBottom: '8px' }} />
+          </div>
+          <div>Sistema de Monitoreo Territorial - ONIC</div>
+          <div>Organizacion Nacional Indigena de Colombia</div>
+        </div>
+        <div>
+          <div>poblacion@onic.org.co</div>
+          <div>Bogota, Colombia</div>
+        </div>
+        <div>
+          <div>c 2026 ONIC. Datos abiertos bajo CC BY 4.0.</div>
+          <div><a href="/login" style={{ color: 'var(--ink-soft,#D8D4CC)' }}>Acceso restringido</a></div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+```

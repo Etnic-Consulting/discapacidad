@@ -1,0 +1,5 @@
+<div style={{ padding: '12px 16px', background: '#EFF6FF', border: '1px solid #93C5FD', borderRadius: 6, color: '#1E3A8A', fontSize: '0.88rem', marginBottom: 12 }}>
+  <strong>Sobre estas preguntas</strong>
+  <br />
+  Las siguientes preguntas siguen el Grupo de Washington (Naciones Unidas), un estandar internacional para identificar capacidades diversas. Responde segun la dificultad real para realizar cada actividad, sin minimizar ni exagerar.
+</div>

@@ -1,0 +1,1 @@
+Mejorar responsive movil: contenedor del MapContainer debe limitar max-height al 50vh en pantallas <=768px, y permitir touch zoom en Leaflet (touchZoom: true). Mantener intacto el resto del componente, solo agregar/ajustar style del wrapper y opciones de MapContainer.

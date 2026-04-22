@@ -1,0 +1,56 @@
+{
+  "_meta": {
+    "description": "Umbrales y SLAs del framework. Editable por Wilson Herrera.",
+    "source": "framework_runtime_v1.1/docs/02_communication.md + 03_collaboration.md",
+    "last_updated": "2026-04-21"
+  },
+  "heartbeat": {
+    "expected_interval_minutes": 30,
+    "warn_after_minutes": 45,
+    "stale_after_minutes": 90
+  },
+  "sla": {
+    "pre_merge_audit_max_hours": 4,
+    "hallazgo_critical_max_hours": 8,
+    "hallazgo_high_max_hours": 24,
+    "hallazgo_medium_max_hours": 72,
+    "burst_mode_response_max_minutes": 15
+  },
+  "queue_health": {
+    "max_blocked_tasks": 3,
+    "max_in_progress_per_owner": 2,
+    "stale_pending_after_days": 7
+  },
+  "severity_weights": {
+    "decision": 1.0,
+    "audit_signoff": 0.9,
+    "data_question": 0.6,
+    "cross_check": 0.5,
+    "other": 0.3
+  },
+  "quality_gates": {
+    "rework_warn_pct": 15,
+    "rework_critical_pct": 30,
+    "ollama_recovery_floor": 0.55
+  },
+  "infra": {
+    "docker_required_containers": [
+      "smt-onic-api",
+      "smt-onic-db"
+    ],
+    "ollama_url": "http://localhost:11434",
+    "ollama_required_models": [
+      "qwen3-coder:30b-a3b-q4_K_M",
+      "qwen2.5-coder:32b-instruct-q5_K_M",
+      "deepseek-r1:32b"
+    ],
+    "gpu_temp_warn_c": 65,
+    "gpu_temp_critical_c": 70
+  },
+  "cache_seconds": {
+    "config": 5,
+    "pizarra": 5,
+    "queue": 5,
+    "infra": 15
+  }
+}
