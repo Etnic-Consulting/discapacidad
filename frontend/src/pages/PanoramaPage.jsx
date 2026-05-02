@@ -20,16 +20,32 @@ import { useFilters } from '../context/FilterContext';
 import { useResumenNacional, usePrevalenciaDpto, usePerfilPueblo, usePueblos, useBrecha, usePerfilResguardo, useDificultades, usePiramideDiscNacional, usePanoramaKpis } from '../hooks/useApi';
 import { sortAndMergeAgeGroups } from '../lib/ageGroups';
 
-/* ---- Mock Data (real numbers from CNPV 2018 / RUV analysis) ---- */
+/* ============================================
+   FALLBACK CONSTANTS (T16 · Sprint S1.C v1)
+   ============================================
+   Estos valores se usan SOLO como último recurso cuando todos los hooks
+   API fallan (red caída, DB vacía, error 5xx). El flujo normal ya consume
+   `usePanoramaKpis()` + `useResumenNacional()` desde línea 325 en adelante.
+
+   D1 (CLAUDE.md · cifra canónica de pueblos): 115 · DANE CNPV 2018.
+   Ver `proyectos/discapacidad/outputs/DECISION_PUEBLOS_CANONICOS.md`.
+
+   TODO S1.C-Phase2: convertir fallbacks en `null` + UI explícita
+   "Sin datos · reintentar" en lugar de mostrar cifras silenciosas.
+   ============================================ */
 const MOCK_KPI = {
   totalPersonas: 225174,
-  pueblos: 121,
+  pueblos: 115, /* D1 · era 121 antes de T16 · DANE CNPV 2018 */
   prevalencia: '60.0',
   coberturaRegistro: '32.4',
   brechaCertificacion: '71.3',
   victimasConflicto: 37797,
 };
 
+/* TODO S1.C-Phase2 · Reemplazar con: useIntercensal({ aplicar_fac: true })
+   Endpoint: GET /api/v1/dashboard/intercensal?aplicar_fac=true (T02)
+   Backend ya soporta FAC armonización. Frontend debe consumir + advertir
+   cambio de instrumento (panel línea 388). */
 const PREVALENCIA_ETNICA = [
   { grupo: 'Indigena 2005', prevalencia: 59.2, fill: '#02432D' },
   { grupo: 'Indigena 2018', prevalencia: 60.0, fill: '#02AB44' },
