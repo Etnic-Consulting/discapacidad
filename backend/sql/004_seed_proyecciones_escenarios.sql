@@ -1,6 +1,6 @@
 -- T12 · Seed para proyecciones.escenarios
 -- Generado por T12_proyecciones_lee_carter.py
--- Fecha: 2026-05-02 17:41:21
+-- Fecha: 2026-05-02 18:12:51
 -- Fuentes: bd_consolidada/CG2005_*.csv + 08_resumen_nacional_etnico.csv + FAC v1
 
 CREATE TABLE IF NOT EXISTS proyecciones.escenarios (
@@ -17,6 +17,7 @@ CREATE TABLE IF NOT EXISTS proyecciones.escenarios (
     UNIQUE (grupo_etnico, año, escenario)
 );
 
+BEGIN;
 TRUNCATE proyecciones.escenarios;
 INSERT INTO proyecciones.escenarios (grupo_etnico, año, escenario, prevalencia_pct, ic_inferior_pct, ic_superior_pct, es_observado, es_ajustado_fac, fac_aplicado) VALUES
   ('Afrodescendiente', 2005, 'Base', 5.9817, 5.0845, 6.879, TRUE, TRUE, 0.8384),
@@ -851,3 +852,5 @@ INSERT INTO proyecciones.escenarios (grupo_etnico, año, escenario, prevalencia_
   ('Total', 2030, 'Optimista', 7.7525, 6.5897, 8.9154, FALSE, FALSE, NULL),
   ('Total', 2030, 'Pesimista', 8.269, 7.0287, 9.5094, FALSE, FALSE, NULL),
   ('Total', 2030, 'Demografico', 8.437, 7.1714, 9.7025, FALSE, FALSE, NULL);
+
+COMMIT;
