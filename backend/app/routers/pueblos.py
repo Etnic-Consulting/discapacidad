@@ -8,9 +8,11 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
+from app.routers.auth import get_current_user  # T24 · cierre H-ONIC-052
 
 logger = logging.getLogger(__name__)
-router = APIRouter()
+# T24 · auth global · todos los endpoints requieren Bearer token
+router = APIRouter(dependencies=[Depends(get_current_user)])
 
 
 @router.get("/")
