@@ -333,15 +333,72 @@ async def brecha_certificacion(
         rlcpd_indigena = int(registrados * 0.15)
         certificados = int(smt_count * 0.41) if smt_count > 0 else 0
 
+        # T06 · sources enriquecidas con cita normativa explícita (panel línea 211 exigió source visible)
         return {
             "cod_dpto": cod_dpto,
             "pasos": [
-                {"label": "Poblacion indigena total", "valor": int(row1["pob_total"]), "fuente": "CNPV 2018"},
-                {"label": "Con capacidades diversas", "valor": int(row1["pob_disc"]), "fuente": "CNPV 2018"},
-                {"label": "Registrados RLCPD (est. indigena)", "valor": rlcpd_indigena, "fuente": "RLCPD/MinSalud"},
-                {"label": "Caracterizados SMT-ONIC", "valor": smt_count, "fuente": "SMT-ONIC 2026"},
-                {"label": "Con certificado oficial (est.)", "valor": certificados, "fuente": "SMT-ONIC, calculado"},
-            ]
+                {
+                    "label": "Poblacion indigena total",
+                    "valor": int(row1["pob_total"]),
+                    "fuente": "CNPV 2018",
+                    "source_detalle": {
+                        "cita": "DANE · Censo Nacional de Población y Vivienda 2018 · cnpv.prevalencia_etnia_dpto",
+                        "marco_normativo": "Ley 21/1991 (Convenio 169 OIT) · Decreto 1953/2014",
+                        "url": "https://systema59.dane.gov.co/bincol/RpWebEngine.exe/Portal?BASE=CNPVBASE4V2",
+                        "metodologia": "Frecuencia simple sobre PA1_GRP_ETNIC=1",
+                    },
+                },
+                {
+                    "label": "Con capacidades diversas",
+                    "valor": int(row1["pob_disc"]),
+                    "fuente": "CNPV 2018",
+                    "source_detalle": {
+                        "cita": "DANE · CNPV 2018 · CONDICION_FISICA ∈ {1,2,3} (Washington Group)",
+                        "marco_normativo": "CDPD ONU Art. 25 · Convención Interamericana sobre Discapacidad",
+                        "url": "https://systema59.dane.gov.co/bincol/RpWebEngine.exe/Portal?BASE=CNPVBASE4V2",
+                        "metodologia": "Frecuencia sobre indígenas con cualquier dificultad funcional reportada",
+                    },
+                },
+                {
+                    "label": "Registrados RLCPD (est. indigena)",
+                    "valor": rlcpd_indigena,
+                    "fuente": "RLCPD/MinSalud",
+                    "source_detalle": {
+                        "cita": "MinSalud · Registro de Localización y Caracterización de Personas con Discapacidad · ext.rlcpd_nacional",
+                        "marco_normativo": "Resolución 1239/2022 MinSalud · Decreto 1474/2017",
+                        "url": "https://www.minsalud.gov.co/proteccionsocial/promocion-social/Discapacidad/",
+                        "metodologia": "Estimación 15% indígena sobre total RLCPD nacional · sin cruce étnico directo en registro público (limitación documentada · panel línea 211)",
+                        "limitacion": "Cifra estimada · RLCPD no expone variable étnica desagregada · pendiente carta SISPRO",
+                    },
+                },
+                {
+                    "label": "Caracterizados SMT-ONIC",
+                    "valor": smt_count,
+                    "fuente": "SMT-ONIC 2026",
+                    "source_detalle": {
+                        "cita": "SMT-ONIC · Sistema de Monitoreo Territorial de ONIC · smt.caracterizacion + smt.respuestas_formulario",
+                        "marco_normativo": "Decreto 1953/2014 (autonomía SISPI) · Acuerdo Plataforma ONIC",
+                        "url": "https://smt-onic.com",
+                        "metodologia": "Conteo registros con cpli_consentimiento='si' · captura propia del movimiento indígena",
+                    },
+                },
+                {
+                    "label": "Con certificado oficial (est.)",
+                    "valor": certificados,
+                    "fuente": "SMT-ONIC, calculado",
+                    "source_detalle": {
+                        "cita": "SMT-ONIC · estimación 41% sobre caracterizados con cert_cd registrado",
+                        "marco_normativo": "Resolución 583/2018 MinSalud · certificación de discapacidad",
+                        "metodologia": "Proporción derivada de submuestra con verificación documental · NO es la cifra oficial nacional · cifra oficial 428 (FUNNEL_STEPS frontend) requiere triangulación con MinSalud",
+                        "limitacion": "Tasa 41% es proxy · variable cert_cd no se mantiene consistente entre olas de caracterización · Sprint S1 debe validar contra base certificación oficial",
+                    },
+                },
+            ],
+            "metadata": {
+                "panel_audit": "EPX línea 211 · panel exigió source detallado con marco normativo y limitaciones",
+                "version_endpoint": "T06_v2 · 2026-05-02",
+                "advertencia": "Cifras RLCPD (paso 3) y certificados (paso 5) son estimaciones · no oficial. Triangular con SISPRO/MinSalud antes de publicación.",
+            },
         }
     except Exception as e:
         logger.error("Error en brecha_certificacion: %s", e, exc_info=True)
@@ -384,9 +441,18 @@ async def salud_embudo(
 @router.get("/intercensal")
 async def comparacion_intercensal(
     grupo_etnico: str = Query(None),
+    aplicar_fac: bool = Query(False, description="Si True, ajusta prev 2005 con FAC para armonizar con instrumento WG 2018 (ver _docs/METODO_FAC_v1.md)"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Comparacion intercensal 2005 vs 2018 para series de tiempo."""
+    """Comparacion intercensal 2005 vs 2018 para series de tiempo.
+
+    Args:
+        grupo_etnico: filtra por grupo (Indigena, Afrodescendiente, etc.)
+        aplicar_fac: si True, multiplica prev 2005 por FAC[grupo_etnico] para armonizar
+                     instrumentos. CG2005 midió "limitaciones permanentes"; CNPV2018 usa
+                     Washington Group (WG). Sin FAC, las series NO son directamente comparables.
+                     Tabla proyecciones.fac (poblada por T11_calcular_fac.py).
+    """
     try:
         filtro = ""
         params = {}
@@ -404,7 +470,39 @@ async def comparacion_intercensal(
             params,
         )
         rows = [dict(r._mapping) for r in result]
-        return {"total": len(rows), "data": rows}
+
+        # T02 · aplicar FAC si se solicita
+        fac_aplicado = False
+        advertencia = None
+        if aplicar_fac:
+            try:
+                fac_result = await db.execute(
+                    text("SELECT grupo_etnico, fac, fac_ic_inferior, fac_ic_superior FROM proyecciones.fac"),
+                )
+                fac_map = {r[0]: {"fac": float(r[1]), "ic_inf": float(r[2]) if r[2] else None,
+                                  "ic_sup": float(r[3]) if r[3] else None}
+                           for r in fac_result.fetchall()}
+                for row in rows:
+                    if row["periodo"] in ("2005", 2005) and row["grupo_etnico"] in fac_map:
+                        fac_info = fac_map[row["grupo_etnico"]]
+                        prev_orig = float(row["prevalencia_pct"] or 0)
+                        row["prevalencia_pct_observada"] = prev_orig
+                        row["prevalencia_pct"] = round(prev_orig * fac_info["fac"], 4)
+                        row["fac_aplicado"] = round(fac_info["fac"], 4)
+                        row["ic_inferior_pct"] = round(prev_orig * fac_info["ic_inf"], 4) if fac_info["ic_inf"] else None
+                        row["ic_superior_pct"] = round(prev_orig * fac_info["ic_sup"], 4) if fac_info["ic_sup"] else None
+                fac_aplicado = True
+                advertencia = "Cifras 2005 ajustadas con FAC para armonizar con instrumento Washington Group (CNPV 2018). FAC es proxy v1 - no panel-cohorte. Ver _docs/METODO_FAC_v1.md."
+            except Exception as fac_err:
+                logger.warning("No se pudo aplicar FAC (tabla proyecciones.fac vacia o ausente): %s", fac_err)
+                advertencia = "FAC no disponible · cifras 2005/2018 NO son directamente comparables (cambio de instrumento)."
+
+        return {
+            "total": len(rows),
+            "data": rows,
+            "fac_aplicado": fac_aplicado,
+            "advertencia": advertencia,
+        }
     except Exception as e:
         logger.error("Error en intercensal: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
@@ -435,6 +533,69 @@ async def smt_resumen(
         return {"periodo": "2026-F1", "total": len(rows), "data": rows}
     except Exception as e:
         logger.error("Error en smt_resumen: %s", e, exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/proyecciones")
+async def proyecciones_prevalencia(
+    grupo_etnico: str = Query("Indigena", description="Grupo étnico (Indigena, Afrodescendiente, etc.)"),
+    periodo_inicio: int = Query(2005, ge=2005, le=2030),
+    periodo_fin: int = Query(2030, ge=2005, le=2030),
+    escenario: str = Query(None, description="Filtrar escenario: Base | Optimista | Pesimista | Demografico"),
+    db: AsyncSession = Depends(get_db),
+):
+    """T08 · Proyecciones de prevalencia 2005-2030 con bandas IC.
+
+    Sirve la tabla proyecciones.escenarios (poblada por T12_proyecciones_lee_carter.py).
+    Cada fila: prevalencia_pct + ic_inferior_pct + ic_superior_pct.
+
+    Limitación metodológica: las proyecciones son aproximación lineal sobre 2 puntos
+    censales (CG2005 ajustado con FAC + CNPV2018). NO es Lee-Carter formal. Frontend
+    debe distinguir visualmente puntos observados (2005, 2018) de proyectados.
+    """
+    try:
+        params = {
+            "grupo": grupo_etnico,
+            "ini": periodo_inicio,
+            "fin": periodo_fin,
+        }
+        filtro_escenario = ""
+        if escenario:
+            filtro_escenario = "AND escenario = :escenario"
+            params["escenario"] = escenario
+
+        result = await db.execute(
+            text(f"""
+                SELECT año, escenario, prevalencia_pct,
+                       ic_inferior_pct, ic_superior_pct,
+                       es_observado, es_ajustado_fac, fac_aplicado
+                FROM proyecciones.escenarios
+                WHERE grupo_etnico = :grupo
+                  AND año BETWEEN :ini AND :fin
+                  {filtro_escenario}
+                ORDER BY año, escenario
+            """),
+            params,
+        )
+        rows = [dict(r._mapping) for r in result]
+
+        return {
+            "grupo_etnico": grupo_etnico,
+            "periodo_inicio": periodo_inicio,
+            "periodo_fin": periodo_fin,
+            "escenario_filtro": escenario,
+            "total": len(rows),
+            "data": rows,
+            "metadata": {
+                "metodologia": "Aproximación lineal CG2005-aj × CNPV2018 con bandas IC ±15%. NO es Lee-Carter formal.",
+                "fuente_fac": "proyecciones.fac (T11) · poblada por seed_proyecciones_fac.sql",
+                "fuente_proyecciones": "proyecciones.escenarios (T12) · poblada por seed_proyecciones_escenarios.sql",
+                "advertencia": "Cifras 2005 ajustadas con FAC para armonizar instrumento WG (CNPV 2018). Bandas IC heurísticas, no probabilísticamente derivadas.",
+                "doc_metodologico": "_docs/METODO_PROYECCIONES_v1.md",
+            },
+        }
+    except Exception as e:
+        logger.error("Error en proyecciones: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 
