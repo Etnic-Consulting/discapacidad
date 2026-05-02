@@ -27,11 +27,14 @@ const REPORT_TYPES = [
   { id: 'resguardo', label: 'Por resguardo' },
 ];
 
-/* National reference values (indigenous average, not general population) */
+/* National reference values (indigenous average, not general population)
+ * D1 · pueblos = 115 (DANE CNPV 2018) · era 121 antes de T16 Sprint S1.C v1
+ * Ver: proyectos/discapacidad/outputs/DECISION_PUEBLOS_CANONICOS.md
+ */
 const NACIONAL = {
   prevalencia: 60.0,
   totalPersonas: 225174,
-  pueblos: 121,
+  pueblos: 115,
 };
 
 const fechaHoy = () => new Date().toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });

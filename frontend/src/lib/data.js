@@ -1,8 +1,18 @@
-/* Static dataset from CNPV 2018 + SMT-ONIC — used as fallback when API is unavailable */
+/* Static dataset from CNPV 2018 + SMT-ONIC
+ * USAGE NOTE (T16 · Sprint S1.C v1):
+ *   Estas constantes se MANTIENEN como fallback API-down. Las páginas modernas
+ *   (PanoramaPage, etc.) consumen hooks (`usePanoramaKpis`, `useResumenNacional`)
+ *   y solo caen aquí en error 5xx. TODO S1.C-Phase2: convertir a `null` + UI
+ *   "Sin datos" en lugar de fallback silencioso.
+ *
+ *   D1 (CLAUDE.md · cifra canónica): pueblos = 115 (DANE CNPV 2018).
+ *   Antes era 121 · corregido en T16 (Sprint S1.C v1).
+ *   Ver: proyectos/discapacidad/outputs/DECISION_PUEBLOS_CANONICOS.md
+ */
 
 export const KPI_NACIONAL = {
   totalPersonas: 225174,
-  pueblos: 121,
+  pueblos: 115, /* D1 · era 121 · DANE CNPV 2018 */
   prevalencia: 60.0,
   coberturaRegistro: 32.4,
   brechaCertificacion: 71.3,

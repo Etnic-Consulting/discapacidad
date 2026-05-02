@@ -525,6 +525,10 @@ export default function PanoramaPage() {
         marginBottom: '24px',
       }}>
         <div style={chartTitle}>Brecha de certificacion</div>
+        {/* T28 (panel EPX línea 525 · "componente más fuerte para advocacy") sugiere
+            mover este bloque a la primera sección visible (antes de los charts auxiliares).
+            Pendiente review UX antes de mover físicamente · TODO S1.C-Phase2.
+            Por ahora, mantenemos la posición actual y enriquecemos la descripción. */}
         <p style={{
           fontSize: '0.88rem',
           color: 'var(--color-gray-500)',
