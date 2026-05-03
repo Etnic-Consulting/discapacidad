@@ -1,0 +1,109 @@
+# docker-compose.prod.yml · SMT-ONIC producción
+# ================================================
+# Diferencias vs docker-compose.yml (dev):
+#   - read-only mounts donde aplica
+#   - resource limits explícitos
+#   - restart: always (no unless-stopped)
+#   - healthchecks endurecidos
+#   - sin source mounts (volume backend/app:/code/app removido)
+#   - puertos NO expuestos al host por default · sólo internos
+#     (excepto API que sale por nginx)
+#   - logs rotados
+#
+# Uso: docker compose -f docker-compose.prod.yml --env-file .env.prod up -d
+# Generado por Sprint S2.B03 · 2026-05-02
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: smt-onic-db
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME:-smt_onic}
+      POSTGRES_USER: ${DB_USER:-smt_admin}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD requerido en .env.prod}
+    # Puerto NO expuesto al host · sólo accesible desde docker network
+    # (api se conecta vía 'db:5432' interno)
+    expose:
+      - "5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Schema base auto-aplicado al primer init
+      - ./backend/sql/001_schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/sql/002_auth_formulario.sql:/docker-entrypoint-initdb.d/02-auth.sql:ro
+      # Backups dir mounted para que cron pg_dump pueda escribir
+      - ${BACKUP_DIR:-/var/backups/smt-onic}:/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-smt_admin} -d ${DB_NAME:-smt_onic}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    shm_size: '2gb'
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2'
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100m"
+        max-file: "5"
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: smt-onic-api:prod
+    container_name: smt-onic-api
+    restart: always
+    environment:
+      DATABASE_URL: postgresql+asyncpg://${DB_USER:-smt_admin}:${DB_PASSWORD}@db:5432/${DB_NAME:-smt_onic}
+      DATABASE_URL_SYNC: postgresql://${DB_USER:-smt_admin}:${DB_PASSWORD}@db:5432/${DB_NAME:-smt_onic}
+      CORS_ORIGINS: ${CORS_ORIGINS:?CORS_ORIGINS requerido en .env.prod · sólo dominios de producción}
+      JWT_SECRET: ${JWT_SECRET:?JWT_SECRET requerido en .env.prod}
+      JWT_EXPIRES_MINUTES: ${JWT_EXPIRES_MINUTES:-480}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      DISCAPACIDAD_DIR: /data/discapacidad
+      VICTIMAS_DIR: /data/discapacidad/fuentes_externas/RUV
+      FEATURE_PROYECCIONES_ENABLED: ${FEATURE_PROYECCIONES_ENABLED:-true}
+      FEATURE_FAC_DEFAULT: ${FEATURE_FAC_DEFAULT:-false}
+    expose:
+      - "8000"
+    # API sólo accesible desde nginx en el host (port 8095 → container 8000)
+    ports:
+      - "127.0.0.1:8095:8000"
+    volumes:
+      # Datos read-only · subidos por init_db.sh fuera del container
+      - ${DISCAPACIDAD_DIR:-/data/discapacidad}:/data/discapacidad:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q --spider http://localhost:8000/api/v1/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    command: >
+      uvicorn app.main:app
+      --host 0.0.0.0
+      --port 8000
+      --workers 4
+      --access-log
+      --log-level ${LOG_LEVEL:-info}
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2'
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "10"
+
+volumes:
+  pgdata:
+    driver: local

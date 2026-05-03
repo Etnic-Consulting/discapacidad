@@ -1,0 +1,127 @@
+name: Deploy · SMT-ONIC producción
+
+# Disparado por tag `v*` · construye imagen Docker, la pushea a registry,
+# luego SSH al servidor cloud para hacer pull + restart.
+#
+# Pre-requisitos (configurar en repo Settings · Secrets):
+#   - REGISTRY_USERNAME · ej. ghcr.io username (o Docker Hub)
+#   - REGISTRY_PASSWORD · PAT con scope write:packages
+#   - PROD_SSH_HOST · IP o dominio del servidor
+#   - PROD_SSH_USER · usuario SSH (ej. deploy)
+#   - PROD_SSH_KEY · clave privada SSH (formato OpenSSH)
+#   - PROD_DEPLOY_PATH · ruta del repo en el servidor (ej. /opt/smt-onic)
+#
+# Generado por Sprint S2.A02 · 2026-05-02
+# TODO post-confirmar cloud target: AWS ECR/Beanstalk · GCP Artifact Registry · Azure Container Registry
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:  # disparable manualmente desde GitHub UI
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}/smt-onic-api
+
+jobs:
+  build-and-push:
+    name: Build · push imagen Docker
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image_tag: ${{ steps.meta.outputs.version }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=tag
+            type=sha,prefix=sha-
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy-to-server:
+    name: SSH · pull + restart en servidor
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    # TODO confirmar target cloud antes de habilitar:
+    if: false  # ⚠️ Habilitar tras confirmar cloud + agregar secrets
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.PROD_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.PROD_SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via SSH
+        env:
+          SSH_HOST: ${{ secrets.PROD_SSH_HOST }}
+          SSH_USER: ${{ secrets.PROD_SSH_USER }}
+          DEPLOY_PATH: ${{ secrets.PROD_DEPLOY_PATH }}
+          IMAGE_TAG: ${{ needs.build-and-push.outputs.image_tag }}
+        run: |
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" << EOF
+            set -e
+            cd $DEPLOY_PATH
+            echo "→ git fetch + checkout tag"
+            git fetch --tags
+            git checkout ${{ github.ref_name }}
+            echo "→ pull imagen Docker pre-construida"
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMAGE_TAG
+            echo "→ docker compose up -d con .env.prod"
+            docker compose -f docker-compose.prod.yml --env-file .env.prod up -d
+            echo "→ esperar healthcheck"
+            sleep 15
+            echo "→ smoke tests"
+            ./infra/smoke_tests.sh https://smt-onic.com
+          EOF
+
+      - name: Notify on success
+        if: success()
+        run: echo "Deploy ${{ github.ref_name }} OK"
+
+      - name: Rollback on failure
+        if: failure()
+        env:
+          SSH_HOST: ${{ secrets.PROD_SSH_HOST }}
+          SSH_USER: ${{ secrets.PROD_SSH_USER }}
+          DEPLOY_PATH: ${{ secrets.PROD_DEPLOY_PATH }}
+        run: |
+          ssh -i ~/.ssh/deploy_key "$SSH_USER@$SSH_HOST" << EOF
+            cd $DEPLOY_PATH
+            echo "→ rollback a tag previo"
+            PREV_TAG=\$(git describe --tags --abbrev=0 HEAD~1)
+            git checkout \$PREV_TAG
+            docker compose -f docker-compose.prod.yml --env-file .env.prod up -d
+          EOF
+          exit 1
