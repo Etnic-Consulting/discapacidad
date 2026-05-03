@@ -479,23 +479,25 @@ export default function PanoramaPage() {
         </div>
       )}
 
-      {/* KPI Row */}
+      {/* KPI Row \u00b7 T16-Phase2 \u00b7 convertir fallback silencioso (|| MOCK_KPI.X)
+          en UI expl\u00edcita "\u2014" cuando hook falla. Los || actuales mostraban
+          cifras inventadas indistinguibles \u00b7 ahora "\u2014" se\u00f1ala "sin dato". */}
       <div className="grid-row grid-6" style={{ marginBottom: '28px' }}>
         <KPICard
           title="Total personas"
-          value={formatNumber(kpi.totalPersonas || MOCK_KPI.totalPersonas)}
+          value={kpi.totalPersonas != null ? formatNumber(kpi.totalPersonas) : '\u2014'}
           subtitle={dptoNombre || 'CNPV 2018'}
           color="var(--color-green-mid)"
         />
         <KPICard
           title="Pueblos identificados"
-          value={kpi.pueblos || MOCK_KPI.pueblos}
-          subtitle="Con registro censal"
+          value={kpi.pueblos ?? '\u2014'}
+          subtitle="DANE CNPV 2018 \u00b7 cifra can\u00f3nica D1=115"
           color="var(--color-primary)"
         />
         <KPICard
           title="Prevalencia"
-          value={`${kpi.prevalencia || MOCK_KPI.prevalencia}\u2030`}
+          value={kpi.prevalencia != null ? `${kpi.prevalencia}\u2030` : '\u2014'}
           subtitle="Tasa por mil hab."
           color="var(--color-gold)"
         />
@@ -513,7 +515,7 @@ export default function PanoramaPage() {
         />
         <KPICard
           title="Victimas conflicto"
-          value={formatNumber(kpi.victimasConflicto || MOCK_KPI.victimasConflicto)}
+          value={kpi.victimasConflicto != null ? formatNumber(kpi.victimasConflicto) : '—'}
           subtitle="RUV - cap. diversas"
           color="var(--color-red)"
         />

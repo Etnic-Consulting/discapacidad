@@ -15,11 +15,53 @@ Tests:
     - Filtering parameters work correctly
 """
 
+import os
 import sys
 import json
 import requests
 
-BASE = "http://localhost:8080/api/v1"
+BASE = os.getenv("API_BASE_URL", "http://localhost:8080/api/v1")
+
+# T30 Sprint S2.A03 · auth para endpoints cerrados post-T24
+# (pueblos · geo · indicadores requieren Bearer token desde commit 8d1c526)
+TEST_USER = os.getenv("TEST_USER", "wilson")
+TEST_PASSWORD = os.getenv("TEST_USER_PASSWORD", "smt_onic_2026")  # CI inyecta desde secret
+AUTH_TOKEN = None  # se llena en setup_auth()
+_CLOSED_PREFIXES = ("/pueblos", "/geo", "/indicadores")
+
+
+def setup_auth():
+    """Login una vez · obtiene Bearer token para tests cerrados."""
+    global AUTH_TOKEN
+    try:
+        r = requests.post(
+            f"{BASE}/auth/login",
+            json={"username": TEST_USER, "password": TEST_PASSWORD},
+            timeout=10,
+        )
+        if r.status_code == 200:
+            AUTH_TOKEN = r.json().get("access_token")
+            print(f"  [auth] login OK · token len={len(AUTH_TOKEN or '')}")
+        else:
+            print(f"  [auth] login fallo status={r.status_code} · tests cerrados pueden fallar 401")
+    except Exception as e:
+        print(f"  [auth] login error · {e}")
+
+
+# Monkey patch · inyecta Authorization auto para endpoints cerrados.
+# Evita modificar las 20+ llamadas requests.get existentes.
+_orig_get = requests.get
+
+
+def _auth_aware_get(url, *args, **kwargs):
+    if AUTH_TOKEN and any(p in url for p in _CLOSED_PREFIXES):
+        headers = kwargs.pop("headers", None) or {}
+        headers.setdefault("Authorization", f"Bearer {AUTH_TOKEN}")
+        kwargs["headers"] = headers
+    return _orig_get(url, *args, **kwargs)
+
+
+requests.get = _auth_aware_get  # type: ignore[assignment]
 
 passed = 0
 failed = 0
@@ -68,6 +110,13 @@ def check_geojson(name: str, data: dict) -> bool:
         report(f"{name} features have correct structure", has_struct)
         return has_struct
     return ok
+
+
+# ============================================================
+# 0. AUTH SETUP (T30 · post-T24)
+# ============================================================
+print("\n=== AUTH SETUP ===")
+setup_auth()
 
 
 # ============================================================
@@ -512,6 +561,34 @@ except Exception as e:
 print("\n" + "=" * 60)
 print(f"RESULTS: {passed} passed, {failed} failed, {passed + failed} total")
 print("=" * 60)
+
+# ============================================================
+# 99. AUTH NEGATIVE TESTS (T30 · validar T24 efectivo)
+# ============================================================
+print("\n=== AUTH NEGATIVE TESTS ===")
+
+# Bypass monkey patch para tests negativos · usar _orig_get directo SIN token
+def check_unauth(name, url, expected_status=401):
+    try:
+        r = _orig_get(url, timeout=10)
+        ok = r.status_code == expected_status
+        report(name, ok, f"got {r.status_code}, expected {expected_status}")
+    except Exception as e:
+        report(name, False, str(e))
+
+
+check_unauth("GET /pueblos/ sin token = 401", f"{BASE}/pueblos/")
+check_unauth("GET /geo/departamentos sin token = 401", f"{BASE}/geo/departamentos")
+check_unauth("GET /indicadores/ sin token = 401", f"{BASE}/indicadores/")
+
+# Sanity: dashboard sigue público (NO debe requerir auth en S1)
+try:
+    r = _orig_get(f"{BASE}/dashboard/panorama-kpis", timeout=10)
+    report("GET /dashboard/panorama-kpis sin token = 200 (sigue publico)", r.status_code == 200,
+           f"got {r.status_code}, expected 200")
+except Exception as e:
+    report("GET /dashboard/panorama-kpis sin token", False, str(e))
+
 
 if errors:
     print("\nFailed tests:")

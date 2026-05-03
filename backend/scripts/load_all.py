@@ -30,18 +30,22 @@ DATABASE_URL_SYNC = os.getenv(
     "postgresql://smt_admin:smt_onic_2026@localhost:5450/smt_onic",
 )
 
-# Data directories -- adjust these to your environment
+# Data directories -- T31 Sprint S2.B01 · paths Linux por default · sobreescribir
+# con env vars en .env.prod (DISCAPACIDAD_DIR · VICTIMAS_DIR) en producción.
+# Defaults locales para dev en Linux/macOS · si trabajas en Windows local sobreescribe
+# con ${DISCAPACIDAD_DIR} en .env apuntando a tu C:\Users\... path.
+_DEFAULT_DATA_ROOT = os.getenv("DISCAPACIDAD_DIR", "/data/discapacidad")
 BD_CONSOLIDADA = Path(os.getenv(
     "BD_CONSOLIDADA_DIR",
-    r"C:\Users\wilso\Desktop\discapacidad\bd_consolidada",
+    f"{_DEFAULT_DATA_ROOT}/bd_consolidada",
 ))
 FUENTES_EXTERNAS = Path(os.getenv(
     "FUENTES_EXTERNAS_DIR",
-    r"C:\Users\wilso\Desktop\discapacidad\fuentes_externas",
+    f"{_DEFAULT_DATA_ROOT}/fuentes_externas",
 ))
 VICTIMAS_DIR = Path(os.getenv(
     "VICTIMAS_DIR",
-    r"C:\Users\wilso\Desktop\discapacidad\victimas",
+    f"{_DEFAULT_DATA_ROOT}/victimas",
 ))
 
 
