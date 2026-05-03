@@ -80,20 +80,41 @@ else
 fi
 
 # 5 · Aplicar seeds (idempotentes)
-step "5/8 · Aplicando seeds 003+004+005..."
-for seed in 003_seed_proyecciones_fac.sql 004_seed_proyecciones_escenarios.sql 005_seed_indicadores_definiciones.sql; do
+step "5/8 · Aplicando seeds 002-009..."
+SEEDS=(
+  002_auth_formulario.sql
+  003_seed_proyecciones_fac.sql
+  004_seed_proyecciones_escenarios.sql
+  005_seed_indicadores_definiciones.sql
+  006_seed_indicadores_icv.sql
+  007_seed_triangulacion.sql
+  008_seed_prev_estandarizada_stub.sql
+  009_fix_pueblos_e2e.sql
+)
+for seed in "${SEEDS[@]}"; do
   if [[ -f "backend/sql/$seed" ]]; then
     docker exec -i "$DB_CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" < "backend/sql/$seed" >/dev/null 2>&1 \
       && echo "    ✓ $seed" \
       || fail "Aplicar $seed falló · revisar logs"
   else
-    fail "No se encontró backend/sql/$seed"
+    echo "    ⚠ $seed no encontrado · saltando"
   fi
 done
 ok "Seeds aplicados"
 
-# 6 · Carga CNPV completa (largo · 15-30 min)
-step "6/8 · Carga CNPV completa via load_all.py..."
+# 6a · Seed users de auth (idempotente)
+step "6a/8 · Seed users (auth)..."
+docker exec "$API_CONTAINER" python -m scripts.seed_auth >/dev/null 2>&1 \
+  && ok "users seeded · ver scripts/seed_auth.py para credenciales" \
+  || echo "    ⚠ seed_auth falló · usuarios pueden ya existir"
+
+# 6b · Seed geo.municipios desde bd_consolidada (depende del CSV)
+step "6b/8 · Seed geo.municipios..."
+docker exec "$API_CONTAINER" python -m scripts.seed_municipios 2>&1 | tail -1 \
+  || echo "    ⚠ seed_municipios falló · revisar bd_consolidada/02_*.csv"
+
+# 6c · Carga CNPV completa (largo · 15-30 min)
+step "6c/8 · Carga CNPV completa via load_all.py..."
 echo "    ⏱  Esto puede tomar 15-30 minutos · no interrumpir"
 if docker exec "$API_CONTAINER" python -m scripts.load_all 2>&1 | tail -5; then
   ok "Carga CNPV completa"
