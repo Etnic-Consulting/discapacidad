@@ -16,6 +16,7 @@ import CertificationFunnel from '../components/CertificationFunnel';
 import DidYouKnow from '../components/DidYouKnow';
 import NationalPyramids from '../components/NationalPyramids';
 import Term from '../components/Term';
+import DisabilityGlossary from '../components/DisabilityGlossary';
 import { useFilters } from '../context/FilterContext';
 import { useResumenNacional, usePrevalenciaDpto, usePerfilPueblo, usePueblos, useBrecha, usePerfilResguardo, useDificultades, usePiramideDiscNacional, usePanoramaKpis } from '../hooks/useApi';
 import { sortAndMergeAgeGroups } from '../lib/ageGroups';
@@ -405,6 +406,9 @@ export default function PanoramaPage() {
 
   return (
     <div>
+      {/* Glosario flotante · Sprint S1.E visual pedagógico */}
+      <DisabilityGlossary />
+
       <div className="page-header">
         <h1>{pageTitle}</h1>
         <p>
@@ -541,6 +545,29 @@ export default function PanoramaPage() {
           hasta quienes cuentan con certificacion oficial de capacidades diversas. Cada
           nivel representa una barrera adicional en el proceso de reconocimiento.
         </p>
+
+        {/* Narrativa pedagógica · Sprint S1.E visual */}
+        <div style={{
+          background: 'rgba(2, 171, 68, 0.05)',
+          borderLeft: '3px solid var(--color-green-mid)',
+          padding: '12px 16px',
+          marginBottom: '16px',
+          fontSize: '0.85rem',
+          lineHeight: 1.6,
+          color: '#444',
+        }}>
+          <strong style={{ color: 'var(--color-primary)' }}>¿Cómo se lee este embudo?</strong>
+          <ul style={{ margin: '8px 0 0 0', paddingLeft: '18px' }}>
+            <li>De <strong>1.9M indígenas totales</strong>, solo el <strong>11.8%</strong> reporta dificultad funcional en el censo (sesgo de subregistro: muchos no se identifican porque su pueblo no nombra "discapacidad" igual que el Estado).</li>
+            <li>De los <strong>225.174 con CD</strong>, solo el <strong>17.5%</strong> está en el RLCPD (registro oficial MinSalud · barrera burocrática).</li>
+            <li>De los <strong>39.374 RLCPD</strong>, solo el <strong>2.6%</strong> ha sido caracterizado por SMT-ONIC (el movimiento indígena no ha llegado · oportunidad de trabajo con dinamizadores).</li>
+            <li>De los <strong>1.044 caracterizados</strong>, solo el <strong>41%</strong> tiene certificación oficial (cert requiere documentación clínica que no llega a territorios).</li>
+          </ul>
+          <p style={{ margin: '8px 0 0 0', fontStyle: 'italic', color: 'var(--color-gray-500)' }}>
+            <strong>99,8%</strong> de los indígenas con CD NO tiene certificado oficial. Esta es la <Term tooltip="ver glosario · término CDPD">deuda institucional</Term>.
+          </p>
+        </div>
+
         <CertificationFunnel brecha={brechaData} />
       </div>
 
