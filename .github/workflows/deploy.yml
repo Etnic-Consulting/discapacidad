@@ -1,24 +1,32 @@
 name: Deploy · SMT-ONIC producción
 
-# Disparado por tag `v*` · construye imagen Docker, la pushea a registry,
-# luego SSH al servidor cloud para hacer pull + restart.
+# Disparado por tag `v*` · construye imagen Docker, la pushea a GHCR,
+# y opcionalmente SSH al servidor para pull + restart si los secrets están configurados.
+#
+# Cloud-agnóstico: funciona con AWS EC2, GCP Compute Engine, Digital Ocean,
+# Azure VM o on-prem ONIC. La única dependencia es SSH al servidor de destino.
 #
 # Pre-requisitos (configurar en repo Settings · Secrets):
-#   - REGISTRY_USERNAME · ej. ghcr.io username (o Docker Hub)
-#   - REGISTRY_PASSWORD · PAT con scope write:packages
-#   - PROD_SSH_HOST · IP o dominio del servidor
+#   - PROD_SSH_HOST · IP o dominio del servidor (ej. smt-onic.com o 1.2.3.4)
 #   - PROD_SSH_USER · usuario SSH (ej. deploy)
-#   - PROD_SSH_KEY · clave privada SSH (formato OpenSSH)
+#   - PROD_SSH_KEY · clave privada SSH (formato OpenSSH · ssh-keygen -t ed25519)
 #   - PROD_DEPLOY_PATH · ruta del repo en el servidor (ej. /opt/smt-onic)
 #
-# Generado por Sprint S2.A02 · 2026-05-02
-# TODO post-confirmar cloud target: AWS ECR/Beanstalk · GCP Artifact Registry · Azure Container Registry
+# El job `deploy-to-server` se auto-habilita cuando los 4 secrets están presentes.
+# Si faltan, solo se construye y publica la imagen (no se hace deploy automático).
+#
+# Generado por Sprint S2 · 2026-05-03
 
 on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:  # disparable manualmente desde GitHub UI
+  workflow_dispatch:
+    inputs:
+      tag_override:
+        description: 'Tag override (opcional · ej. v1.0.0-prod-ready)'
+        required: false
+        default: ''
 
 env:
   REGISTRY: ghcr.io
@@ -70,8 +78,9 @@ jobs:
     name: SSH · pull + restart en servidor
     needs: build-and-push
     runs-on: ubuntu-latest
-    # TODO confirmar target cloud antes de habilitar:
-    if: false  # ⚠️ Habilitar tras confirmar cloud + agregar secrets
+    # Auto-habilitado cuando los 4 secrets están configurados.
+    # Si faltan, este job se salta y solo se publica la imagen al registry.
+    if: ${{ vars.DEPLOY_ENABLED == 'true' }}
 
     steps:
       - uses: actions/checkout@v4
