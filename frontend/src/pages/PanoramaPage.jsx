@@ -17,6 +17,7 @@ import DidYouKnow from '../components/DidYouKnow';
 import NationalPyramids from '../components/NationalPyramids';
 import Term from '../components/Term';
 import DisabilityGlossary from '../components/DisabilityGlossary';
+import ColorPaletteToggle from '../components/ColorPaletteToggle';
 import { useFilters } from '../context/FilterContext';
 import { useResumenNacional, usePrevalenciaDpto, usePerfilPueblo, usePueblos, useBrecha, usePerfilResguardo, useDificultades, usePiramideDiscNacional, usePanoramaKpis } from '../hooks/useApi';
 import { sortAndMergeAgeGroups } from '../lib/ageGroups';
@@ -406,8 +407,9 @@ export default function PanoramaPage() {
 
   return (
     <div>
-      {/* Glosario flotante · Sprint S1.E visual pedagógico */}
+      {/* Glosario + paleta colorblind · Sprint S1.E visual pedagógico */}
       <DisabilityGlossary />
+      <ColorPaletteToggle />
 
       <div className="page-header">
         <h1>{pageTitle}</h1>

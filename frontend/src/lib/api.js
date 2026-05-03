@@ -177,9 +177,21 @@ export function fetchVictimasPueblo(codPueblo) {
 }
 
 // ---- Intercensal & SMT Resumen ----
-export function fetchIntercensal(grupoEtnico) {
+export function fetchIntercensal(grupoEtnico, aplicarFac = false) {
+  // T02 Sprint S1.A · soporta `?aplicar_fac=true` para armonizar CG2005↔CNPV2018
   return request(`${BASE}/dashboard/intercensal`, {
     grupo_etnico: grupoEtnico,
+    aplicar_fac: aplicarFac,
+  });
+}
+
+export function fetchProyecciones({ grupoEtnico = 'Indigena', periodoInicio = 2005, periodoFin = 2030, escenario } = {}) {
+  // T08 Sprint S1.A · endpoint nuevo · proyecciones Lee-Carter aproximado con bandas IC
+  return request(`${BASE}/dashboard/proyecciones`, {
+    grupo_etnico: grupoEtnico,
+    periodo_inicio: periodoInicio,
+    periodo_fin: periodoFin,
+    escenario,
   });
 }
 

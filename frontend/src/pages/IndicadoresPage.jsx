@@ -13,7 +13,12 @@ import DidYouKnow from '../components/DidYouKnow';
 import { useFilters } from '../context/FilterContext';
 import { useIndicadores, useIndicadorSerie, useIndicadorValores } from '../hooks/useApi';
 
-const MOCK_INDICADORES = [
+// T21 Sprint S1.C-Phase2 · MOCK_INDICADORES queda como REFERENCIA HISTORICA solamente.
+// El componente NO lo consume mas (linea 240 ahora usa lista vacia si API falla).
+// La lista oficial vive en indicadores.definiciones (poblada por seed 005) +
+// indicadores.icv_municipal (seed 006) + indicadores.triangulacion_registro (seed 007).
+// Cuando se quiera eliminar este array, removerlo y compilar.
+const MOCK_INDICADORES_REFERENCE_DEPRECATED = [
   {
     id: 'COB-01',
     dimension: 'Cobertura',
@@ -237,7 +242,7 @@ export default function IndicadoresPage() {
           estado,
         };
       })
-    : MOCK_INDICADORES;
+    : []; // Sprint S1.C-Phase2 (T21) · sin MOCK · UI mostrara estado vacio si API no responde
 
   const dimensiones = [...new Set(indicadores.map((ind) => ind.dimension))];
 

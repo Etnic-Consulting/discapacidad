@@ -13,6 +13,7 @@ import {
   fetchPanoramaKpis,
   fetchFiltrosCascada,
   fetchIntercensal,
+  fetchProyecciones,
   fetchSmtResumen,
   fetchPueblos,
   fetchPerfilPueblo,
@@ -146,11 +147,23 @@ export function useFiltrosCascada(codDpto, codMpio) {
 }
 
 /* ---- Intercensal & SMT Resumen ---- */
-export function useIntercensal(grupoEtnico) {
+export function useIntercensal(grupoEtnico, aplicarFac = false) {
   return useQuery({
-    queryKey: ['intercensal', grupoEtnico],
-    queryFn: () => fetchIntercensal(grupoEtnico),
+    queryKey: ['intercensal', grupoEtnico, aplicarFac],
+    queryFn: () => fetchIntercensal(grupoEtnico, aplicarFac),
     staleTime: 5 * 60 * 1000,
+    retry: 1,
+  });
+}
+
+// T08 Sprint S1.A · proyecciones Lee-Carter con bandas IC
+// Endpoint: /api/v1/dashboard/proyecciones?grupo_etnico=...&periodo_inicio=...&periodo_fin=...
+// Lee tabla proyecciones.escenarios (832 filas · 8 grupos × 26 años × 4 escenarios)
+export function useProyecciones(opts = {}) {
+  return useQuery({
+    queryKey: ['proyecciones', opts.grupoEtnico, opts.periodoInicio, opts.periodoFin, opts.escenario],
+    queryFn: () => fetchProyecciones(opts),
+    staleTime: 10 * 60 * 1000,
     retry: 1,
   });
 }

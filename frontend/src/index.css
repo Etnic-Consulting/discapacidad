@@ -68,6 +68,22 @@
   --sidebar-collapsed: var(--sidebar-collapsed-w);
 }
 
+/* ============================================
+   T26 Sprint S1.E · Paleta colorblind-safe (Viridis-inspired)
+   Activable con: <body data-colorblind="true">
+   Persistencia en localStorage por <ColorPaletteToggle />
+   Doctrina: _docs/DOCTRINA_DISENO_VISUAL_v1.md §2.2
+   ============================================ */
+body[data-colorblind="true"] {
+  --color-primary:     #2A3F73;  /* azul profundo (Viridis dark end) */
+  --color-green-mid:   #1F968B;  /* teal (Viridis mid) */
+  --color-green-light: #B6E4D4;  /* teal claro */
+  --color-red:         #D55E00;  /* naranja oscuro · NO rojo (CB-safe) */
+  --color-gold:        #E69F00;  /* naranja medio */
+  --color-gold-light:  #F4D7A1;  /* naranja claro */
+  --color-charcoal:    #0E1F1A;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body {

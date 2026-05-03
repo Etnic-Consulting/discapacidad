@@ -8,7 +8,7 @@ import {
   ResponsiveContainer, ReferenceLine,
 } from 'recharts';
 import KPICard from '../components/KPICard';
-import { useIntercensal } from '../hooks/useApi';
+import { useIntercensal, useProyecciones } from '../hooks/useApi';
 
 /* ---- Fallback data (used when API is unavailable) ---- */
 const FALLBACK_INTERCENSAL = [
@@ -138,7 +138,10 @@ export default function ProyeccionesPage() {
   const [selectedEscenario, setSelectedEscenario] = useState('base');
 
   /* ---- Fetch real intercensal data ---- */
-  const { data: intercensalResp, isLoading, isError } = useIntercensal();
+  // T20 Sprint S1.C-Phase2 · activamos aplicar_fac=true para armonizar CG2005↔CNPV2018
+  // y traemos las proyecciones T08 con bandas IC oficial.
+  const { data: intercensalResp, isLoading, isError } = useIntercensal(undefined, true);
+  const { data: proyeccionesResp } = useProyecciones({ grupoEtnico: 'Indigena', periodoInicio: 2005, periodoFin: 2030 });
   const intercensalData = intercensalResp?.data ?? FALLBACK_INTERCENSAL;
 
   /* ---- Extract base values from real data (or fallback) ---- */
@@ -223,8 +226,27 @@ export default function ProyeccionesPage() {
         lineHeight: 1.5,
       }}>
         <strong>Fuente:</strong> Datos intercensales verificados: CG 2005 y CNPV 2018 (DANE).
+        {intercensalResp?.fac_aplicado && (
+          <span style={{ display: 'block', marginTop: 4, color: 'var(--color-green-mid)', fontWeight: 500 }}>
+            ✓ FAC aplicado · cifras 2005 armonizadas al instrumento Washington Group de 2018 · ver glosario "FAC"
+          </span>
+        )}
         {isError && ' (usando datos de respaldo — API no disponible)'}
       </div>
+
+      {/* T20 Sprint S1.C-Phase2 · Banner pedagógico cuando proyecciones T08 disponibles */}
+      {proyeccionesResp?.total > 0 && (
+        <div style={{
+          background: 'rgba(2, 171, 68, 0.08)',
+          borderLeft: '3px solid var(--color-green-mid)',
+          padding: '12px 16px',
+          marginBottom: '20px',
+          fontSize: '0.85rem',
+          lineHeight: 1.6,
+        }}>
+          <strong>Proyecciones T08 disponibles:</strong> {proyeccionesResp.total} puntos para indígenas (8 grupos × 26 años × 4 escenarios). Cada punto trae <strong>banda de confianza ±15%</strong>. La metodología NO es Lee-Carter formal · es aproximación lineal sobre 2 puntos censales (2005 ajustado con FAC + 2018 observado). Ver glosario para detalle.
+        </div>
+      )}
 
       {/* Loading indicator */}
       {isLoading && (
