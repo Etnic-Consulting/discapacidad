@@ -11,8 +11,11 @@ from app.database import get_db
 from app.routers.auth import get_current_user  # T24 · cierre H-ONIC-052
 
 logger = logging.getLogger(__name__)
-# T24 · auth global · todos los endpoints requieren Bearer token
-router = APIRouter(dependencies=[Depends(get_current_user)])
+# Auth removida del router · cada endpoint declara si la requiere.
+# Endpoints de configuración (lista de macros · departamentos · municipios)
+# son PÚBLICOS porque son metadatos de UI · sin información sensible.
+# Endpoints con datos detallados (resguardos GeoJSON) sí requieren auth.
+router = APIRouter()
 
 
 @router.get("/departamentos")
@@ -112,7 +115,7 @@ async def municipios_geojson(
         raise HTTPException(status_code=500, detail=f"Error consultando municipios: {str(e)}")
 
 
-@router.get("/resguardos")
+@router.get("/resguardos", dependencies=[Depends(get_current_user)])
 async def listar_resguardos(
     cod_mpio: str | None = Query(None, description="Filtrar por municipio"),
     db: AsyncSession = Depends(get_db),
@@ -152,15 +155,33 @@ async def listar_resguardos(
 async def listar_macrorregiones(db: AsyncSession = Depends(get_db)):
     """Lista de las 5 macrorregiones ONIC con conteo de municipios asociados."""
     try:
+        # Fuente canónica: geo.macro_dptos (mapeo oficial ONIC desde Departamentos.gpkg)
+        # · cuenta mpios totales del macro (no solo donde hay resguardos)
+        # · cuenta resguardos cruzando smt_geo.resguardos por dpto canónico
+        # · cuenta pueblos presentes en cualquier mpio del macro vía pueblo.pueblo_municipio
         result = await db.execute(text("""
-            SELECT m.id, m.macro,
-                   COUNT(DISTINCT r.mpio_cdpmp) AS municipios,
-                   COUNT(DISTINCT r.ccdgo_terr) AS resguardos,
-                   COUNT(DISTINCT r.pueblo_onic) AS pueblos
-            FROM smt_geo.macrorregiones m
-            LEFT JOIN smt_geo.resguardos r ON r.macro = m.macro
-            GROUP BY m.id, m.macro
-            ORDER BY m.id
+            WITH macros AS (
+                SELECT DISTINCT macro FROM geo.macro_dptos WHERE macro IS NOT NULL
+            )
+            SELECT
+                ROW_NUMBER() OVER (ORDER BY m.macro)::int AS id,
+                m.macro,
+                (SELECT COUNT(DISTINCT mu.cod_mpio)
+                 FROM geo.municipios mu
+                 JOIN geo.macro_dptos md ON mu.cod_dpto = md.cod_dpto
+                 WHERE md.macro = m.macro) AS municipios,
+                (SELECT COUNT(DISTINCT r.ccdgo_terr)
+                 FROM smt_geo.resguardos r
+                 JOIN geo.macro_dptos md ON LEFT(r.mpio_cdpmp, 2) = md.cod_dpto
+                 WHERE md.macro = m.macro) AS resguardos,
+                (SELECT COUNT(DISTINCT pm.cod_pueblo)
+                 FROM pueblo.pueblo_municipio pm
+                 JOIN geo.macro_dptos md ON LEFT(pm.cod_mpio, 2) = md.cod_dpto
+                 WHERE md.macro = m.macro AND pm.periodo = '2018') AS pueblos,
+                (SELECT COUNT(*) FROM geo.macro_dptos md
+                 WHERE md.macro = m.macro) AS departamentos
+            FROM macros m
+            ORDER BY m.macro
         """))
         rows = [dict(r._mapping) for r in result]
         return {"total": len(rows), "data": rows}
@@ -191,7 +212,7 @@ async def get_macrorregiones(db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=500, detail=f"Error consultando macrorregiones: {str(e)}")
 
 
-@router.get("/smt/resguardos")
+@router.get("/smt/resguardos", dependencies=[Depends(get_current_user)])
 async def get_resguardos_geo(db: AsyncSession = Depends(get_db)):
     """GeoJSON of 830 ONIC resguardos with pueblo and disability indicators."""
     try:
