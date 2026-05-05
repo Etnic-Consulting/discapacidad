@@ -110,18 +110,30 @@ async def resolver_filtros(
         return f
 
     if cod_macro:
+        # Fuente canónica: geo.macro_dptos (mapeo oficial ONIC desde Departamentos.gpkg)
+        # Resolver TODOS los mpios de los dptos asignados a la macro · cobertura completa
+        # incluso para dptos sin resguardos titulados pero con población indígena.
         r = await db.execute(
             text("""
-                SELECT DISTINCT mpio_cdpmp
-                FROM smt_geo.resguardos
-                WHERE UPPER(TRIM(macro)) = UPPER(TRIM(:m))
-                  AND mpio_cdpmp IS NOT NULL
-                ORDER BY mpio_cdpmp
+                SELECT m.cod_mpio
+                FROM geo.municipios m
+                JOIN geo.macro_dptos md ON m.cod_dpto = md.cod_dpto
+                WHERE UPPER(TRIM(md.macro)) = UPPER(TRIM(:m))
+                ORDER BY m.cod_mpio
             """),
             {"m": cod_macro},
         )
         f.mpios = [x[0] for x in r.fetchall()]
-        f.dptos = sorted({m[:2] for m in f.mpios})
+        # Dptos canónicos · NO derivados de los mpios (incluye dptos sin mpios poblados)
+        r2 = await db.execute(
+            text("""
+                SELECT cod_dpto FROM geo.macro_dptos
+                WHERE UPPER(TRIM(macro)) = UPPER(TRIM(:m))
+                ORDER BY cod_dpto
+            """),
+            {"m": cod_macro},
+        )
+        f.dptos = [x[0] for x in r2.fetchall()]
         return f
 
     return f

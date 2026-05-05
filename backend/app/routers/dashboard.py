@@ -217,7 +217,63 @@ async def filtros_cascada(
         response["departamentos"] = [dict(r._mapping) for r in dptos_result]
 
         # Si se pasó cod_macro (sin cod_dpto/cod_mpio), restringir lista de dptos/mpios/pueblos/resguardos
+        # FUENTE CANÓNICA: geo.macro_dptos (mapping oficial ONIC desde Departamentos.gpkg)
         if cod_macro and not cod_dpto and not cod_mpio:
+            macro_dptos = await db.execute(
+                text("""
+                    SELECT cod_dpto, nom_dpto
+                    FROM geo.macro_dptos
+                    WHERE UPPER(TRIM(macro)) = UPPER(TRIM(:cm))
+                    ORDER BY nom_dpto
+                """),
+                {"cm": cod_macro},
+            )
+            response["departamentos"] = [dict(r._mapping) for r in macro_dptos]
+
+            macro_mpios = await db.execute(
+                text("""
+                    SELECT m.cod_mpio, m.nom_mpio, m.cod_dpto
+                    FROM geo.municipios m
+                    JOIN geo.macro_dptos md ON m.cod_dpto = md.cod_dpto
+                    WHERE UPPER(TRIM(md.macro)) = UPPER(TRIM(:cm))
+                    ORDER BY m.nom_mpio
+                """),
+                {"cm": cod_macro},
+            )
+            response["municipios"] = [dict(r._mapping) for r in macro_mpios]
+
+            macro_pueblos = await db.execute(
+                text("""
+                    SELECT DISTINCT pm.cod_pueblo, pm.pueblo
+                    FROM pueblo.pueblo_municipio pm
+                    JOIN geo.macro_dptos md ON LEFT(pm.cod_mpio, 2) = md.cod_dpto
+                    WHERE UPPER(TRIM(md.macro)) = UPPER(TRIM(:cm)) AND pm.periodo = :p
+                    ORDER BY pm.pueblo
+                """),
+                {"cm": cod_macro, "p": periodo},
+            )
+            response["pueblos"] = [dict(r._mapping) for r in macro_pueblos]
+
+            macro_resg = await db.execute(
+                text("""
+                    SELECT g.ccdgo_terr AS cod_resguardo,
+                           g.territorio AS nombre,
+                           g.pueblo_onic,
+                           g.dpto_cnmbr AS nom_departamento,
+                           g.mpio_cnmbr AS nom_municipio,
+                           g.mpio_cdpmp AS cod_mpio
+                    FROM smt_geo.resguardos g
+                    JOIN geo.macro_dptos md ON LEFT(g.mpio_cdpmp, 2) = md.cod_dpto
+                    WHERE UPPER(TRIM(md.macro)) = UPPER(TRIM(:cm))
+                    ORDER BY g.territorio
+                """),
+                {"cm": cod_macro},
+            )
+            response["resguardos"] = [dict(r._mapping) for r in macro_resg]
+
+        # ---- BLOQUE LEGADO obsoleto (smt_geo.resguardos.macro · datos sucios) ----
+        # Mantener desactivado · usar geo.macro_dptos (block arriba) como fuente canónica.
+        if False and cod_macro and not cod_dpto and not cod_mpio:
             macro_dptos = await db.execute(
                 text("""
                     SELECT DISTINCT g.dpto_ccdgo AS cod_dpto, g.dpto_cnmbr AS nom_dpto
