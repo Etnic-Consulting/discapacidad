@@ -80,6 +80,21 @@ export function AuthProvider({ children }) {
     }
   }, [auth, persist]);
 
+  // Listen for 'auth:expired' events emitted by lib/api.js on 401 responses.
+  // Cuando algún request retorna 401, se invalida la sesión y se redirige a /login
+  // si el usuario no estaba ya en la página de login.
+  useEffect(() => {
+    function handler() {
+      persist(null);
+      if (typeof window !== 'undefined' && window.location.pathname !== '/login') {
+        const back = encodeURIComponent(window.location.pathname + window.location.search);
+        window.location.href = `/login?expired=1&back=${back}`;
+      }
+    }
+    window.addEventListener('auth:expired', handler);
+    return () => window.removeEventListener('auth:expired', handler);
+  }, [persist]);
+
   const value = {
     user: auth?.user || null,
     token: auth?.token || null,

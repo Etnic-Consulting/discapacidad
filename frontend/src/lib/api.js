@@ -29,7 +29,12 @@ async function request(path, params = {}) {
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
   const res = await fetch(url.toString(), { headers });
   if (res.status === 401) {
+    // Sesión expirada o token inválido · limpiar + notificar para redirect global
     try { localStorage.removeItem(TOKEN_KEY); } catch { /* ignore */ }
+    try {
+      window.dispatchEvent(new CustomEvent('auth:expired', { detail: { path } }));
+    } catch { /* ignore */ }
+    throw new Error('SESSION_EXPIRED');
   }
   if (!res.ok) {
     const text = await res.text().catch(() => '');
