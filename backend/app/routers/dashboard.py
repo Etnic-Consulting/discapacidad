@@ -9,6 +9,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
+from app.filters import resolver_filtros, where_dptos
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -46,15 +47,28 @@ async def resumen_nacional(
 async def prevalencia_por_departamento(
     periodo: str = Query("2018"),
     grupo_etnico: str | None = Query(None, description="Filtrar por grupo etnico"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC"),
+    cod_dpto: str | None = Query(None, description="Departamento específico"),
+    cod_mpio: str | None = Query(None, description="Municipio · filtra a su dpto"),
+    cod_resguardo: str | None = Query(None, description="Resguardo · filtra a su dpto"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Prevalencia de capacidades diversas por grupo etnico y departamento."""
+    """Prevalencia de capacidades diversas por grupo etnico y departamento.
+
+    B01 · Soporta cascada filtros geográficos restringidos a granularidad dpto.
+    """
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, None, cod_resguardo)
         params: dict = {"periodo": periodo}
-        filtro_etnia = ""
+        filtros_sql = []
         if grupo_etnico:
-            filtro_etnia = "AND p.grupo_etnico = :grupo_etnico"
+            filtros_sql.append("p.grupo_etnico = :grupo_etnico")
             params["grupo_etnico"] = grupo_etnico
+        if filtro.dptos:
+            filtros_sql.append("p.cod_dpto = ANY(:_filter_dptos)")
+            params["_filter_dptos"] = filtro.dptos
+
+        where_extra = ("AND " + " AND ".join(filtros_sql)) if filtros_sql else ""
 
         result = await db.execute(
             text(f"""
@@ -63,13 +77,18 @@ async def prevalencia_por_departamento(
                        p.tasa_x_1000, p.prevalencia_pct
                 FROM cnpv.prevalencia_etnia_dpto p
                 LEFT JOIN geo.departamentos d ON p.cod_dpto = d.cod_dpto
-                WHERE p.periodo = :periodo {filtro_etnia}
+                WHERE p.periodo = :periodo {where_extra}
                 ORDER BY p.cod_dpto, p.grupo_etnico
             """),
             params,
         )
         rows = [dict(r._mapping) for r in result]
-        return {"periodo": periodo, "total": len(rows), "data": rows}
+        return {
+            "periodo": periodo,
+            "scope": filtro.scope_label,
+            "total": len(rows),
+            "data": rows,
+        }
     except Exception as e:
         logger.error("Error en prevalencia_por_departamento: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=f"Error consultando prevalencia por departamento: {str(e)}")
@@ -115,22 +134,33 @@ async def prevalencia_indigena_municipio(
 @router.get("/dificultades")
 async def dificultades_radar(
     periodo: str = Query("2018"),
-    cod_dpto: str | None = Query(None, description="Filtrar por departamento"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC"),
+    cod_dpto: str | None = Query(None, description="Departamento"),
+    cod_mpio: str | None = Query(None, description="Municipio (filtra a su dpto)"),
+    cod_pueblo: str | None = Query(None, description="Pueblo indígena · informativo"),
+    cod_resguardo: str | None = Query(None, description="Resguardo (filtra a su dpto)"),
     grupo_etnico: str | None = Query(None, description="Filtrar por grupo etnico"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Datos radar de dificultades (Washington Group) por grupo etnico."""
-    try:
-        params: dict = {"periodo": periodo}
-        filtros = []
-        if cod_dpto:
-            filtros.append("d.cod_dpto = :cod_dpto")
-            params["cod_dpto"] = cod_dpto
-        if grupo_etnico:
-            filtros.append("d.grupo_etnico = :grupo_etnico")
-            params["grupo_etnico"] = grupo_etnico
+    """Datos radar de dificultades (Washington Group) por grupo etnico.
 
-        where_extra = ("AND " + " AND ".join(filtros)) if filtros else ""
+    B01 · Soporta cascada de filtros geográficos. La tabla origen es
+    `cnpv.dificultades_etnia_dpto` (granularidad mínima dpto), por lo que
+    cod_mpio/cod_resguardo se reducen a su dpto contenedor.
+    """
+    try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, cod_pueblo, cod_resguardo)
+        params: dict = {"periodo": periodo}
+        filtros_sql = []
+        if grupo_etnico:
+            filtros_sql.append("d.grupo_etnico = :grupo_etnico")
+            params["grupo_etnico"] = grupo_etnico
+        clause_dptos, p_dptos = where_dptos(filtro, "d.cod_dpto")
+        if clause_dptos:
+            filtros_sql.append(clause_dptos.lstrip("AND ").strip())
+            params.update(p_dptos)
+
+        where_extra = ("AND " + " AND ".join(filtros_sql)) if filtros_sql else ""
 
         result = await db.execute(
             text(f"""
@@ -149,7 +179,11 @@ async def dificultades_radar(
             params,
         )
         rows = [dict(r._mapping) for r in result]
-        return {"periodo": periodo, "data": rows}
+        return {
+            "periodo": periodo,
+            "scope": filtro.scope_label,
+            "data": rows,
+        }
     except Exception as e:
         logger.error("Error en dificultades_radar: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=f"Error consultando dificultades: {str(e)}")
@@ -159,11 +193,13 @@ async def dificultades_radar(
 async def filtros_cascada(
     cod_dpto: str | None = Query(None, description="Codigo departamento para filtrar municipios/pueblos/resguardos"),
     cod_mpio: str | None = Query(None, description="Codigo municipio para filtrar pueblos/resguardos"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC: filtra dptos/mpios/pueblos/resguardos de la zona"),
     periodo: str = Query("2018"),
     db: AsyncSession = Depends(get_db),
 ):
     """Endpoint de filtros en cascada.
     - Sin parametros: retorna los 33 departamentos.
+    - Con cod_macro: retorna dptos/mpios/pueblos/resguardos de la macrorregión.
     - Con cod_dpto: retorna municipios del departamento + pueblos presentes + resguardos.
     - Con cod_mpio: retorna pueblos del municipio + resguardos del municipio.
     """
@@ -179,6 +215,61 @@ async def filtros_cascada(
             """)
         )
         response["departamentos"] = [dict(r._mapping) for r in dptos_result]
+
+        # Si se pasó cod_macro (sin cod_dpto/cod_mpio), restringir lista de dptos/mpios/pueblos/resguardos
+        if cod_macro and not cod_dpto and not cod_mpio:
+            macro_dptos = await db.execute(
+                text("""
+                    SELECT DISTINCT g.dpto_ccdgo AS cod_dpto, g.dpto_cnmbr AS nom_dpto
+                    FROM smt_geo.resguardos g
+                    WHERE UPPER(TRIM(g.macro)) = UPPER(TRIM(:cm))
+                      AND g.dpto_ccdgo IS NOT NULL
+                    ORDER BY g.dpto_cnmbr
+                """),
+                {"cm": cod_macro},
+            )
+            response["departamentos"] = [dict(r._mapping) for r in macro_dptos]
+
+            macro_mpios = await db.execute(
+                text("""
+                    SELECT DISTINCT g.mpio_cdpmp AS cod_mpio, g.mpio_cnmbr AS nom_mpio,
+                           SUBSTRING(g.mpio_cdpmp, 1, 2) AS cod_dpto
+                    FROM smt_geo.resguardos g
+                    WHERE UPPER(TRIM(g.macro)) = UPPER(TRIM(:cm))
+                      AND g.mpio_cdpmp IS NOT NULL
+                    ORDER BY g.mpio_cnmbr
+                """),
+                {"cm": cod_macro},
+            )
+            response["municipios"] = [dict(r._mapping) for r in macro_mpios]
+
+            macro_pueblos = await db.execute(
+                text("""
+                    SELECT DISTINCT pm.cod_pueblo, pm.pueblo
+                    FROM pueblo.pueblo_municipio pm
+                    JOIN smt_geo.resguardos g ON pm.cod_mpio = g.mpio_cdpmp
+                    WHERE UPPER(TRIM(g.macro)) = UPPER(TRIM(:cm)) AND pm.periodo = :p
+                    ORDER BY pm.pueblo
+                """),
+                {"cm": cod_macro, "p": periodo},
+            )
+            response["pueblos"] = [dict(r._mapping) for r in macro_pueblos]
+
+            macro_resg = await db.execute(
+                text("""
+                    SELECT g.ccdgo_terr AS cod_resguardo,
+                           g.territorio AS nombre,
+                           g.pueblo_onic,
+                           g.dpto_cnmbr AS nom_departamento,
+                           g.mpio_cnmbr AS nom_municipio,
+                           g.mpio_cdpmp AS cod_mpio
+                    FROM smt_geo.resguardos g
+                    WHERE UPPER(TRIM(g.macro)) = UPPER(TRIM(:cm))
+                    ORDER BY g.territorio
+                """),
+                {"cm": cod_macro},
+            )
+            response["resguardos"] = [dict(r._mapping) for r in macro_resg]
 
         # If departamento selected, return its municipios
         if cod_dpto:
@@ -279,16 +370,28 @@ async def filtros_cascada(
 
 @router.get("/brecha")
 async def brecha_certificacion(
-    cod_dpto: str = Query(None),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC"),
+    cod_dpto: str | None = Query(None, description="Departamento"),
+    cod_mpio: str | None = Query(None, description="Municipio (filtra a su dpto)"),
+    cod_pueblo: str | None = Query(None, description="Pueblo · informativo"),
+    cod_resguardo: str | None = Query(None, description="Resguardo (filtra a su dpto)"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Brecha de certificacion: poblacion vs registrados vs certificados."""
+    """Brecha de certificacion: poblacion vs registrados vs certificados.
+
+    B01 · Soporta cascada de filtros geográficos. Tabla origen `cnpv.prevalencia_etnia_dpto`
+    tiene granularidad mínima dpto, por lo que cod_mpio/cod_resguardo se reducen a su dpto.
+    """
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, cod_pueblo, cod_resguardo)
         params = {}
         dpto_filter = ""
-        if cod_dpto:
-            dpto_filter = "AND p.cod_dpto = :cod_dpto"
-            params["cod_dpto"] = cod_dpto
+        if filtro.dptos:
+            dpto_filter = "AND p.cod_dpto = ANY(:_filter_dptos)"
+            params["_filter_dptos"] = filtro.dptos
+        # Para mantener compatibilidad con código posterior que usa cod_dpto:
+        if not cod_dpto and filtro.dptos and len(filtro.dptos) == 1:
+            cod_dpto = filtro.dptos[0]
 
         # Step 1: Total indigenous population
         r1 = await db.execute(text(f"""
@@ -301,14 +404,17 @@ async def brecha_certificacion(
         row1 = dict(r1.first()._mapping)
 
         # Step 2: RLCPD registered (from ext.rlcpd_nacional)
+        # Fix Capa D · parametrizar para evitar SQL injection (D05)
         rlcpd_filter = ""
-        if cod_dpto:
-            rlcpd_filter = f"AND departamento_registro LIKE '{cod_dpto} -%'"
+        rlcpd_params = {}
+        if cod_dpto and cod_dpto.isdigit() and len(cod_dpto) <= 2:
+            rlcpd_filter = "AND departamento_registro LIKE :_dpto_pattern"
+            rlcpd_params["_dpto_pattern"] = f"{cod_dpto} -%"
         r2 = await db.execute(text(f"""
             SELECT COALESCE(SUM(num_personas), 0) as registrados
             FROM ext.rlcpd_nacional
             WHERE 1=1 {rlcpd_filter}
-        """))
+        """), rlcpd_params)
         registrados = r2.scalar() or 0
 
         # Step 3: SMT characterized — legacy caracterizacion + formulario nuevo

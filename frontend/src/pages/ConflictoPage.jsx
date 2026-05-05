@@ -75,33 +75,34 @@ const spinnerSmall = {
 };
 
 export default function ConflictoPage() {
-  const { dpto, mpio, pueblo, macro, dptoNombre, puebloNombre } = useFilters();
-  const { data: kpisData } = usePanoramaKpis({
+  const { dpto, mpio, pueblo, resguardo, macro, dptoNombre, puebloNombre } = useFilters();
+  // C03 · cascada filtros geo a todos los hooks víctimas
+  const filtros = {
+    cod_macro: macro || undefined,
     cod_dpto: dpto || undefined,
     cod_mpio: mpio || undefined,
     cod_pueblo: pueblo || undefined,
-    cod_macro: macro || undefined,
-  });
+    cod_resguardo: resguardo || undefined,
+  };
+  const { data: kpisData } = usePanoramaKpis(filtros);
 
-  /* ---- API hooks — filter by dpto when selected ---- */
-  const codDpto = dpto || undefined;
   const {
     data: pueblosData,
     isLoading: loadingPueblos,
     isError: errorPueblos,
-  } = useVictimasPorPueblo(codDpto, 10);
+  } = useVictimasPorPueblo(filtros, 10);
 
   const {
     data: hechosData,
     isLoading: loadingHechos,
     isError: errorHechos,
-  } = useVictimasPorHecho(codDpto);
+  } = useVictimasPorHecho(filtros);
 
   const {
     data: tipoData,
     isLoading: loadingTipo,
     isError: errorTipo,
-  } = useVictimasPorTipo(codDpto);
+  } = useVictimasPorTipo(filtros);
 
   /* ---- Pueblo-specific data when a pueblo is selected ---- */
   const {

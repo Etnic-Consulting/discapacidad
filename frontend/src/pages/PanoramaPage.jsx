@@ -330,23 +330,22 @@ export default function PanoramaPage() {
   const { dpto, mpio, pueblo, resguardo, macro, dptoNombre, mpioNombre, puebloNombre, resguardoNombre } = useFilters();
   const [compareNacional, setCompareNacional] = useState(false);
 
-  const { data: apiData, isLoading, isError } = useResumenNacional();
-  const { data: dptoData } = usePrevalenciaDpto(dpto ? 'Indigena' : undefined);
-  const { data: apiPueblos } = usePueblos();
-  const { data: brechaData } = useBrecha(dpto || undefined);
-  const { data: dificultadesData } = useDificultades(dpto || undefined, 'Indigena');
-  const { data: piramideDiscData } = usePiramideDiscNacional({
-    cod_dpto: dpto || undefined,
-    cod_mpio: mpio || undefined,
-    cod_pueblo: pueblo || undefined,
-  });
-  const { data: kpisData } = usePanoramaKpis({
+  // C01 · cascada filtros · pasar todos al backend que ya los soporta (B01)
+  const filtros = {
+    cod_macro: macro || undefined,
     cod_dpto: dpto || undefined,
     cod_mpio: mpio || undefined,
     cod_pueblo: pueblo || undefined,
     cod_resguardo: resguardo || undefined,
-    cod_macro: macro || undefined,
-  });
+  };
+
+  const { data: apiData, isLoading, isError } = useResumenNacional();
+  const { data: dptoData } = usePrevalenciaDpto(dpto ? 'Indigena' : undefined);
+  const { data: apiPueblos } = usePueblos(filtros);
+  const { data: brechaData } = useBrecha(filtros);
+  const { data: dificultadesData } = useDificultades(filtros, 'Indigena');
+  const { data: piramideDiscData } = usePiramideDiscNacional(filtros);
+  const { data: kpisData } = usePanoramaKpis(filtros);
 
   // API returns { periodo, data: [{ grupo_etnico, pob_total, pob_disc, prevalencia_pct, tasa_x_1000 }] }
   const resumen = apiData?.data || [];

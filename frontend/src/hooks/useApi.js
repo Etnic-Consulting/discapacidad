@@ -83,29 +83,34 @@ export function usePrevalenciaMpio(codDpto) {
   });
 }
 
-export function useDificultades(codDpto, grupoEtnico) {
+export function useDificultades(filters = {}, grupoEtnico) {
+  // Soporta legacy (codDpto, grupoEtnico) y nuevo (filtersObj, grupoEtnico)
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : filters;
   return useQuery({
-    queryKey: ['dificultades', codDpto, grupoEtnico],
-    queryFn: () => fetchDificultades(codDpto, grupoEtnico),
+    queryKey: ['dificultades', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null, f.cod_pueblo || null, f.cod_resguardo || null, grupoEtnico],
+    queryFn: () => fetchDificultades(f, grupoEtnico),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
 }
 
-export function useSalud(codDpto) {
+export function useSalud(filters = {}) {
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : filters;
+  const enabled = !!(f.cod_dpto || f.cod_macro || f.cod_mpio);
   return useQuery({
-    queryKey: ['salud', codDpto],
-    queryFn: () => fetchSalud(codDpto),
-    enabled: !!codDpto,
+    queryKey: ['salud', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null],
+    queryFn: () => fetchSalud(f),
+    enabled,
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
 }
 
-export function useBrecha(codDpto) {
+export function useBrecha(filters = {}) {
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : filters;
   return useQuery({
-    queryKey: ['brecha', codDpto],
-    queryFn: () => fetchBrecha(codDpto),
+    queryKey: ['brecha', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null, f.cod_pueblo || null],
+    queryFn: () => fetchBrecha(f),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
@@ -137,10 +142,10 @@ export function useMacrorregiones() {
   });
 }
 
-export function useFiltrosCascada(codDpto, codMpio) {
+export function useFiltrosCascada(codDpto, codMpio, codMacro) {
   return useQuery({
-    queryKey: ['filtros-cascada', codDpto, codMpio],
-    queryFn: () => fetchFiltrosCascada(codDpto, codMpio),
+    queryKey: ['filtros-cascada', codDpto, codMpio, codMacro],
+    queryFn: () => fetchFiltrosCascada(codDpto, codMpio, codMacro),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
@@ -178,10 +183,11 @@ export function useSmtResumen(dimension) {
 }
 
 /* ---- Pueblos ---- */
-export function usePueblos() {
+export function usePueblos(filters = {}) {
+  const { cod_macro, cod_dpto, cod_mpio } = filters;
   return useQuery({
-    queryKey: ['pueblos'],
-    queryFn: fetchPueblos,
+    queryKey: ['pueblos', cod_macro || null, cod_dpto || null, cod_mpio || null],
+    queryFn: () => fetchPueblos({ cod_macro, cod_dpto, cod_mpio }),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
@@ -295,37 +301,45 @@ export function useVictimasResumen() {
   });
 }
 
-export function useVictimasHechos(codDpto) {
+function _normFiltros(filters) {
+  return typeof filters === 'string' ? { cod_dpto: filters } : (filters || {});
+}
+
+export function useVictimasHechos(filters = {}) {
+  const f = _normFiltros(filters);
   return useQuery({
-    queryKey: ['victimas-hechos', codDpto],
-    queryFn: () => fetchVictimasHechos(codDpto),
+    queryKey: ['victimas-hechos', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null, f.cod_resguardo || null],
+    queryFn: () => fetchVictimasHechos(f),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
 }
 
-export function useVictimasPorPueblo(codDpto, limit = 20) {
+export function useVictimasPorPueblo(filters = {}, limit = 20) {
+  const f = _normFiltros(filters);
   return useQuery({
-    queryKey: ['victimas-por-pueblo', codDpto, limit],
-    queryFn: () => fetchVictimasPorPueblo(codDpto, limit),
+    queryKey: ['victimas-por-pueblo', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null, f.cod_resguardo || null, limit],
+    queryFn: () => fetchVictimasPorPueblo(f, limit),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
 }
 
-export function useVictimasPorHecho(codDpto) {
+export function useVictimasPorHecho(filters = {}) {
+  const f = _normFiltros(filters);
   return useQuery({
-    queryKey: ['victimas-por-hecho', codDpto],
-    queryFn: () => fetchVictimasPorHecho(codDpto),
+    queryKey: ['victimas-por-hecho', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null],
+    queryFn: () => fetchVictimasPorHecho(f),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });
 }
 
-export function useVictimasPorTipo(codDpto) {
+export function useVictimasPorTipo(filters = {}) {
+  const f = _normFiltros(filters);
   return useQuery({
-    queryKey: ['victimas-por-tipo', codDpto],
-    queryFn: () => fetchVictimasPorTipo(codDpto),
+    queryKey: ['victimas-por-tipo', f.cod_macro || null, f.cod_dpto || null, f.cod_mpio || null],
+    queryFn: () => fetchVictimasPorTipo(f),
     staleTime: 5 * 60 * 1000,
     retry: 1,
   });

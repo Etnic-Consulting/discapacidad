@@ -18,27 +18,85 @@ router = APIRouter(dependencies=[Depends(get_current_user)])
 @router.get("/")
 async def listar_pueblos(
     periodo: str = Query("2018"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC (filtra por presencia en zona)"),
+    cod_dpto: str | None = Query(None, description="Departamento (filtra por presencia)"),
+    cod_mpio: str | None = Query(None, description="Municipio (filtra por presencia)"),
     db: AsyncSession = Depends(get_db),
 ):
     """Lista todos los pueblos con poblacion y prevalencia de capacidades diversas.
     Solo incluye pueblos con total >= 30 para tasas confiables.
+
+    Filtros geográficos restringen a pueblos PRESENTES en el ámbito.
+    El cálculo de prevalencia sigue siendo nacional (de pueblo.disc_nacional)
+    porque los datos a nivel mpio/resguardo no tienen suficientes casos por pueblo.
     """
     try:
-        result = await db.execute(
-            text("""
-                SELECT cod_pueblo, pueblo,
-                       con_discapacidad, sin_discapacidad, total,
-                       prevalencia_pct, tasa_x_1000,
-                       COALESCE(confiabilidad, 'MEDIA') as confiabilidad
-                FROM pueblo.disc_nacional
-                WHERE periodo = :periodo AND total >= 30
-                  AND COALESCE(confiabilidad, '') != 'EXCLUIR'
-                ORDER BY total DESC
-            """),
-            {"periodo": periodo},
-        )
+        # Resolver lista de cod_pueblo presentes en el ámbito geográfico (si hay filtro)
+        cod_pueblos_filtro: list[str] | None = None
+
+        if cod_mpio:
+            r = await db.execute(
+                text("SELECT DISTINCT cod_pueblo FROM pueblo.pueblo_municipio WHERE cod_mpio = :m AND periodo = :p"),
+                {"m": cod_mpio, "p": periodo},
+            )
+            cod_pueblos_filtro = [str(x[0]) for x in r.fetchall()]
+        elif cod_dpto:
+            r = await db.execute(
+                text("SELECT DISTINCT cod_pueblo FROM pueblo.disc_dpto WHERE cod_dpto = :d AND periodo = :p AND total > 0"),
+                {"d": cod_dpto, "p": periodo},
+            )
+            cod_pueblos_filtro = [str(x[0]) for x in r.fetchall()]
+        elif cod_macro:
+            # Resolver dptos/mpios de la macro vía smt_geo.resguardos
+            r = await db.execute(
+                text("""
+                    SELECT DISTINCT pm.cod_pueblo
+                    FROM pueblo.pueblo_municipio pm
+                    JOIN smt_geo.resguardos g ON pm.cod_mpio = g.mpio_cdpmp
+                    WHERE UPPER(TRIM(g.macro)) = UPPER(TRIM(:cm)) AND pm.periodo = :p
+                """),
+                {"cm": cod_macro, "p": periodo},
+            )
+            cod_pueblos_filtro = [str(x[0]) for x in r.fetchall()]
+
+        # Query base con filtro opcional
+        if cod_pueblos_filtro is not None:
+            if not cod_pueblos_filtro:
+                return {"periodo": periodo, "total": 0, "data": [],
+                        "filtro_aplicado": {"cod_macro": cod_macro, "cod_dpto": cod_dpto, "cod_mpio": cod_mpio}}
+            result = await db.execute(
+                text("""
+                    SELECT cod_pueblo, pueblo,
+                           con_discapacidad, sin_discapacidad, total,
+                           prevalencia_pct, tasa_x_1000,
+                           COALESCE(confiabilidad, 'MEDIA') as confiabilidad
+                    FROM pueblo.disc_nacional
+                    WHERE periodo = :periodo AND total >= 30
+                      AND COALESCE(confiabilidad, '') != 'EXCLUIR'
+                      AND cod_pueblo = ANY(:cods)
+                    ORDER BY total DESC
+                """),
+                {"periodo": periodo, "cods": cod_pueblos_filtro},
+            )
+        else:
+            result = await db.execute(
+                text("""
+                    SELECT cod_pueblo, pueblo,
+                           con_discapacidad, sin_discapacidad, total,
+                           prevalencia_pct, tasa_x_1000,
+                           COALESCE(confiabilidad, 'MEDIA') as confiabilidad
+                    FROM pueblo.disc_nacional
+                    WHERE periodo = :periodo AND total >= 30
+                      AND COALESCE(confiabilidad, '') != 'EXCLUIR'
+                    ORDER BY total DESC
+                """),
+                {"periodo": periodo},
+            )
         rows = [dict(r._mapping) for r in result]
-        return {"periodo": periodo, "total": len(rows), "data": rows}
+        resp = {"periodo": periodo, "total": len(rows), "data": rows}
+        if cod_pueblos_filtro is not None:
+            resp["filtro_aplicado"] = {"cod_macro": cod_macro, "cod_dpto": cod_dpto, "cod_mpio": cod_mpio}
+        return resp
     except Exception as e:
         logger.error("Error en listar_pueblos: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=f"Error consultando pueblos: {str(e)}")

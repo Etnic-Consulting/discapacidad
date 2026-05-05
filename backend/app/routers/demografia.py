@@ -1490,7 +1490,16 @@ async def piramide_disc_tipo_nacional(
             """))
         rows = [dict(r._mapping) for r in result]
         if not rows:
-            raise HTTPException(status_code=404, detail="No hay datos nacionales por tipo")
+            return {
+                'cod_pueblo': cod_pueblo or 'NACIONAL',
+                'cod_dpto': cod_dpto,
+                'cod_mpio': cod_mpio,
+                'total': 0,
+                'tipos': [],
+                'resumen_tipos': [],
+                'piramide': [],
+                'mensaje': 'Datos pendientes de extracción REDATAM',
+            }
         tipos = sorted(set(r['tipo_limitacion'] for r in rows))
         grand_total = sum(int(r['valor']) for r in rows)
         piramide = []

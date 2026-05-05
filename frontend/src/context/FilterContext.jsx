@@ -60,7 +60,8 @@ export function FilterProvider({ children }) {
   /* ---- Fetch cascading options from API ---- */
   const { data: cascadeData, isLoading: cascadeLoading } = useFiltrosCascada(
     dpto || undefined,
-    mpio || undefined
+    mpio || undefined,
+    macro || undefined
   );
 
   /* ---- Derived option lists ---- */
@@ -128,18 +129,23 @@ export function FilterProvider({ children }) {
     [setSearchParams]
   );
 
-  /* ---- Cascading setters ---- */
+  /* ---- Cascading setters · B02 cascada combinable ----
+     Filtros macro y dpto/mpio se COMBINAN (no excluyen). El backend
+     decide la precedencia: cod_resguardo > cod_mpio > cod_dpto > cod_macro.
+     Cuando se elige dpto desde un macro activo, el macro permanece
+     (el dpto refina el ámbito del macro).
+  */
   const setDpto = useCallback(
     (val) => {
-      // Seleccionar dpto limpia macro (corte alternativo) y downstream
-      updateParams({ dpto: val, mpio: '', pueblo: '', resguardo: '', macro: '' });
+      // Refinar dentro del macro · NO limpiar macro
+      updateParams({ dpto: val, mpio: '', pueblo: '', resguardo: '' });
     },
     [updateParams]
   );
 
   const setMacro = useCallback(
     (val) => {
-      // Macro y dpto/mpio son cortes geograficos alternativos: limpiar uno al otro
+      // Cambiar macro limpia downstream porque el universo dpto/mpio cambia
       updateParams({ macro: val, dpto: '', mpio: '', pueblo: '', resguardo: '' });
     },
     [updateParams]

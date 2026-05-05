@@ -1,0 +1,120 @@
+# Stack de observabilidad self-hosted SMT-ONIC
+# ==============================================
+# Cero API keys de pago · todo open-source en mismo Droplet.
+#
+# Componentes:
+#   - Prometheus (métricas) :9090
+#   - Grafana (dashboards) :3000
+#   - Loki (logs) :3100
+#   - Promtail (agente logs)
+#   - Glitchtip (errores frontend+backend) :8000
+#
+# Lanzar:
+#   docker compose -f docker-compose.observability.yml --env-file .env.prod up -d
+#
+# Generado: Capa I · S3_completitud · 2026-05-05
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: smt-onic-prometheus
+    restart: always
+    volumes:
+      - ./infra/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=30d'
+      - '--web.enable-lifecycle'
+    ports:
+      - "127.0.0.1:9090:9090"  # solo accesible localhost del Droplet · expón vía nginx con auth básica
+    networks:
+      - smt-onic-net
+
+  grafana:
+    image: grafana/grafana:10.4.0
+    container_name: smt-onic-grafana
+    restart: always
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?required}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_SERVER_ROOT_URL: ${GRAFANA_ROOT_URL:-https://grafana.smt-onic.com}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./infra/grafana_dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./infra/grafana_datasources.yml:/etc/grafana/provisioning/datasources/datasources.yml:ro
+    ports:
+      - "127.0.0.1:3001:3000"
+    depends_on:
+      - prometheus
+      - loki
+    networks:
+      - smt-onic-net
+
+  loki:
+    image: grafana/loki:2.9.0
+    container_name: smt-onic-loki
+    restart: always
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - loki_data:/loki
+      - ./infra/loki-config.yml:/etc/loki/local-config.yaml:ro
+    ports:
+      - "127.0.0.1:3100:3100"
+    networks:
+      - smt-onic-net
+
+  promtail:
+    image: grafana/promtail:2.9.0
+    container_name: smt-onic-promtail
+    restart: always
+    volumes:
+      - /var/log:/var/log:ro
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./infra/promtail-config.yml:/etc/promtail/config.yml:ro
+    command: -config.file=/etc/promtail/config.yml
+    depends_on:
+      - loki
+    networks:
+      - smt-onic-net
+
+  glitchtip:
+    image: glitchtip/glitchtip:v4.1
+    container_name: smt-onic-glitchtip
+    restart: always
+    environment:
+      DATABASE_URL: postgres://glitchtip:${GLITCHTIP_DB_PASS:?required}@glitchtip-db/glitchtip
+      SECRET_KEY: ${GLITCHTIP_SECRET:?required}
+      GLITCHTIP_DOMAIN: ${GLITCHTIP_DOMAIN:-https://errors.smt-onic.com}
+      DEFAULT_FROM_EMAIL: errors@smt-onic.com
+    ports:
+      - "127.0.0.1:8001:8000"
+    depends_on:
+      - glitchtip-db
+    networks:
+      - smt-onic-net
+
+  glitchtip-db:
+    image: postgres:14-alpine
+    container_name: smt-onic-glitchtip-db
+    restart: always
+    environment:
+      POSTGRES_DB: glitchtip
+      POSTGRES_USER: glitchtip
+      POSTGRES_PASSWORD: ${GLITCHTIP_DB_PASS:?required}
+    volumes:
+      - glitchtip_pgdata:/var/lib/postgresql/data
+    networks:
+      - smt-onic-net
+
+volumes:
+  prometheus_data:
+  grafana_data:
+  loki_data:
+  glitchtip_pgdata:
+
+networks:
+  smt-onic-net:
+    external: true  # comparte red con docker-compose.prod.yml

@@ -613,12 +613,21 @@ function ComunidadesLayer({ data }) {
    ================================================================ */
 
 export default function TerritoriosPage() {
-  /* ---- Filter context ---- */
+  /* ---- Filter context · C02 cascada filtros ---- */
   const {
-    dpto, mpio, resguardo, dptoNombre, mpioNombre, resguardoNombre,
+    dpto, mpio, pueblo, resguardo, macro,
+    dptoNombre, mpioNombre, resguardoNombre,
     departamentos, municipios, resguardos,
     setDpto, setMpio, setResguardo, clearAll, hasFilters,
   } = useFilters();
+
+  const filtros = {
+    cod_macro: macro || undefined,
+    cod_dpto: dpto || undefined,
+    cod_mpio: mpio || undefined,
+    cod_pueblo: pueblo || undefined,
+    cod_resguardo: resguardo || undefined,
+  };
 
   /* ---- layer visibility state ---- */
   const [showMacro, setShowMacro] = useState(false);
@@ -629,7 +638,7 @@ export default function TerritoriosPage() {
   const [panelOpen, setPanelOpen] = useState(true);
 
   /* ---- data hooks ---- */
-  const { data: apiPueblosData } = usePueblos();
+  const { data: apiPueblosData } = usePueblos(filtros);
   const allPueblosList = useMemo(() => {
     const raw = apiPueblosData?.data;
     if (!raw || raw.length === 0) return PUEBLOS_LIST;

@@ -185,11 +185,13 @@ const cardStyle = {
 };
 
 export default function IndicadoresPage() {
-  const { dpto, pueblo, dptoNombre, puebloNombre } = useFilters();
+  // C05 · cascada filtros · macro/mpio se reducen a pueblo/dpto cuando aplica
+  const { dpto, mpio, pueblo, macro, dptoNombre, puebloNombre } = useFilters();
   const [selectedIndicador, setSelectedIndicador] = useState(null);
   const { data: apiIndicadores, isLoading, isError } = useIndicadores();
-  const nivelGeo = pueblo ? 'pueblo' : dpto ? 'dpto' : 'nacional';
-  const codGeoFiltro = pueblo || dpto || null;
+  // Determinar nivelGeo más específico disponible (precedencia: pueblo > mpio > dpto > nacional)
+  const nivelGeo = pueblo ? 'pueblo' : mpio ? 'mpio' : dpto ? 'dpto' : 'nacional';
+  const codGeoFiltro = pueblo || mpio || dpto || null;
   const { data: apiValores } = useIndicadorValores('2018', nivelGeo);
   const { data: apiSerie } = useIndicadorSerie(selectedIndicador || undefined);
 

@@ -77,6 +77,7 @@ class RequestIdLoggingMiddleware(BaseHTTPMiddleware):
 
 
 class SecurityHeadersMiddleware(BaseHTTPMiddleware):
+    """E02 · Headers de seguridad estándar OWASP."""
     async def dispatch(self, request: Request, call_next):
         response: Response = await call_next(request)
         h = response.headers
@@ -85,6 +86,101 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         h.setdefault("Referrer-Policy", "strict-origin-when-cross-origin")
         h.setdefault("Permissions-Policy", "geolocation=(), microphone=(), camera=()")
         h.setdefault("Cross-Origin-Opener-Policy", "same-origin")
+        # CSP solo para HTML responses · API JSON no requiere
+        ct = h.get("content-type", "").lower()
+        if "text/html" in ct:
+            h.setdefault(
+                "Content-Security-Policy",
+                "default-src 'self'; "
+                "script-src 'self' 'unsafe-inline'; "
+                "style-src 'self' 'unsafe-inline'; "
+                "img-src 'self' data: https:; "
+                "connect-src 'self' https:; "
+                "frame-ancestors 'none'",
+            )
+        # HSTS: solo si la request viene por HTTPS (en prod nginx termina TLS)
+        if request.url.scheme == "https" or request.headers.get("x-forwarded-proto") == "https":
+            h.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+        return response
+
+
+# A09 · Trazabilidad de cifras: cada response declara la(s) tabla(s) BD origen
+# Mapeo path → tabla canónica (extender al agregar endpoints nuevos)
+_DATA_SOURCE_MAP = {
+    "/api/v1/pueblos/": "pueblo.disc_nacional",
+    "/api/v1/pueblos/{cod_pueblo}/perfil": "pueblo.{disc,sexo,edad,limitacion,tratamiento,causa,enfermo}_nacional",
+    "/api/v1/dashboard/panorama-kpis": "pueblo.disc_nacional + cnpv.disc_indigena_mpio",
+    "/api/v1/dashboard/prevalencia/departamento": "cnpv.prevalencia_etnia_dpto",
+    "/api/v1/dashboard/dificultades": "cnpv.dificultades_etnia_dpto",
+    "/api/v1/dashboard/brecha": "cnpv.resumen_nacional_etnico",
+    "/api/v1/dashboard/intercensal": "cnpv.comparacion_intercensal + proyecciones.fac",
+    "/api/v1/dashboard/proyecciones": "proyecciones.escenarios",
+    "/api/v1/dashboard/smt-resumen": "smt.resumen",
+    "/api/v1/dashboard/filtros": "geo.{departamentos,municipios} + smt_geo.resguardos",
+    "/api/v1/demografia/piramide-nacional": "visor_dane.piramide_pueblo (DANE Visor 2021)",
+    "/api/v1/demografia/piramide-disc-nacional": "pueblo.piramide_disc (REDATAM CNPV 2018)",
+    "/api/v1/demografia/piramide-disc-tipo-nacional": "pueblo.piramide_disc_tipo (REDATAM CNPV 2018, top-30 pueblos)",
+    "/api/v1/demografia/nbi": "visor_dane.{nbi_pueblo,ipm_pueblo,poblacion_pueblo}",
+    "/api/v1/demografia/lengua": "visor_dane.lengua_pueblo",
+    "/api/v1/geo/macrorregiones": "smt_geo.macrorregiones + smt_geo.resguardos",
+    "/api/v1/geo/smt/resguardos": "smt_geo.resguardos + cnpv.disc_indigena_mpio",
+    "/api/v1/conflicto/victimas/resumen": "ext.ruv_hechos_municipal",
+    "/api/v1/indicadores/": "indicadores.definiciones",
+    "/api/v1/indicadores/valores": "indicadores.valores",
+}
+
+
+class CacheControlMiddleware(BaseHTTPMiddleware):
+    """F02 · Cache HTTP en endpoints idempotentes y estáticos.
+
+    Sólo aplica si el response no tiene Cache-Control · no rompe responses
+    sensibles (auth/me, etc · esos retornan no-store automáticamente).
+    """
+    _CACHEABLE = {
+        "/api/v1/geo/macrorregiones": 1800,           # 30 min · cambia raro
+        "/api/v1/geo/smt/macrorregiones": 1800,
+        "/api/v1/geo/smt/resguardos": 600,            # 10 min · GeoJSON pesado
+        "/api/v1/indicadores/": 1800,
+        "/api/v1/dashboard/filtros": 600,
+        "/api/v1/dashboard/smt-resumen": 600,
+        "/api/v1/formulario/territorios/macros": 3600,
+    }
+    _NO_STORE = {"/api/v1/auth/me", "/api/v1/auth/login", "/api/v1/auth/logout", "/api/v1/health"}
+
+    async def dispatch(self, request: Request, call_next):
+        response: Response = await call_next(request)
+        if request.method != "GET" or response.status_code != 200:
+            return response
+        path = request.url.path
+        if path in self._NO_STORE:
+            response.headers.setdefault("Cache-Control", "no-store, no-cache, must-revalidate")
+            return response
+        ttl = self._CACHEABLE.get(path)
+        if ttl and "cache-control" not in {k.lower() for k in response.headers}:
+            response.headers["Cache-Control"] = f"public, max-age={ttl}, s-maxage={ttl}"
+        return response
+
+
+class DataSourceMiddleware(BaseHTTPMiddleware):
+    """A09 · Agrega header X-Data-Source con la tabla BD origen del response.
+    Permite trazabilidad cifra → fuente desde el frontend o consumidor externo.
+    """
+    async def dispatch(self, request: Request, call_next):
+        response: Response = await call_next(request)
+        path = request.url.path
+        # Match exacto primero
+        source = _DATA_SOURCE_MAP.get(path)
+        if not source:
+            # Match por prefijo (ej: /api/v1/pueblos/720/perfil)
+            for k, v in _DATA_SOURCE_MAP.items():
+                if "{" in k:
+                    prefix = k.split("{")[0]
+                    if path.startswith(prefix):
+                        source = v
+                        break
+        if source:
+            response.headers["X-Data-Source"] = source
+            response.headers["X-Data-Authority"] = "CIFRAS_CANONICAS_v1.md"
         return response
 
 
@@ -130,6 +226,8 @@ app = FastAPI(
 )
 
 app.add_middleware(SecurityHeadersMiddleware)
+app.add_middleware(CacheControlMiddleware)
+app.add_middleware(DataSourceMiddleware)
 app.add_middleware(LoginRateLimitMiddleware)
 app.add_middleware(RequestIdLoggingMiddleware)
 app.add_middleware(
@@ -153,4 +251,60 @@ app.include_router(formulario.router, prefix="/api/v1/formulario", tags=["Formul
 
 @app.get("/api/v1/health")
 async def health():
-    return {"status": "ok", "service": "smt-onic-api"}
+    """B05 · Health check completo · BD + schema + datos esperados."""
+    from app.database import get_db
+    from sqlalchemy import text
+
+    checks = {
+        "service": "smt-onic-api",
+        "version": "2.0.0",
+        "status": "ok",
+    }
+    db_ok = True
+    db_errors: list[str] = []
+
+    # Iterador único · cierra sesión al final
+    db_gen = get_db()
+    try:
+        db = await db_gen.__anext__()
+        # Schemas críticos
+        for schema, tabla, esperado_min in [
+            ("cnpv", "resumen_nacional_etnico", 1),
+            ("pueblo", "disc_nacional", 100),
+            ("pueblo", "piramide_disc", 1000),
+            ("smt_geo", "resguardos", 800),
+            ("smt_geo", "macrorregiones", 5),
+            ("visor_dane", "piramide_pueblo", 5000),
+            ("indicadores", "definiciones", 12),
+            ("proyecciones", "fac", 5),
+            ("proyecciones", "escenarios", 100),
+            ("smt", "resumen", 30),
+        ]:
+            try:
+                r = await db.execute(text(f"SELECT COUNT(*) FROM {schema}.{tabla}"))
+                cnt = r.scalar() or 0
+                checks[f"{schema}.{tabla}"] = {
+                    "rows": cnt,
+                    "min_expected": esperado_min,
+                    "ok": cnt >= esperado_min,
+                }
+                if cnt < esperado_min:
+                    db_ok = False
+                    db_errors.append(f"{schema}.{tabla} tiene {cnt} filas < esperado {esperado_min}")
+            except Exception as e:
+                db_ok = False
+                db_errors.append(f"{schema}.{tabla}: {str(e)[:80]}")
+                checks[f"{schema}.{tabla}"] = {"ok": False, "error": str(e)[:80]}
+    except Exception as e:
+        db_ok = False
+        db_errors.append(f"db connection: {str(e)[:120]}")
+    finally:
+        try:
+            await db_gen.aclose()
+        except Exception:
+            pass
+
+    checks["db"] = {"ok": db_ok, "errors": db_errors[:5] if db_errors else []}
+    if not db_ok:
+        checks["status"] = "degraded"
+    return checks

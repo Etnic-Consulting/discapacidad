@@ -9,6 +9,7 @@ import {
 } from 'recharts';
 import KPICard from '../components/KPICard';
 import { useIntercensal, useProyecciones } from '../hooks/useApi';
+import { useFilters } from '../context/FilterContext';
 
 /* ---- Fallback data (used when API is unavailable) ---- */
 const FALLBACK_INTERCENSAL = [
@@ -136,12 +137,19 @@ const chartTitle = {
 
 export default function ProyeccionesPage() {
   const [selectedEscenario, setSelectedEscenario] = useState('base');
+  // C04 · cascada filtros · grupo_etnico ya configurado · periodo del filtro UI
+  const { pueblo } = useFilters();
 
   /* ---- Fetch real intercensal data ---- */
   // T20 Sprint S1.C-Phase2 · activamos aplicar_fac=true para armonizar CG2005↔CNPV2018
   // y traemos las proyecciones T08 con bandas IC oficial.
   const { data: intercensalResp, isLoading, isError } = useIntercensal(undefined, true);
-  const { data: proyeccionesResp } = useProyecciones({ grupoEtnico: 'Indigena', periodoInicio: 2005, periodoFin: 2030 });
+  const { data: proyeccionesResp } = useProyecciones({
+    grupoEtnico: 'Indigena',
+    periodoInicio: 2005,
+    periodoFin: 2030,
+    cod_pueblo: pueblo || undefined,
+  });
   const intercensalData = intercensalResp?.data ?? FALLBACK_INTERCENSAL;
 
   /* ---- Extract base values from real data (or fallback) ---- */

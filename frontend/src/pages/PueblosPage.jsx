@@ -79,8 +79,12 @@ function formatNumber(n) {
 
 export default function PueblosPage() {
   const navigate = useNavigate();
-  const { dpto, mpio, dptoNombre, mpioNombre, pueblos: filteredPueblosFromContext } = useFilters();
-  const { data: apiPueblos, isLoading, isError } = usePueblos();
+  const { dpto, mpio, macro, dptoNombre, mpioNombre, pueblos: filteredPueblosFromContext } = useFilters();
+  const { data: apiPueblos, isLoading, isError } = usePueblos({
+    cod_macro: macro || undefined,
+    cod_dpto: dpto || undefined,
+    cod_mpio: mpio || undefined,
+  });
   const { data: apiPueblosMpio } = usePueblosMunicipio(mpio || undefined);
 
   // API returns { periodo, total, data: [{ cod_pueblo, pueblo, con_discapacidad, sin_discapacidad, total, prevalencia_pct, tasa_x_1000, confiabilidad }] }

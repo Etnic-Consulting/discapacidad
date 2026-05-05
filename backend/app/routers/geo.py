@@ -198,16 +198,12 @@ async def get_resguardos_geo(db: AsyncSession = Depends(get_db)):
         result = await db.execute(text("""
             SELECT r.territorio, r.pueblo_onic, r.dpto_cnmbr, r.mpio_cnmbr,
                    r.mpio_cdpmp, r.ccdgo_terr, r.org_regnal, r.area_pg_ha,
-                   COALESCE(dr.tasa_x_1000, d.tasa_x_1000, 0) AS tasa_prevalencia,
-                   COALESCE(dr.con_cap_diversas, d.con_disc, 0) AS con_cap_diversas,
-                   COALESCE(dr.total_evaluados, d.pob_indigena, 0) AS poblacion,
-                   CASE WHEN dr.cod_resguardo IS NOT NULL THEN 'censal'
-                        WHEN d.cod_mpio IS NOT NULL THEN 'municipal'
-                        ELSE 'sin_dato' END AS fuente_dato,
+                   COALESCE(d.tasa_x_1000, 0) AS tasa_prevalencia,
+                   COALESCE(d.con_disc, 0) AS con_cap_diversas,
+                   COALESCE(d.pob_indigena, 0) AS poblacion,
+                   CASE WHEN d.cod_mpio IS NOT NULL THEN 'municipal' ELSE 'sin_dato' END AS fuente_dato,
                    ST_AsGeoJSON(r.geometry)::json AS geojson
             FROM smt_geo.resguardos r
-            LEFT JOIN cnpv.disc_resguardo dr
-                ON r.ccdgo_terr = dr.cod_resguardo AND dr.periodo = '2018'
             LEFT JOIN cnpv.disc_indigena_mpio d
                 ON r.mpio_cdpmp = d.cod_mpio AND d.periodo = '2018'
         """))

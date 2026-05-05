@@ -859,8 +859,9 @@ function PuebloReport({ codPueblo, puebloNombre }) {
    DEPARTAMENTO REPORT — Professional multi-page layout
    ============================================ */
 function DepartamentoReport({ codDpto, dptoNombre }) {
-  const { data: apiData, isLoading, isError } = usePrevalenciaDpto('Indigena');
-  const { data: allPueblosData } = usePueblos();
+  // C06 · pasar cod_dpto al hook prevalencia + filtrar pueblos del dpto
+  const { data: apiData, isLoading, isError } = usePrevalenciaDpto('Indigena', { cod_dpto: codDpto });
+  const { data: allPueblosData } = usePueblos({ cod_dpto: codDpto });
 
   if (isLoading) return <div className="loading-container"><div className="spinner" /><p>Cargando datos departamentales...</p></div>;
   if (isError) return <div className="error-container"><p>Error cargando datos</p></div>;

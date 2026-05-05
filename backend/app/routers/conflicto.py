@@ -9,6 +9,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_db
+from app.filters import resolver_filtros
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -41,18 +42,29 @@ async def victimas_resumen(
 
 @router.get("/victimas/hechos")
 async def victimas_hechos_municipio(
-    cod_dpto: str | None = Query(None, description="Filtrar por departamento"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC"),
+    cod_dpto: str | None = Query(None, description="Departamento"),
+    cod_mpio: str | None = Query(None, description="Municipio"),
+    cod_pueblo: str | None = Query(None, description="Pueblo · informativo"),
+    cod_resguardo: str | None = Query(None, description="Resguardo"),
     hecho: str | None = Query(None, description="Filtrar por tipo de hecho"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Hechos victimizantes por municipio para poblacion indigena con capacidades diversas."""
+    """Hechos victimizantes por municipio para poblacion indigena con capacidades diversas.
+
+    B01 · Soporta cascada filtros geográficos (macro/dpto/mpio/resguardo).
+    """
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, cod_pueblo, cod_resguardo)
         params: dict = {}
         filtros = ["r.etnia = 'Indigena'"]
 
-        if cod_dpto:
-            filtros.append("r.cod_dpto = :cod_dpto")
-            params["cod_dpto"] = cod_dpto
+        if filtro.mpios:
+            filtros.append("r.cod_mpio = ANY(:_filter_mpios)")
+            params["_filter_mpios"] = filtro.mpios
+        elif filtro.dptos:
+            filtros.append("r.cod_dpto = ANY(:_filter_dptos)")
+            params["_filter_dptos"] = filtro.dptos
         if hecho:
             filtros.append("r.hecho ILIKE :hecho")
             params["hecho"] = f"%{hecho}%"
@@ -85,17 +97,25 @@ async def victimas_hechos_municipio(
 
 @router.get("/victimas/por-pueblo")
 async def victimas_por_pueblo_ranking(
-    cod_dpto: str | None = Query(None, description="Filtrar por departamento"),
+    cod_macro: str | None = Query(None, description="Macrorregión ONIC"),
+    cod_dpto: str | None = Query(None, description="Departamento"),
+    cod_mpio: str | None = Query(None, description="Municipio"),
+    cod_resguardo: str | None = Query(None, description="Resguardo"),
     limit: int = Query(20, ge=1, le=100, description="Cantidad de pueblos a retornar"),
     db: AsyncSession = Depends(get_db),
 ):
-    """Top pueblos indígenas por total de víctimas con capacidades diversas."""
+    """Top pueblos indígenas por total de víctimas con capacidades diversas.
+    B01 · Soporta cascada filtros geográficos (macro/dpto/mpio/resguardo)."""
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, None, cod_resguardo)
         params: dict = {"limit": limit}
         filtro_dpto = ""
-        if cod_dpto:
-            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
-            params["cod_dpto"] = cod_dpto
+        if filtro.mpios:
+            filtro_dpto = "AND cod_mpio_ocurrencia = ANY(:_filter_mpios)"
+            params["_filter_mpios"] = filtro.mpios
+        elif filtro.dptos:
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = ANY(:_filter_dptos)"
+            params["_filter_dptos"] = filtro.dptos
 
         result = await db.execute(
             text(f"""
@@ -127,16 +147,24 @@ async def victimas_por_pueblo_ranking(
 
 @router.get("/victimas/por-hecho")
 async def victimas_por_hecho(
-    cod_dpto: str | None = Query(None, description="Filtrar por departamento"),
+    cod_macro: str | None = Query(None),
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_resguardo: str | None = Query(None),
     db: AsyncSession = Depends(get_db),
 ):
-    """Víctimas indígenas con capacidades diversas agregadas por hecho victimizante."""
+    """Víctimas indígenas con capacidades diversas agregadas por hecho victimizante.
+    B01 · Soporta cascada filtros geográficos."""
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, None, cod_resguardo)
         params: dict = {}
         filtro_dpto = ""
-        if cod_dpto:
-            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
-            params["cod_dpto"] = cod_dpto
+        if filtro.mpios:
+            filtro_dpto = "AND cod_mpio_ocurrencia = ANY(:_filter_mpios)"
+            params["_filter_mpios"] = filtro.mpios
+        elif filtro.dptos:
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = ANY(:_filter_dptos)"
+            params["_filter_dptos"] = filtro.dptos
 
         result = await db.execute(
             text(f"""
@@ -165,16 +193,24 @@ async def victimas_por_hecho(
 
 @router.get("/victimas/por-tipo")
 async def victimas_por_tipo(
-    cod_dpto: str | None = Query(None, description="Filtrar por departamento"),
+    cod_macro: str | None = Query(None),
+    cod_dpto: str | None = Query(None),
+    cod_mpio: str | None = Query(None),
+    cod_resguardo: str | None = Query(None),
     db: AsyncSession = Depends(get_db),
 ):
-    """Víctimas indígenas agregadas por tipo de capacidad diversa."""
+    """Víctimas indígenas agregadas por tipo de capacidad diversa.
+    B01 · Soporta cascada filtros geográficos."""
     try:
+        filtro = await resolver_filtros(db, cod_macro, cod_dpto, cod_mpio, None, cod_resguardo)
         params: dict = {}
         filtro_dpto = ""
-        if cod_dpto:
-            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = :cod_dpto"
-            params["cod_dpto"] = cod_dpto
+        if filtro.mpios:
+            filtro_dpto = "AND cod_mpio_ocurrencia = ANY(:_filter_mpios)"
+            params["_filter_mpios"] = filtro.mpios
+        elif filtro.dptos:
+            filtro_dpto = "AND LEFT(cod_mpio_ocurrencia, 2) = ANY(:_filter_dptos)"
+            params["_filter_dptos"] = filtro.dptos
 
         result = await db.execute(
             text(f"""

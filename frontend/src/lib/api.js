@@ -43,27 +43,51 @@ export function fetchResumenNacional() {
   return request(`${BASE}/dashboard/`);
 }
 
-export function fetchPrevalenciaDpto(grupoEtnico) {
-  return request(`${BASE}/dashboard/prevalencia/departamento`, { grupo_etnico: grupoEtnico });
+export function fetchPrevalenciaDpto(grupoEtnico, filters = {}) {
+  const f = typeof filters === 'string' ? {} : (filters || {});
+  return request(`${BASE}/dashboard/prevalencia/departamento`, {
+    grupo_etnico: grupoEtnico,
+    cod_macro: f.cod_macro,
+    cod_dpto: f.cod_dpto,
+    cod_mpio: f.cod_mpio,
+    cod_resguardo: f.cod_resguardo,
+  });
 }
 
 export function fetchPrevalenciaMpio(codDpto) {
   return request(`${BASE}/dashboard/prevalencia/municipio`, { cod_dpto: codDpto });
 }
 
-export function fetchDificultades(codDpto, grupoEtnico) {
+export function fetchDificultades(filters = {}, grupoEtnico) {
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : (filters || {});
   return request(`${BASE}/dashboard/dificultades`, {
-    cod_dpto: codDpto,
+    cod_macro: f.cod_macro,
+    cod_dpto: f.cod_dpto,
+    cod_mpio: f.cod_mpio,
+    cod_pueblo: f.cod_pueblo,
+    cod_resguardo: f.cod_resguardo,
     grupo_etnico: grupoEtnico,
   });
 }
 
-export function fetchSalud(codDpto) {
-  return request(`${BASE}/dashboard/salud`, { cod_dpto: codDpto });
+export function fetchSalud(filters = {}) {
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : (filters || {});
+  return request(`${BASE}/dashboard/salud`, {
+    cod_macro: f.cod_macro,
+    cod_dpto: f.cod_dpto,
+    cod_mpio: f.cod_mpio,
+  });
 }
 
-export function fetchBrecha(codDpto) {
-  return request(`${BASE}/dashboard/brecha`, { cod_dpto: codDpto });
+export function fetchBrecha(filters = {}) {
+  const f = typeof filters === 'string' ? { cod_dpto: filters } : (filters || {});
+  return request(`${BASE}/dashboard/brecha`, {
+    cod_macro: f.cod_macro,
+    cod_dpto: f.cod_dpto,
+    cod_mpio: f.cod_mpio,
+    cod_pueblo: f.cod_pueblo,
+    cod_resguardo: f.cod_resguardo,
+  });
 }
 
 export function fetchPanoramaKpis(params = {}) {
@@ -97,16 +121,21 @@ export function fetchFormComunidades({ cod_mpio, cod_dpto, cod_resguardo, q } = 
   return request(`${BASE}/formulario/territorios/comunidades`, { cod_mpio, cod_dpto, cod_resguardo, q });
 }
 
-export function fetchFiltrosCascada(codDpto, codMpio) {
+export function fetchFiltrosCascada(codDpto, codMpio, codMacro) {
   return request(`${BASE}/dashboard/filtros`, {
     cod_dpto: codDpto,
     cod_mpio: codMpio,
+    cod_macro: codMacro,
   });
 }
 
 // ---- Pueblos ----
-export function fetchPueblos() {
-  return request(`${BASE}/pueblos/`);
+export function fetchPueblos(params = {}) {
+  return request(`${BASE}/pueblos/`, {
+    cod_macro: params.cod_macro,
+    cod_dpto: params.cod_dpto,
+    cod_mpio: params.cod_mpio,
+  });
 }
 
 export function fetchPerfilPueblo(codPueblo) {
@@ -156,20 +185,37 @@ export function fetchVictimasResumen() {
   return request(`${BASE}/conflicto/victimas/resumen`);
 }
 
-export function fetchVictimasHechos(codDpto) {
-  return request(`${BASE}/conflicto/victimas/hechos`, { cod_dpto: codDpto });
+function _normFilters(filters) {
+  return typeof filters === 'string' ? { cod_dpto: filters } : (filters || {});
 }
 
-export function fetchVictimasPorPueblo(codDpto, limit = 20) {
-  return request(`${BASE}/conflicto/victimas/por-pueblo`, { cod_dpto: codDpto, limit });
+export function fetchVictimasHechos(filters = {}) {
+  const f = _normFilters(filters);
+  return request(`${BASE}/conflicto/victimas/hechos`, {
+    cod_macro: f.cod_macro, cod_dpto: f.cod_dpto, cod_mpio: f.cod_mpio, cod_resguardo: f.cod_resguardo,
+  });
 }
 
-export function fetchVictimasPorHecho(codDpto) {
-  return request(`${BASE}/conflicto/victimas/por-hecho`, { cod_dpto: codDpto });
+export function fetchVictimasPorPueblo(filters = {}, limit = 20) {
+  const f = _normFilters(filters);
+  return request(`${BASE}/conflicto/victimas/por-pueblo`, {
+    cod_macro: f.cod_macro, cod_dpto: f.cod_dpto, cod_mpio: f.cod_mpio, cod_resguardo: f.cod_resguardo,
+    limit,
+  });
 }
 
-export function fetchVictimasPorTipo(codDpto) {
-  return request(`${BASE}/conflicto/victimas/por-tipo`, { cod_dpto: codDpto });
+export function fetchVictimasPorHecho(filters = {}) {
+  const f = _normFilters(filters);
+  return request(`${BASE}/conflicto/victimas/por-hecho`, {
+    cod_macro: f.cod_macro, cod_dpto: f.cod_dpto, cod_mpio: f.cod_mpio, cod_resguardo: f.cod_resguardo,
+  });
+}
+
+export function fetchVictimasPorTipo(filters = {}) {
+  const f = _normFilters(filters);
+  return request(`${BASE}/conflicto/victimas/por-tipo`, {
+    cod_macro: f.cod_macro, cod_dpto: f.cod_dpto, cod_mpio: f.cod_mpio, cod_resguardo: f.cod_resguardo,
+  });
 }
 
 export function fetchVictimasPueblo(codPueblo) {
