@@ -1,6 +1,9 @@
 import { useState, useMemo } from 'react';
 
-export default function DataTable({ columns = [], data = [], onRow }) {
+export default function DataTable({ columns = [], data = [], onRow, onRowClick }) {
+  // Acepta `onRow` (legacy) y `onRowClick` (uso actual en PueblosPage) · ambos disparan
+  // el mismo callback. Compat para no romper páginas existentes.
+  const rowCallback = onRowClick || onRow;
   const [sort, setSort] = useState({ key: null, dir: 'desc' });
 
   const sorted = useMemo(() => {
@@ -56,7 +59,11 @@ export default function DataTable({ columns = [], data = [], onRow }) {
               </td>
             </tr>
           ) : sorted.map((row, i) => (
-            <tr key={row.id || i} onClick={() => onRow && onRow(row)}>
+            <tr
+              key={row.id || i}
+              onClick={() => rowCallback && rowCallback(row)}
+              style={rowCallback ? { cursor: 'pointer' } : undefined}
+            >
               {columns.map((c) => (
                 <td key={c.key} className={c.cls || ''}>
                   {c.render ? c.render(row[c.key], row) : row[c.key]}
