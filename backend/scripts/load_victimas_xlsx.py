@@ -8,12 +8,28 @@ Schema confirmado por VARIABLES UNIVERSO VICTIMAS LB.xlsx (diccionario UARIV).
 Ejecución:
     python scripts/load_victimas_xlsx.py
     python scripts/load_victimas_xlsx.py --file <ruta.xlsx> --chunk-size 200000
+
+---
+NOTA B2 · Mapping IDPERSONA → CONSPERSONA
+---------------------------------------------------------------------------
+El TXT crudo UARIV (universo Colombia entero) usa columna IDPERSONA como
+identificador único de persona. El XLSX línea base indígena (LB_UNIV_VICT_INDIGENA)
+usa CONSPERSONA como campo equivalente según el diccionario oficial
+"VARIABLES UNIVERSO VICTIMAS LB.xlsx" (UARIV).
+
+Por tanto, victimas.universo.idpersona almacena el valor de CONSPERSONA.
+Cualquier JOIN futuro entre este loader y el UNIVERSO completo TXT debe usar
+este campo con precaución: CONSPERSONA ≠ IDPERSONA en todos los casos;
+son campos equivalentes en función pero no necesariamente coincidentes
+en su espacio de valores. El diccionario UARIV es la fuente autoritativa.
+---------------------------------------------------------------------------
 """
 
 import argparse
 import os
 import sys
 import time
+import unicodedata
 from datetime import datetime, date
 from pathlib import Path
 
@@ -44,6 +60,12 @@ EXPECTED_HEADER = [
     "CODDANELLEGADA", "DISCAPACIDAD", "DESCRIPCIONDISCAPACIDAD", "FUD_FICHA",
 ]
 
+# Columnas mínimas críticas que DEBEN existir en el XLSX; si falta alguna → ValueError (B3)
+REQUIRED_COLUMNS = [
+    "CONSPERSONA", "PERTENENCIAETNICA", "HECHO", "FECHAOCURRENCIA",
+    "CODDANEMUNICIPIOOCURRENCIA", "DISCAPACIDAD", "DESCRIPCIONDISCAPACIDAD",
+]
+
 
 def clean_tipo_discapacidad(desc: str | None) -> str:
     """Clasifica DESCRIPCIONDISCAPACIDAD en categorias canonicas."""
@@ -53,6 +75,10 @@ def clean_tipo_discapacidad(desc: str | None) -> str:
     if d in ("", "NA", "NULL", "0", "NO APLICA", "NINGUNA", "#NAME?"):
         return "SIN_INFORMACION"
 
+    # M1 · Criterio MULTIPLE deliberadamente más permisivo que el loader original:
+    # clasifica como MULTIPLE si hay ≥2 indicadores de tipo distinto O si el
+    # string contiene la palabra "MULTIPLE" explícitamente. Esto captura el
+    # formato real observado en datos: 'MULTIPLE (-Física-Intelectual)'.
     indicators = 0
     for kw in ["FISIC", "VISUAL", "AUDIT", "INTELECT", "MENTAL", "PSICO",
                "COGNI", "MOTRI", "MOTOR", "MOVIL", "CEGUERA", "SORDER",
@@ -82,22 +108,35 @@ def clean_tipo_discapacidad(desc: str | None) -> str:
 
 
 def to_date(value) -> str | None:
-    """Convierte celda Excel a fecha ISO o None."""
+    """Convierte celda Excel a fecha ISO o None.
+
+    M2 · Fechas fantasma Excel: celdas de tipo fecha vacías se serializan como
+    1899-12-30 o 1900-01-01 por el motor de openpyxl. No son fechas reales;
+    se retornan como None para no contaminar la BD.
+    """
     if value is None:
         return None
     if isinstance(value, datetime):
-        return value.date().isoformat()
-    if isinstance(value, date):
-        return value.isoformat()
-    s = str(value).strip()
-    if not s or s.lower() in ("nan", "null", "na"):
+        d = value.date()
+    elif isinstance(value, date):
+        d = value
+    else:
+        s = str(value).strip()
+        if not s or s.lower() in ("nan", "null", "na"):
+            return None
+        d = None
+        for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", "%Y/%m/%d"):
+            try:
+                d = datetime.strptime(s[:10], fmt).date()
+                break
+            except (ValueError, IndexError):
+                continue
+        if d is None:
+            return None
+    # M2 · filtrar fechas fantasma de Excel (celdas vacías de tipo fecha)
+    if d in (date(1899, 12, 30), date(1900, 1, 1)):
         return None
-    for fmt in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", "%Y/%m/%d"):
-        try:
-            return datetime.strptime(s[:10], fmt).date().isoformat()
-        except (ValueError, IndexError):
-            continue
-    return None
+    return d.isoformat()
 
 
 def pad_divipola(value, length: int) -> str | None:
@@ -117,14 +156,34 @@ def pad_divipola(value, length: int) -> str | None:
     return v.zfill(length)
 
 
+def _strip_accents(s: str) -> str:
+    """Elimina diacríticos (tildes) para normalización defensiva."""
+    return "".join(
+        c for c in unicodedata.normalize("NFD", s)
+        if unicodedata.category(c) != "Mn"
+    )
+
+
 def normalize_etnia(value) -> str:
-    """Normaliza pertenencia etnica a forma canonica usada en queries."""
+    """Normaliza pertenencia etnica a forma canonica usada en queries.
+
+    B1 · Defensivo para variantes futuras: si el string contiene "INDIGENA"
+    (incluyendo variantes con tilde como 'Indígena') pero no matchea
+    exactamente ninguna forma canónica conocida (ej. 'INDIGENA-DESPLAZADO',
+    'Indígena (otro)'), se normaliza a 'INDIGENA' como catch-all.
+    Esto garantiza que la BD nunca tenga valores raros.
+    """
     if value is None:
         return ""
     s = str(value).strip().upper()
-    if "INDIGENA (ACREDITADO" in s or "ACREDITADO RA" in s:
+    # Normalizar tildes para el catch-all B1
+    s_ascii = _strip_accents(s)
+    if "INDIGENA (ACREDITADO" in s_ascii or "ACREDITADO RA" in s_ascii:
         return "INDIGENA ACREDITADO RA"
-    if s == "INDIGENA":
+    if s_ascii == "INDIGENA":
+        return "INDIGENA"
+    # B1 · catch-all: cualquier string que contenga "INDIGENA" → canónico
+    if "INDIGENA" in s_ascii:
         return "INDIGENA"
     return s[:60]
 
@@ -218,113 +277,134 @@ def load_xlsx(conn, filepath: Path, chunk_size: int = CHUNK_SIZE):
     print(f"  Sheet: {SHEET_NAME} · Chunk: {chunk_size:,}")
     cur = conn.cursor()
 
+    # M5 · Envolver workbook en try/finally para garantizar wb.close()
     wb = openpyxl.load_workbook(filepath, read_only=True, data_only=True)
-    ws = wb[SHEET_NAME]
-    rows_iter = ws.iter_rows(values_only=True)
+    try:
+        ws = wb[SHEET_NAME]
+        rows_iter = ws.iter_rows(values_only=True)
 
-    header = next(rows_iter)
-    header = [str(h).strip() if h is not None else "" for h in header]
-    col_idx = {name: i for i, name in enumerate(header)}
-    print(f"  Header: {len(header)} cols")
+        header = next(rows_iter)
+        header = [str(h).strip() if h is not None else "" for h in header]
+        col_idx = {name: i for i, name in enumerate(header)}
+        print(f"  Header: {len(header)} cols")
 
-    def col(row, name):
-        i = col_idx.get(name)
-        return row[i] if i is not None and i < len(row) else None
+        # B3 · Validar columnas críticas antes de procesar
+        missing = [c for c in REQUIRED_COLUMNS if c not in col_idx]
+        if missing:
+            raise ValueError(
+                f"XLSX header falta columnas criticas: {missing}. "
+                f"Columnas encontradas: {list(col_idx.keys())}"
+            )
 
-    chunk = []
-    total = 0
-    t0 = time.time()
+        def col(row, name):
+            i = col_idx.get(name)
+            return row[i] if i is not None and i < len(row) else None
 
-    for raw in rows_iter:
-        if all(v is None for v in raw):
-            continue
-        consp = col(raw, "CONSPERSONA")
-        idpersona = str(int(consp))[:20] if isinstance(consp, (int, float)) else (str(consp).strip()[:20] if consp else None)
-        idhogar = col(raw, "IDHOGAR")
-        idhogar = str(int(idhogar))[:20] if isinstance(idhogar, (int, float)) else (str(idhogar).strip()[:20] if idhogar else None)
-        pertenencia = normalize_etnia(col(raw, "PERTENENCIAETNICA"))
-        genero = (str(col(raw, "GENERO")).strip()[:20]) if col(raw, "GENERO") else None
-        fecha_nac = to_date(col(raw, "FECHANACIMIENTO"))
-        hecho = (str(col(raw, "HECHO")).strip()[:200]) if col(raw, "HECHO") else None
-        fecha_ocu = to_date(col(raw, "FECHAOCURRENCIA"))
-        cod_mpio_ocu = pad_divipola(col(raw, "CODDANEMUNICIPIOOCURRENCIA"), 5)
-        cod_mpio_res = pad_divipola(col(raw, "CODDANELLEGADA"), 5)
-        zona = None  # no existe en LB indigena · NULL
-        actor = (str(col(raw, "PRESUNTOACTOR")).strip()[:100]) if col(raw, "PRESUNTOACTOR") else None
-        tipo_vic = (str(col(raw, "TIPOVICTIMA")).strip()[:20]) if col(raw, "TIPOVICTIMA") else None
-        estado_vic = (str(col(raw, "ESTADOVICTIMA")).strip()[:30]) if col(raw, "ESTADOVICTIMA") else None
-        disc_raw = col(raw, "DISCAPACIDAD")
-        if isinstance(disc_raw, (int, float)):
-            disc = "1" if int(disc_raw) == 1 else "0"
-        else:
-            disc = "1" if str(disc_raw).strip() in ("1", "SI", "Si") else "0"
-        desc_disc = col(raw, "DESCRIPCIONDISCAPACIDAD")
-        desc_disc_str = str(desc_disc).strip() if desc_disc else None
+        chunk = []
+        total = 0
+        t0 = time.time()
 
-        tipo_disc = clean_tipo_discapacidad(desc_disc_str) if disc == "1" else None
+        for raw in rows_iter:
+            if all(v is None for v in raw):
+                continue
+            consp = col(raw, "CONSPERSONA")
+            idpersona = str(int(consp))[:20] if isinstance(consp, (int, float)) else (str(consp).strip()[:20] if consp else None)
+            idhogar = col(raw, "IDHOGAR")
+            idhogar = str(int(idhogar))[:20] if isinstance(idhogar, (int, float)) else (str(idhogar).strip()[:20] if idhogar else None)
+            pertenencia = normalize_etnia(col(raw, "PERTENENCIAETNICA"))
+            genero = (str(col(raw, "GENERO")).strip()[:20]) if col(raw, "GENERO") else None
+            fecha_nac = to_date(col(raw, "FECHANACIMIENTO"))
+            hecho = (str(col(raw, "HECHO")).strip()[:200]) if col(raw, "HECHO") else None
+            fecha_ocu = to_date(col(raw, "FECHAOCURRENCIA"))
+            cod_mpio_ocu = pad_divipola(col(raw, "CODDANEMUNICIPIOOCURRENCIA"), 5)
+            cod_mpio_res = pad_divipola(col(raw, "CODDANELLEGADA"), 5)
+            zona = None  # no existe en LB indigena · NULL
+            actor = (str(col(raw, "PRESUNTOACTOR")).strip()[:100]) if col(raw, "PRESUNTOACTOR") else None
+            tipo_vic = (str(col(raw, "TIPOVICTIMA")).strip()[:20]) if col(raw, "TIPOVICTIMA") else None
+            estado_vic = (str(col(raw, "ESTADOVICTIMA")).strip()[:30]) if col(raw, "ESTADOVICTIMA") else None
+            disc_raw = col(raw, "DISCAPACIDAD")
+            if isinstance(disc_raw, (int, float)):
+                disc = "1" if int(disc_raw) == 1 else "0"
+            else:
+                disc = "1" if str(disc_raw).strip() in ("1", "SI", "Si") else "0"
+            desc_disc = col(raw, "DESCRIPCIONDISCAPACIDAD")
+            desc_disc_str = str(desc_disc).strip() if desc_disc else None
 
-        info = pueblo_lookup.get(cod_mpio_ocu)
-        cod_pueblo_imp, pueblo_imp, confianza_imp = (None, None, None)
-        if info:
-            pueblo_imp, cod_pueblo_imp, confianza_imp = info
+            tipo_disc = clean_tipo_discapacidad(desc_disc_str) if disc == "1" else None
 
-        chunk.append((
-            idpersona, idhogar, pertenencia, genero, fecha_nac,
-            hecho, fecha_ocu, cod_mpio_ocu, cod_mpio_res,
-            zona, actor, tipo_vic, estado_vic,
-            disc, (desc_disc_str[:500] if desc_disc_str else None), tipo_disc,
-            cod_pueblo_imp, pueblo_imp, confianza_imp,
-        ))
+            info = pueblo_lookup.get(cod_mpio_ocu)
+            cod_pueblo_imp, pueblo_imp, confianza_imp = (None, None, None)
+            if info:
+                pueblo_imp, cod_pueblo_imp, confianza_imp = info
 
-        if len(chunk) >= chunk_size:
+            # M3 · Cast confianza_imputacion a string (columna destino VARCHAR(10))
+            if confianza_imp is not None:
+                if isinstance(confianza_imp, float):
+                    confianza_imp = f"{confianza_imp:.4f}"[:10]
+                else:
+                    confianza_imp = str(confianza_imp)[:10]
+
+            chunk.append((
+                idpersona, idhogar, pertenencia, genero, fecha_nac,
+                hecho, fecha_ocu, cod_mpio_ocu, cod_mpio_res,
+                zona, actor, tipo_vic, estado_vic,
+                disc, (desc_disc_str[:500] if desc_disc_str else None), tipo_disc,
+                cod_pueblo_imp, pueblo_imp, confianza_imp,
+            ))
+
+            if len(chunk) >= chunk_size:
+                insert_chunk(cur, chunk)
+                total += len(chunk)
+                elapsed = time.time() - t0
+                rate = total / elapsed if elapsed > 0 else 0
+                print(f"    {total:>12,} rows ({rate:,.0f}/s)")
+                conn.commit()
+                chunk = []
+
+        if chunk:
             insert_chunk(cur, chunk)
             total += len(chunk)
-            elapsed = time.time() - t0
-            rate = total / elapsed if elapsed > 0 else 0
-            print(f"    {total:>12,} rows ({rate:,.0f}/s)")
             conn.commit()
-            chunk = []
 
-    if chunk:
-        insert_chunk(cur, chunk)
-        total += len(chunk)
+        print(f"  Loaded: {total:,} rows in {time.time()-t0:.1f}s")
+
+        # Resumen por pueblo+hecho (solo indigenas con disc + pueblo imputado)
+        print("  Building victimas.resumen_pueblo_hecho...")
+        cur.execute("""
+            INSERT INTO victimas.resumen_pueblo_hecho
+                (cod_pueblo_imputado, pueblo_imputado, hecho, tipo_disc_limpia, cod_dpto, cod_mpio, cantidad)
+            SELECT cod_pueblo_imputado, pueblo_imputado, hecho,
+                   tipo_discapacidad_limpia,
+                   LEFT(cod_mpio_ocurrencia, 2), cod_mpio_ocurrencia,
+                   COUNT(*) AS cantidad
+            FROM victimas.universo
+            WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
+              AND discapacidad = '1'
+              AND cod_pueblo_imputado IS NOT NULL
+            GROUP BY cod_pueblo_imputado, pueblo_imputado, hecho,
+                     tipo_discapacidad_limpia, LEFT(cod_mpio_ocurrencia, 2), cod_mpio_ocurrencia
+        """)
         conn.commit()
 
-    print(f"  Loaded: {total:,} rows in {time.time()-t0:.1f}s")
+        cur.execute("SELECT COUNT(*) FROM victimas.resumen_pueblo_hecho")
+        print(f"  resumen_pueblo_hecho: {cur.fetchone()[0]:,} rows")
+        cur.execute("""
+            SELECT COUNT(*) FROM victimas.universo
+            WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
+              AND discapacidad = '1'
+        """)
+        print(f"  Indigenas con discapacidad cargados: {cur.fetchone()[0]:,}")
+        cur.execute("""
+            SELECT COUNT(*) FROM victimas.universo
+            WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
+              AND discapacidad = '1'
+              AND pueblo_imputado IS NOT NULL
+        """)
+        print(f"  Indigenas con disc Y pueblo imputado: {cur.fetchone()[0]:,}")
 
-    # Resumen por pueblo+hecho (solo indigenas con disc + pueblo imputado)
-    print("  Building victimas.resumen_pueblo_hecho...")
-    cur.execute("""
-        INSERT INTO victimas.resumen_pueblo_hecho
-            (cod_pueblo_imputado, pueblo_imputado, hecho, tipo_disc_limpia, cod_dpto, cod_mpio, cantidad)
-        SELECT cod_pueblo_imputado, pueblo_imputado, hecho,
-               tipo_discapacidad_limpia,
-               LEFT(cod_mpio_ocurrencia, 2), cod_mpio_ocurrencia,
-               COUNT(*) AS cantidad
-        FROM victimas.universo
-        WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
-          AND discapacidad = '1'
-          AND cod_pueblo_imputado IS NOT NULL
-        GROUP BY cod_pueblo_imputado, pueblo_imputado, hecho,
-                 tipo_discapacidad_limpia, LEFT(cod_mpio_ocurrencia, 2), cod_mpio_ocurrencia
-    """)
-    conn.commit()
-
-    cur.execute("SELECT COUNT(*) FROM victimas.resumen_pueblo_hecho")
-    print(f"  resumen_pueblo_hecho: {cur.fetchone()[0]:,} rows")
-    cur.execute("""
-        SELECT COUNT(*) FROM victimas.universo
-        WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
-          AND discapacidad = '1'
-    """)
-    print(f"  Indigenas con discapacidad cargados: {cur.fetchone()[0]:,}")
-    cur.execute("""
-        SELECT COUNT(*) FROM victimas.universo
-        WHERE pertenencia_etnica IN ('INDIGENA', 'INDIGENA ACREDITADO RA')
-          AND discapacidad = '1'
-          AND pueblo_imputado IS NOT NULL
-    """)
-    print(f"  Indigenas con disc Y pueblo imputado: {cur.fetchone()[0]:,}")
+    finally:
+        # M5 · Garantizar cierre del workbook para liberar file handle
+        wb.close()
 
 
 def main():

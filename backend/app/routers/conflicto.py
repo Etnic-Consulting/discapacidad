@@ -130,6 +130,7 @@ async def victimas_por_pueblo_ranking(
                        MODE() WITHIN GROUP (ORDER BY confianza_imputacion) AS confianza_imputacion
                 FROM victimas.universo
                 WHERE pueblo_imputado IS NOT NULL
+                  AND discapacidad = '1'
                 {filtro_dpto}
                 GROUP BY pueblo_imputado
                 ORDER BY total_victimas DESC
@@ -177,6 +178,7 @@ async def victimas_por_hecho(
                        COUNT(*) FILTER (WHERE tipo_discapacidad_limpia = 'PSICOSOCIAL') AS psicosocial
                 FROM victimas.universo
                 WHERE hecho IS NOT NULL
+                  AND discapacidad = '1'
                 {filtro_dpto}
                 GROUP BY hecho
                 ORDER BY total_victimas DESC
@@ -218,6 +220,7 @@ async def victimas_por_tipo(
                        COUNT(*) AS total_victimas
                 FROM victimas.universo
                 WHERE tipo_discapacidad_limpia IS NOT NULL
+                  AND discapacidad = '1'
                 {filtro_dpto}
                 GROUP BY tipo_discapacidad_limpia
                 ORDER BY total_victimas DESC
