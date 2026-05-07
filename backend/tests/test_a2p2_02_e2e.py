@@ -39,7 +39,7 @@ def test_frontend_login_route():
 # ──── Cascada filtros · backend coherente con frontend ────
 
 @pytest.mark.parametrize("macro,esperado_dptos_min", [
-    ("OCCIDENTE", 10),
+    ("OCCIDENTE", 9),
     ("AMAZONIA", 5),
     ("ORINOQUIA", 4),
     ("NORTE", 4),

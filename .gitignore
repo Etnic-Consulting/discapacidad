@@ -37,6 +37,11 @@ onic-smt-dashboard discapacidad/
 *.pem
 *.key
 !.env.example
+backend/.seed_credentials.txt
+
+# Informes generados bajo demanda (cache runtime · NO versionar)
+backend/_static/informes/**/*.pdf
+backend/_static/informes/**/*.docx
 
 # ============================================================================
 # PYTHON

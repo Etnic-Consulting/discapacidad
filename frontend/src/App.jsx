@@ -16,6 +16,7 @@ import ProyeccionesPage from './pages/ProyeccionesPage';
 import VozPropiaPage from './pages/VozPropiaPage';
 import IndicadoresPage from './pages/IndicadoresPage';
 import InformesPage from './pages/InformesPage';
+import InformesPageV2 from './pages/InformesPageV2';
 import FormularioPage from './pages/FormularioPage';
 import LoginPage from './pages/LoginPage';
 
@@ -51,6 +52,7 @@ export default function App() {
             <Route path="/voz-propia" element={<VozPropiaPage />} />
             <Route path="/indicadores" element={<IndicadoresPage />} />
             <Route path="/informes" element={<InformesPage />} />
+            <Route path="/informes-v2" element={<InformesPageV2 />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/formulario" element={<RequireAuth><FormularioPage /></RequireAuth>} />
             <Route path="*" element={

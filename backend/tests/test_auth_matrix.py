@@ -42,6 +42,8 @@ TEST_PASS = os.getenv("TEST_USER_PASSWORD", "wilson2026")
     "/demografia/lengua",
     "/demografia/ranking",
     "/formulario/territorios/macros",
+    "/geo/macrorregiones",
+    "/geo/smt/macrorregiones",
 ])
 def test_endpoint_publico_sin_token(path):
     r = requests.get(f"{BASE}{path}", timeout=15)
@@ -56,8 +58,6 @@ def test_endpoint_publico_sin_token(path):
 @pytest.mark.parametrize("path", [
     "/pueblos/",
     "/pueblos/720/perfil",
-    "/geo/macrorregiones",
-    "/geo/smt/macrorregiones",
     "/geo/smt/resguardos",
     "/indicadores/",
     "/indicadores/valores?periodo=2018&nivel_geo=nacional",
@@ -70,7 +70,6 @@ def test_endpoint_cerrado_sin_token_da_401(path):
 @pytest.mark.parametrize("path", [
     "/pueblos/",
     "/pueblos/720/perfil",
-    "/geo/macrorregiones",
     "/geo/smt/resguardos",
     "/indicadores/",
 ])

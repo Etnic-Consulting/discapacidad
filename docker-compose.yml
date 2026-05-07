@@ -36,6 +36,7 @@ services:
     volumes:
       - ./backend/app:/code/app
       - ./backend/scripts:/code/scripts
+      - ./backend/_static:/code/_static
       - ${DISCAPACIDAD_DIR:-C:/Users/wilso/Desktop/discapacidad}:/data/discapacidad:ro
       - ${VICTIMAS_DIR:-D:/1.Programacion/1.onic-smt-dashboard/victimas}:/data/victimas:ro
     depends_on:

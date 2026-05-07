@@ -10,7 +10,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import Response
 
 from app.config import settings
-from app.routers import dashboard, pueblos, geo, conflicto, indicadores, demografia, auth, formulario
+from app.routers import dashboard, pueblos, geo, conflicto, indicadores, demografia, auth, formulario, informes
 
 
 request_id_ctx: ContextVar[str] = ContextVar("request_id", default="-")
@@ -247,6 +247,7 @@ app.include_router(indicadores.router, prefix="/api/v1/indicadores", tags=["Indi
 app.include_router(demografia.router, prefix="/api/v1/demografia", tags=["Demografia"])
 app.include_router(auth.router, prefix="/api/v1/auth", tags=["Auth"])
 app.include_router(formulario.router, prefix="/api/v1/formulario", tags=["Formulario"])
+app.include_router(informes.router, prefix="/api/v1/informes", tags=["Informes"])
 
 
 @app.get("/api/v1/health")
