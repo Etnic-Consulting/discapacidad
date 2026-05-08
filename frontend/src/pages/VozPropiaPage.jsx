@@ -309,10 +309,10 @@ export default function VozPropiaPage() {
         </div>
       </div>
 
-      {/* DidYouKnow callout */}
+      {/* DidYouKnow callout · datos vivos cuando existan, omitido si no */}
       <DidYouKnow
-        fact="La desarmonia espiritual, una forma de capacidad diversa reconocida solo por los pueblos indigenas, fue identificada en 10 de las 1,044 personas caracterizadas por el SMT-ONIC."
-        source="SMT-ONIC 2026 - Registro propio ONIC"
+        fact="La desarmonia espiritual es una forma de capacidad diversa reconocida solo por los pueblos indigenas. Su prevalencia se calculara a partir del registro propio ONIC conforme se acumulen las caracterizaciones de los dinamizadores en territorio."
+        source="SMT-ONIC - Registro propio ONIC"
       />
 
       {/* Desarmonia Espiritual section */}

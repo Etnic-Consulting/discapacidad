@@ -912,12 +912,18 @@ async def panorama_kpis(
                 total_personas = int(row[1] or 0)
                 prevalencia = round(1000.0 * total_personas / pob_total, 2) if pob_total else 0.0
         else:
+            # NACIONAL · usar pueblo.disc_nacional (canonico, sin bug del double)
+            # cnpv.resumen_nacional_etnico tiene Indigena duplicado x2 por bug del seed
+            # (cod_mpio=99773 Cumaribo carga el agregado nacional · ver fix v1.1)
             r = await db.execute(
                 text("""
-                    SELECT pob_total, pob_disc, tasa_x_1000
-                    FROM cnpv.resumen_nacional_etnico
-                    WHERE grupo_etnico = 'Indigena' AND periodo = '2018'
-                    LIMIT 1
+                    SELECT
+                      COALESCE(SUM(total), 0)              AS pob_total,
+                      COALESCE(SUM(con_discapacidad), 0)   AS pob_disc,
+                      ROUND(1000.0 * COALESCE(SUM(con_discapacidad), 0)::numeric
+                            / NULLIF(SUM(total), 0), 2)    AS tasa_x_1000
+                    FROM pueblo.disc_nacional
+                    WHERE periodo = '2018'
                 """)
             )
             row = r.first()
@@ -1083,7 +1089,9 @@ async def panorama_kpis(
                 "cod_macro": cod_macro,
             },
             "total_personas": total_personas,
-            "pob_total": pob_total,
+            "total_indigenas": pob_total,
+            "pob_total": pob_total,  # alias legacy
+            "rlcpd_certificados": None,  # pendiente · seed Minsalud por dpto (v1.1)
             "pueblos": pueblos_count,
             "prevalencia": round(prevalencia, 2),
             "caracterizados_smt": caracterizados_smt,

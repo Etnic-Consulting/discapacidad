@@ -362,6 +362,9 @@ export default function PanoramaPage() {
   const kpi = kpisData
     ? {
         totalPersonas: kpisData.total_personas,
+        totalIndigenas: kpisData.total_indigenas ?? null,
+        rlcpdCertificados: kpisData.rlcpd_certificados ?? null,
+        caracterizadosSmt: kpisData.caracterizados_smt ?? 0,
         pueblos: kpisData.pueblos,
         prevalencia: kpisData.prevalencia?.toFixed(1) ?? MOCK_KPI.prevalencia,
         coberturaRegistro: kpisData.cobertura_smt != null ? kpisData.cobertura_smt.toFixed(2) : null,
@@ -547,27 +550,50 @@ export default function PanoramaPage() {
           nivel representa una barrera adicional en el proceso de reconocimiento.
         </p>
 
-        {/* Narrativa pedagógica · Sprint S1.E visual */}
-        <div style={{
-          background: 'rgba(2, 171, 68, 0.05)',
-          borderLeft: '3px solid var(--color-green-mid)',
-          padding: '12px 16px',
-          marginBottom: '16px',
-          fontSize: '0.85rem',
-          lineHeight: 1.6,
-          color: '#444',
-        }}>
-          <strong style={{ color: 'var(--color-primary)' }}>¿Cómo se lee este embudo?</strong>
-          <ul style={{ margin: '8px 0 0 0', paddingLeft: '18px' }}>
-            <li>De <strong>1.9M indígenas totales</strong>, solo el <strong>11.8%</strong> reporta dificultad funcional en el censo (sesgo de subregistro: muchos no se identifican porque su pueblo no nombra "discapacidad" igual que el Estado).</li>
-            <li>De los <strong>225.174 con CD</strong>, solo el <strong>17.5%</strong> está en el RLCPD (registro oficial MinSalud · barrera burocrática).</li>
-            <li>De los <strong>39.374 RLCPD</strong>, solo el <strong>2.6%</strong> ha sido caracterizado por SMT-ONIC (el movimiento indígena no ha llegado · oportunidad de trabajo con dinamizadores).</li>
-            <li>De los <strong>1.044 caracterizados</strong>, solo el <strong>41%</strong> tiene certificación oficial (cert requiere documentación clínica que no llega a territorios).</li>
-          </ul>
-          <p style={{ margin: '8px 0 0 0', fontStyle: 'italic', color: 'var(--color-gray-500)' }}>
-            <strong>99,8%</strong> de los indígenas con CD NO tiene certificado oficial. Esta es la <Term tooltip="ver glosario · término CDPD">deuda institucional</Term>.
-          </p>
-        </div>
+        {/* Narrativa pedagógica · cifras dinámicas del endpoint · sin hardcode */}
+        {(() => {
+          const fmt = (n) => (n == null || Number.isNaN(n) ? '—' : Number(n).toLocaleString('es-CO'));
+          const pct = (a, b) => (a == null || b == null || b === 0 ? '—' : ((a / b) * 100).toFixed(1) + '%');
+          const totalInd = kpi.totalIndigenas;
+          const totalCd  = kpi.totalPersonas;
+          const rlcpd    = kpi.rlcpdCertificados;
+          const caract   = kpi.caracterizadosSmt;
+          const pctCd    = pct(totalCd, totalInd);
+          const pctRlcpd = pct(rlcpd, totalCd);
+          const pctCaract = pct(caract, rlcpd);
+          const pctCertOk = kpi.brechaCertificacion != null
+            ? (100 - Number(kpi.brechaCertificacion)).toFixed(1) + '%'
+            : '—';
+          const sinCaract = !caract || caract === 0;
+          return (
+            <div style={{
+              background: 'rgba(2, 171, 68, 0.05)',
+              borderLeft: '3px solid var(--color-green-mid)',
+              padding: '12px 16px',
+              marginBottom: '16px',
+              fontSize: '0.85rem',
+              lineHeight: 1.6,
+              color: '#444',
+            }}>
+              <strong style={{ color: 'var(--color-primary)' }}>¿Cómo se lee este embudo?</strong>
+              <ul style={{ margin: '8px 0 0 0', paddingLeft: '18px' }}>
+                <li>De <strong>{fmt(totalInd)} indígenas totales</strong>, el <strong>{pctCd}</strong> reporta dificultad funcional en el censo (sesgo de subregistro: muchos no se identifican porque su pueblo no nombra "discapacidad" igual que el Estado).</li>
+                <li>De los <strong>{fmt(totalCd)} con CD</strong>, el <strong>{pctRlcpd}</strong> está en el RLCPD (registro oficial MinSalud · barrera burocrática).</li>
+                <li>De los <strong>{fmt(rlcpd)} RLCPD</strong>, el <strong>{pctCaract}</strong> ha sido caracterizado por SMT-ONIC (el movimiento indígena no ha llegado · oportunidad de trabajo con dinamizadores).</li>
+                <li>De los <strong>{fmt(caract)} caracterizados</strong>, el <strong>{pctCertOk}</strong> tiene certificación oficial (cert requiere documentación clínica que no llega a territorios).</li>
+              </ul>
+              {sinCaract ? (
+                <p style={{ margin: '8px 0 0 0', fontStyle: 'italic', color: 'var(--color-gray-500)' }}>
+                  Sin caracterizaciones SMT registradas en el alcance actual. Los dinamizadores deben capturar desde el formulario para alimentar este embudo.
+                </p>
+              ) : (
+                <p style={{ margin: '8px 0 0 0', fontStyle: 'italic', color: 'var(--color-gray-500)' }}>
+                  El <strong>{kpi.brechaCertificacion ?? '—'}%</strong> de los caracterizados NO tiene certificado oficial. Esta es la <Term tooltip="ver glosario · término CDPD">deuda institucional</Term>.
+                </p>
+              )}
+            </div>
+          );
+        })()}
 
         <CertificationFunnel brecha={brechaData} />
       </div>
