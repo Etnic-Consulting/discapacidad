@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Majagual (Sucre) concentra 994 personas indígenas según CNPV 2018, donde el 92.3% (917) pertenece al pueblo Zenú. Este municipio carece de resguardos y presenta una alta dispersión étnica con 13 pueblos registrados. La violencia histórica se focaliza en desplazamiento forzado, representando el 90.9% de las 11 víctimas con discapacidad reportadas entre 1985-2024.",
+  "demografia": "La población indígena de Majagual muestra una estructura etaria concentrada en adultos (917 Zenú), con presencia marginal de otros pueblos como Emberá-Katío (41) y Cuiba (8). Los datos no permiten análisis de pirámide etaria por limitaciones metodológicas. La diversidad étnica (13 pueblos) refleja dinámicas migratorias sin territorio colectivo reconocido.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades específicas para Majagual. La sección de capacidades diversas carece de información a nivel municipal, lo que impide evaluar condiciones de salud diferenciadas. Se requiere desagregación por pueblo para identificar necesidades prioritarias.",
+  "territorial": "Majagual carece de resguardos indígenas pese a albergar 994 personas de 13 pueblos distintos. La dispersión geográfica se evidencia en la ausencia de territorios colectivos, contrastando con la alta concentración del pueblo Zenú (917). La bbox geográfica delimita un área sin presencia de resguardos formales.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Majagual. Esta omisión impide evaluar la vitalidad lingüística de los 13 pueblos registrados, especialmente del grupo Zenú mayoritario. Se recomienda priorizar levantamientos etnográficos para documentar prácticas culturales.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Majagual. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de datos limita la identificación de brechas socioeconómicas en un municipio con alta presencia Zenú y diversidad étnica.",
+  "conflicto": "Majagual registra 11 víctimas indígenas con discapacidad entre 1985-2024, donde el desplazamiento forzado (10 casos) representa el 90.9% del total. Este patrón evidencia una crisis humanitaria persistente en un territorio sin resguardos. La concentración de hechos en desplazamiento exige atención prioritaria.",
+  "icv": "Majagual presenta un ICV de 0.001, con componentes nulos en NBI y prevalencia, y 0.002 en conflicto. Este valor refleja la ausencia de resguardos y la marginalización territorial. La fórmula evidencia que el conflicto normado domina el índice en un contexto de desprotección institucional.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento de resguardos para el pueblo Zenú (917 personas) en Majagual, priorizando 100 hectáreas como mínimo para seguridad territorial.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, dado que el 90.9% de las víctimas indígenas con discapacidad están asociadas a este hecho.",
+    "Realizar un censo lingüístico para documentar las 13 lenguas indígenas presentes, especialmente el Zenú, con enfoque en revitalización cultural.",
+    "Diseñar programas de salud diferenciados para pueblos minoritarios (Emberá-Katío: 41; Cuiba: 8), considerando su vulnerabilidad sin datos específicos.",
+    "Incluir Majagual en el Plan de Vida de la ONIC para articular acciones con el pueblo Zenú y evitar la dispersión étnica sin territorio."
+  ]
+}

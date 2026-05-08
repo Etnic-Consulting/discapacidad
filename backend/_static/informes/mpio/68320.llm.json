@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Guadalupe (Santander) reporta ausencia de población indígena registrada en el CNPV 2018, lo que limita el análisis demográfico y territorial. Los datos de víctimas por conflicto también muestran cero registros, sugiriendo subreporte o falta de visibilización. El ICV de 0.0 refleja la imposibilidad de calcular indicadores por ausencia de datos base.",
+  "demografia": "Los datos de población indígena en Guadalupe no están disponibles (n=0, confiabilidad NO_CONFIABLE). No es posible analizar pirámide etaria ni razones de crecimiento/caída demográfica. La ausencia de registros en el CNPV 2018 impide contrastar con tendencias nacionales o departamentales de pueblos como los Guane.",
+  "prevalencia": "No hay datos disponibles para analizar prevalencia de condiciones de salud o discapacidad en población indígena de Guadalupe. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. Se requiere registro diferenciado por etnia para evaluar subregistros.",
+  "territorial": "Guadalupe cuenta con 0 resguardos indígenas registrados, a pesar de su bbox territorial que abarca áreas con potencial histórico para pueblos como los Guane. La ausencia de territorios colectivos contrasta con la presencia de comunidades campesinas en la zona. Se requieren estudios de tenencia para verificar ocupación indígena histórica.",
+  "lengua": "Los datos sobre lenguas indígenas en Guadalupe no están disponibles. No es posible identificar presencia de lenguas nativas como el guane, extinta o en riesgo. La falta de registros lingüísticos impide evaluar vitalidad cultural en el territorio.",
+  "vida": "No hay datos de NBI para población indígena en Guadalupe. El promedio indígena nacional de 67.6% no puede compararse localmente. La ausencia de información sobre necesidades básicas invisibiliza posibles brechas en acceso a servicios básicos para eventuales comunidades indígenas no registradas.",
+  "conflicto": "No se registran víctimas indígenas por conflicto en Guadalupe (n=0, período 1985-2024). La ausencia de hechos violentos reportados no descarta subregistro o falta de sistematización de casos. Se requiere cruce con registros locales de violencia para validar esta cifra.",
+  "icv": "El ICV de Guadalupe es 0.0, calculado con componentes nulos (NBI=0.0, prevalencia=0.0, conflicto=0.0). La fórmula del ICV no puede aplicarse sin datos base. Esta métrica refleja la carencia de información sistematizada sobre condiciones de vida indígena en el municipio.",
+  "recomendaciones": [
+    "Realizar censo étnico diferenciado en Guadalupe para identificar población indígena no registrada en el CNPV 2018, priorizando comunidades campesinas con posible origen indígena.",
+    "Implementar registro de víctimas por conflicto con enfoque étnico en el municipio, cruzando datos del RUV con fuentes locales para validar subregistros.",
+    "Estudiar tenencia territorial en el bbox de Guadalupe para verificar ocupación histórica indígena y promover reconocimiento de resguardos.",
+    "Generar línea base de NBI y prevalencia de discapacidad en población indígena local, usando metodologías participativas con comunidades.",
+    "Articular con la ONIC y autoridades departamentales para incluir Guadalupe en sistemas de información étnica diferenciada."
+  ]
+}

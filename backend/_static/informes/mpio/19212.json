@@ -1,0 +1,174 @@
+{
+  "tipo": "mpio",
+  "id": "19212",
+  "nombre": "CORINTO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 8971,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 8971,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 8,
+      "top": [
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 8960
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "431",
+          "pueblo": "KAKUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "500",
+        "pueblo": "NASA",
+        "poblacion": 8960
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        3.059059429272828,
+        -76.33172894416845,
+        3.230010252252378,
+        -76.07265088265535
+      ],
+      "nombre_mpio": "CORINTO",
+      "cod_dpto": "19"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 311,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 311,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 142
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 45
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 40
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 30
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 22
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 12
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 9
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 5
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 4
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 142
+      },
+      "pct_hecho_principal": 45.7
+    },
+    "icv": {
+      "score": 0.019,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.062
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:46:07",
+  "periodo": "2018",
+  "_input_hash": "a1cb41d260aaacf6"
+}

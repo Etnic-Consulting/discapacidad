@@ -1,0 +1,168 @@
+{
+  "tipo": "mpio",
+  "id": "20060",
+  "nombre": "BOSCONIA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 191,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 191,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 10,
+      "top": [
+        {
+          "cod_pueblo": "780",
+          "pueblo": "YUKPA",
+          "poblacion": 86
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 47
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 37
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "370",
+          "pueblo": "KOGUI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "780",
+        "pueblo": "YUKPA",
+        "poblacion": 86
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        9.780314735064369,
+        -74.03666699428862,
+        10.077502626666929,
+        -73.73078553460243
+      ],
+      "nombre_mpio": "BOSCONIA",
+      "cod_dpto": "20"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 88,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 88,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 73
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 5
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 4
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 73
+      },
+      "pct_hecho_principal": 83.0
+    },
+    "icv": {
+      "score": 0.005,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.018
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:55:46",
+  "periodo": "2018",
+  "_input_hash": "b27353426eb52112"
+}

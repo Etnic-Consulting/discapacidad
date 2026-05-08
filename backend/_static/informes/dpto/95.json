@@ -1,0 +1,356 @@
+{
+  "tipo": "dpto",
+  "id": "95",
+  "nombre": "GUAVIARE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6269,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 6269,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 426,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 426,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 6269,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 68.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "680",
+          "con_disc": 62,
+          "total": 763
+        },
+        {
+          "cod_pueblo": "320",
+          "con_disc": 48,
+          "total": 1284
+        },
+        {
+          "cod_pueblo": "220",
+          "con_disc": 47,
+          "total": 763
+        },
+        {
+          "cod_pueblo": "260",
+          "con_disc": 39,
+          "total": 479
+        },
+        {
+          "cod_pueblo": "140",
+          "con_disc": 34,
+          "total": 240
+        },
+        {
+          "cod_pueblo": "250",
+          "con_disc": 33,
+          "total": 418
+        },
+        {
+          "cod_pueblo": "310",
+          "con_disc": 29,
+          "total": 221
+        },
+        {
+          "cod_pueblo": "550",
+          "con_disc": 19,
+          "total": 358
+        },
+        {
+          "cod_pueblo": "530",
+          "con_disc": 19,
+          "total": 194
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 17,
+          "total": 303
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 25,
+      "resguardos": [
+        {
+          "nombre": "NUKAK - MAKÚ",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JUDPA - JUJUPDA",
+          "area_pg_ha": 957379.917
+        },
+        {
+          "nombre": "MORICHAL VIEJO, SANTA ROSA, CERRO CUCUY, SANTA CRUZ, CAÑO DANTA - OTROS",
+          "mpio": "EL RETORNO",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 668455.761
+        },
+        {
+          "nombre": "LLANOS DEL YARÍ - YAGUARÁ II",
+          "mpio": "CALAMAR",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 146488.678
+        },
+        {
+          "nombre": "LAGOS DEL DORADO, LAGOS DEL PASO Y EL REMANSO",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "TUKANO",
+          "area_pg_ha": 41125.808
+        },
+        {
+          "nombre": "VUELTA DEL ALIVIO",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "GUANANO",
+          "area_pg_ha": 40803.127
+        },
+        {
+          "nombre": "COROCORO",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 36464.39
+        },
+        {
+          "nombre": "YAVILLA II",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 31084.268
+        },
+        {
+          "nombre": "BARRANCO CEIBA Y LAGUNA ARAGUATO",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 26885.833
+        },
+        {
+          "nombre": "BARRANQUILLITA",
+          "mpio": "CALAMAR",
+          "pueblo_onic": "TUKANO",
+          "area_pg_ha": 22204.564
+        },
+        {
+          "nombre": "PUERTO NARE",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "KARIJONA",
+          "area_pg_ha": 19695.103
+        },
+        {
+          "nombre": "PUERTO VIEJO Y PUERTO ESPERANZA",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 10072.733
+        },
+        {
+          "nombre": "BARRANCO COLORADO",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 9478.08
+        },
+        {
+          "nombre": "EL ITILLA",
+          "mpio": "CALAMAR",
+          "pueblo_onic": "CARAPANA",
+          "area_pg_ha": 8477.529
+        },
+        {
+          "nombre": "LA YUQUERA",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "TUKANO",
+          "area_pg_ha": 8247.295
+        },
+        {
+          "nombre": "TUCÁN DE CAÑO GIRIZA Y PUERTO LA PALMA",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "DESANO",
+          "area_pg_ha": 5408.029
+        },
+        {
+          "nombre": "LA FUGA",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 3625.955
+        },
+        {
+          "nombre": "BARRANCÓN",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 2751.782
+        },
+        {
+          "nombre": "CAÑO NEGRO",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 1700.888
+        },
+        {
+          "nombre": "PUERTO MONFORTH",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "TUBÚ - SIRIANO",
+          "area_pg_ha": 905.983
+        },
+        {
+          "nombre": "LA ASUNCIÓN",
+          "mpio": "EL RETORNO",
+          "pueblo_onic": "TUKANO DESANO",
+          "area_pg_ha": 726.511
+        },
+        {
+          "nombre": "CENTRO MIRAFLORES",
+          "mpio": "MIRAFLORES",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 689.885
+        },
+        {
+          "nombre": "GUAYABERO DE LA MARÍA",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 495.388
+        },
+        {
+          "nombre": "CACHIVERA DE NARE",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 316.945
+        },
+        {
+          "nombre": "PANURE (VENEZUELA)",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 277.42
+        },
+        {
+          "nombre": "EL REFUGIO",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "DESANO",
+          "area_pg_ha": 268.741
+        }
+      ],
+      "bbox": [
+        0.655412580757105,
+        -73.66390880277658,
+        2.9249867131022667,
+        -69.99510700215257
+      ],
+      "nombre_dpto": "GUAVIARE"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 457,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 457,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 291
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 43
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 32
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 28
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 23
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 22
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 5
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 4
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 4
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 3
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 291
+      },
+      "pct_hecho_principal": 63.7
+    },
+    "icv": {
+      "score": 0.129,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.34,
+        "conflicto_norm": 0.091
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:01:17",
+  "periodo": "2018",
+  "_input_hash": "667dfd544a8b5969"
+}

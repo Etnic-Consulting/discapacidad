@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "52",
+  "nombre": "NARINO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 206239,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 206239,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 20010,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 20010,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 206239,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 97.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "560",
+          "con_disc": 15781,
+          "total": 155098
+        },
+        {
+          "cod_pueblo": "210",
+          "con_disc": 2900,
+          "total": 38955
+        },
+        {
+          "cod_pueblo": "565",
+          "con_disc": 546,
+          "total": 5689
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 510,
+          "total": 2183
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 164,
+          "total": 1397
+        },
+        {
+          "cod_pueblo": "283",
+          "con_disc": 36,
+          "total": 2137
+        },
+        {
+          "cod_pueblo": "360",
+          "con_disc": 27,
+          "total": 217
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 14,
+          "total": 197
+        },
+        {
+          "cod_pueblo": "350",
+          "con_disc": 5,
+          "total": 71
+        },
+        {
+          "cod_pueblo": "080",
+          "con_disc": 2,
+          "total": 9
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 62,
+      "resguardos": [
+        {
+          "nombre": "EL GRAN SÁBALO",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 42482.522
+        },
+        {
+          "nombre": "NULPE MEDIO - ALTO Y RÍO SAN JUAN",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 37887.346
+        },
+        {
+          "nombre": "LA TURBIA",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 28627.987
+        },
+        {
+          "nombre": "TORTUGAÑA, TELEMBÍ, PUNDE, PITADERO, BRAVO, TRONQUERÍA Y ZABALETA",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 22118.439
+        },
+        {
+          "nombre": "UKUMARI KANKHE",
+          "mpio": "IPIALES",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 19500.25
+        },
+        {
+          "nombre": "GRAN ROSARIO",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 17341.664
+        },
+        {
+          "nombre": "GUALCALÁ",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 17175.495
+        },
+        {
+          "nombre": "PINGULLO - SARDINERO",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 12047.741
+        },
+        {
+          "nombre": "TRONQUERÍA, PULGANDE - PALICITO",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 10428.625
+        },
+        {
+          "nombre": "GRAN TESCUAL",
+          "mpio": "PUERRES",
+          "pueblo_onic": "PASTO",
+          "area_pg_ha": 10174.192
+        },
+        {
+          "nombre": "NUNALBÍ ALTO ULBÍ",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 9632.469
+        },
+        {
+          "nombre": "LA FLORESTA, SANTA ROSA Y SAN FRANCISCO",
+          "mpio": "OLAYA HERRERA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9396.485
+        },
+        {
+          "nombre": "EL SANDE",
+          "mpio": "SANTACRUZ",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 8734.75
+        },
+        {
+          "nombre": "PALMAR IMBI",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 7837.31
+        },
+        {
+          "nombre": "SAUNDE GUIGUAY",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 7505.635
+        },
+        {
+          "nombre": "AWÁ ÑAMBÍ PIEDRA VERDE",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 7330.714
+        },
+        {
+          "nombre": "INDA ZABALETA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6226.933
+        },
+        {
+          "nombre": "ISHU AWÁ",
+          "mpio": "IPIALES",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6017.618
+        },
+        {
+          "nombre": "GUADUAL, CUMBAS, MAGÜÍ, INVINA Y ARRAYÁN",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 5166.155
+        },
+        {
+          "nombre": "EL CEDRO, LAS PEÑAS, LA BRAVA, PILVÍ Y LA PINTADA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4970.115
+        },
+        {
+          "nombre": "RAMOS - MONGÓN - MANCHURIA",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4781.225
+        },
+        {
+          "nombre": "ALTO CARTAGENA",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4564.979
+        },
+        {
+          "nombre": "CUAYQUER DEL ALTO ALBI",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4337.381
+        },
+        {
+          "nombre": "CUALQUER INTEGRADO LA MILAGROSA",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4132.251
+        },
+        {
+          "nombre": "INTEGRADO EL CHARCO",
+          "mpio": "EL CHARCO",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 3806.211
+        },
+        {
+          "nombre": "RUMIYACO",
+          "mpio": "IPIALES",
+          "pueblo_onic": "PASTO",
+          "area_pg_ha": 3705.525
+        },
+        {
+          "nombre": "CHAGÜÍ CHIMBUZA VEGAS Y OTROS",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 3456.108
+        },
+        {
+          "nombre": "NASA UH",
+          "mpio": "POTOSÍ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 3365.582
+        },
+        {
+          "nombre": "PIALAPÍ - PUEBLO VIEJO - SAN MIGUEL - YARÉ",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 3278.932
+        },
+        {
+          "nombre": "PLANADAS TELEMBÍ",
+          "mpio": "SAMANIEGO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 3046.752
+        },
+        {
+          "nombre": "INGA DE SAN PEDRO",
+          "mpio": "EL TABLÓN DE GÓMEZ",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2648.238
+        },
+        {
+          "nombre": "RÍO SATINGA",
+          "mpio": "OLAYA HERRERA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 2639.271
+        },
+        {
+          "nombre": "PIPALTA - PALBI - YAGUAPÍ",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2607.151
+        },
+        {
+          "nombre": "GUELMAMBÍ CARAÑO",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2586.133
+        },
+        {
+          "nombre": "CUCHILLA - PALMAR",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2568.78
+        },
+        {
+          "nombre": "CUAMBI - YASLAMBI",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2534.753
+        },
+        {
+          "nombre": "KEJUAMBI FELICIANA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1828.627
+        },
+        {
+          "nombre": "PIEDRA SELLADA - QUEBRADA TRONQUERÍA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1686.23
+        },
+        {
+          "nombre": "INGA DE COLÓN",
+          "mpio": "BUESACO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 1531.525
+        },
+        {
+          "nombre": "INDA GUACARAY",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1228.093
+        },
+        {
+          "nombre": "CUASBIL - LA FALDADA",
+          "mpio": "BARBACOAS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1162.015
+        },
+        {
+          "nombre": "SANTA ROSA SUCUMBÍOS EL DIVISO",
+          "mpio": "IPIALES",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 1093.297
+        },
+        {
+          "nombre": "PULGANDE CAMPOALEGRE",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1015.667
+        },
+        {
+          "nombre": "MORRITO",
+          "mpio": "EL CHARCO",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 904.625
+        },
+        {
+          "nombre": "CHINGUIRITO MIRA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 797.145
+        },
+        {
+          "nombre": "QUEBRADA GRANDE",
+          "mpio": "SANTA BÁRBARA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 771.877
+        },
+        {
+          "nombre": "SANQUIANGUITA",
+          "mpio": "MOSQUERA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 651.212
+        },
+        {
+          "nombre": "CUASCUABI - PALDUBI",
+          "mpio": "RICAURTE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 572.646
+        },
+        {
+          "nombre": "REFUGIO EL SOL",
+          "mpio": "PASTO",
+          "pueblo_onic": "QUILLACINGA",
+          "area_pg_ha": 530.171
+        },
+        {
+          "nombre": "PIGUAMBÍ PALANGALA",
+          "mpio": "SAN ANDRÉS DE TUMACO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 490.715
+        }
+      ],
+      "bbox": [
+        0.3613480790898137,
+        -79.01021097538194,
+        2.6838980690981256,
+        -76.83368053711024
+      ],
+      "nombre_dpto": "NARINO"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 5165,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 5165,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 3232
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 412
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 387
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 356
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 315
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 101
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 101
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 77
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 69
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 33
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 3232
+      },
+      "pct_hecho_principal": 62.6
+    },
+    "icv": {
+      "score": 0.446,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.485,
+        "conflicto_norm": 1.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:52:18",
+  "periodo": "2018",
+  "_input_hash": "f482bcce2e6ca600"
+}

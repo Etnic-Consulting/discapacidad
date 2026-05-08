@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Gómez Plata (Antioquia) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Murui. La ausencia de resguardos y datos de lengua o NBI limita el análisis territorial y socioeconómico. El desplazamiento forzado afecta al 100% de las 3 víctimas registradas entre 1985-2024, señalando vulnerabilidad extrema.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. La población indígena total es de 1 persona, lo que impide evaluar estructura etaria o dinámicas demográficas. Se requiere desagregación por edades para análisis confiable.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Gómez Plata. La limitación interpretativa es total, dado que no existe información confiable a este nivel. Se recomienda priorizar recolección de datos sanitarios locales.",
+  "territorial": "Gómez Plata carece de resguardos indígenas, con 0 territorios registrados. La bbox geográfica delimita un área de 6.57-6.85°N, 75.11-75.29°W, pero sin presencia territorial indígena formal. La dispersión geográfica es nula, concentrando la población en contexto urbano.",
+  "lengua": "Los datos sobre lenguas indígenas en Gómez Plata no están disponibles. No es posible determinar la vitalidad lingüística o patrones de uso en el municipio. Se reconoce la ausencia de información como brecha crítica.",
+  "vida": "No hay datos de NBI para Gómez Plata, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida. Se destaca la necesidad de registrar indicadores socioeconómicos locales para evaluar brechas.",
+  "conflicto": "Las 3 víctimas registradas en Gómez Plata corresponden exclusivamente a desplazamiento forzado (100%). El evento principal refleja la exposición extrema a violencia estructural. La confiabilidad es alta (n=3), pero el subregistro es probable dado el contexto rural.",
+  "icv": "El ICV de Gómez Plata es 0.0, con componentes en cero excepto conflicto_norm (0.001). La dimensión dominante es NBI (0.4 del índice), pero sin datos reales. La posición relativa es crítica, aunque no comparable por ausencia de valores de referencia.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal para actualizar población y caracterizar demografía (población actual: 1 persona).",
+    "Registrar datos de NBI y lengua en Gómez Plata para evaluar brechas con promedio indígena nacional (67.6% NBI).",
+    "Implementar alertas tempranas contra desplazamiento forzado, dado que el 100% de víctimas reportadas están en esta categoría.",
+    "Promover acuerdos interinstitucionales para reconocer territorios indígenas en Gómez Plata, donde no existen resguardos (0 territorios).",
+    "Incluir Gómez Plata en programas de salud pública con enfoque diferencial, ante la ausencia de datos de prevalencia."
+  ]
+}

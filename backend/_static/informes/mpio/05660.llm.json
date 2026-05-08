@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Luis (Antioquia) registra una población indígena de solo 2 personas según CNPV 2018, distribuidas en dos pueblos: Emberá-Katío y Zenú. La ausencia de resguardos y la dispersión territorial reflejan una presencia indígena marginal en el municipio. El conflicto armado impacta con 11 víctimas con discapacidad entre 1985-2024, donde el desplazamiento forzado representa el 81.8% de los casos.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la mínima población registrada (n=2). Los datos demográficos a escala municipal no permiten análisis etario confiable. Se requiere desagregar a nivel de resguardo o pueblo para evaluar estructura poblacional indígena.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en este municipio. Los registros a nivel municipal no capturan indicadores de salud indígena. Se recomienda priorizar sistemas de información específicos para pueblos en contextos urbanos o dispersos.",
+  "territorial": "San Luis no cuenta con resguardos indígenas registrados (n=0). La dispersión geográfica se delimita por un bbox que abarca coordenadas entre 5.91°N-75.09°W y 6.13°N-74.77°W. La ausencia de territorios colectivos limita la expresión cultural y política de los pueblos presentes.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística de los pueblos Emberá-Katío y Zenú en el territorio. Se requiere investigación específica para documentar prácticas culturales en contextos no tradicionales.",
+  "vida": "No hay información sobre NBI para San Luis. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. La invisibilización estadística impide evaluar condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "Se registraron 11 víctimas indígenas con discapacidad por violencia entre 1985-2024, donde el desplazamiento forzado (9 casos) es el hecho principal (81.8%). La concentración de hechos en un solo tipo de violencia sugiere patrones sistemáticos de desarraigo en la región.",
+  "icv": "El ICV de San Luis es 0.001, con componentes normalizados en cero excepto conflicto (0.002). La fórmula pondera NBI, prevalencia y conflicto, destacando la dimensión de violencia como factor crítico. El valor refleja condiciones de extrema vulnerabilidad en un contexto de casi nula presencia institucional.",
+  "recomendaciones": [
+    "Priorizar la identificación y registro de territorios indígenas en San Luis para garantizar derechos territoriales, citando la ausencia de resguardos (n=0).",
+    "Implementar un sistema de alerta temprana para víctimas con discapacidad en contextos de desplazamiento forzado, basado en el 81.8% de casos reportados.",
+    "Realizar un censo indígena municipal desagregado por pueblo para superar la limitación de n=2 y visibilizar la población real.",
+    "Diseñar estrategias de fortalecimiento cultural para los pueblos Emberá-Katío y Zenú en contextos no tradicionales, ante la falta de datos sobre lengua.",
+    "Incluir a San Luis en planes departamentales de atención a víctimas con discapacidad, considerando los 11 casos registrados entre 1985-2024."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Manta (Cundinamarca) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo WAYUU. La ausencia de resguardos y datos territoriales específicos limita la identificación de patrones de ocupación. La falta de información en NBI, lengua y capacidades diversas restringe el análisis integral de condiciones de vida.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos disponibles, que solo reportan 1 habitante indígena. La concentración en un único pueblo (WAYUU) refleja una diversidad étnica mínima en el territorio. No hay datos desagregados por grupos de edad que permitan analizar dinámicas poblacionales.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Manta. La ausencia de registros en salud indígena impide evaluar condiciones de morbilidad o acceso a servicios. Se requiere fortalecer sistemas de información locales para identificar necesidades específicas.",
+  "territorial": "Manta no cuenta con resguardos indígenas, lo que contrasta con la media nacional. La bbox geográfica delimita un área de 4.913 a 5.072 latitud y -73.619 a -73.506 longitud, sin presencia territorial colectiva registrada. La dispersión geográfica es nula al no existir territorios indígenas.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "No hay información sobre NBI para Manta. El promedio indígena nacional (67.6%) no puede compararse debido a la falta de datos locales. La ausencia de registros impide evaluar brechas en condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Manta entre 1985-2024. La ausencia de hechos victimizantes en el RUV sugiere baja visibilidad de la población indígena en sistemas de registro de conflicto. Se debe verificar la inclusión en bases de datos departamentales.",
+  "icv": "El ICV de Manta es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada refleja la falta de información, no condiciones reales. Se requiere mejorar la recolección de datos para calcular indicadores confiables.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal para actualizar datos demográficos y territoriales, citando la población actual de 1 habitante (CNPV 2018).",
+    "Incluir a Manta en sistemas de información de NBI y lengua, comparando con el promedio indígena nacional de 67.6% en NBI.",
+    "Verificar la presencia de población indígena no registrada en resguardos, dado que no hay territorios colectivos en el municipio.",
+    "Articular con la Gobernación de Cundinamarca para incluir Manta en planes de salud intercultural, ante la falta de datos de prevalencia.",
+    "Promover la creación de un comité étnico municipal para monitorear condiciones de vida, ante la ausencia de registros en conflicto y capacidades diversas."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Arjona (Bolívar) concentra 508 personas indígenas según CNPV 2018, donde el 87% pertenece al pueblo Zenú (442 personas). La ausencia de resguardos registrados refleja una debilidad en el reconocimiento territorial formal. El Índice de Condiciones Vitales (ICV) de 0.0 evidencia condiciones críticas, impulsadas por un NBI no disponible pero contrastado con un promedio indígena nacional del 67.6%.",
+  "demografia": "La población indígena en Arjona muestra una alta concentración en el pueblo Zenú (442 personas), seguido por Emberá-Katío (32) y Wayúu (14). Los 9 pueblos identificados reflejan diversidad cultural, pero con una distribución desigual donde el 87% se agrupa en un solo pueblo. No se dispone de datos de pirámide etaria para este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Arjona. La falta de información limita el análisis de subregistros o patrones de afectación. Se requiere fortalecer sistemas de monitoreo local para capturar estas variables críticas.",
+  "territorial": "Arjona carece de resguardos indígenas registrados, a pesar de albergar 9 pueblos distintos. La dispersión geográfica se limita a un área delimitada por coordenadas (10.01720361702174, -75.54492753432896 a 10.338706024776148, -75.23548935503595). La ausencia de territorios colectivos formalizados dificulta la protección de los derechos territoriales.",
+  "lengua": "Los datos sobre lenguas indígenas en Arjona no están disponibles. Esta ausencia impide evaluar la vitalidad cultural y la transmisión intergeneracional de idiomas originarios en el municipio.",
+  "vida": "No se cuenta con datos específicos de NBI para Arjona, aunque el promedio indígena nacional alcanza el 67.6%. La falta de información local impide calcular brechas precisas. Se prioriza la generación de estadísticas desagregadas para orientar políticas sociales diferenciadas.",
+  "conflicto": "Arjona registra 6 víctimas de conflicto con discapacidad entre 1985-2024, donde el 83.3% corresponde a desplazamiento forzado (5 casos). El hecho principal evidencia la violencia estructural que afecta a la población indígena, especialmente en contextos de movilidad forzada.",
+  "icv": "El ICV de 0.0 en Arjona refleja condiciones de vida críticas, con componentes normalizados en cero (NBI, prevalencia y conflicto). La dimensión de conflicto aporta un valor mínimo (0.001), pero insuficiente para alterar el resultado. La posición relativa es crítica frente a estándares indígenas nacionales.",
+  "recomendaciones": [
+    "Formalizar al menos un resguardo indígena en Arjona para garantizar el derecho territorial, considerando que el 87% de la población pertenece al pueblo Zenú y no existen territorios colectivos registrados.",
+    "Implementar un sistema de monitoreo local de discapacidad y salud con enfoque diferencial, dado que no hay datos disponibles y el promedio indígena nacional de NBI es del 67.6%.",
+    "Priorizar acciones contra el desplazamiento forzado, que representa el 83.3% de los hechos victimizantes (5 de 6 casos registrados entre 1985-2024).",
+    "Realizar un censo lingüístico para identificar la vitalidad de lenguas indígenas en Arjona, ya que actualmente no hay datos disponibles sobre este aspecto cultural.",
+    "Diseñar políticas de vivienda y acceso a servicios básicos con enfoque en pueblos indígenas, ante la ausencia de datos de NBI y la alta concentración poblacional en el pueblo Zenú."
+  ]
+}

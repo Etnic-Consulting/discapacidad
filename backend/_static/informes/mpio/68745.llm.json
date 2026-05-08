@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Simacota registra una población indígena de 11 personas según CNPV 2018, distribuidas en 4 pueblos, con el Zenu como principal (4 habitantes). La ausencia de resguardos y la concentración en un núcleo reducido reflejan una presencia indígena marginal en el territorio. El desplazamiento forzado (83.3% de las víctimas) emerge como el hecho victimizante dominante, marcando una vulnerabilidad crítica en el municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según la fuente, que solo reporta datos agregados por pueblo y departamento. La población total indígena (11 personas) impide un análisis etario confiable. Se requiere desagregación por grupos de edad para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Simacota. La sección no aplica a nivel municipal, según la nota técnica que limita estos indicadores a niveles pueblo o departamento. La falta de información impide evaluar subregistros o patrones de enfermedad.",
+  "territorial": "Simacota no cuenta con resguardos indígenas registrados, a pesar de albergar 4 pueblos distintos. La dispersión geográfica se limita a un área acotada (bbox con coordenadas que sugieren un territorio municipal pequeño). La ausencia de territorios colectivos contrasta con la presencia de pueblos como el Zenu o el Arhuaco.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. La sección no aporta información sobre prácticas lingüísticas o pérdida cultural en la población indígena local.",
+  "vida": "No se dispone de datos de NBI para Simacota. El promedio indígena nacional (67.6%) no puede compararse sin información local. La brecha con el estándar nacional no es evaluable con los datos actuales.",
+  "conflicto": "Se registran 6 víctimas de violencia en el municipio (1985-2024), con desplazamiento forzado como hecho principal (83.3% del total). La concentración en un solo tipo de victimización sugiere un patrón de afectación específico, vinculado posiblemente a dinámicas regionales de conflicto armado.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Simacota es 0.0, con todos sus componentes en cero excepto conflicto (0.001). La fórmula refleja una condición de extrema vulnerabilidad, donde la ausencia de datos en NBI y prevalencia anula cualquier cálculo significativo.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios indígenas en Simacota, dado que no hay resguardos registrados a pesar de la presencia de 4 pueblos distintos.",
+    "Investigar las causas del desplazamiento forzado (5 de 6 víctimas) para diseñar estrategias de protección territorial y retorno seguro, citando el 83.3% de incidencia.",
+    "Solicitar al DANE desagregación de datos demográficos por grupos de edad para Simacota, ya que la población total (11 personas) impide análisis etarios confiables.",
+    "Incluir a Simacota en programas de salud pública con enfoque intercultural, ante la falta de datos de prevalencia que impide identificar necesidades específicas.",
+    "Articular con la ONIC y pueblos vecinos (como el Zenu) para fortalecer la representación indígena municipal y exigir inclusión en políticas de tierras y víctimas."
+  ]
+}

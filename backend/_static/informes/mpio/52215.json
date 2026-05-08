@@ -1,0 +1,162 @@
+{
+  "tipo": "mpio",
+  "id": "52215",
+  "nombre": "CORDOBA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 14479,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 14479,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 8,
+      "top": [
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 14457
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "565",
+          "pueblo": "QUILLACINGA",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "640",
+          "pueblo": "TATUYO",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "560",
+        "pueblo": "PASTOS",
+        "poblacion": 14457
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        0.630954061855612,
+        -77.55913309605478,
+        0.8925185012494812,
+        -77.17698497178657
+      ],
+      "nombre_mpio": "CORDOBA",
+      "cod_dpto": "52"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 69,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 69,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 51
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 7
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 6
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 51
+      },
+      "pct_hecho_principal": 73.9
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.014
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:48:40",
+  "periodo": "2018",
+  "_input_hash": "aa41a16994603d74"
+}

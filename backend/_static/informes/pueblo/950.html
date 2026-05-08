@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Indígenas Panama · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Indígenas Panama</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Indígena Panamá en Colombia enfrenta una situación de extrema vulnerabilidad demográfica y cultural, con una población registrada de tan solo 16 personas según el censo de 2018. Esta pequeña comunidad se encuentra altamente dispersa en el territorio nacional, con presencia reportada en 12 departamentos distintos, lo que evidencia una profunda desarticulación territorial y la ausencia de un núcleo comunitario consolidado. Esta dispersión es un factor crítico que amenaza su pervivencia como pueblo.</p><p></p><p>El indicador más alarmante es el índice de envejecimiento de 200.0, que significa que hay dos adultos mayores por cada joven, una estructura poblacional insostenible que presagia su desaparición en el país si no se toman medidas urgentes. Aunque su índice de Necesidades Básicas Insatisfechas (18.75%) es bajo, esto probablemente refleja un patrón de vida fuera de sus territorios ancestrales y no necesariamente un bienestar colectivo, sino una consecuencia de su dispersión y posible asimilación en centros urbanos.</p><p></p><p>La principal lectura es de emergencia. La supervivencia del pueblo Panamá en Colombia depende de acciones inmediatas para su caracterización, reagrupación y protección de sus derechos como sujeto colectivo. Es crucial abordar su fragilidad demográfica y la pérdida total de su lengua, lo que puede requerir diálogo binacional para entender su contexto más amplio y garantizar su continuidad.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">16</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">4</div><div class="sub">prevalencia 125,0‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">12</div><div class="sub">1 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.263</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Panamá evidencia un riesgo inminente de desaparición en Colombia. Con una población total de apenas 16 individuos, repartidos equitativamente en 8 hombres y 8 mujeres, la base para el crecimiento natural es prácticamente inexistente. La pirámide poblacional está desequilibrada, con un solo individuo en el grupo de edad de 0 a 14 años, frente a 2 personas mayores de 65 años. Esto resulta en un índice de envejecimiento extremo de 200.0, indicando que la población mayor duplica a la población infantil. La mayor parte de sus miembros, 13 personas, se encuentra en edad productiva (15-64 años), pero sin una generación de relevo, el futuro del pueblo es incierto.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">1</td><td class="num">0</td><td class="num"><b>1</b></td><td class="num">6.2%</td></tr>
+      <tr><td>15-64 años</td><td class="num">5</td><td class="num">8</td><td class="num"><b>13</b></td><td class="num">81.2%</td></tr>
+      <tr><td>65+ años</td><td class="num">2</td><td class="num">0</td><td class="num"><b>2</b></td><td class="num">12.5%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>8</b></td><td class="num"><b>8</b></td><td class="num"><b>16</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">100,0</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">23,1</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">200,0</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>La prevalencia de discapacidad estimada para el pueblo Panamá es de 125.0 por cada 1,000 habitantes, una cifra que duplicaría el promedio indígena nacional de 60.0. Sin embargo, este dato debe ser tratado con extrema cautela y no puede considerarse concluyente. La propia fuente de datos marca esta cifra como 'NO_CONFIABLE', ya que se basa en un universo de apenas 4 casos identificados. Un número tan bajo de observaciones es estadísticamente insuficiente para realizar afirmaciones robustas sobre la condición de salud del pueblo. Además, no se dispone de información detallada sobre los tipos de limitaciones existentes. Por tanto, la alta cifra podría ser un artefacto estadístico y no un reflejo real de la situación.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Indígenas Panama</div>
+      <div class="num-big">125,0‰</div>
+      <div class="lbl">4 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: -65,0‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El patrón de asentamiento del pueblo Panamá se caracteriza por una dispersión extrema, un factor que atenta directamente contra su cohesión social y territorial. Aunque su población total es de solo 16 personas, los registros muestran presencia en 12 departamentos diferentes, lo que significa que la mayoría de los miembros viven aislados entre sí. Vichada aparece como el departamento con mayor presencia teórica, pero los datos poblacionales presentan inconsistencias que deben ser revisadas. De manera crítica, solo se reporta a 1 persona viviendo dentro de un territorio colectivo, el resguardo San Lorenzo de Caldono. Esta falta casi total de asentamiento en territorios legalmente constituidos es una grave amenaza para la reproducción cultural del pueblo.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">16</td><td class="num">2</td><td class="num">125,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>LA GUAJIRA</td><td class="num">3</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>RISARALDA</td><td class="num">2</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CAUCA</td><td class="num">2</td><td class="num">1</td><td class="num">500,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>SANTANDER</td><td class="num">2</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>META</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CALDAS</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>TOLIMA</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>San Lorenzo de Caldono</td><td>—</td><td>—</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos censales confirman la pérdida total de la lengua nativa del pueblo Panamá entre los miembros que residen en Colombia. De una población total de 16 personas, se reporta que un 0% habla la lengua y un 0% la entiende. Este indicador es un signo inequívoco del avanzado estado de asimilación cultural y del quiebre en la transmisión intergeneracional del conocimiento ancestral. La desaparición de la lengua propia no solo representa la pérdida de un patrimonio inmaterial invaluable, sino que también debilita la identidad colectiva y la capacidad del pueblo para mantener y reproducir su visión del mundo, su historia y su espiritualidad.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>El pueblo Panamá registra un índice de Necesidades Básicas Insatisfechas (NBI) del 18.75%, una cifra notablemente inferior al promedio indígena nacional del 67.6%. A primera vista, esto podría sugerir mejores condiciones de vida. Sin embargo, en el contexto de un pueblo de solo 16 personas, altamente disperso y sin territorio colectivo, este bajo NBI probablemente indica que sus miembros residen en cabeceras municipales o ciudades donde el acceso a servicios públicos es mayor. Las principales carencias se reportan en servicios (18.75%) y vivienda (12.5%). Este indicador debe interpretarse no como un signo de prosperidad, sino como una consecuencia de la desterritorialización y la asimilación.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Indígenas Panama</div>
+      <div class="num-big">18,8%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 66.7%"></div></div><div class="num">12,5%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">18,8%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 33.3%"></div></div><div class="num">6,2%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los registros del Registro Único de Víctimas (RUV) que abarcan el periodo de 1985 a 2024, no se ha identificado a ninguna persona con discapacidad del pueblo Panamá como víctima del conflicto armado en Colombia. El contador oficial de víctimas para este pueblo es de 0. Si bien la ausencia de registros es un dato positivo en principio, no debe interpretarse como una ausencia absoluta de afectación. Para una comunidad tan reducida y dispersa, con solo 16 miembros, las barreras de acceso a la justicia y a los sistemas de registro pueden ser significativas. La falta de datos podría estar invisibilizando impactos indirectos del conflicto.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Compuesto (ICV) para el pueblo Panamá es de 0.263 sobre 1. Este valor, aparentemente bajo, es engañoso y debe ser analizado críticamente. El índice está fuertemente influenciado por dos componentes que no reflejan la realidad del pueblo: por un lado, una métrica de prevalencia de discapacidad (0.625 normalizada) que se basa en datos 'NO_CONFIABLE' y, por otro, un bajo impacto del NBI (0.188 normalizado) que es consecuencia de la desterritorialización. El componente de conflicto es 0.0. Por lo tanto, el ICV no captura la vulnerabilidad más crítica del pueblo: la demográfica y cultural, que amenaza con su extinción inminente.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.188</td><td class="num">0.40</td><td class="num"><b>0.075</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.625</td><td class="num">0.30</td><td class="num"><b>0.188</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.263</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Implementar un plan urgente de caracterización demográfica y cultural, dado que la población es de solo 16 personas con un índice de envejecimiento de 200.0, para documentar su situación actual y prevenir su extinción estadística.</li>
+      <li>Establecer un diálogo binacional con organizaciones indígenas y gubernamentales de Panamá para diseñar estrategias de protección, reconociendo la probable naturaleza transfronteriza del pueblo y la pérdida total (0% de hablantes) de su lengua en Colombia.</li>
+      <li>Realizar una investigación territorial para clarificar las inconsistencias poblacionales y garantizar el derecho a la vivienda digna de los 15 miembros que no habitan en territorios colectivos, dado que solo 1 persona está en un resguardo.</li>
+      <li>Desestimar la tasa de prevalencia de 125.0 por 1,000 al ser 'NO_CONFIABLE' y, en su lugar, ejecutar una brigada de salud específica para los 16 miembros que permita valorar sus condiciones reales y definir un plan de atención pertinente.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/950/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Indígenas Panama</b>');
+</script>
+</body>
+</html>

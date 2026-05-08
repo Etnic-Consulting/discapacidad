@@ -1,0 +1,128 @@
+{
+  "tipo": "resguardo",
+  "id": "10726",
+  "nombre": "KWES KIWE NASA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 880,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 880,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "KWES KIWE NASA",
+      "dpto": "VALLE DEL CAUCA",
+      "cod_dpto": "76",
+      "mpio": "JAMUNDÍ",
+      "cod_mpio": "76364",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "ORIVAC",
+      "area_hectareas": 36.162
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        3.1915139690000274,
+        -76.61699877199999,
+        3.2002288860000476,
+        -76.61134586299994
+      ],
+      "area_hectareas": 36.162,
+      "macro": "OCCIDENTE",
+      "dpto": "VALLE DEL CAUCA",
+      "mpio": "JAMUNDÍ"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 111,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 111,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 57
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 24
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 8
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 6
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 3
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 57
+      },
+      "pct_hecho_principal": 51.4
+    },
+    "icv": {
+      "score": 0.007,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.022
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:21:57",
+  "periodo": "2018",
+  "_input_hash": "2a30b086ca2a3985"
+}

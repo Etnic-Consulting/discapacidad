@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cañón Ovejas (Betania Corocito) en el Meta alberga a 239 personas del pueblo Sikuani, con un territorio de 1.727 hectáreas en Mapiripán (Orinoquía). No se registran víctimas de conflicto con discapacidad en el RUV (1985-2024), lo que refleja una aparente ausencia de afectación directa. El ICV de 0.0 evidencia condiciones críticas en NBI, prevalencia y conflicto, aunque con limitaciones por datos faltantes.",
+  "demografia": "La población total del resguardo es de 239 habitantes, según datos DANE-CNPV 2018. La pirámide etaria no puede analizarse al no disponerse de datos desagregados por edad ni género en este nivel. Se requiere cruce con registros locales para evaluar estructura poblacional y dinámicas generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este resguardo (_sin_datos: true). Esto impide evaluar condiciones de salud o discapacidad específicas. Se recomienda priorizar levantamiento de información primaria en territorio para subsanar el sub-registro.",
+  "territorial": "El resguardo abarca 1.727 hectáreas en Mapiripán, Meta, con coordenadas geográficas definidas en la Orinoquía. La concentración territorial es baja (área reducida), lo que limita la autonomía alimentaria y el manejo de recursos. La dispersión geográfica no aplica por ser un territorio delimitado.",
+  "lengua": "No hay datos disponibles sobre lengua en este resguardo (_sin_datos: true). Dada la pertenencia al pueblo Sikuani, se asume presencia de la lengua originaria, pero se requiere validación con autoridades tradicionales para confirmar vitalidad cultural y uso cotidiano.",
+  "vida": "Los datos de NBI no están disponibles para este resguardo (_sin_datos: true). El promedio indígena nacional es 67.6%, lo que sugiere brechas críticas no cuantificables aquí. Se debe priorizar diagnóstico participativo para identificar necesidades en vivienda, educación y servicios básicos.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el RUV (valor: 0). Esto podría indicar ausencia de afectación o sub-registro por falta de denuncia. La lectura territorial exige contrastar con datos municipales y departamentales para validar esta tendencia.",
+  "icv": "El ICV es 0.0, resultado de componentes normalizados en cero (NBI, prevalencia y conflicto). Esta métrica refleja condiciones extremas de vulnerabilidad, aunque con sesgos por datos faltantes. La fórmula aplicada (0.4*NBI + 0.3*prev + 0.3*conf) subraya la urgencia de intervenciones integrales.",
+  "recomendaciones": [
+    "Realizar censo participativo en el resguardo para actualizar datos demográficos y de NBI, citando la población actual de 239 habitantes.",
+    "Implementar brigadas de salud intercultural con enfoque en discapacidad, dado el promedio indígena nacional de NBI 67.6% y la falta de registros locales.",
+    "Diseñar proyectos productivos adaptados al territorio de 1.727 hectáreas para fortalecer soberanía alimentaria, considerando la baja área disponible.",
+    "Gestionar con la ONIC y organizaciones regionales la inclusión del resguardo en sistemas de alerta temprana por conflicto, ante el ICV 0.0 y ausencia de datos en RUV.",
+    "Promover un diagnóstico lingüístico con el pueblo Sikuani para documentar vitalidad de la lengua originaria, ante la falta de datos en este informe."
+  ]
+}

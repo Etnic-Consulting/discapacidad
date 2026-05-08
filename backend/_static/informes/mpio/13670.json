@@ -1,0 +1,137 @@
+{
+  "tipo": "mpio",
+  "id": "13670",
+  "nombre": "SAN PABLO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 22,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 22,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 7,
+      "top": [
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "380",
+          "pueblo": "LETUAMO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "800",
+        "pueblo": "ZENU",
+        "poblacion": 9
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        6.999159856381856,
+        -74.40982549786816,
+        7.724250847604809,
+        -73.79731404860394
+      ],
+      "nombre_mpio": "SAN PABLO",
+      "cod_dpto": "13"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 26,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 26,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 25
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 25
+      },
+      "pct_hecho_principal": 96.2
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.005
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:21:11",
+  "periodo": "2018",
+  "_input_hash": "b43bea2ea1c26a92"
+}

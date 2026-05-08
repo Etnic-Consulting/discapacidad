@@ -1,0 +1,353 @@
+{
+  "tipo": "mpio",
+  "id": "99773",
+  "nombre": "CUMARIBO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1905617,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1905617,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 380460
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 307091
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 243176
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 163873
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 77714
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 56504
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 52361
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 51635
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 48117
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 44516
+        },
+        {
+          "cod_pueblo": "820",
+          "pueblo": "MOKANA",
+          "poblacion": 37099
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 34897
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 34711
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 22298
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 21713
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 19561
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 18202
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 18135
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 16986
+        },
+        {
+          "cod_pueblo": "370",
+          "pueblo": "KOGUI",
+          "poblacion": 15820
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "720",
+        "pueblo": "WAYUU",
+        "poblacion": 380460
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 26,
+      "resguardos": [
+        {
+          "nombre": "SELVA DE MATAVÉN",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 1858084.545
+        },
+        {
+          "nombre": "ALTO UNUMA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 674179.291
+        },
+        {
+          "nombre": "SANTA TERESITA DEL TUPARRO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 205282.524
+        },
+        {
+          "nombre": "SARACURE - CADÁ",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 184368.759
+        },
+        {
+          "nombre": "AWIA TUPARRO SIKUANI (MARIMBA)",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 146875.325
+        },
+        {
+          "nombre": "NACUAÑEDORRO TUPARRO",
+          "pueblo_onic": "MAPAYERRI",
+          "area_pg_ha": 95030.706
+        },
+        {
+          "nombre": "CONCORDIA",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 90354.496
+        },
+        {
+          "nombre": "RÍOS MUCO Y GUARROJO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 85336.069
+        },
+        {
+          "nombre": "RÍOS TOMO Y WEBERI",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 61171.074
+        },
+        {
+          "nombre": "CALI - BARRANQUILLA",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 56396.074
+        },
+        {
+          "nombre": "GUACO BAJO Y GUACO ALTO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 49532.929
+        },
+        {
+          "nombre": "RÍO SIARE",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 46615.019
+        },
+        {
+          "nombre": "CARPINTERO PALOMAS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 42764.644
+        },
+        {
+          "nombre": "CHOCÓN",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 35132.363
+        },
+        {
+          "nombre": "GUAHIBO DE LOS RÍOS TOMO Y LOS CAÑOS URIMICA Y SAMARRO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 24649.41
+        },
+        {
+          "nombre": "FLORES SOMBRERO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 20228.021
+        },
+        {
+          "nombre": "GUACAMAYAS MAMIYARE",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 18727.669
+        },
+        {
+          "nombre": "EGUA - GUARIACANA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 15347.41
+        },
+        {
+          "nombre": "MUCO MAYORAGUA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 10870.469
+        },
+        {
+          "nombre": "KAWANERUBA",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 8661.866
+        },
+        {
+          "nombre": "CHOLOLOBO MATATU",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 6365.821
+        },
+        {
+          "nombre": "VALDIVIA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3897.204
+        },
+        {
+          "nombre": "MEREY, LA VERAITA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3121.842
+        },
+        {
+          "nombre": "PUNTA BANDERA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3058.984
+        },
+        {
+          "nombre": "SIKUANI DE IWIWI",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 2968.363
+        },
+        {
+          "nombre": "LA ESMERALDA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 2775.81
+        }
+      ],
+      "bbox": [
+        2.737109025939978,
+        -71.0776685102719,
+        5.563886329865129,
+        -67.70760158764995
+      ],
+      "nombre_mpio": "CUMARIBO",
+      "cod_dpto": "99"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 137,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 137,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 115
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 12
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 4
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 115
+      },
+      "pct_hecho_principal": 83.9
+    },
+    "icv": {
+      "score": 0.008,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.027
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:42:29",
+  "periodo": "2018",
+  "_input_hash": "cdd6fe1a191e4835"
+}

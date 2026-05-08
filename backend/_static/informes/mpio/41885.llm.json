@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Yaguará presenta una población indígena de 1 persona según el CNPV 2018, concentrada en el pueblo Nasa. La ausencia de resguardos y datos de lengua refleja una debilidad en la institucionalidad territorial. El ICV de 0.0 evidencia condiciones críticas en NBI, prevalencia y conflicto, aunque con limitaciones por el tamaño muestral.",
+  "demografia": "La pirámide etaria no aplica en este municipio debido a la población total de 1 persona. Los datos demográficos a este nivel no permiten análisis comparativos ni identificación de grupos etarios vulnerables. Se requiere desagregación por edad y género para evaluar necesidades específicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Yaguará. La falta de información impide identificar prioridades sanitarias. Se recomienda fortalecer sistemas de registro local para capturar datos confiables y evitar subregistros.",
+  "territorial": "Yaguará no cuenta con resguardos indígenas, lo que limita la protección territorial del pueblo Nasa. La dispersión geográfica se limita a un punto sin delimitación colectiva. La ausencia de territorios afecta la autonomía y el ejercicio de derechos fundamentales.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de nasa yuwe. Se requiere investigación participativa para documentar el uso de la lengua en contextos cotidianos.",
+  "vida": "No hay información sobre NBI en Yaguará, aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar condiciones de vida con otros territorios. Se debe priorizar la recolección de indicadores sociales para diseñar políticas públicas diferenciadas.",
+  "conflicto": "No se registran víctimas de conflicto en Yaguará según el RUV (1985-2024). La ausencia de hechos victimizantes no descarta vulnerabilidades ocultas. Se recomienda monitorear dinámicas de violencia estructural que no siempre aparecen en registros oficiales.",
+  "icv": "El ICV de 0.0 en Yaguará refleja condiciones extremas en NBI, prevalencia y conflicto. Todos los componentes del índice están en 0.0, lo que sugiere una situación de emergencia social. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) confirma la gravedad.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal con enfoque diferencial para documentar población indígena, lengua y NBI, dado que los datos actuales son insuficientes (n=1).",
+    "Promover la creación de un resguardo indígena en Yaguará para garantizar la protección territorial del pueblo Nasa, considerando la ausencia de territorios colectivos.",
+    "Realizar un diagnóstico participativo de salud para identificar prevalencias ocultas, ya que no hay datos disponibles en el municipio.",
+    "Incluir a Yaguará en programas de fortalecimiento cultural y lingüístico, especialmente para el pueblo Nasa, ante la falta de información sobre lengua.",
+    "Articular con la ONIC y el Ministerio del Interior para priorizar a Yaguará en políticas de reparación integral, dado su ICV de 0.0 y condiciones críticas."
+  ]
+}

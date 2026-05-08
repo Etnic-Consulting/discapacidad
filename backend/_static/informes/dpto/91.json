@@ -1,0 +1,346 @@
+{
+  "tipo": "dpto",
+  "id": "91",
+  "nombre": "AMAZONAS",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 35627,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 35627,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1702,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1702,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 35627,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 47.8,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "730",
+          "con_disc": 466,
+          "total": 5539
+        },
+        {
+          "cod_pueblo": "660",
+          "con_disc": 372,
+          "total": 12398
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 271,
+          "total": 5847
+        },
+        {
+          "cod_pueblo": "170",
+          "con_disc": 120,
+          "total": 2939
+        },
+        {
+          "cod_pueblo": "770",
+          "con_disc": 77,
+          "total": 1151
+        },
+        {
+          "cod_pueblo": "731",
+          "con_disc": 66,
+          "total": 1942
+        },
+        {
+          "cod_pueblo": "460",
+          "con_disc": 58,
+          "total": 684
+        },
+        {
+          "cod_pueblo": "100",
+          "con_disc": 47,
+          "total": 746
+        },
+        {
+          "cod_pueblo": "740",
+          "con_disc": 39,
+          "total": 820
+        },
+        {
+          "cod_pueblo": "450",
+          "con_disc": 29,
+          "total": 530
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 24,
+      "resguardos": [
+        {
+          "nombre": "PREDIO PUTUMAYO",
+          "mpio": "LA CHORRERA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 5829227.495
+        },
+        {
+          "nombre": "MIRITÍ - PARANÁ",
+          "mpio": "MIRITÍ - PARANÁ",
+          "pueblo_onic": "YUKUNA",
+          "area_pg_ha": 1603174.4
+        },
+        {
+          "nombre": "YAIGOJÉ - RÍO APAPORIS",
+          "mpio": "LA PEDRERA",
+          "pueblo_onic": "TANIMUCA",
+          "area_pg_ha": 1037974.374
+        },
+        {
+          "nombre": "NUNUYA DE VILLAZUL",
+          "mpio": "MIRITÍ - PARANÁ",
+          "pueblo_onic": "MUINA MURUI",
+          "area_pg_ha": 265265.445
+        },
+        {
+          "nombre": "RÍOS COTUHÉ Y PUTUMAYO",
+          "mpio": "TARAPACÁ",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 252396.391
+        },
+        {
+          "nombre": "CURARE LOS INGLESES",
+          "mpio": "LA PEDRERA",
+          "pueblo_onic": "YUKUNA",
+          "area_pg_ha": 249880.288
+        },
+        {
+          "nombre": "ADUCHE",
+          "mpio": "PUERTO SANTANDER",
+          "pueblo_onic": "ANDOQUE",
+          "area_pg_ha": 188401.739
+        },
+        {
+          "nombre": "PUERTO NARIÑO",
+          "mpio": "PUERTO NARIÑO",
+          "pueblo_onic": "MAGUTA, COCAMA",
+          "area_pg_ha": 140606.07
+        },
+        {
+          "nombre": "UITIBOC",
+          "mpio": "LETICIA",
+          "pueblo_onic": "COCAMA",
+          "area_pg_ha": 95486.92
+        },
+        {
+          "nombre": "PUERTO CÓRDOBA",
+          "mpio": "LA PEDRERA",
+          "pueblo_onic": "YUKUNA",
+          "area_pg_ha": 53411.834
+        },
+        {
+          "nombre": "COMEYAFU",
+          "mpio": "LA PEDRERA",
+          "pueblo_onic": "YUKUNA",
+          "area_pg_ha": 30702.062
+        },
+        {
+          "nombre": "CAMARITAGUA",
+          "mpio": "LA PEDRERA",
+          "pueblo_onic": "YUKUNA",
+          "area_pg_ha": 30634.67
+        },
+        {
+          "nombre": "K 6 Y 11 CARRETERA LETICIA TARAPACA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 27244.1
+        },
+        {
+          "nombre": "MOCAGUA, MACEDONIA, EL VERGEL Y ZARAGOZA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 18064.356
+        },
+        {
+          "nombre": "ARARA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 12193.541
+        },
+        {
+          "nombre": "SANTA SOFÍA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 3033.238
+        },
+        {
+          "nombre": "TIITANHO NIJAAMU - LA LIBERTAD",
+          "mpio": "LETICIA",
+          "pueblo_onic": "Por definir",
+          "area_pg_ha": 2760.113
+        },
+        {
+          "nombre": "NAZARETH",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 1293.147
+        },
+        {
+          "nombre": "PUERTO TRIUNFO",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGUTA, COCAMA",
+          "area_pg_ha": 1129.338
+        },
+        {
+          "nombre": "SAN JOSÉ DEL RÍO",
+          "mpio": "LETICIA",
+          "pueblo_onic": "COCAMA",
+          "area_pg_ha": 536.348
+        },
+        {
+          "nombre": "SAN ANTONIO DE LOS LAGOS Y SAN SEBASTIÁN",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 187.462
+        },
+        {
+          "nombre": "ISLA DE RONDA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "COCAMA",
+          "area_pg_ha": 52.137
+        },
+        {
+          "nombre": "LA PLAYA",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGUTA, COCAMA",
+          "area_pg_ha": 49.608
+        },
+        {
+          "nombre": "SAN JUAN DE LOS PARENTES",
+          "mpio": "LETICIA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_pg_ha": 39.132
+        }
+      ],
+      "bbox": [
+        -4.229406466198782,
+        -74.39634396480255,
+        0.0972568555528458,
+        -69.39549619440413
+      ],
+      "nombre_dpto": "AMAZONAS"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 176,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 176,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 108
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 45
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Tortura",
+          "total": 4
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 4
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 4
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 108
+      },
+      "pct_hecho_principal": 61.4
+    },
+    "icv": {
+      "score": 0.082,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.239,
+        "conflicto_norm": 0.035
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:00:00",
+  "periodo": "2018",
+  "_input_hash": "9dfbd091d6fb9a54"
+}

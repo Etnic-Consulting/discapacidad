@@ -1,0 +1,190 @@
+{
+  "tipo": "mpio",
+  "id": "23672",
+  "nombre": "SAN ANTERO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2675,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 2675,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 16,
+      "top": [
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 2605
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 39
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "026",
+          "pueblo": "YARURO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "252",
+          "pueblo": "GUARIQUEMA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "800",
+        "pueblo": "ZENU",
+        "poblacion": 2605
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        9.28373516164969,
+        -75.87476658406808,
+        9.432827379979859,
+        -75.70000182396092
+      ],
+      "nombre_mpio": "SAN ANTERO",
+      "cod_dpto": "23"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 17,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 17,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 13
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 13
+      },
+      "pct_hecho_principal": 76.5
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.003
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:09:19",
+  "periodo": "2018",
+  "_input_hash": "5ea725ca570d8afc"
+}

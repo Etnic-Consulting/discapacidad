@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Pelayo registra una población indígena de 1.110 personas según CNPV 2018, donde el 97.4% corresponde al pueblo Zenú (1.081 habitantes). La ausencia de resguardos y la dispersión poblacional en 7 pueblos evidencian una alta vulnerabilidad territorial. El ICV de 0.0 refleja la gravedad de la situación, con el componente de NBI en 0.0 como principal limitante.",
+  "demografia": "La pirámide etaria muestra una población mayoritariamente adulta, con 1.081 zenúes (97.4%) y solo 29 personas de otros pueblos. La concentración en un solo grupo étnico limita la diversidad cultural y refuerza la necesidad de políticas diferenciadas. No hay datos de discapacidad a nivel municipal según la fuente consultada.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide analizar subregistros o patrones epidemiológicos. Se requiere fortalecer sistemas de información locales con enfoque diferencial indígena.",
+  "territorial": "San Pelayo no cuenta con resguardos indígenas reconocidos, pese a su población mayoritariamente zenú. La dispersión geográfica en 7 pueblos y la ausencia de territorios colectivos agravan la vulnerabilidad. La bbox del municipio abarca áreas con alta presión extractiva en Córdoba.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población. Se recomienda priorizar registros lingüísticos en futuros censos.",
+  "vida": "No hay datos de NBI disponibles para San Pelayo. El promedio indígena nacional de 67.6% sugiere que la brecha podría ser significativa, pero se requiere información local para dimensionar la pobreza multidimensional. La falta de datos impide análisis comparativos.",
+  "conflicto": "Se registran 4 víctimas de desplazamiento forzado entre 1985-2024, todas con discapacidad, representando el 100% de los hechos violentos. La concentración en un solo tipo de victimización refleja patrones de violencia estructural contra el pueblo Zenú en este territorio.",
+  "icv": "El ICV de 0.0 en San Pelayo es el más bajo posible, determinado por un NBI normalizado de 0.0. El componente de conflicto (0.001) es mínimo frente a la gravedad de las carencias materiales. Este resultado posiciona al municipio en el peor escenario de condiciones de vida.",
+  "recomendaciones": [
+    "Implementar un censo lingüístico y cultural para registrar la vitalidad del pueblo Zenú en San Pelayo, dado que el 97.4% de la población pertenece a este grupo étnico (1.081 personas).",
+    "Crear un programa de titulación de tierras para comunidades indígenas en San Pelayo, considerando la ausencia de resguardos (0 territorios) y la alta presión territorial en Córdoba.",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado con discapacidad, priorizando las 4 personas registradas (100% de los casos).",
+    "Establecer un sistema de monitoreo de NBI con enfoque diferencial indígena, ante la falta de datos locales y el promedio nacional del 67.6%.",
+    "Incluir a San Pelayo en planes departamentales de salud intercultural, dado que no hay datos de prevalencia disponibles y el ICV refleja carencias críticas (NBI=0.0)."
+  ]
+}

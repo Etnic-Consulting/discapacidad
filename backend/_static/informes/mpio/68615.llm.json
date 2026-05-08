@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Rionegro (Santander) registra una población indígena de 2 personas según CNPV 2018, distribuidas en 2 pueblos. El 50% corresponde al pueblo WAYUU, mientras el restante se clasifica como 'INDÍGENA-SIN-INFORMACIÓN'. No se identifican resguardos en el municipio. La ausencia de datos en secciones clave como NBI, lengua y capacidades diversas limita el análisis integral. La confiabilidad de los datos es alta, pero la representatividad es crítica dado el bajo n muestral.",
+  "demografia": "La pirámide etaria no puede analizarse por el bajo n=2. La población indígena se concentra en dos grupos etarios sin detalle. Los datos demográficos a este nivel no permiten inferencias sobre estructura poblacional o dinámicas generacionales. Se requiere desagregación por grupos de edad para evaluar vitalidad demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en Rionegro. La sección no aplica al nivel municipal según la fuente consultada. El sub-registro es evidente al no existir registros diferenciados para la población indígena en indicadores de salud pública.",
+  "territorial": "El municipio no cuenta con resguardos indígenas registrados. La dispersión geográfica se limita a una población total de 2 personas, sin concentración territorial identificable. La bbox abarca un área extensa (7.207531 a 7.750734 latitud; -73.761377 a -73.076479 longitud), pero sin presencia indígena organizada.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Rionegro. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en el municipio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Rionegro. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. La brecha con el promedio nacional no es evaluable en este contexto.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Rionegro entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja visibilidad del conflicto armado en la población indígena local. Sin embargo, el n=0 limita conclusiones sobre seguridad territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Rionegro es 0.0, con componentes normalizados en cero. La fórmula del ICV (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) refleja la falta de datos en todas sus dimensiones. La posición relativa frente a otros municipios no puede determinarse.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para superar el sub-registro actual (n=2).",
+    "Incluir indicadores de lengua y cultura en sistemas de información municipal para visibilizar la diversidad étnica.",
+    "Implementar protocolos de atención en salud con enfoque intercultural dado el vacío en datos de prevalencia.",
+    "Fortalecer la articulación con autoridades indígenas nacionales para garantizar representación en políticas públicas.",
+    "Priorizar la creación de un resguardo indígena en Rionegro si se confirma presencia histórica de pueblos originarios."
+  ]
+}

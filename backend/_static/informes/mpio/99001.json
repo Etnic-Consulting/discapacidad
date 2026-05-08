@@ -1,0 +1,267 @@
+{
+  "tipo": "mpio",
+  "id": "99001",
+  "nombre": "PUERTO CARREÑO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 5592,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 5592,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 2157
+        },
+        {
+          "cod_pueblo": "020",
+          "pueblo": "AMORUA",
+          "poblacion": 1864
+        },
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 691
+        },
+        {
+          "cod_pueblo": "520",
+          "pueblo": "PIAROA",
+          "poblacion": 283
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 243
+        },
+        {
+          "cod_pueblo": "550",
+          "pueblo": "PUINAVE",
+          "poblacion": 102
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 95
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 30
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 28
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 28
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 17
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "251",
+          "pueblo": "BANIBA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 3
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "580",
+        "pueblo": "SIKUANI",
+        "poblacion": 2157
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 8,
+      "resguardos": [
+        {
+          "nombre": "CAÑO MESETAS - DAGUA Y MURCIÉLAGO",
+          "pueblo_onic": "AMORÚA",
+          "area_pg_ha": 82686.942
+        },
+        {
+          "nombre": "GUACAMAYAS MAIPORÉ",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 16684.592
+        },
+        {
+          "nombre": "PIAROA DE CACHICAMO",
+          "pueblo_onic": "PIAROA",
+          "area_pg_ha": 16494.795
+        },
+        {
+          "nombre": "CAÑO GUARIPA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 8137.42
+        },
+        {
+          "nombre": "CAÑO BACHACO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 6303.095
+        },
+        {
+          "nombre": "CAÑO LA HORMIGA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 4133.85
+        },
+        {
+          "nombre": "LA MAYERA",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1340.971
+        },
+        {
+          "nombre": "COMUNIDAD INDIGENA KANALITOJO PUERTO COLOMBIA",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1300.009
+        }
+      ],
+      "bbox": [
+        5.302370456128994,
+        -68.81653198425704,
+        6.32431707971322,
+        -67.40980314658566
+      ],
+      "nombre_mpio": "PUERTO CARREÑO",
+      "cod_dpto": "99"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 28,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 28,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 19
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 3
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 19
+      },
+      "pct_hecho_principal": 67.9
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.006
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:42:01",
+  "periodo": "2018",
+  "_input_hash": "54bfe4cda9ec9412"
+}

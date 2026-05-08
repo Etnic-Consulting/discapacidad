@@ -1,0 +1,211 @@
+{
+  "tipo": "mpio",
+  "id": "94343",
+  "nombre": "BARRANCO MINAS",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6068,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 6068,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 13,
+      "top": [
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 4482
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 1477
+        },
+        {
+          "cod_pueblo": "550",
+          "pueblo": "PUINAVE",
+          "poblacion": 58
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "520",
+          "pueblo": "PIAROA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "790",
+          "pueblo": "YURUTI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "941",
+          "pueblo": "YERAL",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "510",
+        "pueblo": "PIAPOCO",
+        "poblacion": 4482
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 7,
+      "resguardos": [
+        {
+          "nombre": "BACHACO BUENAVISTA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 83489.459
+        },
+        {
+          "nombre": "PUEBLO NUEVO - LAGUNA COLORADA",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 46039.441
+        },
+        {
+          "nombre": "MINITAS - MIRALINDO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 35407.63
+        },
+        {
+          "nombre": "CHIGÜIRO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 15947.437
+        },
+        {
+          "nombre": "MURCIÉLAGO ALTAMIRA",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 7246.612
+        },
+        {
+          "nombre": "ARRECIFAL",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 4372.949
+        },
+        {
+          "nombre": "LAGUNA - CURVINA SAPUARA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3312.002
+        }
+      ],
+      "bbox": [
+        2.34815510425984,
+        -70.94249237997775,
+        3.7423634380565334,
+        -68.48381528341656
+      ],
+      "nombre_mpio": "BARRANCO MINAS",
+      "cod_dpto": "94"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 51,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 51,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 44
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 5
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 44
+      },
+      "pct_hecho_principal": 86.3
+    },
+    "icv": {
+      "score": 0.003,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.01
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:39:30",
+  "periodo": "2018",
+  "_input_hash": "dcd4c8b71b8d0e5d"
+}

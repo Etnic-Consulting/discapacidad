@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Yukpa de Caño Padilla, ubicado en el municipio de La Paz (Cesar), concentra 152 habitantes en un territorio de 67.5 hectáreas. La población enfrenta una afectación crítica por desplazamiento forzado, que representa el 76.2% de las 21 víctimas de violencia registradas entre 1985 y 2024. La dimensión de conflicto en su Índice de Condiciones Vitales (ICV) alcanza 0.004, evidenciando una crisis humanitaria persistente en este territorio ancestral.",
+  "demografia": "La población total del resguardo asciende a 152 habitantes, según datos DANE-CNPV 2018. La estructura etaria no puede analizarse con los datos disponibles, ya que el JSON no proporciona desagregación por edades. Se reconoce la limitación interpretativa por ausencia de información demográfica detallada en este nivel territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Caño Padilla. Los registros de discapacidad y salud pública no están desagregados a nivel de resguardo, lo que impide evaluar la situación epidemiológica específica. Se requiere cruce de fuentes para superar este sub-registro.",
+  "territorial": "El resguardo ocupa 67.5 hectáreas en el municipio de La Paz (Cesar), con coordenadas geográficas que delimitan un área reducida. La concentración territorial contrasta con la dispersión histórica del pueblo Yukpa, evidenciando una fragmentación de su hábitat tradicional. La macro región Norte alberga este territorio en un contexto de alta presión extractiva.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del pueblo Yukpa en Caño Padilla con la información proporcionada.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para Caño Padilla. El promedio indígena nacional de NBI (67.6%) no puede contrastarse con este territorio debido a la ausencia de registros locales. Se identifica una brecha crítica en la disponibilidad de información socioeconómica.",
+  "conflicto": "Se registraron 21 víctimas de violencia en Caño Padilla, con desplazamiento forzado como hecho principal (76.2% de los casos). Los homicidios (3) y lesiones personales (1) completan el perfil de afectación. La concentración de hechos violentos en este pequeño territorio refleja una crisis humanitaria aguda para el pueblo Yukpa.",
+  "icv": "El ICV de Caño Padilla es 0.001, con conflicto como dimensión dominante (0.004). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.004), ubicando al resguardo en una posición crítica. La casi nulidad en NBI y prevalencia sugiere sub-registro más que ausencia real de necesidades.",
+  "recomendaciones": [
+    "Priorizar la atención humanitaria para las 21 víctimas registradas, con enfoque en el 76.2% de desplazados forzados en Caño Padilla.",
+    "Implementar un sistema de monitoreo territorial específico para resguardos Yukpa, dado el sub-registro en salud y NBI.",
+    "Garantizar la protección del territorio de 67.5 hectáreas frente a presiones extractivas en La Paz (Cesar).",
+    "Diseñar estrategias de retorno y reparación para las 16 familias desplazadas, con participación del pueblo Yukpa.",
+    "Exigir al DANE la desagregación de datos por resguardo para superar las limitaciones en salud y NBI."
+  ]
+}

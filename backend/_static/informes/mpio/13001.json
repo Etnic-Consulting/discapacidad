@@ -1,0 +1,206 @@
+{
+  "tipo": "mpio",
+  "id": "13001",
+  "nombre": "CARTAGENA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1300,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1300,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 922
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 97
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 62
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 29
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 25
+        },
+        {
+          "cod_pueblo": "820",
+          "pueblo": "MOKANA",
+          "poblacion": 19
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 15
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 13
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "550",
+          "pueblo": "PUINAVE",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "080",
+          "pueblo": "BARI",
+          "poblacion": 3
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "800",
+        "pueblo": "ZENU",
+        "poblacion": 922
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        9.377921656579144,
+        -76.19048219287413,
+        10.703190702560741,
+        -75.28689510904661
+      ],
+      "nombre_mpio": "CARTAGENA",
+      "cod_dpto": "13"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 35,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 35,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 31
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 2
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 31
+      },
+      "pct_hecho_principal": 88.6
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.007
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:16:47",
+  "periodo": "2018",
+  "_input_hash": "c4cdc0c55d12c544"
+}

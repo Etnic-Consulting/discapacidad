@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · DEPARTAMENTO BOYACA · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>DEPARTAMENTO BOYACA</h1>
+  <div class="subtitle">Informe territorial · Capacidades Diversas y población indígena</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>Boyacá registra en 2018 una población indígena agregada de 6877 personas, según la fuente departamental disponible. La lectura debe hacerse desde una perspectiva territorial: no se trata de un pueblo único, sino de una presencia indígena distribuida en el departamento, con un registro formal de 1 resguardo.</p><p></p><p>La cifra crítica es la de capacidades diversas: 93 personas indígenas con discapacidad, equivalentes a una prevalencia de 13.5 por cada 1000, frente al promedio indígena nacional de referencia de 60.0.</p><p></p><p>Esta diferencia sugiere una posible subcaptura territorial del fenómeno, más que una ausencia real de necesidades. Para ONIC, el énfasis debe estar en mejorar registro, atención diferencial y garantías en el territorio.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">6.877</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">93</div><div class="sub">prevalencia 13,5‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">1 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.023</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La demografía indígena departamental reporta 6877 personas en Boyacá para 2018. Los datos disponibles no incluyen pirámide etaria indígena por departamento, por lo que no es posible interpretar estructura por edades, dependencia demográfica, envejecimiento o peso relativo de niñez y juventud con base en esta fuente.
+
+Esta limitación es importante para la planeación. En un departamento con presencia indígena agregada, la falta de distribución etaria impide estimar con precisión las necesidades de educación propia, cuidado comunitario, salud intercultural y apoyos para personas mayores. La cifra total de 6877 permite dimensionar la presencia indígena, pero no sustituye un análisis generacional.</p>
+  <div class="sin-datos">demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>En Boyacá se registran 93 personas indígenas con discapacidad sobre una población de referencia de 6877 personas, para una prevalencia de 13.5 por cada 1000. La comparación con el promedio indígena nacional de 60.0 por cada 1000 muestra una distancia amplia que debe leerse con cautela.
+
+Desde la perspectiva ONIC, esta brecha puede indicar subregistro, barreras de identificación o baja cobertura institucional en la captura de información. El mayor conteo reportado por pueblo corresponde al cod_pueblo 690, con 51 casos sobre 6210 personas. Los demás conteos son menores a 30, por lo que no deben usarse como afirmación principal sin verificación comunitaria.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia BOYACA</div>
+      <div class="num-big">13,5‰</div>
+      <div class="lbl">93 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 46,5‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>La sección territorial identifica 1 resguardo en Boyacá: UNIDO UWA, ubicado en CUBARÁ, asociado al pueblo U´WA, con un área reportada de 223511.049 hectáreas. Esta información concentra el referente territorial colectivo en un solo registro, lo que orienta la lectura hacia una presencia indígena institucionalmente reconocida pero localizada.
+
+Para un informe departamental, este dato no agota la realidad indígena de Boyacá. La población agregada de 6877 personas puede incluir dinámicas fuera del resguardo registrado o en contextos urbanos y rurales no descritos por esta sección. La prioridad interpretativa es conectar la cifra poblacional con la garantía territorial efectiva.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>UNIDO UWA</td><td>—</td><td>CUBARÁ</td><td class="num">223.511,0</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos de lengua a nivel departamental no están disponibles en el JSON. La fuente indica explícitamente que no hay tabla de lengua agregada por departamento, por lo que no es posible afirmar número de hablantes, niveles de transmisión, vitalidad lingüística ni brechas intergeneracionales para Boyacá.
+
+Esta ausencia no debe interpretarse como inexistencia de lengua indígena. Para ONIC, la falta de información lingüística limita la lectura cultural del departamento y refuerza la necesidad de levantamientos propios con autoridades, mayores, sabedores y procesos educativos comunitarios, especialmente en territorios asociados al pueblo U´WA.</p>
+  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>La sección de NBI para Boyacá aparece marcada sin datos. El JSON señala que el NBI agregado por departamento requiere ponderación poblacional y no está disponible. Por tanto, no se puede afirmar una tasa departamental de necesidades básicas insatisfechas para la población indígena de Boyacá con esta fuente.
+
+La única cifra de referencia incluida es el promedio indígena nacional de NBI: 67.6%. Esa referencia permite señalar una brecha de información, no una brecha medida para Boyacá. Sin el dato departamental ponderado, ONIC no debería priorizar por NBI con base en este registro, sino exigir producción estadística diferencial y validación territorial.</p>
+  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>El Registro Único de Víctimas reporta 54 víctimas con discapacidad en Boyacá para el periodo 1985-2024. El hecho principal es el desplazamiento forzado, con 27 casos, equivalente al 50.0% del total registrado en esta sección.
+
+La distribución de hechos muestra una afectación territorial diversa: homicidio registra 11 casos y amenaza 7 casos, mientras otros hechos aparecen con conteos menores. Para la lectura ONIC, el desplazamiento forzado como mitad del registro indica que la discapacidad y el conflicto no pueden tratarse como agendas separadas. La respuesta debe integrar reparación, permanencia territorial, accesibilidad y acompañamiento culturalmente pertinente.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">54</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">50,0% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">27</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 40.7%"></div></div><div class="num">11</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 25.9%"></div></div><div class="num">7</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Perdida de Bienes Muebles o Inmuebles</div><div class="track"><div class="fill" style="width: 11.1%"></div></div><div class="num">3</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Acto terrorista / Atentados / Combates / Enfrentamientos / H</div><div class="track"><div class="fill" style="width: 7.4%"></div></div><div class="num">2</div></div>
+
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Condición de Vulnerabilidad reportado para Boyacá es 0.023. Sus componentes son nbi_norm 0.0, prevalencia_norm 0.068 y conflicto_norm 0.011, bajo la fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm.
+
+La dimensión que más pesa en el resultado disponible es la prevalencia normalizada, con 0.068, mientras que el componente de NBI queda en 0.0 porque no hay dato departamental ponderado. Por eso, la posición relativa del departamento debe interpretarse con prudencia: el ICV es bajo, pero está condicionado por ausencia de información social clave y por una prevalencia que puede estar subregistrada.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.068</td><td class="num">0.30</td><td class="num"><b>0.020</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.011</td><td class="num">0.30</td><td class="num"><b>0.003</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.023</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Fortalecer el registro diferencial de discapacidad en Boyacá, contrastando los 93 casos reportados y la prevalencia de 13.5 por cada 1000 con ejercicios comunitarios de identificación, porque la referencia nacional de 60.0 sugiere posible subregistro.</li>
+      <li>Priorizar una ruta territorial con el resguardo UNIDO UWA en CUBARÁ, de 223511.049 hectáreas, para articular atención, accesibilidad y garantías de permanencia con autoridades del pueblo U´WA.</li>
+      <li>Exigir producción de NBI indígena departamental ponderado, ya que el dato para Boyacá no está disponible y solo existe la referencia nacional de 67.6%, insuficiente para focalizar inversión pública.</li>
+      <li>Integrar reparación y discapacidad en la agenda departamental de víctimas, tomando como punto de partida las 54 víctimas con discapacidad registradas entre 1985-2024 y el peso del desplazamiento forzado con 27 casos.</li>
+      <li>Levantar información lingüística propia a escala territorial, porque el JSON no contiene datos departamentales de lengua y la población indígena agregada de 6877 personas requiere una lectura cultural que hoy no puede hacerse con esta fuente.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/dpto/15/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[4.6551956927837095, -74.66496042555377], [7.0474749946172, -71.94885388215556]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[4.6551956927837095, -74.66496042555377], [7.0474749946172, -71.94885388215556]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([5.851335343700455, -73.30690715385467]).addTo(map)
+    .bindPopup('<b>DEPARTAMENTO BOYACA</b>');
+</script>
+</body>
+</html>

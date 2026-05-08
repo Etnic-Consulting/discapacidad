@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de González (Cesar) registra una población indígena de 5 personas según CNPV 2018, concentrada en el pueblo Arhuaco. La ausencia de resguardos y datos de NBI o lengua refleja una debilidad estructural en la visibilización territorial y social de la comunidad. Este escenario subraya la necesidad de políticas diferenciadas para pueblos indígenas en municipios con presencia minoritaria.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida población (n=5). La concentración en un solo pueblo (Arhuaco) limita el análisis demográfico. Los datos disponibles no permiten evaluar dinámicas generacionales o patrones migratorios en el municipio.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades en González. La falta de información impide evaluar condiciones de salud específicas. Se requiere fortalecer sistemas de registro municipal para identificar necesidades prioritarias en salud indígena.",
+  "territorial": "González no cuenta con resguardos indígenas, a pesar de la presencia Arhuaco. La bbox geográfica delimita un área sin reconocimiento territorial formal. Esta situación contrasta con la existencia de resguardos en otros municipios del Cesar, evidenciando vacíos en la protección de territorios indígenas.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de la lengua Arhuaco o su vitalidad cultural en el territorio. La ausencia de registros lingüísticos limita la planificación en educación y revitalización cultural.",
+  "vida": "No hay datos de NBI para González, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros territorios. Se requiere un diagnóstico municipal para priorizar intervenciones en pobreza y acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en González (1985-2024). La ausencia de hechos violentos reportados sugiere baja visibilidad de la población indígena en sistemas de atención a víctimas. Esto no descarta afectaciones no documentadas en registros oficiales.",
+  "icv": "El ICV de González es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula aplicada refleja la falta de datos disponibles. Este resultado subraya la urgencia de sistematizar información para evaluar condiciones de vida en el municipio.",
+  "recomendaciones": [
+    "Realizar un censo municipal específico para pueblos indígenas, dado que los datos oficiales (n=5) subestiman la presencia Arhuaco en González.",
+    "Establecer un mecanismo de articulación con el resguardo Arhuaco más cercano para garantizar acceso a servicios y protección territorial.",
+    "Incluir a González en programas de salud intercultural, considerando la ausencia de datos de prevalencia y la necesidad de registros diferenciados.",
+    "Promover la creación de un espacio de participación indígena municipal para incidir en políticas públicas locales.",
+    "Fortalecer la recolección de datos sobre lengua y NBI en coordinación con el pueblo Arhuaco y autoridades tradicionales."
+  ]
+}

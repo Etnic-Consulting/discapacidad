@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sevilla (Valle del Cauca) concentra una población indígena de 402 personas según CNPV 2018, con 14 pueblos representados. El 64.2% (258) pertenece al pueblo EMBERA-CHAMÍ, seguido por EMBERA-KATIO con 72 personas. La presencia de un solo resguardo (ANCORE DRUA, 17.432 ha) evidencia alta concentración territorial. La vulnerabilidad se manifiesta en 10 víctimas de desplazamiento forzado (1985-2024), el 100% del total registrado.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal. Los datos demográficos se presentan como agregado de pueblos sin desagregación por grupos de edad. La población total indígena (402) refleja una estructura dispersa con 14 pueblos, donde el EMBERA-CHAMÍ domina numéricamente pero no necesariamente en distribución etaria.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud para Sevilla. Los indicadores de salud pública indígena a nivel municipal no están disponibles en este informe. Se reconoce la limitación para analizar patrones de morbilidad o acceso a servicios en la zona.",
+  "territorial": "Sevilla registra 1 resguardo indígena (ANCORE DRUA) con 17.432 hectáreas, lo que refleja una alta concentración territorial. La dispersión geográfica del municipio (coordenadas bbox) contrasta con la centralización en un solo territorio colectivo. La presencia de múltiples pueblos (14) en un área reducida sugiere presión sobre recursos y posibles conflictos intraétnicos.",
+  "lengua": "Los datos sobre lenguas indígenas en Sevilla no están disponibles en este informe. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo en el territorio municipal.",
+  "vida": "No hay datos específicos de NBI para Sevilla. El promedio indígena nacional es 67.6%, pero no se puede calcular la brecha local. La falta de información impide evaluar condiciones de vida como hacinamiento, acceso a servicios básicos o educación en el municipio.",
+  "conflicto": "Sevilla registra 10 víctimas de desplazamiento forzado (1985-2024), todas asociadas a este hecho. El 100% de los casos de conflicto corresponden a desplazamiento, lo que indica una dinámica de violencia estructural con impacto directo en la población indígena. La cifra subraya la urgencia de protección territorial.",
+  "icv": "El ICV de Sevilla es 0.001, con componentes en cero excepto conflicto (0.002). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero los valores nulos reflejan falta de datos. El score coloca al municipio en una posición crítica, donde el conflicto es el único factor medible.",
+  "recomendaciones": [
+    "Garantizar la protección del resguardo ANCORE DRUA (17.432 ha) ante amenazas de desplazamiento forzado, priorizando el retorno seguro de las 10 víctimas registradas. Esto requiere articulación con la Defensoría del Pueblo y la Fiscalía.",
+    "Realizar un censo étnico municipal desagregado por grupos de edad para identificar necesidades específicas de los 14 pueblos, especialmente el EMBERA-CHAMÍ (258 personas).",
+    "Incluir a Sevilla en el Sistema de Alertas Tempranas de la Defensoría para monitorear riesgos de desplazamiento, dado que el 100% de los casos de conflicto son por este hecho.",
+    "Diseñar un plan de revitalización cultural que aborde la ausencia de datos sobre lengua, incorporando a las comunidades en la recolección de información.",
+    "Solicitar al DANE la inclusión de indicadores de NBI y salud en el próximo Censo Nacional para superar la falta de datos en Sevilla."
+  ]
+}

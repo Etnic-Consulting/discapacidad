@@ -1,0 +1,134 @@
+{
+  "tipo": "mpio",
+  "id": "76246",
+  "nombre": "EL CAIRO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 169,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 169,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 6,
+      "top": [
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 148
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 13
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "282",
+        "pueblo": "EMBERA-CHAMI",
+        "poblacion": 148
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "DOXURA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 108.394
+        }
+      ],
+      "bbox": [
+        4.674062913238186,
+        -76.31226570272543,
+        4.84123318590835,
+        -76.12768781768608
+      ],
+      "nombre_mpio": "EL CAIRO",
+      "cod_dpto": "76"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 4,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 4,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 4
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 4
+      },
+      "pct_hecho_principal": 100.0
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.001
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:18:40",
+  "periodo": "2018",
+  "_input_hash": "d1330daf03cb2590"
+}

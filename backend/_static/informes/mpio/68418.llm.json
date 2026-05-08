@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Los Santos (Santander) presenta una población indígena de 1 habitante según CNPV 2018, concentrada en el pueblo Sikuani. La ausencia de resguardos y datos de lengua refleja una invisibilización histórica de la presencia indígena en el territorio. La falta de información sobre NBI y conflicto limita el análisis de vulnerabilidades, destacando la necesidad de registros territoriales específicos.",
+  "demografia": "La pirámide etaria no aplica para este municipio dado que solo se registra 1 habitante indígena. La población total de 1 persona impide cualquier análisis demográfico significativo. Los datos disponibles no permiten evaluar estructura por edades ni razones de crecimiento o decrecimiento poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Los Santos. La sección de capacidades diversas carece de información a nivel municipal, lo que impide analizar brechas en salud o discapacidad. Se requiere desagregación por pueblos para identificar necesidades específicas.",
+  "territorial": "El municipio cuenta con 0 resguardos indígenas, a pesar de estar ubicado en una zona con coordenadas geográficas definidas. La ausencia de territorios colectivos contrasta con la presencia histórica del pueblo Sikuani en la región. La dispersión geográfica no aplica al no existir resguardos que analizar.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de lenguas indígenas ni su vitalidad cultural en el territorio. La falta de registros lingüísticos refleja una debilidad en los sistemas de información territorial.",
+  "vida": "No hay datos de NBI disponibles para Los Santos. El promedio indígena nacional de 67.6% no puede compararse debido a la ausencia de información local. La brecha con el promedio nacional no puede calcularse, subrayando la necesidad de registros oficiales desagregados.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Los Santos entre 1985 y 2024. La ausencia de hechos violentos reportados sugiere una posible subnotificación o falta de presencia indígena organizada. La lectura territorial debe considerar la invisibilización de la población indígena.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Los Santos es 0.0, con todos sus componentes en 0.0. La fórmula del ICV (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) no puede aplicarse por falta de datos. La posición relativa del municipio es indeterminada sin información confiable.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por pueblos para superar la invisibilización de la población Sikuani (población actual: 1 habitante).",
+    "Implementar un sistema de registro de resguardos y territorios colectivos en Los Santos para garantizar el reconocimiento legal de los pueblos indígenas.",
+    "Incluir indicadores de lengua y cultura en los censos municipales para evaluar la vitalidad del pueblo Sikuani en el territorio.",
+    "Fortalecer la recolección de datos de NBI y conflicto a nivel municipal mediante alianzas con organizaciones indígenas y autoridades locales.",
+    "Diseñar políticas públicas con enfoque diferencial para pueblos indígenas en municipios con baja población registrada, evitando la exclusión por submuestreo."
+  ]
+}

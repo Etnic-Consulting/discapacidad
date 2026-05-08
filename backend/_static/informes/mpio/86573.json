@@ -1,0 +1,310 @@
+{
+  "tipo": "mpio",
+  "id": "86573",
+  "nombre": "LEGUIZAMO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6307,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 6307,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 3054
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 1671
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 565
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 470
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 249
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 92
+        },
+        {
+          "cod_pueblo": "731",
+          "pueblo": "MUINANE",
+          "poblacion": 54
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 27
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 26
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 26
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "100",
+          "pueblo": "BORA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "270",
+          "pueblo": "DUJOS",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "090",
+          "pueblo": "BETOYE",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "730",
+        "pueblo": "MURUI",
+        "poblacion": 3054
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 15,
+      "resguardos": [
+        {
+          "nombre": "LA PRIMAVERA ETNIA HUITOTO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 12831.542
+        },
+        {
+          "nombre": "LA PERECERA",
+          "pueblo_onic": "INGA - KICHWA",
+          "area_pg_ha": 6833.492
+        },
+        {
+          "nombre": "CECILIA COCHA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 6474.631
+        },
+        {
+          "nombre": "EL HACHA",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 5759.875
+        },
+        {
+          "nombre": "LA PAYA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 5604.825
+        },
+        {
+          "nombre": "CALARCÁ",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 5555.9
+        },
+        {
+          "nombre": "EL TABLERO",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 5531.181
+        },
+        {
+          "nombre": "JIRIJIRI",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 4380.724
+        },
+        {
+          "nombre": "LAGARTO COCHA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 4035.452
+        },
+        {
+          "nombre": "TUKUNARÉ",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 3401.27
+        },
+        {
+          "nombre": "AGUA NEGRA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 2856.548
+        },
+        {
+          "nombre": "CONSARA - MECAYA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 2785.907
+        },
+        {
+          "nombre": "EL PROGRESO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 2099.545
+        },
+        {
+          "nombre": "BAJO CASACUNTE",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 1865.854
+        },
+        {
+          "nombre": "SANTA RITA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 1387.828
+        }
+      ],
+      "bbox": [
+        -0.5622775888021904,
+        -76.14434437499176,
+        0.7256376462316934,
+        -73.84131793299804
+      ],
+      "nombre_mpio": "LEGUIZAMO",
+      "cod_dpto": "86"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 314,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 314,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 207
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 58
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 21
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 7
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 6
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 5
+        },
+        {
+          "hecho": "Tortura",
+          "total": 3
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 207
+      },
+      "pct_hecho_principal": 65.9
+    },
+    "icv": {
+      "score": 0.019,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.063
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:36:21",
+  "periodo": "2018",
+  "_input_hash": "dfdda57196700072"
+}

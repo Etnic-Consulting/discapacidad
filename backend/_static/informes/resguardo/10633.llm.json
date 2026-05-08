@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Chaquira, territorio del pueblo Pijao en el Tolima, concentra 22 habitantes en 550.227 hectáreas. La población total refleja una alta vulnerabilidad histórica, con 407 víctimas de conflicto registradas entre 1985-2024. El desplazamiento forzado (75.9% de los casos) emerge como el hecho victimizante dominante, evidenciando patrones sistemáticos de despojo territorial.",
+  "demografia": "La población total de 22 habitantes impide un análisis de pirámide etaria confiable (n=22). Los datos demográficos a este nivel no permiten inferencias sobre estructura poblacional. Se requiere desagregación por grupos etarios para evaluar dinámicas generacionales y planificar estrategias de revitalización cultural.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud en este resguardo. La ausencia de información limita el análisis de necesidades sanitarias específicas. Se recomienda priorizar registros epidemiológicos locales para identificar brechas en acceso a salud.",
+  "territorial": "El resguardo ocupa 550.227 hectáreas en el municipio de Natagaima, Tolima. La extensión territorial contrasta con la baja densidad poblacional (0.04 hab/ha), reflejando patrones de dispersión histórica. Se identifican 1 territorio colectivo bajo régimen especial, con desafíos en delimitación y protección legal.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. La revitalización lingüística del pueblo Pijao requiere registros sistemáticos de hablantes y territorios de uso tradicional. Sin información, no es posible evaluar el estado de la lengua en Chaquira.",
+  "vida": "No se reportan datos de NBI para este resguardo. El promedio indígena nacional (67.6%) sirve como referencia para priorizar intervenciones. La falta de información impide medir brechas en condiciones de vida, educación o acceso a servicios básicos en el territorio.",
+  "conflicto": "Se registraron 407 víctimas de conflicto, con desplazamiento forzado como hecho principal (309 casos, 75.9%). Los datos confirman la persistencia de violencia estructural contra el pueblo Pijao. La concentración de hechos en Natagaima exige acciones urgentes de protección territorial y judicialización de responsables.",
+  "icv": "El ICV de 0.024 en Chaquira refleja condiciones críticas, con componente de conflicto como dimensión dominante (0.081). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm prioriza la dimensión de violencia. El valor posiciona al resguardo en situación de alta vulnerabilidad relativa.",
+  "recomendaciones": [
+    "Priorizar la delimitación y protección legal del territorio de 550.227 hectáreas, con enfoque en prevención de desplazamiento forzado (309 casos reportados).",
+    "Implementar un sistema de registro epidemiológico local para superar la ausencia de datos en salud y NBI.",
+    "Diseñar estrategias de revitalización cultural Pijao con participación de las 22 personas del resguardo, incluyendo documentación de lengua y prácticas tradicionales.",
+    "Fortalecer alianzas con la CRIT-ONIC para incidencia en políticas públicas que aborden el conflicto como causa estructural (407 víctimas registradas).",
+    "Realizar un censo poblacional desagregado por grupos etarios para superar la limitación actual (n=22) y planificar acciones generacionales."
+  ]
+}

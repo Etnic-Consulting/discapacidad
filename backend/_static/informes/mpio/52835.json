@@ -1,0 +1,300 @@
+{
+  "tipo": "mpio",
+  "id": "52835",
+  "nombre": "TUMACO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 12025,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 12025,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 11785
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 127
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 53
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 14
+        },
+        {
+          "cod_pueblo": "565",
+          "pueblo": "QUILLACINGA",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "360",
+          "pueblo": "COFAN",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "230",
+          "pueblo": "CUIBA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "210",
+        "pueblo": "AWA",
+        "poblacion": 11785
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 13,
+      "resguardos": [
+        {
+          "nombre": "GRAN ROSARIO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 17341.664
+        },
+        {
+          "nombre": "SAUNDE GUIGUAY",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 7505.635
+        },
+        {
+          "nombre": "INDA ZABALETA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6226.933
+        },
+        {
+          "nombre": "EL CEDRO, LAS PEÑAS, LA BRAVA, PILVÍ Y LA PINTADA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4970.115
+        },
+        {
+          "nombre": "KEJUAMBI FELICIANA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1828.627
+        },
+        {
+          "nombre": "PIEDRA SELLADA - QUEBRADA TRONQUERÍA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1686.23
+        },
+        {
+          "nombre": "INDA GUACARAY",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1228.093
+        },
+        {
+          "nombre": "PULGANDE CAMPOALEGRE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1015.667
+        },
+        {
+          "nombre": "CHINGUIRITO MIRA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 797.145
+        },
+        {
+          "nombre": "PIGUAMBÍ PALANGALA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 490.715
+        },
+        {
+          "nombre": "SANTA ROSITA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 401.218
+        },
+        {
+          "nombre": "SAN AGUSTÍN - LA FLORESTA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 50.869
+        },
+        {
+          "nombre": "PEÑA LA ALEGRÍA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 30.989
+        }
+      ],
+      "bbox": [
+        1.187768615644933,
+        -79.01021097538194,
+        2.455421859887005,
+        -78.25534552130159
+      ],
+      "nombre_mpio": "TUMACO",
+      "cod_dpto": "52"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1218,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1218,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 790
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 100
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 87
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 73
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 42
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 34
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 32
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 31
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 18
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 5
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 790
+      },
+      "pct_hecho_principal": 64.9
+    },
+    "icv": {
+      "score": 0.073,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.244
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:55:34",
+  "periodo": "2018",
+  "_input_hash": "9ab7c8cacad641a9"
+}

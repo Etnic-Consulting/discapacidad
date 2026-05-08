@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sutamarchán (Boyacá) registra una población indígena de 5 personas según el CNPV 2018, concentrada en dos pueblos: el 80% corresponde a la etnia Zenú (4 personas) y el restante a población indígena sin información específica. No se identifican resguardos en el municipio, lo que limita la presencia territorial organizada de pueblos originarios. La ausencia de datos en indicadores clave como NBI o lengua refleja vacíos en el registro institucional, invisibilizando necesidades estructurales.",
+  "demografia": "La población indígena de Sutamarchán es mínima (5 personas) y se distribuye en dos pueblos, con predominio absoluto del pueblo Zenú (80%). No se cuenta con datos de pirámide etaria ni de capacidades diversas, lo que impide analizar dinámicas generacionales o vulnerabilidades específicas. La muestra es insuficiente para generalizaciones demográficas.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información sobre condiciones de salud o acceso a servicios impide evaluar brechas con otros territorios indígenas. Se requiere desagregación municipal para identificar patrones de sub-registro en Boyacá.",
+  "territorial": "Sutamarchán no cuenta con resguardos indígenas registrados, a pesar de su ubicación en Boyacá, departamento con presencia histórica de pueblos originarios. La caja geográfica del municipio (5.57°N, -73.68°O a 5.70°N, -73.58°O) no alberga territorios colectivos reconocidos. La ausencia de resguardos contrasta con la presencia de población indígena dispersa.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en Sutamarchán. La falta de registros lingüísticos impide evaluar vitalidad cultural o pérdida de idiomas originarios en el municipio.",
+  "vida": "No se dispone de datos de NBI para Sutamarchán, lo que imposibilita comparar condiciones de vida con el promedio indígena nacional (67.6%). La ausencia de información sobre necesidades básicas oculta realidades de pobreza multidimensional en la población indígena local.",
+  "conflicto": "El municipio reporta cero víctimas indígenas con discapacidad en el RUV entre 1985-2024, según datos confiables pero limitados por n=0. La falta de hechos victimizantes registrados no descarta violencia estructural no documentada. Se requieren sistemas de alerta temprana para pueblos dispersos.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Sutamarchán es 0.0, resultado de la ausencia de datos en sus componentes (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse, reflejando vacíos críticos en el municipio.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por pueblo y grupo etario para superar el sub-registro actual (n=5).",
+    "Incluir a Sutamarchán en programas de titulación de resguardos en Boyacá, priorizando pueblos dispersos como el Zenú.",
+    "Implementar un sistema de registro de lenguas indígenas en municipios sin datos, vinculado a la política de revitalización cultural.",
+    "Diseñar estrategias de protección diferencial para pueblos indígenas sin información específica en contextos urbanos o rurales dispersos.",
+    "Articular con la Gobernación de Boyacá para incluir indicadores indígenas en el Plan de Desarrollo Municipal, usando el promedio nacional de NBI (67.6%) como referencia."
+  ]
+}

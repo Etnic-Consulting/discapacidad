@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Miguel de Sema (Boyacá) presenta un vacío crítico en datos indígenas. La población total reportada es 0, con confiabilidad NO_CONFIABLE (n=0), lo que invalida análisis demográficos. No se registran resguardos ni pueblos indígenas en el municipio, pese a su ubicación en zona rural. Este silencio estadístico refleja la exclusión histórica de pueblos como los U'wa o Sáliva en registros territoriales.",
+  "demografia": "Los datos demográficos para San Miguel de Sema no aplican al nivel municipal según el CNPV 2018. La consulta arrojó n=0 con confiabilidad NO_CONFIABLE, imposibilitando análisis de pirámide etaria o estructura poblacional. Esta ausencia de registros contradice la presencia histórica de pueblos indígenas en la región, sugiriendo fallas en la recolección de datos étnicos a nivel local.",
+  "prevalencia": "No hay información disponible sobre prevalencia de condiciones en el municipio. La sección de capacidades diversas carece de datos (_sin_datos: true) y el promedio indígena nacional (60.0%) no puede contrastarse localmente. La falta de registros impide evaluar subregistros o necesidades específicas de la población indígena, si existiera.",
+  "territorial": "San Miguel de Sema no cuenta con resguardos indígenas registrados (n_resguardos: 0). La bbox geográfica delimita un área rural sin presencia territorial colectiva reconocida. Esta ausencia contrasta con la tradición indígena de la región, evidenciando vacíos en titulación o invisibilización en sistemas oficiales.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio (_sin_datos: true). No se puede analizar vitalidad lingüística ni presencia de lenguas nativas como el tunebo o el muisca, pese a su relevancia histórica en Boyacá.",
+  "vida": "No hay datos de NBI para San Miguel de Sema (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. Esta brecha no puede cuantificarse localmente. La falta de información impide comparar condiciones de vida con otros territorios indígenas del departamento.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en San Miguel de Sema (victimas_total_disc: 0). La consulta abarca 1985-2024 con n=0 y confiabilidad CONFIABLE, sugiriendo ausencia de hechos violentos documentados. Sin embargo, esto podría reflejar subregistro en sistemas de información.",
+  "icv": "El ICV de San Miguel de Sema es 0.0, con componentes nulos (nbi_norm: 0.0, prevalencia_norm: 0.0, conflicto_norm: 0.0). La fórmula del ICV (0.4*nbi + 0.3*prev + 0.3*conf) no aplica por falta de datos. Este resultado subraya la inexistencia de indicadores básicos para medir calidad de vida.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal con enfoque diferencial para identificar población indígena oculta, dado que los datos actuales son NO_CONFIABLES (n=0).",
+    "Incluir a San Miguel de Sema en el Plan de Salvaguarda del Pueblo U'wa, priorizando titulación de resguardos, ya que no hay territorios registrados (n_resguardos: 0).",
+    "Capacitar a funcionarios municipales en sistemas de información étnica para corregir subregistros en NBI y conflicto, usando el promedio indígena nacional (67.6%) como referencia.",
+    "Implementar un observatorio local de lenguas nativas para documentar uso de tunebo o muisca, ante la ausencia de datos (_sin_datos: true).",
+    "Articular con la ONIC y la Defensoría del Pueblo para auditar la confiabilidad de los datos del CNPV 2018 en este municipio, dado que la población total indígena reportada es 0."
+  ]
+}

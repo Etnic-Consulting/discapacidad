@@ -1,0 +1,476 @@
+{
+  "tipo": "dpto",
+  "id": "18",
+  "nombre": "CAQUETA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 8402,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 8402,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 518,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 518,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 8402,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 61.7,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "500",
+          "con_disc": 129,
+          "total": 1420
+        },
+        {
+          "cod_pueblo": "730",
+          "con_disc": 83,
+          "total": 1081
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 78,
+          "total": 909
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 49,
+          "total": 340
+        },
+        {
+          "cod_pueblo": "190",
+          "con_disc": 33,
+          "total": 2494
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 32,
+          "total": 577
+        },
+        {
+          "cod_pueblo": "030",
+          "con_disc": 32,
+          "total": 410
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 21,
+          "total": 298
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 15,
+          "total": 167
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 14,
+          "total": 137
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 45,
+      "resguardos": [
+        {
+          "nombre": "PUERTO SÁBALO - LOS MONOS",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 624487.793
+        },
+        {
+          "nombre": "MONOCHOA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 414846.874
+        },
+        {
+          "nombre": "WITORA O HUITORA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 131560.431
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA LA VICTORIA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "Por definir",
+          "area_pg_ha": 61105.192
+        },
+        {
+          "nombre": "JERICÓ - CONSAYA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 32717.501
+        },
+        {
+          "nombre": "COROPOYA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 28512.063
+        },
+        {
+          "nombre": "AGUAS NEGRAS",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 18423.017
+        },
+        {
+          "nombre": "FUNES",
+          "mpio": "CARTAGENA DEL CHAIRÁ",
+          "pueblo_onic": "PASTO",
+          "area_pg_ha": 12273.456
+        },
+        {
+          "nombre": "ALTAMIRA",
+          "mpio": "SAN VICENTE DEL CAGUÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 10711.827
+        },
+        {
+          "nombre": "MESAI",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 7082.013
+        },
+        {
+          "nombre": "NIÑERAS",
+          "mpio": "SOLANO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 3392.647
+        },
+        {
+          "nombre": "PUERTO NARANJO, PEÑAS ROJAS, CUERAZO Y EL DIAMANTE",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 2219.692
+        },
+        {
+          "nombre": "AGUA NEGRA",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1996.245
+        },
+        {
+          "nombre": "INGA DE SAN MIGUEL",
+          "mpio": "SAN JOSÉ DEL FRAGUA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 1836.974
+        },
+        {
+          "nombre": "LA LIBERTAD 2",
+          "mpio": "SAN VICENTE DEL CAGUÁN",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 1776.857
+        },
+        {
+          "nombre": "LA TEÓFILA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1676.6
+        },
+        {
+          "nombre": "HERICHA",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1453.344
+        },
+        {
+          "nombre": "EL QUINCE",
+          "mpio": "SOLANO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 1272.566
+        },
+        {
+          "nombre": "HONDURAS",
+          "mpio": "FLORENCIA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1010.793
+        },
+        {
+          "nombre": "JÁCOME",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 899.656
+        },
+        {
+          "nombre": "LA ESPERANZA",
+          "mpio": "BELÉN DE LOS ANDAQUÍES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 862.728
+        },
+        {
+          "nombre": "ZIT-SET DEL QUECAL",
+          "mpio": "PUERTO RICO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 790.125
+        },
+        {
+          "nombre": "YURAYACO",
+          "mpio": "SAN JOSÉ DEL FRAGUA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 719.462
+        },
+        {
+          "nombre": "EL GUAYABAL",
+          "mpio": "SOLANO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 607.223
+        },
+        {
+          "nombre": "SAN PABLO EL PARÁ",
+          "mpio": "FLORENCIA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 604.126
+        },
+        {
+          "nombre": "LA SIBERIA",
+          "mpio": "PUERTO RICO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 575.791
+        },
+        {
+          "nombre": "EL PORVENIR KANANGUCHAL",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 530.336
+        },
+        {
+          "nombre": "BANDERAS DEL RECAIBO",
+          "mpio": "SAN VICENTE DEL CAGUÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 520.193
+        },
+        {
+          "nombre": "MATICURÚ",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 450.92
+        },
+        {
+          "nombre": "PAEZ DE EL LÍBANO",
+          "mpio": "SOLANO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 446.886
+        },
+        {
+          "nombre": "GORGONIA",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 426.717
+        },
+        {
+          "nombre": "CABILDO EL ÁGUILA",
+          "mpio": "BELÉN DE LOS ANDAQUÍES",
+          "pueblo_onic": "MISAK",
+          "area_pg_ha": 407.523
+        },
+        {
+          "nombre": "NASA KIWE",
+          "mpio": "PUERTO RICO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 348.277
+        },
+        {
+          "nombre": "CUSUMBE - AGUA BLANCA",
+          "mpio": "SOLITA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 332.192
+        },
+        {
+          "nombre": "SAN LUIS",
+          "mpio": "MILÁN",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 328.749
+        },
+        {
+          "nombre": "EL PORTAL",
+          "mpio": "SAN JOSÉ DEL FRAGUA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 223.245
+        },
+        {
+          "nombre": "EL TRIUNFO",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 194.139
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 173.008
+        },
+        {
+          "nombre": "WE SX KIWE LA GAITANA",
+          "mpio": "FLORENCIA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 145.189
+        },
+        {
+          "nombre": "GETUCHÁ",
+          "mpio": "MILÁN",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 129.434
+        },
+        {
+          "nombre": "EL CEDRITO",
+          "mpio": "LA MONTAÑITA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 123.478
+        },
+        {
+          "nombre": "LOS PIJAOS",
+          "mpio": "ALBANIA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 117.815
+        },
+        {
+          "nombre": "LA ESPERANZA",
+          "mpio": "SOLANO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 114.486
+        },
+        {
+          "nombre": "WITACK KIWE",
+          "mpio": "PUERTO RICO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 76.654
+        },
+        {
+          "nombre": "LA CERINDA",
+          "mpio": "BELÉN DE LOS ANDAQUÍES",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 54.467
+        }
+      ],
+      "bbox": [
+        -0.7058400442294057,
+        -76.30622126224677,
+        2.9383335158354504,
+        -71.25384590373017
+      ],
+      "nombre_dpto": "CAQUETA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1172,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1172,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 796
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 136
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 101
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 30
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 20
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 20
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 18
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 18
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 11
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 7
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 796
+      },
+      "pct_hecho_principal": 67.9
+    },
+    "icv": {
+      "score": 0.163,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.308,
+        "conflicto_norm": 0.234
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:45:58",
+  "periodo": "2018",
+  "_input_hash": "e8c27749efd988cb"
+}

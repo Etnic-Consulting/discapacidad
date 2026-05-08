@@ -1,0 +1,117 @@
+{
+  "tipo": "mpio",
+  "id": "52473",
+  "nombre": "MOSQUERA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 1,
+      "top": [
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "560",
+        "pueblo": "PASTOS",
+        "poblacion": 1
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "SANQUIANGUITA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 651.212
+        }
+      ],
+      "bbox": [
+        2.1904410771344556,
+        -78.56974860239666,
+        2.6565946040859614,
+        -78.30332195038898
+      ],
+      "nombre_mpio": "MOSQUERA",
+      "cod_dpto": "52"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 3,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 3,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Amenaza",
+        "total": 1
+      },
+      "pct_hecho_principal": 33.3
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.001
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:52:27",
+  "periodo": "2018",
+  "_input_hash": "31bc8e4b4d1a05e6"
+}

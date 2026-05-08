@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Sabanalarga (Meta) reporta una población indígena de 0 personas según el CNPV 2018, lo que limita el análisis demográfico y territorial. La ausencia de resguardos indígenas (n=0) y datos de lengua confirma la inexistencia de presencia indígena estructurada en el territorio. Solo se registra 1 víctima de desplazamiento forzado entre 1985-2024, con un ICV de 0.0, reflejando condiciones de marginalización extrema.",
+  "demografia": "No hay datos confiables de población indígena en Sabanalarga (n=0, confiabilidad NO_CONFIABLE). La consulta al CNPV 2018 no arrojó registros, lo que impide analizar pirámide etaria o dinámicas poblacionales. Esta ausencia de información sugiere una posible invisibilización estadística de comunidades indígenas en el municipio.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para Sabanalarga (sin datos en secciones relevantes). La falta de registros específicos limita cualquier análisis de sub-registro o brechas sanitarias. Se requiere fortalecer sistemas de información territorial indígena.",
+  "territorial": "Sabanalarga no cuenta con resguardos indígenas (n=0), a pesar de tener una extensión geográfica definida (bbox con coordenadas válidas). La ausencia de territorios colectivos indica una desconexión entre la normativa indígena y la realidad municipal. La dispersión geográfica no aplica en este caso.",
+  "lengua": "Los datos de lengua no están disponibles para Sabanalarga. No se registran lenguas indígenas en el municipio según la fuente consultada. Esta carencia refleja la necesidad de estudios etnolingüísticos locales.",
+  "vida": "No hay datos de NBI para Sabanalarga (sin datos disponibles). El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de información impide evaluar condiciones de vida o brechas socioeconómicas.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado en Sabanalarga (1985-2024), con un hecho principal único (100% del total). Este dato, aunque mínimo, evidencia la vulnerabilidad territorial. La baja n (n=1) limita generalizaciones pero señala riesgos persistentes.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Sabanalarga es 0.0, con componentes nulos (NBI, prevalencia y conflicto normalizados). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja condiciones críticas. Este resultado subraya la exclusión estructural del territorio.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para validar la ausencia de población (citar n=0 en demografía y pueblos_indigenas).",
+    "Incluir a Sabanalarga en el Plan de Salvaguarda Étnica del Meta, priorizando la identificación de comunidades indígenas ocultas (citar n_resguardos=0).",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento, dado el 100% de hechos por este tipo (citar hecho_principal='Desplazamiento forzado').",
+    "Solicitar a la DANE la desagregación étnica en encuestas municipales para superar la confiabilidad NO_CONFIABLE (citar confiabilidad en demografia).",
+    "Diseñar un programa de recuperación cultural para municipios sin registros de lengua, como Sabanalarga (citar _sin_datos en lengua)."
+  ]
+}

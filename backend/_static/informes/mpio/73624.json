@@ -1,0 +1,152 @@
+{
+  "tipo": "mpio",
+  "id": "73624",
+  "nombre": "ROVIRA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 120,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 120,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 10,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 101
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "300",
+          "pueblo": "GUANACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "330",
+          "pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "700",
+          "pueblo": "TUYUKA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 101
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        4.039383011291313,
+        -75.57012325984994,
+        4.347456874047589,
+        -75.14377461879843
+      ],
+      "nombre_mpio": "ROVIRA",
+      "cod_dpto": "73"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 8,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 8,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 7
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 7
+      },
+      "pct_hecho_principal": 87.5
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.002
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:26:18",
+  "periodo": "2018",
+  "_input_hash": "de85e0b3d9d30a32"
+}

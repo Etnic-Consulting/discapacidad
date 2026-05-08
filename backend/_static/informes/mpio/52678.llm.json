@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Samaniego (Nariño) concentra 2.388 personas indígenas según CNPV 2018, donde el 60.8% pertenece al pueblo Pastos. El territorio presenta alta afectación por conflicto armado, con 395 víctimas registradas entre 1985-2024. La concentración de hechos victimizantes (63.8% por desplazamiento forzado) evidencia un patrón de violencia sistemática contra la población indígena en este municipio.",
+  "demografia": "La población indígena de Samaniego tiene una estructura etaria concentrada en adultos (1451 Pastos, 650 Awa y 259 sin información). La pirámide refleja una base reducida (22 Quillacinga, 2 Nasa, 1 Bará y 1 Kamëntsa), indicando riesgo de pérdida cultural. Los datos no permiten análisis detallado por grupos de edad o género.",
+  "prevalencia": "Los datos de prevalencia de enfermedades no están disponibles para este municipio. Se reconoce la limitación interpretativa al no contar con registros sanitarios específicos. El sub-registro en pueblos minoritarios (Quillacinga, Nasa, Bará) sugiere barreras en acceso a salud pública.",
+  "territorial": "Samaniego alberga 1 resguardo (Planas Telembí) con 3.046,75 ha, perteneciente al pueblo Awá. La dispersión geográfica del municipio contrasta con la concentración territorial del resguardo. La bounding box (1.1895, -77.8861 a 1.5959, -77.5379) delimita un área de alta conflictividad histórica.",
+  "lengua": "Los datos sobre lenguas indígenas en Samaniego no están disponibles. No se puede determinar el estado de vitalidad lingüística ni la presencia de lenguas en riesgo de extinción.",
+  "vida": "No hay datos específicos de NBI para Samaniego. El promedio indígena nacional (67.6%) sirve como referencia, pero no permite calcular brechas locales. La falta de información impide evaluar condiciones de vida en el municipio.",
+  "conflicto": "Se registraron 395 víctimas indígenas, donde el 63.8% corresponde a desplazamiento forzado (252 casos). El segundo hecho más frecuente es actos terroristas (30 casos). La violencia se extiende a homicidios (29), amenazas (20) y pérdida de bienes (18), configurando un patrón de despojo territorial.",
+  "icv": "El ICV de Samaniego es 0.024, con el componente de conflicto como principal determinante (0.079). Los componentes NBI y prevalencia registran 0.0, lo que refleja ausencia de datos normalizados. La posición relativa es crítica, dado que el conflicto explica el 79% del índice.",
+  "recomendaciones": [
+    "Priorizar la protección territorial del resguardo Planas Telembí (3.046,75 ha) mediante acciones contra el desplazamiento forzado, que concentra el 63.8% de las víctimas (252 casos).",
+    "Implementar un sistema de alerta temprana para hechos victimizantes en pueblos minoritarios (Quillacinga, Nasa, Bará), que representan menos del 2% de la población.",
+    "Garantizar acceso a salud pública con enfoque diferencial, considerando la falta de datos de prevalencia y el riesgo de sub-registro en comunidades pequeñas.",
+    "Fortalecer la autonomía alimentaria en el resguardo Awá mediante proyectos productivos en 3.046,75 ha, ante la ausencia de datos sobre NBI.",
+    "Documentar la vitalidad lingüística en el municipio, dado que no hay registros sobre lenguas indígenas, para diseñar estrategias de revitalización cultural."
+  ]
+}

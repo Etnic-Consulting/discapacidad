@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Las Delicias, ubicado en el municipio de Riohacha (La Guajira), registra una población total de 0 habitantes según datos del DANE-CNPV 2018. Con un área de 189.99 hectáreas, este territorio wayúu enfrenta vacíos críticos en datos socioeconómicos y de conflicto, limitando su caracterización integral. La ausencia de información en secciones clave como lengua, NBI y conflicto refleja debilidades en el sistema de registro territorial indígena.",
+  "demografia": "La población total reportada es de 0 habitantes, lo que impide analizar la pirámide etaria o dinámicas demográficas. Esta ausencia de datos sugiere fallas en el cruce de fuentes o en la actualización del territorio. Se requiere verificar la metodología de recolección para garantizar que los resguardos wayúu sean visibles en los registros oficiales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo. El promedio indígena nacional del 60% en discapacidad no puede contrastarse aquí debido a la falta de registros locales. Esto subraya la necesidad de sistemas de información diferenciados para territorios indígenas.",
+  "territorial": "El resguardo tiene un área de 189.99 hectáreas con coordenadas geográficas definidas en La Guajira. Su ubicación en Riohacha lo sitúa en una zona de alta presión territorial wayúu, aunque la dispersión de datos limita el análisis de concentración. La delimitación precisa del territorio contrasta con la opacidad en otros indicadores.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Dada la predominancia wayúu en la región, se asume el uso del wayuunaiki, pero la falta de registros oficiales impide confirmarlo. La ONIC debe priorizar la documentación de lenguas en territorios indígenas.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Las Delicias. El promedio indígena nacional del 67.6% no puede compararse aquí. Esta omisión refleja la exclusión de resguardos pequeños en políticas públicas, requiriendo acciones afirmativas para su inclusión.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo entre 1985-2024. La ausencia de hechos violentos reportados no descarta subregistros, especialmente en territorios con baja capacidad de denuncia. Se recomienda fortalecer mecanismos de reporte comunitario.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, derivado de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta métrica refleja la invisibilidad estadística del resguardo. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede aplicarse sin información.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en Las Delicias para actualizar datos demográficos y territoriales, priorizando la inclusión de mujeres y niños wayúu.",
+    "Implementar un sistema de registro de discapacidad y lengua en resguardos wayúu, con enfoque en territorios pequeños como este.",
+    "Incluir a Las Delicias en programas de infraestructura básica (agua, salud) dado su área de 189.99 hectáreas y contexto de desertificación en La Guajira.",
+    "Fortalecer alianzas con organizaciones wayúu para documentar hechos de conflicto no reportados al RUV.",
+    "Diseñar políticas de acción afirmativa que consideren la dispersión territorial de resguardos como este, con menos de 200 hectáreas."
+  ]
+}

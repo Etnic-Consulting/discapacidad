@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo INKAL WATZAL AWÁ, ubicado en el Putumayo, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 347.169 hectáreas, este territorio awá enfrenta vacíos críticos en datos demográficos y socioeconómicos. La ausencia de información sobre lengua, NBI y discapacidad limita el análisis integral, destacando la necesidad de fortalecer sistemas de registro propios.",
+  "demografia": "Los datos demográficos para INKAL WATZAL AWÁ no están disponibles (n=0). Esta ausencia impide analizar la pirámide etaria o tendencias poblacionales. Se requiere cruzar fuentes locales con registros oficiales para superar la brecha de información y garantizar el derecho a la autodeterminación de datos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo. La falta de registros específicos (solo existen promedios nacionales) subraya la urgencia de implementar sistemas de monitoreo comunitario. El sub-registro sistemático invisibiliza necesidades urgentes de la población awá.",
+  "territorial": "El resguardo ocupa 347.169 hectáreas en Orito (Putumayo), con coordenadas geográficas definidas. Su ubicación en la Amazonía lo sitúa en un contexto de alta presión extractiva. La delimitación clara del territorio contrasta con la carencia de datos socioeconómicos, evidenciando la paradoja entre reconocimiento territorial y debilidad institucional.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión impide evaluar la vitalidad cultural del pueblo awá en su territorio ancestral. La ausencia de registros lingüísticos refleja la necesidad de políticas que prioricen la documentación desde enfoques comunitarios.",
+  "vida": "No se reportan datos de NBI para INKAL WATZAL AWÁ. Comparado con el promedio indígena nacional (67.6%), esta falta de información impide medir brechas estructurales. La invisibilización de condiciones de vida dificulta la planificación de acciones diferenciadas para este pueblo en Putumayo.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (n=0) entre 1985-2024. La ausencia de hechos violentos reportados no implica ausencia de riesgo, sino limitaciones en el sistema de registro. La falta de datos impide analizar patrones de afectación territorial en la Amazonía.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, con componentes nulos en NBI, prevalencia y conflicto. Esta métrica refleja la ausencia de datos más que condiciones reales. La fórmula aplicada subraya la necesidad de incorporar indicadores propios awá para una evaluación auténtica.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de población y salud en INKAL WATZAL AWÁ, priorizando datos desglosados por edad y género para superar el vacío actual (n=0).",
+    "Diseñar protocolos de documentación lingüística con participación awá, ante la ausencia de datos sobre lengua (sin_datos: true).",
+    "Incluir indicadores de NBI y conflicto en sistemas de monitoreo territorial, comparando con el promedio indígena nacional (67.6%).",
+    "Fortalecer la articulación con OPIAC y OZIP para generar datos propios que reflejen la realidad awá en Putumayo.",
+    "Realizar un mapeo participativo de riesgos territoriales en la Amazonía, ante la falta de registros de víctimas (n=0)."
+  ]
+}

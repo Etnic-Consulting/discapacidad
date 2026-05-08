@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo GUARAPAMBA, territorio del pueblo KOKONUCO en el Cauca, alberga 507 habitantes en 48.288 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. La ausencia de información sobre lengua y capacidades diversas limita un análisis integral, destacando la necesidad de fortalecer sistemas de registro locales.",
+  "demografia": "La población total de GUARAPAMBA es de 507 habitantes según DANE-CNPV 2018. No se cuenta con datos de pirámide etaria ni estructura por edades en este nivel territorial. La falta de desagregación etaria impide analizar dinámicas generacionales o presión demográfica en este resguardo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en GUARAPAMBA. La sección se marca como _sin_datos, lo que imposibilita evaluar necesidades sanitarias específicas o comparar con promedios nacionales. Esto subraya la urgencia de implementar sistemas de monitoreo local.",
+  "territorial": "GUARAPAMBA ocupa 48.288 hectáreas en el municipio de El Tambo, Cauca, con coordenadas que delimitan su territorio. Su área reducida contrasta con la extensión de otros resguardos, sugiriendo alta presión sobre el suelo. La ubicación en la macro región OCCIDENTE lo sitúa en un contexto de alta conflictividad histórica.",
+  "lengua": "No se registran datos sobre lengua en GUARAPAMBA. La sección _sin_datos impide identificar la vitalidad del nasa yuwe u otras lenguas propias. Esta omisión dificulta evaluar la transmisión intergeneracional y el riesgo de pérdida cultural en el territorio.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) en GUARAPAMBA. La sección se marca como _sin_datos, lo que impide comparar con el promedio indígena nacional del 67.6%. La falta de datos invisibiliza las carencias estructurales del resguardo.",
+  "conflicto": "GUARAPAMBA reporta 0 víctimas con discapacidad en el RUV entre 1985-2024. La ausencia de hechos victimizantes registrados no implica ausencia de violencia, sino limitaciones en el sistema de documentación. Esto exige revisar mecanismos de reporte territorial para capturar afectaciones reales.",
+  "icv": "El ICV de GUARAPAMBA es 0.0, resultado de la normalización de componentes nulos (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos sistemáticos más que condiciones de vida reales. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia la necesidad de mejorar la recolección de información.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de lengua y cultura para GUARAPAMBA, priorizando la documentación del nasa yuwe y su uso en educación propia, dado que los datos actuales no permiten evaluar su vitalidad.",
+    "Diseñar un protocolo de recolección de datos de NBI y salud en resguardos pequeños como GUARAPAMBA, donde la población de 507 habitantes requiere metodologías adaptadas a su escala.",
+    "Fortalecer la articulación con el CRIC para incluir a GUARAPAMBA en censos indígenas diferenciados, superando las limitaciones de fuentes externas como DANE.",
+    "Establecer un observatorio territorial en El Tambo que sistematice información sobre conflicto y capacidades diversas, dado que el RUV no captura afectaciones en este resguardo.",
+    "Incluir a GUARAPAMBA en planes de titulación y saneamiento de tierras, considerando su área de 48.288 hectáreas y la presión sobre su territorio en el Cauca."
+  ]
+}

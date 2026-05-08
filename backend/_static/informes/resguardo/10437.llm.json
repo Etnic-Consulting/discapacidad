@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL ROSAL (YANACONA) en Oporapa, Huila, presenta una población total de 0 según datos DANE-CNPV 2018, lo que refleja una limitación crítica en el registro oficial. Con un área de 158.44 hectáreas, este territorio de la macro ONIC Occidente carece de datos sobre lengua, NBI y discapacidad, invisibilizando su realidad socioeconómica. La ausencia de víctimas de conflicto en el RUV (0 casos) no garantiza ausencia de vulneraciones, sino fallas en el registro territorial específico.",
+  "demografia": "La pirámide etaria no puede analizarse al no existir datos de población total (n=0). Esta ausencia impide evaluar estructura etaria, envejecimiento o presión demográfica. La falta de registros oficiales en este resguardo contrasta con la necesidad de planificación territorial para el pueblo Yanakona-Yanakuna.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud (n=0). La ausencia de información limita el análisis de subregistros y brechas sanitarias. Se requiere fortalecer sistemas de información locales para garantizar datos confiables que orienten políticas públicas.",
+  "territorial": "El resguardo tiene un área de 158.44 hectáreas con coordenadas geográficas definidas en el municipio de Oporapa, Huila. Este territorio, aunque pequeño, representa un espacio de vida colectiva para el pueblo Yanakona. La delimitación geográfica precisa es clave para la protección jurídica y ambiental.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión dificulta evaluar la vitalidad cultural y la transmisión intergeneracional del idioma ancestral del pueblo Yanakona-Yanakuna.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en este resguardo. Con un promedio indígena nacional de 67.6%, la falta de datos impide comparar brechas socioeconómicas. La invisibilidad estadística afecta la priorización de recursos para este territorio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el RUV para este resguardo (0 casos). La ausencia de hechos violentos en el sistema no descarta afectaciones no documentadas. Se requiere verificar fuentes locales y comunitarias para un diagnóstico integral.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, determinado por la falta de datos en componentes como NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta métrica refleja la ausencia de información oficial, no la calidad de vida real del territorio. Urge implementar sistemas de monitoreo local.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en EL ROSAL para actualizar datos demográficos y socioeconómicos, dado que los registros oficiales muestran n=0 (poblacion_total: 0).",
+    "Implementar un sistema de registro de lengua y cultura Yanakona-Yanakuna para preservar la identidad del pueblo, ante la ausencia de datos (lengua: _sin_datos).",
+    "Diseñar un plan de salud intercultural con enfoque en prevención, ante la falta de datos de prevalencia (prevalencia: _sin_datos).",
+    "Fortalecer la articulación con instituciones locales para incluir al resguardo en políticas públicas, considerando su área reducida de 158.44 hectáreas (area_hectareas: 158.44).",
+    "Promover mesas de diálogo con autoridades municipales para garantizar el registro de conflictos no documentados en el RUV (victimas_total_disc: 0)."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Andrés registra una población indígena de 20 personas según CNPV 2018, distribuidas en 13 pueblos. El 20% corresponde al pueblo WAYUU (4 personas), el más numeroso, seguido por PIJAO, ZENÚ y MOKANA con 2 cada uno. La ausencia de resguardos y datos de lengua refleja una debilidad en el reconocimiento territorial. La vulnerabilidad del territorio se evidencia en un ICV de 0.0, resultado de la carencia de indicadores sociales y de conflicto.",
+  "demografia": "La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La población total indígena es mínima (20 personas) y dispersa entre 13 pueblos, con predominio del WAYUU (20% del total). La ausencia de estructuras demográficas detalladas limita cualquier inferencia sobre dinámicas generacionales o presión poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La sección correspondiente no fue reportada, lo que impide evaluar necesidades sanitarias específicas. Se requiere priorizar la recolección de información epidemiológica para este territorio.",
+  "territorial": "San Andrés no cuenta con resguardos indígenas, a pesar de albergar 13 pueblos. La dispersión geográfica se confirma con una caja de coordenadas que abarca 12.48°N a 12.60°N y -81.74°O a -81.69°O, sin presencia de territorios colectivos. La ausencia de resguardos limita la autonomía y protección legal de los pueblos.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni las necesidades de revitalización cultural. Se recomienda incluir este indicador en futuras mediciones territoriales.",
+  "vida": "No hay información sobre NBI para San Andrés, aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar condiciones de vida con otros territorios. La vulnerabilidad social no puede evaluarse sin indicadores de pobreza, educación o acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en San Andrés entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja incidencia de conflicto armado, aunque la confiabilidad de los datos (n=0) limita conclusiones. Se requiere validar esta información con fuentes locales.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, determinado por la falta de datos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja valores útiles al carecer de componentes. Esto refleja una debilidad estructural en el monitoreo territorial.",
+  "recomendaciones": [
+    "Incluir indicadores de lengua y NBI en futuras actualizaciones del SMT para San Andrés, dado que actualmente no hay datos disponibles.",
+    "Promover el reconocimiento de resguardos indígenas en San Andrés, considerando que no existen territorios colectivos pese a la presencia de 13 pueblos.",
+    "Realizar un censo local específico para validar la población indígena (20 personas según CNPV 2018) y evitar subregistros en futuras mediciones.",
+    "Articular con autoridades departamentales para incluir a San Andrés en programas de salud pública, ante la ausencia de datos de prevalencia y discapacidad.",
+    "Establecer un sistema de alerta temprana para monitorear posibles conflictos, aunque los datos actuales indiquen baja incidencia, dada la limitación de n=0 en el RUV."
+  ]
+}

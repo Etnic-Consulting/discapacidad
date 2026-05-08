@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cucaita (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 y confiabilidad NO_CONFIABLE. Esta condición impide análisis demográfico o territorial, pese a existir un bbox municipal delimitado. La falta de datos refleja vacíos en el sistema de información estatal para territorios con presencia histórica indígena dispersa.",
+  "demografia": "Los datos de población indígena en Cucaita no están disponibles (n=0, confiabilidad NO_CONFIABLE). No es posible analizar pirámide etaria ni composición por edades. Esta ausencia de registros oficiales invisibiliza posibles dinámicas demográficas en un municipio con tradición de paso y ocupación indígena estacional.",
+  "prevalencia": "No hay datos de prevalencia de condiciones de salud o discapacidad para población indígena en Cucaita (n=0). La falta de registros impide calcular tasas o identificar grupos vulnerables. Se requiere cruce con fuentes comunitarias para subsanar el sub-registro estatal.",
+  "territorial": "Cucaita cuenta con 0 resguardos indígenas registrados, pese a tener un bbox municipal definido. La ausencia de territorios colectivos reconocidos contrasta con la presencia histórica de pueblos como los muiscas en la región. La delimitación geográfica no garantiza protección territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en Cucaita no están disponibles. Esta ausencia impide evaluar vitalidad lingüística o procesos de revitalización en un territorio con posible influencia muisca. Se recomienda priorizar levantamientos participativos con comunidades.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para población indígena en Cucaita. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de datos oculta brechas en acceso a servicios básicos en este municipio boyacense.",
+  "conflicto": "Cucaita registra 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con n=0 y confiabilidad CONFIABLE. La ausencia de hechos violentos reportados no descarta afectaciones no documentadas. Se sugiere validar esta información con organizaciones locales.",
+  "icv": "El ICV de Cucaita es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto (n=0 en todos los componentes). Esta métrica refleja la imposibilidad de medir condiciones de vida con la información disponible. Urge implementar sistemas de monitoreo comunitario.",
+  "recomendaciones": [
+    "Realizar censo participativo indígena en Cucaita para superar el sub-registro estatal y actualizar datos demográficos con enfoque territorial (n=0 en CNPV 2018).",
+    "Establecer alianzas con cabildos muiscas cercanos para documentar presencia histórica y garantizar derechos lingüísticos (datos lengua no disponibles).",
+    "Incluir a Cucaita en el Sistema de Alertas Tempranas de la ONIC para monitorear posibles afectaciones no registradas en el RUV (0 víctimas reportadas).",
+    "Diseñar un plan de fortalecimiento institucional municipal para reconocer y proteger territorios indígenas en tránsito (0 resguardos registrados).",
+    "Priorizar proyectos de infraestructura básica en Cucaita, dado que no hay datos de NBI que permitan priorizar necesidades (promedio nacional 67.6% no aplicable localmente)."
+  ]
+}

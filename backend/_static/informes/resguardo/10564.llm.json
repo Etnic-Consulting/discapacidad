@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Calenturas, territorio ancestral del pueblo Inga en el Putumayo, registra una población total de 0 según datos DANE-CNPV 2018. Con un área de 2.612,88 hectáreas, este territorio enfrenta vacíos críticos en información socioeconómica y de conflicto. La ausencia de datos sobre discapacidad, NBI y víctimas refleja limitaciones en el monitoreo territorial para este resguardo específico.",
+  "demografia": "Los datos demográficos para Calenturas indican una población total de 0 habitantes según la fuente DANE-CNPV 2018. Esta ausencia de registros poblacionales dificulta el análisis de la pirámide etaria y su dinámica demográfica. Se requiere cruce de fuentes adicionales para validar la presencia del pueblo Inga en este territorio.",
+  "prevalencia": "No se dispone de datos de prevalencia para Calenturas. Los sistemas de salud no registran información específica a nivel de resguardo, lo que impide evaluar condiciones de salud en la población. La falta de registros oficiales subraya la necesidad de fortalecer el sistema de información territorial indígena.",
+  "territorial": "El resguardo Calenturas ocupa 2.612,88 hectáreas en el municipio de Puerto Guzmán, Putumayo, dentro de la macrorregión Amazonia. Su delimitación geográfica está definida por coordenadas que abarcan un área reducida. La concentración territorial es mínima, lo que limita la capacidad de sostener dinámicas culturales y productivas propias.",
+  "lengua": "Los datos sobre lengua para Calenturas no están disponibles. No existen registros que documenten el uso de la lengua Inga en este territorio. La ausencia de información lingüística refleja debilidades en la preservación cultural a nivel local.",
+  "vida": "No se cuenta con datos sobre Necesidades Básicas Insatisfechas (NBI) para Calenturas. El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la falta de registros específicos. Esta omisión impide evaluar brechas socioeconómicas en el territorio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Calenturas según el RUV (1985-2024). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en el registro oficial. Se requiere validación con fuentes comunitarias para confirmar la situación de seguridad.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Calenturas es 0.0, derivado de la ausencia de datos en componentes como NBI, prevalencia y conflicto. Esta puntuación refleja vacíos estructurales en el monitoreo territorial. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con información disponible.",
+  "recomendaciones": [
+    "Realizar censo comunitario para validar la población del pueblo Inga en Calenturas, dado que los datos oficiales reportan 0 habitantes.",
+    "Implementar sistema de registro de lengua Inga en el territorio para documentar su vitalidad cultural y uso en la comunidad.",
+    "Establecer mecanismo de reporte de NBI y condiciones de vida con participación de la OZIP para cubrir vacíos en datos socioeconómicos.",
+    "Fortalecer el monitoreo de conflicto con enfoque diferencial indígena, incluyendo validación de hechos victimizantes con fuentes comunitarias.",
+    "Diseñar plan de protección territorial para resguardos con área reducida como Calenturas, priorizando seguridad y autonomía."
+  ]
+}

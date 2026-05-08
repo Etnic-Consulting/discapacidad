@@ -1,0 +1,266 @@
+{
+  "tipo": "dpto",
+  "id": "20",
+  "nombre": "CESAR",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 50975,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 50975,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 3093,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 3093,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 50975,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 60.7,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "850",
+          "con_disc": 1371,
+          "total": 16113
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 728,
+          "total": 20726
+        },
+        {
+          "cod_pueblo": "370",
+          "con_disc": 330,
+          "total": 3656
+        },
+        {
+          "cod_pueblo": "050",
+          "con_disc": 245,
+          "total": 3726
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 233,
+          "total": 2380
+        },
+        {
+          "cod_pueblo": "780",
+          "con_disc": 101,
+          "total": 3543
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 19,
+          "total": 133
+        },
+        {
+          "cod_pueblo": "150",
+          "con_disc": 16,
+          "total": 187
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 13,
+          "total": 144
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 8,
+          "total": 25
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 10,
+      "resguardos": [
+        {
+          "nombre": "SOCORPA",
+          "mpio": "BECERRIL",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 31600.472
+        },
+        {
+          "nombre": "KANKUAMO",
+          "mpio": "VALLEDUPAR",
+          "pueblo_onic": "KANKUAMO",
+          "area_pg_ha": 24302.18
+        },
+        {
+          "nombre": "IROKA",
+          "mpio": "AGUSTÍN CODAZZI",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 8711.202
+        },
+        {
+          "nombre": "MENKUE - MISAYA Y LA PISTA",
+          "mpio": "AGUSTÍN CODAZZI",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 379.751
+        },
+        {
+          "nombre": "CAMPO ALEGRE",
+          "mpio": "BECERRIL",
+          "pueblo_onic": "WIWA",
+          "area_pg_ha": 209.921
+        },
+        {
+          "nombre": "ITTITAKE ETTEENNAKA, CHIMILA",
+          "mpio": "EL COPEY",
+          "pueblo_onic": "CHIMILAS - ETTE ENEKA",
+          "area_pg_ha": 174.655
+        },
+        {
+          "nombre": "LA LAGUNA - EL COSO - CINCO CAMINOS",
+          "mpio": "LA PAZ",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 156.026
+        },
+        {
+          "nombre": "EL ROSARIO, BELLAVISTA Y YUKATÁN",
+          "mpio": "LA PAZ",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 134.425
+        },
+        {
+          "nombre": "BUSINCHAMA",
+          "mpio": "VALLEDUPAR",
+          "pueblo_onic": "IJKU - ARHUACO",
+          "area_pg_ha": 128.502
+        },
+        {
+          "nombre": "CAÑO PADILLA",
+          "mpio": "LA PAZ",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 67.501
+        }
+      ],
+      "bbox": [
+        7.674350063950142,
+        -74.13915998999909,
+        10.867787983509706,
+        -72.88575109998197
+      ],
+      "nombre_dpto": "CESAR"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1508,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1508,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1210
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 137
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 30
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 28
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 25
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 19
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 17
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 9
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 8
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 8
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1210
+      },
+      "pct_hecho_principal": 80.2
+    },
+    "icv": {
+      "score": 0.182,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.303,
+        "conflicto_norm": 0.302
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:47:10",
+  "periodo": "2018",
+  "_input_hash": "0a1ee2b09c6545a7"
+}

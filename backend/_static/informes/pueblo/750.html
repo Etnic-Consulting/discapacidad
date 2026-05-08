@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Yanacona · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Yanacona</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Yanacona, con una población de 34,897 personas, presenta un panorama de contrastes. A pesar de exhibir condiciones de vida materialmente superiores al promedio indígena nacional, con un NBI de solo 15.87% frente al 67.6% nacional, enfrenta una crisis severa en cuanto a discapacidad y afectaciones por el conflicto. La prevalencia de discapacidad es excepcionalmente alta, registrando 119.5 casos por cada mil habitantes, casi el doble de la media indígena de 60.0 por mil. Esta cifra refleja una profunda vulnerabilidad en salud y bienestar que requiere atención prioritaria.</p><p></p><p>Esta situación se enmarca en un contexto de fuerte impacto por el conflicto armado. Se registran 1,133 víctimas con discapacidad en el RUV, donde el desplazamiento forzado constituye el 67.4% de los hechos victimizantes. Este fenómeno ha provocado una diáspora del pueblo a lo largo de 30 departamentos, aunque su principal anclaje territorial y demográfico se mantiene en el departamento del Cauca. La combinación de una alta prevalencia de discapacidad y un historial de desplazamiento forzado define los desafíos más urgentes para la pervivencia y el bienestar del pueblo Yanacona.</p><p></p><p>La vitalidad cultural del pueblo Yanacona enfrenta un riesgo existencial debido a la pérdida de su lengua ancestral, ya que los datos censales reportan cero hablantes. A pesar de su resiliencia, manifestada en mejores indicadores de NBI, la presión sobre su salud, el desarraigo territorial y la fractura cultural configuran un escenario complejo. La respuesta debe ser integral, enfocada en la reparación a las víctimas, la atención a la discapacidad desde un enfoque propio y la revitalización de su identidad cultural y lingüística.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">34.897</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">8.320</div><div class="sub">prevalencia 119,5‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">30</div><div class="sub">31 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.311</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>El pueblo Yanacona cuenta con una población total de 34,897 personas, compuesta por 17,635 mujeres y 17,262 hombres, lo que resulta en una razón de masculinidad de 97.9 hombres por cada 100 mujeres. Su estructura poblacional muestra una base joven considerable, con 7,845 personas en el grupo de 0 a 14 años, pero el segmento más numeroso es la población en edad de trabajar (15-64 años) con 24,165 individuos. Esto resulta en un índice de dependencia relativamente bajo de 44.4. La pirámide poblacional se ensancha notablemente en los rangos de 15 a 29 años, sugiriendo una transición demográfica. Además, el índice de envejecimiento es de 36.8, reflejando una presencia significativa de mayores, con 2,887 personas de 65 años o más.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">3.928</td><td class="num">3.917</td><td class="num"><b>7.845</b></td><td class="num">22.5%</td></tr>
+      <tr><td>15-64 años</td><td class="num">11.981</td><td class="num">12.184</td><td class="num"><b>24.165</b></td><td class="num">69.2%</td></tr>
+      <tr><td>65+ años</td><td class="num">1.353</td><td class="num">1.534</td><td class="num"><b>2.887</b></td><td class="num">8.3%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>17.262</b></td><td class="num"><b>17.635</b></td><td class="num"><b>34.897</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">97,9</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">44,4</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">36,8</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>La prevalencia de limitaciones funcionales en el pueblo Yanacona es de 119.5 por cada 1,000 habitantes, una cifra alarmantemente alta que casi duplica el promedio nacional indígena de 60.0. Este indicador, que se calcula sobre una población de referencia de 69,650 personas, revela un total de 8,320 miembros del pueblo con algún tipo de discapacidad. Las limitaciones más frecuentes son las relacionadas con la visión, que afectan al 38.8% de esta población, seguidas por las dificultades para caminar, moverse o subir escaleras, con un 25.7%. Las limitaciones para oír (13.7%) también son significativas. Esta alta prevalencia podría indicar no solo condiciones de salud específicas, sino también un posible subregistro en otros pueblos, requiriendo un análisis más profundo de sus causas estructurales.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Yanacona</div>
+      <div class="num-big">119,5‰</div>
+      <div class="lbl">8.320 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: -59,5‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="bar"><div class="lbl">Ver</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">1.594</div></div>
+<div class="bar"><div class="lbl">Caminar</div><div class="track"><div class="fill" style="width: 66.2%"></div></div><div class="num">1.056</div></div>
+<div class="bar"><div class="lbl">Oir</div><div class="track"><div class="fill" style="width: 35.4%"></div></div><div class="num">564</div></div>
+<div class="bar"><div class="lbl">Relacionarse</div><div class="track"><div class="fill" style="width: 20.3%"></div></div><div class="num">323</div></div>
+<div class="bar"><div class="lbl">Aprender</div><div class="track"><div class="fill" style="width: 14.4%"></div></div><div class="num">229</div></div>
+
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Yanacona evidencia una notable dispersión geográfica, con presencia en 30 departamentos del país, lo cual es un claro indicador de procesos migratorios y de desplazamiento forzado. A pesar de esta diáspora, su principal núcleo poblacional se concentra en el departamento del Cauca, donde habitan 28,738 personas. La organización territorial se articula a través de 31 resguardos legalmente constituidos. Entre ellos, el resguardo de Guachicono, en el municipio de La Vega (Cauca), es el más poblado con 4,972 habitantes, seguido por Rio Blanco con 4,390. Esta fuerte base territorial en el Cauca contrasta con la presencia minoritaria en otros departamentos, reflejando la tensión entre su arraigo histórico y las dinámicas de desarraigo.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">34.825</td><td class="num">4.160</td><td class="num">119,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>CAUCA</td><td class="num">28.738</td><td class="num">3.577</td><td class="num">124,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>HUILA</td><td class="num">2.491</td><td class="num">233</td><td class="num">93,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">1.394</td><td class="num">169</td><td class="num">121,2‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>PUTUMAYO</td><td class="num">952</td><td class="num">114</td><td class="num">119,8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>QUINDIO</td><td class="num">663</td><td class="num">27</td><td class="num">40,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">271</td><td class="num">16</td><td class="num">59,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CUNDINAMARCA</td><td class="num">82</td><td class="num">8</td><td class="num">97,6‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CALDAS</td><td class="num">77</td><td class="num">7</td><td class="num">90,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>TOLIMA</td><td class="num">27</td><td class="num">2</td><td class="num">74,1‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Guachicono</td><td>CAUCA</td><td>LA VEGA</td><td class="num">4.972</td></tr>
+      <tr><td>Rio Blanco</td><td>—</td><td>—</td><td class="num">4.390</td></tr>
+      <tr><td>Caquiona</td><td>—</td><td>—</td><td class="num">3.185</td></tr>
+      <tr><td>Pancitara</td><td>—</td><td>—</td><td class="num">3.065</td></tr>
+      <tr><td>San Sebastian</td><td>—</td><td>—</td><td class="num">2.457</td></tr>
+      <tr><td>San Juan</td><td>CAUCA</td><td>BOLÍVAR</td><td class="num">788</td></tr>
+      <tr><td>Papallaqta</td><td>CAUCA</td><td>SAN SEBASTIÁN</td><td class="num">658</td></tr>
+      <tr><td>El moral</td><td>CAUCA</td><td>LA SIERRA</td><td class="num">550</td></tr>
+      <tr><td>El Oso</td><td>CAUCA</td><td>LA SIERRA</td><td class="num">426</td></tr>
+      <tr><td>Rumiyaco</td><td>HUILA</td><td>PITALITO</td><td class="num">170</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos disponibles del censo de 2018 indican una situación de extrema vulnerabilidad para la lengua ancestral del pueblo Yanacona. Según esta fuente, no se registraron hablantes ni personas que entiendan la lengua propia dentro de una población total de 34,897 miembros. Esta estadística, con un 0.0% tanto en habla como en comprensión, sitúa a la lengua en un estado de silencio estadístico, lo que representa una pérdida crítica del patrimonio cultural inmaterial. La ausencia de transmisión intergeneracional y de uso cotidiano exige acciones urgentes de documentación, recuperación y revitalización para evitar su desaparición definitiva, partiendo de la memoria de los mayores y de cualquier posible hablante no registrado por el censo.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>El pueblo Yanacona presenta un índice de Necesidades Básicas Insatisfechas (NBI) del 15.87%, un indicador notablemente más favorable que el promedio nacional indígena, que se ubica en un 67.6%. Esto sugiere condiciones de vida material relativamente mejores. Sin embargo, al desglosar sus componentes, se observa que las principales carencias estructurales se relacionan con el hacinamiento crítico, que afecta al 5.65% de la población, y la vivienda con materiales inadecuados, que impacta al 4.41%. La incidencia de la miseria o pobreza extrema es del 2.0%. Aunque el indicador general es positivo, estas cifras revelan que persisten desafíos importantes en la calidad de la vivienda y el espacio vital en los territorios Yanacona.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Yanacona</div>
+      <div class="num-big">15,9%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 78.1%"></div></div><div class="num">4,4%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 56.1%"></div></div><div class="num">3,2%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">5,7%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 25.7%"></div></div><div class="num">1,4%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 63.9%"></div></div><div class="num">3,6%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>El conflicto armado ha impactado de manera desproporcionada al pueblo Yanacona, con un registro de 1,133 víctimas con discapacidad reconocidas por la Unidad para las Víctimas (RUV). El hecho victimizante más recurrente es el desplazamiento forzado, que representa el 67.4% del total de los casos, afectando a 764 personas. Esta cifra evidencia que el desarraigo ha sido la principal estrategia de violencia utilizada contra ellos, lo que se correlaciona directamente con su dispersión en 30 departamentos. Otras afectaciones graves incluyen las amenazas, con 187 casos, y los homicidios, que suman 89 víctimas. El conflicto, por tanto, ha sido un factor determinante en la fragmentación social y territorial del pueblo Yanacona.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">1.133</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">67,4% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">764</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 24.5%"></div></div><div class="num">187</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 11.6%"></div></div><div class="num">89</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Perdida de Bienes Muebles o Inmuebles</div><div class="track"><div class="fill" style="width: 3.8%"></div></div><div class="num">29</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Acto terrorista / Atentados / Combates / Enfrentamientos / H</div><div class="track"><div class="fill" style="width: 3.1%"></div></div><div class="num">24</div></div>
+
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Compuesta (ICV) para el pueblo Yanacona se sitúa en 0.311, un valor que, aunque moderado, es impulsado principalmente por un factor crítico. La dimensión con mayor peso en la vulnerabilidad del pueblo es la alta prevalencia de discapacidad, cuyo componente normalizado alcanza un valor de 0.598. Este dato contrasta con los componentes de NBI (0.159) y de afectación por conflicto (0.227). Queda claro que, si bien las condiciones de vida y el impacto directo del conflicto son problemáticas, es la situación de salud y discapacidad la que eleva de forma más significativa la vulnerabilidad integral del pueblo Yanacona, marcando una prioridad ineludible para cualquier política de atención.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.159</td><td class="num">0.40</td><td class="num"><b>0.064</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.598</td><td class="num">0.30</td><td class="num"><b>0.179</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.227</td><td class="num">0.30</td><td class="num"><b>0.068</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.311</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un plan de choque en salud y bienestar específico para las 8,320 personas Yanacona con discapacidad, priorizando las limitaciones de visión (38.8%) y movilidad (25.7%), dada la prevalencia de 119.5 por 1,000, que duplica la media indígena.</li>
+      <li>Fortalecer los procesos de retorno, reparación y garantía de no repetición para las víctimas de desplazamiento forzado, que representan el 67.4% de los hechos victimizantes, enfocando esfuerzos en los 31 resguardos, especialmente en Cauca, para contrarrestar la dispersión forzada en 30 departamentos.</li>
+      <li>Iniciar un programa de emergencia para la recuperación de la memoria histórica y posible revitalización de la lengua Yanacona, partiendo del dato censal que indica 0 hablantes, para evitar la pérdida definitiva de este pilar de la identidad cultural.</li>
+      <li>Crear una línea de política pública para el mejoramiento de vivienda y saneamiento básico dentro de los territorios Yanacona, con el fin de abordar las carencias estructurales de hacinamiento (5.65%) y vivienda inadecuada (4.41%), a pesar de que el NBI general (15.87%) es comparativamente bajo.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/750/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[1.1712318630000595, -76.86981895699995], [2.2681099030000382, -76.01591133699998]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[1.1712318630000595, -76.86981895699995], [2.2681099030000382, -76.01591133699998]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([1.7196708830000489, -76.44286514699996]).addTo(map)
+    .bindPopup('<b>PUEBLO Yanacona</b>');
+</script>
+</body>
+</html>

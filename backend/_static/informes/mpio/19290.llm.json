@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Florencia (Cauca) concentra 5 personas indígenas según CNPV 2018, distribuidas en 4 pueblos. El 40% pertenece al pueblo Yanacona, único con representación significativa. La ausencia de resguardos en el municipio refleja una debilidad en la tenencia territorial colectiva. Este patrón sugiere una dispersión poblacional sin arraigo institucionalizado.",
+  "demografia": "La pirámide etaria no aplica a este nivel de agregación municipal. Los datos demográficos se presentan como totales por pueblo (n=5), sin estructura etaria detallada. La población indígena en Florencia es mínima y fragmentada, lo que impide análisis de dinámicas generacionales. Se requiere desagregación por edad para evaluar vitalidad poblacional.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este municipio. La sección no aplica al nivel de agregación departamental/municipal. Se desconoce la situación de salud específica de la población indígena en Florencia. Esto limita cualquier análisis comparativo con promedios nacionales o departamentales.",
+  "territorial": "Florencia registra 0 resguardos indígenas, a pesar de ser municipio con población Yanacona, Nasa, Pastos y Totoro. La caja geográfica (bbox) delimita un área sin territorios colectivos reconocidos. Esta ausencia contrasta con la presencia histórica de pueblos en la región y evidencia fallas en la titulación territorial.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede evaluar la vitalidad lingüística de los pueblos presentes (Yanacona, Nasa, Pastos, Totoro). La pérdida de lenguas en contextos urbanos o dispersos es un riesgo no cuantificado aquí.",
+  "vida": "No hay datos de NBI disponibles para Florencia. El promedio indígena nacional (67.6%) no puede compararse localmente. La pobreza multidimensional en este municipio indígena es un vacío crítico que requiere atención en futuras mediciones oficiales.",
+  "conflicto": "Florencia registra 6 víctimas de conflicto con discapacidad entre 1985-2024. El 83.3% corresponde a desplazamiento forzado (5 casos), seguido de homicidio (1). Este patrón refleja la vulnerabilidad territorial del pueblo Yanacona y la falta de protección en zonas de frontera agrícola.",
+  "icv": "El ICV de Florencia es 0.0, con todos sus componentes en cero excepto conflicto (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), pero la ausencia de datos locales distorsiona el cálculo. Este resultado subraya la necesidad de registros específicos para municipios indígenas.",
+  "recomendaciones": [
+    "Priorizar la identificación y titulación de territorios colectivos para los pueblos Yanacona, Nasa, Pastos y Totoro en Florencia, dado que no existen resguardos registrados (n_resguardos: 0).",
+    "Incluir a Florencia en encuestas de lengua y NBI con desagregación étnica para superar la falta de datos (_sin_datos: true en lengua y NBI).",
+    "Diseñar un plan de atención psicosocial para víctimas de desplazamiento forzado, que represente el 83.3% de los casos registrados (victimas_total_disc: 6).",
+    "Fortalecer la base de datos municipal con registros de prevalencia y discapacidad, actualmente ausentes (_sin_datos: true en capacidades_diversas).",
+    "Articular con la CRC y el Ministerio del Interior para garantizar la consulta previa en proyectos de desarrollo que afecten territorios ancestrales de estos pueblos."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL DESCANSO, territorio Nasa en Putumayo, alberga 196 habitantes en 290.029 hectáreas. Su población enfrenta una afectación histórica por conflicto armado, con 259 víctimas registradas entre 1985-2024. El desplazamiento forzado (70.7% de los casos) y homicidios (35) son los hechos victimizantes más recurrentes. La vulnerabilidad territorial se agrava por la ausencia de datos sobre NBI y lengua, limitando la planificación intercultural.",
+  "demografia": "La población total es de 196 habitantes según DANE-CNPV 2018. La pirámide etaria no puede analizarse por falta de datos desagregados por edad y sexo en este nivel. Se requiere cruzar con registros locales para evaluar dinámicas generacionales y migración interna en este territorio amazónico.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de discapacidad en este resguardo. El promedio indígena nacional (60.0%) no puede contrastarse localmente. La limitación interpretativa impide evaluar brechas en salud o acceso a servicios para personas con discapacidad en EL DESCANSO.",
+  "territorial": "EL DESCANSO ocupa 290.029 hectáreas en Puerto Guzmán (Putumayo), dentro de la macrorregión AMAZONIA. Su ubicación geográfica (coordenadas bbox) refleja un territorio disperso en la selva amazónica. La concentración poblacional en este resguardo es mínima frente a la extensión territorial, evidenciando baja densidad demográfica.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el uso de la lengua Nasa ni su vitalidad cultural en el territorio. Se recomienda priorizar registros etnográficos para preservar la identidad lingüística del pueblo Nasa en Putumayo.",
+  "vida": "No hay información sobre NBI en EL DESCANSO. El promedio indígena nacional (67.6%) no puede compararse. La ausencia de datos impide medir pobreza multidimensional, acceso a servicios básicos o condiciones de vida en este territorio afectado por conflicto armado.",
+  "conflicto": "Se registraron 259 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (183 casos, 70.7%). Los homicidios (35) y amenazas (22) completan el patrón de violencia. La alta incidencia de desplazamiento refleja la presión territorial en Putumayo, vinculada a economías ilegales y presencia de actores armados.",
+  "icv": "El ICV de EL DESCANSO es 0.016, con conflicto como dimensión dominante (0.052). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero el componente NBI es 0.0 por falta de datos. Este indicador subraya la urgencia de abordar la violencia como factor estructural de vulnerabilidad.",
+  "recomendaciones": [
+    "Priorizar la atención psicosocial para 259 víctimas de conflicto, especialmente en desplazamiento forzado (183 casos), con enfoque diferencial Nasa en Putumayo.",
+    "Generar registros locales sobre NBI y lengua para superar la ausencia de datos y diseñar políticas públicas con perspectiva territorial.",
+    "Fortalecer la seguridad alimentaria en 290.029 hectáreas, considerando la baja densidad poblacional y la presión por economías ilegales.",
+    "Implementar rutas de retorno y protección territorial para 183 casos de desplazamiento, en articulación con OPIAC y OZIP.",
+    "Incluir el componente de conflicto en planes de desarrollo municipal, dado que el 70.7% de las víctimas son por desplazamiento forzado."
+  ]
+}

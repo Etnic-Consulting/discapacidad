@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Cota concentra el 98% de su población indígena en el pueblo Muisca (3.378 personas), con solo 72 personas pertenecientes a otros 19 pueblos. La presencia de un único resguardo (372.333 ha) refleja una alta concentración territorial. Los indicadores de conflicto y NBI no están disponibles, limitando el análisis integral. La baja diversidad poblacional y la ausencia de datos críticos subrayan la necesidad de fortalecer el registro diferencial.",
+  "demografia": "La población indígena de Cota presenta una pirámide etaria sesgada hacia adultos mayores, con el 98% concentrado en el pueblo Muisca. La ausencia de datos sobre capacidades diversas impide analizar vulnerabilidades específicas. La estructura demográfica refleja un proceso histórico de asimilación cultural y pérdida de diversidad étnica en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. La falta de registros diferenciados a nivel municipal limita el análisis de necesidades específicas. Se requiere implementar sistemas de información con enfoque étnico para superar el sub-registro actual.",
+  "territorial": "Cota cuenta con un único resguardo (372.333 ha) bajo dominio Muisca, lo que evidencia una alta concentración territorial. La delimitación geográfica (4.7227°N, -74.1628°W) refleja un territorio reducido frente a la diversidad de pueblos presentes. La escasez de resguardos para otros pueblos limita su autonomía y desarrollo cultural.",
+  "lengua": "Los datos sobre lenguas indígenas en Cota no están disponibles. La ausencia de registros lingüísticos impide evaluar la vitalidad cultural y los procesos de revitalización. Se requiere priorizar la documentación de lenguas en riesgo en el territorio.",
+  "vida": "No hay datos disponibles sobre NBI en Cota. El promedio indígena nacional (67.6%) sugiere brechas significativas, pero no puede contrastarse localmente. La falta de información impide diseñar políticas públicas diferenciadas para este municipio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Cota (0 casos entre 1985-2024). La ausencia de hechos victimizantes no implica ausencia de riesgo. La falta de datos desagregados oculta posibles violencias estructurales contra la población indígena.",
+  "icv": "El ICV de Cota es 0.0, con todos sus componentes en cero debido a la falta de datos. Esta métrica refleja la ausencia de información sistematizada sobre NBI, prevalencia y conflicto. La metodología ONIC requiere fortalecer la recolección de datos para calcular indicadores territoriales.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal con enfoque étnico para superar el sub-registro actual, priorizando la documentación de pueblos minoritarios (solo 72 personas fuera del Muisca).",
+    "Diseñar políticas de revitalización cultural para los 19 pueblos minoritarios, considerando su baja representación (2% de la población indígena).",
+    "Fortalecer la protección del resguardo Muisca de Cota (372.333 ha) frente a presiones urbanas, garantizando su autonomía territorial.",
+    "Establecer un observatorio municipal de derechos humanos con enfoque indígena para monitorear violencias estructurales, dado que los datos de conflicto están ausentes.",
+    "Incluir a Cota en los planes departamentales de salud intercultural, ante la falta de datos sobre prevalencia y NBI que impiden diseñar respuestas diferenciadas."
+  ]
+}

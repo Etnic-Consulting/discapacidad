@@ -1,0 +1,224 @@
+{
+  "tipo": "dpto",
+  "id": "25",
+  "nombre": "CUNDINAMARCA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 9897,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 9897,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 791,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 791,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 9897,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 79.9,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "470",
+          "con_disc": 540,
+          "total": 6393
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 95,
+          "total": 1189
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 27,
+          "total": 348
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 17,
+          "total": 290
+        },
+        {
+          "cod_pueblo": "840",
+          "con_disc": 11,
+          "total": 90
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 8,
+          "total": 82
+        },
+        {
+          "cod_pueblo": "050",
+          "con_disc": 6,
+          "total": 42
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 5,
+          "total": 45
+        },
+        {
+          "cod_pueblo": "770",
+          "con_disc": 5,
+          "total": 23
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 5,
+          "total": 111
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 3,
+      "resguardos": [
+        {
+          "nombre": "MUISCA DE COTA",
+          "mpio": "COTA",
+          "pueblo_onic": "MUISCA",
+          "area_pg_ha": 372.333
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA MHUYSQA CHUTA FA ABA \"LOS HIJOS DEL MAIZ\"",
+          "mpio": "SESQUILÉ",
+          "pueblo_onic": "MUISCA",
+          "area_pg_ha": 207.098
+        },
+        {
+          "nombre": "MUISCA DE FONQUETÁ Y CERCA DE PIEDRA",
+          "mpio": "CHÍA",
+          "pueblo_onic": "MUISCA",
+          "area_pg_ha": 200.274
+        }
+      ],
+      "bbox": [
+        3.7301290038564603,
+        -74.89062890230025,
+        5.8372575385679255,
+        -73.05255695460244
+      ],
+      "nombre_dpto": "CUNDINAMARCA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 91,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 91,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 61
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 10
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 61
+      },
+      "pct_hecho_principal": 67.0
+    },
+    "icv": {
+      "score": 0.125,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.4,
+        "conflicto_norm": 0.018
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:48:23",
+  "periodo": "2018",
+  "_input_hash": "23fffbf3e45a1475"
+}

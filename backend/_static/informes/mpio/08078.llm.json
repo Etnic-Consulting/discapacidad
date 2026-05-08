@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Baraona (Atlántico) concentra el 99.1% de su población indígena en el pueblo Mokaná (7.259 personas), según CNPV 2018. La ausencia de resguardos y la dispersión de 12 pueblos minoritarios reflejan una territorialidad indígena fragmentada. El ICV municipal de 0.0 evidencia condiciones críticas en NBI, prevalencia y conflicto, con solo 2 víctimas de desplazamiento forzado registradas entre 1985-2024.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal, pues los datos provienen de agregación departamental. El municipio registra 7.327 personas indígenas, con el 99.1% perteneciente al pueblo Mokaná. La presencia de 13 pueblos en un territorio sin resguardos sugiere alta movilidad y pérdida de autonomía territorial.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. Se reconoce la limitación de no contar con información específica sobre condiciones de salud o educación indígena a nivel local. Este vacío impide evaluar el sub-registro de necesidades prioritarias en la población Mokaná y otros pueblos.",
+  "territorial": "Baraona carece de resguardos indígenas, a pesar de albergar 13 pueblos. La dispersión geográfica se limita a un área de 15.37 km² (bbox), lo que intensifica la vulnerabilidad territorial. La concentración del 99.1% de la población en el pueblo Mokaná contrasta con la ausencia de estructuras colectivas de protección.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística de los pueblos presentes, incluyendo el Mokaná, principal grupo poblacional.",
+  "vida": "Los datos de NBI no están disponibles a nivel municipal. El promedio indígena nacional de 67.6% sugiere que las condiciones de vida en Baraona podrían ser críticas, pero se requiere información local para confirmar brechas específicas. La falta de datos impide un análisis preciso.",
+  "conflicto": "Se registraron 2 víctimas de desplazamiento forzado entre 1985-2024, todas asociadas a este hecho (100%). La ausencia de otros tipos de violencia indica sub-registro o baja visibilidad de conflictos en el RUV. La vulnerabilidad del pueblo Mokaná se agrava al no contar con resguardos.",
+  "icv": "El ICV municipal es 0.0, con todos sus componentes (NBI, prevalencia y conflicto) en 0.0. Esta puntuación refleja la máxima vulnerabilidad posible, alineada con la ausencia de datos en NBI y prevalencia. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con precisión.",
+  "recomendaciones": [
+    "Priorizar la constitución de resguardos para el pueblo Mokaná, dado que concentra el 99.1% de la población indígena municipal y carece de territorio colectivo.",
+    "Generar un censo lingüístico local para identificar la vitalidad del idioma Mokaná y otros pueblos, ante la ausencia de datos.",
+    "Incluir a Baraona en planes departamentales de prevención de desplazamiento forzado, considerando las 2 víctimas registradas (100% del total municipal).",
+    "Articular con la ONIC y el Ministerio del Interior para garantizar el acceso a datos desagregados de NBI y prevalencia en territorios sin resguardo.",
+    "Diseñar un plan de emergencia para el pueblo Mokaná, dado el ICV de 0.0 y la falta de información en dimensiones críticas."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guachetá reporta una población indígena de 2 personas según el CNPV 2018, distribuidas en dos pueblos: Coreguaje y Kamëntsa, cada uno con 1 habitante. La ausencia de resguardos y datos de NBI o lengua refleja una representación mínima y fragmentada. La vulnerabilidad territorial se evidencia en un ICV de 0.0, donde todos los componentes normativos son nulos, señalando una exclusión estructural.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida muestra (n=2). La distribución por pueblos —Coreguaje y Kamëntsa— sugiere una presencia histórica dispersa sin concentración demográfica. Los datos reflejan una pérdida de continuidad territorial más que dinámicas poblacionales activas.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de registros impide analizar condiciones de salud o discapacidad, limitando cualquier lectura sobre sub-registros. Se requiere priorizar la recolección de datos desagregados por pueblo para evitar invisibilización.",
+  "territorial": "Guachetá no registra resguardos indígenas, a pesar de su bbox geográfico que abarca áreas potencialmente ancestrales. La ausencia de territorios colectivos contrasta con la presencia de dos pueblos, indicando una desconexión entre identidad cultural y reconocimiento legal. La dispersión geográfica no se traduce en protección territorial.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en este municipio. La falta de registros lingüísticos impide evaluar la vitalidad cultural o procesos de revitalización. Se recomienda incluir preguntas específicas sobre lengua en futuros censos para garantizar la permanencia de los saberes ancestrales.",
+  "vida": "Los datos de NBI no están disponibles para Guachetá. Sin embargo, al comparar con el promedio indígena nacional (67.6%), se infiere una brecha crítica en condiciones de vida. La ausencia de indicadores locales dificulta priorizar acciones, pero la vulnerabilidad estructural es evidente.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Guachetá entre 1985-2024 (n=0). La ausencia de hechos violentos no implica seguridad, sino falta de sistematización de datos. La lectura territorial exige investigar causas de esta omisión para evitar normalizar la exclusión.",
+  "icv": "El ICV de 0.0 en Guachetá refleja la suma de componentes nulos: NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta puntuación sitúa al municipio en el extremo inferior de la escala, evidenciando una crisis multidimensional. La fórmula del ICV subraya la urgencia de intervenciones integrales.",
+  "recomendaciones": [
+    "Realizar un censo étnico local con enfoque diferencial para identificar a los pueblos Coreguaje y Kamëntsa, citando la población total de 2 personas reportada en el CNPV 2018.",
+    "Priorizar la creación de un resguardo indígena en Guachetá, dado que no existen territorios colectivos registrados, a pesar de la presencia histórica de los pueblos.",
+    "Incluir preguntas sobre lengua y discapacidad en el próximo CNPV para Guachetá, donde actualmente no hay datos disponibles.",
+    "Diseñar un plan de salud intercultural con enfoque en pueblos minoritarios, considerando la ausencia de registros de prevalencia y el promedio indígena nacional de NBI 67.6%.",
+    "Implementar un sistema de alerta temprana para conflictos en zonas rurales, ante la falta de datos sistematizados sobre víctimas en el municipio."
+  ]
+}

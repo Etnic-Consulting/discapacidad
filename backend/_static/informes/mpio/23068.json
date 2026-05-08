@@ -1,0 +1,172 @@
+{
+  "tipo": "mpio",
+  "id": "23068",
+  "nombre": "AYAPEL",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1855,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1855,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 14,
+      "top": [
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 1796
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "810",
+          "pueblo": "GUANE",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "080",
+          "pueblo": "BARI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "800",
+        "pueblo": "ZENU",
+        "poblacion": 1796
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        8.040137066372179,
+        -75.339965612387,
+        8.522802908029295,
+        -74.78094539276174
+      ],
+      "nombre_mpio": "AYAPEL",
+      "cod_dpto": "23"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 24,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 24,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 20
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 4
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 20
+      },
+      "pct_hecho_principal": 83.3
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.005
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:01:25",
+  "periodo": "2018",
+  "_input_hash": "fc8d46f810e6ffc4"
+}

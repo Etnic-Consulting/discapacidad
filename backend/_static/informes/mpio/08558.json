@@ -1,0 +1,105 @@
+{
+  "tipo": "mpio",
+  "id": "08558",
+  "nombre": "POLONUEVO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 26,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 26,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 3,
+      "top": [
+        {
+          "cod_pueblo": "820",
+          "pueblo": "MOKANA",
+          "poblacion": 13
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 3
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "820",
+        "pueblo": "MOKANA",
+        "poblacion": 13
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        10.707392007914901,
+        -74.89612616143535,
+        10.813043449440384,
+        -74.80755418731707
+      ],
+      "nombre_mpio": "POLONUEVO",
+      "cod_dpto": "08"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:15:02",
+  "periodo": "2018",
+  "_input_hash": "d027931868bd2ac6"
+}

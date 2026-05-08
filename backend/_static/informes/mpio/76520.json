@@ -1,0 +1,214 @@
+{
+  "tipo": "mpio",
+  "id": "76520",
+  "nombre": "PALMIRA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 378,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 378,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 86
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 70
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 54
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 30
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 21
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 17
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "360",
+          "pueblo": "COFAN",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "330",
+          "pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "560",
+        "pueblo": "PASTOS",
+        "poblacion": 86
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        3.450302868280799,
+        -76.4917377509621,
+        3.717976638009469,
+        -75.95003240874337
+      ],
+      "nombre_mpio": "PALMIRA",
+      "cod_dpto": "76"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 26,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 26,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 16
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 16
+      },
+      "pct_hecho_principal": 61.5
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.005
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:31:06",
+  "periodo": "2018",
+  "_input_hash": "3c0e560e49291b33"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Almaguer (Cauca) concentra el 99.5% de su población indígena en el pueblo Yanacona (3,314 personas). La ausencia de resguardos y la alta dispersión geográfica (6 pueblos en 3,329 habitantes) reflejan un patrón de atomización territorial. El conflicto armado impacta fuertemente: 101 víctimas registradas entre 1985-2024, con desplazamiento forzado como principal hecho victimizante (66 casos).",
+  "demografia": "La pirámide etaria muestra una base joven con 3,314 Yanacona (99.5% del total indígena municipal) y solo 15 personas de otros 5 pueblos. La concentración poblacional en un solo grupo étnico limita la diversidad cultural y dificulta la articulación territorial. Los datos provienen del CNPV 2018 y son confiables (n=3,329).",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades en este nivel. La sección `capacidades_diversas` carece de información municipal, aunque el promedio indígena nacional de discapacidad es 60.0%. Esto impide analizar brechas específicas en Almaguer. Se requiere desagregación municipal para evaluar vulnerabilidades.",
+  "territorial": "Almaguer registra cero resguardos indígenas, contrastando con su diversidad étnica. La dispersión geográfica se evidencia en la bbox que abarca coordenadas entre -76.937° y -76.723° de longitud. La ausencia de territorios colectivos limita la autonomía y protección legal de los pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se pueden analizar patrones de vitalidad lingüística ni estrategias de revitalización. Se recomienda priorizar registros etnográficos locales para complementar vacíos estadísticos.",
+  "vida": "No hay información sobre NBI para Almaguer. El promedio indígena nacional es 67.6%, pero sin datos locales no es posible comparar condiciones de vida. La falta de registros impide identificar necesidades en acceso a servicios básicos o infraestructura. Se requiere sistematización de indicadores sociales.",
+  "conflicto": "101 víctimas del conflicto armado afectan al 3.0% de la población indígena municipal. El desplazamiento forzado (66 casos, 65.3% del total) domina el patrón victimizante, seguido de amenazas (19) y homicidios (8). La concentración en hechos violentos refleja un territorio históricamente disputado.",
+  "icv": "El ICV de Almaguer es 0.006, con componente de conflicto como dimensión dominante (0.02). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero el score cercano a cero sugiere graves carencias estructurales. La posición relativa frente a otros municipios debe analizarse en contexto regional.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena Yanacona en Almaguer para garantizar autonomía territorial, citando la concentración del 99.5% de la población indígena en este pueblo.",
+    "Implementar un sistema de alertas tempranas contra desplazamiento forzado, dado que el 65.3% de las víctimas del conflicto son por este hecho.",
+    "Realizar un censo lingüístico municipal para documentar la vitalidad del Yanacona y otros pueblos, ante la ausencia de datos en la sección lengua.",
+    "Diseñar políticas de salud diferencial que aborden las brechas en discapacidad, usando el promedio indígena nacional (60.0%) como referencia.",
+    "Incluir indicadores de NBI en registros municipales para comparar con el promedio nacional (67.6%) y focalizar intervenciones en servicios básicos."
+  ]
+}

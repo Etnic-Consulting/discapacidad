@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Magüi, Nariño, alberga una población indígena de 50 personas según el CNPV 2018, concentrada en un 98% en el pueblo AWA. La ausencia de resguardos indígenas en el territorio refleja una debilidad en la titulación colectiva. El desplazamiento forzado afecta al 90% de las víctimas registradas, evidenciando una crisis humanitaria persistente en la región.",
+  "demografia": "La población indígena de Magüi presenta una estructura demográfica concentrada en el grupo etario adulto, con 49 personas AWA y solo 1 del pueblo Pastos. La pirámide etaria no puede analizarse con detalle debido a la falta de datos desagregados por edad. La población total indígena es mínima en comparación con el contexto departamental y nacional.",
+  "prevalencia": "Los datos de prevalencia de condiciones de salud o discapacidad no están disponibles a nivel municipal. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse con Magüi. Esta limitación impide evaluar la situación específica del municipio y subraya la necesidad de sistemas de información locales.",
+  "territorial": "Magüi carece de resguardos indígenas, a pesar de contar con un territorio geográfico definido por coordenadas. La ausencia de territorios colectivos reconocidos limita la autonomía y protección de los pueblos indígenas. La dispersión geográfica sin delimitación legal agrava la vulnerabilidad de las comunidades.",
+  "lengua": "Los datos sobre lengua materna no están disponibles para Magüi. No se pueden analizar procesos de revitalización lingüística ni la situación de las lenguas AWA o Pastos en el territorio. Esta carencia de información dificulta la planificación cultural y educativa.",
+  "vida": "El NBI no está disponible para Magüi, aunque el promedio indígena nacional es 67.6%. La falta de datos impide evaluar la pobreza multidimensional en el municipio. Se requiere un diagnóstico local para identificar brechas en educación, salud y condiciones de vida.",
+  "conflicto": "Magüi registra 10 víctimas de conflicto, con el 90% afectado por desplazamiento forzado. La desaparición forzada representa el 10% restante. Estos datos reflejan una dinámica de violencia estructural que exige atención prioritaria en protección y reparación.",
+  "icv": "El ICV de Magüi es 0.001, con componentes normalizados en cero excepto conflicto (0.002). La fórmula pondera el NBI, prevalencia y conflicto, destacando la dimensión de violencia como factor crítico. La posición relativa es crítica en comparación con estándares nacionales.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos indígenas en Magüi para garantizar autonomía territorial, dado que no existen territorios colectivos reconocidos a pesar de la presencia de pueblos indígenas.",
+    "Implementar un sistema de registro municipal de discapacidades y condiciones de salud para contrastar el promedio nacional de 60.0% y diseñar políticas públicas locales.",
+    "Fortalecer programas de prevención del desplazamiento forzado, que afecta al 90% de las víctimas registradas en Magüi según datos de 1985-2024.",
+    "Incluir a Magüi en estrategias departamentales de revitalización lingüística, considerando la ausencia de datos sobre lengua materna en el municipio.",
+    "Realizar un diagnóstico de NBI en Magüi para compararlo con el promedio indígena nacional de 67.6% y priorizar intervenciones en educación y salud."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL ZAHINO GUAYABITO MURIAYTUY, territorio colectivo del pueblo WAYUÚ en La Guajira, alberga 883 habitantes en 1.149 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI, prevalencia y conflicto. Este vacío evidencia la necesidad de fortalecer sistemas de información locales para una planificación territorial precisa.",
+  "demografia": "La población total del resguardo es de 883 personas, según datos DANE-CNPV 2018. No se cuenta con datos de pirámide etaria ni estructura por edades, lo que limita el análisis de dinámicas generacionales. La falta de desagregación impide evaluar la vitalidad demográfica del territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el resguardo. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. La ausencia de registros refleja brechas en sistemas de salud territoriales.",
+  "territorial": "El resguardo tiene un área de 1.149 hectáreas en el municipio de Barrancas, La Guajira. Su delimitación geográfica está definida por coordenadas BBOX, pero no se reportan territorios asociados o dispersión. La concentración territorial es reducida, lo que limita opciones de expansión.",
+  "lengua": "No hay datos disponibles sobre lengua en el resguardo. El pueblo WAYUÚ, dominante en la zona, mantiene el wayuunaiki como lengua materna, pero su uso en el territorio no está documentado en este informe.",
+  "vida": "No se registran datos de NBI para el resguardo. El promedio indígena nacional es 67.6%, pero no es posible comparar condiciones de vida locales. La falta de información impide evaluar brechas socioeconómicas en el territorio.",
+  "conflicto": "No se reportan víctimas de conflicto con discapacidad en el resguardo (0 casos entre 1985-2024). No hay hechos violentos registrados. La ausencia de datos no implica ausencia de riesgo, sino limitaciones en sistemas de monitoreo territorial.",
+  "icv": "El ICV del resguardo es 0.0, derivado de la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede aplicarse. Esto refleja la urgencia de mejorar la recolección de información local.",
+  "recomendaciones": [
+    "Implementar un sistema de registro de datos demográficos y de salud en el resguardo, priorizando la identificación de grupos vulnerables con enfoque diferencial (población total: 883).",
+    "Realizar un diagnóstico participativo de condiciones de vida (NBI) para comparar con el promedio indígena nacional (67.6%) y diseñar estrategias de mejora.",
+    "Fortalecer el monitoreo de hechos de conflicto en el territorio, documentando casos con enfoque en pueblos indígenas (0 víctimas registradas).",
+    "Documentar el uso de la lengua wayuunaiki en el resguardo para preservar la identidad cultural del pueblo WAYUÚ.",
+    "Establecer alianzas con organizaciones regionales como AACIWASUG para mejorar la recolección de datos territoriales y priorizar acciones de incidencia política."
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "tipo": "mpio",
+  "id": "27001",
+  "nombre": "QUIBDO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 4752,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 4752,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 16,
+      "top": [
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 4006
+        },
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 244
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 184
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 149
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 95
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 56
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "790",
+          "pueblo": "YURUTI",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "920",
+          "pueblo": "INDIGENAS-VENEZUELA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "732",
+          "pueblo": "YARI",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "280",
+        "pueblo": "EMBERA",
+        "poblacion": 4006
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 15,
+      "resguardos": [
+        {
+          "nombre": "ALTO RÍO TAGACHÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 21664.855
+        },
+        {
+          "nombre": "LA CRISTALINA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 13566.809
+        },
+        {
+          "nombre": "ALTO RÍO BUEY",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 13091.181
+        },
+        {
+          "nombre": "BETÉ - AUROBETÉ Y AURO DEL BUEY",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 11509.273
+        },
+        {
+          "nombre": "RÍO BEBARAMÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8130.343
+        },
+        {
+          "nombre": "PASO DEL RÍO SALADO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6530.842
+        },
+        {
+          "nombre": "ALTO DEL RÍO MUNGUIDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 5580.009
+        },
+        {
+          "nombre": "RÍO ICHO Y LA QUEBRADA BARATUDÓ",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 5113.211
+        },
+        {
+          "nombre": "RÍO NEGUA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 4648.319
+        },
+        {
+          "nombre": "EL VEINTE, PLAYA ALTA Y EL NOVENTA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 4341.193
+        },
+        {
+          "nombre": "CAIMANERO DE JAMPAPA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1769.681
+        },
+        {
+          "nombre": "MUNGARADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 532.655
+        },
+        {
+          "nombre": "MOTORDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 460.632
+        },
+        {
+          "nombre": "EL VEINTIUNO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 245.148
+        },
+        {
+          "nombre": "GUARANDO CARRIZAL",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 69.113
+        }
+      ],
+      "bbox": [
+        5.620963062052037,
+        -77.14011373260217,
+        6.346673321782361,
+        -76.16018920677328
+      ],
+      "nombre_mpio": "QUIBDO",
+      "cod_dpto": "27"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 65,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 65,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 40
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 9
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 4
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 40
+      },
+      "pct_hecho_principal": 61.5
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.013
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:28:38",
+  "periodo": "2018",
+  "_input_hash": "c41a8ea09846881b"
+}

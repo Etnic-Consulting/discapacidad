@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Villetá registra una población indígena total de 21 personas según CNPV 2018, distribuidas en 5 pueblos. El WIWA es el grupo principal con 7 habitantes, seguido por el PIJAO (5) y otros. La ausencia de resguardos y datos de NBI o lengua limita el análisis integral. La vulnerabilidad territorial se refleja en un ICV de 0.0, resultado de la falta de información disponible para sus componentes.",
+  "demografia": "La población indígena de Villetá suma 21 personas, con una pirámide etaria no disponible en los datos. El WIWA concentra el 33.3% de la población, seguido por el PIJAO (23.8%). La diversidad étnica se evidencia en la presencia de 5 pueblos, aunque con poblaciones reducidas. La ausencia de datos de capacidades diversas impide analizar barreras específicas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en Villetá. La falta de registros confiables a nivel municipal limita cualquier análisis de sub-registro. Se requiere cruzar información con fuentes departamentales o nacionales para identificar patrones de afectación en salud.",
+  "territorial": "Villetá no cuenta con resguardos indígenas registrados, a pesar de albergar a 5 pueblos distintos. La dispersión geográfica se limita a un área bbox de coordenadas específicas, sin territorios colectivos reconocidos. La ausencia de resguardos refleja una debilidad en la protección territorial y la autonomía indígena.",
+  "lengua": "Los datos sobre lengua indígena en Villetá no están disponibles. No es posible determinar la vitalidad de las lenguas de los pueblos presentes ni su uso en contextos cotidianos o educativos. Esta carencia dificulta la planificación de estrategias de revitalización cultural.",
+  "vida": "No hay información sobre NBI en Villetá, aunque el promedio indígena nacional es del 67.6%. La brecha con este indicador no puede calcularse. La falta de datos impide evaluar condiciones de vida como acceso a servicios básicos, educación o vivienda digna.",
+  "conflicto": "Villetá reporta 0 víctimas de conflicto con discapacidad entre 1985-2024. La ausencia de hechos violentos registrados sugiere baja exposición, pero también podría reflejar sub-registro. La falta de datos detallados impide analizar patrones de violencia estructural o desplazamiento forzado.",
+  "icv": "El ICV de Villetá es 0.0, derivado de la ausencia de datos en sus componentes (NBI, prevalencia y conflicto). Este resultado subraya la necesidad de mejorar la recolección de información territorial para priorizar intervenciones. La fórmula aplicada no refleja la realidad debido a la falta de inputs.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que solo se registran 21 personas indígenas en CNPV 2018.",
+    "Gestionar el reconocimiento de resguardos para los 5 pueblos presentes, especialmente para el WIWA (7 habitantes), garantizando protección territorial y autonomía.",
+    "Sistematizar registros de lengua y cultura en Villetá, priorizando la documentación de las 5 lenguas de los pueblos identificados.",
+    "Implementar un sistema de alerta temprana para violencia y conflicto en municipios sin datos históricos, como Villetá, evitando sub-registro.",
+    "Diseñar un plan de acción para reducir brechas sociales, cruzando datos municipales con promedios indígenas nacionales (ej. NBI 67.6%), aunque no estén disponibles localmente."
+  ]
+}

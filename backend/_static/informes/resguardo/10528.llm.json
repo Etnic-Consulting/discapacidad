@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo PIPALTA - PALBI - YAGUAPÍ, territorio ancestral del pueblo Awá en Nariño, registra una población total de 0 según datos DANE-CNPV 2018. Con un área de 2.607,15 hectáreas, este territorio enfrenta vacíos críticos en información socioeconómica y de conflicto. La ausencia de datos demográficos y de necesidades básicas refleja limitaciones en el monitoreo territorial para este resguardo.",
+  "demografia": "Los datos demográficos para este resguardo no están disponibles en el sistema (n=0). Esta limitación impide analizar la pirámide etaria o la estructura poblacional del pueblo Awá en este territorio específico. Se requiere fortalecer la recolección de datos a nivel local para superar este vacío informativo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo (sin datos). La falta de información impide evaluar necesidades específicas de este territorio. Se recomienda priorizar estudios locales para identificar brechas en salud y discapacidad en la población Awá.",
+  "territorial": "El resguardo PIPALTA - PALBI - YAGUAPÍ tiene un área de 2.607,15 hectáreas ubicada en Barbacoas, Nariño. Su delimitación geográfica (bbox) confirma su carácter de territorio colectivo Awá. Este espacio, aunque pequeño, es vital para la autonomía y la pervivencia cultural del pueblo en la región Occidente.",
+  "lengua": "Los datos sobre lengua en este resguardo no están disponibles. Esta ausencia impide evaluar la vitalidad lingüística del pueblo Awá en este territorio específico. Se requiere investigación participativa para documentar el uso y transmisión de la lengua propia en el resguardo.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero esta cifra no puede contrastarse con la situación local. La falta de información limita la planificación de estrategias de bienestar para la comunidad Awá.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (n=0) según el RUV entre 1985-2024. La ausencia de datos no implica ausencia de riesgo, sino limitaciones en el registro territorial. Se debe fortalecer el sistema de alertas tempranas para proteger a la población Awá en este territorio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para este resguardo es 0.0, derivado de la falta de datos en componentes como NBI, prevalencia y conflicto. Esta métrica refleja vacíos estructurales en el monitoreo territorial. Se requiere inversión en sistemas de información para calcular indicadores precisos.",
+  "recomendaciones": [
+    "Realizar un censo comunitario participativo para registrar la población Awá en el resguardo, dado que los datos oficiales muestran n=0 (poblacion_total.value: 0).",
+    "Implementar un sistema de registro local de víctimas de conflicto para superar la limitación de n=0 en el RUV (victimas_total_disc.value: 0).",
+    "Diseñar un plan de documentación lingüística con la comunidad para registrar el uso de la lengua Awá, ante la ausencia de datos (lengua._sin_datos: true).",
+    "Establecer un observatorio socioeconómico comunitario para monitorear NBI y otras necesidades básicas, dado que no hay datos disponibles (nbi._sin_datos: true).",
+    "Fortalecer la articulación con UNIPA para priorizar la recolección de datos en resguardos Awá, considerando la ausencia de información en múltiples secciones (organizacion_regional: UNIPA)."
+  ]
+}

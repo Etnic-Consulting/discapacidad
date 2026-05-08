@@ -1,0 +1,245 @@
+{
+  "tipo": "mpio",
+  "id": "18753",
+  "nombre": "SAN VICENTE DEL CAGUAN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 742,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 742,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 19,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 338
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 270
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 51
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 37
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "640",
+          "pueblo": "TATUYO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "731",
+          "pueblo": "MUINANE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "740",
+          "pueblo": "YAGUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 338
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 3,
+      "resguardos": [
+        {
+          "nombre": "ALTAMIRA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 10711.827
+        },
+        {
+          "nombre": "LA LIBERTAD 2",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 1776.857
+        },
+        {
+          "nombre": "BANDERAS DEL RECAIBO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 520.193
+        }
+      ],
+      "bbox": [
+        0.5362950706766484,
+        -75.1555995026497,
+        2.9383335158354504,
+        -73.23933990897751
+      ],
+      "nombre_mpio": "SAN VICENTE DEL CAGUAN",
+      "cod_dpto": "18"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 151,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 151,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 107
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 14
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Tortura",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 107
+      },
+      "pct_hecho_principal": 70.9
+    },
+    "icv": {
+      "score": 0.009,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.03
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:44:16",
+  "periodo": "2018",
+  "_input_hash": "1881fa4c67bb6316"
+}

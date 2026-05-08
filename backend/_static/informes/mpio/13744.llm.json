@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Simití registra una población indígena de 12 personas según el CNPV 2018, distribuidas en 5 pueblos. El pueblo Zenu concentra el 41.7% de esta población con 5 habitantes, seguido por el pueblo Kichwa con 3. La ausencia de resguardos en el territorio (n=0) y datos ausentes en NBI y lengua limitan el análisis integral. La cifra crítica de 6 víctimas de desplazamiento forzado (83.3% del total) evidencia la vulnerabilidad territorial.",
+  "demografia": "La población indígena de Simití asciende a 12 personas según datos del CNPV 2018. La pirámide etaria no puede analizarse por n=12 y falta de desagregación por grupos de edad. Los 5 pueblos identificados (Zenu, Kichwa, Indígena-sin-información, Arhuaco y Emberá-Katío) reflejan diversidad cultural mínima en un contexto de alta dispersión poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Simití. La falta de información en esta sección impide evaluar necesidades sanitarias específicas. Se requiere priorizar la recolección de datos epidemiológicos para identificar riesgos ocultos en una población tan reducida.",
+  "territorial": "Simití no cuenta con resguardos indígenas (n=0), a pesar de su condición municipal. El territorio está delimitado por una caja geográfica que abarca coordenadas entre 7.57 y 8.18 de latitud y -74.24 y -73.80 de longitud. La ausencia de resguardos contrasta con la presencia de 5 pueblos, sugiriendo una tenencia territorial no reconocida formalmente.",
+  "lengua": "Los datos sobre lengua no están disponibles para Simití. Esta ausencia impide evaluar la vitalidad lingüística de los pueblos presentes (Zenu, Kichwa, entre otros). La revitalización cultural requiere información base que actualmente no existe.",
+  "vida": "No hay datos de NBI disponibles para Simití. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de información sobre necesidades básicas invisibiliza las condiciones de vida de una población ya reducida y dispersa.",
+  "conflicto": "Simití registra 6 víctimas de violencia según el RUV (1985-2024), con desplazamiento forzado como hecho principal (5 casos, 83.3%). La concentración de violencia en este hecho refleja patrones de despojo territorial. La cifra, aunque baja en términos absolutos, representa un 50% de la población indígena local.",
+  "icv": "El ICV de Simití es 0.0, con componentes en cero excepto conflicto_norm (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), pero la falta de datos en dos dimensiones anula el indicador. La posición relativa es crítica al no poder calcularse adecuadamente.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar el n=12 y mejorar la confiabilidad de los datos, citando la cifra de 12 personas registradas en 2018.",
+    "Gestionar el reconocimiento de resguardos para los pueblos presentes, especialmente Zenu y Kichwa, dado que n_resguardos=0 contrasta con la diversidad cultural identificada.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, priorizando los 5 casos registrados que representan el 83.3% de las víctimas.",
+    "Diseñar programas de revitalización cultural con enfoque en lengua, ante la ausencia de datos (lengua: _sin_datos=true).",
+    "Solicitar al DANE la desagregación de NBI y prevalencia para municipios con población indígena menor a 30, citando la limitación en datos de vida y salud."
+  ]
+}

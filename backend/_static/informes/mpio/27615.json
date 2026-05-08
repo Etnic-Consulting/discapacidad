@@ -1,0 +1,215 @@
+{
+  "tipo": "mpio",
+  "id": "27615",
+  "nombre": "RIOSUCIO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 3329,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 3329,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 9,
+      "top": [
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 1572
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 1170
+        },
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 277
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 190
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 98
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "281",
+        "pueblo": "EMBERA-KATIO",
+        "poblacion": 1572
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 7,
+      "resguardos": [
+        {
+          "nombre": "SALAQUÍ Y PAVARANDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 105555.505
+        },
+        {
+          "nombre": "PEÑA BLANCA - RÍO TRUANDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 57755.44
+        },
+        {
+          "nombre": "RÍO QUIPARADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9658.36
+        },
+        {
+          "nombre": "YARUMAL Y EL BARRANCO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 5104.945
+        },
+        {
+          "nombre": "LA RAYA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 5012.515
+        },
+        {
+          "nombre": "PERANCHITO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1460.732
+        },
+        {
+          "nombre": "PERANCHO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 902.96
+        }
+      ],
+      "bbox": [
+        6.724569291506968,
+        -77.74860776808549,
+        7.956812244047569,
+        -76.88331073271593
+      ],
+      "nombre_mpio": "RIOSUCIO",
+      "cod_dpto": "27"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 293,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 293,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 168
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 83
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 16
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 9
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 4
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 4
+        },
+        {
+          "hecho": "Tortura",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 168
+      },
+      "pct_hecho_principal": 57.3
+    },
+    "icv": {
+      "score": 0.018,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.059
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:31:47",
+  "periodo": "2018",
+  "_input_hash": "6e846a1e79a4bb56"
+}

@@ -1,0 +1,124 @@
+{
+  "tipo": "resguardo",
+  "id": "10583",
+  "nombre": "JERUSALÉN - SAN LUIS - ALTO PICUDITO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 487,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 487,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "JERUSALÉN - SAN LUIS - ALTO PICUDITO",
+      "dpto": "PUTUMAYO",
+      "cod_dpto": "86",
+      "mpio": "PUERTO CAICEDO",
+      "cod_mpio": "86569",
+      "macro": "AMAZONIA",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "OPIAC",
+      "organizacion_regional": "Por definir",
+      "area_hectareas": 4981.782
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        0.8214229820000583,
+        -76.54748640899999,
+        0.9036198040000727,
+        -76.45573756599998
+      ],
+      "area_hectareas": 4981.782,
+      "macro": "AMAZONIA",
+      "dpto": "PUTUMAYO",
+      "mpio": "PUERTO CAICEDO"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 180,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 180,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 138
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 26
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 4
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 138
+      },
+      "pct_hecho_principal": 76.7
+    },
+    "icv": {
+      "score": 0.011,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.036
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:50:57",
+  "periodo": "2018",
+  "_input_hash": "6f7a0b5c1e09525f"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Peña Blanca - Río Truandó, territorio Emberá Eyabida - Emberá Katío en Chocó, alberga 194 habitantes en 57.755,44 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. La falta de información sobre lengua y capacidades diversas limita el análisis integral de su situación sociocultural y de discapacidad.",
+  "demografia": "La población total del resguardo es de 194 habitantes según datos DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades, lo que impide evaluar dinámicas demográficas como envejecimiento o dependencia. La ausencia de estos datos subraya la necesidad de registros locales actualizados para planificación territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La falta de información impide identificar prioridades sanitarias o patrones de morbilidad. Se requiere fortalecer sistemas de monitoreo comunitario para registrar estas variables con enfoque diferencial.",
+  "territorial": "El resguardo abarca 57.755,44 hectáreas en Riosucio (Chocó), con coordenadas que definen su territorio ancestral. Su ubicación en la macro región Occidente lo vincula a dinámicas regionales, pero la ausencia de datos sobre concentración de población o territorios cercanos limita el análisis comparativo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión dificulta evaluar la vitalidad cultural y el uso de lenguas Emberá Eyabida o Emberá Katío en contextos cotidianos y educativos, esencial para políticas de revitalización lingüística.",
+  "vida": "No se reportan datos de NBI para el resguardo, aunque el promedio indígena nacional es 67.6%. Esta brecha refleja la falta de registros locales, ocultando necesidades básicas insatisfechas como acceso a agua potable, educación o vivienda digna en este territorio Emberá.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo entre 1985-2024. La ausencia de hechos victimizantes no implica ausencia de riesgo, sino falta de sistematización de datos. Se recomienda implementar mecanismos de alerta temprana con participación comunitaria.",
+  "icv": "El ICV del resguardo es 0.0, determinado por la ausencia de datos en sus tres componentes (NBI, prevalencia y conflicto). Esta métrica refleja la debilidad en sistemas de información territorial, urgente para priorizar intervenciones en salud, educación y protección de derechos.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de salud y discapacidad con enfoque diferencial, citando la falta actual de datos en 'capacidades_diversas' (_sin_datos: true).",
+    "Realizar un censo lingüístico participativo para documentar el uso de lenguas Emberá Eyabida y Emberá Katío, ante la ausencia de información en 'lengua' (_sin_datos: true).",
+    "Diseñar un plan de mejoramiento de condiciones de vida basado en indicadores de NBI, comparando con el promedio indígena nacional del 67.6% en 'nbi' (_sin_datos: true).",
+    "Establecer un protocolo de alerta temprana contra conflictos territoriales con participación de ASOREWA y ONIC, dado que el campo 'victimas_total_disc' reporta 0 casos (_sin_datos: false pero n=0).",
+    "Fortalecer la recolección de datos demográficos desagregados por edad y género para evaluar dinámicas poblacionales, ante la ausencia de pirámide etaria en 'demografia'."
+  ]
+}

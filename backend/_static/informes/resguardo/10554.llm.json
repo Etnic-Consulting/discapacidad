@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Alto Orito, territorio embera chamí en el Putumayo, alberga 180 habitantes en 12.269,6 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando carencias estructurales en NBI, prevalencia y conflicto. La ausencia de datos en lengua, NBI y conflicto limita la lectura integral, pero evidencia la urgencia de abordar brechas históricas en este territorio amazónico.",
+  "demografia": "La población total de 180 habitantes presenta una estructura etaria no detallada en los datos. La fuente DANE-CNPV 2018, con n=180 y confiabilidad CONFIABLE, no permite análisis de pirámide etaria. Se requiere desagregación por grupos de edad para evaluar dinámicas demográficas y planificar servicios básicos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección `prevalencia` no aplica a este nivel territorial. Se reconoce la limitación para diseñar estrategias sanitarias específicas, subrayando la necesidad de sistemas de información locales confiables.",
+  "territorial": "El resguardo ocupa 12.269,6 hectáreas en el municipio de Orito, Putumayo, dentro de la macrorregión Amazonía. Su delimitación geográfica está definida por coordenadas BBOX, pero no se reportan territorios asociados adicionales. La concentración en un solo resguardo refleja la fragmentación territorial embera chamí en la región.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del embera chamí en el territorio. Esta ausencia impide evaluar la transmisión intergeneracional de la lengua, clave para la identidad cultural embera.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en el resguardo. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar con Alto Orito. La falta de datos invisibiliza las condiciones de vida, obstaculizando la priorización de intervenciones en vivienda, educación o salud.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024 (n=0, confiable). No hay hechos victimizantes reportados. La ausencia de conflicto armado en los datos oficiales contrasta con el contexto de violencia histórica en el Putumayo, sugiriendo sub-registro o enfoque limitado en discapacidad.",
+  "icv": "El ICV de 0.0 en Alto Orito indica condiciones de vida críticas, derivadas de componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja un territorio en emergencia social, donde todas las dimensiones están en niveles mínimos.",
+  "recomendaciones": [
+    "Implementar un sistema de información local con desagregación etaria y de lengua para el resguardo, priorizando la recolección de datos en NBI y salud con enfoque diferencial embera.",
+    "Diseñar un plan de fortalecimiento cultural que incluya registros de lengua embera chamí y estrategias de revitalización, vinculando a ancianos y jóvenes.",
+    "Realizar un diagnóstico participativo de condiciones de vida (vivienda, agua, educación) con metodologías propias, contrastando con el promedio indígena nacional de 67.6% NBI.",
+    "Articular con OPIAC y OZIP para incluir a Alto Orito en programas de salud intercultural, considerando la ausencia de datos de prevalencia.",
+    "Exigir al Estado el reconocimiento de la vulnerabilidad del territorio en planes de desarrollo departamental, dado su ICV de 0.0 y área de 12.269,6 hectáreas."
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "tipo": "mpio",
+  "id": "76275",
+  "nombre": "FLORIDA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 5125,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 5125,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 12,
+      "top": [
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 4665
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 349
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 91
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "505",
+          "pueblo": "ANDAKIES",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "500",
+        "pueblo": "NASA",
+        "poblacion": 4665
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "TRIUNFO CRISTAL",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 5851.483
+        },
+        {
+          "nombre": "KWE´SX YU KIWE",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2539.106
+        },
+        {
+          "nombre": "NASA THA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 187.09
+        },
+        {
+          "nombre": "NASA KWE´S KIWE",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 87.141
+        }
+      ],
+      "bbox": [
+        3.210513778507859,
+        -76.34796995756057,
+        3.3895552656765098,
+        -76.03777317016852
+      ],
+      "nombre_mpio": "FLORIDA",
+      "cod_dpto": "76"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 300,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 300,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 196
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 48
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 19
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 14
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 8
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 196
+      },
+      "pct_hecho_principal": 65.3
+    },
+    "icv": {
+      "score": 0.018,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.06
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:29:59",
+  "periodo": "2018",
+  "_input_hash": "7a535ad397ebfa43"
+}

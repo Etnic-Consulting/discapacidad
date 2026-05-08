@@ -1,0 +1,427 @@
+{
+  "tipo": "pueblo",
+  "id": "20",
+  "nombre": "Amorúa",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2211,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": 2211,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hombres": {
+        "value": 1112,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "mujeres": {
+        "value": 1099,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "razon_masculinidad": {
+        "value": 101.2,
+        "_meta": {
+          "query": "calc h/m*100",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_dependencia": {
+        "value": 95.1,
+        "_meta": {
+          "query": "calc dep",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_envejecimiento": {
+        "value": 8.8,
+        "_meta": {
+          "query": "calc env",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "grupos_edad": {
+        "0-14": {
+          "h": 485,
+          "m": 506,
+          "total": 991
+        },
+        "15-64": {
+          "h": 578,
+          "m": 555,
+          "total": 1133
+        },
+        "65+": {
+          "h": 49,
+          "m": 38,
+          "total": 87
+        }
+      },
+      "piramide": [
+        {
+          "grupo_edad": "0-4",
+          "sexo": "HOMBRE",
+          "valor": 168
+        },
+        {
+          "grupo_edad": "0-4",
+          "sexo": "MUJER",
+          "valor": 180
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "HOMBRE",
+          "valor": 156
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "MUJER",
+          "valor": 154
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "HOMBRE",
+          "valor": 129
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "MUJER",
+          "valor": 126
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "HOMBRE",
+          "valor": 90
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "MUJER",
+          "valor": 91
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "HOMBRE",
+          "valor": 67
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "MUJER",
+          "valor": 72
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "HOMBRE",
+          "valor": 73
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "MUJER",
+          "valor": 66
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "HOMBRE",
+          "valor": 58
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "MUJER",
+          "valor": 53
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "HOMBRE",
+          "valor": 42
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "MUJER",
+          "valor": 39
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "HOMBRE",
+          "valor": 46
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "MUJER",
+          "valor": 35
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "HOMBRE",
+          "valor": 29
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "MUJER",
+          "valor": 24
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "HOMBRE",
+          "valor": 21
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "MUJER",
+          "valor": 22
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "HOMBRE",
+          "valor": 161
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "MUJER",
+          "valor": 172
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "HOMBRE",
+          "valor": 23
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "MUJER",
+          "valor": 27
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "HOMBRE",
+          "valor": 22
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "MUJER",
+          "valor": 20
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "HOMBRE",
+          "valor": 12
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "MUJER",
+          "valor": 10
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "HOMBRE",
+          "valor": 7
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "HOMBRE",
+          "valor": 3
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "MUJER",
+          "valor": 2
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "HOMBRE",
+          "valor": 5
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "MUJER",
+          "valor": 6
+        }
+      ]
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 0,
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": null,
+        "_meta": {
+          "query": "calc x1000",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "tipos_limitacion": []
+    },
+    "territorial": {
+      "departamentos": [],
+      "n_departamentos": 0,
+      "departamento_principal": null,
+      "resguardos": [
+        {
+          "nombre": "Caño Guaripa (1496)",
+          "poblacion": 276,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Guacamayas-Maipore (1499)",
+          "poblacion": 264,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Morichuito Caño Mochuelo (1107)",
+          "poblacion": 230,
+          "dpto": "CASANARE",
+          "mpio": "PAZ DE ARIPORO"
+        },
+        {
+          "nombre": "Caño Mesetas-Dagua (1498)",
+          "poblacion": 214,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Caño Bachaco (1495)",
+          "poblacion": 76,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Caño Hormiga (1497)",
+          "poblacion": 43,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Vaupés (1459)",
+          "poblacion": 1,
+          "dpto": "VAUPÉS",
+          "mpio": "MITÚ"
+        }
+      ],
+      "n_resguardos": 7,
+      "bbox": [
+        5.570183575000044,
+        -68.03598294399995,
+        5.864951966000035,
+        -67.67032367399997
+      ]
+    },
+    "lengua": {
+      "pct_habla": 0.0,
+      "pct_entiende": 0.0,
+      "n_total": 2211,
+      "habla_total": 0,
+      "entiende_total": 0
+    },
+    "nbi": {
+      "pct_nbi": {
+        "value": 85.25,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pct_miseria": {
+        "value": 75.05,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "componentes": {
+        "vivienda": 79.49,
+        "servicios": 62.27,
+        "hacinamiento": 58.9,
+        "inasistencia": 28.46,
+        "dependencia": 39.98
+      },
+      "n_personas": 2136,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.341,
+      "componentes": {
+        "nbi_norm": 0.853,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:04:26",
+  "periodo": "2018",
+  "_input_hash": "b25365f7cb5ea427"
+}

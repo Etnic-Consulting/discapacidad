@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Soplaventos registra una población indígena de 6 personas según CNPV 2018, concentrada en el pueblo Zenú con 5 habitantes. El municipio carece de resguardos y presenta datos ausentes en lengua y NBI, lo que limita el análisis integral. La ausencia de víctimas de conflicto y un ICV de 0.0 reflejan vacíos estructurales en la información territorial.",
+  "demografia": "La población indígena de Soplaventos es mínima (6 personas) y envejecida, con el 83% (5/6) perteneciente al pueblo Zenú. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La nota metodológica advierte que estos datos provienen de CNPV 2018 y no incluyen proyecciones recientes.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros de discapacidad tampoco existen a nivel municipal, según la nota técnica. Esto impide evaluar la carga de morbilidad o identificar grupos vulnerables en la población indígena local.",
+  "territorial": "Soplaventos no cuenta con resguardos indígenas registrados (n=0), a pesar de su ubicación en Bolívar (cod_dpto=13). La bbox geográfica delimita un área de 10.27-10.41°N y -75.17--75.06°O, pero sin territorios colectivos reconocidos. La ausencia de resguardos sugiere desprotección legal o invisibilización territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en Soplaventos no están disponibles (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población. Esta carencia impide evaluar la transmisión intergeneracional de saberes culturales.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Soplaventos (_sin_datos: true). El promedio indígena nacional de NBI (67.6%) no puede contrastarse localmente. La brecha con el promedio nacional no puede calcularse, limitando la priorización de políticas sociales.",
+  "conflicto": "Soplaventos reporta 0 víctimas indígenas con discapacidad por conflicto entre 1985-2024 (n=0). No hay hechos victimizantes registrados en el RUV. La ausencia de datos no permite identificar patrones de violencia, pero tampoco descarta subregistros en contextos de baja densidad poblacional.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Soplaventos es 0.0, con todos sus componentes (NBI, prevalencia, conflicto) en 0.0. Esto refleja la imposibilidad de calcular el índice por datos faltantes. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede aplicarse en este caso.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar la limitación de n=6 y registrar la población dispersa, citando la población total de 6 personas según CNPV 2018.",
+    "Solicitar al Ministerio del Interior la delimitación de resguardos en Soplaventos, dado que n_resguardos=0 a pesar de la presencia histórica del pueblo Zenú.",
+    "Incluir a Soplaventos en el Sistema de Información de Lenguas Indígenas para documentar la vitalidad cultural, ante la ausencia de datos (_sin_datos: true).",
+    "Priorizar la recolección de datos de NBI y salud en el municipio, comparando con el promedio indígena nacional de 67.6%, para diseñar intervenciones focalizadas.",
+    "Capacitar a las autoridades locales en registro de víctimas de conflicto, dado que el RUV reporta 0 casos (n=0) en un período de 40 años."
+  ]
+}

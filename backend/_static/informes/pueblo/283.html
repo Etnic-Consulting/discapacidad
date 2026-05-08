@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Eperara Siapidara · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Eperara Siapidara</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Eperara Siapidara, con una población de 7.047 personas según el censo de 2018, enfrenta una compleja situación de vulnerabilidad estructural y dispersión geográfica. Su presencia se extiende a lo largo de 21 departamentos, con núcleos poblacionales significativos en Vichada, Cauca y Nariño, lo que evidencia un patrón de asentamiento diverso que abarca desde la Orinoquía hasta la costa Pacífica. Esta dispersión, aunque demuestra resiliencia, plantea desafíos para la cohesión cultural y la gobernanza interna.</p><p></p><p>La cifra más crítica es el Índice de Necesidades Básicas Insatisfechas (NBI), que alcanza un alarmante 86.64%, casi veinte puntos por encima del promedio indígena nacional. Esta situación es impulsada principalmente por la carencia de servicios básicos, que afecta al 80.16% de la población, y por un hacinamiento crítico en más de la mitad de los hogares (52.93%). Estos indicadores revelan una profunda crisis en las condiciones de vida que requiere atención urgente y estructural.</p><p></p><p>La lectura clave de los datos apunta a una población extremadamente joven, con un 44% de sus miembros menores de 15 años, lo que se traduce en un alto índice de dependencia del 88.9. Si bien esto indica una notable vitalidad demográfica, también ejerce una fuerte presión sobre la población productiva. A su vez, la tasa de prevalencia de discapacidad registrada (25.7 por cada 1.000) es drásticamente inferior al promedio indígena, lo que sugiere un severo sub-registro que invisibiliza realidades y necesidades dentro del pueblo.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">7.047</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">362</div><div class="sub">prevalencia 25,7‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">21</div><div class="sub">51 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.385</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Eperara Siapidara se caracteriza por ser excepcionalmente joven. De una población total de 7.047 personas, 3.099 son menores de 15 años, lo que representa aproximadamente el 44% del total. Esta base piramidal ancha se refleja en un índice de envejecimiento muy bajo, de apenas 7.0, y confirma la vitalidad y el potencial de crecimiento del pueblo. La distribución por sexo es prácticamente paritaria, con 3.530 hombres y 3.517 mujeres. Sin embargo, esta juventud implica un elevado índice de dependencia económica de 88.9, lo que significa que por cada 100 personas en edad de trabajar, hay casi 89 personas (niños y mayores) que dependen de ellas, un factor de presión sobre los hogares.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">1.531</td><td class="num">1.568</td><td class="num"><b>3.099</b></td><td class="num">44.0%</td></tr>
+      <tr><td>15-64 años</td><td class="num">1.883</td><td class="num">1.847</td><td class="num"><b>3.730</b></td><td class="num">52.9%</td></tr>
+      <tr><td>65+ años</td><td class="num">116</td><td class="num">102</td><td class="num"><b>218</b></td><td class="num">3.1%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>3.530</b></td><td class="num"><b>3.517</b></td><td class="num"><b>7.047</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">100,4</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">88,9</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">7,0</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Según los datos del censo de 2018, se identificaron 362 personas con alguna limitación o discapacidad dentro del pueblo Eperara Siapidara, lo que corresponde a una tasa de prevalencia de 25.7 por cada 1.000 habitantes. Esta cifra es notablemente baja si se la compara con el promedio nacional para pueblos indígenas, que se sitúa en 60.0 por cada 1.000. Una diferencia tan marcada es un fuerte indicativo de un posible sub-registro y de la invisibilización de las personas con discapacidad en las estadísticas oficiales. La falta de datos detallados sobre los tipos de limitación existentes impide un análisis más profundo y la formulación de políticas pertinentes y específicas para atender sus necesidades.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Eperara Siapidara</div>
+      <div class="num-big">25,7‰</div>
+      <div class="lbl">362 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 34,3‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Eperara Siapidara evidencia una notable dispersión territorial, con presencia registrada en 21 departamentos del país. A pesar de esta amplitud geográfica, su población se concentra principalmente en los departamentos de Vichada (con 7.045 personas según esta fuente de datos), Cauca (4.464 personas) y Nariño (2.137 personas). Esta distribución refleja una compleja dinámica de asentamiento que se extiende desde las llanuras orientales hasta la costa del Pacífico. La existencia de 51 resguardos legalmente constituidos, como el resguardo Río Guangui en Cauca con 1.002 habitantes, reafirma su arraigo ancestral al territorio pero también la fragmentación de su dominio colectivo, lo que presenta desafíos para la gobernanza y la unidad.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">7.045</td><td class="num">181</td><td class="num">25,7‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>CAUCA</td><td class="num">4.464</td><td class="num">129</td><td class="num">28,9‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>NARINO</td><td class="num">2.137</td><td class="num">36</td><td class="num">16,9‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">317</td><td class="num">13</td><td class="num">41,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">45</td><td class="num">1</td><td class="num">22,2‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CHOCO</td><td class="num">15</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CALDAS</td><td class="num">14</td><td class="num">1</td><td class="num">71,4‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">13</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>RISARALDA</td><td class="num">8</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>QUINDIO</td><td class="num">8</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Rio Guangui</td><td>CAUCA</td><td>TIMBIQUÍ</td><td class="num">1.002</td></tr>
+      <tr><td>Infi</td><td>CAUCA</td><td>TIMBIQUÍ</td><td class="num">716</td></tr>
+      <tr><td>Calle Santa Rosa - Rio Saija</td><td>CAUCA</td><td>TIMBIQUÍ</td><td class="num">629</td></tr>
+      <tr><td>Río Satinga</td><td>—</td><td>—</td><td class="num">600</td></tr>
+      <tr><td>La Mamuncia, Parte Media del Río Micay</td><td>—</td><td>—</td><td class="num">454</td></tr>
+      <tr><td>Pro-Defensa del Río Tapaje</td><td>—</td><td>—</td><td class="num">415</td></tr>
+      <tr><td>Parte Alta Sur del Río Saija</td><td>—</td><td>—</td><td class="num">369</td></tr>
+      <tr><td>Alto Río Sequihonda</td><td>—</td><td>—</td><td class="num">325</td></tr>
+      <tr><td>Manglares del Río Micay</td><td>—</td><td>—</td><td class="num">292</td></tr>
+      <tr><td>Rio Naya</td><td>VALLE DEL CAUCA</td><td>BUENAVENTURA</td><td class="num">196</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos censales disponibles indican que un 0.0% de la población Eperara Siapidara habla o entiende su lengua propia. Esta cifra debe ser interpretada con extrema cautela, ya que es altamente probable que no refleje la realidad lingüística y cultural del pueblo, sino más bien una deficiencia en la recolección de la información por parte de las entidades estatales. La pervivencia de un pueblo está intrínsecamente ligada a su idioma, por lo que este dato, más que una estadística sobre el uso, debe ser considerado una alerta sobre la incapacidad del sistema de información nacional para registrar adecuadamente la vitalidad cultural de los pueblos indígenas.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Eperara Siapidara son extremadamente precarias, como lo demuestra un Índice de Necesidades Básicas Insatisfechas (NBI) del 86.64%, una cifra que supera con creces el ya preocupante promedio indígena nacional del 67.6%. Esta situación de pobreza estructural se manifiesta con mayor crudeza en la dimensión de servicios públicos, donde un 80.16% de la población carece de acceso adecuado. Adicionalmente, el hacinamiento crítico es una realidad para más de la mitad de los hogares (52.93%). En conjunto, estos factores conducen a que un 53.81% de la población se encuentre en situación de miseria, una condición inaceptable que demanda acciones estructurales e inmediatas.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Eperara Siapidara</div>
+      <div class="num-big">86,6%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 6.0%"></div></div><div class="num">4,8%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">80,2%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 66.0%"></div></div><div class="num">52,9%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 5.8%"></div></div><div class="num">4,6%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 18.6%"></div></div><div class="num">14,9%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los registros oficiales de la Unidad para las Víctimas (RUV), no se reporta ninguna persona con discapacidad del pueblo Eperara Siapidara como víctima del conflicto armado. Asimismo, los datos disponibles no especifican los hechos victimizantes que han afectado a la población en general. Un registro de cero víctimas en un contexto de conflicto armado prolongado y generalizado en los territorios es estadísticamente inverosímil. Esta ausencia de datos sugiere la existencia de graves barreras de acceso a la justicia y a las rutas de declaración, o una profunda invisibilización de las afectaciones que el conflicto ha causado a este pueblo, en lugar de una ausencia real de violencia.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Compuesto (ICV) para el pueblo Eperara Siapidara es de 0.385. Este indicador sintético es impulsado de manera predominante por el componente de condiciones de vida, cuya puntuación normalizada es de 0.866, reflejando el impacto directo del altísimo NBI. Por otro lado, los componentes de prevalencia de discapacidad (0.129) y afectación por el conflicto (0.0) obtienen valores bajos, no porque no existan estas problemáticas, sino por el severo sub-registro en ambas áreas. Por lo tanto, el ICV actual subestima la vulnerabilidad real del pueblo al no capturar adecuadamente la magnitud de la exclusión por discapacidad y el impacto del conflicto armado.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.866</td><td class="num">0.40</td><td class="num"><b>0.346</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.129</td><td class="num">0.30</td><td class="num"><b>0.039</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.385</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Implementar una estrategia de censo y caracterización diferencial con enfoque en discapacidad, dado que la tasa de prevalencia reportada (25.7 por 1.000) es menos de la mitad del promedio indígena nacional (60.0), sugiriendo un grave sub-registro.</li>
+      <li>Priorizar la inversión en infraestructura de servicios básicos (agua potable, saneamiento, energía) para abatir el 80.16% de hogares con NBI por servicios, el principal componente que eleva la vulnerabilidad del pueblo a un 86.64% de NBI total.</li>
+      <li>Fortalecer la gobernanza y la articulación entre las comunidades dispersas en 21 departamentos, con especial atención a los núcleos poblacionales de Vichada, Cauca y Nariño, para garantizar la pervivencia cultural y la defensa de sus 51 territorios colectivos.</li>
+      <li>Desarrollar programas de vivienda y mejoramiento de habitabilidad para reducir el índice de hacinamiento crítico que afecta al 52.93% de la población.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/283/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[1.668937281000069, -78.56128432399998], [3.9121386180000286, -76.85359689399996]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[1.668937281000069, -78.56128432399998], [3.9121386180000286, -76.85359689399996]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([2.790537949500049, -77.70744060899997]).addTo(map)
+    .bindPopup('<b>PUEBLO Eperara Siapidara</b>');
+</script>
+</body>
+</html>

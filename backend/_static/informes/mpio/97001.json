@@ -1,0 +1,240 @@
+{
+  "tipo": "mpio",
+  "id": "97001",
+  "nombre": "MITU",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 22824,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 22824,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 9696
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 2398
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 2352
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 1698
+        },
+        {
+          "cod_pueblo": "600",
+          "pueblo": "SIRIANO",
+          "poblacion": 1273
+        },
+        {
+          "cod_pueblo": "700",
+          "pueblo": "TUYUKA",
+          "poblacion": 939
+        },
+        {
+          "cod_pueblo": "790",
+          "pueblo": "YURUTI",
+          "poblacion": 750
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 643
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 555
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 532
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 496
+        },
+        {
+          "cod_pueblo": "640",
+          "pueblo": "TATUYO",
+          "poblacion": 494
+        },
+        {
+          "cod_pueblo": "410",
+          "pueblo": "MAKUNA",
+          "poblacion": 310
+        },
+        {
+          "cod_pueblo": "070",
+          "pueblo": "BARASANO",
+          "poblacion": 167
+        },
+        {
+          "cod_pueblo": "540",
+          "pueblo": "PISAMIRA",
+          "poblacion": 131
+        },
+        {
+          "cod_pueblo": "630",
+          "pueblo": "TARIANO",
+          "poblacion": 103
+        },
+        {
+          "cod_pueblo": "430",
+          "pueblo": "NUKAK-MAKU",
+          "poblacion": 93
+        },
+        {
+          "cod_pueblo": "550",
+          "pueblo": "PUINAVE",
+          "poblacion": 33
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 23
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 23
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "220",
+        "pueblo": "CUBEO",
+        "poblacion": 9696
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "VAUPÉS",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 3895776.278
+        }
+      ],
+      "bbox": [
+        0.1532065488080474,
+        -71.11861396285957,
+        1.7904258464916902,
+        -69.81515405661497
+      ],
+      "nombre_mpio": "MITU",
+      "cod_dpto": "97"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 497,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 497,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 325
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 85
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 46
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 16
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 6
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 5
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 5
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 325
+      },
+      "pct_hecho_principal": 65.4
+    },
+    "icv": {
+      "score": 0.03,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.099
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:24:24",
+  "periodo": "2018",
+  "_input_hash": "74a8e854882ff78b"
+}

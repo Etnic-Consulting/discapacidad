@@ -1,0 +1,229 @@
+{
+  "tipo": "mpio",
+  "id": "76233",
+  "nombre": "DAGUA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 865,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 865,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 614
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 167
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 20
+        },
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "650",
+          "pueblo": "TOTORO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "292",
+          "pueblo": "QUIZGO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "410",
+          "pueblo": "MAKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "431",
+          "pueblo": "KAKUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "500",
+        "pueblo": "NASA",
+        "poblacion": 614
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 2,
+      "resguardos": [
+        {
+          "nombre": "YU YIC KWE",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2410.733
+        },
+        {
+          "nombre": "LA DELFINA",
+          "pueblo_onic": "NASA - EMBERA CHAMI",
+          "area_pg_ha": 781.066
+        }
+      ],
+      "bbox": [
+        3.423737936699995,
+        -76.89046020967254,
+        3.878407675775781,
+        -76.58259795422316
+      ],
+      "nombre_mpio": "DAGUA",
+      "cod_dpto": "76"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 70,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 70,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 53
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 7
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 6
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 53
+      },
+      "pct_hecho_principal": 75.7
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.014
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:18:11",
+  "periodo": "2018",
+  "_input_hash": "c799afca0bde24eb"
+}

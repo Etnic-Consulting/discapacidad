@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo RAMOS - MONGÓN - MANCHURIA, ubicado en Ricaurte (Nariño), alberga 68 habitantes del pueblo Awá en 4.781,2 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La población total, según DANE-CNPV 2018, es mínima pero estratégica en la macro ONIC Occidente.",
+  "demografia": "La población de 68 personas se distribuye en un territorio reducido de 4.781,2 hectáreas. La pirámide etaria no puede analizarse con los datos disponibles, que solo reportan el total poblacional sin desagregación por edad o género. La confiabilidad de la fuente (n=68) limita interpretaciones detalladas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. Los componentes del ICV asociados a prevalencia y conflicto registran 0.0, lo que impide evaluar la carga de morbilidad o exposición a violencia. Se requiere cruce con fuentes locales para subsanar el sub-registro.",
+  "territorial": "El resguardo ocupa 4.781,2 hectáreas en Ricaurte, Nariño, con coordenadas que definen su área de influencia. Su ubicación en la macro Occidente lo sitúa en una zona de alta presión por cultivos ilícitos y presencia de actores armados. La dispersión geográfica es mínima, concentrada en un solo territorio colectivo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del awapit ni su uso en la comunidad, aspecto crítico para la pervivencia cultural del pueblo Awá.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de 67.6% no puede compararse debido a la ausencia de datos locales. La falta de registros oficiales invisibiliza las condiciones de vida de esta comunidad.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el RUV entre 1985-2024 (n=0). La ausencia de hechos violentos reportados sugiere baja visibilidad en sistemas de información, pero no necesariamente ausencia de afectaciones. Se requiere validación con organizaciones locales.",
+  "icv": "El ICV de 0.0 en RAMOS - MONGÓN - MANCHURIA deriva de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). Ningún componente supera el umbral mínimo para calcular un índice representativo. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados útiles.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar la población y desagregar datos demográficos, priorizando grupos etarios y género, con apoyo de la Organización Nacional Awá (ONA).",
+    "Implementar un sistema de registro de salud local que capture prevalencia de enfermedades y condiciones crónicas, vinculado a la Red de Salud Indígena del Cauca.",
+    "Documentar casos de conflicto y discapacidad mediante metodologías propias del pueblo Awá, en articulación con la Defensoría del Pueblo y la Personería de Ricaurte.",
+    "Diseñar un plan de revitalización lingüística del awapit, incluyendo talleres con sabedores tradicionales y materiales pedagógicos en lenguas nativas.",
+    "Solicitar a DANE y al Ministerio de Salud la inclusión de resguardos pequeños en sus bases de datos, garantizando representatividad estadística."
+  ]
+}

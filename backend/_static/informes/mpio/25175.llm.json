@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Chía registra una población indígena de 2,060 personas según CNPV 2018, concentrada mayoritariamente en el pueblo Muisca (1,918 individuos, 93.1% del total). La presencia de 20 pueblos indígenas evidencia diversidad cultural, aunque con poblaciones minoritarias. El único resguardo identificado, Muisca de Fonquetá y Cerca de Piedra (200.27 ha), refleja una alta concentración territorial en un área reducida.",
+  "demografia": "La pirámide etaria no se aplica a este nivel municipal según los datos proporcionados. La población indígena en Chía es predominantemente adulta, con el 93.1% del total perteneciente al pueblo Muisca. La diversidad de 20 pueblos indígenas contrasta con la baja representación de grupos minoritarios, donde 13 pueblos tienen menos de 10 personas cada uno.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles a nivel municipal según la nota técnica. El promedio indígena nacional reportado es del 60.0%, pero su aplicabilidad a Chía es limitada por la falta de datos locales. Se requiere desagregación municipal para análisis confiables.",
+  "territorial": "Chía cuenta con un único resguardo indígena, Muisca de Fonquetá y Cerca de Piedra, que abarca 200.27 hectáreas. La concentración geográfica es extrema, con el 93.1% de la población indígena en un solo pueblo. La dispersión territorial es mínima, lo que limita la autonomía y desarrollo de otros pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio según la sección correspondiente.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Chía. El promedio indígena nacional es del 67.6%, pero su comparación con el municipio no es posible. Se requiere generación de información local para evaluar condiciones de vida.",
+  "conflicto": "Chía registra 1 víctima de desplazamiento forzado en el RUV entre 1985-2024, representando el 100% de los hechos de conflicto. La baja magnitud (n=1) impide análisis robustos, pero evidencia la vulnerabilidad del territorio. La concentración en un solo hecho limita la comprensión de patrones regionales.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de Chía es 0.0, con componentes normalizados en cero para NBI, prevalencia y conflicto. La fórmula aplicada (ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la ausencia de datos locales. La posición relativa es indeterminada por falta de comparadores confiables.",
+  "recomendaciones": [
+    "Priorizar la desagregación municipal de datos de discapacidad y NBI para evaluar brechas específicas de Chía, citando la falta actual de información local.",
+    "Fortalecer el resguardo Muisca de Fonquetá y Cerca de Piedra con 200.27 ha, garantizando su titulación plena y protección territorial frente a presiones urbanas.",
+    "Implementar programas de revitalización cultural para los 19 pueblos minoritarios (142 personas en total), con énfasis en los 13 pueblos con menos de 10 integrantes cada uno.",
+    "Diseñar estrategias de prevención de desplazamiento forzado en Chía, dado el registro de 1 víctima, vinculando acciones con la ONIC y autoridades locales.",
+    "Generar un censo indígena municipal actualizado que incluya lengua y condiciones socioeconómicas, superando la limitación de datos del CNPV 2018."
+  ]
+}

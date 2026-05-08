@@ -1,0 +1,212 @@
+{
+  "tipo": "mpio",
+  "id": "73168",
+  "nombre": "CHAPARRAL",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1501,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1501,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 16,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1435
+        },
+        {
+          "cod_pueblo": "740",
+          "pueblo": "YAGUA",
+          "poblacion": 32
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "291",
+          "pueblo": "AMBALO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "520",
+          "pueblo": "PIAROA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "890",
+          "pueblo": "PANCHES",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 1435
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "CABILDO INDÍGENA PUEBLO VIEJO SANTA RITA LA MINA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 89.948
+        }
+      ],
+      "bbox": [
+        3.4627337075962075,
+        -75.91703254500601,
+        4.043176456028672,
+        -75.26887076322294
+      ],
+      "nombre_mpio": "CHAPARRAL",
+      "cod_dpto": "73"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 157,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 157,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 117
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 19
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 4
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 3
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 117
+      },
+      "pct_hecho_principal": 74.5
+    },
+    "icv": {
+      "score": 0.009,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.031
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:22:36",
+  "periodo": "2018",
+  "_input_hash": "bfe6e8d501a5140a"
+}

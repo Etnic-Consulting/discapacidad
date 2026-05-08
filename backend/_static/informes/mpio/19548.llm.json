@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Piendamo (Cauca) concentra 5.882 personas indígenas según CNPV 2018, donde el pueblo Misak representa el 64.3% (3.779) de la población. La presencia de 20 pueblos refleja alta diversidad étnica, pero el 80% de los territorios son resguardos Misak. El desplazamiento forzado afecta al 58.7% de las 46 víctimas registradas en el RUV entre 1985-2024, marcando un patrón de violencia territorial.",
+  "demografia": "La pirámide etaria no aplica a nivel municipal según la estructura de datos. El informe agrega población indígena por pueblo sin desagregar grupos de edad. Se requiere cruzar con microdatos censales para análisis etario confiable. La población total indígena (5.882) supera el promedio de municipios caucanos con presencia indígena.",
+  "prevalencia": "Los datos de prevalencia de enfermedades no están disponibles para este nivel territorial. El sistema solo reporta datos a nivel de pueblo o departamento. Sin registros confiables, no es posible estimar subregistros o brechas sanitarias. Se recomienda priorizar sistematización de datos de salud pública indígena en el municipio.",
+  "territorial": "Piendamo alberga 3 resguardos Misak con 345.136 hectáreas en total. La concentración territorial es alta: el 100% de los resguardos pertenecen a un solo pueblo. La dispersión geográfica es limitada, con un área de influencia definida por coordenadas que abarcan 2.6147°N a 2.8557°N y -76.6689°O a -76.4939°O.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. El sistema no registra información lingüística a nivel municipal, lo que impide evaluar vitalidad cultural por lengua. Esta omisión limita la planificación educativa y cultural desde las autoridades indígenas.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para Piendamo. El promedio indígena nacional es 67.6%, pero no hay cifra local para comparar. La falta de información impide medir brechas en acceso a servicios básicos. Se requiere incluir indicadores NBI en censos municipales con enfoque étnico.",
+  "conflicto": "El RUV registra 46 víctimas indígenas con discapacidad entre 1985-2024, donde el desplazamiento forzado (27 casos) representa el 58.7% de los hechos. Las amenazas (12 casos) y secuestros (4 casos) completan el patrón de violencia. La concentración en hechos de desplazamiento sugiere estrategias de despojo territorial sistemático.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Piendamo es 0.003, con componente de conflicto como dimensión dominante (0.009). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.009). Este resultado refleja condiciones críticas en seguridad humana, superando en impacto a indicadores socioeconómicos.",
+  "recomendaciones": [
+    "Priorizar la sistematización de datos de salud pública indígena en Piendamo, dado que no hay registros de prevalencia disponibles a nivel municipal.",
+    "Diseñar estrategias de protección territorial para los 3 resguardos Misak, que concentran el 100% de la población indígena del municipio.",
+    "Incluir indicadores NBI con enfoque étnico en censos municipales, ante la ausencia de datos locales que impide medir brechas.",
+    "Implementar protocolos de atención a víctimas de desplazamiento forzado, que afecta al 58.7% de los casos registrados en el RUV.",
+    "Fortalecer la recolección de datos lingüísticos en coordinación con las autoridades Misak, ante la falta de información sobre lenguas indígenas en el municipio."
+  ]
+}

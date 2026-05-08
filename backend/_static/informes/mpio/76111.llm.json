@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "En Guadalajara de Buga, el pueblo indígena suma 120 personas según el CNPV 2018. El 40% de las víctimas de violencia registradas son por desplazamiento forzado, principal hecho victimizante. La dispersión poblacional entre 20 pueblos sin resguardos territoriales configura un escenario de alta fragmentación y vulnerabilidad.",
+  "demografia": "La población indígena municipal es de 120 personas, con una pirámide etaria concentrada en adultos (48 Nasa, 17 sin información). La ausencia de datos sobre capacidades diversas impide analizar vulnerabilidades específicas. La diversidad étnica (20 pueblos) refleja migración y mezcla cultural sin territorio colectivo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades. La falta de registros epidemiológicos a nivel municipal limita el análisis de subregistros. Se requiere sistematización de datos sanitarios para identificar patrones de morbimortalidad en la población indígena dispersa.",
+  "territorial": "No existen resguardos indígenas en el municipio. La dispersión geográfica abarca un área de 3.7° a 4.0° latitud y -76.4° a -75.8° longitud. La ausencia de territorios colectivos agrava la exposición a conflictos y dificulta la protección cultural y ambiental.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni los procesos de pérdida o revitalización en las 20 comunidades presentes.",
+  "vida": "No hay información sobre NBI disponible. El promedio indígena nacional de 67.6% sugiere brechas críticas, pero se requieren datos locales para dimensionar pobreza multidimensional. La falta de registros impide comparar componentes como educación, vivienda y empleo.",
+  "conflicto": "Se registran 10 víctimas de violencia en el período 1985-2024, con desplazamiento forzado como principal hecho (4 casos, 40%). La diversidad de victimizaciones (amenazas, homicidios, minas antipersonal) evidencia un conflicto armado prolongado sin focalización étnica clara.",
+  "icv": "El ICV municipal es 0.001, con componente de conflicto como dimensión dominante (0.002). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero la ausencia de datos en estos últimos sesga el indicador hacia la violencia registrada.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de pueblos indígenas para actualizar datos demográficos y lingüísticos, citando la diversidad de 20 pueblos sin información consolidada.",
+    "Priorizar la creación de un resguardo indígena en Guadalajara de Buga para garantizar territorio colectivo, dado que no existen resguardos actuales.",
+    "Diseñar un plan de atención psicosocial para víctimas de desplazamiento forzado, considerando que el 40% de los casos registrados corresponden a este hecho.",
+    "Fortalecer la recolección de datos de NBI y prevalencia de enfermedades, comparando con el promedio indígena nacional de 67.6% para dimensionar brechas.",
+    "Establecer alianzas con pueblos Nasa y Misak para proyectos de revitalización cultural, dado que concentran el 58% de la población indígena municipal."
+  ]
+}

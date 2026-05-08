@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Makuna · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Makuna</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Makuna, compuesto por 1.962 personas según el censo de 2018, presenta una estructura demográfica marcadamente joven y en expansión, con un alto índice de dependencia del 85.6. Esta vitalidad poblacional contrasta de forma dramática con sus condiciones de vida. La situación humanitaria es crítica, con un alarmante 86.25% de su población viviendo con Necesidades Básicas Insatisfechas (NBI), una cifra que supera en casi 20 puntos porcentuales al promedio indígena nacional y que se ve agravada por un 63.49% de personas en miseria. La principal causa de esta vulnerabilidad es el déficit estructural en servicios básicos, que afecta al 75.28% del pueblo. A pesar de su dispersión en 21 departamentos, su núcleo vital se mantiene en los departamentos de Vichada y Vaupés. Los datos oficiales sobre discapacidad y conflicto armado muestran cifras extremadamente bajas, lo que sugiere un severo subregistro que invisibiliza sus realidades.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">1.962</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">102</div><div class="sub">prevalencia 32,2‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">21</div><div class="sub">14 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.393</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La demografía del pueblo Makuna, con una población total de 1.962 miembros, se caracteriza por una base poblacional excepcionalmente joven. El alto índice de dependencia del 85.6 indica que una gran proporción de la población, compuesta por niños y ancianos, depende del grupo en edad de trabajar. De hecho, los 844 individuos en el grupo de 0 a 14 años casi igualan en número a la población productiva de 1.057 personas. Este perfil se confirma con un índice de envejecimiento de apenas 7.2, lo que proyecta un crecimiento poblacional sostenido. La razón de masculinidad de 110.3 muestra un ligero predominio de hombres sobre mujeres. Esta estructura etaria subraya la urgencia de invertir en oportunidades para la juventud Makuna para asegurar la sostenibilidad y bienestar del pueblo a futuro.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">425</td><td class="num">419</td><td class="num"><b>844</b></td><td class="num">43.0%</td></tr>
+      <tr><td>15-64 años</td><td class="num">568</td><td class="num">489</td><td class="num"><b>1.057</b></td><td class="num">53.9%</td></tr>
+      <tr><td>65+ años</td><td class="num">36</td><td class="num">25</td><td class="num"><b>61</b></td><td class="num">3.1%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>1.029</b></td><td class="num"><b>933</b></td><td class="num"><b>1.962</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">110,3</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">85,6</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">7,2</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Oficialmente, se reporta una prevalencia de discapacidad de 32.2 por cada 1.000 personas Makuna, lo que corresponde a 102 individuos identificados. Sin embargo, esta cifra es casi la mitad del promedio nacional indígena, que se sitúa en 60.0 por cada 1.000. Una disparidad tan significativa no debe interpretarse como una menor incidencia de la discapacidad, sino como un posible y grave subregistro en los sistemas de información del Estado. Esta brecha de datos oculta las verdaderas necesidades de los miembros del pueblo Makuna con limitaciones funcionales. Adicionalmente, la falta de información detallada sobre los tipos de limitación impide el desarrollo de políticas de atención y cuidado que sean culturalmente pertinentes y efectivas, dejando a una parte de la población sin el reconocimiento y apoyo adecuados.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Makuna</div>
+      <div class="num-big">32,2‰</div>
+      <div class="lbl">102 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 27,8‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Makuna demuestra una notable resiliencia territorial, manteniendo su principal núcleo poblacional en las selvas de los departamentos de Vichada y Vaupés, donde residen 1.586 y 1.082 de sus miembros, respectivamente. Aunque se registra su presencia en un total de 21 departamentos, esta concentración en su territorio ancestral es fundamental para su pervivencia cultural. La territorialidad Makuna se encuentra organizada en 14 resguardos indígenas legalmente constituidos, siendo el resguardo Vaupés el más poblado con 892 habitantes. Este patrón de asentamiento, con un corazón demográfico definido y una diáspora extendida, exige estrategias de gobernanza y protección territorial que reconozcan tanto la importancia del núcleo amazónico como las necesidades de quienes residen fuera de él.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">1.586</td><td class="num">51</td><td class="num">32,2‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>VAUPES</td><td class="num">1.082</td><td class="num">33</td><td class="num">30,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>AMAZONAS</td><td class="num">424</td><td class="num">13</td><td class="num">30,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>META</td><td class="num">14</td><td class="num">2</td><td class="num">142,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">11</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ATLANTICO</td><td class="num">7</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>GUAINIA</td><td class="num">6</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">5</td><td class="num">1</td><td class="num">200,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CALDAS</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>SANTANDER</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">892</td></tr>
+      <tr><td>Yaigoje-Rio Apaporis</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">312</td></tr>
+      <tr><td>Comeyafu</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">91</td></tr>
+      <tr><td>Miriti Parana</td><td>AMAZONAS</td><td>MIRITÍ - PARANÁ</td><td class="num">48</td></tr>
+      <tr><td>Curare-Los Ingleses</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">20</td></tr>
+      <tr><td>Camaritagua</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">14</td></tr>
+      <tr><td>Puerto Cordoba</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">6</td></tr>
+      <tr><td>Predio Putumayo</td><td>AMAZONAS</td><td>LA CHORRERA</td><td class="num">4</td></tr>
+      <tr><td>Bacati-Arara Carurú y Miraflores</td><td>VAUPÉS</td><td>CARURÚ</td><td class="num">4</td></tr>
+      <tr><td>Cecilia Cocha</td><td>PUTUMAYO</td><td>PUERTO LEGUÍZAMO</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>La lengua Makuna es un pilar fundamental de la identidad y la cosmovisión del pueblo. Sin embargo, los datos cuantitativos provistos para este informe no contienen información sobre su vitalidad, reportando un 0.0% de hablantes y de comprensión entre los 1.962 miembros del pueblo. Esta cifra debe ser entendida como una ausencia de datos y no como la extinción de la lengua. Este vacío de información es una alerta crítica, ya que sin un diagnóstico sociolingüístico claro es imposible formular estrategias efectivas para la protección, revitalización y transmisión intergeneracional del idioma. Es imperativo realizar, en concertación con las autoridades Makuna, un censo de vitalidad lingüística que permita conocer la situación real y orientar acciones urgentes de salvaguarda.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Makuna evidencian un estado de abandono estructural profundo. Un alarmante 86.25% de sus miembros vive con Necesidades Básicas Insatisfechas (NBI), una incidencia que supera drásticamente el ya elevado promedio indígena nacional del 67.6%. La situación es aún más grave al constatar que el 63.49% de la población se encuentra en la miseria. El análisis de componentes revela que la principal causa es la falta de acceso a servicios básicos, que afecta al 75.28% de las personas. A esto se suman severas carencias en la calidad de la vivienda (46.85%) y condiciones de hacinamiento (49.56%). Estas cifras no son solo estadísticas; representan una vulneración sistemática de los derechos fundamentales del pueblo Makuna a una vida digna.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Makuna</div>
+      <div class="num-big">86,2%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 62.2%"></div></div><div class="num">46,9%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">75,3%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 65.8%"></div></div><div class="num">49,6%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 26.1%"></div></div><div class="num">19,7%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 28.9%"></div></div><div class="num">21,8%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los registros oficiales de la Unidad para las Víctimas, solo se ha documentado a 1 persona del pueblo Makuna con discapacidad como víctima del conflicto armado, en relación con un hecho de desplazamiento forzado. Desde la perspectiva de la ONIC, esta cifra única debe ser interpretada con extrema cautela y escepticismo. Un solo caso registrado para un pueblo ubicado en una región con complejas dinámicas de violencia histórica no refleja la realidad, sino que evidencia la incapacidad del Estado para documentar adecuadamente las afectaciones sobre los pueblos indígenas. Este dato invisibiliza la memoria y el sufrimiento colectivo, negando la posibilidad de reparación y justicia para el pueblo Makuna en su conjunto.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">1</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">100,0% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">1</div></div>
+
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El pueblo Makuna presenta un Índice de Vulnerabilidad Compuesta (ICV) de 0.393, un valor que, aunque intermedio, oculta realidades críticas. El análisis de sus componentes muestra que la vulnerabilidad está casi exclusivamente determinada por el factor de pobreza estructural, donde el indicador de NBI normalizado alcanza un 0.863. En contraste, los componentes de prevalencia de discapacidad (0.161) y de conflicto armado (0.0) son artificialmente bajos. Esto no indica una ausencia de problemas, sino que refleja directamente las fallas y el subregistro de las fuentes oficiales. Por lo tanto, el ICV debe leerse como un indicador del profundo abandono estatal en materia de derechos sociales y económicos, más que como un panorama completo de todas las vulnerabilidades que enfrenta el pueblo.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.863</td><td class="num">0.40</td><td class="num"><b>0.345</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.161</td><td class="num">0.30</td><td class="num"><b>0.048</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.393</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Implementar un plan de choque urgente para reducir las Necesidades Básicas Insatisfechas del 86.25% de la población, priorizando la inversión en infraestructura de servicios públicos, donde se registra un déficit del 75.28%.</li>
+      <li>Realizar una jornada de caracterización y registro en salud en concertación con las autoridades Makuna, para esclarecer el subregistro de discapacidad sugerido por la baja tasa de prevalencia de 32.2 por 1.000.</li>
+      <li>Financiar y apoyar un diagnóstico sociolingüístico participativo para determinar el estado real de la lengua Makuna, dado que los registros actuales con un 0.0% de hablantes carecen de fiabilidad y ocultan una realidad cultural vital.</li>
+      <li>Establecer una comisión de la verdad y memoria propia del pueblo Makuna para documentar las afectaciones del conflicto armado, superando el invisibilizador registro oficial de 1 única víctima.</li>
+      <li>Fortalecer la gobernanza de los 14 resguardos Makuna, asegurando la asignación de recursos directos para que puedan gestionar sus prioridades de desarrollo y hacer frente al alto índice de dependencia demográfica de 85.6.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/410/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Makuna</b>');
+</script>
+</body>
+</html>

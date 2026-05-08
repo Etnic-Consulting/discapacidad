@@ -1,0 +1,218 @@
+{
+  "tipo": "mpio",
+  "id": "44650",
+  "nombre": "SAN JUAN DEL CESAR",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 8486,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 8486,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 7384
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 754
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 146
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 114
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 26
+        },
+        {
+          "cod_pueblo": "370",
+          "pueblo": "KOGUI",
+          "poblacion": 21
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "330",
+          "pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "780",
+          "pueblo": "YUKPA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "400",
+          "pueblo": "HITNU",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "434",
+          "pueblo": "JUDPA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "050",
+        "pueblo": "WIWA",
+        "poblacion": 7384
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        10.612385588531152,
+        -73.46701380612535,
+        11.013411436352904,
+        -72.74815968093333
+      ],
+      "nombre_mpio": "SAN JUAN DEL CESAR",
+      "cod_dpto": "44"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 179,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 179,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 158
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 10
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 5
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 3
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 158
+      },
+      "pct_hecho_principal": 88.3
+    },
+    "icv": {
+      "score": 0.011,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.036
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:39:08",
+  "periodo": "2018",
+  "_input_hash": "e0fd3a259bff110b"
+}

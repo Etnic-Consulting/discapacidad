@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Fundación (Magdalena) concentra el 91.5% de su población indígena en el pueblo Arhuaco (5,133 personas). La presencia de 9 pueblos refleja diversidad pero también fragmentación territorial. El 88.6% de las 44 víctimas de conflicto registradas corresponden a desplazamiento forzado, indicando una crisis humanitaria persistente en la zona.",
+  "demografia": "La población indígena de Fundación suma 5,610 personas según CNPV 2018. La pirámide etaria muestra concentración en el grupo de 20-40 años (35% del total), con 5,133 Arhuacos (91.5%) como pueblo dominante. La baja representación de otros pueblos (ej. Kogi con 280) sugiere dinámicas migratorias o asimilación cultural en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud a nivel municipal. Esta limitación impide analizar subregistros o prioridades sanitarias. Se requiere cruzar fuentes departamentales o nacionales para estimar brechas en acceso a servicios.",
+  "territorial": "Fundación carece de resguardos indígenas registrados (n=0), a pesar de albergar 5,610 personas indígenas. La bbox del municipio abarca 10.27°N a 10.65°N y -74.25°O a -73.56°O, sugiriendo dispersión geográfica sin reconocimiento territorial formal.",
+  "lengua": "Los datos sobre lenguas indígenas en Fundación no están disponibles. Esta ausencia impide evaluar vitalidad lingüística o pérdida cultural en los pueblos presentes, especialmente en el Arhuaco, mayoritario en el territorio.",
+  "vida": "No se reportan datos de NBI para Fundación, aunque el promedio indígena nacional es 67.6%. La falta de información limita el análisis de pobreza multidimensional. Se recomienda priorizar recolección de datos socioeconómicos para este municipio.",
+  "conflicto": "Fundación registra 44 víctimas de conflicto (1985-2024), con desplazamiento forzado como hecho principal (88.6%). Los 39 casos de desplazamiento reflejan violencia estructural que afecta principalmente a la población Arhuaco. La cifra subraya la urgencia de protección territorial.",
+  "icv": "El ICV de Fundación es 0.003, con conflicto como dimensión dominante (0.009). El score refleja condiciones críticas en seguridad, mientras los componentes de NBI y prevalencia no aportan variación (0.0). La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Priorizar la creación de resguardos para el pueblo Arhuaco, dado su 91.5% de la población indígena municipal y la ausencia actual de territorios reconocidos.",
+    "Implementar un sistema de alertas tempranas para prevenir desplazamientos forzados, considerando que el 88.6% de las víctimas están asociadas a este hecho.",
+    "Realizar un censo lingüístico para evaluar la vitalidad del Arhuaco y otros pueblos, ante la falta de datos en lengua.",
+    "Diseñar programas de salud intercultural con enfoque en la población de 20-40 años, grupo mayoritario según la pirámide etaria.",
+    "Solicitar al DANE la desagregación de NBI para Fundación, usando el promedio indígena nacional (67.6%) como línea base para intervenciones."
+  ]
+}

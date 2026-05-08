@@ -1,0 +1,112 @@
+{
+  "tipo": "mpio",
+  "id": "41016",
+  "nombre": "AIPE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 7,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 7,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 2,
+      "top": [
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "500",
+        "pueblo": "NASA",
+        "poblacion": 6
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        3.057797246783781,
+        -75.58850585768772,
+        3.4195778218294066,
+        -75.17277345044545
+      ],
+      "nombre_mpio": "AIPE",
+      "cod_dpto": "41"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 5,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 5,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Homicidio",
+          "total": 3
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Homicidio",
+        "total": 3
+      },
+      "pct_hecho_principal": 60.0
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.001
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:33:06",
+  "periodo": "2018",
+  "_input_hash": "1dc6628b973ea8f0"
+}

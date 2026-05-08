@@ -1,0 +1,245 @@
+{
+  "tipo": "mpio",
+  "id": "17614",
+  "nombre": "RIOSUCIO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 36422,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 36422,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 32653
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 2957
+        },
+        {
+          "cod_pueblo": "330",
+          "pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "poblacion": 549
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 115
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 55
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 17
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 15
+        },
+        {
+          "cod_pueblo": "400",
+          "pueblo": "HITNU",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "670",
+          "pueblo": "TSIRIPU",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "870",
+          "pueblo": "QUIMBAYA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "282",
+        "pueblo": "EMBERA-CHAMI",
+        "poblacion": 32653
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 2,
+      "resguardos": [
+        {
+          "nombre": "SAN LORENZO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6016.964
+        },
+        {
+          "nombre": "ESCOPETERA - PIRZA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 439.843
+        }
+      ],
+      "bbox": [
+        5.304314034660206,
+        -75.86816971338544,
+        5.564098976533678,
+        -75.60980202758873
+      ],
+      "nombre_mpio": "RIOSUCIO",
+      "cod_dpto": "17"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 543,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 543,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 407
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 64
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 29
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 8
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 7
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 5
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 4
+        },
+        {
+          "hecho": "Tortura",
+          "total": 3
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 407
+      },
+      "pct_hecho_principal": 75.0
+    },
+    "icv": {
+      "score": 0.033,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.109
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:41:16",
+  "periodo": "2018",
+  "_input_hash": "7e46ef8d75ee7893"
+}

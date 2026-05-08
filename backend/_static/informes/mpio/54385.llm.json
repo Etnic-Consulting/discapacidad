@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de La Esperanza (Norte de Santander) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo U`WA. La ausencia de resguardos (n=0) y datos territoriales detallados limita la planificación cultural y administrativa. La vulnerabilidad socioeconómica no puede evaluarse por falta de información sobre NBI, aunque el promedio indígena nacional alcanza 67.6%.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por n=1, lo que invalida análisis demográfico. La población indígena total (1 persona) impide desgloses por edad o género. Se requiere desagregación a nivel de resguardo o pueblo para interpretar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de registros (n=0) impide análisis de sub-registro o patrones epidemiológicos. Se recomienda priorizar sistemas de monitoreo local en territorios U`WA.",
+  "territorial": "La Esperanza carece de resguardos indígenas (n=0), a pesar de su bbox que abarca 7.55°N a 7.84°N y -73.63°O a -73.15°O. La dispersión geográfica no se traduce en presencia territorial colectiva. La ausencia de territorios legalizados dificulta la protección cultural y ambiental.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística del pueblo U`WA en el territorio. Se requiere investigación participativa con las comunidades para documentar prácticas lingüísticas.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en La Esperanza. El promedio indígena nacional (67.6%) sirve como referencia, pero no refleja la realidad local. La falta de datos impide calcular brechas o priorizar intervenciones sociales.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en La Esperanza (n=0) entre 1985-2024. La ausencia de hechos violentos no implica seguridad, sino posible sub-registro. Se debe fortalecer el RUV con enfoque diferencial indígena.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en La Esperanza es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja datos faltantes. Este resultado no es confiable para planificación.",
+  "recomendaciones": [
+    "Realizar censo participativo con el pueblo U`WA para actualizar datos demográficos y territoriales, citando n=1 actual y necesidad de desagregación.",
+    "Gestionar la constitución de resguardos indígenas en La Esperanza, considerando n_resguardos=0 y la bbox disponible.",
+    "Implementar sistemas de monitoreo de salud con enfoque intercultural, dado que no hay datos de prevalencia y n=0 en registros.",
+    "Priorizar proyectos de revitalización lingüística con base en _sin_datos en lengua, articulados con el pueblo U`WA.",
+    "Fortalecer el RUV municipal con enfoque diferencial, ante la ausencia de víctimas registradas (n=0) y posible sub-registro."
+  ]
+}

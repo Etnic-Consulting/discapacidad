@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Pichicora, Chicué, Puerto Alegre en Bojayá (Chocó) alberga una población de 20 habitantes según datos DANE-CNPV 2018. Este territorio embera eyábida-embera katío de 15.147 hectáreas en la macro ONIC Occidente presenta condiciones críticas en indicadores sociales. La ausencia de datos en NBI, lengua y capacidades diversas limita un análisis integral, aunque el ICV nulo (0.0) refleja la urgencia de intervenciones territoriales diferenciadas.",
+  "demografia": "La población total del resguardo es de 20 habitantes según el DANE-CNPV 2018. Esta cifra, aunque confiable, impide análisis de pirámide etaria o dinámicas demográficas por su reducido tamaño muestral. Los datos no permiten evaluar razones de crecimiento o envejecimiento poblacional en este territorio específico.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La falta de información impide analizar patrones de morbilidad o acceso a servicios médicos. Se requiere sistematización de registros locales para superar el sub-registro inherente a la ausencia de fuentes primarias.",
+  "territorial": "El resguardo ocupa 15.147 hectáreas en Bojayá (Chocó), con coordenadas que delimitan su territorio en la cuenca del Pacífico. Su ubicación en la macro Occidente lo sitúa en una zona de alta presión extractiva. La dispersión geográfica y el tamaño reducido contrastan con la extensión de otros territorios embera en la región.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este resguardo. Esta ausencia impide evaluar la vitalidad lingüística del pueblo embera eyábida-embera katío en el territorio. Se requiere trabajo de campo con las autoridades tradicionales para documentar el uso de lenguas propias.",
+  "vida": "No se reportan datos de NBI para este resguardo, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas en condiciones de vida. La ausencia de registros oficiales sobre necesidades básicas invisibiliza las carencias de este pequeño territorio colectivo.",
+  "conflicto": "No se registran víctimas con discapacidad en el RUV entre 1985-2024 para este resguardo (n=0). La ausencia de hechos victimizantes reportados contrasta con la violencia estructural en Bojayá. Esta limitación puede deberse a sub-registro en fuentes oficiales o a la baja densidad poblacional.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, determinado por la fórmula que pondera NBI, prevalencia y conflicto (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm). La dimensión dominante es el NBI normalizado (0.0), reflejando condiciones extremas de pobreza multidimensional en este territorio.",
+  "recomendaciones": [
+    "Priorizar censos comunitarios para superar el sub-registro en NBI, lengua y demografía, dado que la población de 20 habitantes impide análisis estadísticos confiables.",
+    "Implementar brigadas de salud intercultural con enfoque embera en Bojayá, considerando la ausencia de datos de prevalencia y el ICV nulo.",
+    "Fortalecer la titulación y protección del territorio de 15.147 hectáreas ante presiones extractivas en la macro Occidente.",
+    "Documentar el uso de lenguas embera eyábida y embera katío mediante trabajo con autoridades tradicionales, ante la falta de datos oficiales.",
+    "Establecer un sistema de alerta temprana para víctimas de conflicto en territorios embera, dado el sub-registro en el RUV (n=0) pese a contextos regionales violentos."
+  ]
+}

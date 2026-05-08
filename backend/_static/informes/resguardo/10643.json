@@ -1,0 +1,136 @@
+{
+  "tipo": "resguardo",
+  "id": "10643",
+  "nombre": "DIAMANTE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 12,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 12,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "DIAMANTE",
+      "dpto": "TOLIMA",
+      "cod_dpto": "73",
+      "mpio": "NATAGAIMA",
+      "cod_mpio": "73483",
+      "macro": "CENTRO - ORIENTE",
+      "pueblo_onic": "PIJAO",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "CRIT",
+      "area_hectareas": 220.529
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        3.5239215960000365,
+        -75.07835827399998,
+        3.537693379000075,
+        -75.05572435699997
+      ],
+      "area_hectareas": 220.529,
+      "macro": "CENTRO - ORIENTE",
+      "dpto": "TOLIMA",
+      "mpio": "NATAGAIMA"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 407,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 407,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 309
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 59
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 15
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 7
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 3
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 309
+      },
+      "pct_hecho_principal": 75.9
+    },
+    "icv": {
+      "score": 0.024,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.081
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:10:06",
+  "periodo": "2018",
+  "_input_hash": "11b3f2a0192de7b1"
+}

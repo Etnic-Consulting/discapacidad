@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Tenerife (Magdalena) registra una población indígena de 9 personas según CNPV 2018, distribuida en 4 pueblos. El 44.4% pertenece al pueblo Arhuaco, principal en el territorio. La ausencia de resguardos y datos de lengua refleja vacíos en la institucionalización de la diversidad étnica local.",
+  "demografia": "La población indígena en Tenerife es mínima (9 personas) con pirámide etaria concentrada en adultos mayores. Los datos no permiten análisis de razones de crecimiento o envejecimiento por bajo n=9. La principal comunidad es Arhuaco (4 personas), seguida de Ette-E'Neka y Wayúu (2 cada uno).",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Se reconoce la limitación interpretativa por falta de información específica. La ausencia de registros impide evaluar sub-registros o patrones epidemiológicos locales.",
+  "territorial": "Tenerife carece de resguardos indígenas, pese a contar con una extensión geográfica definida (bbox entre 9.81 y 10.02 latitud, -74.88 y -74.55 longitud). La dispersión territorial sin territorios colectivos legalizados limita la protección cultural y ambiental de los pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas en Tenerife no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Tenerife. El promedio indígena nacional (67.6%) no puede compararse por ausencia de datos locales. Se requiere actualización de registros para evaluar condiciones de vida.",
+  "conflicto": "Tenerife registra 9 víctimas de violencia con discapacidad entre 1985-2024, donde el 88.9% corresponde a desplazamiento forzado (8 casos). La amenaza representa el 11.1% restante. Estos datos subrayan la vulnerabilidad territorial frente a dinámicas de conflicto armado.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Tenerife es 0.001, con componentes en cero excepto conflicto (0.002). La dimensión dominante es el conflicto, reflejando la alta exposición a violencia. La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios colectivos para los pueblos Arhuaco, Ette-E'Neka y Wayúu, dado que el 100% de la población indígena carece de resguardos legalizados (n_resguardos: 0).",
+    "Implementar un sistema de registro lingüístico local para documentar la vitalidad de lenguas nativas, ante la ausencia de datos (_sin_datos: true en lengua).",
+    "Diseñar estrategias de protección diferencial para víctimas de desplazamiento forzado, que representan el 88.9% de los casos registrados (8 de 9 víctimas).",
+    "Articular con autoridades departamentales para generar datos de NBI y condiciones de vida, actualmente no disponibles (_sin_datos: true en nbi).",
+    "Incluir a Tenerife en planes de atención prioritaria de la ONIC, considerando su ICV crítico (0.001) y la concentración de vulnerabilidades en conflicto y acceso a derechos básicos."
+  ]
+}

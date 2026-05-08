@@ -1,0 +1,218 @@
+{
+  "tipo": "dpto",
+  "id": "47",
+  "nombre": "MAGDALENA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 20536,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 20536,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 955,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 955,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 20536,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 46.5,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "370",
+          "con_disc": 432,
+          "total": 5420
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 296,
+          "total": 10534
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 80,
+          "total": 899
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 60,
+          "total": 1419
+        },
+        {
+          "cod_pueblo": "050",
+          "con_disc": 43,
+          "total": 655
+        },
+        {
+          "cod_pueblo": "150",
+          "con_disc": 23,
+          "total": 1335
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 8,
+          "total": 77
+        },
+        {
+          "cod_pueblo": "850",
+          "con_disc": 6,
+          "total": 74
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 2,
+          "total": 8
+        },
+        {
+          "cod_pueblo": "920",
+          "con_disc": 2,
+          "total": 47
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 2,
+      "resguardos": [
+        {
+          "nombre": "ARHUACO DE LA SIERRA NEVADA",
+          "mpio": "ARACATACA",
+          "pueblo_onic": "IJKU - ARHUACO",
+          "area_pg_ha": 202739.14
+        },
+        {
+          "nombre": "CHIMILAS O CACAHUEROS DE SAN ANGEL",
+          "mpio": "SABANAS DE SAN ÁNGEL",
+          "pueblo_onic": "CHIMILAS - ETTE ENEKA",
+          "area_pg_ha": 1445.627
+        }
+      ],
+      "bbox": [
+        8.936489178684505,
+        -74.94659965927087,
+        11.348912068772798,
+        -73.54183790726381
+      ],
+      "nombre_dpto": "MAGDALENA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 490,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 490,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 393
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 31
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 25
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 13
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 10
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 6
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Tortura",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 393
+      },
+      "pct_hecho_principal": 80.2
+    },
+    "icv": {
+      "score": 0.099,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.233,
+        "conflicto_norm": 0.098
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:50:55",
+  "periodo": "2018",
+  "_input_hash": "dea79e059b9d1fa9"
+}

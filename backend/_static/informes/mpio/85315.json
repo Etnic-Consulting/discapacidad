@@ -1,0 +1,121 @@
+{
+  "tipo": "mpio",
+  "id": "85315",
+  "nombre": "SACAMA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 280,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 280,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 3,
+      "top": [
+        {
+          "cod_pueblo": "690",
+          "pueblo": "U`WA",
+          "poblacion": 275
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "690",
+        "pueblo": "U`WA",
+        "poblacion": 275
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        5.96811060754956,
+        -72.36552067368359,
+        6.1311288133621815,
+        -72.02569021472732
+      ],
+      "nombre_mpio": "SACAMA",
+      "cod_dpto": "85"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 9,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 9,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 5
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 3
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 5
+      },
+      "pct_hecho_principal": 55.6
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.002
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:34:36",
+  "periodo": "2018",
+  "_input_hash": "592ead77263603e7"
+}

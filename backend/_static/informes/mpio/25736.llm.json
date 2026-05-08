@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sesquilé alberga una población indígena de 234 personas según el CNPV 2018, concentrada en 9 pueblos. El 61.5% (144) corresponde al pueblo Muisca, único con presencia territorial registrada en el resguardo 'Los Hijos del Maíz' (207.098 ha). No se reportan víctimas de conflicto con discapacidad entre 1985-2024. La ausencia de datos en NBI, lengua y capacidades diversas limita el análisis integral del municipio.",
+  "demografia": "La población indígena de Sesquilé presenta una estructura demográfica concentrada en el pueblo Muisca (144 personas), seguido por Kichwa (66) y otros 7 pueblos con menos de 15 personas cada uno. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La diversidad poblacional refleja migraciones recientes y fragmentación territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. Esta limitación impide evaluar brechas de acceso a derechos fundamentales en Sesquilé.",
+  "territorial": "Sesquilé cuenta con un único resguardo indígena ('Los Hijos del Maíz') de 207.098 ha, ocupado por el pueblo Muisca. El territorio se ubica en la zona central de Cundinamarca, con coordenadas que delimitan un área reducida para 9 pueblos. La concentración territorial contrasta con la dispersión poblacional de los demás grupos étnicos.",
+  "lengua": "Los datos de lengua no están disponibles para Sesquilé. No se puede determinar la vitalidad de las lenguas indígenas en el municipio ni su uso en contextos cotidianos o educativos.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Sesquilé. El promedio indígena nacional de 67.6% no puede compararse localmente. Esta omisión impide evaluar condiciones de vida como acceso a agua, educación o vivienda en el territorio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Sesquilé entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en el registro. Se requiere fortalecer sistemas de alerta temprana para pueblos minoritarios como Kichwa o Awa.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de Sesquilé es 0.0, derivado de la falta de datos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con precisión. Este resultado subraya la urgencia de generar información local.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y de NBI, priorizando pueblos minoritarios como Awa o Panches con menos de 2 personas registradas.",
+    "Implementar un sistema de monitoreo de lengua indígena en escuelas rurales de Sesquilé, dado que el 61.5% de la población es Muisca y requiere revitalización cultural.",
+    "Incluir a Sesquilé en el Sistema de Alertas Tempranas de la ONIC para pueblos con menos de 10 personas, como Yanacona o Wayuu, ante riesgos de desaparición cultural.",
+    "Diseñar un plan de ordenamiento territorial que integre el resguardo 'Los Hijos del Maíz' con los territorios dispersos de otros 8 pueblos, garantizando conectividad y acceso a servicios.",
+    "Solicitar a la Alcaldía Municipal la inclusión de indicadores indígenas en el Plan de Desarrollo 2024-2027, usando como referencia el promedio nacional de NBI (67.6%) para priorizar inversiones."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Carepa (Antioquia) concentra 68 personas indígenas según CNPV 2018, distribuidas en 9 pueblos. El 29.4% son Zenú (20 personas), seguido por Emberá-Katío (14) y Emberá (13). La ausencia de resguardos registrados refleja vacíos en la protección territorial. La alta incidencia de desplazamiento forzado (9 de 13 víctimas) evidencia la vulnerabilidad del pueblo Zenú en este municipio.",
+  "demografia": "La población indígena de Carepa es reducida (68 personas) y dispersa entre 9 pueblos. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La predominancia del pueblo Zenú (29.4%) sugiere una concentración cultural local, pero la muestra es insuficiente para generalizar patrones demográficos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Carepa. Los registros del RUV no incluyen este municipio para análisis epidemiológicos. La falta de información limita la identificación de prioridades sanitarias, requiriendo sistemas de monitoreo específicos para pueblos minoritarios.",
+  "territorial": "Carepa no registra resguardos indígenas, a pesar de albergar 9 pueblos. La ausencia de territorios colectivos (N=0) contrasta con la presencia de comunidades como Zenú y Emberá. La dispersión geográfica en el municipio (bbox: 7.71 a 7.88 lat; -76.82 a -76.46 long) dificulta la articulación territorial y la protección de derechos.",
+  "lengua": "Los datos sobre lenguas indígenas en Carepa no están disponibles. La ausencia de registros impide evaluar la vitalidad lingüística de los pueblos presentes, como Zenú o Emberá, cuya transmisión cultural depende de estos espacios.",
+  "vida": "No hay datos de NBI para Carepa, aunque el promedio indígena nacional es 67.6%. La falta de información sobre pobreza multidimensional en este municipio invisibiliza las condiciones de vida de sus 68 habitantes indígenas. Se requiere incluir este indicador en censos locales para orientar políticas públicas.",
+  "conflicto": "Carepa registra 13 víctimas indígenas de violencia entre 1985-2024, con desplazamiento forzado como principal hecho (9 casos, 69.2%). El homicidio (2) y amenazas (1) completan el patrón. La concentración en desplazamiento refleja estrategias de despojo territorial contra el pueblo Zenú, dominante en el municipio.",
+  "icv": "Carepa tiene un ICV de 0.001, con conflicto como dimensión dominante (0.003). Los componentes NBI y prevalencia son nulos (0.0), lo que sugiere subregistro en datos sociales. La posición relativa es crítica, pero la confiabilidad del ICV es limitada por la escasa muestra (n=68) y la ausencia de resguardos.",
+  "recomendaciones": [
+    "Implementar un sistema de monitoreo territorial para registrar resguardos en Carepa, dado que no hay territorios colectivos reconocidos (N=0) a pesar de la presencia de 9 pueblos indígenas.",
+    "Priorizar la atención a víctimas de desplazamiento forzado (9 casos, 69.2%) con enfoque diferencial para el pueblo Zenú, principal afectado en el municipio.",
+    "Incluir el indicador NBI en censos locales para Carepa, ya que no hay datos disponibles y el promedio indígena nacional es 67.6%.",
+    "Fortalecer la recolección de datos lingüísticos para evaluar la vitalidad de lenguas como Zenú o Emberá, actualmente sin registros en el municipio.",
+    "Articular con la gobernación de Antioquia para garantizar la protección de los 68 habitantes indígenas, dispersos en 9 pueblos y sin territorios colectivos."
+  ]
+}

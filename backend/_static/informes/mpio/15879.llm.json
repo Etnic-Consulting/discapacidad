@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Viracachá reporta ausencia de población indígena registrada en el CNPV 2018 (n=0), lo que limita el análisis demográfico y territorial. La caja geográfica definida (5.40677054705962, -73.31859848326957 a 5.487760551777088, -73.21203999141437) no contiene resguardos indígenas. Los indicadores de conflicto y NBI no están disponibles para este nivel, restringiendo la evaluación de vulnerabilidades.",
+  "demografia": "Los datos de población indígena en Viracachá no están disponibles (n=0) según el CNPV 2018, lo que impide analizar la pirámide etaria o su composición. La confiabilidad del dato es NO_CONFIABLE, por lo que no se pueden extraer conclusiones sobre dinámicas demográficas. Se recomienda validar con fuentes comunitarias.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Viracachá. La sección no aplica al nivel municipal según la fuente consultada. El sub-registro potencial es indeterminado debido a la ausencia de registros oficiales. Se sugiere priorizar levantamientos comunitarios para caracterizar necesidades.",
+  "territorial": "Viracachá no registra resguardos indígenas (n=0) dentro de su jurisdicción, a pesar de contar con una delimitación geográfica precisa. La ausencia de territorios colectivos contrasta con la presencia de población indígena en departamentos cercanos como Boyacá. Esto refleja vacíos en la protección territorial.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Viracachá. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en el municipio.",
+  "vida": "El NBI no está disponible para Viracachá, aunque el promedio indígena nacional es 67.6%. La ausencia de datos impide comparar brechas o priorizar intervenciones. Se requiere un diagnóstico participativo para identificar necesidades socioeconómicas en la población indígena potencial.",
+  "conflicto": "Viracachá reporta cero víctimas indígenas con discapacidad en el RUV (1985-2024), dato confiable pero limitado por n=0. No hay hechos victimizantes registrados, lo que podría reflejar sub-registro o ausencia de población afectada. Se recomienda cruzar con fuentes comunitarias para validar.",
+  "icv": "El ICV de Viracachá es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la falta de datos, no una condición real. Este resultado no es interpretable sin información adicional.",
+  "recomendaciones": [
+    "Validar con autoridades indígenas y locales la presencia de población indígena no registrada en el CNPV 2018, dado el dato NO_CONFIABLE (n=0).",
+    "Realizar un censo comunitario participativo para identificar resguardos o territorios ancestrales no reconocidos en Viracachá.",
+    "Solicitar a la entidad territorial la inclusión de Viracachá en programas de protección territorial indígena, considerando su ubicación en Boyacá.",
+    "Priorizar levantamientos de NBI y prevalencia con enfoque diferencial, usando metodologías propias indígenas.",
+    "Establecer un sistema de alerta temprana para víctimas de conflicto en municipios con n=0 en el RUV, evitando sub-registro."
+  ]
+}

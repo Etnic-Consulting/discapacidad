@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Nasa LA AGUADITA (Putumayo) alberga 225 habitantes en 1.560 hectáreas, territorio históricamente afectado por el conflicto armado. Se registran 259 víctimas de violencia, con desplazamiento forzado como principal hecho victimizante (70.7% del total). El Índice de Condiciones Vitales (ICV) es crítico (0.016), donde el componente de conflicto aporta el 5.2% de la fórmula, reflejando una crisis humanitaria persistente en este territorio colectivo.",
+  "demografia": "La población total asciende a 225 habitantes según DANE-CNPV 2018. La pirámide etaria no puede analizarse con los datos disponibles, que solo reportan el total poblacional sin desagregación por edad o género. Se requiere cruzar con fuentes complementarias para evaluar dinámicas demográficas internas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La sección se encuentra sin información (_sin_datos: true), lo que impide evaluar patrones epidemiológicos o subregistros. Se recomienda priorizar levantamiento de información sanitaria local.",
+  "territorial": "El resguardo ocupa 1.560 hectáreas en Puerto Guzmán (Putumayo), dentro de la macro región Amazonia. Su ubicación geográfica (coordenadas bbox) delimita un territorio de alta biodiversidad pero con alta presión por actores armados. La concentración poblacional en un área reducida refleja vulnerabilidad territorial frente a dinámicas de conflicto.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). No se puede determinar el estado de vitalidad lingüística del pueblo Nasa en este territorio específico. Se sugiere incluir censos etnográficos en futuras actualizaciones.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para LA AGUADITA (_sin_datos: true). El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de datos limita el análisis de brechas en condiciones de vida frente a otros pueblos.",
+  "conflicto": "Se registran 259 víctimas de violencia (1985-2024), con 183 casos de desplazamiento forzado (70.7%). Otros hechos victimizantes incluyen homicidios (35) y amenazas (22). La concentración de hechos en desplazamiento evidencia estrategias de despojo territorial sistemático contra el pueblo Nasa en este resguardo.",
+  "icv": "El ICV de 0.016 ubica a LA AGUADITA en condiciones vitales críticas. El componente de conflicto (5.2%) es determinante en la fórmula, seguido de NBI y prevalencia (ambos 0.0). Este resultado refleja una crisis multidimensional donde el conflicto armado profundiza vulnerabilidades estructurales.",
+  "recomendaciones": [
+    "Priorizar la atención humanitaria a 259 víctimas registradas, con enfoque en 183 casos de desplazamiento forzado, garantizando rutas de protección y retorno seguro al territorio.",
+    "Diseñar un plan de salud intercultural para el resguardo, incorporando 225 habitantes en estrategias de prevención de violencia y atención psicosocial.",
+    "Realizar un censo etnográfico que incluya lengua y cultura Nasa, superando la ausencia de datos en estas secciones.",
+    "Implementar un sistema de alerta temprana para 1.560 hectáreas, articulado con organizaciones regionales como OZIP, ante riesgos de nuevos hechos victimizantes.",
+    "Incluir al resguardo en el Plan de Acción de la OPIAC para la Amazonía, vinculando recursos para protección territorial y soberanía alimentaria."
+  ]
+}

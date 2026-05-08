@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cicuco registra una población indígena de 13 personas según CNPV 2018, distribuidas en 4 pueblos. El 53.8% (7 personas) corresponde al pueblo WAYUU, principal grupo étnico en el municipio. La ausencia de resguardos y la alta incidencia de desplazamiento forzado (71.4% de las 7 víctimas de conflicto) revelan una vulnerabilidad territorial crítica. La concentración poblacional en un pueblo dominante contrasta con la dispersión geográfica sin territorios colectivos reconocidos.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. La población total indígena es de 13 personas, con una distribución dispersa entre 4 pueblos. El pueblo WAYUU concentra el 53.8% de la población, seguido por Kogui (23.1%), Zenú (15.4%) y Sikuani (7.7%). La ausencia de datos de capacidades diversas limita el análisis de vulnerabilidades específicas.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este nivel territorial. La falta de información sobre condiciones de salud o educación impide evaluar el sub-registro de necesidades. Se requiere desagregación municipal para identificar brechas en acceso a servicios básicos y derechos fundamentales.",
+  "territorial": "Cicuco no cuenta con resguardos indígenas reconocidos, a pesar de albergar 4 pueblos. La dispersión geográfica se refleja en la ausencia de territorios colectivos, con una población total de 13 personas. La bbox del municipio (9.167717045686665, -74.76035157122533 a 9.305754857714287, -74.61887678870261) evidencia una baja densidad poblacional indígena.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. La ausencia de información impide evaluar la vitalidad cultural y la transmisión intergeneracional de idiomas indígenas en Cicuco.",
+  "vida": "Los datos de NBI no están disponibles para este nivel territorial. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar con la situación de Cicuco. La falta de información limita el análisis de brechas en condiciones de vida.",
+  "conflicto": "Cicuco registra 7 víctimas de conflicto con discapacidad entre 1985-2024, donde el 71.4% corresponde a desplazamiento forzado (5 casos). Las amenazas (1 caso) y la pérdida de bienes (1 caso) completan el registro. La alta incidencia de desplazamiento forzado refleja una presión territorial constante sobre la población indígena.",
+  "icv": "El ICV de Cicuco es 0.0, con componentes normalizados en 0.0 para NBI y prevalencia, y 0.001 para conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una situación crítica en todas las dimensiones. La ausencia de datos en NBI y prevalencia limita la precisión del indicador.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios colectivos para los 4 pueblos indígenas presentes, dado que no existen resguardos reconocidos en Cicuco.",
+    "Implementar un sistema de alerta temprana para prevenir el desplazamiento forzado, principal hecho victimizante con 71.4% de los casos registrados.",
+    "Realizar un censo municipal desagregado por pueblo y grupo etario para superar la limitación de datos y diseñar políticas públicas específicas.",
+    "Fortalecer la articulación con el pueblo WAYUU (53.8% de la población) para garantizar la participación en la toma de decisiones territoriales.",
+    "Solicitar a la entidad competente la inclusión de Cicuco en el Registro de Lenguas Indígenas para evaluar la vitalidad cultural y diseñar estrategias de revitalización."
+  ]
+}

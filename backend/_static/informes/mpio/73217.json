@@ -1,0 +1,370 @@
+{
+  "tipo": "mpio",
+  "id": "73217",
+  "nombre": "COYAIMA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 9302,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 9302,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 13,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 9284
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "110",
+          "pueblo": "CABIYARI",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "170",
+          "pueblo": "COCAMA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "435",
+          "pueblo": "MAKU",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "620",
+          "pueblo": "TANIMUKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "790",
+          "pueblo": "YURUTI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "880",
+          "pueblo": "CALIMA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 9284
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 34,
+      "resguardos": [
+        {
+          "nombre": "GUADUALITO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1088.355
+        },
+        {
+          "nombre": "POTRERITO DOYARÉ",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 554.438
+        },
+        {
+          "nombre": "POTRERITO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 521.311
+        },
+        {
+          "nombre": "CHENCHE AMAYARCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 501.494
+        },
+        {
+          "nombre": "LOMAS DE HILARCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 478.283
+        },
+        {
+          "nombre": "TOTARCO PIEDRAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 476.299
+        },
+        {
+          "nombre": "CASTILLA - ANGOSTURAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 413.825
+        },
+        {
+          "nombre": "NUEVA ESPERANZA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 412.623
+        },
+        {
+          "nombre": "LA TUTIRA BONANZA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 375.026
+        },
+        {
+          "nombre": "CHENCHE - SOCORRO - LOS GUAYABOS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 360.477
+        },
+        {
+          "nombre": "TOTARCO NIPLE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 247.803
+        },
+        {
+          "nombre": "ZANJA HONDA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 238.565
+        },
+        {
+          "nombre": "CHENCHE BUENOS AIRES TRADICIONAL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.766
+        },
+        {
+          "nombre": "CHENCHE MEDIA LUNA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 202.747
+        },
+        {
+          "nombre": "CHENCHE BUENOS AIRES INDEPENDIENTE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 198.742
+        },
+        {
+          "nombre": "TOTARCO TAMARINDO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 196.958
+        },
+        {
+          "nombre": "CHENCHE BUENAVISTA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 187.813
+        },
+        {
+          "nombre": "TOTARCO DINDE - INDEPENDIENTE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 184.359
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 183.115
+        },
+        {
+          "nombre": "SANTA MARTA DIAMANTE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 175.906
+        },
+        {
+          "nombre": "LOMAS DE GUAGUARCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 148.442
+        },
+        {
+          "nombre": "MENCHE SAN CAYETANO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 126.006
+        },
+        {
+          "nombre": "HILARQUITO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 116.0
+        },
+        {
+          "nombre": "LAS PALMAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 112.71
+        },
+        {
+          "nombre": "FLORAL TRADICIONAL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 110.708
+        },
+        {
+          "nombre": "SANTA MARTA PALMAR",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 102.359
+        },
+        {
+          "nombre": "TRES ESQUINAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 100.592
+        },
+        {
+          "nombre": "ZARAGOZA TAMARINDO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 98.087
+        },
+        {
+          "nombre": "CHENCHE ZARAGOZA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 65.776
+        },
+        {
+          "nombre": "MESAS DE SAN JUAN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 50.269
+        },
+        {
+          "nombre": "Chenche Agua Fria",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 47.054
+        },
+        {
+          "nombre": "TOTARCO DINDE TRADICIONAL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 44.106
+        },
+        {
+          "nombre": "CHENCHE BALSILLAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 42.266
+        },
+        {
+          "nombre": "CHENCHE ANGOSTURA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 41.038
+        }
+      ],
+      "bbox": [
+        3.591487703140201,
+        -75.33118377308745,
+        3.9093888572716575,
+        -74.96322048785424
+      ],
+      "nombre_mpio": "COYAIMA",
+      "cod_dpto": "73"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 563,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 563,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 413
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 87
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 26
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 8
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 7
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Tortura",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 413
+      },
+      "pct_hecho_principal": 73.4
+    },
+    "icv": {
+      "score": 0.034,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.113
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:22:53",
+  "periodo": "2018",
+  "_input_hash": "dbacf8dc2c36bd4c"
+}

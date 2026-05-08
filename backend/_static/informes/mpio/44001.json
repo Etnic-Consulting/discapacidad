@@ -1,0 +1,253 @@
+{
+  "tipo": "mpio",
+  "id": "44001",
+  "nombre": "RIOHACHA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 53002,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 53002,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 49302
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 2941
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 400
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 125
+        },
+        {
+          "cod_pueblo": "370",
+          "pueblo": "KOGUI",
+          "poblacion": 55
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 46
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 25
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 20
+        },
+        {
+          "cod_pueblo": "820",
+          "pueblo": "MOKANA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "020",
+          "pueblo": "AMORUA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "720",
+        "pueblo": "WAYUU",
+        "poblacion": 49302
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 6,
+      "resguardos": [
+        {
+          "nombre": "MAÑATURE",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 648.776
+        },
+        {
+          "nombre": "EL SOLDADO PARATE BIEN",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 580.632
+        },
+        {
+          "nombre": "UNA APUCHON",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 453.065
+        },
+        {
+          "nombre": "LAS DELICIAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 189.991
+        },
+        {
+          "nombre": "PERRATPU",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 120.516
+        },
+        {
+          "nombre": "MONTE HARMON",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 40.793
+        }
+      ],
+      "bbox": [
+        10.91014348768696,
+        -73.38714893411037,
+        11.560287263566932,
+        -72.60228610906353
+      ],
+      "nombre_mpio": "RIOHACHA",
+      "cod_dpto": "44"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 160,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 160,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 127
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 14
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 127
+      },
+      "pct_hecho_principal": 79.4
+    },
+    "icv": {
+      "score": 0.01,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.032
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:37:38",
+  "periodo": "2018",
+  "_input_hash": "74c930d9cf322853"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Marta alberga una población indígena de 7.809 personas según el CNPV 2018, distribuidas en 20 pueblos. El 42.9% de esta población pertenece al pueblo Kogui, seguido por el Arhuaco con 2.183 personas. La ausencia de resguardos en el municipio refleja una debilidad en la titulación colectiva. La violencia histórica se concentra en desplazamiento forzado, con 70 casos registrados entre 1985-2024.",
+  "demografia": "La población indígena en Santa Marta presenta una estructura etaria concentrada en adultos jóvenes, con el 65.3% entre 15 y 64 años. Los pueblos Kogui y Arhuaco representan el 71.4% de la población, evidenciando una alta diversidad pero también una fragmentación territorial. La falta de datos específicos de pirámide etaria impide un análisis detallado de cohortes generacionales.",
+  "prevalencia": "No se cuenta con datos de prevalencia de enfermedades en este nivel municipal. La sección correspondiente no está disponible en el JSON proporcionado. Se requiere desagregar información desde fuentes departamentales o nacionales para evaluar condiciones de salud en la población indígena.",
+  "territorial": "Santa Marta registra cero resguardos indígenas, a pesar de albergar 20 pueblos distintos. La dispersión geográfica se extiende entre las coordenadas 10.82°N -74.24°O y 11.35°N -73.57°O, abarcando zonas urbanas y rurales sin reconocimiento territorial colectivo.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Se reconoce la limitación sin realizar inferencias sobre la vitalidad lingüística de los pueblos presentes.",
+  "vida": "No se dispone de datos sobre Necesidades Básicas Insatisfechas (NBI) para Santa Marta. El promedio indígena nacional de 67.6% no puede contrastarse localmente debido a la ausencia de información municipal en esta sección.",
+  "conflicto": "Se registraron 109 víctimas indígenas con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho victimizante principal con 70 casos (64.2%). La concentración de violencia en este delito refleja patrones históricos de despojo territorial en la región caribe.",
+  "icv": "El Índice de Condiciones Vitales (ICV) para Santa Marta es de 0.007, determinado principalmente por el componente de conflicto (0.022). La fórmula aplicada asigna pesos diferenciados a NBI (40%), prevalencia (30%) y conflicto (30%), evidenciando la urgencia de abordar la violencia estructural.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para los pueblos Kogui y Arhuaco, que concentran el 71.4% de la población indígena, mediante gestiones ante el INCODER con base en el CNPV 2018 (7.809 personas).",
+    "Implementar un sistema de alerta temprana para prevenir desplazamiento forzado, dado que el 64.2% de las víctimas indígenas registradas (70 casos) corresponden a este delito entre 1985-2024.",
+    "Diseñar programas de salud intercultural con enfoque diferencial, considerando la ausencia de datos de prevalencia en el municipio y la necesidad de desagregar información desde fuentes departamentales.",
+    "Fortalecer la representación política indígena en Santa Marta mediante cuotas en el Concejo Municipal, reflejando la diversidad de 20 pueblos presentes según el CNPV 2018.",
+    "Establecer un observatorio municipal de derechos humanos con participación de autoridades indígenas, para monitorear el ICV de 0.007 y sus componentes, especialmente el conflicto que aporta el 0.022 al indicador."
+  ]
+}

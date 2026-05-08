@@ -1,0 +1,258 @@
+{
+  "tipo": "mpio",
+  "id": "50568",
+  "nombre": "PUERTO GAITAN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 12580,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 12580,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 11057
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 909
+        },
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 431
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 59
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 45
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "020",
+          "pueblo": "AMORUA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "630",
+          "pueblo": "TARIANO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "850",
+          "pueblo": "KANKUAMO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "855",
+          "pueblo": "TAYRONAS",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "580",
+        "pueblo": "SIKUANI",
+        "poblacion": 11057
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 7,
+      "resguardos": [
+        {
+          "nombre": "EL TIGRE",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 47059.107
+        },
+        {
+          "nombre": "VENCEDOR - PIRIRI - GUAMITO Y MATANEGRA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 39195.954
+        },
+        {
+          "nombre": "SIKUANI DE DOMO PLANAS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 38811.488
+        },
+        {
+          "nombre": "SIKUANI DE AWÁLIBA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 20748.326
+        },
+        {
+          "nombre": "COROCITO, YOPALITO Y GUALABO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 9851.363
+        },
+        {
+          "nombre": "COROZAL TAPAOJO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 8160.257
+        },
+        {
+          "nombre": "WALIANI",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 4627.194
+        }
+      ],
+      "bbox": [
+        3.2728494268318573,
+        -72.40671631176878,
+        4.8991013344911725,
+        -71.07756237423655
+      ],
+      "nombre_mpio": "PUERTO GAITAN",
+      "cod_dpto": "50"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 28,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 28,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 17
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 4
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 2
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 17
+      },
+      "pct_hecho_principal": 60.7
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.006
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:46:05",
+  "periodo": "2018",
+  "_input_hash": "da16b310109d4d91"
+}

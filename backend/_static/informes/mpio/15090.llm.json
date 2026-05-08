@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Berbeo (Boyacá) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Quimbaya. La ausencia de resguardos y datos territoriales específicos limita el análisis de patrones de ocupación. La vulnerabilidad del territorio se refleja en un ICV de 0.0, donde todos los componentes normalizados alcanzan valores nulos, indicando condiciones críticas de bienestar.",
+  "demografia": "La pirámide etaria no aplica en este contexto debido a la población total de 1 individuo. Los datos demográficos a nivel municipal no permiten desagregaciones confiables para análisis etarios o de género. Se requiere cruzar con fuentes complementarias para evaluar estructura poblacional indígena en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los sistemas de información no capturan información a este nivel territorial, lo que impide evaluar necesidades sanitarias específicas. El sub-registro es total, requiriendo estrategias de recolección local.",
+  "territorial": "Berbeo no cuenta con resguardos indígenas según registros oficiales, a pesar de su condición municipal. La bounding box geográfica delimita un área de 0.014 grados cuadrados, sin presencia de territorios colectivos reconocidos. La dispersión territorial indígena en el municipio es nula.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en el territorio. Se recomienda realizar censos comunitarios para documentar esta dimensión cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Berbeo. El promedio indígena nacional de 67.6% no puede contrastarse con datos locales. La falta de registros impide evaluar brechas en condiciones de vida respecto a estándares indígenas nacionales.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en Berbeo entre 1985-2024. La ausencia de hechos victimizantes en el RUV sugiere baja visibilidad del municipio en dinámicas de violencia, aunque podría reflejar sub-registro en sistemas de información.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de 0.0 en Berbeo se explica por la normalización de componentes nulos: NBI (0.0), prevalencia (0.0) y conflicto (0.0). Este resultado posiciona al municipio en el extremo inferior de la escala, reflejando condiciones de extrema vulnerabilidad.",
+  "recomendaciones": [
+    "Realizar un censo comunitario indígena en Berbeo para actualizar datos demográficos y territoriales, dado que el registro actual (1 persona) no refleja la realidad poblacional.",
+    "Implementar un sistema de recolección de datos locales sobre NBI y salud, considerando que el municipio carece de información en estas dimensiones críticas.",
+    "Promover el reconocimiento de territorios colectivos en Berbeo, ya que la ausencia de resguardos (0) limita el ejercicio de derechos territoriales indígenas.",
+    "Establecer alianzas con organizaciones indígenas regionales para documentar la vitalidad lingüística, ante la falta de datos sobre lenguas originarias.",
+    "Incluir a Berbeo en programas de atención prioritaria del Estado, dado su ICV de 0.0 que indica condiciones de vida extremadamente precarias."
+  ]
+}

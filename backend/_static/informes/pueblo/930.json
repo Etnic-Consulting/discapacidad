@@ -1,0 +1,277 @@
+{
+  "tipo": "pueblo",
+  "id": "930",
+  "nombre": "Indígenas Mexico",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 5,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": 5,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hombres": {
+        "value": 3,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "mujeres": {
+        "value": 2,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "razon_masculinidad": {
+        "value": 150.0,
+        "_meta": {
+          "query": "calc h/m*100",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_dependencia": {
+        "value": 66.7,
+        "_meta": {
+          "query": "calc dep",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_envejecimiento": {
+        "value": 100.0,
+        "_meta": {
+          "query": "calc env",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "grupos_edad": {
+        "0-14": {
+          "h": 1,
+          "m": 0,
+          "total": 1
+        },
+        "15-64": {
+          "h": 1,
+          "m": 2,
+          "total": 3
+        },
+        "65+": {
+          "h": 1,
+          "m": 0,
+          "total": 1
+        }
+      },
+      "piramide": [
+        {
+          "grupo_edad": "0-4",
+          "sexo": "HOMBRE",
+          "valor": 1
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "HOMBRE",
+          "valor": 1
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "MUJER",
+          "valor": 1
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "MUJER",
+          "valor": 1
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "HOMBRE",
+          "valor": 1
+        }
+      ]
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 0,
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 10,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 0.0,
+        "_meta": {
+          "query": "calc x1000",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "tipos_limitacion": []
+    },
+    "territorial": {
+      "departamentos": [
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "VICHADA",
+          "total": 5,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "11",
+          "nom_dpto": "BOGOTA D.C.",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "05",
+          "nom_dpto": "ANTIOQUIA",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "08",
+          "nom_dpto": "ATLANTICO",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "13",
+          "nom_dpto": "BOLIVAR",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      ],
+      "n_departamentos": 5,
+      "departamento_principal": {
+        "cod_dpto": "99",
+        "nom_dpto": "VICHADA",
+        "total": 5,
+        "con_discapacidad": 0,
+        "tasa_x_1000": "0.00",
+        "confiabilidad": "NO_CONFIABLE"
+      },
+      "resguardos": [],
+      "n_resguardos": 0,
+      "bbox": null
+    },
+    "lengua": {
+      "pct_habla": 0.0,
+      "pct_entiende": 0.0,
+      "n_total": 5,
+      "habla_total": 0,
+      "entiende_total": 0
+    },
+    "nbi": {
+      "pct_nbi": {
+        "value": null,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pct_miseria": {
+        "value": null,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "componentes": {
+        "vivienda": null,
+        "servicios": null,
+        "hacinamiento": null,
+        "inasistencia": null,
+        "dependencia": null
+      },
+      "n_personas": 5,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:48:12",
+  "periodo": "2018",
+  "_input_hash": "27748f2c79b374ca"
+}

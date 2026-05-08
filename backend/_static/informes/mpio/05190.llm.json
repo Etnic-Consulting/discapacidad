@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cisneros (Antioquia) registra una población indígena de 6 personas según CNPV 2018, distribuidas en 3 pueblos. El 50% pertenece al pueblo Zenú, seguido por Wayúu y Yamalero. La ausencia de resguardos y datos de NBI y lengua refleja vacíos críticos en el reconocimiento territorial. La incidencia de conflicto es baja pero concentrada en desplazamiento forzado, con 2 casos reportados.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según la estructura de datos disponible. La población total indígena (6 personas) impide análisis etario confiable. Se requiere desagregación por grupos de edad para evaluar dinámicas generacionales. Los datos actuales no permiten inferir tendencias demográficas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en Cisneros. El sistema no reporta información a este nivel, limitando el análisis de morbilidad. Se debe priorizar la sistematización de registros locales para identificar patrones de salud en la población indígena.",
+  "territorial": "Cisneros no cuenta con resguardos indígenas registrados, pese a albergar 3 pueblos. La ausencia de territorios colectivos contrasta con la presencia poblacional. La dispersión geográfica (bbox) no refleja concentración territorial indígena. Se requiere mapear y reconocer espacios ancestrales para garantizar derechos territoriales.",
+  "lengua": "Los datos sobre lenguas indígenas en Cisneros no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas propias. La falta de registros limita la planificación en educación intercultural y revitalización cultural.",
+  "vida": "No hay datos de NBI para Cisneros. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de información impide evaluar condiciones de vida. Se debe implementar mecanismos de recolección de datos para medir pobreza multidimensional en la población indígena.",
+  "conflicto": "Se registraron 4 víctimas de conflicto con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho principal (50%). Los homicidios y amenazas completan el patrón de violencia. La baja incidencia no justifica la falta de atención, dado el impacto desproporcionado en comunidades pequeñas.",
+  "icv": "El ICV de Cisneros es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula refleja la ausencia de datos en NBI y prevalencia. La posición relativa es indeterminada por falta de comparadores. Se requiere mejorar la disponibilidad de datos para calcular indicadores robustos.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal desagregado por edad, género y pueblo para superar la limitación de n=6 y mejorar la planificación territorial.",
+    "Reconocer y delimitar territorios ancestrales en Cisneros, priorizando la titulación de resguardos para los pueblos Zenú, Wayúu y Yamalero.",
+    "Implementar un sistema de registro de NBI y salud indígena a nivel municipal, vinculado a las cifras nacionales para evaluar brechas.",
+    "Diseñar estrategias de prevención de desplazamiento forzado, dado que el 50% de las víctimas registradas corresponden a este hecho.",
+    "Incluir a Cisneros en programas de revitalización lingüística, considerando la ausencia de datos sobre lenguas indígenas."
+  ]
+}

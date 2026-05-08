@@ -1,0 +1,170 @@
+{
+  "tipo": "mpio",
+  "id": "27250",
+  "nombre": "EL LITORAL DEL SAN JUAN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6301,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 6301,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 2,
+      "top": [
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 6299
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "710",
+        "pueblo": "WOUNAN",
+        "poblacion": 6299
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 9,
+      "resguardos": [
+        {
+          "nombre": "CHAGPIEN TORDÓ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 22843.481
+        },
+        {
+          "nombre": "RÍO TAPARAL",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 14122.726
+        },
+        {
+          "nombre": "SANTA MARÍA DE PÁNGALA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 12185.649
+        },
+        {
+          "nombre": "RÍO PICHIMÁ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 9200.884
+        },
+        {
+          "nombre": "TOGOROMÁ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 8599.276
+        },
+        {
+          "nombre": "DOCORDÓ - BALSALITO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 4900.609
+        },
+        {
+          "nombre": "TIOSILIDIO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 4502.834
+        },
+        {
+          "nombre": "CABECERAS O PUERTO PIZARIO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 3846.172
+        },
+        {
+          "nombre": "BUENAVISTA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 2449.19
+        }
+      ],
+      "bbox": [
+        3.9648832130110883,
+        -77.53133280120824,
+        4.573110541149166,
+        -76.44438375694631
+      ],
+      "nombre_mpio": "EL LITORAL DEL SAN JUAN",
+      "cod_dpto": "27"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 196,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 196,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 151
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 29
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 14
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 151
+      },
+      "pct_hecho_principal": 77.0
+    },
+    "icv": {
+      "score": 0.012,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.039
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:30:09",
+  "periodo": "2018",
+  "_input_hash": "f947e5871a4f65cc"
+}

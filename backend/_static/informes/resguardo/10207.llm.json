@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Papallaqta, territorio del pueblo Yanakona-Yanakuna en el Cauca, alberga 659 habitantes en 218.5 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La ausencia de registros de víctimas en el RUV (0 casos) sugiere subregistro o baja incidencia, pero limita análisis de conflicto territorial.",
+  "demografia": "La población total de 659 habitantes presenta una estructura etaria no detallada en los datos. La confiabilidad de la fuente (DANE-CNPV 2018) es alta (n=659), pero la falta de desagregación por edades impide analizar dinámicas generacionales o presión demográfica en este territorio de 218.5 hectáreas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Papallaqta. El promedio indígena nacional (60.0%) no puede contrastarse localmente. Esta omisión subraya la necesidad de sistemas de registro específicos para resguardos, donde el subregistro es crítico.",
+  "territorial": "Papallaqta ocupa 218.5 hectáreas en San Sebastián (Cauca), con coordenadas que delimitan un territorio compacto en la macro región Occidente. La concentración geográfica es alta dado el área reducida, pero la falta de datos sobre uso del suelo o conflictos limita un análisis de presión territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede evaluar la vitalidad de la lengua Yanakona-Yanakuna en el territorio, a pesar de ser un indicador clave de identidad cultural y resistencia para el pueblo.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Papallaqta. El promedio indígena nacional (67.6%) no puede compararse, pero la ausencia de datos impide identificar brechas en acceso a servicios básicos en este territorio de 218.5 hectáreas.",
+  "conflicto": "No se registraron víctimas con discapacidad en el RUV (0 casos) entre 1985-2024. La falta de hechos violentos reportados contrasta con el contexto regional de violencia en el Cauca, sugiriendo subregistro o protección efectiva del territorio. La confiabilidad es alta (n=0), pero no permite conclusiones robustas.",
+  "icv": "El ICV de Papallaqta es 0.0, derivado de la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la carencia de información, no la calidad de vida. Esto exige priorizar sistemas de monitoreo local.",
+  "recomendaciones": [
+    "Implementar un sistema de registro de discapacidad y salud específico para resguardos, usando el promedio indígena nacional (60.0%) como línea base para priorizar intervenciones.",
+    "Diseñar un protocolo de recolección de datos de NBI en territorios indígenas, comparando con el promedio nacional (67.6%) para identificar brechas críticas en acceso a servicios.",
+    "Fortalecer la base de datos del RUV en resguardos, cruzando información con organizaciones como el CRIC para reducir el subregistro de víctimas (0 casos reportados).",
+    "Realizar un mapeo participativo de uso del suelo en Papallaqta (218.5 hectáreas) para evaluar presión territorial y diseñar estrategias de protección ambiental y cultural.",
+    "Priorizar la documentación de la lengua Yanakona-Yanakuna en el territorio, vinculando a ancianos y escuelas comunitarias para evitar la pérdida de este patrimonio cultural."
+  ]
+}

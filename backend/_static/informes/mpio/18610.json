@@ -1,0 +1,193 @@
+{
+  "tipo": "mpio",
+  "id": "18610",
+  "nombre": "SAN JOSE DEL FRAGUA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 451,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 451,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 11,
+      "top": [
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 321
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 62
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 30
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 24
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "026",
+          "pueblo": "YARURO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "170",
+          "pueblo": "COCAMA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "340",
+        "pueblo": "INGA",
+        "poblacion": 321
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 3,
+      "resguardos": [
+        {
+          "nombre": "INGA DE SAN MIGUEL",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 1836.974
+        },
+        {
+          "nombre": "YURAYACO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 719.462
+        },
+        {
+          "nombre": "EL PORTAL",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 223.245
+        }
+      ],
+      "bbox": [
+        1.0975133186182893,
+        -76.30622126224677,
+        1.5879815782157107,
+        -75.90652293861103
+      ],
+      "nombre_mpio": "SAN JOSE DEL FRAGUA",
+      "cod_dpto": "18"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 86,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 86,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 62
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 16
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 3
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 62
+      },
+      "pct_hecho_principal": 72.1
+    },
+    "icv": {
+      "score": 0.005,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.017
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:44:08",
+  "periodo": "2018",
+  "_input_hash": "abfe868dae6bb2fd"
+}

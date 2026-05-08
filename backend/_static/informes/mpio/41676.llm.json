@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa María (Huila) concentra 799 personas indígenas según CNPV 2018, donde el 99.5% pertenece al pueblo Pijao (795). El municipio carece de resguardos, pese a su alta población indígena. La vulnerabilidad se agudiza por 32 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como principal hecho victimizante (40.6%).",
+  "demografia": "La pirámide etaria muestra una población mayoritariamente adulta (795 Pijao), con solo 4 personas de otros pueblos (Awa, Dujos, Wayuu, Zenú). La concentración en un solo pueblo refleja homogeneidad cultural pero también riesgo de pérdida identitaria. No hay datos de capacidades diversas para contextualizar vulnerabilidades específicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este municipio. La falta de información limita el análisis de brechas sanitarias. Se requiere priorizar registros locales para superar el sub-registro en contextos rurales indígenas.",
+  "territorial": "Santa María no registra resguardos indígenas, pese a su población mayoritariamente Pijao. La bbox geográfica delimita un área de 2.82-3.02°N y -75.77--75.49°W, sin territorios colectivos reconocidos. La ausencia de resguardos contrasta con la alta población indígena, señalando vacíos en titulación territorial.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede evaluar la vitalidad lingüística del pueblo Pijao en Santa María. Se recomienda incluir censos lingüísticos en futuras mediciones territoriales.",
+  "vida": "No hay datos de NBI disponibles para Santa María. El promedio indígena nacional (67.6%) sirve como referencia, pero no permite calcular brechas locales. La falta de información impide diseñar estrategias de reducción de pobreza con enfoque diferencial.",
+  "conflicto": "Santa María registra 32 víctimas de conflicto armado, con desplazamiento forzado como principal hecho (13 casos, 40.6%). La violencia afecta directamente a la población Pijao, agravando la precariedad territorial. La concentración de hechos en desplazamiento refleja dinámicas de despojo histórico.",
+  "icv": "El ICV de Santa María es 0.002, con conflicto como dimensión dominante (0.006). El score refleja extrema vulnerabilidad estructural, donde el componente de conflicto supera ampliamente los demás. La posición relativa es crítica frente a otros municipios indígenas.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para el pueblo Pijao en Santa María, dado que el 99.5% de la población indígena carece de territorio colectivo reconocido (795 personas).",
+    "Implementar un sistema de registro local de víctimas y discapacidades para superar el sub-registro actual (32 víctimas sin datos de discapacidad).",
+    "Diseñar estrategias de retorno seguro para 13 casos de desplazamiento forzado, con enfoque en protección territorial y cultural del pueblo Pijao.",
+    "Incluir censos lingüísticos en futuras mediciones para evaluar la vitalidad del Pijao en Santa María, donde no hay datos disponibles.",
+    "Articular con la gobernación del Huila planes de reducción de pobreza indígena, usando el promedio nacional de NBI (67.6%) como línea base para intervenciones diferenciadas."
+  ]
+}

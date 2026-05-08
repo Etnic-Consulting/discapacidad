@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de EL CALVARIO registra una población indígena de 1 persona según el CNPV 2018, concentrada en el pueblo INDIGENAS-ECUADOR-. La ausencia de resguardos y la falta de datos en dimensiones clave como lengua, NBI y capacidades diversas limitan el análisis territorial. Este escenario refleja una presencia indígena mínima y dispersa, sin estructuras colectivas reconocidas en el municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la población total de 1 persona. Los datos demográficos a este nivel no permiten análisis etario ni comparativos. Se requiere desagregar por pueblos para evaluar dinámicas poblacionales, pero en EL CALVARIO solo se identifica un registro único sin distribución etaria confiable.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los sistemas de registro no capturan información a este nivel, lo que impide evaluar necesidades sanitarias. El sub-registro es total, sin cifras que permitan estimar brechas o prioridades en salud pública indígena.",
+  "territorial": "EL CALVARIO no cuenta con resguardos indígenas registrados, lo que evidencia una ausencia de territorios colectivos. La bbox geográfica delimita un área sin presencia indígena organizada. Esta situación contrasta con la media nacional, donde el 67.6% de la población indígena vive en condiciones de NBI, pero aquí no hay datos para contrastar.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en EL CALVARIO, lo que limita la planificación cultural y educativa desde una perspectiva indígena.",
+  "vida": "No hay información sobre NBI en EL CALVARIO. El promedio indígena nacional de 67.6% no puede compararse localmente por falta de datos. Esta omisión impide evaluar pobreza multidimensional, acceso a servicios básicos o brechas socioeconómicas en la población indígena del municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en EL CALVARIO entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja incidencia, pero también refleja posibles sub-registros en sistemas de información. La falta de datos impide analizar patrones de victimización o riesgos territoriales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en EL CALVARIO es 0.0, con componentes normalizados en cero. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse por falta de datos. Este resultado subraya la invisibilidad estadística de la población indígena en el municipio.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que el CNPV 2018 solo registra 1 persona.",
+    "Implementar un sistema de registro de lenguas indígenas en EL CALVARIO para evaluar vitalidad cultural y diseñar políticas educativas pertinentes.",
+    "Incluir al pueblo INDIGENAS-ECUADOR- en planes de desarrollo municipal con enfoque territorial, pese a su baja población registrada.",
+    "Articular con la ONIC y el Ministerio del Interior para reconocer resguardos o territorios colectivos en EL CALVARIO, garantizando derechos territoriales.",
+    "Priorizar la recolección de datos de NBI y salud indígena en el municipio, usando metodologías propias para superar sub-registros."
+  ]
+}

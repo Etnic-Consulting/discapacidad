@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Miranda (Cauca) concentra el 98.7% de su población indígena en el pueblo Nasa (5,070 personas), lo que refleja una alta homogeneidad étnica en un territorio marcado por la violencia histórica. El municipio registra 267 víctimas de conflicto, donde el desplazamiento forzado representa el 68.2% de los hechos victimizantes entre 1985-2024. La presencia de un solo resguardo (43.049 ha) evidencia una territorialidad indígena fragmentada y bajo presión.",
+  "demografia": "La población indígena en Miranda asciende a 5,135 personas según CNPV 2018, con una pirámide etaria concentrada en adultos (5070 Nasa), lo que refleja una estructura demográfica adulta sin datos de menores o adultos mayores. La ausencia de datos sobre capacidades diversas impide analizar vulnerabilidades específicas en este nivel territorial.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud en el municipio. Esta limitación impide evaluar el estado de salud colectiva, sugiriendo sub-registro o falta de sistematización en fuentes oficiales para este nivel territorial.",
+  "territorial": "Miranda alberga 1 resguardo (NASA: La Cilía o La Calera) con 43.049 ha, lo que representa una concentración territorial mínima frente a la población Nasa. La bbox geográfica delimita un área de 3.156 a 3.286 latitud y -76.370 a -76.051 longitud, indicando un territorio reducido y posiblemente fragmentado.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. Esta ausencia limita el análisis sobre vitalidad lingüística y estrategias de revitalización cultural en la población Nasa.",
+  "vida": "No hay datos de NBI disponibles para Miranda. El promedio indígena nacional (67.6%) no puede contrastarse, lo que impide evaluar brechas socioeconómicas en este territorio. Se requiere sistematización urgente de indicadores de pobreza multidimensional.",
+  "conflicto": "Miranda registra 267 víctimas de conflicto, con desplazamiento forzado como hecho principal (182 casos, 68.2%). La violencia se concentra en actos terroristas y homicidios, reflejando un patrón de afectación sistemática contra la población Nasa en su territorio histórico.",
+  "icv": "El ICV de Miranda es 0.016, con componente de conflicto como dimensión dominante (0.053). Este valor refleja una situación crítica donde la violencia estructural impacta más que la pobreza o salud. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm prioriza la dimensión de conflicto.",
+  "recomendaciones": [
+    "Garantizar la protección territorial del resguardo La Cilía o La Calera con 43.049 ha, priorizando medidas contra el desplazamiento forzado que afecta al 68.2% de las víctimas en Miranda.",
+    "Implementar un sistema de monitoreo de salud pública con enfoque diferencial para el pueblo Nasa, dado que el 98.7% de la población indígena depende de este territorio.",
+    "Incluir Miranda en planes de reparación colectiva por 267 víctimas de conflicto, con énfasis en los 182 casos de desplazamiento forzado documentados entre 1985-2024.",
+    "Sistematizar datos de NBI y lengua en el municipio para evaluar brechas socioeconómicas y vitalidad cultural, contrastando con el promedio indígena nacional de 67.6%.",
+    "Fortalecer la autonomía Nasa en Miranda mediante proyectos productivos en el resguardo, considerando la alta concentración poblacional (5,070 personas) en un territorio reducido."
+  ]
+}

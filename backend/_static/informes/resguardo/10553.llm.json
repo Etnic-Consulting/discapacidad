@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo ALTO LORENZO, territorio del pueblo Nasa en el Putumayo, alberga 81 habitantes según datos DANE-CNPV 2018. Con un área de 1376.96 hectáreas, su ubicación en la Amazonía lo sitúa en un contexto de alta vulnerabilidad territorial. La ausencia de datos en NBI y lengua refleja limitaciones en el monitoreo de condiciones de vida, mientras el ICV de 0.0 evidencia brechas críticas en bienestar.",
+  "demografia": "La población total de 81 personas corresponde a un territorio de pequeña escala en el Putumayo. La pirámide etaria no puede analizarse por falta de datos desagregados por edad y sexo en este nivel. Se requiere cruzar con registros locales para evaluar dinámicas generacionales y planificar políticas de juventud y vejez.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en ALTO LORENZO. Esta ausencia impide evaluar el sub-registro de patologías crónicas o emergentes. La ONIC debe priorizar la sistematización de registros comunitarios para identificar necesidades sanitarias prioritarias.",
+  "territorial": "ALTO LORENZO ocupa 1376.96 hectáreas en el municipio de Puerto Asís, Putumayo, dentro de la macrorregión Amazonía. Su delimitación geográfica precisa (coordenadas bbox) contrasta con la falta de datos sobre concentración de población indígena en el área. Se requieren estudios de uso del suelo para proteger su territorio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión invisibiliza la vitalidad cultural del pueblo Nasa en la zona. La ONIC debe exigir a las instituciones la inclusión de variables lingüísticas en censos territoriales para garantizar la pervivencia de los saberes ancestrales.",
+  "vida": "No se reportan datos de NBI para ALTO LORENZO, lo que impide comparar su situación con el promedio indígena nacional (67.6%). Esta carencia limita la identificación de brechas en acceso a servicios básicos. Se recomienda implementar sistemas de monitoreo comunitario para registrar condiciones de vida.",
+  "conflicto": "No se registran víctimas con discapacidad en ALTO LORENZO entre 1985-2024 (n=0). La ausencia de hechos violentos reportados en el RUV sugiere baja visibilidad del conflicto en este territorio. Sin embargo, la falta de datos no descarta afectaciones no documentadas en registros institucionales.",
+  "icv": "El ICV de 0.0 en ALTO LORENZO refleja la ausencia de datos en NBI, prevalencia y conflicto, componentes que ponderan el 100% de la fórmula. Esta métrica subraya la urgencia de generar información primaria para evaluar el bienestar integral. La ONIC debe liderar iniciativas de recolección de datos territoriales.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de condiciones de vida para cubrir vacíos en NBI y salud, citando la falta de datos actuales.",
+    "Realizar un diagnóstico lingüístico participativo con el pueblo Nasa para documentar la vitalidad del nasa yuwe en ALTO LORENZO, dado que no hay información disponible.",
+    "Exigir a las instituciones la inclusión de variables indígenas en censos territoriales para superar la invisibilización de este resguardo.",
+    "Promover estudios de uso del suelo y titulación colectiva en ALTO LORENZO, considerando su área de 1376.96 hectáreas y contexto amazónico.",
+    "Fortalecer la articulación con la OPIAC y OZIP para incidir en políticas públicas que aborden las brechas identificadas en el ICV."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Jambaló, territorio Nasa en el Cauca, alberga 14.594 habitantes en 5.666,8 hectáreas. La violencia histórica se refleja en 714 víctimas de conflicto, donde el desplazamiento forzado (465 casos) representa el 65,1% de los hechos registrados entre 1985-2024. La concentración de afectaciones en desplazamiento evidencia un patrón de despojo territorial sistemático contra este pueblo.",
+  "demografia": "La población total asciende a 14.594 habitantes según datos DANE-CNPV 2018. No se dispone de pirámide etaria específica para el resguardo. Los datos demográficos a este nivel no permiten análisis etario detallado, limitando la comprensión de dinámicas generacionales dentro del territorio.",
+  "prevalencia": "Los datos de prevalencia de discapacidad no están disponibles para este resguardo (_sin_datos: true). A nivel nacional indígena, el promedio es 60%, pero esta cifra no puede contrastarse con el territorio Jambaló. La ausencia de registros específicos impide evaluar la carga de discapacidad en la población afectada por el conflicto.",
+  "territorial": "El resguardo Jambaló ocupa 5.666,8 hectáreas en el municipio de Jambaló, Cauca. Su ubicación en la macrorregión Occidente y los límites geográficos definidos (bbox) confirman su carácter de territorio colectivo Nasa. La concentración espacial de la población y los hechos de violencia refuerzan su condición de zona crítica para la seguridad territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). No es posible determinar la vitalidad del nasa yuwe ni su uso en el territorio colectivo con la información actual.",
+  "vida": "No se registran datos de NBI para Jambaló (_sin_datos: true), aunque el promedio indígena nacional es 67,6%. La falta de información impide comparar condiciones de vida con otros territorios Nasa o evaluar brechas socioeconómicas en el resguardo.",
+  "conflicto": "Se registraron 714 víctimas de conflicto en Jambaló, con el desplazamiento forzado como hecho principal (465 casos, 65,1%). Los demás hechos (amenazas, homicidios, minas antipersonal) suman 249 casos. La concentración de afectaciones en desplazamiento refleja estrategias de despojo territorial contra el pueblo Nasa.",
+  "icv": "El ICV de Jambaló es 0,043, con conflicto como dimensión dominante (0,143). Los componentes NBI y prevalencia registran 0,0, lo que sugiere que el conflicto explica casi la totalidad de la vulnerabilidad medida. Este valor posiciona al resguardo en un contexto de alta afectación relativa.",
+  "recomendaciones": [
+    "Priorizar la atención psicosocial para 714 víctimas de conflicto, con enfoque en 465 casos de desplazamiento forzado, garantizando rutas de retorno seguro y reparación integral según estándares del RUV.",
+    "Implementar un sistema de alertas tempranas para prevenir nuevos desplazamientos, basado en el patrón de hechos registrados (65,1% correspondientes a desplazamiento).",
+    "Fortalecer la autonomía territorial Nasa mediante la delimitación y protección de 5.666,8 hectáreas, en articulación con la CRIC y el CRIC regional.",
+    "Generar registros locales de discapacidad y lengua nasa yuwe para superar la ausencia de datos (_sin_datos: true) y diseñar políticas culturales y de inclusión.",
+    "Incluir a Jambaló en planes de desarrollo con enfoque diferencial, considerando su ICV de 0,043 y la dimensión conflicto como principal determinante de vulnerabilidad."
+  ]
+}

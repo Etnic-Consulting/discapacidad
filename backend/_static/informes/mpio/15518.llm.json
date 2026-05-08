@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Pajarito (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con datos demográficos no confiables (n=0). La cobertura territorial se limita a 0 resguardos, pese a contar con un área geográfica definida. Este vacío estadístico refleja una brecha crítica en el reconocimiento oficial de pueblos indígenas en el territorio municipal.",
+  "demografia": "Los datos demográficos para Pajarito indican que no hay población indígena registrada (poblacion_total: 0). La falta de confiabilidad (NO_CONFIABLE) y tamaño muestral nulo impiden análisis de pirámide etaria o estructura poblacional. Se requiere cruce con fuentes comunitarias para validar esta ausencia estadística.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para Pajarito (lengua y NBI sin datos). La ausencia de registros en el RUV (victimas_total_disc: 0) sugiere sub-registro o invisibilización de afectaciones, especialmente en contextos de conflicto histórico en Boyacá.",
+  "territorial": "Pajarito cuenta con 0 resguardos indígenas registrados, pese a tener un área geográfica delimitada (bbox con coordenadas válidas). La dispersión territorial no aplica al no existir territorios colectivos reconocidos. La ausencia de resguardos contrasta con la presencia histórica de pueblos en la región andina.",
+  "lengua": "Los datos de lengua indígena en Pajarito no están disponibles (_sin_datos: true). No se puede determinar presencia de lenguas originarias ni su vitalidad cultural en el municipio. Esta omisión limita el diseño de políticas de revitalización lingüística.",
+  "vida": "El NBI no tiene datos disponibles para Pajarito (_sin_datos: true), lo que impide comparar con el promedio indígena nacional (67.6%). La falta de información sobre necesidades básicas invisibiliza las condiciones de vida de posibles pueblos no registrados oficialmente.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Pajarito (victimas_total_disc: 0), dato con confiabilidad CONFIABLE pero n=0. La ausencia de hechos victimizantes en el RUV puede reflejar sub-registro o baja presencia indígena reconocida, no necesariamente paz territorial.",
+  "icv": "El ICV de Pajarito es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la carencia total de datos, no una condición real de bienestar.",
+  "recomendaciones": [
+    "Realizar censo comunitario con enfoque étnico en Pajarito para validar presencia indígena no registrada, citando la ausencia de datos en CNPV 2018 (poblacion_total: 0).",
+    "Solicitar a la ONIC y al Ministerio del Interior actualizar el mapa de resguardos en Boyacá, dado que se reportan 0 territorios en Pajarito (n_resguardos: 0).",
+    "Implementar sistema de alerta temprana para pueblos no reconocidos en Boyacá, considerando el sub-registro en RUV (victimas_total_disc: 0).",
+    "Diseñar estrategias de salud intercultural con enfoque en pueblos no visibles, ante la falta de datos de NBI y lengua (_sin_datos: true).",
+    "Priorizar acciones de memoria histórica en Pajarito para documentar afectaciones previas, dado que el ICV refleja ausencia de registros (score: 0.0)."
+  ]
+}

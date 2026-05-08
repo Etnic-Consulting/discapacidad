@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sabana Grande registra una población indígena de 18 personas según CNPV 2018, distribuidas en 7 pueblos. El 33.3% corresponde al pueblo Mokaná, principal grupo presente en el territorio. La ausencia de resguardos y datos de NBI y lengua refleja vacíos en la protección territorial y el registro diferencial. La concentración demográfica en un núcleo reducido exige políticas de visibilización y protección cultural.",
+  "demografia": "La población indígena de Sabana Grande suma 18 personas, con una pirámide etaria no disponible en los datos. Los 7 pueblos identificados (Mokaná, Zenú, Arhuaco, Wayúu, Kankuamo y otros) muestran una distribución dispersa y minoritaria. La falta de desagregación por grupos de edad impide analizar dinámicas generacionales o vulnerabilidades específicas.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este municipio. La ausencia de registros sistemáticos limita el análisis de condiciones de salud o acceso a servicios. Se requiere fortalecer sistemas de información locales para superar el sub-registro y garantizar el derecho a la salud diferencial.",
+  "territorial": "Sabana Grande no cuenta con resguardos indígenas registrados, pese a la presencia de 7 pueblos. La caja geográfica (bbox) delimita un área reducida, sin territorios colectivos reconocidos. Esta ausencia de espacios protegidos contrasta con la diversidad cultural existente y demanda acciones de titulación y delimitación.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. La falta de registros lingüísticos invisibiliza la vitalidad cultural de los pueblos presentes. Se recomienda priorizar levantamientos etnográficos para documentar y revitalizar las lenguas en riesgo.",
+  "vida": "No hay información sobre NBI para Sabana Grande. El promedio indígena nacional (67.6%) sirve como referencia, pero la ausencia de datos locales impide evaluar brechas. La invisibilización estadística dificulta la focalización de políticas sociales y el cumplimiento de derechos territoriales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Sabana Grande entre 1985-2024. La ausencia de hechos violentos reportados no descarta situaciones de riesgo no documentadas. La falta de sistemas de alerta temprana y registro diferencial limita la comprensión de la conflictividad en el territorio.",
+  "icv": "El ICV de Sabana Grande es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). Esta métrica refleja la ausencia de datos sistemáticos más que condiciones reales. La fórmula aplicada subraya la necesidad de mejorar la recolección de información para calcular indicadores territoriales precisos.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal con enfoque diferencial para registrar la población indígena y sus necesidades, citando la cifra de 18 personas identificadas en CNPV 2018.",
+    "Iniciar procesos de delimitación y titulación de resguardos para los 7 pueblos presentes, dado que no existen territorios reconocidos en el municipio.",
+    "Implementar un sistema de alerta temprana para violencia y discriminación contra indígenas, ante la ausencia de datos de conflicto en el RUV.",
+    "Documentar lenguas indígenas en riesgo mediante estudios etnográficos, considerando la falta de registros en los datos disponibles.",
+    "Fortalecer la recolección de datos de NBI y salud con enfoque diferencial, para superar la ausencia de información y comparar con el promedio indígena nacional (67.6%)."
+  ]
+}

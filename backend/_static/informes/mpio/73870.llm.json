@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Villahermosa (Tolima) registra una población indígena de 7 personas según CNPV 2018, concentrada exclusivamente en el pueblo WAYUU. La ausencia de resguardos y datos territoriales detallados limita la visibilidad de su presencia histórica. Este municipio, con n=7, presenta desafíos en la representación indígena a nivel local, requiriendo estrategias de identificación diferenciada.",
+  "demografia": "La pirámide etaria no aplica para este nivel municipal dado que la población total indígena es de 7 personas, insuficiente para análisis demográfico. La concentración en un solo pueblo (WAYUU) refleja una diversidad étnica mínima en el territorio. Los datos provienen de CNPV 2018 con n=7 y confiabilidad CONFIABLE.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en este municipio. La falta de información impide análisis comparativos o de sub-registro. Se reconoce la limitación interpretativa por ausencia de registros confiables a este nivel territorial.",
+  "territorial": "Villahermosa no cuenta con resguardos indígenas registrados (n=0), lo que dificulta la identificación de territorios colectivos. La bbox geográfica delimita un área sin presencia indígena territorialmente reconocida. La dispersión y ausencia de resguardos sugiere una presencia indígena no organizada en el municipio.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede inferir uso lingüístico o vitalidad cultural a partir de la información existente.",
+  "vida": "No hay datos de NBI disponibles para Villahermosa. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. Se reconoce la falta de información como limitante para evaluar condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Villahermosa entre 1985-2024 (n=0). La ausencia de hechos victimizantes destacados sugiere baja visibilidad del conflicto en este territorio. Los datos son confiables pero limitados por el tamaño muestral.",
+  "icv": "El ICV de Villahermosa es 0.0, determinado por la ausencia de datos en componentes clave (NBI, prevalencia, conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de información. Este resultado subraya la necesidad de mejorar registros territoriales.",
+  "recomendaciones": [
+    "Implementar estrategias de identificación étnica municipal para superar el subregistro de 7 personas indígenas, priorizando pueblos como el WAYUU con n=7 según CNPV 2018.",
+    "Generar acuerdos interinstitucionales para incluir a Villahermosa en programas de caracterización étnica territorial, dado que no hay resguardos registrados (n=0).",
+    "Incluir a Villahermosa en sistemas de alerta temprana sobre conflicto, pese a no registrar víctimas (n=0), para prevenir futuras afectaciones.",
+    "Diseñar políticas de fortalecimiento cultural para pueblos minoritarios en municipios sin resguardos, como Villahermosa, donde el WAYUU representa el 100% de la población indígena.",
+    "Solicitar a DANE la desagregación de datos indígenas a nivel municipal para superar la falta de información en NBI, lengua y prevalencia."
+  ]
+}

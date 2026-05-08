@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de EL ROSARIO registra una población indígena de 3 personas, concentrada en el pueblo QUILLACINGA según CNPV 2018. La ausencia de resguardos y datos demográficos detallados limita el análisis de capacidades diversas y vitalidad cultural. El conflicto armado impacta fuertemente: 74 víctimas de discriminación, con desplazamiento forzado como principal hecho victimizante (60.8%).",
+  "demografia": "La pirámide etaria no aplica en este nivel por falta de datos desagregados. La población total indígena es de 3 personas, lo que impide análisis de estructura etaria o dinámicas generacionales. Los datos disponibles no permiten evaluar razones de crecimiento o declive poblacional.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este municipio. Los registros de víctimas por discriminación (74 casos) sugieren sub-registro en salud, pero no permiten calcular tasas de prevalencia confiables. La falta de información limita cualquier lectura sobre condiciones de vida.",
+  "territorial": "EL ROSARIO no cuenta con resguardos indígenas, a pesar de su bbox geográfico que abarca áreas potencialmente habitables. La ausencia de territorios colectivos (0 resguardos) refleja patrones históricos de despojo o falta de reconocimiento legal. La dispersión geográfica no es evaluable sin datos de asentamientos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística del pueblo QUILLACINGA en este territorio ni su relación con la identidad cultural.",
+  "vida": "No hay datos de NBI disponibles para EL ROSARIO. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar sin información local. La falta de registros impide evaluar brechas en acceso a servicios básicos o condiciones de vida.",
+  "conflicto": "74 víctimas de discriminación en EL ROSARIO entre 1985-2024, con desplazamiento forzado como principal hecho (45 casos, 60.8%). Los datos reflejan un patrón de violencia estructural contra pueblos indígenas, donde el despojo territorial y la movilidad forzada son recurrentes.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en EL ROSARIO es 0.004, con componentes normalizados en cero excepto conflicto (0.015). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm muestra que el conflicto es el único factor contribuyente. La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento legal de territorios indígenas en EL ROSARIO, priorizando la titulación de resguardos para el pueblo QUILLACINGA, dado que no existen actualmente (0 resguardos).",
+    "Implementar un sistema de registro de datos indígenas a nivel municipal, incluyendo lengua, NBI y salud, para superar la ausencia de información y permitir políticas públicas diferenciadas.",
+    "Diseñar rutas de atención psicosocial para las 74 víctimas de discriminación, enfocadas en desplazamiento forzado (60.8% de los casos) y despojo territorial, con enfoque étnico.",
+    "Incluir a EL ROSARIO en programas de protección territorial ONIC, considerando su ICV de 0.004 y la dimensión de conflicto como factor dominante (0.015).",
+    "Realizar un censo indígena municipal actualizado que permita dimensionar la población QUILLACINGA y sus necesidades, superando la cifra actual de 3 personas registradas."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Ituango alberga una población indígena de 477 personas según CNPV 2018, concentrada en 10 pueblos. El 83% corresponde al pueblo Emberá-Katío (396 personas), reflejando una alta homogeneidad étnica en el territorio. La presencia de un solo resguardo (Jai-Dukama) y la alta incidencia de desplazamiento forzado (69.6% de las 23 víctimas registradas) revelan vulnerabilidades estructurales en este municipio del departamento de Antioquia.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que el JSON no desagrega por grupos de edad. Solo se cuenta con el total poblacional indígena (477 personas) y su distribución por pueblos. Esta limitación impide evaluar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Ituango. El campo `prevalencia` no está incluido en el JSON, lo que imposibilita cualquier análisis de morbilidad o acceso a servicios médicos para la población indígena del municipio.",
+  "territorial": "Ituango registra un solo resguardo indígena (Jai-Dukama) con 1.285 hectáreas, ocupando un área reducida dentro del municipio. La dispersión geográfica de la población indígena se limita a este territorio colectivo, mientras el 83% de la población pertenece al pueblo Emberá-Katío, dominante en el espacio territorial reconocido.",
+  "lengua": "Los datos sobre lengua no están disponibles para Ituango. El campo `lengua` está marcado como `_sin_datos: true`, lo que impide evaluar la vitalidad lingüística o la transmisión intergeneracional de idiomas indígenas en el municipio.",
+  "vida": "No se reportan datos de NBI para Ituango, aunque el promedio indígena nacional es 67.6%. La falta de información específica para el municipio (marcada como `_sin_datos: true`) no permite comparar condiciones de vida ni identificar brechas con el promedio nacional o departamental.",
+  "conflicto": "Ituango registra 23 víctimas indígenas de violencia entre 1985-2024, con desplazamiento forzado como el hecho principal (69.6% de los casos). La concentración de hechos violentos en este municipio, junto a la alta proporción de desplazados, evidencia un patrón de afectación territorial vinculado a dinámicas de conflicto armado en la región.",
+  "icv": "Ituango presenta un ICV de 0.001, con conflicto como dimensión dominante (0.005). Este valor, cercano a cero, refleja condiciones críticas en términos de NBI, prevalencia y conflicto, aunque la fórmula pondera más el componente de violencia. La posición relativa es extremadamente baja frente a estándares nacionales.",
+  "recomendaciones": [
+    "Priorizar la protección territorial del resguardo Jai-Dukama (1.285 ha) ante el desplazamiento forzado que afecta al 69.6% de las víctimas indígenas en Ituango.",
+    "Implementar un sistema de alertas tempranas para el pueblo Emberá-Katío (396 personas), principal afectado por hechos de violencia según los datos registrados.",
+    "Garantizar el acceso a servicios básicos en el único resguardo identificado, considerando la ausencia de datos sobre NBI y condiciones de vida.",
+    "Fortalecer la caracterización demográfica por grupos de edad en Ituango, actualmente limitada por falta de desagregación en los datos disponibles.",
+    "Diseñar estrategias de recuperación cultural para el pueblo Emberá-Katío, mayoritario en el municipio, ante la ausencia de información sobre lengua y vitalidad cultural."
+  ]
+}

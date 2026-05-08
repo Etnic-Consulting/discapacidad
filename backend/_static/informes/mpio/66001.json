@@ -1,0 +1,226 @@
+{
+  "tipo": "mpio",
+  "id": "66001",
+  "nombre": "PEREIRA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1889,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1889,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 963
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 399
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 169
+        },
+        {
+          "cod_pueblo": "330",
+          "pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "poblacion": 76
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 36
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 34
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 32
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 17
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 16
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 13
+        },
+        {
+          "cod_pueblo": "870",
+          "pueblo": "QUIMBAYA",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "170",
+          "pueblo": "COCAMA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "440",
+          "pueblo": "MASIGUARE",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 5
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "282",
+        "pueblo": "EMBERA-CHAMI",
+        "poblacion": 963
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        4.66317253225074,
+        -75.93588822120222,
+        4.906083447091897,
+        -75.37549907040102
+      ],
+      "nombre_mpio": "PEREIRA",
+      "cod_dpto": "66"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 35,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 35,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 19
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 6
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 4
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        },
+        {
+          "hecho": "Tortura",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 19
+      },
+      "pct_hecho_principal": 54.3
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.007
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:10:24",
+  "periodo": "2018",
+  "_input_hash": "511090c6387bceab"
+}

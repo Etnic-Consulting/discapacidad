@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Guachicono, territorio del pueblo Yanakona-Yanakuna en el Cauca, alberga 4.975 habitantes en 1.470 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. La falta de información sobre lengua y capacidades diversas limita el diagnóstico integral, aunque se reconoce su pertenencia al CRIC y su ubicación en la macrorregión Occidente.",
+  "demografia": "La población total del resguardo es de 4.975 personas, según datos DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel. La ausencia de datos demográficos detallados impide analizar dinámicas generacionales o presión demográfica en el territorio colectivo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Guachicono. La sección se marca como _sin_datos, lo que imposibilita evaluar necesidades sanitarias específicas del resguardo. Se recomienda priorizar recolección de información epidemiológica local.",
+  "territorial": "Guachicono ocupa 1.470 hectáreas en el municipio de La Vega (Cauca), con coordenadas que definen un área acotada en la macrorregión Occidente. Es un territorio colectivo de 4.975 habitantes, donde la concentración demográfica coincide con la delimitación geográfica del resguardo. No se reportan territorios asociados adicionales.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del yanakuna ni su uso en contextos cotidianos o educativos. Se requiere investigación específica sobre prácticas lingüísticas en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Guachicono. El promedio indígena nacional (67.6%) no puede compararse debido a la ausencia de datos locales. La brecha con el estándar nacional no puede calcularse, limitando la identificación de prioridades sociales.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024, según el RUV. La ausencia de hechos victimizantes reportados sugiere baja visibilidad de la violencia en este territorio. Sin embargo, la confiabilidad depende de la exhaustividad de los registros oficiales.",
+  "icv": "El ICV de Guachicono es 0.0, resultado de la falta de datos normalizados en sus tres componentes (NBI, prevalencia y conflicto). La fórmula aplicada no puede calcularse sin valores, lo que impide posicionar al resguardo frente a otros territorios. Se requiere sistematización de indicadores locales.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de salud, priorizando indicadores de lengua y NBI, citando la población de 4.975 habitantes como base de planificación.",
+    "Implementar un sistema de monitoreo epidemiológico participativo con enfoque Yanakona, dado que no hay datos de prevalencia disponibles.",
+    "Incluir al resguardo en los planes de protección territorial del CRIC, considerando su ICV de 0.0 y la ausencia de registros de conflicto.",
+    "Diseñar estrategias de revitalización lingüística con participación de ancianos y jóvenes, ante la falta de información sobre lengua.",
+    "Solicitar a entidades nacionales la desagregación de datos por resguardo para superar las limitaciones actuales en NBI y conflicto."
+  ]
+}

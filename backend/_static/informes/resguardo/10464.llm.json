@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Kogui-Malayo Arhuaco, ubicado en el municipio de Dibulla (Magdalena), concentra 23.626 habitantes en un territorio de 407.799 hectáreas. Su población, registrada en 2018, refleja una comunidad con alta densidad territorial pero sin datos disponibles sobre discapacidad o necesidades básicas insatisfechas (NBI). La ausencia de víctimas de conflicto en el RUV (1985-2024) destaca un contexto de baja visibilidad estatal, aunque no necesariamente de paz social.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos proporcionados, ya que el JSON no incluye estructura por edad ni género. Solo se dispone de la población total (23.626 habitantes), sin desagregación que permita evaluar dinámicas demográficas internas o presión poblacional sobre el territorio.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este resguardo. La sección correspondiente no fue reportada, lo que impide evaluar subregistros o prioridades sanitarias. Se reconoce la limitación metodológica para este nivel territorial.",
+  "territorial": "El resguardo abarca 407.799 hectáreas en la Sierra Nevada de Santa Marta, con coordenadas que confirman su extensión en los municipios de Dibulla (Magdalena) y límites con La Guajira. Su área lo posiciona como uno de los territorios más grandes de la macro ONIC Norte, pero sin datos sobre fragmentación o presión por actores externos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede confirmar el estado de vitalidad del Ijku (lengua arhuaca) en el territorio, a pesar de ser el pueblo dominante según la ONIC.",
+  "vida": "No hay información sobre NBI para este resguardo. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de datos impide evaluar brechas en acceso a servicios básicos o condiciones de vida de la comunidad.",
+  "conflicto": "No se registraron víctimas de conflicto con discapacidad en el RUV (1985-2024) para este resguardo. La ausencia de hechos violentos reportados no descarta dinámicas de conflicto no documentadas, dado el subregistro histórico en zonas rurales indígenas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, calculado con componentes normalizados de NBI, prevalencia y conflicto. La fórmula refleja la falta de datos desagregados, limitando su utilidad como herramienta de diagnóstico. La dimensión dominante es la ausencia de información confiable.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de discapacidad, priorizando la desagregación por edad y género, citando la población total de 23.626 habitantes.",
+    "Implementar un sistema de registro propio de víctimas de conflicto en territorios indígenas, dado que el RUV no captura dinámicas locales, como lo sugiere la ausencia de datos en este resguardo.",
+    "Documentar el estado de la lengua Ijku mediante metodologías participativas, considerando la extensión territorial (407.799 ha) y la necesidad de políticas de revitalización cultural.",
+    "Generar un diagnóstico de NBI con enfoque diferencial, contrastando con el promedio nacional (67.6%), para priorizar inversiones en servicios básicos en un territorio de esta magnitud.",
+    "Fortalecer alianzas con la CIT y organizaciones regionales para sistematizar datos de salud y conflicto, superando las limitaciones de fuentes externas no confiables."
+  ]
+}

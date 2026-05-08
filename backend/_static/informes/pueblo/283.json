@@ -1,0 +1,872 @@
+{
+  "tipo": "pueblo",
+  "id": "283",
+  "nombre": "Eperara Siapidara",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 7047,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": 7047,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hombres": {
+        "value": 3530,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "mujeres": {
+        "value": 3517,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "razon_masculinidad": {
+        "value": 100.4,
+        "_meta": {
+          "query": "calc h/m*100",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_dependencia": {
+        "value": 88.9,
+        "_meta": {
+          "query": "calc dep",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_envejecimiento": {
+        "value": 7.0,
+        "_meta": {
+          "query": "calc env",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "grupos_edad": {
+        "0-14": {
+          "h": 1531,
+          "m": 1568,
+          "total": 3099
+        },
+        "15-64": {
+          "h": 1883,
+          "m": 1847,
+          "total": 3730
+        },
+        "65+": {
+          "h": 116,
+          "m": 102,
+          "total": 218
+        }
+      },
+      "piramide": [
+        {
+          "grupo_edad": "0-4",
+          "sexo": "HOMBRE",
+          "valor": 485
+        },
+        {
+          "grupo_edad": "0-4",
+          "sexo": "MUJER",
+          "valor": 539
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "HOMBRE",
+          "valor": 483
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "MUJER",
+          "valor": 464
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "HOMBRE",
+          "valor": 409
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "MUJER",
+          "valor": 419
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "HOMBRE",
+          "valor": 349
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "MUJER",
+          "valor": 349
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "HOMBRE",
+          "valor": 300
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "MUJER",
+          "valor": 250
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "HOMBRE",
+          "valor": 222
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "MUJER",
+          "valor": 229
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "HOMBRE",
+          "valor": 168
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "MUJER",
+          "valor": 147
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "HOMBRE",
+          "valor": 140
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "MUJER",
+          "valor": 137
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "HOMBRE",
+          "valor": 113
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "MUJER",
+          "valor": 107
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "HOMBRE",
+          "valor": 78
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "MUJER",
+          "valor": 83
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "HOMBRE",
+          "valor": 65
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "MUJER",
+          "valor": 91
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "HOMBRE",
+          "valor": 563
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "MUJER",
+          "valor": 565
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "HOMBRE",
+          "valor": 39
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "MUJER",
+          "valor": 35
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "HOMBRE",
+          "valor": 42
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "MUJER",
+          "valor": 30
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "HOMBRE",
+          "valor": 31
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "MUJER",
+          "valor": 32
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "HOMBRE",
+          "valor": 20
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "MUJER",
+          "valor": 18
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "HOMBRE",
+          "valor": 20
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "MUJER",
+          "valor": 15
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "HOMBRE",
+          "valor": 3
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "MUJER",
+          "valor": 7
+        }
+      ]
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 362,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 362,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 14090,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 25.7,
+        "_meta": {
+          "query": "calc x1000",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "tipos_limitacion": []
+    },
+    "territorial": {
+      "departamentos": [
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "VICHADA",
+          "total": 7045,
+          "con_discapacidad": 181,
+          "tasa_x_1000": "25.69",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "19",
+          "nom_dpto": "CAUCA",
+          "total": 4464,
+          "con_discapacidad": 129,
+          "tasa_x_1000": "28.90",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "52",
+          "nom_dpto": "NARINO",
+          "total": 2137,
+          "con_discapacidad": 36,
+          "tasa_x_1000": "16.85",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "76",
+          "nom_dpto": "VALLE DEL CAUCA",
+          "total": 317,
+          "con_discapacidad": 13,
+          "tasa_x_1000": "41.01",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "11",
+          "nom_dpto": "BOGOTA D.C.",
+          "total": 45,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "22.22",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "27",
+          "nom_dpto": "CHOCO",
+          "total": 15,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "17",
+          "nom_dpto": "CALDAS",
+          "total": 14,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "71.43",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "05",
+          "nom_dpto": "ANTIOQUIA",
+          "total": 13,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "66",
+          "nom_dpto": "RISARALDA",
+          "total": 8,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "63",
+          "nom_dpto": "QUINDIO",
+          "total": 8,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "25",
+          "nom_dpto": "CUNDINAMARCA",
+          "total": 4,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "23",
+          "nom_dpto": "CORDOBA",
+          "total": 4,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "13",
+          "nom_dpto": "BOLIVAR",
+          "total": 4,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "250.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "18",
+          "nom_dpto": "CAQUETA",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "70",
+          "nom_dpto": "SUCRE",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "08",
+          "nom_dpto": "ATLANTICO",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "50",
+          "nom_dpto": "META",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "86",
+          "nom_dpto": "PUTUMAYO",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "44",
+          "nom_dpto": "LA GUAJIRA",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "81",
+          "nom_dpto": "ARAUCA",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "73",
+          "nom_dpto": "TOLIMA",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      ],
+      "n_departamentos": 21,
+      "departamento_principal": {
+        "cod_dpto": "99",
+        "nom_dpto": "VICHADA",
+        "total": 7045,
+        "con_discapacidad": 181,
+        "tasa_x_1000": "25.69",
+        "confiabilidad": "CONFIABLE"
+      },
+      "resguardos": [
+        {
+          "nombre": "Rio Guangui (1174)",
+          "poblacion": 1002,
+          "dpto": "CAUCA",
+          "mpio": "TIMBIQUÍ"
+        },
+        {
+          "nombre": "Infi (1175)",
+          "poblacion": 716,
+          "dpto": "CAUCA",
+          "mpio": "TIMBIQUÍ"
+        },
+        {
+          "nombre": "Calle Santa Rosa - Rio Saija (1173)",
+          "poblacion": 629,
+          "dpto": "CAUCA",
+          "mpio": "TIMBIQUÍ"
+        },
+        {
+          "nombre": "Río Satinga (2052)",
+          "poblacion": 600,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Mamuncia, Parte Media del Río Micay (2141)",
+          "poblacion": 454,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Pro-Defensa del Río Tapaje (2136)",
+          "poblacion": 415,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Parte Alta Sur del Río Saija (2099)",
+          "poblacion": 369,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Alto Río Sequihonda (2131)",
+          "poblacion": 325,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Manglares del Río Micay (2144)",
+          "poblacion": 292,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Rio Naya (Joaquincito) (1453)",
+          "poblacion": 196,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "BUENAVENTURA"
+        },
+        {
+          "nombre": "Parte Baja del Río Saija (2102)",
+          "poblacion": 193,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Rio Sanquianga (1361)",
+          "poblacion": 170,
+          "dpto": "NARIÑO",
+          "mpio": "OLAYA HERRERA"
+        },
+        {
+          "nombre": "Integrado del Charco (1601)",
+          "poblacion": 168,
+          "dpto": "NARIÑO",
+          "mpio": "EL CHARCO"
+        },
+        {
+          "nombre": "Negros en Acción (2098)",
+          "poblacion": 165,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Sanquianga (2039)",
+          "poblacion": 132,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "San Juan Pampon (1602)",
+          "poblacion": 121,
+          "dpto": "NARIÑO",
+          "mpio": "LA TOLA"
+        },
+        {
+          "nombre": "Nueva Bellavista y Partidero (1817)",
+          "poblacion": 120,
+          "dpto": "CAUCA",
+          "mpio": "GUAPI"
+        },
+        {
+          "nombre": "Chonara Huena (1692)",
+          "poblacion": 95,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "BUENAVENTURA"
+        },
+        {
+          "nombre": "Eperara- Siapidaara de Quebrada grande (1737)",
+          "poblacion": 81,
+          "dpto": "NARIÑO",
+          "mpio": "SANTA BÁRBARA"
+        },
+        {
+          "nombre": "Almorzadero, San Isidro, y La Nueva Union (1647)",
+          "poblacion": 69,
+          "dpto": "CAUCA",
+          "mpio": "TIMBIQUÍ"
+        },
+        {
+          "nombre": "Playa Bendita (1751)",
+          "poblacion": 47,
+          "dpto": "CAUCA",
+          "mpio": "LÓPEZ DE MICAY"
+        },
+        {
+          "nombre": "Rio Satinga (Bacao) (1362)",
+          "poblacion": 46,
+          "dpto": "NARIÑO",
+          "mpio": "OLAYA HERRERA"
+        },
+        {
+          "nombre": "Integración del Río Chuare (2129)",
+          "poblacion": 30,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Cuenca del Río Iscuandé (2142)",
+          "poblacion": 15,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Eperara Siapidaara de Maiz Blanco (1735)",
+          "poblacion": 12,
+          "dpto": "NARIÑO",
+          "mpio": "EL CHARCO"
+        },
+        {
+          "nombre": "La Cuenca del Río San Bernardo Patía Norte (2088)",
+          "poblacion": 8,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Eperara Siapidaara de Morrito (1736)",
+          "poblacion": 8,
+          "dpto": "NARIÑO",
+          "mpio": "EL CHARCO"
+        },
+        {
+          "nombre": "Alto Mira y Frontera (2150)",
+          "poblacion": 8,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Guapí Abajo (2058)",
+          "poblacion": 4,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Renacer Negro (2057)",
+          "poblacion": 3,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Esperanza (1073)",
+          "poblacion": 3,
+          "dpto": "CAQUETÁ",
+          "mpio": "BELÉN DE LOS ANDAQUÍES"
+        },
+        {
+          "nombre": "San Lorenzo (1583)",
+          "poblacion": 2,
+          "dpto": "CALDAS",
+          "mpio": "RIOSUCIO"
+        },
+        {
+          "nombre": "Laguna Siberia (1121)",
+          "poblacion": 2,
+          "dpto": "CAUCA",
+          "mpio": "CALDONO"
+        },
+        {
+          "nombre": "Río Guajuí (2061)",
+          "poblacion": 2,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Río Naya (2192)",
+          "poblacion": 2,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Mirla (1538)",
+          "poblacion": 2,
+          "dpto": "ANTIOQUIA",
+          "mpio": "TÁMESIS"
+        },
+        {
+          "nombre": "Honduras (1074)",
+          "poblacion": 1,
+          "dpto": "CAQUETÁ",
+          "mpio": "FLORENCIA"
+        },
+        {
+          "nombre": "Mayor de Unión Panamericana (2073)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Delfina (1749)",
+          "poblacion": 1,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "DAGUA"
+        },
+        {
+          "nombre": "Municipio de Pueblo Rico Risaralda (2075)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Negros Unidos (2091)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Cristiania (1034)",
+          "poblacion": 1,
+          "dpto": "ANTIOQUIA",
+          "mpio": "ANDES"
+        },
+        {
+          "nombre": "Cupica (2069)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Maticuru (1082)",
+          "poblacion": 1,
+          "dpto": "CAQUETÁ",
+          "mpio": "MILÁN"
+        },
+        {
+          "nombre": "Unificado Chami Rio San Juan (1410)",
+          "poblacion": 1,
+          "dpto": "RISARALDA",
+          "mpio": "MISTRATÓ"
+        },
+        {
+          "nombre": "Río Baudó Acaba (2062)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Sabaletera San Onofre El Tigre (1675)",
+          "poblacion": 1,
+          "dpto": "CHOCÓ",
+          "mpio": "SAN JOSÉ DEL PALMAR"
+        },
+        {
+          "nombre": "San Lorenzo de Caldono  (1124)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "San Joc Parte Alta del Río Micay (2128)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Montaña (1070)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Cañamomo-Lomaprieta (1069)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        }
+      ],
+      "n_resguardos": 51,
+      "bbox": [
+        1.668937281000069,
+        -78.56128432399998,
+        3.9121386180000286,
+        -76.85359689399996
+      ]
+    },
+    "lengua": {
+      "pct_habla": 0.0,
+      "pct_entiende": 0.0,
+      "n_total": 7047,
+      "habla_total": 0,
+      "entiende_total": 0
+    },
+    "nbi": {
+      "pct_nbi": {
+        "value": 86.64,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pct_miseria": {
+        "value": 53.81,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "componentes": {
+        "vivienda": 4.77,
+        "servicios": 80.16,
+        "hacinamiento": 52.93,
+        "inasistencia": 4.64,
+        "dependencia": 14.9
+      },
+      "n_personas": 7045,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.385,
+      "componentes": {
+        "nbi_norm": 0.866,
+        "prevalencia_norm": 0.129,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:52:14",
+  "periodo": "2018",
+  "_input_hash": "b0be371b5c245d5f"
+}

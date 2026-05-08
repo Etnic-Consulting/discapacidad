@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Anzoátegui (Tolima) registra una población indígena de 5 personas según CNPV 2018, distribuida en 3 pueblos. El 40% de esta población pertenece al pueblo Pijao, principal en el municipio. La ausencia de resguardos y datos de lengua refleja una debilidad en la institucionalidad territorial indígena local. La alta afectación por conflicto armado, con 18 víctimas registradas entre 1985-2024, demanda atención prioritaria.",
+  "demografia": "La pirámide etaria no aplica para este nivel municipal debido a que los datos se presentan como agregados sin desagregación por edad. La población total indígena de 5 personas impide análisis demográficos detallados. Se recomienda priorizar la recolección de datos desagregados por grupos etarios para futuros informes.",
+  "prevalencia": "Los datos de prevalencia de condiciones de salud no están disponibles para este municipio. La sección no aplica a nivel municipal según la fuente consultada. Esto limita la capacidad de análisis sobre necesidades sanitarias específicas de la población indígena local.",
+  "territorial": "Anzoátegui carece de resguardos indígenas reconocidos, con una cobertura territorial nula (0 resguardos). La ausencia de territorios colectivos dificulta la protección de los derechos territoriales y culturales. La delimitación geográfica del municipio (bbox) no incluye áreas con presencia indígena reconocida.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes en la población indígena local. Se requiere investigación específica para documentar el uso de lenguas originarias.",
+  "vida": "No hay datos disponibles sobre NBI para Anzoátegui, aunque el promedio indígena nacional es 67.6%. Esta limitación impide evaluar las condiciones de vida de la población indígena local. Se recomienda incluir indicadores de pobreza multidimensional en futuras mediciones.",
+  "conflicto": "El municipio presenta 18 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (66.7% de los casos). La afectación desproporcionada refleja la vulnerabilidad territorial en una zona históricamente afectada por violencia. La cifra subraya la urgencia de medidas de protección y reparación.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Anzoátegui es 0.001, con componente de conflicto como dimensión dominante (0.004). El bajo score refleja condiciones críticas de vida, aunque la fórmula pondera componentes con valores cercanos a cero. La posición relativa frente a otros municipios indígenas es preocupante.",
+  "recomendaciones": [
+    "Implementar un censo indígena municipal desagregado por edad y género para superar la limitación actual de n=5 personas y mejorar la planificación territorial.",
+    "Priorizar la creación de un resguardo indígena en Anzoátegui, considerando la ausencia de territorios colectivos y la necesidad de protección cultural y ambiental.",
+    "Diseñar un plan de atención psicosocial para las 18 víctimas de conflicto, enfocado en reparación integral y prevención de nuevos desplazamientos forzados.",
+    "Incluir indicadores de NBI y lengua en el próximo informe municipal, alineados con el promedio indígena nacional (67.6% NBI) para evaluar brechas.",
+    "Fortalecer la articulación con la ONIC y autoridades tradicionales para documentar el uso de lenguas originarias y revitalizar prácticas culturales en riesgo."
+  ]
+}

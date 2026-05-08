@@ -1,0 +1,182 @@
+{
+  "tipo": "mpio",
+  "id": "85230",
+  "nombre": "OROCUE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2277,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 2277,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 9,
+      "top": [
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 2193
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 46
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 16
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "830",
+          "pueblo": "OTAVALEÑO",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "800",
+          "pueblo": "ZENU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "570",
+        "pueblo": "SALIBA",
+        "poblacion": 2193
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 6,
+      "resguardos": [
+        {
+          "nombre": "SAN JUANITO, EL DUYA Y PARAVARE",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 21263.877
+        },
+        {
+          "nombre": "MACUCUANA",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 6659.504
+        },
+        {
+          "nombre": "EL CONSEJO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 4181.195
+        },
+        {
+          "nombre": "EL SUSPIRO EL RINCÓN DEL SOCORRO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1982.019
+        },
+        {
+          "nombre": "EL MEDANO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1963.616
+        },
+        {
+          "nombre": "EL SALADILLO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1530.547
+        }
+      ],
+      "bbox": [
+        4.597446219829298,
+        -72.15589952980628,
+        5.224517501139221,
+        -70.96718592978675
+      ],
+      "nombre_mpio": "OROCUE",
+      "cod_dpto": "85"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 22,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 22,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 7
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Homicidio",
+        "total": 13
+      },
+      "pct_hecho_principal": 59.1
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.004
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:33:52",
+  "periodo": "2018",
+  "_input_hash": "8f793bfebb76f1fd"
+}

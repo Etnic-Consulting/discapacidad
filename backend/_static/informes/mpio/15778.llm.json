@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sutatenza registra una población indígena de 1 persona según el CNPV 2018, correspondiente al pueblo U`WA. La ausencia de resguardos y datos de lengua refleja una presencia indígena marginal en el territorio municipal. El ICV de 0.0 y la falta de información en NBI y conflicto subrayan vacíos críticos en la caracterización socioeconómica y de derechos humanos del municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal dado que solo se reporta 1 habitante indígena. La concentración en un único pueblo (U`WA) limita cualquier análisis demográfico agregado. Los datos confirman una presencia indígena residual en Sutatenza, sin estructura poblacional detectable.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. El promedio indígena nacional del 60.0% en capacidades diversas no puede contrastarse localmente. La falta de registros impide evaluar la situación específica de la población indígena en Sutatenza.",
+  "territorial": "Sutatenza no cuenta con resguardos indígenas, lo que evidencia una ausencia de reconocimiento territorial formal. La bbox geográfica delimita un área municipal sin presencia de territorios colectivos. La dispersión territorial es nula, alineada con la población mínima reportada.",
+  "lengua": "Los datos de lengua no están disponibles para Sutatenza. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en el municipio.",
+  "vida": "No hay información sobre NBI en Sutatenza, lo que impide comparar con el promedio indígena nacional del 67.6%. La falta de datos socioeconómicos dificulta evaluar las condiciones de vida de la población indígena local. Se requiere recolección de información primaria para caracterizar la vulnerabilidad.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Sutatenza entre 1985-2024. La ausencia de hechos victimizantes refleja una baja exposición al conflicto armado en el municipio. Sin embargo, la falta de datos detallados limita el análisis de dinámicas territoriales específicas.",
+  "icv": "El ICV de 0.0 en Sutatenza se deriva de la ausencia de datos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja un valor nulo por falta de inputs. Esto no refleja una condición real, sino vacíos en la información disponible.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal para actualizar la población y caracterizar su estructura etaria, dado que el dato actual (1 persona) es insuficiente para análisis demográfico.",
+    "Incluir a Sutatenza en programas de reconocimiento territorial para evaluar la viabilidad de crear resguardos, considerando su bbox geográfica sin territorios colectivos actuales.",
+    "Solicitar al DANE la desagregación de datos de lengua para el municipio, dado que no hay información disponible en fuentes oficiales.",
+    "Priorizar la recolección de datos de NBI y conflicto en el municipio, comparándolos con el promedio indígena nacional (67.6% y 0 víctimas con discapacidad, respectivamente).",
+    "Diseñar estrategias de protección diferencial para el pueblo U`WA en Sutatenza, considerando su presencia mínima y la necesidad de fortalecer su identidad cultural en contextos urbanos o rurales no reconocidos."
+  ]
+}

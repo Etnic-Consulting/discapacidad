@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de SUAITA reporta una población indígena de 1 persona según el CNPV 2018, concentrada en la categoría 'INDIGENA-SIN-INFORMACION'. La ausencia de resguardos (0) y datos de lengua o NBI refleja una invisibilización estructural de lo indígena en este territorio. La brecha entre la población registrada y la realidad sociocultural exige revisar los mecanismos de identificación étnica en el municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la ausencia de datos desagregados. Solo se registra 1 persona bajo la categoría genérica 'INDIGENA-SIN-INFORMACION', lo que impide analizar dinámicas generacionales. La falta de información sobre capacidades diversas (discapacidad) limita cualquier interpretación demográfica a este nivel.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en SUAITA. La ausencia de registros en el RUV y otras fuentes impide evaluar subregistros o patrones epidemiológicos. Se requiere fortalecer sistemas de información locales para capturar datos indígenas específicos.",
+  "territorial": "SUAITA no cuenta con resguardos indígenas (0), a pesar de estar ubicado en un área con coordenadas geográficas definidas. La dispersión territorial sin territorios colectivos reconocidos dificulta la protección de derechos étnicos. La bbox delimitada no refleja presencia indígena formalizada en el territorio.",
+  "lengua": "Los datos de lengua no están disponibles para SUAITA. La ausencia de registros lingüísticos en el municipio invisibiliza la diversidad cultural indígena local. Se recomienda priorizar levantamientos etnográficos para documentar lenguas en uso.",
+  "vida": "No hay información sobre NBI en SUAITA, aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar brechas socioeconómicas. La invisibilización estadística refleja la exclusión de lo indígena en políticas públicas municipales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en SUAITA (0 casos entre 1985-2024). La ausencia de hechos victimizantes reportados no descarta afectaciones no documentadas. La falta de datos limita análisis de patrones de violencia en el territorio.",
+  "icv": "El ICV de SUAITA es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la ausencia de indicadores medibles. Este resultado subraya la necesidad de sistemas de monitoreo territorial robustos.",
+  "recomendaciones": [
+    "Implementar un censo étnico municipal para identificar y caracterizar a la población indígena, citando la cifra de 1 persona registrada en CNPV 2018.",
+    "Crear un observatorio de lenguas indígenas en SUAITA para documentar diversidad cultural, ante la falta de datos en esta sección.",
+    "Establecer un sistema de alerta temprana para violencia contra indígenas, dado que no hay registros en el RUV pero el contexto regional exige prevención.",
+    "Diseñar un plan de fortalecimiento institucional para incluir la categoría 'INDIGENA-SIN-INFORMACION' en políticas públicas, reflejando la limitación en los datos.",
+    "Priorizar la creación de un resguardo indígena en SUAITA, considerando la ausencia de territorios colectivos reconocidos (0 resguardos)."
+  ]
+}

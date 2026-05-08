@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Soraca registra una población indígena de 3 personas según CNPV 2018, concentrada en un único pueblo sin identificación específica. La ausencia de resguardos y datos de lengua o NBI limita la comprensión de su realidad territorial. La principal afectación identificada es el conflicto, con 2 víctimas registradas entre 1985-2024, destacando amenazas y desplazamiento forzado como hechos predominantes.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la mínima población registrada (3 personas). La concentración en un solo pueblo sin información específica refleja una debilidad en el registro étnico municipal. Los datos provienen de CNPV 2018 con confiabilidad CONFIABLE pero n=3, lo que restringe su representatividad.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no aplica al nivel municipal según la nota técnica. Se reconoce la limitación interpretativa por falta de información específica.",
+  "territorial": "Soraca carece de resguardos indígenas, lo que evidencia una ausencia de reconocimiento territorial formal. La bbox geográfica delimita un área de 5.44 a 5.54 latitud y -73.36 a -73.27 longitud en Boyacá. La dispersión nula y N=0 resguardos contrastan con la presencia de población indígena identificada.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio según la fuente consultada. No se puede inferir la vitalidad lingüística a partir de los registros existentes.",
+  "vida": "Los datos de NBI no están disponibles para Soraca. El promedio indígena nacional de 67.6% no puede compararse directamente por falta de información local. Se reconoce la limitación en el análisis de condiciones de vida.",
+  "conflicto": "Se registran 2 víctimas de conflicto con discapacidad entre 1985-2024, siendo las amenazas (50%) y el desplazamiento forzado (50%) los hechos principales. La confiabilidad es CONFIABLE con n=2, lo que sugiere subregistro en contextos de baja población. La afectación territorial es puntual pero significativa.",
+  "icv": "El Índice de Condiciones Vitales (ICV) para Soraca es 0.0, determinado por componentes nulos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una situación crítica en todas las dimensiones evaluadas.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal con enfoque diferencial para identificar pueblos y lenguas presentes, dado que el 100% de la población indígena carece de identificación específica (población=3).",
+    "Implementar un sistema de alerta temprana para amenazas contra líderes indígenas, considerando que el 50% de las víctimas registradas corresponden a este hecho (1 de 2).",
+    "Promover el reconocimiento de resguardos indígenas en Soraca, ya que actualmente no existen territorios colectivos reconocidos (N=0 resguardos).",
+    "Articular acciones con la gobernación de Boyacá para incluir a Soraca en programas de protección a víctimas de desplazamiento forzado, dado que este hecho representa el 50% de las afectaciones registradas (1 de 2).",
+    "Diseñar estrategias de fortalecimiento cultural para pueblos sin información específica, considerando que el 100% de la población indígena pertenece a la categoría 'INDIGENA-SIN-INFORMACION'."
+  ]
+}

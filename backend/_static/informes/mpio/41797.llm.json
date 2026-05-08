@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Tesalia (Huila) registra una población indígena de solo 10 personas según CNPV 2018, concentrada en 3 pueblos: Nasa (7), Pijao (2) y Totoro (1). La ausencia de resguardos y la dispersión territorial reflejan una presencia indígena marginal en el municipio. El ICV de 0.0 evidencia condiciones críticas en NBI, prevalencia y conflicto, sin datos confiables para análisis desagregado.",
+  "demografia": "La pirámide etaria no aplica por n=10. Los datos demográficos muestran una población indígena envejecida y reducida, con el 70% correspondiente al pueblo Nasa. La falta de datos de capacidades diversas limita el análisis de vulnerabilidades específicas en el municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Tesalia. La ausencia de información confiable impide evaluar el sub-registro de casos, especialmente en un contexto de alta dispersión territorial y ausencia de resguardos indígenas.",
+  "territorial": "Tesalia carece de resguardos indígenas, con una población dispersa en un área de 24.4 km² (bbox). La ausencia de territorios colectivos limita la autonomía y el ejercicio de derechos territoriales. La concentración geográfica es mínima, con solo 10 personas distribuidas en 3 pueblos.",
+  "lengua": "Los datos sobre lengua no están disponibles para Tesalia. No se puede determinar la vitalidad lingüística ni la presencia de lenguas indígenas en el municipio, lo que dificulta la planificación de políticas de revitalización cultural.",
+  "vida": "No hay datos de NBI disponibles para Tesalia. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de información impide evaluar las condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado entre 1985-2024, representando el 100% de los hechos de conflicto. Este dato único sugiere una exposición crítica a la violencia, aunque la muestra (n=1) limita su representatividad estadística.",
+  "icv": "El ICV de 0.0 en Tesalia refleja condiciones extremas en NBI, prevalencia y conflicto. La fórmula ponderada (0.4*NBI + 0.3*prev + 0.3*conflicto) arroja un valor mínimo, indicando una situación de vulnerabilidad multidimensional sin atenuantes.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios indígenas en Tesalia, dado que no existen resguardos registrados y la población es mínima (n=10).",
+    "Generar un censo indígena municipal con enfoque diferencial para superar la falta de datos en NBI, lengua y capacidades diversas.",
+    "Implementar un plan de prevención de desplazamiento forzado en coordinación con la ONIC y autoridades locales, ante el registro de 1 víctima en 40 años.",
+    "Incluir a la población Nasa (7 personas) en programas de salud intercultural, considerando su peso demográfico y la ausencia de datos de prevalencia.",
+    "Articular con el resguardo más cercano (ej. Nasa en Cauca) para fortalecer la identidad cultural y el acceso a derechos territoriales."
+  ]
+}

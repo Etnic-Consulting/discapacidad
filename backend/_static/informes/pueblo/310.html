@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Wanano · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Wanano</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Wanano, con una población de 3.312 personas, tiene su anclaje territorial histórico principalmente en el departamento de Vaupés. Su estructura demográfica es joven y expansiva, con un alto índice de dependencia de 73.2, lo que indica una gran proporción de población infantil y juvenil que requiere sostenimiento y cuidado por parte de la población adulta. Esta vitalidad demográfica, sin embargo, coexiste con importantes desafíos estructurales.</p><p></p><p>La criticidad más destacada es la alta prevalencia de discapacidad, que alcanza 85.9 casos por cada 1.000 habitantes, una cifra notablemente superior al promedio indígena nacional de 60.0. Este indicador, junto con un elevado Índice de Necesidades Básicas Insatisfechas (NBI) del 63.21%, dibuja un panorama de vulnerabilidad acentuada en las dimensiones de salud y calidad de vida, a pesar de que este último sea ligeramente inferior al promedio indígena nacional.</p><p></p><p>La lectura clave de la situación del pueblo Wanano apunta a una vulnerabilidad multidimensional, donde las carencias en servicios básicos y las condiciones de salud superan las afectaciones directas del conflicto armado, que no registra víctimas. El Índice de Vulnerabilidad Compuesta (ICV) de 0.382 refleja esta realidad, siendo impulsado principalmente por los componentes de NBI y prevalencia. La alta concentración poblacional en el Vaupés (2.320 personas) ofrece una oportunidad para focalizar intervenciones efectivas que respondan a estas problemáticas estructurales.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">3.312</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">251</div><div class="sub">prevalencia 85,9‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">24</div><div class="sub">17 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.382</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Wanano se caracteriza por ser marcadamente joven y en expansión. De una población total de 3.312 personas, el 36.4% corresponde a menores de 15 años (1.206 personas), mientras que solo un 5.9% (194 personas) son mayores de 65 años. Esto resulta en un alto índice de dependencia de 73.2, significando que por cada 100 personas en edad de trabajar, hay 73 personas dependientes. Se observa un desbalance de género, con una razón de masculinidad de 110.0 hombres por cada 100 mujeres, concentrada en los rangos de edad de 15 a 34 años, un factor que podría estar asociado a dinámicas migratorias o de registro.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">622</td><td class="num">584</td><td class="num"><b>1.206</b></td><td class="num">36.4%</td></tr>
+      <tr><td>15-64 años</td><td class="num">1.020</td><td class="num">892</td><td class="num"><b>1.912</b></td><td class="num">57.7%</td></tr>
+      <tr><td>65+ años</td><td class="num">93</td><td class="num">101</td><td class="num"><b>194</b></td><td class="num">5.9%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>1.735</b></td><td class="num"><b>1.577</b></td><td class="num"><b>3.312</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">110,0</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">73,2</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">16,1</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>El pueblo Wanano presenta una prevalencia de discapacidad de 85.9 por cada 1.000 habitantes, una tasa que excede considerablemente el promedio nacional indígena de 60.0 por 1.000. Esto se traduce en 251 miembros del pueblo identificados con algún tipo de limitación funcional. A pesar de la contundencia de esta cifra, el análisis se ve limitado por la ausencia de datos desagregados sobre los tipos de limitación (física, cognitiva, etc.). Esta falta de detalle impide una comprensión profunda de las barreras específicas que enfrenta la población y dificulta el diseño de políticas de salud y cuidado culturalmente pertinentes. Es un indicador de un posible sub-registro en la caracterización más que en la cuantificación.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Wanano</div>
+      <div class="num-big">85,9‰</div>
+      <div class="lbl">251 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: -25,9‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El territorio del pueblo Wanano se asienta principalmente en el departamento amazónico de Vaupés, donde residen 2.320 de sus miembros, lo que representa la mayor parte de su población. A pesar de esta fuerte concentración, se evidencia un notable fenómeno de dispersión, con presencia del pueblo en 24 departamentos del país, incluyendo Guaviare (221 personas) y Guainía (139 personas). Sin embargo, es importante señalar que la confiabilidad de los datos fuera de Vaupés es baja. El pueblo está organizado en 17 resguardos, pero la vida colectiva se centra de forma abrumadora en el resguardo Vaupés, con 1.705 habitantes, mientras que los demás territorios registran una presencia poblacional mucho menor.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VAUPES</td><td class="num">2.320</td><td class="num">193</td><td class="num">83,2‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>GUAVIARE</td><td class="num">221</td><td class="num">29</td><td class="num">131,2‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>GUAINIA</td><td class="num">139</td><td class="num">6</td><td class="num">43,2‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>META</td><td class="num">77</td><td class="num">6</td><td class="num">77,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">44</td><td class="num">6</td><td class="num">136,4‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">41</td><td class="num">3</td><td class="num">73,2‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CUNDINAMARCA</td><td class="num">19</td><td class="num">2</td><td class="num">105,3‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CAUCA</td><td class="num">10</td><td class="num">1</td><td class="num">100,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>LA GUAJIRA</td><td class="num">9</td><td class="num">1</td><td class="num">111,1‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VICHADA</td><td class="num">8</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">1.705</td></tr>
+      <tr><td>Bacati-Arara Carurú y Miraflores</td><td>VAUPÉS</td><td>CARURÚ</td><td class="num">41</td></tr>
+      <tr><td>La Fuga</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">39</td></tr>
+      <tr><td>Pto Viejo y Pto Esperanza</td><td>GUAVIARE</td><td>MIRAFLORES</td><td class="num">21</td></tr>
+      <tr><td>Chonara Huena</td><td>VALLE DEL CAUCA</td><td>BUENAVENTURA</td><td class="num">18</td></tr>
+      <tr><td>La Asuncion</td><td>GUAVIARE</td><td>EL RETORNO</td><td class="num">8</td></tr>
+      <tr><td>Puerto Monfort</td><td>GUAVIARE</td><td>MIRAFLORES</td><td class="num">7</td></tr>
+      <tr><td>Cuenca Media y Alta Rio Inirida</td><td>GUAINÍA</td><td>INÍRIDA</td><td class="num">4</td></tr>
+      <tr><td>La Delfina</td><td>VALLE DEL CAUCA</td><td>DAGUA</td><td class="num">4</td></tr>
+      <tr><td>Rios Cuiari E Isana</td><td>GUAINÍA</td><td>PANA PANA</td><td class="num">2</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Según los datos censales disponibles, no se registran hablantes o personas que entiendan la lengua propia del pueblo Wanano. Esta cifra (0%) es altamente inverosímil y debe interpretarse con extrema cautela. Es de amplio conocimiento que los pueblos del complejo cultural del Vaupés, entre ellos el Wanano, mantienen una gran vitalidad lingüística. Por lo tanto, el dato oficial probablemente refleja una falla sistémica en la recolección de información etnolingüística durante el censo y no una pérdida real del idioma. Esta situación evidencia la necesidad urgente de realizar diagnósticos participativos que reflejen la verdadera situación y promuevan la protección de la lengua como pilar de la identidad cultural Wanano.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Wanano, medidas por el Índice de Necesidades Básicas Insatisfechas (NBI), se sitúan en un 63.21%, ligeramente por debajo del promedio nacional indígena de 67.6%. A pesar de esta aparente ventaja relativa, la cifra revela que una mayoría del pueblo vive con carencias estructurales. El componente más crítico es la falta de acceso a servicios públicos adecuados, que afecta al 45.72% de la población. Le sigue la precariedad de las viviendas, con un 32.31%. Más preocupante aún es que el 33.95% de la población se encuentra en situación de miseria, indicando la concurrencia de múltiples carencias que profundizan la vulnerabilidad.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Wanano</div>
+      <div class="num-big">63,2%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 70.7%"></div></div><div class="num">32,3%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">45,7%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 53.7%"></div></div><div class="num">24,5%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 12.8%"></div></div><div class="num">5,8%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 17.4%"></div></div><div class="num">7,9%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Los registros oficiales de la Unidad para las Víctimas (RUV) no reportan ninguna persona con discapacidad del pueblo Wanano como víctima del conflicto armado. La base de datos no muestra hechos violentos registrados directamente contra sus miembros, resultando en un valor de 0 para el total de víctimas. Si bien esta ausencia de registros podría sugerir un bajo impacto directo de la confrontación armada, es crucial considerar la posibilidad de un sub-registro significativo. En la región amazónica, las afectaciones a los pueblos indígenas a menudo son indirectas, como el confinamiento, las presiones sobre el territorio o el control de economías ilícitas, impactos que no siempre se traducen en registros individuales de victimización.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El pueblo Wanano presenta un Índice de Vulnerabilidad Compuesta (ICV) de 0.382, ubicándolo en una franja de vulnerabilidad media-alta. El principal factor que impulsa este índice es la alta incidencia de Necesidades Básicas Insatisfechas (NBI), cuyo componente normalizado es de 0.632, reflejando carencias estructurales severas. El segundo factor de mayor peso es la elevada prevalencia de discapacidad, con un puntaje normalizado de 0.43. En contraste, el componente de conflicto armado tiene un valor de 0.0, lo que indica que, según los datos disponibles, la vulnerabilidad del pueblo está determinada por condiciones socioeconómicas y de salud, y no por el impacto directo de la violencia registrada.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.632</td><td class="num">0.40</td><td class="num"><b>0.253</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.43</td><td class="num">0.30</td><td class="num"><b>0.129</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.382</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un plan de choque para el mejoramiento de condiciones de vida, enfocado en reducir el NBI del 63.21% mediante la provisión de servicios básicos, que constituye la principal carencia afectando al 45.72% de la población.</li>
+      <li>Realizar una caracterización cualitativa y cuantitativa de la discapacidad para comprender las causas y tipos de limitaciones detrás de la alta prevalencia de 85.9 por 1.000, permitiendo desarrollar programas de atención y cuidado culturalmente pertinentes.</li>
+      <li>Fortalecer la gobernanza y la autonomía del resguardo Vaupés, que alberga a 1.705 personas, como epicentro de la vida colectiva, y crear estrategias para apoyar a la población dispersa en 24 departamentos.</li>
+      <li>Ejecutar con urgencia un diagnóstico etnolingüístico participativo para rectificar el registro censal de 0% de hablantes y establecer un plan de salvaguardia y revitalización de la lengua Wanano.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/310/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[0.9899263030000611, -71.92091271799995], [2.9384456610000598, -71.13968674999995]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[0.9899263030000611, -71.92091271799995], [2.9384456610000598, -71.13968674999995]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([1.9641859820000604, -71.53029973399995]).addTo(map)
+    .bindPopup('<b>PUEBLO Wanano</b>');
+</script>
+</body>
+</html>

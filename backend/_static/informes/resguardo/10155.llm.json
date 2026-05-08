@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo SAN JUANITO, EL DUYA Y PARAVARE alberga a 418 personas del pueblo Sáliba en 21.263,88 hectáreas de Casanare, Orinoquía. Su ICV de 0.0 refleja la ausencia de datos en NBI, prevalencia y conflicto, limitando la interpretación. La población total, aunque confiable, no permite análisis de vulnerabilidad sin información complementaria.",
+  "demografia": "La población total es de 418 habitantes según DANE-CNPV 2018. No hay datos de pirámide etaria ni estructura por edades en este nivel. La confiabilidad del dato poblacional (n=418) permite su uso, pero impide análisis demográficos detallados. Se requiere cruce con otras fuentes para caracterizar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección se marca explícitamente como _sin_datos. Esto impide evaluar necesidades sanitarias o patrones de morbilidad. Se recomienda priorizar recolección de información en salud pública para este territorio.",
+  "territorial": "El resguardo ocupa 21.263,88 hectáreas en Orocué, Casanare, con coordenadas que delimitan su extensión en la Orinoquía. Su área es significativa pero no hay datos sobre concentración de población indígena o dispersión al interior. La falta de información sobre territorios menores dificulta análisis de patrones de asentamiento.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el uso de la lengua Sáliba u otras en el territorio. Esta ausencia limita la evaluación de vitalidad cultural y estrategias de revitalización lingüística. Se requiere investigación específica en el territorio.",
+  "vida": "No hay datos de NBI disponibles para este resguardo. El promedio indígena nacional es 67.6%, pero no hay comparación posible. La ausencia de información impide medir brechas en condiciones de vida. Se debe priorizar la recolección de indicadores socioeconómicos en el territorio.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024 (n=0). El hecho principal y su porcentaje no aplican por ausencia de datos. La confiabilidad del dato (n=0) sugiere baja incidencia, pero no descarta subregistro. Se recomienda fortalecer sistemas de monitoreo de derechos humanos.",
+  "icv": "El ICV del resguardo es 0.0, derivado de componentes no disponibles (NBI, prevalencia, conflicto). La fórmula aplicada no arroja resultados interpretables. Esto refleja la falta de datos básicos para evaluar calidad de vida. Se requiere inversión en sistemas de información territorial.",
+  "recomendaciones": [
+    "Realizar censo comunitario para actualizar datos demográficos y de NBI, citando la población total de 418 habitantes como base.",
+    "Implementar programa de recolección de datos en salud pública, priorizando prevalencia de enfermedades, dado que no hay información disponible.",
+    "Diseñar estrategias de revitalización lingüística para el pueblo Sáliba, considerando la ausencia de datos sobre lengua en el resguardo.",
+    "Fortalecer el sistema de alerta temprana de conflicto en Casanare, usando el dato de 0 víctimas como punto de partida para monitoreo continuo.",
+    "Invertir en infraestructura de datos territoriales para el resguardo, dado que el ICV de 0.0 refleja la falta de información básica."
+  ]
+}

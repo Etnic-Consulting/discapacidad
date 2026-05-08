@@ -1,0 +1,152 @@
+{
+  "tipo": "mpio",
+  "id": "19022",
+  "nombre": "ALMAGUER",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 3329,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 3329,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 6,
+      "top": [
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 3314
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "970",
+          "pueblo": "MAYA-",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "750",
+        "pueblo": "YANACONA",
+        "poblacion": 3314
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        1.8368193556489119,
+        -76.93714072899661,
+        1.9880940165311045,
+        -76.72313350604537
+      ],
+      "nombre_mpio": "ALMAGUER",
+      "cod_dpto": "19"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 101,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 101,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 66
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 19
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 8
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Tortura",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 66
+      },
+      "pct_hecho_principal": 65.3
+    },
+    "icv": {
+      "score": 0.006,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.02
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:45:04",
+  "periodo": "2018",
+  "_input_hash": "a467f9d86058f4b2"
+}

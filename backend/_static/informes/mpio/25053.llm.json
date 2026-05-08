@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Arbeláez (Cundinamarca) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Muisca. Este dato refleja una presencia mínima y dispersa, sin resguardos territoriales en el municipio. La lectura clave evidencia la casi inexistencia de población indígena organizada en este territorio, lo que limita la aplicación de políticas diferenciadas a nivel local.",
+  "demografia": "La pirámide etaria no aplica en este nivel al tratarse de una población de 1 persona. La estructura demográfica indígena en Arbeláez es inexistente según los datos disponibles. Se requiere cruzar con fuentes cualitativas para entender dinámicas de movilidad o invisibilización en censos.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones no están disponibles para este municipio. La falta de registros impide analizar patrones de salud en la población indígena local. Se recomienda priorizar la generación de información primaria en territorios con presencia mínima.",
+  "territorial": "Arbeláez no cuenta con resguardos indígenas, lo que confirma la ausencia de territorios colectivos en el municipio. La bounding box geográfica delimita un área sin presencia histórica de resguardos. Este hallazgo subraya la necesidad de revisar criterios de delimitación territorial para pueblos como el Muisca.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. La ausencia de registros lingüísticos impide evaluar la vitalidad cultural en Arbeláez. Se sugiere incluir preguntas específicas en futuros censos para captar lenguas minoritarias.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Arbeláez. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La invisibilización estadística dificulta la priorización de intervenciones sociales.",
+  "conflicto": "Se registraron 4 víctimas de desplazamiento forzado entre 1985-2024 en Arbeláez, todas con discapacidad. El 100% de los hechos violentos corresponden a este tipo de victimización. Este patrón refleja la vulnerabilidad extrema de la población indígena local ante el conflicto armado.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Arbeláez es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La dimensión dominante es la exclusión socioeconómica (NBI y prevalencia en 0.0). La posición relativa es crítica, cercana al umbral de emergencia.",
+  "recomendaciones": [
+    "Realizar un censo indígena local en Arbeláez con enfoque etnográfico para validar la presencia de 1 persona y documentar su situación socioeconómica, citando el dato de población total (1).",
+    "Incluir preguntas sobre lengua materna en futuras encuestas municipales para superar la falta de datos lingüísticos, citando la sección '_sin_datos: true' en lengua.",
+    "Priorizar la atención en salud mental y discapacidad para las 4 víctimas de desplazamiento forzado, citando el dato de víctimas_total_disc (4).",
+    "Evaluar la creación de un mecanismo de protección especial para pueblos indígenas en municipios sin resguardos, citando n_resguardos (0).",
+    "Diseñar un plan de desarrollo con enfoque diferencial para Arbeláez, considerando el ICV de 0.0 y su posición crítica en el componente NBI."
+  ]
+}

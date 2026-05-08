@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Quipamá registra una población indígena de 1 persona según el CNPV 2018, concentrada en el pueblo Emberá-Katío. La ausencia de resguardos (0) y la falta de datos en NBI y lengua reflejan vacíos críticos en el reconocimiento territorial y condiciones de vida. El ICV de 0.0 evidencia una situación de extrema vulnerabilidad, donde el desplazamiento forzado (1 víctima) es el hecho victimizante dominante.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la n=1 de la población indígena. La única persona registrada corresponde al pueblo Emberá-Katío, sin datos desagregados por edad o género que permitan analizar dinámicas poblacionales. Los datos demográficos a este nivel no permiten inferencias sobre estructura etaria.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones de salud no están disponibles para el municipio (n=1). La falta de registros confiables impide analizar patrones de morbilidad o acceso a servicios. Se requiere sistematización de datos primarios para evaluar sub-registros en salud indígena.",
+  "territorial": "Quipamá no cuenta con resguardos indígenas (0), a pesar de su ubicación en Boyacá (código 15). La dispersión geográfica sin territorios colectivos reconocidos limita la autonomía y protección cultural. La bbox registrada (5.46, -74.32 a 5.64, -74.13) no contiene áreas con presencia indígena formalizada.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de emberá-katío u otras lenguas en el territorio.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para Quipamá. La comparación con el promedio indígena nacional (67.6%) no es posible sin información local. La falta de registros impide evaluar brechas en condiciones de vida.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado (1985-2024) en el RUV, representando el 100% de los hechos victimizantes. La concentración en un solo tipo de violencia refleja patrones de afectación específicos, aunque con n=1 la confiabilidad es limitada. La lectura territorial exige contextualizar este dato en dinámicas regionales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) sugiere una situación de extrema precariedad, aunque la n=1 limita la robustez del indicador.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y de NBI, citando la falta actual de registros (población_total: 1).",
+    "Gestionar el reconocimiento de resguardos indígenas en Quipamá, considerando la ausencia actual (n_resguardos: 0) y la necesidad de garantizar territorio para el pueblo Emberá-Katío.",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, dado que este hecho representa el 100% de los registros (pct_hecho_principal: 100.0).",
+    "Priorizar proyectos de revitalización cultural y lingüística para el Emberá-Katío, ante la ausencia de datos sobre lengua (lengua: _sin_datos).",
+    "Articular con autoridades departamentales (Boyacá) para incluir a Quipamá en planes de desarrollo con enfoque étnico, dado su ICV de 0.0 y componentes en cero."
+  ]
+}

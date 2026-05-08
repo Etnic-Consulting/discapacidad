@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo PERRATPU, territorio Wayúu en La Guajira, alberga 623 habitantes en 120.516 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes críticos como NBI, prevalencia y conflicto. Esta condición subraya la urgencia de priorizar la recolección de información territorial para diseñar intervenciones precisas y culturalmente pertinentes.",
+  "demografia": "La población total del resguardo PERRATPU asciende a 623 habitantes según datos DANE-CNPV 2018. No se dispone de pirámide etaria detallada a este nivel, lo que limita el análisis de estructura poblacional. La ausencia de datos demográficos específicos impide evaluar dinámicas generacionales o planificar servicios diferenciados por edad.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para PERRATPU. La falta de información en esta sección imposibilita analizar patrones de morbilidad o priorizar acciones sanitarias. Se requiere fortalecer sistemas de registro comunitario para subsanar este vacío crítico.",
+  "territorial": "PERRATPU ocupa 120.516 hectáreas en el municipio de Riohacha, La Guajira, con coordenadas geográficas definidas. Su ubicación en la macro región NORTE y departamento de La Guajira lo sitúa en un contexto de alta presión territorial. La delimitación precisa del territorio es clave para garantizar derechos colectivos y evitar despojos.",
+  "lengua": "No se registran datos sobre lengua en el resguardo PERRATPU. Este vacío impide evaluar la vitalidad del wayuunaiki, lengua ancestral del pueblo Wayúu. La documentación lingüística es esencial para la revitalización cultural y la educación propia.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) para PERRATPU. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La ausencia de datos invisibiliza las condiciones de vida y obstaculiza la incidencia política basada en evidencia.",
+  "conflicto": "PERRATPU reporta 0 víctimas con discapacidad en el Registro Único de Víctimas (RUV) entre 1985-2024. La falta de hechos victimizantes registrados no implica ausencia de conflicto, sino limitaciones en el sistema de información. Se requiere validar esta cifra con fuentes comunitarias para descartar subregistro.",
+  "icv": "El ICV de PERRATPU es 0.0, derivado de la ausencia de datos en sus componentes (NBI, prevalencia y conflicto). Esta métrica refleja la necesidad de generar información territorial específica para calcular indicadores de bienestar. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede operar sin inputs confiables.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario para documentar condiciones de vida, salud y conflicto en PERRATPU, con enfoque diferencial wayúu.",
+    "Priorizar la recolección de datos sobre lengua wayuunaiki para fortalecer la educación propia y la revitalización cultural.",
+    "Realizar un diagnóstico territorial participativo que incluya mapeo de actores armados y rutas de despojo en La Guajira.",
+    "Diseñar un plan de salud intercultural que aborde la falta de datos de prevalencia con metodologías propias.",
+    "Garantizar la participación de la organización Wayúu en la definición de prioridades de intervención en el resguardo."
+  ]
+}

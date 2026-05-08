@@ -1,0 +1,214 @@
+{
+  "tipo": "dpto",
+  "id": "63",
+  "nombre": "QUINDIO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2854,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 2854,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 127,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 127,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 2854,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 44.5,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "282",
+          "con_disc": 52,
+          "total": 1225
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 27,
+          "total": 663
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 9,
+          "total": 113
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 7,
+          "total": 145
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 6,
+          "total": 134
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 5,
+          "total": 68
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 5,
+          "total": 126
+        },
+        {
+          "cod_pueblo": "710",
+          "con_disc": 3,
+          "total": 26
+        },
+        {
+          "cod_pueblo": "330",
+          "con_disc": 2,
+          "total": 26
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 1,
+          "total": 54
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "DACHI AGORE DRUA",
+          "mpio": "CALARCÁ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 141.221
+        },
+        {
+          "nombre": "KARABIJUA",
+          "mpio": "CALARCÁ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 14.709
+        },
+        {
+          "nombre": "PUERTO SAMARIA / DAIDRUA",
+          "mpio": "CALARCÁ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 13.522
+        },
+        {
+          "nombre": "EMBERA CHAMI TATA DRUA (KIPARA EL LAUREL)",
+          "mpio": "PIJAO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 9.844
+        }
+      ],
+      "bbox": [
+        4.07531068809428,
+        -75.89579562623175,
+        4.721360404972709,
+        -75.38317170593473
+      ],
+      "nombre_dpto": "QUINDIO"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 34,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 34,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 20
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 5
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 4
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 20
+      },
+      "pct_hecho_principal": 58.8
+    },
+    "icv": {
+      "score": 0.069,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.223,
+        "conflicto_norm": 0.007
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:53:37",
+  "periodo": "2018",
+  "_input_hash": "1aa203a675d5e0c5"
+}

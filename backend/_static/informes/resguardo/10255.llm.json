@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo BUENAVISTA, territorio Wounaan en el Chocó, alberga 382 habitantes en 2.449 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La ausencia de registros de víctimas en el RUV (0 casos) sugiere subregistro o baja incidencia, pero limita análisis de conflicto.",
+  "demografia": "La población total es de 382 habitantes según DANE-CNPV 2018. No se dispone de pirámide etaria ni datos de género para este resguardo. La falta de desglose etario impide evaluar dinámicas generacionales o presión demográfica en el territorio colectivo.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este resguardo. La sección se marca como _sin_datos, lo que imposibilita análisis de morbilidad o acceso a salud. Este vacío evidencia la necesidad de sistemas de información específicos para territorios indígenas.",
+  "territorial": "BUENAVISTA ocupa 2.449 hectáreas en el municipio EL LITORAL DEL SAN JUAN, Chocó. Su delimitación geográfica (bbox) confirma un territorio compacto en la macro región OCCIDENTE. La concentración espacial facilita gestión comunitaria pero limita expansión por presión externa.",
+  "lengua": "Los datos de lengua no están disponibles para este resguardo. No se puede determinar la vitalidad del Wounaan ni su uso en contextos cotidianos o educativos. Este vacío afecta la planificación de revitalización lingüística.",
+  "vida": "No hay datos de NBI para BUENAVISTA. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La ausencia de información sobre necesidades básicas limita la priorización de políticas públicas en el territorio.",
+  "conflicto": "El RUV registra 0 víctimas con discapacidad en este resguardo (1985-2024). La falta de hechos violentos reportados no descarta subregistro por desconfianza o barreras de acceso a sistemas de denuncia. Se requiere validación comunitaria.",
+  "icv": "El ICV de BUENAVISTA es 0.0, determinado por la ausencia de datos en sus tres componentes (NBI, prevalencia, conflicto). Esta métrica refleja la debilidad de sistemas de información territorial indígena en el Chocó.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de NBI y prevalencia con metodologías propias Wounaan, priorizando salud materno-infantil y acceso a agua potable dado el contexto del Chocó.",
+    "Fortalecer la base de datos del RUV en territorios indígenas mediante protocolos interculturales que garanticen la denuncia de víctimas sin discriminación.",
+    "Diseñar un plan de revitalización lingüística Wounaan con participación de sabedores tradicionales, usando el territorio como aula viva.",
+    "Incluir indicadores de seguridad alimentaria en el ICV local, vinculando producción tradicional con soberanía alimentaria.",
+    "Establecer alianzas con ACIVA y ONIC para sistematizar datos de capacidades diversas, superando la limitación actual de _sin_datos."
+  ]
+}

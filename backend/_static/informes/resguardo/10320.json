@@ -1,0 +1,132 @@
+{
+  "tipo": "resguardo",
+  "id": "10320",
+  "nombre": "RÍO ICHO Y LA QUEBRADA BARATUDÓ",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 110,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 110,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "RÍO ICHO Y LA QUEBRADA BARATUDÓ",
+      "dpto": "CHOCÓ",
+      "cod_dpto": "27",
+      "mpio": "QUIBDÓ",
+      "cod_mpio": "27001",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "EMBERA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "ASOREWA",
+      "area_hectareas": 5113.211
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        5.7602782670000465,
+        -76.49770782599995,
+        5.855545125000049,
+        -76.40851926199997
+      ],
+      "area_hectareas": 5113.211,
+      "macro": "OCCIDENTE",
+      "dpto": "CHOCÓ",
+      "mpio": "QUIBDÓ"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 65,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 65,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 40
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 9
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 4
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 40
+      },
+      "pct_hecho_principal": 61.5
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.013
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:12:46",
+  "periodo": "2018",
+  "_input_hash": "73bbaa13beca9da2"
+}

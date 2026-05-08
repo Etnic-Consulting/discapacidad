@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Consacá alberga 217 personas indígenas según CNPV 2018, concentradas principalmente en el pueblo Quillacinga (193 habitantes). La ausencia de resguardos registrados y datos de lengua refleja vacíos en el reconocimiento territorial. El desplazamiento forzado afecta al 80% de las víctimas indígenas, señalando riesgos críticos en seguridad humana.",
+  "demografia": "La población indígena de Consacá presenta una estructura concentrada en el grupo adulto (193 Quillacingas), con solo 14 Pastos y 4 Awá. Los datos no permiten analizar pirámide etaria por falta de desagregación por edad. La predominancia del pueblo Quillacinga (89% del total) define el perfil demográfico local.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Consacá. Los registros de víctimas de conflicto muestran 5 casos con discapacidad, pero el bajo n (5) limita análisis estadístico. Se requiere mejorar sistemas de monitoreo para capturar datos representativos.",
+  "territorial": "Consacá carece de resguardos indígenas registrados, pese a albergar 6 pueblos distintos. La dispersión geográfica se limita a un área acotada (bbox), sin territorios colectivos reconocidos. La ausencia de resguardos contrasta con la presencia de pueblos como Quillacinga y Pastos.",
+  "lengua": "Los datos sobre lenguas indígenas en Consacá no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo. Este vacío impide evaluar la transmisión cultural intergeneracional.",
+  "vida": "No hay datos de NBI para Consacá, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas socioeconómicas. Se requiere incluir indicadores de pobreza multidimensional en sistemas locales de información.",
+  "conflicto": "5 víctimas indígenas con discapacidad fueron registradas entre 1985-2024, con desplazamiento forzado como hecho principal (4 casos, 80%). El bajo n (5) sugiere subregistro. La concentración en desplazamiento refleja patrones de violencia estructural contra pueblos como Quillacinga.",
+  "icv": "El ICV de Consacá es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), pero la falta de datos distorsiona el resultado. La posición relativa es indeterminable por datos faltantes.",
+  "recomendaciones": [
+    "Registrar resguardos para los pueblos Quillacinga y Pastos, dado que el 89% de la población indígena carece de territorio colectivo reconocido (n_resguardos: 0).",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, considerando que el 80% de las víctimas indígenas enfrentan este hecho (pct_hecho_principal: 80.0).",
+    "Incluir datos de lengua y NBI en censos municipales, dado que los vacíos actuales impiden evaluar brechas socioeconómicas y vitalidad cultural (lengua: _sin_datos, NBI: _sin_datos).",
+    "Fortalecer la recolección de datos de salud con enfoque diferencial, especialmente para pueblos minoritarios como Emberá (1 habitante) y Awá (4 habitantes) (top_pueblos: Emberá 1, Awá 4).",
+    "Promover alianzas con la CNPV para desagregar datos por edad y género, permitiendo análisis de pirámide etaria y vulnerabilidades específicas (poblacion_total: 217, n: 217)."
+  ]
+}

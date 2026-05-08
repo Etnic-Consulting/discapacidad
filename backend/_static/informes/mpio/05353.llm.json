@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Hispania registra una población indígena de 11 personas según CNPV 2018, distribuida en 6 pueblos. El 36.4% corresponde al pueblo EMBERA, principal grupo en el municipio. La ausencia de resguardos y datos de NBI y lengua refleja vacíos críticos en la caracterización territorial. La baja población y concentración dispersa limitan la representatividad de indicadores.",
+  "demografia": "La pirámide etaria no aplica por la reducida población (n=11). Los datos muestran 6 pueblos indígenas con presencia mínima: EMBERA (4), ARHUACO (2) y BARA (2) como principales. La dispersión poblacional impide análisis etario confiable. Se requiere desagregación por grupos de edad para evaluar vitalidad demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. El promedio indígena nacional (60.0%) no puede contrastarse localmente. La falta de registros específicos subraya la necesidad de sistemas de información territorializados para pueblos minoritarios.",
+  "territorial": "Hispania carece de resguardos indígenas, con una población dispersa en 6 pueblos. La bbox geográfica delimita un área de 5.75-5.84°N y 75.87-75.96°W, sin concentración territorial. La ausencia de territorios colectivos limita la autonomía y protección cultural, agravando la vulnerabilidad de los pueblos presentes.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad de las lenguas indígenas en la zona. La falta de registros lingüísticos refleja debilidades en la salvaguarda cultural y en la implementación de políticas de educación bilingüe.",
+  "vida": "No hay datos de NBI para Hispania, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide evaluar condiciones de vida. Se requiere recolección de datos específicos para pueblos minoritarios, considerando su alta dispersión y baja población.",
+  "conflicto": "No se registran víctimas con discapacidad en el municipio entre 1985-2024 (n=0). La falta de hechos violentos reportados no descarta subregistros. La ausencia de datos de conflicto limita la comprensión de riesgos territoriales para los pueblos indígenas presentes.",
+  "icv": "El ICV de Hispania es 0.0, con componentes nulos (NBI, prevalencia y conflicto). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja datos faltantes. La posición relativa es indeterminada por la ausencia de valores comparables a nivel municipal.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con desagregación por edad, lengua y NBI para superar la limitación de n=11 y datos faltantes.",
+    "Promover la creación de resguardos o figuras de protección territorial para los 6 pueblos presentes, dado que no existen territorios colectivos.",
+    "Implementar sistemas de alerta temprana para pueblos dispersos como EMBERA, ARHUACO y BARA, considerando su vulnerabilidad por baja población.",
+    "Incluir a Hispania en programas de educación bilingüe y salud intercultural, priorizando la recolección de datos lingüísticos y epidemiológicos.",
+    "Articular con la ONIC y autoridades departamentales para visibilizar la situación de pueblos minoritarios en municipios con baja población indígena como Hispania."
+  ]
+}

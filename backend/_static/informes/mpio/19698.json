@@ -1,0 +1,255 @@
+{
+  "tipo": "mpio",
+  "id": "19698",
+  "nombre": "SANTANDER DE QUILICHAO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 24760,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 24760,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 24419
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 137
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 71
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 29
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 17
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 10
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "880",
+          "pueblo": "CALIMA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "292",
+          "pueblo": "QUIZGO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "650",
+          "pueblo": "TOTORO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "500",
+        "pueblo": "NASA",
+        "poblacion": 24419
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "CANOAS",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 969.268
+        },
+        {
+          "nombre": "LA CONCEPCIÓN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 828.488
+        },
+        {
+          "nombre": "GUADUALITO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 479.325
+        },
+        {
+          "nombre": "NASA KIWE TEKH KSXAW",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 67.524
+        }
+      ],
+      "bbox": [
+        2.844629068949829,
+        -76.61080105396411,
+        3.1502994845531527,
+        -76.36257160803308
+      ],
+      "nombre_mpio": "SANTANDER DE QUILICHAO",
+      "cod_dpto": "19"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 173,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 173,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 86
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 40
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 20
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 11
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 5
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 86
+      },
+      "pct_hecho_principal": 49.7
+    },
+    "icv": {
+      "score": 0.01,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.035
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:48:55",
+  "periodo": "2018",
+  "_input_hash": "7f0738ac14742502"
+}

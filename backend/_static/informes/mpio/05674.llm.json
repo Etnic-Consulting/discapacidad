@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Vicente (Antioquia) reporta ausencia de datos indígenas en 2018. La población total registrada es 0, con n=0 y confiabilidad NO_CONFIABLE, lo que invalida cualquier análisis demográfico. La caja geográfica existe (6.223132819026822, -75.40705905755794 a 6.3993882195459255, -75.22754085743844), pero sin resguardos ni pueblos identificados. La lectura clave es la invisibilización estadística de lo indígena en este municipio.",
+  "demografia": "Los datos demográficos para San Vicente no aplican al nivel municipal según la fuente. El campo `poblacion_total` registra 0 con n=0 y confiabilidad NO_CONFIABLE, imposibilitando análisis de pirámide etaria o razones. La nota metodológica aclara que la agregación indígena municipal proviene de CNPV 2018, pero en este caso no hay registros válidos.",
+  "prevalencia": "No hay datos disponibles para analizar prevalencia de condiciones en San Vicente. El sistema no reporta información sobre discapacidades u otras condiciones de salud para este municipio. Se reconoce explícitamente la ausencia de datos (_sin_datos: true) sin posibilidad de estimar sub-registros.",
+  "territorial": "San Vicente carece de resguardos indígenas registrados (n_resguardos: 0). La caja geográfica definida no contiene territorios colectivos, a pesar de abarcar coordenadas en el departamento de Antioquia. La dispersión territorial indígena en este municipio es nula según los registros oficiales.",
+  "lengua": "Los datos de lengua para San Vicente no están disponibles en el sistema. No se reportan lenguas indígenas en este nivel municipal, sin posibilidad de inferir presencia o vitalidad cultural lingüística.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para San Vicente. El sistema marca _sin_datos: true, aunque se conoce el promedio indígena nacional (67.6%). La brecha no puede calcularse por ausencia de datos locales.",
+  "conflicto": "San Vicente registra 0 víctimas indígenas con discapacidad en el período 1985-2024 (n=0). La confiabilidad es CONFIABLE, pero la cifra cero refleja sub-registro o ausencia de seguimiento. No hay hechos victimizantes identificados como principales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para San Vicente es 0.0, con todos sus componentes (NBI, prevalencia, conflicto) en 0.0. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados válidos por falta de datos base.",
+  "recomendaciones": [
+    "Realizar censo étnico municipal con enfoque diferencial para visibilizar la población indígena oculta en San Vicente, dado que los datos actuales son NO_CONFIABLES con n=0.",
+    "Implementar sistema de registro de resguardos y territorios colectivos en el municipio, ya que actualmente se reportan 0 resguardos sin explicación territorial.",
+    "Articular con la CNPV 2024 para corregir la omisión de datos indígenas en San Vicente, donde la población total registrada es 0.",
+    "Priorizar la recolección de datos sobre discapacidad y NBI en comunidades indígenas de San Vicente, áreas marcadas como _sin_datos: true.",
+    "Establecer protocolos de seguimiento a víctimas del conflicto en San Vicente, donde el RUV reporta 0 víctimas indígenas con discapacidad en 40 años de registro."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Nemocón registra una población indígena de 7 personas según el CNPV 2018, distribuidas en 3 pueblos: Pijao (4), Muisca (2) y Coconuco (1). La ausencia de resguardos y la dispersión demográfica contrastan con la concentración de pueblos en el altiplano cundiboyacense. La falta de datos en NBI, lengua y capacidades diversas limita el análisis integral, pero la fragilidad poblacional exige atención prioritaria.",
+  "demografia": "La pirámide etaria no aplica para este municipio dado que la población total indígena es de solo 7 personas. La distribución por edades no puede interpretarse con n=7, lo que impide análisis demográficos confiables. Los datos disponibles no permiten evaluar dinámicas generacionales ni presión demográfica en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Nemocón. La sección de capacidades diversas está marcada sin datos, lo que imposibilita analizar brechas en salud o discapacidad. El promedio indígena nacional de 60% en discapacidad no puede contrastarse localmente por falta de registros.",
+  "territorial": "Nemocón cuenta con 0 resguardos indígenas, lo que refleja la ausencia de territorios colectivos reconocidos. La bbox geográfica delimita un área de 5.027 a 5.161 latitud y -73.935 a -73.828 longitud, pero sin presencia de resguardos. La dispersión poblacional en 3 pueblos sin base territorial organizada es un patrón crítico.",
+  "lengua": "Los datos sobre lenguas indígenas en Nemocón no están disponibles. No se registran lenguas activas en el municipio según la fuente consultada. La ausencia de información impide evaluar vitalidad cultural o procesos de revitalización lingüística en la población indígena local.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Nemocón. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de registros impide analizar pobreza multidimensional o acceso a servicios básicos en la población indígena del municipio.",
+  "conflicto": "Nemocón reporta 0 víctimas indígenas con discapacidad en el RUV entre 1985-2024, según datos confiables. La ausencia de hechos victimizantes registrados sugiere baja visibilidad de la población indígena en sistemas de atención a víctimas. Sin embargo, el subregistro es probable dado el tamaño poblacional mínimo.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Nemocón es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Los componentes (nbi_norm, prevalencia_norm, conflicto_norm) no pudieron calcularse por falta de información. La posición relativa no es interpretable en este contexto.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para superar el subregistro actual de 7 personas, priorizando la identificación de pueblos y dinámicas territoriales.",
+    "Promover el reconocimiento de al menos un resguardo indígena en Nemocón, articulado con procesos de titulación colectiva y fortalecimiento cultural.",
+    "Implementar un sistema local de registro de discapacidad y salud indígena, vinculado a la Red de Salud Indígena, dado el promedio nacional de 60% en discapacidad.",
+    "Diseñar estrategias de revitalización lingüística para los pueblos Pijao, Muisca y Coconuco, considerando su baja representación poblacional.",
+    "Incluir a Nemocón en los planes departamentales de protección territorial, pese a su baja población, para prevenir procesos de desindianización y pérdida de identidad."
+  ]
+}

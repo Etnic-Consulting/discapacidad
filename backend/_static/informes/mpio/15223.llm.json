@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cubará, municipio con 5.494 habitantes, concentra su población indígena en el pueblo U’wa (100%). El territorio alberga un solo resguardo de 223.511 hectáreas, reflejando alta concentración territorial. La vulnerabilidad se evidencia en un ICV de 0.0, donde el conflicto normado (0.001) y la falta de datos en NBI y prevalencia limitan un análisis completo.",
+  "demografia": "El municipio registra 5.494 personas indígenas, todas pertenecientes al pueblo U’wa según CNPV 2018. La pirámide etaria no puede analizarse por falta de datos desagregados. La concentración en un solo pueblo refleja homogeneidad cultural pero también riesgo de pérdida de diversidad intraétnica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Cubará. Esta ausencia impide evaluar necesidades sanitarias específicas. El sub-registro es evidente, requiriendo estudios locales para identificar prioridades.",
+  "territorial": "Cubará alberga un resguardo (UNIDO UWA) de 223.511 hectáreas, único en el municipio. La caja geográfica (6.69°N a 7.04°N; -72.50°O a -71.94°O) delimita un territorio montañoso y disperso. La baja fragmentación territorial contrasta con la alta presión externa.",
+  "lengua": "No se reportan datos sobre lengua en Cubará. La ausencia de información impide evaluar vitalidad lingüística del U’wa en el territorio. Se recomienda priorizar registros etnográficos para documentar uso y transmisión.",
+  "vida": "No hay datos de NBI para Cubará, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida. La brecha con el promedio nacional no puede calcularse, subrayando la necesidad de censos locales.",
+  "conflicto": "Se registran 6 víctimas de conflicto en Cubará (1985-2024), con hechos principales como actos terroristas (33.3%) y desplazamiento forzado (33.3%). La baja n (6) limita generalizaciones, pero evidencia presencia de violencia estructural en el territorio U’wa.",
+  "icv": "El ICV de Cubará es 0.0, con componentes nulos en NBI y prevalencia, y conflicto normado en 0.001. La fórmula refleja ausencia de datos, no necesariamente bienestar. La posición relativa es incalculable sin comparadores confiables.",
+  "recomendaciones": [
+    "Realizar censo local para desagregar datos demográficos y de salud, citando la falta actual de información en demografía y prevalencia.",
+    "Documentar uso y transmisión de la lengua U’wa en el resguardo UNIDO UWA, ante la ausencia de registros en lengua.",
+    "Implementar sistema de alertas tempranas para actos terroristas y desplazamiento forzado, dado que estos hechos representan el 66.6% de los eventos registrados.",
+    "Priorizar estudios sobre NBI en Cubará para comparar con el promedio indígena nacional (67.6%), actualmente sin datos.",
+    "Fortalecer la titulación y protección del resguardo UNIDO UWA (223.511 ha) ante la alta concentración territorial y presión externa."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Zenón registra una población indígena de 12 personas según CNPV 2018, concentrada en 3 pueblos. El 75% corresponde al pueblo Wiwa, con 9 habitantes, mientras Wayúu y población sin información completan el total. La ausencia de resguardos y datos de NBI o lengua refleja vacíos críticos en la caracterización territorial y socioeconómica del municipio.",
+  "demografia": "La pirámide etaria indígena en San Zenón se concentra en adultos jóvenes, con 9 Wiwa (75% del total) y solo 2 Wayúu. La población total indígena es mínima (12 personas), lo que limita análisis etarios detallados. No hay datos de capacidades diversas disponibles a nivel municipal, impidiendo evaluar vulnerabilidades específicas.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de registros en salud o educación indígena impide analizar patrones de morbilidad o acceso a servicios. Se requiere fortalecer sistemas de información locales para superar el sub-registro crónico en territorios con baja densidad poblacional.",
+  "territorial": "San Zenón no cuenta con resguardos indígenas registrados, a pesar de su ubicación en un área geográfica definida (bbox: 9.23,-74.53 a 9.48,-74.19). La ausencia de territorios colectivos limita la protección legal y el ejercicio de autonomía. La dispersión geográfica de la población indígena (3 pueblos) dificulta estrategias de concentración territorial.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. La falta de registros lingüísticos impide evaluar la vitalidad de las lenguas Wiwa o Wayúu en el territorio. Se recomienda priorizar censos lingüísticos en municipios con presencia indígena minoritaria.",
+  "vida": "No hay datos de NBI disponibles para San Zenón. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de información sobre necesidades básicas insatisfechas invisibiliza las condiciones de vida de la población Wiwa y Wayúu en el municipio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en San Zenón entre 1985-2024 (n=0). La ausencia de hechos victimizantes no descarta riesgos, dado el sub-registro en territorios con baja densidad poblacional. Se requiere monitoreo continuo para detectar dinámicas de violencia ocultas.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en San Zenón es 0.0, determinado por la ausencia de datos en NBI, prevalencia y conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse. La falta de información refleja debilidades en sistemas de monitoreo territorial.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar el sub-registro en San Zenón, donde solo se registran 12 personas indígenas (CNPV 2018).",
+    "Priorizar la delimitación de resguardos para el pueblo Wiwa, que representa el 75% de la población indígena local (9 de 12 habitantes).",
+    "Implementar un sistema de registro de lenguas indígenas en municipios sin datos, como San Zenón, para evaluar la vitalidad de las lenguas Wiwa y Wayúu.",
+    "Fortalecer la recolección de datos de NBI y conflicto en territorios con baja densidad poblacional, donde el sub-registro es crítico.",
+    "Diseñar estrategias de protección territorial para pueblos indígenas en municipios sin resguardos, como San Zenón, donde la ausencia de territorios colectivos limita la autonomía."
+  ]
+}

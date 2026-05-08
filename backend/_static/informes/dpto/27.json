@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "27",
+  "nombre": "CHOCO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 68366,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 68366,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 4198,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 4198,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 68366,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 61.4,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "280",
+          "con_disc": 2243,
+          "total": 40901
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 1027,
+          "total": 10858
+        },
+        {
+          "cod_pueblo": "710",
+          "con_disc": 706,
+          "total": 12164
+        },
+        {
+          "cod_pueblo": "284",
+          "con_disc": 160,
+          "total": 3048
+        },
+        {
+          "cod_pueblo": "240",
+          "con_disc": 45,
+          "total": 776
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 11,
+          "total": 209
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 6,
+          "total": 359
+        },
+        {
+          "cod_pueblo": "790",
+          "con_disc": 0,
+          "total": 2
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 0,
+          "total": 1
+        },
+        {
+          "cod_pueblo": "283",
+          "con_disc": 0,
+          "total": 15
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 122,
+      "resguardos": [
+        {
+          "nombre": "SALAQUÍ Y PAVARANDÓ",
+          "mpio": "RIOSUCIO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 105555.505
+        },
+        {
+          "nombre": "RÍOS JURUBIDA - CHORÍ Y ALTO BAUDÓ",
+          "mpio": "ALTO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 79915.729
+        },
+        {
+          "nombre": "PEÑA BLANCA - RÍO TRUANDÓ",
+          "mpio": "RIOSUCIO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 57755.44
+        },
+        {
+          "nombre": "RÍOS CATRÚ - DUBASA Y ANCOSO",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 56734.223
+        },
+        {
+          "nombre": "ANDÁGUEDA",
+          "mpio": "BAGADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 56337.365
+        },
+        {
+          "nombre": "RÍOS UVA Y POGUE - QUEBRADA TAPARAL",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 50191.49
+        },
+        {
+          "nombre": "ALTO RÍO BOJAYÁ",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 49285.319
+        },
+        {
+          "nombre": "JAGUAL RÍO CHINTADÓ",
+          "mpio": "CARMEN DEL DARIÉN",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 40656.386
+        },
+        {
+          "nombre": "RÍO BEBARÁ",
+          "mpio": "MEDIO ATRATO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 37140.654
+        },
+        {
+          "nombre": "OPOGADÓ - DOGUADÓ",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 29392.625
+        },
+        {
+          "nombre": "BELLAVISTA - UNIÓN PITALITO",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 29196.749
+        },
+        {
+          "nombre": "RÍO DOMINGODÓ",
+          "mpio": "CARMEN DEL DARIÉN",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 24260.025
+        },
+        {
+          "nombre": "ALTO RÍO CUIA",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 23089.662
+        },
+        {
+          "nombre": "RÍOS VALLE Y BOROBORO",
+          "mpio": "BAHÍA SOLANO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22993.76
+        },
+        {
+          "nombre": "CHAGPIEN TORDÓ",
+          "mpio": "EL LITORAL DEL SAN JUAN",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 22843.481
+        },
+        {
+          "nombre": "NAPIPÍ",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 21910.283
+        },
+        {
+          "nombre": "RÍO ORPÚA",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 21738.473
+        },
+        {
+          "nombre": "PUERTO ALEGRE Y LA DIVISA",
+          "mpio": "ALTO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 21729.353
+        },
+        {
+          "nombre": "ALTO RÍO TAGACHÍ",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 21664.855
+        },
+        {
+          "nombre": "URADÁ JIGUAMIANDÓ",
+          "mpio": "CARMEN DEL DARIÉN",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 19809.206
+        },
+        {
+          "nombre": "LA UNIÓN CHOCÓ - SAN CRISTÓBAL",
+          "mpio": "ISTMINA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 19564.377
+        },
+        {
+          "nombre": "RÍO PURRICHA",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 17700.336
+        },
+        {
+          "nombre": "JURADÓ",
+          "mpio": "JURADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 16484.887
+        },
+        {
+          "nombre": "PICHICORA, CHICUÉ, PUERTO ALEGRE",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 15147.077
+        },
+        {
+          "nombre": "NUSSI PURRÚ",
+          "mpio": "JURADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 14946.807
+        },
+        {
+          "nombre": "RÍO GARRAPATAS",
+          "mpio": "SIPÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 14322.182
+        },
+        {
+          "nombre": "RÍO TAPARAL",
+          "mpio": "EL LITORAL DEL SAN JUAN",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 14122.726
+        },
+        {
+          "nombre": "RÍO PAVASA Y QUEBRADA JELLA",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 13712.269
+        },
+        {
+          "nombre": "LA CRISTALINA",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 13566.809
+        },
+        {
+          "nombre": "ALTO RÍO BUEY",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 13091.181
+        },
+        {
+          "nombre": "SANTA MARÍA DE PÁNGALA",
+          "mpio": "EL LITORAL DEL SAN JUAN",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 12185.649
+        },
+        {
+          "nombre": "PUADÓ, LA LERMA, MATARÉ Y TERDÓ",
+          "mpio": "ISTMINA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 11972.172
+        },
+        {
+          "nombre": "BETÉ - AUROBETÉ Y AURO DEL BUEY",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 11509.273
+        },
+        {
+          "nombre": "WANCHIRADÓ",
+          "mpio": "LLORÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 10749.182
+        },
+        {
+          "nombre": "SANTA MARTA DE CURICHE",
+          "mpio": "JURADÓ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 10101.061
+        },
+        {
+          "nombre": "RÍO NUQUÍ",
+          "mpio": "NUQUÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9905.129
+        },
+        {
+          "nombre": "RÍO QUIPARADÓ",
+          "mpio": "RIOSUCIO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9658.36
+        },
+        {
+          "nombre": "AGUACLARA Y BELLA LUZ DEL RÍO AMPORÁ",
+          "mpio": "ALTO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9270.312
+        },
+        {
+          "nombre": "RÍO PICHIMÁ",
+          "mpio": "EL LITORAL DEL SAN JUAN",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 9200.884
+        },
+        {
+          "nombre": "TOGOROMÁ",
+          "mpio": "EL LITORAL DEL SAN JUAN",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 8599.276
+        },
+        {
+          "nombre": "BUCHADÓ AMPARRADÓ",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8445.991
+        },
+        {
+          "nombre": "TUNGINA Y APARTADÓ",
+          "mpio": "BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8359.55
+        },
+        {
+          "nombre": "RÍO BEBARAMÁ",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8130.343
+        },
+        {
+          "nombre": "SANANDOCITO",
+          "mpio": "SIPÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 7773.022
+        },
+        {
+          "nombre": "SANTA ROSA DE IJUÁ",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 7749.164
+        },
+        {
+          "nombre": "LANAS",
+          "mpio": "LLORÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 7550.035
+        },
+        {
+          "nombre": "DOMINICO, LONDOÑO Y APARTADÓ",
+          "mpio": "ALTO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6606.744
+        },
+        {
+          "nombre": "RÍO PANGÜÍ",
+          "mpio": "NUQUÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6603.812
+        },
+        {
+          "nombre": "PASO DEL RÍO SALADO",
+          "mpio": "QUIBDÓ",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6530.842
+        },
+        {
+          "nombre": "RÍOS TORREIDÓ Y CHIMANI",
+          "mpio": "BAJO BAUDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6319.472
+        }
+      ],
+      "bbox": [
+        3.9648832130110883,
+        -77.88377630132123,
+        8.677729528879025,
+        -76.00184570177373
+      ],
+      "nombre_dpto": "CHOCO"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2056,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2056,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1294
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 462
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 147
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 39
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 27
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 18
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 16
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 14
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 9
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1294
+      },
+      "pct_hecho_principal": 62.9
+    },
+    "icv": {
+      "score": 0.215,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.307,
+        "conflicto_norm": 0.411
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:49:00",
+  "periodo": "2018",
+  "_input_hash": "9f018c8ea70c9338"
+}

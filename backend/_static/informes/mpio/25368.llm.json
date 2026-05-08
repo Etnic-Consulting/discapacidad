@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Jerusalén (Caquetá) registra una población indígena de 2 personas según CNPV 2018, distribuidas en dos pueblos: Andoke y Arhuaco, cada uno con 1 habitante. La ausencia de resguardos y la dispersión geográfica en un área de 195 km² reflejan una presencia indígena marginal en el territorio municipal. El ICV de 0.0 y la ausencia de datos en NBI y lengua subrayan vacíos críticos para la planificación territorial.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por n=2, insuficiente para análisis demográfico. La población indígena se concentra en dos pueblos sin estructura etaria discernible. La confiabilidad de los datos es alta (n=2), pero la representatividad es nula para inferencias poblacionales.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud en Jerusalén. La sección no aplica al nivel municipal, donde solo se reportan víctimas de conflicto. Se requiere desagregación por pueblo para análisis confiable.",
+  "territorial": "Jerusalén carece de resguardos indígenas, con una dispersión territorial en 195 km² sin concentración geográfica definida. La bbox abarca zonas rurales sin presencia indígena documentada. La ausencia de territorios colectivos limita la autonomía y el ejercicio de derechos territoriales.",
+  "lengua": "Los datos de lengua no están disponibles para Jerusalén. No se puede determinar la vitalidad lingüística ni la presencia de lenguas indígenas en el municipio. Se requiere desagregación por pueblo para análisis cultural.",
+  "vida": "No hay datos de NBI para Jerusalén. El promedio indígena nacional (67.6%) no puede compararse por falta de información local. La brecha con el promedio nacional no es calculable, lo que impide evaluar condiciones de vida.",
+  "conflicto": "Se registran 2 víctimas indígenas de desplazamiento forzado entre 1985-2024, representando el 100% de los hechos violentos. La concentración en un solo tipo de victimización refleja patrones de violencia histórica contra pueblos en Caquetá. Los datos son confiables (n=2) pero limitados para análisis multidimensional.",
+  "icv": "El ICV de Jerusalén es 0.0, con componentes en 0.0 (NBI, prevalencia, conflicto). La fórmula aplicada refleja la ausencia de datos en todas las dimensiones. La posición relativa es inexistente por falta de comparadores territoriales confiables.",
+  "recomendaciones": [
+    "Priorizar censo indígena municipal con desagregación por pueblo para superar n=2 y mejorar confiabilidad en KPIs. Se requiere incluir variables de lengua y NBI en futuras recolecciones de datos.",
+    "Diseñar rutas de atención psicosocial para las 2 víctimas de desplazamiento forzado, con enfoque diferencial étnico y territorial.",
+    "Promover la constitución de resguardos para los pueblos Andoke y Arhuaco en Jerusalén, garantizando acceso a territorio colectivo y autonomía.",
+    "Incluir Jerusalén en el Plan de Vida del Caquetá, articulando acciones con la ONIC y autoridades municipales para proteger derechos indígenas.",
+    "Sistematizar datos de conflicto y salud en base de datos municipal con periodicidad anual, asegurando n ≥ 30 para análisis confiables."
+  ]
+}

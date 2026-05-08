@@ -1,0 +1,112 @@
+{
+  "tipo": "resguardo",
+  "id": "10234",
+  "nombre": "CAÑO PADILLA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 152,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 152,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "CAÑO PADILLA",
+      "dpto": "CESAR",
+      "cod_dpto": "20",
+      "mpio": "LA PAZ",
+      "cod_mpio": "20621",
+      "macro": "NORTE",
+      "pueblo_onic": "YUKPA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "PUEBLO YUKPA",
+      "area_hectareas": 67.501
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        10.284224388000041,
+        -73.08110783699993,
+        10.30090565300003,
+        -73.06638111099994
+      ],
+      "area_hectareas": 67.501,
+      "macro": "NORTE",
+      "dpto": "CESAR",
+      "mpio": "LA PAZ"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 21,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 21,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 16
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 3
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 16
+      },
+      "pct_hecho_principal": 76.2
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.004
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T11:21:11",
+  "periodo": "2018",
+  "_input_hash": "533500851fddd4dd"
+}

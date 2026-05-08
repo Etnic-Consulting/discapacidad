@@ -1,0 +1,225 @@
+{
+  "tipo": "mpio",
+  "id": "27099",
+  "nombre": "BOJAYA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 4055,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 4055,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 8,
+      "top": [
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 3237
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 781
+        },
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 23
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "240",
+          "pueblo": "CUNA-TULE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "910",
+          "pueblo": "INDIGENAS-PERU",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "280",
+        "pueblo": "EMBERA",
+        "poblacion": 3237
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 10,
+      "resguardos": [
+        {
+          "nombre": "RÍOS UVA Y POGUE - QUEBRADA TAPARAL",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 50191.49
+        },
+        {
+          "nombre": "ALTO RÍO BOJAYÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 49285.319
+        },
+        {
+          "nombre": "OPOGADÓ - DOGUADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 29392.625
+        },
+        {
+          "nombre": "ALTO RÍO CUIA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 23089.662
+        },
+        {
+          "nombre": "NAPIPÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 21910.283
+        },
+        {
+          "nombre": "PICHICORA, CHICUÉ, PUERTO ALEGRE",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 15147.077
+        },
+        {
+          "nombre": "BUCHADÓ AMPARRADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8445.991
+        },
+        {
+          "nombre": "TUNGINA Y APARTADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8359.55
+        },
+        {
+          "nombre": "GEGENADÓ",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 2387.335
+        },
+        {
+          "nombre": "PUERTO ANTIOQUIA",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 285.827
+        }
+      ],
+      "bbox": [
+        6.017211004224666,
+        -77.3965602753097,
+        6.864526322430747,
+        -76.76177937387763
+      ],
+      "nombre_mpio": "BOJAYA",
+      "cod_dpto": "27"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 211,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 211,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 99
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 88
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 12
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 99
+      },
+      "pct_hecho_principal": 46.9
+    },
+    "icv": {
+      "score": 0.013,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.042
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:02:10",
+  "periodo": "2018",
+  "_input_hash": "961d8a9a72df9782"
+}

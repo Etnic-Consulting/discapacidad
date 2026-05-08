@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Ayapel (Córdoba) concentra 1.855 personas indígenas según CNPV 2018, donde el 96.8% pertenece al pueblo Zenú (1.796). La ausencia de resguardos registrados (n=0) refleja vacíos en la titulación territorial. El conflicto armado impacta con 24 víctimas con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho victimizante principal (83.3%).",
+  "demografia": "La población indígena en Ayapel presenta una estructura concentrada en el grupo adulto (1.796 Zenú), con presencia minoritaria de 13 pueblos adicionales. Los datos no permiten análisis de pirámide etaria por falta de desagregación por edad. La diversidad étnica (n_pueblos=14) contrasta con la hegemonía demográfica del pueblo Zenú.",
+  "prevalencia": "Los datos de prevalencia de condiciones de salud no están disponibles a nivel municipal (solo a nivel pueblo+dpto). Esta limitación impide evaluar cargas epidemiológicas específicas. Se requiere desagregación territorial para identificar patrones de morbilidad en comunidades indígenas.",
+  "territorial": "Ayapel carece de resguardos indígenas registrados (n=0), pese a albergar 14 pueblos. La dispersión geográfica se delimita por un bbox que abarca 8.04°N-8.52°N y -75.34°O--74.78°O. La ausencia de territorios colectivos formalizados limita la protección jurídica y el ejercicio de autonomía.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Esta omisión invisibiliza la diversidad lingüística y obstaculiza la implementación de políticas de revitalización cultural. Se requiere registro sistemático de lenguas en contextos locales.",
+  "vida": "No hay datos disponibles de NBI a nivel municipal (promedio indígena nacional: 67.6%). Esta carencia impide comparar condiciones de vida con el estándar nacional. La falta de información limita la priorización de intervenciones en acceso a servicios básicos y derechos económicos.",
+  "conflicto": "Entre 1985-2024, 24 personas indígenas fueron victimizadas con discapacidad en Ayapel. El desplazamiento forzado representó el 83.3% de los hechos (20 casos), seguido de amenazas (4 casos). La concentración de víctimas en este hecho victimizante exige atención prioritaria en retorno y protección territorial.",
+  "icv": "El ICV de Ayapel es 0.001, con componentes normalizados en cero excepto conflicto (0.005). La fórmula pondera NBI, prevalencia y conflicto, destacando el impacto de la violencia en la calidad de vida. Este valor refleja condiciones críticas en dimensiones no capturadas por los datos disponibles.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para los 14 pueblos presentes, especialmente para el pueblo Zenú que concentra el 96.8% de la población, citando la ausencia de territorios registrados (n_resguardos=0).",
+    "Implementar un sistema de registro municipal de lenguas indígenas para documentar la diversidad lingüística (actualmente sin datos), vinculado a políticas de educación propia.",
+    "Diseñar un plan de atención psicosocial para víctimas de desplazamiento forzado (20 casos, 83.3%), integrando enfoque diferencial y retorno seguro con participación de autoridades indígenas.",
+    "Generar información desagregada por edad y pueblo para analizar pirámide etaria y prevalencia de condiciones de salud (datos no disponibles a nivel municipal).",
+    "Incluir a Ayapel en estrategias departamentales de reducción de NBI, considerando el promedio indígena nacional de 67.6% como referencia para intervenciones en acceso a servicios básicos."
+  ]
+}

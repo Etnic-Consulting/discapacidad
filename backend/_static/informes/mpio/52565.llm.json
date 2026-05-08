@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Providencia registra una población indígena total de 359 personas según CNPV 2018, con el 97% (348) perteneciente al pueblo PASTOS. La ausencia de resguardos y datos de NBI o lengua refleja vacíos en la caracterización territorial indígena. El ICV de 0.001 evidencia condiciones críticas, donde el conflicto normado (0.003) es el componente dominante en este indicador.",
+  "demografia": "La población indígena en Providencia muestra una estructura concentrada en el pueblo PASTOS (97%). Los datos de capacidades diversas no están disponibles a nivel municipal. La pirámide etaria no puede analizarse por falta de datos desagregados por edad y sexo en este nivel territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en la población indígena de Providencia. Se reconoce la limitación de no contar con registros específicos que permitan evaluar subregistros o patrones epidemiológicos en este municipio.",
+  "territorial": "Providencia no cuenta con resguardos indígenas registrados, a pesar de ser un territorio insular con presencia histórica del pueblo PASTOS. La dispersión geográfica se limita a los límites municipales sin delimitaciones territoriales colectivas reconocidas. La bbox refleja un área reducida (1.171, -77.623 a 1.307, -77.571) que contrasta con la ausencia de territorios indígenas.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Providencia. No se puede determinar la vitalidad lingüística ni la presencia de lenguas ancestrales en este territorio insular.",
+  "vida": "No hay datos disponibles sobre NBI para la población indígena de Providencia. La comparación con el promedio indígena nacional (67.6%) no es posible por falta de registros locales. Se requiere generar información específica para evaluar condiciones de vida.",
+  "conflicto": "Providencia registra 13 víctimas de violencia con discapacidad entre 1985-2024, donde el desplazamiento forzado (7 casos, 53.8%) es el hecho principal. El homicidio (4 casos) y amenazas (1 caso) completan el patrón de afectación. La concentración de hechos en desplazamiento refleja dinámicas de violencia estructural en este territorio insular.",
+  "icv": "El ICV de 0.001 en Providencia se explica principalmente por el componente de conflicto normado (0.003), mientras que NBI y prevalencia normados registran valores de 0.0. Esto posiciona al municipio en condiciones críticas, donde la violencia es el factor determinante de su vulnerabilidad.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de población indígena con desagregación por pueblo, edad y sexo para superar la falta de datos en Providencia.",
+    "Priorizar la identificación y delimitación de territorios ancestrales del pueblo PASTOS en Providencia, dado que no existen resguardos registrados pese a su presencia histórica.",
+    "Diseñar un plan de atención a víctimas de desplazamiento forzado en Providencia, considerando que el 53.8% de los casos registrados corresponden a este hecho violento.",
+    "Generar información sobre condiciones de vida (NBI) y lengua indígena en Providencia para comparar con promedios nacionales y orientar políticas públicas.",
+    "Fortalecer la articulación entre autoridades municipales y el pueblo PASTOS para garantizar el reconocimiento de sus derechos territoriales y culturales en este territorio insular."
+  ]
+}

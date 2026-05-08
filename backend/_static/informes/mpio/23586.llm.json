@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Purísima concentra el 99.1% de su población indígena en el pueblo Zenú (2.884 personas), según CNPV 2018. La casi totalidad de la población indígena habita en un territorio sin resguardos formales, lo que limita su reconocimiento legal. El desplazamiento forzado representa el 75% de los hechos victimizantes registrados en el RUV entre 1985-2024.",
+  "demografia": "La población indígena de Purísima asciende a 2.910 personas, con una pirámide etaria concentrada en adultos (49.6% entre 18-59 años). La población mayor de 60 años es mínima (3.4%), reflejando dinámicas migratorias o mortalidad temprana. No se disponen datos de capacidades diversas a nivel municipal, solo promedios nacionales indígenas (60%).",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades en Purísima. La ausencia de registros específicos impide evaluar necesidades sanitarias. El sub-registro es probable dado la falta de sistemas de información locales. Se requiere fortalecer la recolección de datos epidemiológicos en territorios sin resguardos.",
+  "territorial": "Purísima alberga 0 resguardos indígenas pese a su población mayoritariamente Zenú. El territorio municipal tiene una extensión reducida (coordenadas bbox) y alta densidad poblacional indígena. La dispersión geográfica es nula al no existir territorios colectivos reconocidos. La concentración demográfica en un solo pueblo agrava la vulnerabilidad territorial.",
+  "lengua": "Los datos de lengua no están disponibles para Purísima. No se puede determinar el estado de vitalidad lingüística del pueblo Zenú en este municipio. La ausencia de registros impide diseñar estrategias de revitalización cultural. Se recomienda priorizar levantamientos etnográficos en comunidades sin resguardos.",
+  "vida": "No hay datos de NBI para Purísima. El promedio indígena nacional (67.6%) sugiere brechas críticas no cuantificables localmente. La falta de información impide comparar condiciones de vida con otros municipios. La invisibilidad estadística refleja exclusión en sistemas de planificación territorial.",
+  "conflicto": "Se registraron 4 víctimas indígenas con discapacidad en Purísima entre 1985-2024. El desplazamiento forzado (3 casos) es el hecho victimizante principal (75%). El homicidio (1 caso) completa el universo. La baja n limita análisis estadístico, pero confirma patrones de violencia estructural contra el pueblo Zenú.",
+  "icv": "El ICV de Purísima es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula refleja un territorio con NBI, prevalencia y conflicto no registrados. La posición relativa es crítica al no superar umbrales mínimos. La metodología del ICV invisibiliza realidades sin datos, como Purísima.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento de al menos un resguardo para el pueblo Zenú en Purísima, citando la población de 2.884 personas que lo habitan.",
+    "Implementar un sistema de información municipal sobre salud indígena, priorizando registro de enfermedades crónicas y agudas.",
+    "Diseñar un plan de prevención del desplazamiento forzado con enfoque diferencial, basado en los 3 casos registrados (75% del total).",
+    "Realizar un censo lingüístico del pueblo Zenú en Purísima para evaluar vitalidad cultural y diseñar estrategias de revitalización.",
+    "Incluir a Purísima en el Plan de Desarrollo con Enfoque Territorial (PDET) del departamento de Córdoba, dado su alta concentración indígena sin resguardos."
+  ]
+}

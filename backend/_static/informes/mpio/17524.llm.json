@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Palestina (Caldas) alberga una población indígena de 93 personas según el CNPV 2018. El 63.4% de este grupo pertenece al pueblo EMBERA-CHAMI, principal actor étnico en el territorio. La ausencia de resguardos y datos de NBI o lengua limita la comprensión integral de las condiciones de vida, aunque el ICV de 0.0 refleja una situación crítica en dimensiones socioeconómicas y de conflicto.",
+  "demografia": "La población indígena de Palestina presenta una estructura demográfica concentrada en el pueblo EMBERA-CHAMI (59 personas). Los otros 7 pueblos registran poblaciones menores a 12 personas cada uno, destacando la diversidad étnica pero con baja representación poblacional. La pirámide etaria no puede analizarse por falta de datos desagregados por edad en el JSON.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La sección correspondiente no fue reportada en el JSON, lo que impide evaluar la carga de morbilidad o identificar prioridades sanitarias para la población indígena local.",
+  "territorial": "Palestina no cuenta con resguardos indígenas registrados, a pesar de albergar 8 pueblos distintos. La dispersión geográfica del territorio municipal (coordenadas en bbox) contrasta con la ausencia de espacios colectivos reconocidos, lo que dificulta la protección territorial y cultural de los pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas en Palestina no están disponibles en este informe. No se puede determinar la vitalidad lingüística ni las lenguas maternas de la población indígena, lo que limita la planificación de estrategias de revitalización cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Palestina. El promedio indígena nacional de 67.6% no puede compararse localmente por falta de datos, aunque el ICV de 0.0 sugiere condiciones de vida precarias en dimensiones socioeconómicas.",
+  "conflicto": "Se registraron 5 víctimas de conflicto armado en Palestina entre 1985-2024, con desplazamiento forzado como el hecho principal (40% de los casos). La presencia de actos terroristas y desapariciones forzadas indica un contexto de violencia estructural que afecta la seguridad territorial de los pueblos indígenas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Palestina es 0.0, con componentes en cero excepto conflicto_norm (0.001). Esto refleja una situación de extrema vulnerabilidad en NBI, prevalencia y conflicto, posicionando al municipio en un umbral crítico de bienestar.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento y delimitación de resguardos para los pueblos EMBERA-CHAMI y otros 7 presentes, citando la ausencia actual de territorios colectivos (n_resguardos: 0).",
+    "Implementar un sistema de recolección de datos sobre NBI y lengua en el municipio, dado que estas secciones no están disponibles (_sin_datos: true).",
+    "Priorizar acciones humanitarias para víctimas de desplazamiento forzado, que representan el 40% de los casos de conflicto (hecho_principal: Desplazamiento forzado, total: 2).",
+    "Diseñar estrategias de protección territorial para Palestina, considerando su dispersión geográfica (bbox) y la ausencia de resguardos registrados.",
+    "Incluir a Palestina en programas de salud pública indígena, ante la falta de datos de prevalencia que impiden identificar necesidades sanitarias prioritarias."
+  ]
+}

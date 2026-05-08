@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guaduas (Cundinamarca) registra una población indígena de 29 personas según CNPV 2018, distribuida en 12 pueblos. El 20.7% (6 personas) pertenece al pueblo Pijao, principal grupo identificado. La ausencia de resguardos y datos de NBI o lengua refleja una invisibilización territorial y estadística de la población indígena en este municipio.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la baja población (n=29). La dispersión entre 12 pueblos —con predominio del Pijao (6 personas)— evidencia fragmentación identitaria. La falta de datos de discapacidad (solo disponible a nivel nacional) limita el análisis de capacidades diversas en este contexto municipal.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para Guaduas. La ausencia de registros en el RUV (0 víctimas con discapacidad) sugiere sub-registro o falta de sistematización local. Esta limitación impide evaluar la magnitud de afectaciones en salud o violencia contra indígenas en el municipio.",
+  "territorial": "Guaduas no cuenta con resguardos indígenas, lo que refleja una desconexión entre la población identificada y el reconocimiento territorial. La dispersión geográfica de los 12 pueblos —sin concentración espacial— dificulta la articulación de estrategias comunitarias. La bbox del municipio delimita un área sin presencia de territorios colectivos.",
+  "lengua": "Los datos de lengua no están disponibles para Guaduas. Esta omisión estadística invisibiliza la diversidad lingüística de los pueblos presentes (Pijao, Emberá, Nasa, entre otros) y obstaculiza políticas de revitalización cultural en el municipio.",
+  "vida": "No hay datos de NBI para Guaduas, aunque el promedio indígena nacional es 67.6%. Esta brecha no cuantificada impide comparar condiciones de vida. La falta de información sobre pobreza multidimensional en la población indígena local limita la priorización de acciones sociales.",
+  "conflicto": "El RUV reporta 0 víctimas indígenas con discapacidad en Guaduas (1985-2024). Este dato, aunque confiable, no refleja necesariamente la ausencia de violencia, sino posibles fallas en la identificación étnica en registros oficiales. La falta de hechos victimizantes registrados exige revisión de mecanismos de denuncia.",
+  "icv": "El ICV de Guaduas es 0.0, resultado de la ausencia de datos normalizados en NBI, prevalencia y conflicto. Esta métrica refleja la falta de información sistematizada, no la ausencia de vulnerabilidades. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin inputs confiables.",
+  "recomendaciones": [
+    "Realizar un censo comunitario indígena en Guaduas para actualizar datos demográficos y territoriales, dado que el CNPV 2018 registra solo 29 personas (población total).",
+    "Implementar un sistema de registro étnico en el RUV municipal para identificar víctimas indígenas, ya que actualmente reporta 0 casos sin evidencia de sub-registro.",
+    "Diseñar un plan de revitalización cultural que incluya diagnóstico de lenguas indígenas en Guaduas, donde no hay datos disponibles.",
+    "Promover la creación de un resguardo indígena en Guaduas, considerando la presencia de 12 pueblos y la ausencia de territorios colectivos.",
+    "Articular con la gobernación de Cundinamarca para incluir a la población indígena de Guaduas en políticas de NBI, dado que no hay datos locales pese al promedio nacional de 67.6%."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El Carmen de Chucurí registra una población indígena de 6 personas, todas pertenecientes al pueblo Wayúu según datos del CNPV 2018. Este municipio santandereano carece de resguardos indígenas y no presenta datos sobre lengua o NBI. La única víctima de conflicto registrada corresponde a desplazamiento forzado, reflejando una vulnerabilidad extrema en un territorio sin presencia institucional indígena estructurada.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según la metodología de agregación por pueblos. Los datos disponibles solo permiten identificar 6 personas Wayúu, sin desagregación por edad o género. Esta limitación impide análisis demográficos detallados a este nivel administrativo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. El promedio indígena nacional del 60% en capacidades diversas no puede contrastarse con cifras locales. La ausencia de registros específicos subraya la invisibilización estadística de este grupo en el territorio.",
+  "territorial": "El municipio carece de resguardos indígenas, a pesar de su ubicación en un área con coordenadas geográficas definidas. La ausencia de territorios colectivos contrasta con la presencia histórica de pueblos indígenas en la región. Esta situación refleja la debilidad en la protección territorial y la falta de reconocimiento legal.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística del pueblo Wayúu en el territorio. La falta de registros lingüísticos limita el diseño de estrategias de revitalización cultural.",
+  "vida": "No se reportan datos de NBI para este municipio. El promedio indígena nacional del 67.6% no puede compararse con la situación local. La ausencia de información impide evaluar condiciones de vida o brechas socioeconómicas en la población indígena.",
+  "conflicto": "Se registraron 5 víctimas de desplazamiento forzado entre 1985-2024, todas con discapacidad. El 100% de los hechos violentos corresponden a este tipo de victimización. Esta cifra evidencia la exposición extrema a la violencia en un contexto de ausencia de protección territorial.",
+  "icv": "El Índice de Condiciones Vitales (ICV) alcanza 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula refleja la carencia absoluta en NBI y prevalencia, agravada por la alta incidencia de violencia. Este resultado posiciona al municipio en el peor escenario posible.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena para el pueblo Wayúu en El Carmen de Chucurí, dado que no existen territorios colectivos reconocidos (n_resguardos: 0).",
+    "Implementar un sistema de registro municipal de población indígena con desagregación por edad y género para superar la limitación demográfica actual (n_pueblos: 1, población: 6).",
+    "Diseñar un plan de atención a víctimas de desplazamiento forzado con enfoque diferencial, considerando que el 100% de los casos registrados corresponden a este hecho (victimas_total_disc: 5).",
+    "Incluir indicadores de NBI y lengua en los sistemas de información municipal, dado que actualmente no hay datos disponibles (nbi: _sin_datos, lengua: _sin_datos).",
+    "Fortalecer la articulación con la ONIC para garantizar la protección territorial y cultural del pueblo Wayúu en Santander, ante la ausencia de resguardos y la alta vulnerabilidad registrada."
+  ]
+}

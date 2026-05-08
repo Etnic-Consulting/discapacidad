@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Valledupar concentra 31.279 personas indígenas según CNPV 2018, con 20 pueblos representados. El 48% de esta población pertenece al pueblo Kankuamo (15.037 personas), seguido por Arhuaco (8.169) y Wiwa (3.253). La presencia de 2 resguardos —Kankuamo (24.302 ha) y Businchama (128 ha)— refleja una alta concentración territorial en el municipio.",
+  "demografia": "La población indígena de Valledupar muestra una estructura joven, con el pueblo Kankuamo como principal grupo (15.037 personas). Los datos no detallan pirámide etaria específica para el municipio, pero la predominancia de este pueblo sugiere una base demográfica sólida. La diversidad de 20 pueblos indica dinámicas migratorias y de convivencia intercultural en el territorio.",
+  "prevalencia": "Los datos de prevalencia de enfermedades no están disponibles para el municipio. Se reconoce la limitación de no contar con información específica sobre morbilidad indígena en Valledupar, lo que impide analizar patrones de salud pública en la población. La falta de registros confiables restringe la interpretación epidemiológica.",
+  "territorial": "Valledupar alberga 2 resguardos indígenas: Kankuamo (24.302 ha) y Businchama (128 ha), con una dispersión geográfica limitada. La concentración en dos territorios contrasta con la diversidad de 20 pueblos, evidenciando una desigual distribución de la tierra. La bbox del municipio abarca zonas de alta conflictividad histórica.",
+  "lengua": "Los datos sobre lenguas indígenas en Valledupar no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas propias de los pueblos residentes. Esta ausencia de información limita el análisis de la diversidad cultural y la preservación de lenguas originarias.",
+  "vida": "No se dispone de datos específicos sobre NBI para Valledupar. El promedio indígena nacional es 67.6%, pero su aplicabilidad al municipio es incierta. La falta de información impide evaluar brechas socioeconómicas entre la población indígena y el resto del municipio.",
+  "conflicto": "Se registraron 808 víctimas indígenas de violencia entre 1985-2024, con el desplazamiento forzado como hecho principal (651 casos, 80.6%). El homicidio (79) y las amenazas (16) completan los patrones de afectación. Estos datos reflejan una alta exposición a la violencia estructural en el territorio.",
+  "icv": "El ICV de Valledupar es 0.048, con conflicto como dimensión dominante (0.162). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.162), ubicando al municipio en una posición crítica. La baja puntuación en NBI y prevalencia sugiere subregistros o falta de datos.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación de los resguardos Kankuamo y Businchama para garantizar el derecho territorial, citando que el primero tiene 24.302 ha y el segundo solo 128 ha.",
+    "Implementar un sistema de registro de víctimas indígenas con enfoque diferencial, dado que se documentaron 808 casos entre 1985-2024, con 651 de desplazamiento forzado.",
+    "Diseñar políticas de salud pública con enfoque intercultural, ante la ausencia de datos de prevalencia en el municipio.",
+    "Fortalecer programas de revitalización lingüística para los 20 pueblos indígenas, considerando la falta de información sobre lenguas en el territorio.",
+    "Realizar un censo socioeconómico indígena en Valledupar para superar la brecha de datos en NBI y vida, comparando con el promedio nacional de 67.6%."
+  ]
+}

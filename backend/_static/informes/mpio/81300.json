@@ -1,0 +1,179 @@
+{
+  "tipo": "mpio",
+  "id": "81300",
+  "nombre": "FORTUL",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 885,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 885,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 9,
+      "top": [
+        {
+          "cod_pueblo": "401",
+          "pueblo": "MACAGUANE",
+          "poblacion": 411
+        },
+        {
+          "cod_pueblo": "690",
+          "pueblo": "U`WA",
+          "poblacion": 363
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 74
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 20
+        },
+        {
+          "cod_pueblo": "620",
+          "pueblo": "TANIMUKA",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "090",
+          "pueblo": "BETOYE",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "401",
+        "pueblo": "MACAGUANE",
+        "poblacion": 411
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 3,
+      "resguardos": [
+        {
+          "nombre": "CIBARIZA",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 35491.546
+        },
+        {
+          "nombre": "VALLES DEL SOL",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 26784.45
+        },
+        {
+          "nombre": "CUSAY",
+          "pueblo_onic": "MACAGUÁN",
+          "area_pg_ha": 1252.881
+        }
+      ],
+      "bbox": [
+        6.518250808206963,
+        -72.12901597272594,
+        6.8745881883680635,
+        -71.45346884173142
+      ],
+      "nombre_mpio": "FORTUL",
+      "cod_dpto": "81"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 13,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 13,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 5
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 5
+      },
+      "pct_hecho_principal": 38.5
+    },
+    "icv": {
+      "score": 0.001,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.003
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:21:54",
+  "periodo": "2018",
+  "_input_hash": "917d52c6e370f991"
+}

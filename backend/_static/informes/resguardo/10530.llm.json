@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Pulgandé Campoalegre, territorio Awá en Nariño, registra una población total de 28 habitantes según datos DANE-CNPV 2018. Con una extensión de 1.015,667 hectáreas, este territorio enfrenta desafíos críticos en acceso a datos básicos, como lengua y NBI, que limitan la planificación intercultural. La ausencia de víctimas de conflicto armado en el RUV (2018) no refleja necesariamente la realidad de violencia estructural en la región, sino vacíos en registros oficiales.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que la población total es de 28 habitantes sin desagregación por edad. Esta cifra mínima impide evaluar dinámicas generacionales o presión demográfica en el territorio. Se requiere cruce con fuentes comunitarias para complementar la información oficial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. Los registros de discapacidad a nivel nacional (60% promedio indígena) no son aplicables aquí por falta de información local. Esto subraya la necesidad de sistemas de monitoreo comunitario para identificar necesidades prioritarias.",
+  "territorial": "El resguardo tiene un área de 1.015,667 hectáreas, ubicada en San Andrés de Tumaco, Nariño. Su delimitación geográfica (bbox) confirma su carácter de territorio colectivo Awá en la macro región Occidente. La concentración territorial contrasta con la dispersión poblacional (28 habitantes), lo que dificulta la sostenibilidad cultural y productiva.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Dada la pertenencia al pueblo Awá, se asume la presencia de la lengua propia, pero se requiere verificación en fuentes comunitarias. La ausencia de registros oficiales limita la planificación en educación intercultural.",
+  "vida": "No se reportan datos de NBI para este resguardo. El promedio indígena nacional (67.6%) no puede compararse sin información local. Esta omisión refleja brechas en sistemas de información territorial que invisibilizan condiciones de vida en resguardos pequeños.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en el RUV (1985-2024) para este territorio. La ausencia de hechos violentos en registros oficiales no descarta afectaciones indirectas, como desplazamiento o restricción al territorio. Se recomienda validar con autoridades Awá.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, calculado con componentes nulos (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos desagregados, no la calidad de vida real. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no es funcional sin inputs confiables.",
+  "recomendaciones": [
+    "Realizar censo comunitario en Pulgandé Campoalegre para actualizar datos demográficos y de lengua, priorizando la participación de mujeres y jóvenes Awá.",
+    "Implementar un sistema de alerta temprana para violencia estructural en territorios Awá de Nariño, cruzando datos del RUV con registros locales.",
+    "Diseñar un plan de salud intercultural con enfoque en prevención, dado que no hay datos de prevalencia disponibles.",
+    "Fortalecer la articulación entre UNIPA y entidades departamentales para incluir al resguardo en políticas públicas con enfoque territorial.",
+    "Promover estudios sobre condiciones de vida (NBI) en resguardos pequeños, usando metodologías participativas que validen datos oficiales."
+  ]
+}

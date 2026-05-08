@@ -1,0 +1,120 @@
+{
+  "tipo": "resguardo",
+  "id": "10422",
+  "nombre": "LA ESTACIÓN TÁLAGA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 321,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 321,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "LA ESTACIÓN TÁLAGA",
+      "dpto": "HUILA",
+      "cod_dpto": "41",
+      "mpio": "LA PLATA",
+      "cod_mpio": "41396",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "CRIHU",
+      "area_hectareas": 405.796
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        2.1897709420000524,
+        -76.11452544699995,
+        2.214311430000066,
+        -76.05866371199994
+      ],
+      "area_hectareas": 405.796,
+      "macro": "OCCIDENTE",
+      "dpto": "HUILA",
+      "mpio": "LA PLATA"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 37,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 37,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 27
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 6
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 27
+      },
+      "pct_hecho_principal": 73.0
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.007
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:28:48",
+  "periodo": "2018",
+  "_input_hash": "b6ae76b3450214d5"
+}

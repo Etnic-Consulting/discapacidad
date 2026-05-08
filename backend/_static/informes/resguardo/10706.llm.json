@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Pijao VUELTA DEL RÍO, ubicado en Ortega (Tolima), registra una población total de 543 habitantes según el DANE-CNPV 2018. Su territorio de 88.905 hectáreas enfrenta una alta afectación por conflicto armado, con 246 víctimas registradas entre 1985-2024. El desplazamiento forzado representa el 76.4% de los hechos victimizantes, evidenciando una crisis humanitaria persistente en este territorio colectivo.",
+  "demografia": "La población total del resguardo asciende a 543 habitantes según datos oficiales. No se dispone de pirámide etaria específica para este territorio, lo que limita el análisis de estructura poblacional. La ausencia de datos desagregados por edad impide evaluar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este resguardo. Esta limitación impide analizar condiciones de salud o acceso a servicios básicos. El sub-registro en indicadores de salud es una brecha crítica que invisibiliza necesidades territoriales específicas.",
+  "territorial": "El resguardo VUELTA DEL RÍO ocupa 88.905 hectáreas en Ortega (Tolima), con coordenadas geográficas que delimitan su territorio ancestral Pijao. Su ubicación en la macro región CENTRO-ORIENTE lo sitúa en una zona de alta presión por actores armados. La concentración territorial es reducida pero estratégica para la pervivencia cultural.",
+  "lengua": "No se registran datos sobre lengua en este resguardo. La ausencia de información sobre uso de la lengua Pijao limita la evaluación de vitalidad cultural y estrategias de revitalización lingüística en el territorio.",
+  "vida": "No se dispone de datos de NBI para este resguardo. El promedio indígena nacional de 67.6% no puede compararse directamente. La falta de información específica oculta las condiciones de vida de la población Pijao en este territorio.",
+  "conflicto": "Se registran 246 víctimas de conflicto armado en el resguardo, con desplazamiento forzado como principal hecho victimizante (188 casos, 76.4%). Las amenazas (31) y homicidios (13) completan los patrones de violencia. La afectación sistemática del territorio colectivo exige medidas urgentes de protección y reparación.",
+  "icv": "El Índice de Condiciones Vitales (ICV) del resguardo es 0.015, con conflicto como dimensión dominante (0.049). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la prioridad de abordar la violencia estructural. Su valor es bajo frente a estándares nacionales, confirmando la crisis humanitaria.",
+  "recomendaciones": [
+    "Implementar un plan de retorno y protección para las 188 víctimas de desplazamiento forzado, priorizando el resguardo VUELTA DEL RÍO con enfoque diferencial Pijao.",
+    "Garantizar el registro oficial de la lengua Pijao en el territorio, articulado con la CRIT y la ONIC, para fortalecer la pervivencia cultural.",
+    "Diseñar un sistema de alerta temprana para prevenir nuevos hechos victimizantes, dado que el 76.4% de los casos corresponden a desplazamiento forzado.",
+    "Incluir al resguardo en el Plan Nacional de Desarrollo con enfoque territorial, considerando su ICV de 0.015 y la afectación por conflicto.",
+    "Fortalecer la participación de la comunidad Pijao en la formulación de políticas públicas, dado que los datos oficiales no reflejan sus prioridades territoriales."
+  ]
+}

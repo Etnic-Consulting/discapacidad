@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Molagavita (Santander) registra ausencia de datos indígenas en indicadores clave según CNPV 2018. La población indígena total reportada es 0, con confiabilidad NO_CONFIABLE (n=0). El ICV municipal es 0.0, reflejando vacíos críticos en información territorial. La ausencia de registros sugiere desprotección estadística o invisibilización del componente indígena en este municipio.",
+  "demografia": "Los datos demográficos indígenas en Molagavita no están disponibles para 2018. La consulta CNPV 2018 arrojó n=0 con confiabilidad NO_CONFIABLE, imposibilitando análisis de pirámide etaria o distribución poblacional. Esta limitación impide evaluar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "No hay datos de prevalencia de condiciones específicas en Molagavita. La sección de capacidades diversas carece de registros (sin datos disponibles). La falta de información impide identificar necesidades sanitarias o barreras de acceso en la población indígena local.",
+  "territorial": "Molagavita cuenta con 0 resguardos indígenas registrados, pese a tener un área geográfica definida (bbox con coordenadas válidas). La ausencia de territorios colectivos contrasta con la presencia de límites municipales, señalando posible desarticulación entre reconocimiento legal y práctica territorial indígena.",
+  "lengua": "Los datos sobre lenguas indígenas en Molagavita no están disponibles. No se registran lenguas en uso según la fuente consultada, lo que dificulta evaluar vitalidad cultural o procesos de revitalización lingüística en el municipio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Molagavita. El promedio indígena nacional de NBI (67.6%) no puede compararse localmente por falta de datos. Esta omisión invisibiliza condiciones de pobreza estructural en el componente indígena del municipio.",
+  "conflicto": "Molagavita reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con confiabilidad CONFIABLE. La ausencia de hechos victimizantes registrados no descarta subnotificación, especialmente en contextos de alta vulnerabilidad donde el subregistro es probable.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Molagavita es 0.0, derivado de componentes nulos en NBI, prevalencia y conflicto. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos, no condiciones reales. Este resultado subraya la urgencia de generar información territorial indígena.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con metodología ONIC para superar el n=0 actual y garantizar visibilización estadística",
+    "Priorizar el reconocimiento de resguardos en Molagavita, vinculando la ausencia de territorios (0) con procesos de titulación colectiva",
+    "Implementar sistema de registro de víctimas indígenas con enfoque diferencial, dado el reporte de 0 casos pese a contexto de conflicto histórico",
+    "Articular con DANE para incluir preguntas étnicas en encuestas locales, superando la omisión en CNPV 2018",
+    "Diseñar políticas públicas con enfoque intercultural, considerando el ICV 0.0 como alerta de desprotección territorial"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sitionuevo (Magdalena) registra una población indígena de solo 6 personas según CNPV 2018, concentrada en 4 pueblos con predominio wayuu (3 personas). La casi inexistencia de resguardos (0) y la ausencia de datos sobre lengua y NBI reflejan vacíos críticos en el reconocimiento territorial. El ICV de 0.0 y 3 víctimas de desplazamiento forzado (100% del total) evidencian una situación de alta vulnerabilidad sin contraste estadístico confiable.",
+  "demografia": "La pirámide etaria no aplica por n=6 y datos agregados sin desagregación etaria. La población indígena se distribuye en 4 pueblos, con el 50% wayuu (3 personas) y el resto en arhuacos, wiwa y sin información. La reducida muestra impide análisis demográficos robustos.",
+  "prevalencia": "Los datos de prevalencia no están disponibles en este nivel (_sin_datos: true). La falta de información sobre discapacidades y salud limita cualquier lectura sobre sub-registros o brechas. Se requiere desagregación municipal para análisis confiables.",
+  "territorial": "No existen resguardos indígenas en Sitionuevo (n_resguardos: 0). La bbox delimita un área de 10.7186° a 11.1054° N y -74.8519° a -74.4277° W, pero sin territorios colectivos reconocidos. La ausencia de resguardos contrasta con la presencia de pueblos indígenas en el municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles (_sin_datos: true). No es posible analizar vitalidad lingüística ni patrones de uso en este municipio. Se requiere información específica para evaluar la situación de las lenguas indígenas.",
+  "vida": "Los datos de NBI no están disponibles (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. Sin información local, no es posible calcular brechas ni componentes específicos. La falta de datos impide evaluar condiciones de vida.",
+  "conflicto": "Sitionuevo registra 3 víctimas de desplazamiento forzado (100% del total de víctimas con discapacidad), según RUV 1985-2024. El hecho principal es el desplazamiento forzado, con 3 casos reportados. La muestra reducida (n=3) limita análisis comparativos.",
+  "icv": "El ICV municipal es 0.0, con componentes en cero excepto conflicto_norm (0.001). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja una situación crítica en NBI y prevalencia. La posición relativa es inferior al promedio indígena nacional.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por etnia y grupo etario para superar la muestra insuficiente (n=6) y permitir análisis demográficos confiables.",
+    "Iniciar el proceso de constitución de resguardos indígenas en Sitionuevo, dado que actualmente no existen territorios colectivos reconocidos (n_resguardos: 0).",
+    "Implementar un sistema de registro de discapacidades y prevalencia de enfermedades en población indígena a nivel municipal, ante la ausencia de datos (_sin_datos: true).",
+    "Priorizar acciones humanitarias para las 3 víctimas de desplazamiento forzado, considerando que el 100% de los casos reportados corresponden a este hecho.",
+    "Diseñar políticas de revitalización cultural y lingüística, ante la falta de datos sobre lengua (_sin_datos: true) y la necesidad de proteger la diversidad étnica en el municipio."
+  ]
+}

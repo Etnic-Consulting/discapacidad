@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El Resguardo Indígena Awá La Turbia, ubicado en Villagarzón (Putumayo), registra una población total de 0 según datos DANE-CNPV 2018, lo que refleja una posible omisión en el registro oficial. Con un área de 659.199 hectáreas en la Amazonía, su territorio enfrenta desafíos de visibilización estadística. La ausencia de datos sobre discapacidad, NBI y lengua limita el análisis integral de sus condiciones de vida.",
+  "demografia": "Los datos demográficos del resguardo no están disponibles en el sistema (n=0). Esta ausencia impide analizar la pirámide etaria o su dinámica poblacional. La falta de registros oficiales dificulta la planificación territorial y la asignación de recursos para el pueblo Awá en este territorio específico.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para este resguardo. La ausencia de información impide evaluar el sub-registro de patologías crónicas o agudas. Se requiere cruce con fuentes comunitarias para complementar la brecha estadística oficial.",
+  "territorial": "El resguardo tiene un área de 659.199 hectáreas en Villagarzón, Putumayo, dentro de la macrorregión Amazonía. Su delimitación geográfica es precisa, pero la falta de datos poblacionales dificulta evaluar su concentración o dispersión. La Amazonía alberga 11 resguardos Awá, lo que sugiere una distribución territorial dispersa.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión impide analizar la vitalidad del awapit u otras lenguas propias del pueblo Awá. La preservación lingüística es crítica para la identidad cultural y requiere registros comunitarios complementarios.",
+  "vida": "No hay datos de NBI disponibles para este resguardo. El promedio indígena nacional es 67.6%, pero su comparación es imposible sin cifras locales. La falta de información sobre necesidades básicas insatisfechas limita la priorización de intervenciones en salud, educación o vivienda.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (n=0) entre 1985-2024. La ausencia de hechos violentos reportados no descarta afectaciones no documentadas. Se recomienda validar esta información con organizaciones Awá y fuentes comunitarias.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, con componentes nulos en NBI, prevalencia y conflicto. Esta métrica refleja la falta de datos oficiales, no necesariamente condiciones de vida óptimas. La fórmula del ICV no puede aplicarse sin información confiable.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para registrar la población Awá en el resguardo, dado que los datos oficiales muestran n=0 y esto afecta la planificación territorial.",
+    "Implementar un sistema de registro de discapacidad y NBI con participación de la comunidad Awá, usando metodologías propias para superar la brecha estadística.",
+    "Validar los datos de conflicto con fuentes Awá y autoridades locales, ya que el RUV puede subregistrar afectaciones históricas en Putumayo.",
+    "Diseñar un plan de revitalización lingüística para el awapit, priorizando escuelas comunitarias y alianzas con la ONIC.",
+    "Solicitar a DANE y al Ministerio del Interior cruzar datos territoriales con registros propios de los pueblos para corregir omisiones en resguardos como La Turbia."
+  ]
+}

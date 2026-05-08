@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Cabuyaro (Meta) registra una población indígena de 113 personas según CNPV 2018, distribuida en 20 pueblos. La diversidad cultural es alta, con el pueblo Pijao como principal grupo (23 personas). No se identifican resguardos en el territorio, lo que limita la protección colectiva de los pueblos. Los datos de conflicto muestran 3 víctimas con discapacidad, donde el desplazamiento forzado representa el 66.7% de los casos.",
+  "demografia": "La población indígena de Cabuyaro suma 113 personas, con una pirámide etaria dispersa y sin concentración en grupos de edad específicos. El pueblo Pijao lidera con 23 habitantes, seguido por Emberá-Katío (22) y Cubeo (12). La diversidad étnica es notable, pero la baja población total dificulta análisis demográficos robustos. No se aplican pirámides estándar por el reducido tamaño muestral.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles a nivel municipal. El promedio indígena nacional reporta 60.0%, pero esta cifra no puede contrastarse con Cabuyaro. La falta de información impide evaluar la situación específica del municipio. Se requiere desagregación por pueblos para análisis confiable.",
+  "territorial": "Cabuyaro no cuenta con resguardos indígenas registrados, pese a su bbox que abarca 4.150103936567266 a 4.475211893690589 en latitud y -73.12491221208148 a -72.73890689408091 en longitud. La ausencia de territorios colectivos limita la autonomía y protección cultural. La dispersión geográfica de los 20 pueblos dificulta la concentración territorial.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Cabuyaro. No se puede analizar la vitalidad lingüística ni la transmisión intergeneracional. Esta carencia obstaculiza la planificación de políticas de revitalización cultural.",
+  "vida": "No hay datos disponibles sobre NBI a nivel municipal. El promedio indígena nacional es 67.6%, pero no puede compararse con Cabuyaro. La falta de información impide evaluar brechas en condiciones de vida. Se requiere desagregación por pueblos para análisis preciso.",
+  "conflicto": "Se registraron 3 víctimas indígenas con discapacidad entre 1985-2024, donde el desplazamiento forzado (2 casos) es el hecho principal (66.7%). Las amenazas completan el restante 33.3%. La baja cifra total limita análisis estadísticos robustos. La vulnerabilidad territorial es evidente pese al bajo conteo.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Cabuyaro es 0.0, con componentes normalizados en 0.0 (NBI), 0.0 (prevalencia) y 0.001 (conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja condiciones críticas. La dimensión de conflicto tiene el mayor peso relativo en este resultado.",
+  "recomendaciones": [
+    "Garantizar la creación de al menos un resguardo indígena en Cabuyaro para proteger los territorios de los 20 pueblos registrados, priorizando al pueblo Pijao con 23 habitantes.",
+    "Realizar un censo étnico municipal desagregado por pueblos y grupos de edad para superar la limitación de n=113 y mejorar la planificación territorial.",
+    "Implementar un sistema de monitoreo de lenguas indígenas en Cabuyaro, dado que no existen datos disponibles sobre vitalidad lingüística.",
+    "Diseñar un plan de prevención de desplazamiento forzado, principal hecho victimizante (66.7% de los casos) en el municipio.",
+    "Incluir a Cabuyaro en programas nacionales de reducción de NBI, considerando el promedio indígena nacional de 67.6% como referencia crítica."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Polonuevo (Atlántico) registra una población indígena de 26 personas según el CNPV 2018, concentrada en tres pueblos: Mokaná (13), Zenú (10) y Wayúu (3). La ausencia de resguardos y datos de NBI o lengua refleja una debilidad institucional en el reconocimiento territorial y socioeconómico. La vulnerabilidad se agrava al contrastar con el promedio indígena nacional de NBI (67.6%), evidenciando una brecha crítica en capacidades básicas.",
+  "demografia": "La pirámide etaria del municipio se concentra en el pueblo Mokaná (13 personas), seguido por Zenú (10) y Wayúu (3). No hay datos de estructura por edades ni género, lo que limita el análisis de dinámicas poblacionales. La población total indígena (26) es mínima frente a la diversidad étnica regional, sugiriendo procesos de desplazamiento o asimilación forzada.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Polonuevo. La falta de registros específicos impide evaluar el estado epidemiológico de la población indígena. Se requiere priorizar sistemas de monitoreo local para identificar necesidades sanitarias urgentes.",
+  "territorial": "Polonuevo no cuenta con resguardos indígenas, a pesar de albergar tres pueblos. La dispersión geográfica se limita a coordenadas que abarcan un área reducida (10.707°N a 10.813°N), sin territorios colectivos reconocidos. La ausencia de resguardos contrasta con la presencia histórica de pueblos como Mokaná y Zenú en la región.",
+  "lengua": "Los datos sobre lenguas indígenas en Polonuevo no están disponibles. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de lenguas originarias como el mokaná o el zenú. Se recomienda incluir este indicador en futuros censos municipales.",
+  "vida": "No hay información sobre NBI en Polonuevo. El promedio indígena nacional (67.6%) sirve como referencia, pero no refleja la situación local. La falta de datos impide medir brechas en acceso a educación, salud o vivienda, esenciales para el bienestar indígena.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Polonuevo entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja visibilidad o subregistro. Sin embargo, la falta de datos confiables en conflicto limita conclusiones sobre la seguridad territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Polonuevo es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). Esta métrica refleja la carencia de datos sistemáticos más que una evaluación real de condiciones de vida. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede interpretarse sin información base.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque étnico para actualizar datos demográficos y territoriales, priorizando la identificación de resguardos no reconocidos (ej. Mokaná y Zenú).",
+    "Implementar un sistema de alerta temprana para violencia contra pueblos indígenas en Atlántico, dado el subregistro actual (0 víctimas reportadas).",
+    "Incluir indicadores de lengua y NBI en el próximo CNPV municipal, usando el promedio indígena nacional (67.6% NBI) como línea base.",
+    "Diseñar programas de salud intercultural con enfoque en pueblos Mokaná y Zenú, considerando su población (13 y 10 personas respectivamente).",
+    "Promover el reconocimiento legal de territorios colectivos en Polonuevo, vinculando a las comunidades con la ONIC para fortalecer su autonomía."
+  ]
+}

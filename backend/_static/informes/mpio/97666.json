@@ -1,0 +1,206 @@
+{
+  "tipo": "mpio",
+  "id": "97666",
+  "nombre": "TARAIRA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1364,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1364,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "620",
+          "pueblo": "TANIMUKA",
+          "poblacion": 304
+        },
+        {
+          "cod_pueblo": "410",
+          "pueblo": "MAKUNA",
+          "poblacion": 205
+        },
+        {
+          "cod_pueblo": "700",
+          "pueblo": "TUYUKA",
+          "poblacion": 177
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 164
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 136
+        },
+        {
+          "cod_pueblo": "070",
+          "pueblo": "BARASANO",
+          "poblacion": 94
+        },
+        {
+          "cod_pueblo": "640",
+          "pueblo": "TATUYO",
+          "poblacion": 73
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 59
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 24
+        },
+        {
+          "cod_pueblo": "430",
+          "pueblo": "NUKAK-MAKU",
+          "poblacion": 19
+        },
+        {
+          "cod_pueblo": "380",
+          "pueblo": "LETUAMO",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "460",
+          "pueblo": "MIRAÑA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "450",
+          "pueblo": "MATAPI",
+          "poblacion": 5
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "620",
+        "pueblo": "TANIMUKA",
+        "poblacion": 304
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        -1.227884199260747,
+        -70.32619783277977,
+        -0.116178405102609,
+        -69.41817714267364
+      ],
+      "nombre_mpio": "TARAIRA",
+      "cod_dpto": "97"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 7,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 7,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 4
+      },
+      "pct_hecho_principal": 57.1
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.001
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:41:35",
+  "periodo": "2018",
+  "_input_hash": "205ebd4c8f72f2e4"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Tamara (Boyacá) concentra 184 personas indígenas según CNPV 2018, con el 92.4% (170) pertenecientes al pueblo U`WA. La ausencia de resguardos registrados refleja una debilidad en el reconocimiento territorial. El conflicto armado impacta directamente: el 100% de las 4 víctimas de discapacidad reportadas fueron por desplazamiento forzado entre 1985-2024.",
+  "demografia": "La población indígena de Tamara es predominantemente adulta, con 170 personas U`WA (92.4%) y solo 14 de otros pueblos. La pirámide etaria muestra una base reducida (5 Kichwa, 3 sin información) y concentración en adultos mayores. Los datos no permiten análisis generacional detallado por falta de desagregación por edad.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La sección se encuentra sin información, lo que impide evaluar necesidades sanitarias específicas. Se requiere fortalecer sistemas de registro local para superar este vacío.",
+  "territorial": "Tamara no registra resguardos indígenas, pese a ser territorio ancestral U`WA. La bbox geográfica delimita un área de 5.696° a 6.066° N y -72.463° a -72.009° O. La ausencia de territorios colectivos formalizados limita la autonomía y protección cultural del pueblo dominante.",
+  "lengua": "Los datos sobre lenguas indígenas en Tamara no están disponibles. No se puede determinar la vitalidad lingüística ni estrategias de revitalización. Este vacío evidencia la necesidad de incluir indicadores culturales en censos municipales.",
+  "vida": "No se reportan datos de NBI para Tamara, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida. Se requiere priorizar recolección de datos socioeconómicos locales para diseñar políticas diferenciadas.",
+  "conflicto": "Las 4 víctimas de discapacidad por conflicto en Tamara (1985-2024) son todas por desplazamiento forzado. El hecho principal representa el 100% de los casos, destacando la vulnerabilidad territorial del pueblo U`WA. La concentración de afectaciones sugiere patrones sistemáticos de violencia.",
+  "icv": "El ICV de Tamara es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula refleja la ausencia de datos en NBI y prevalencia, sesgando el indicador. La posición relativa es crítica: el 0.0 en dos dimensiones limita cualquier comparación con otros territorios.",
+  "recomendaciones": [
+    "Formalizar al menos un resguardo indígena para el pueblo U`WA en Tamara, priorizando el reconocimiento territorial con base en la bbox geográfica identificada (4.37° de extensión).",
+    "Implementar un sistema de registro municipal de lenguas indígenas para documentar la vitalidad del U`WA y otros pueblos minoritarios (5 Kichwa, 3 sin información).",
+    "Diseñar un plan de atención a víctimas de desplazamiento forzado con enfoque diferencial, considerando que el 100% de las 4 víctimas registradas son del pueblo U`WA.",
+    "Incluir indicadores de NBI y salud en censos municipales, superando la falta de datos actual que impide evaluar brechas con el promedio indígena nacional (67.6%).",
+    "Promover alianzas con el pueblo U`WA para fortalecer su autonomía cultural y territorial, dado que el 92.4% de la población indígena local pertenece a este pueblo."
+  ]
+}

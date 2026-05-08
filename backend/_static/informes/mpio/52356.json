@@ -1,0 +1,255 @@
+{
+  "tipo": "mpio",
+  "id": "52356",
+  "nombre": "IPIALES",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 34932,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 34932,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 33968
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 333
+        },
+        {
+          "cod_pueblo": "360",
+          "pueblo": "COFAN",
+          "poblacion": 206
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 126
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 121
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 82
+        },
+        {
+          "cod_pueblo": "565",
+          "pueblo": "QUILLACINGA",
+          "poblacion": 42
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "640",
+          "pueblo": "TATUYO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "720",
+          "pueblo": "WAYUU",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "390",
+          "pueblo": "MAKAGUAJE",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "560",
+        "pueblo": "PASTOS",
+        "poblacion": 33968
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "UKUMARI KANKHE",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 19500.25
+        },
+        {
+          "nombre": "ISHU AWÁ",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 6017.618
+        },
+        {
+          "nombre": "RUMIYACO",
+          "pueblo_onic": "PASTO",
+          "area_pg_ha": 3705.525
+        },
+        {
+          "nombre": "SANTA ROSA SUCUMBÍOS EL DIVISO",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 1093.297
+        }
+      ],
+      "bbox": [
+        0.3613480790898137,
+        -77.69783433331736,
+        0.9035605027063301,
+        -77.08802355791931
+      ],
+      "nombre_mpio": "IPIALES",
+      "cod_dpto": "52"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 319,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 319,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 115
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 96
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 48
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 27
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 17
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 7
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 6
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+        "total": 115
+      },
+      "pct_hecho_principal": 36.1
+    },
+    "icv": {
+      "score": 0.019,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.064
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:51:00",
+  "periodo": "2018",
+  "_input_hash": "91bc6e5dac43b1ad"
+}

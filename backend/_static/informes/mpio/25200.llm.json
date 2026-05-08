@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cogua presenta una población indígena de 13 personas según CNPV 2018, concentrada en el pueblo Muisca con 12 habitantes. La ausencia de resguardos y datos de NBI o lengua refleja vacíos críticos en la caracterización territorial. La prioridad es reconstruir la base de datos local para visibilizar la presencia indígena y sus necesidades específicas.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal por la baja población (n=13). Solo se identifican 2 pueblos: Muisca (12 personas) e Indígena-sin-información (1 persona). La concentración en un solo pueblo dominante limita el análisis demográfico tradicional. Los datos no permiten desagregar por grupos de edad o género.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de información impide evaluar necesidades sanitarias específicas. Se requiere sistematizar registros locales para identificar patrones de morbilidad y acceso a servicios.",
+  "territorial": "Cogua no cuenta con resguardos indígenas registrados (n=0). La dispersión geográfica se limita a un área municipal sin delimitación territorial colectiva. La ausencia de resguardos contrasta con la presencia histórica Muisca, sugiriendo procesos de despojo o invisibilización territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad del uso de la lengua Muisca o la presencia de otros idiomas indígenas en el territorio.",
+  "vida": "No hay datos de NBI para Cogua, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas socioeconómicas. La reconstrucción de indicadores locales es urgente para priorizar intervenciones en vivienda, educación y empleo.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Cogua entre 1985-2024 (n=0). La ausencia de hechos victimizantes no descarta vulnerabilidades no documentadas. Se recomienda fortalecer el sistema de alertas tempranas para registrar casos en territorios sin presencia institucional.",
+  "icv": "El ICV de Cogua es 0.0, determinado por la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula refleja la carencia de información más que condiciones reales. La prioridad es generar datos primarios para calcular indicadores confiables.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en Cogua para actualizar la población indígena y sus necesidades, citando la cifra de 13 personas del CNPV 2018.",
+    "Gestionar con el IGAC y la ONIC la delimitación de resguardos históricos Muisca en el municipio, dado que n_resguardos=0.",
+    "Sistematizar registros de salud y educación para identificar brechas en NBI y acceso a servicios, considerando el promedio indígena nacional de 67.6%.",
+    "Fortalecer el sistema de alertas tempranas en Cogua para documentar posibles casos de conflicto no registrados, ante la ausencia de víctimas en el RUV (n=0).",
+    "Incluir a Cogua en los planes de revitalización lingüística de la ONIC, dado que los datos de lengua están sin datos (_sin_datos: true)."
+  ]
+}

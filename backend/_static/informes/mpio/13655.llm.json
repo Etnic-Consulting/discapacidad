@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Jacinto del Cauca registra una población indígena de 5 personas según CNPV 2018, concentrada en el pueblo Zenú. El municipio carece de resguardos indígenas, lo que limita la protección territorial colectiva. La vulnerabilidad se evidencia en un ICV de 0.0, reflejando condiciones críticas en NBI, prevalencia y conflicto, con desplazamiento forzado como principal hecho victimizante (2 casos).",
+  "demografia": "La población indígena en San Jacinto del Cauca asciende a 5 personas, según CNPV 2018. El pueblo Zenú representa el 100% de esta población con 5 habitantes. No se reportan datos de pirámide etaria ni capacidades diversas a nivel municipal, lo que impide análisis detallados sobre estructura poblacional o discapacidad.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros de conflicto indican 2 víctimas con discapacidad, pero no permiten calcular tasas de prevalencia confiables. Se requiere fortalecer sistemas de información local para identificar necesidades sanitarias prioritarias.",
+  "territorial": "San Jacinto del Cauca no cuenta con resguardos indígenas, lo que contrasta con su bbox municipal que abarca 8.03 a 8.43 de latitud y -74.83 a -74.50 de longitud. La ausencia de territorios colectivos dificulta la implementación de estrategias de protección cultural y ambiental propias de los pueblos indígenas.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "No se reportan datos de NBI para San Jacinto del Cauca. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar debido a la falta de información local. La ausencia de registros impide evaluar brechas en condiciones de vida.",
+  "conflicto": "Se registran 2 víctimas indígenas con discapacidad en el municipio entre 1985-2024, todas asociadas a desplazamiento forzado (100%). Este patrón victimizante refleja la exposición histórica a violencia en la región, con afectación directa a la población indígena local.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en San Jacinto del Cauca es 0.0, determinado por componentes normalizados de NBI (0.0), prevalencia (0.0) y conflicto (0.0). Este resultado ubica al municipio en una situación de extrema vulnerabilidad, sin distinción entre dimensiones.",
+  "recomendaciones": [
+    "Implementar un sistema de monitoreo territorial indígena municipal con enfoque en registro de población y condiciones de vida, citando la ausencia actual de datos (n=5).",
+    "Diseñar estrategias de protección territorial colectiva para el pueblo Zenú en San Jacinto del Cauca, considerando la falta de resguardos (n_resguardos=0).",
+    "Priorizar acciones contra el desplazamiento forzado, principal hecho victimizante con 2 casos (100%), en articulación con entidades locales y nacionales.",
+    "Fortalecer la recolección de datos sobre lengua indígena y salud, áreas sin información disponible (_sin_datos=true).",
+    "Promover alianzas con el pueblo Zenú para identificar territorios ancestrales no reconocidos oficialmente y avanzar en su titulación."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "tipo": "resguardo",
+  "id": "10521",
+  "nombre": "PALMAR IMBI",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1188,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 1188,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "PALMAR IMBI",
+      "dpto": "NARIÑO",
+      "cod_dpto": "52",
+      "mpio": "RICAURTE",
+      "cod_mpio": "52612",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "AWÁ",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "CAMAWARI",
+      "area_hectareas": 7837.31
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        1.23518858500006,
+        -78.09749745599999,
+        1.3944329010000729,
+        -77.98203334399994
+      ],
+      "area_hectareas": 7837.31,
+      "macro": "OCCIDENTE",
+      "dpto": "NARIÑO",
+      "mpio": "RICAURTE"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:38:33",
+  "periodo": "2018",
+  "_input_hash": "1701b57ab47fb08a"
+}

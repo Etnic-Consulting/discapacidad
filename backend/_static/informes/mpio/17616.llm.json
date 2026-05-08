@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Risaralda registra una población indígena de 278 personas según CNPV 2018, concentrada en un solo resguardo. El 70.5% pertenece al pueblo EMBERA-CHAMÍ, evidenciando alta homogeneidad étnica. La vulnerabilidad se refleja en un ICV de 0.001, donde el conflicto normado (0.002) impacta más que el NBI (0.0).",
+  "demografia": "La pirámide etaria muestra una población joven con 196 EMBERA-CHAMÍ (70.5%), 49 EMBERA (17.6%) y 9 NASA (3.2%). La dispersión etaria sugiere migración reciente, mientras el municipio carece de datos sobre capacidades diversas. La concentración en un pueblo dominante limita la diversidad generacional.",
+  "prevalencia": "Los datos de prevalencia no están disponibles a nivel municipal. A nivel nacional, el promedio indígena de discapacidades es 60.0%, pero Risaralda no cuenta con registros confiables para contrastar. Se requiere sistematizar información local para identificar necesidades específicas.",
+  "territorial": "Existe un único resguardo (LA ALBANIA) con 128.804 ha, ocupando el 0.1% del área municipal. La bbox delimita un territorio compacto en zona montañosa, sin expansión hacia otros municipios. La concentración geográfica refleja alta presión sobre un espacio reducido.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "No hay datos de NBI disponibles para Risaralda. El promedio indígena nacional es 67.6%, pero la brecha local no puede calcularse. La falta de información impide evaluar condiciones de vida como vivienda, educación o empleo en la población indígena.",
+  "conflicto": "Se registran 10 víctimas de conflicto con discapacidad entre 1985-2024, siendo el desplazamiento forzado (5 casos, 50%) el hecho principal. Los homicidios (3) y actos terroristas (1) completan el patrón. La baja n sugiere subregistro, pero confirma presencia de violencia estructural.",
+  "icv": "El ICV de 0.001 sitúa a Risaralda en el peor quintil nacional. El componente de conflicto (0.002) es el principal determinante, seguido de NBI (0.0) y prevalencia (0.0). La fórmula refleja una crisis multidimensional donde el conflicto supera otras dimensiones.",
+  "recomendaciones": [
+    "Priorizar la creación de un sistema de registro municipal de discapacidades y lengua para superar la falta de datos, citando la ausencia de información en `capacidades_diversas` y `lengua`.",
+    "Diseñar un plan de protección territorial para el resguardo LA ALBANIA, considerando su área reducida (128.804 ha) y la alta concentración poblacional (196 EMBERA-CHAMÍ), citando `n_resguardos: 1` y `poblacion: 196`.",
+    "Implementar un programa de atención psicosocial para víctimas de desplazamiento forzado, dirigido a las 5 personas registradas (50% del total), citando `hecho_principal: Desplazamiento forzado` y `pct_hecho_principal: 50.0`.",
+    "Fortalecer la articulación con el pueblo EMBERA-CHAMÍ para garantizar representación en políticas públicas, dado que representan el 70.5% de la población indígena municipal, citando `poblacion: 196` y `pct_poblacion: 70.5%`.",
+    "Realizar un diagnóstico participativo con las comunidades para identificar necesidades urgentes, ante la ausencia de datos en NBI y prevalencia, citando `_sin_datos: true` en ambas secciones."
+  ]
+}

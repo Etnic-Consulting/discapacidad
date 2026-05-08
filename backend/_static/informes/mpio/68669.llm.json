@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de San Andrés registra una población indígena de solo 2 personas según el CNPV 2018, concentrada en el pueblo Guane. La ausencia de resguardos y la falta de datos en categorías clave como lengua, NBI y capacidades diversas limitan un análisis integral. Este escenario refleja una casi inexistente presencia indígena organizada en el territorio, contrastando con la dinámica regional.",
+  "demografia": "La pirámide etaria no aplica en este municipio dado que la población indígena total asciende a 2 personas, según datos del CNPV 2018. La concentración en un solo pueblo (Guane) y la ausencia de estructuras territoriales como resguardos explican esta mínima representación. Los datos disponibles no permiten analizar distribuciones etarias ni razones demográficas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o vulnerabilidades específicas en San Andrés. La falta de registros en el JSON impide cualquier análisis de sub-registro o patrones de afectación. Se requiere cruzar fuentes complementarias para evaluar posibles brechas no capturadas en el CNPV 2018.",
+  "territorial": "San Andrés cuenta con 0 resguardos indígenas, según el registro oficial. La bbox geográfica del municipio no alberga territorios colectivos reconocidos, lo que refleja una ausencia de delimitación territorial indígena. Esta condición contrasta con la presencia histórica de pueblos como los Guane en la región andina colombiana.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en San Andrés con la información proporcionada.",
+  "vida": "No hay datos disponibles sobre NBI en San Andrés. El promedio indígena nacional de 67.6% no puede contrastarse localmente, lo que impide evaluar brechas en condiciones de vida. La ausencia de registros limita cualquier análisis de pobreza multidimensional en el territorio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en San Andrés entre 1985 y 2024, según el RUV. La ausencia de hechos victimizantes en este período sugiere una baja exposición al conflicto armado, aunque la confiabilidad de este dato es limitada por el tamaño muestral (n=0).",
+  "icv": "El Índice de Condiciones de Vida (ICV) en San Andrés es 0.0, determinado por la ausencia de datos en sus componentes (NBI, prevalencia y conflicto). Esta métrica refleja la falta de información estructural para evaluar el bienestar indígena en el municipio, no necesariamente una condición de vulnerabilidad extrema.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar datos demográficos y territoriales, dado que el CNPV 2018 registra solo 2 personas indígenas en San Andrés.",
+    "Incluir a San Andrés en programas de identificación étnica del Dane para desagregar indicadores sociales por pueblo indígena, considerando la presencia histórica de los Guane.",
+    "Evaluar la viabilidad de reconocer territorios colectivos en San Andrés, pese a su baja población, para preservar derechos territoriales según el Convenio 169 de la OIT.",
+    "Articular con la gobernación de Santander estrategias de protección cultural para pueblos indígenas dispersos, como los Guane, en municipios sin resguardos.",
+    "Priorizar la recolección de datos sobre lengua y NBI en San Andrés para diseñar políticas públicas diferenciadas, dado el vacío actual en el JSON."
+  ]
+}

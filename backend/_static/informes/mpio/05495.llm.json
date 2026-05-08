@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Nechí (Antioquia) concentra 93 personas indígenas según CNPV 2018, con el 80.6% pertenecientes al pueblo Zenú (75 personas). La población se distribuye en 9 pueblos, evidenciando alta diversidad étnica pero con predominio de un grupo. La ausencia de resguardos registrados (n=0) y datos de lengua limita el análisis de territorialidad y vitalidad cultural.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que solo se reporta población total sin desagregación por edad. La cifra de 93 personas indígenas en Nechí impide evaluar estructura poblacional o dinámicas generacionales. Se requiere desagregación por cohortes para identificar tendencias demográficas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Nechí. La falta de registros específicos (n=0) impide evaluar subregistros o patrones epidemiológicos. Se recomienda priorizar sistemas de información locales para monitorear condiciones de salud en pueblos indígenas.",
+  "territorial": "Nechí registra 0 resguardos indígenas, contrastando con su diversidad étnica (9 pueblos). La bbox geográfica abarca 7.767714325753189,-74.95049349171961 a 8.2020574213367,-74.56109131573265, pero sin territorios colectivos reconocidos. La ausencia de resguardos sugiere debilidad en la protección territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en Nechí no están disponibles (_sin_datos: true). No se puede evaluar vitalidad lingüística ni presencia de lenguas propias. La ONIC debe impulsar censos lingüísticos locales para documentar diversidad cultural y riesgos de extinción.",
+  "vida": "No hay datos de NBI para Nechí (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas socioeconómicas. Se requiere incorporar indicadores de pobreza multidimensional en sistemas de información municipal.",
+  "conflicto": "Nechí registra 31 víctimas indígenas con discapacidad entre 1985-2024, con el 90.3% (28 casos) por desplazamiento forzado. El hecho principal refleja violencia estructural contra pueblos indígenas. La cifra subraya la urgencia de garantizar derechos territoriales y protección a comunidades.",
+  "icv": "El ICV de Nechí es 0.002, con componente de conflicto como dimensión dominante (0.006). El score refleja condiciones críticas en seguridad y derechos humanos. La posición relativa frente a otros municipios es crítica, requiriendo intervenciones prioritarias en protección territorial.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento y titulación de resguardos para los 9 pueblos indígenas en Nechí, priorizando al pueblo Zenú que concentra el 80.6% de la población (75 personas).",
+    "Implementar un sistema de monitoreo local de lenguas indígenas para documentar vitalidad cultural y diseñar estrategias de revitalización.",
+    "Incluir indicadores de NBI y salud en el Plan de Desarrollo Municipal, comparando con el promedio indígena nacional (67.6%).",
+    "Fortalecer la atención a víctimas de desplazamiento forzado (28 casos, 90.3% del total) con enfoque diferencial y reparación colectiva.",
+    "Articular con la ONIC y autoridades tradicionales para diseñar planes de protección territorial ante el ICV crítico (0.002) y componente de conflicto dominante."
+  ]
+}

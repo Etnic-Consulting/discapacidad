@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Alcalá (Valle del Cauca) concentra 258 indígenas según CNPV 2018, con 12 pueblos representados. El 36% (93 personas) pertenece al pueblo EMBERA, principal grupo en el municipio. La ausencia de resguardos y un ICV de 0.0 reflejan condiciones críticas en acceso a derechos territoriales y desarrollo humano.",
+  "demografia": "La población indígena en Alcalá es joven y diversa, con 12 pueblos identificados. El EMBERA lidera con 93 personas (36%), seguido por EMBERA-CHAMI (23%) y población sin información específica (13%). La dispersión étnica contrasta con la baja concentración territorial, evidenciando fragmentación identitaria.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud en el municipio. La sección se encuentra sin información, lo que impide analizar brechas sanitarias o patrones de morbilidad en la población indígena local.",
+  "territorial": "Alcalá registra 0 resguardos indígenas, pese a albergar 12 pueblos distintos. La ausencia de territorios colectivos limita la autonomía y protección cultural. La bbox geográfica delimita un área reducida (4.65°-4.72°N, -75.86°--75.71°O), sugiriendo alta presión sobre tierras no tituladas.",
+  "lengua": "Los datos sobre lenguas indígenas en Alcalá no están disponibles. No es posible determinar la vitalidad de las lenguas originarias ni su uso en contextos cotidianos o educativos.",
+  "vida": "No hay información sobre NBI en el municipio. El promedio indígena nacional (67.6%) sirve como referencia, pero no permite calcular brechas específicas para Alcalá. La falta de datos oculta necesidades básicas insatisfechas en vivienda, educación o ingresos.",
+  "conflicto": "Se registran 2 víctimas de desplazamiento forzado entre 1985-2024, correspondientes al 100% de los casos de violencia reportados. Este hecho refleja la vulnerabilidad territorial del municipio, donde la ausencia de resguardos agrava la exposición a actores armados.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, con componentes normalizados en cero: NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula ponderada (40% NBI + 30% prevalencia + 30% conflicto) evidencia un escenario de extrema precariedad en derechos fundamentales.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para los 12 pueblos identificados, especialmente para el EMBERA (93 personas), garantizando seguridad jurídica territorial.",
+    "Implementar un sistema de alerta temprana para prevenir desplazamientos forzados, dado que el 100% de las víctimas reportadas (2 casos) corresponden a este hecho.",
+    "Diseñar un plan de salud intercultural con enfoque diferencial, ante la ausencia de datos de prevalencia que permita identificar necesidades específicas.",
+    "Realizar un censo étnico complementario para superar el 13% de población indígena sin información ('INDIGENA-SIN-INFORMACION').",
+    "Articular con la gobernación del Valle del Cauca para incluir a Alcalá en programas de desarrollo rural con enfoque indígena, dado el ICV de 0.0 y la falta de datos socioeconómicos."
+  ]
+}

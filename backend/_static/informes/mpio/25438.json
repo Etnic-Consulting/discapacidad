@@ -1,0 +1,162 @@
+{
+  "tipo": "mpio",
+  "id": "25438",
+  "nombre": "MEDINA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 43,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 43,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 12,
+      "top": [
+        {
+          "cod_pueblo": "455",
+          "pueblo": "JE´ERURIWA",
+          "poblacion": 13
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 11
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "760",
+          "pueblo": "YAUNA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "540",
+          "pueblo": "PISAMIRA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "620",
+          "pueblo": "TANIMUKA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "700",
+          "pueblo": "TUYUKA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "455",
+        "pueblo": "JE´ERURIWA",
+        "poblacion": 13
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        4.276241626287298,
+        -73.60348582821649,
+        4.6789504619476645,
+        -73.19065013164612
+      ],
+      "nombre_mpio": "MEDINA",
+      "cod_dpto": "25"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Amenaza",
+          "total": 1
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Amenaza",
+        "total": 1
+      },
+      "pct_hecho_principal": 50.0
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:20:26",
+  "periodo": "2018",
+  "_input_hash": "05e18ae6a9e885ab"
+}

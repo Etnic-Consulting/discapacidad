@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Cotorra alberga una población indígena de 460 personas según el CNPV 2018, concentrada mayoritariamente en el pueblo Zenú con 457 habitantes. La ausencia de resguardos y la dispersión geográfica en 3 pueblos (Zenú, Emberá-Katío y Puinave) reflejan una organización territorial fragmentada. El ICV de 0.0 evidencia condiciones críticas en dimensiones socioeconómicas y de conflicto, sin datos disponibles para NBI o lengua.",
+  "demografia": "La pirámide etaria no puede analizarse por falta de datos desagregados por edad. Se reporta una población total de 460 indígenas, con 457 pertenecientes al pueblo Zenú (99.3% del total). Los datos de capacidades diversas no están disponibles a nivel municipal, limitando el análisis de vulnerabilidades específicas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el municipio. La falta de información impide evaluar patrones de morbilidad o acceso a servicios. Se reconoce un sub-registro potencial dado que los sistemas de salud no capturan adecuadamente la realidad indígena a nivel local.",
+  "territorial": "Cotorra no cuenta con resguardos indígenas registrados, pese a albergar 3 pueblos. La dispersión geográfica se confirma con una bbox que abarca coordenadas entre 9.0001 y 9.1155 de latitud, y -75.8450 a -75.7241 de longitud. La ausencia de territorios colectivos limita la autonomía y protección cultural.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población reportada.",
+  "vida": "No hay datos de NBI disponibles para Cotorra. El promedio indígena nacional de 67.6% en NBI no puede contrastarse localmente. La falta de información impide evaluar brechas en acceso a servicios básicos, educación o vivienda para la población indígena del municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Cotorra entre 1985-2024 (0 casos). La ausencia de hechos victimizantes reportados sugiere sub-registro o baja visibilidad de la violencia en contextos indígenas locales. Se requiere validación con fuentes comunitarias para confirmar esta tendencia.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Cotorra es 0.0, reflejando condiciones extremas en las tres dimensiones evaluadas: NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta puntuación es inferior al promedio indígena nacional, indicando una situación de vulnerabilidad multidimensional no capturada por sistemas oficiales.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena en Cotorra para garantizar la protección territorial del pueblo Zenú (457 habitantes), citando la ausencia actual de territorios colectivos registrados.",
+    "Implementar un sistema de recolección de datos desagregados por edad, lengua y NBI en el municipio, dado que el 100% de los indicadores críticos están sin datos.",
+    "Diseñar programas de salud intercultural con enfoque en pueblos Emberá-Katío (2 hab.) y Puinave (1 hab.), considerando su alta dispersión y vulnerabilidad extrema.",
+    "Establecer un mecanismo de denuncia y seguimiento de violencia contra indígenas en Cotorra, ante la posible subestimación de 0 casos reportados en el RUV.",
+    "Incluir a Cotorra en el Plan de Salvaguarda del pueblo Zenú, dado que concentra el 99.3% de la población indígena municipal y enfrenta condiciones críticas según el ICV de 0.0."
+  ]
+}

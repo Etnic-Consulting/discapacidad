@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Ovejas registra una población indígena de 1,033 personas según el CNPV 2018, concentrada mayoritariamente en el pueblo Zenú con 935 individuos (90.5% del total). La ausencia de resguardos y datos de lengua refleja una debilidad en la protección territorial y cultural. El desplazamiento forzado afecta a 270 víctimas (91.5% del total de 295), evidenciando una crisis humanitaria persistente en el territorio.",
+  "demografia": "La pirámide etaria de Ovejas muestra una población indígena envejecida, con 935 Zenú (90.5% del total) y solo 50 Emberá-Katío, 29 Wayúu y 8 Wiwa. La concentración demográfica en un solo pueblo limita la diversidad generacional. No se disponen datos de capacidades diversas a nivel municipal, según la nota técnica.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información impide analizar patrones de salud específicos. Se requiere priorizar registros locales para superar el sub-registro en indicadores críticos, especialmente en contextos de conflicto armado prolongado.",
+  "territorial": "Ovejas carece de resguardos indígenas, lo que debilita la autonomía territorial. La dispersión geográfica de la población (bbox: 9.44,-75.33 a 9.69,-75.01) contrasta con la ausencia de espacios colectivos reconocidos. La concentración en un solo pueblo (Zenú) agrava la vulnerabilidad ante presiones externas.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en Ovejas. La falta de registros lingüísticos invisibiliza la diversidad cultural y limita estrategias de revitalización. Se recomienda incluir esta variable en futuros censos municipales para garantizar derechos culturales.",
+  "vida": "No se reportan datos de NBI para Ovejas, aunque el promedio indígena nacional es 67.6%. La ausencia de información oculta brechas en condiciones de vida. La priorización de indicadores sociales en contextos de conflicto es urgente para diseñar políticas públicas efectivas.",
+  "conflicto": "Ovejas registra 295 víctimas de violencia entre 1985-2024, con 270 casos de desplazamiento forzado (91.5%). El homicidio (13 casos) y desapariciones (2) completan el perfil de afectación. La concentración de hechos en desplazamiento refleja una estrategia sistemática de despojo territorial.",
+  "icv": "El ICV de Ovejas es 0.018, con conflicto como dimensión dominante (0.059). La fórmula refleja un bajo desarrollo humano, donde el NBI normalizado (0.0) y prevalencia (0.0) no compensan el impacto del conflicto. La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Implementar un censo lingüístico municipal para documentar la diversidad cultural, dado que no hay datos disponibles sobre lenguas indígenas en Ovejas.",
+    "Diseñar un plan de protección territorial para el pueblo Zenú, considerando la ausencia de resguardos y la alta concentración demográfica (935 personas).",
+    "Priorizar la atención a víctimas de desplazamiento forzado (270 casos) con enfoque diferencial, dado que representan el 91.5% del total de afectados.",
+    "Incluir indicadores de NBI en registros municipales para superar la falta de datos y diseñar políticas sociales basadas en evidencia.",
+    "Fortalecer la articulación con la ONIC para garantizar la participación indígena en la formulación de planes de desarrollo municipal, especialmente en contextos de conflicto."
+  ]
+}

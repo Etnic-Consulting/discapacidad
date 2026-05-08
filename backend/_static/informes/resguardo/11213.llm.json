@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo KANALITOJO PUERTO COLOMBIA, territorio Sáliba en Vichada, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 1,300.009 hectáreas, este territorio enfrenta vacíos críticos en datos demográficos y socioeconómicos. La ausencia de información sobre lengua, NBI y capacidades diversas limita el análisis integral de su situación territorial y cultural.",
+  "demografia": "Los datos de población total reportan 0 habitantes (n=0), lo que invalida cualquier análisis de pirámide etaria. Esta ausencia de datos demográficos impide evaluar la estructura poblacional del resguardo. Se requiere actualización censal específica para este territorio Sáliba en Puerto Carreño.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el resguardo (datos solo disponibles a nivel pueblo+dpto). Esta limitación impide analizar subregistros o patrones de afectación. La falta de información confiable restringe la identificación de necesidades prioritarias en salud.",
+  "territorial": "El resguardo KANALITOJO ocupa 1,300.009 hectáreas en Vichada, con coordenadas que lo ubican en la macro región ORINOQUIA. Su delimitación geográfica está claramente definida, pero carece de datos sobre concentración poblacional o dinámicas territoriales internas. El territorio representa un espacio colectivo Sáliba en riesgo por vacíos de información.",
+  "lengua": "No se registran datos sobre lengua en este resguardo. Esta ausencia impide evaluar la vitalidad lingüística del pueblo Sáliba en este territorio específico. La falta de información lingüística limita la planificación cultural y educativa desde la perspectiva indígena.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de 67.6% no puede compararse debido a la ausencia de información local. Esta brecha en datos socioeconómicos dificulta la priorización de intervenciones en condiciones de vida.",
+  "conflicto": "El resguardo reporta 0 víctimas de conflicto con discapacidad (n=0) entre 1985-2024. No se identifican hechos victimizantes principales en este territorio. La ausencia de registros no necesariamente indica ausencia de violencia, sino posibles subregistros en sistemas de información estatal.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, determinado por componentes nulos en NBI, prevalencia y conflicto. Esta puntuación refleja la falta de datos disponibles más que una evaluación real de condiciones de vida. El ICV no puede interpretarse como indicador de bienestar en este caso.",
+  "recomendaciones": [
+    "Realizar censo comunitario específico para el resguardo KANALITOJO, priorizando datos demográficos y lingüísticos del pueblo Sáliba (población_total: 0, lengua: sin_datos).",
+    "Implementar sistema de registro local de víctimas de conflicto con enfoque diferencial indígena, dado el subregistro actual (victimas_total_disc: 0).",
+    "Diseñar línea base de NBI y capacidades diversas con metodologías indígenas, considerando el promedio nacional de 67.6% como referencia (nbi: sin_datos).",
+    "Fortalecer articulación con DANE para incluir este resguardo en futuras rondas censales, garantizando representación territorial Sáliba (area_hectareas: 1300.009).",
+    "Priorizar proyectos de recuperación cultural y lingüística en el resguardo, ante la ausencia de datos sobre lengua y la vulnerabilidad del pueblo Sáliba en Vichada."
+  ]
+}

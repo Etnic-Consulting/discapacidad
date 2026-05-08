@@ -1,0 +1,136 @@
+{
+  "tipo": "resguardo",
+  "id": "10149",
+  "nombre": "WE SX KIWE LA GAITANA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "WE SX KIWE LA GAITANA",
+      "dpto": "CAQUETÁ",
+      "cod_dpto": "18",
+      "mpio": "FLORENCIA",
+      "cod_mpio": "18001",
+      "macro": "AMAZONIA",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "Por definir",
+      "organizacion_regional": "Por definir",
+      "area_hectareas": 145.189
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        1.5995770100000755,
+        -75.51736512799994,
+        1.6178330620000452,
+        -75.50442840199997
+      ],
+      "area_hectareas": 145.189,
+      "macro": "AMAZONIA",
+      "dpto": "CAQUETÁ",
+      "mpio": "FLORENCIA"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 134,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 134,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 86
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 16
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 12
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 4
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 3
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 86
+      },
+      "pct_hecho_principal": 64.2
+    },
+    "icv": {
+      "score": 0.008,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.027
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T11:10:20",
+  "periodo": "2018",
+  "_input_hash": "d9ab76abda3ce89f"
+}

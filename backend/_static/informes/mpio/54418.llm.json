@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Lourdes (Norte de Santander) registra una población indígena de solo 3 personas según el CNPV 2018, concentrada en el pueblo BARI. Este dato refleja una presencia indígena mínima en el territorio, sin resguardos establecidos y sin datos disponibles sobre lengua o NBI. La ausencia de registros en categorías clave limita el análisis, pero evidencia la casi inexistencia de una base poblacional indígena estructurada en la zona.",
+  "demografia": "La pirámide etaria no aplica en este nivel debido a que la población indígena total es de 3 personas, según el CNPV 2018. La concentración en un solo pueblo (BARI) y la falta de datos desagregados impiden un análisis demográfico significativo. La muestra es insuficiente para inferir patrones etarios o dinámicas poblacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección de capacidades diversas carece de información, y el promedio indígena nacional de 60.0% no puede contrastarse localmente. Esto imposibilita evaluar condiciones de salud o discapacidad en la población indígena de Lourdes.",
+  "territorial": "Lourdes no cuenta con resguardos indígenas, según los registros consultados. La bounding box geográfica delimita un área municipal sin presencia territorial indígena reconocida. La ausencia de resguardos (0) y la dispersión poblacional de 3 personas confirman la falta de concentración geográfica indígena en el territorio.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de lenguas originarias en la población indígena local debido a la falta de registros específicos.",
+  "vida": "No hay datos disponibles sobre NBI en Lourdes. El promedio indígena nacional de 67.6% no puede compararse localmente. La ausencia de información impide evaluar condiciones de vida, pobreza o acceso a servicios básicos en la población indígena del municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Lourdes entre 1985 y 2024, según el RUV. El valor de 0 víctimas y la ausencia de hechos violentos destacados confirman una baja incidencia de conflicto armado en la población indígena local durante el período analizado.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Lourdes es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Todos los componentes (nbi_norm, prev_norm, conflicto_norm) son 0.0, reflejando la falta de información disponible para calcular el índice en este municipio.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para verificar la presencia real de pueblos originarios en Lourdes, dado que los datos oficiales solo registran 3 personas.",
+    "Incluir a Lourdes en programas de caracterización étnica del DANE para generar datos desagregados sobre lengua, NBI y capacidades diversas.",
+    "Evaluar la viabilidad de crear un resguardo indígena en el municipio, considerando la ausencia actual de territorios colectivos reconocidos.",
+    "Articular con el pueblo BARI para identificar necesidades específicas, aunque su población sea mínima, y evitar su invisibilización.",
+    "Solicitar a la ONIC y al Ministerio del Interior un acompañamiento técnico para registrar la presencia indígena en el municipio y garantizar sus derechos territoriales."
+  ]
+}

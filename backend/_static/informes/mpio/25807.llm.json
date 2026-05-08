@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Tibirita (Cundinamarca) registra ausencia de población indígena identificada en el CNPV 2018, con n=0 que invalida cualquier análisis demográfico o territorial. La confiabilidad de los datos es NO_CONFIABLE, lo que impide establecer patrones de presencia o vulnerabilidad. Este vacío evidencia la necesidad de estrategias de identificación étnica diferenciada en territorios con baja visibilidad indígena.",
+  "demografia": "Los datos demográficos para Tibirita no aplican al ser n=0 en la consulta poblacional indígena (CNPV 2018). No se identifican pueblos residentes ni grupos etarios, lo que imposibilita analizar pirámides etarias o dinámicas generacionales. La falta de registros refleja limitaciones en la inclusión de la población indígena en censos municipales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad para Tibirita. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. La ausencia de información impide evaluar brechas o priorizar intervenciones sanitarias en este municipio.",
+  "territorial": "Tibirita no cuenta con resguardos indígenas según los registros consultados. La bounding box geográfica delimita un territorio sin presencia de territorios colectivos reconocidos. Esta ausencia contrasta con la existencia de 25 departamentos en Colombia, donde 32 de ellos albergan resguardos.",
+  "lengua": "No se dispone de datos sobre lenguas indígenas en Tibirita. La sección lengua no contiene información, lo que impide analizar vitalidad lingüística o pérdida cultural en el municipio. Este vacío subraya la necesidad de estudios etnográficos específicos.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para Tibirita. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de información impide evaluar condiciones de vida o diseñar políticas sociales diferenciadas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Tibirita entre 1985-2024 (n=0). La ausencia de hechos victimizantes no permite identificar patrones de violencia. Este dato, aunque confiable, no refleja necesariamente la realidad debido a posibles subregistros en contextos de baja visibilidad étnica.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Tibirita es 0.0, calculado con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm arroja un valor mínimo. Este resultado refleja la ausencia de datos más que condiciones reales.",
+  "recomendaciones": [
+    "Implementar campañas de identificación étnica en Tibirita con enfoque diferencial, priorizando la inclusión en el CNPV 2024 para superar el subregistro actual (n=0 en CNPV 2018).",
+    "Realizar un diagnóstico participativo con autoridades indígenas regionales para mapear presencia cultural y territorial en municipios sin resguardos reconocidos.",
+    "Diseñar un sistema de alerta temprana para violencia en territorios sin registros oficiales, incorporando variables de etnicidad en bases de datos de víctimas.",
+    "Promover estudios de lenguas indígenas en Cundinamarca, especialmente en municipios con vacíos como Tibirita, para documentar patrimonio cultural inmaterial.",
+    "Incluir a Tibirita en planes departamentales de salud intercultural, considerando el promedio indígena nacional de 60.0% en capacidades diversas como referencia."
+  ]
+}

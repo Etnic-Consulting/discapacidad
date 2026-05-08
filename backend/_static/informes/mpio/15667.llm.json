@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Luis de Gaceno registra una población indígena de 4 personas según CNPV 2018, concentrada en dos pueblos: INDÍGENAS-ECUADOR- (3) y KICHWA (1). La ausencia de resguardos y la dispersión territorial reflejan una presencia indígena mínima y desorganizada en el municipio. La alta incidencia de homicidios (75% de las víctimas) entre 1985-2024 subraya riesgos críticos para la subsistencia comunitaria.",
+  "demografia": "La pirámide etaria no aplica por n=4 y datos agregados sin desagregación por edad. La población indígena se distribuye en dos pueblos sin estructura etaria discernible. Los datos demográficos carecen de granularidad para análisis poblacional confiable en este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de información impide evaluar necesidades sanitarias específicas. Se requiere sistematización de registros locales para identificar patrones de morbilidad.",
+  "territorial": "El municipio no cuenta con resguardos indígenas, lo que limita la territorialidad colectiva. La dispersión geográfica (bbox con coordenadas) no refleja concentración poblacional indígena. La ausencia de territorios reconocidos dificulta la planificación étnica local.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes en el territorio. Se requiere investigación participativa para documentar prácticas culturales.",
+  "vida": "No hay datos de NBI disponibles para San Luis de Gaceno. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La falta de información invisibiliza las condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "Se registraron 4 víctimas de violencia en 1985-2024, con homicidio como hecho principal (75%). El desplazamiento forzado (25%) complementa el patrón de afectación. La baja n (4) limita la generalización, pero evidencia riesgos persistentes para la comunidad.",
+  "icv": "El ICV municipal es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia) y 0.001 en conflicto. La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), reflejando una situación de extrema vulnerabilidad estructural.",
+  "recomendaciones": [
+    "Realizar censo étnico participativo en San Luis de Gaceno para actualizar datos demográficos con enfoque diferencial (citar: n_pueblos=2, INDÍGENAS-ECUADOR-=3).",
+    "Implementar rutas de protección comunitaria ante homicidios, priorizando el 75% de víctimas registradas (citar: hecho_principal=Homicidio, pct_hecho_principal=75.0).",
+    "Promover acuerdos interinstitucionales para reconocer resguardos indígenas, dado que n_resguardos=0 (citar: territorial.n_resguardos=0).",
+    "Sistematizar registros de salud y NBI con desagregación étnica para superar la falta de datos (citar: _sin_datos=true en nbi y lengua).",
+    "Diseñar estrategias de revitalización cultural con pueblos INDÍGENAS-ECUADOR- y KICHWA, ante la ausencia de información lingüística (citar: pueblos_indigenas.top[0].pueblo=INDIGENAS-ECUADOR-)."
+  ]
+}

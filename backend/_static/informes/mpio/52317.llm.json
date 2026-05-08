@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guachucal, municipio del departamento de Nariño, concentra el 99.9% de su población indígena en el pueblo Pastos (15.477 personas). La presencia de 9 pueblos refleja diversidad cultural, aunque con poblaciones mínimas en otros grupos. La concentración territorial en un solo resguardo (70.971 ha) evidencia alta homogeneidad étnica y riesgos de asimilación cultural.",
+  "demografia": "La población indígena en Guachucal es mayoritariamente adulta y adulta mayor, con 15.477 personas registradas en el CNPV 2018. La pirámide etaria no presenta datos desagregados por edad, lo que limita el análisis de dinámicas generacionales. La ausencia de datos sobre capacidades diversas impide evaluar barreras estructurales en este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Guachucal. La falta de información a nivel municipal restringe la identificación de prioridades sanitarias. Se requiere desagregación por pueblo para evitar invisibilización de grupos minoritarios como los Awa o Quillacinga.",
+  "territorial": "Guachucal cuenta con un solo resguardo indígena (Muellamuéz) que abarca 70.971 hectáreas, reflejando alta concentración territorial. La bbox delimita un área de 0.13 grados de latitud y 0.22 grados de longitud, indicando un territorio compacto. La dispersión geográfica es nula, lo que centraliza la gestión y protección del territorio.",
+  "lengua": "Los datos sobre lenguas indígenas en Guachucal no están disponibles. Esta ausencia impide evaluar la vitalidad lingüística del pueblo Pastos y otros grupos. Se recomienda priorizar registros etnográficos para documentar la transmisión intergeneracional de la lengua.",
+  "vida": "No hay datos específicos sobre NBI para Guachucal. El promedio indígena nacional (67.6%) sugiere brechas significativas, pero no se puede cuantificar la situación local. La falta de información limita la planificación de políticas sociales diferenciadas.",
+  "conflicto": "Guachucal registra 23 víctimas de violencia entre 1985-2024, con desplazamiento forzado como hecho principal (8 casos, 34.8%). Los homicidios (5) y amenazas (4) completan el perfil de riesgo. La concentración de hechos en desplazamiento refleja dinámicas de despojo territorial en el resguardo Muellamuéz.",
+  "icv": "El ICV de Guachucal es 0.001, con conflicto como dimensión dominante (0.005). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.005), ubicando al municipio en una posición crítica. La baja puntuación refleja la urgencia de abordar la violencia estructural.",
+  "recomendaciones": [
+    "Priorizar la protección territorial del resguardo Muellamuéz ante el desplazamiento forzado, con 8 casos registrados (34.8% del total).",
+    "Implementar un sistema de registro lingüístico para documentar la vitalidad del pastos y otros pueblos, dado que no hay datos disponibles.",
+    "Diseñar políticas de salud con enfoque diferencial para pueblos minoritarios (Awa, Quillacinga), cuya población es inferior a 10 personas.",
+    "Incluir a Guachucal en programas de reparación colectiva por violencia, considerando los 23 casos registrados entre 1985-2024.",
+    "Generar un diagnóstico de NBI con desagregación étnica para superar la falta de datos y orientar inversiones sociales."
+  ]
+}

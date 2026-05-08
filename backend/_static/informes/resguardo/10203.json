@@ -1,0 +1,92 @@
+{
+  "tipo": "resguardo",
+  "id": "10203",
+  "nombre": "NUEVA BELLAVISTA Y PARTIDERO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 121,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 121,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "NUEVA BELLAVISTA Y PARTIDERO",
+      "dpto": "CAUCA",
+      "cod_dpto": "19",
+      "mpio": "GUAPI",
+      "cod_mpio": "19318",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "EPERARA SIA",
+      "organizacion_nacional": "CRIC",
+      "organizacion_regional": "CRIC",
+      "area_hectareas": 44.925
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        2.5471528980000357,
+        -77.79462002599996,
+        2.5536736990000577,
+        -77.78595390099997
+      ],
+      "area_hectareas": 44.925,
+      "macro": "OCCIDENTE",
+      "dpto": "CAUCA",
+      "mpio": "GUAPI"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T11:16:48",
+  "periodo": "2018",
+  "_input_hash": "08ca96f5334a8cf5"
+}

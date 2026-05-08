@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Caqueza registra una población indígena de solo 15 personas según CNPV 2018, concentrada en 7 pueblos. El Misak es el grupo mayoritario con 5 habitantes, seguido por Tikuna y Ette-E'Neka con 3 y 2 respectivamente. La ausencia de resguardos y datos de NBI o lengua limita el análisis integral del territorio, destacando la necesidad de fortalecer la presencia institucional indígena en este municipio.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que solo se cuenta con un total agregado de 15 personas indígenas sin desagregación por edad ni sexo. Esta limitación impide evaluar dinámicas generacionales o planificar políticas diferenciadas. Se requiere desagregar la información por cohortes etarias para identificar necesidades específicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Caqueza. La falta de registros impide evaluar el estado de salud de la población indígena, lo que dificulta la priorización de intervenciones sanitarias. Se recomienda implementar sistemas de monitoreo comunitario para subsanar este vacío.",
+  "territorial": "Caqueza carece de resguardos indígenas, lo que refleja una ausencia de reconocimiento territorial formal. La ausencia de territorios colectivos limita la autonomía y el ejercicio de derechos territoriales. La ubicación geográfica en coordenadas 4.330082819176844, -74.00353436303976 a 4.460543726512046, -73.86977953933769 sugiere dispersión sin base territorial consolidada.",
+  "lengua": "Los datos sobre lengua indígena en Caqueza no están disponibles. Esta omisión invisibiliza la diversidad lingüística y cultural de los pueblos presentes. Se requiere incluir indicadores de vitalidad lingüística en futuros censos para garantizar la preservación de las lenguas originarias.",
+  "vida": "No hay datos de NBI para Caqueza, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros territorios. Se debe priorizar la recolección de datos socioeconómicos para diseñar políticas que reduzcan brechas estructurales.",
+  "conflicto": "Caqueza reporta cero víctimas indígenas con discapacidad por conflicto entre 1985-2024. La ausencia de registros no necesariamente indica paz, sino posibles subregistros o falta de sistematización. Se requiere validar esta cifra con fuentes comunitarias para descartar omisiones en el RUV.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Caqueza es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Esta métrica refleja vacíos en el monitoreo territorial. Se debe fortalecer la recolección de datos para calcular indicadores confiables que guíen la acción pública.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en Caqueza para desagregar datos demográficos y socioeconómicos, dado que solo hay 15 personas registradas en CNPV 2018.",
+    "Solicitar a la Alcaldía Municipal y al DANE la inclusión de preguntas sobre lengua y NBI en futuras encuestas, para superar la falta de datos.",
+    "Promover el reconocimiento de resguardos indígenas en Caqueza, considerando que no existen territorios colectivos reconocidos.",
+    "Implementar un sistema de alerta temprana para víctimas de conflicto, dado que el RUV no registra casos pero podría haber subregistro.",
+    "Articular con el pueblo Misak (5 personas) para diseñar estrategias de revitalización cultural, aprovechando su presencia mayoritaria en el municipio."
+  ]
+}

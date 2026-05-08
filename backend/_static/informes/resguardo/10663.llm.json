@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo MERCADILLO, territorio del pueblo Pijao en el Tolima, concentra 27 habitantes en 71.42 hectáreas. La población, de reducido tamaño, enfrenta una afectación histórica por conflicto armado con 407 víctimas registradas entre 1985-2024. El desplazamiento forzado representa el 75.9% de los hechos victimizantes, evidenciando una crisis de desarraigo territorial y cultural.",
+  "demografia": "La población total del resguardo MERCADILLO es de 27 habitantes según datos DANE-CNPV 2018. Dada la reducida muestra (n=27), la pirámide etaria no es representativa para análisis detallados. Se requiere desagregación por grupos etarios para evaluar dinámicas generacionales y planificar estrategias de revitalización cultural.",
+  "prevalencia": "No se disponen datos de prevalencia de enfermedades o condiciones de salud para este resguardo. Los sistemas de información territorial no registran información específica a nivel de resguardo, limitando el análisis de necesidades sanitarias. Se recomienda priorizar la generación de datos locales para el pueblo Pijao.",
+  "territorial": "MERCADILLO ocupa 71.42 hectáreas en el municipio de Natagaima, Tolima. El territorio presenta una alta concentración en un área reducida, con límites geográficos definidos por coordenadas BBOX. La delimitación territorial es clave para la protección de los derechos colectivos y la autonomía del pueblo Pijao.",
+  "lengua": "No hay datos disponibles sobre lengua materna o uso de idioma tradicional en el resguardo. La revitalización lingüística del pueblo Pijao requiere información actualizada sobre la transmisión intergeneracional del idioma, actualmente en riesgo.",
+  "vida": "No se cuenta con datos de NBI para MERCADILLO. El promedio indígena nacional de NBI es 67.6%, lo que sugiere condiciones de pobreza estructural en territorios indígenas. La falta de información local impide evaluar brechas específicas en este resguardo.",
+  "conflicto": "Se registraron 407 víctimas de conflicto armado en MERCADILLO, con desplazamiento forzado como hecho principal (309 casos, 75.9%). La violencia sistemática ha generado despojo territorial y pérdida de autonomía, afectando la soberanía alimentaria y cultural del pueblo Pijao.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de MERCADILLO es 0.024, con componente de conflicto como dimensión dominante (0.081). El bajo puntaje refleja condiciones de vulnerabilidad extrema, donde el conflicto armado explica el 8.1% de la variación. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm subraya la urgencia de abordar la violencia estructural.",
+  "recomendaciones": [
+    "Priorizar la protección territorial con enfoque diferencial para el resguardo MERCADILLO, dado que el 75.9% de las víctimas son por desplazamiento forzado, citando el hecho principal del JSON.",
+    "Generar datos locales sobre lengua y NBI para el pueblo Pijao, reconociendo la ausencia actual de información en el JSON.",
+    "Implementar rutas de atención psicosocial para 407 víctimas de conflicto, con enfoque comunitario y cultural, usando la cifra total de víctimas del JSON.",
+    "Diseñar estrategias de revitalización cultural que incluyan diagnóstico lingüístico y pedagógico, ante la falta de datos en el JSON.",
+    "Fortalecer la articulación con la CRIT y ONIC para incidir en políticas de reparación integral que aborden el despojo territorial, vinculando el patrón de hechos victimizantes del JSON."
+  ]
+}

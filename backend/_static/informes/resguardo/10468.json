@@ -1,0 +1,124 @@
+{
+  "tipo": "resguardo",
+  "id": "10468",
+  "nombre": "COROCITO, YOPALITO Y GUALABO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1553,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 1553,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "COROCITO, YOPALITO Y GUALABO",
+      "dpto": "META",
+      "cod_dpto": "50",
+      "mpio": "PUERTO GAITÁN",
+      "cod_mpio": "50568",
+      "macro": "ORINOQUIA",
+      "pueblo_onic": "SIKUANI",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "UNUMA",
+      "area_hectareas": 9851.363
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        4.3243173540000726,
+        -72.01324942999997,
+        4.465313224000056,
+        -71.87147164199996
+      ],
+      "area_hectareas": 9851.363,
+      "macro": "ORINOQUIA",
+      "dpto": "META",
+      "mpio": "PUERTO GAITÁN"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 28,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 28,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 17
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 4
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 2
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 17
+      },
+      "pct_hecho_principal": 60.7
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.006
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:35:12",
+  "periodo": "2018",
+  "_input_hash": "e278e26432a755bf"
+}

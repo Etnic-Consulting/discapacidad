@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de SUSA reporta ausencia de población indígena registrada en el CNPV 2018, con datos demográficos no confiables (n=0). La falta de resguardos (0) y la inexistencia de registros en lenguas o NBI confirman una invisibilización estadística. La brecha con el promedio indígena nacional de NBI (67.6%) no puede calcularse por ausencia de datos locales.",
+  "demografia": "Los datos demográficos para SUSA no aplican al nivel municipal según el CNPV 2018, con población indígena total reportada como 0 y confiabilidad NO_CONFIABLE. No hay registros de pueblos indígenas en el municipio, lo que impide analizar la pirámide etaria o distribución poblacional. La ausencia de información refleja una limitación estructural en la recolección de datos territoriales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en SUSA. El campo `capacidades_diversas` está marcado sin datos, y el promedio indígena nacional (60.0%) no puede contrastarse localmente. La falta de registros impide evaluar subregistros o necesidades específicas en este municipio.",
+  "territorial": "SUSA no cuenta con resguardos indígenas registrados (0), a pesar de tener una delimitación geográfica definida (bbox). La ausencia de territorios colectivos contrasta con la presencia de límites municipales precisos. Esta situación refleja una desconexión entre la delimitación administrativa y la realidad territorial indígena.",
+  "lengua": "Los datos de lengua para SUSA no están disponibles. No hay registros de lenguas indígenas en el municipio, lo que impide analizar vitalidad cultural o pérdida lingüística. La falta de información lingüística limita la comprensión de la diversidad cultural en el territorio.",
+  "vida": "No hay datos de NBI para SUSA, lo que imposibilita evaluar condiciones de vida. El promedio indígena nacional de NBI (67.6%) no puede contrastarse con el municipio. La ausencia de información refleja una brecha en la medición de pobreza multidimensional en territorios sin población indígena registrada.",
+  "conflicto": "SUSA reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con confiabilidad CONFIABLE pero n=0. No hay hechos victimizantes registrados, lo que sugiere subregistro o ausencia de violencia documentada. La falta de datos impide analizar patrones de conflicto en el territorio.",
+  "icv": "El ICV de SUSA es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la ausencia de datos territoriales. Este resultado subraya la invisibilización estadística del municipio en indicadores de bienestar indígena.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal con enfoque diferencial para identificar población indígena no registrada, dado que los datos actuales (n=0) son NO_CONFIABLES.",
+    "Implementar un sistema de registro de resguardos y territorios colectivos en SUSA, donde actualmente no hay ninguno declarado.",
+    "Incluir módulos de lengua y cultura en encuestas municipales para visibilizar la diversidad étnica, actualmente sin datos.",
+    "Establecer un observatorio de conflicto territorial en Cundinamarca para monitorear situaciones no documentadas en SUSA.",
+    "Priorizar la inclusión de SUSA en programas de salud intercultural, ante la falta de datos sobre discapacidad y prevalencia."
+  ]
+}

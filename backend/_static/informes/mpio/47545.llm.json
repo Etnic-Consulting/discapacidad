@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pijiño del Carmen (Magdalena) concentra 28 personas indígenas según CNPV 2018, con el 67.9% (19) identificadas como pueblo WAYUU. La ausencia de resguardos y datos de lengua refleja vacíos en el reconocimiento territorial y cultural. El desplazamiento forzado afecta al 100% de las víctimas registradas (6 casos), destacando la vulnerabilidad en contexto de conflicto armado.",
+  "demografia": "La población indígena municipal suma 28 personas, con pirámide etaria concentrada en adultos (19 WAYUU). La dispersión poblacional (4 pueblos) y la predominancia wayuu (67.9%) sugieren migración reciente o movilidad transfronteriza. Los datos no permiten análisis etario detallado por n<30.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. Los registros de conflicto muestran 6 víctimas de desplazamiento forzado, pero sin desagregación por género o edad que permita evaluar sub-registros. Se requiere sistematización local para identificar patrones de afectación.",
+  "territorial": "El municipio carece de resguardos indígenas, pese a tener una extensión territorial definida por bbox. La ausencia de territorios colectivos contrasta con la presencia de 4 pueblos, sugiriendo debilidad en el reconocimiento legal. La ubicación geográfica (9.3°-9.7°N, -74.5°--73.8°W) ubica a Pijiño en zona de influencia de dinámicas de frontera.",
+  "lengua": "Los datos sobre lengua materna o uso de idiomas indígenas no están disponibles para este municipio. Esta omisión dificulta evaluar la vitalidad cultural y lingüística de los pueblos presentes, especialmente el WAYUU que representa el 67.9% de la población.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para este municipio. El promedio indígena nacional de NBI (67.6%) sirve como referencia, pero no permite calcular brechas específicas. La falta de datos limita la priorización de intervenciones en condiciones de vida.",
+  "conflicto": "El 100% de las víctimas indígenas registradas (6 casos) corresponden a desplazamiento forzado entre 1985-2024. Este patrón evidencia la exposición del territorio a dinámicas de violencia estructural, con afectación directa a la movilidad y seguridad alimentaria de las comunidades.",
+  "icv": "El Índice de Condiciones de Vida (ICV) municipal es 0.0, determinado por componentes normalizados en cero (NBI, prevalencia) y un valor mínimo en conflicto (0.001). Esta métrica refleja la extrema precariedad en dimensiones clave, agravada por la ausencia de resguardos y datos sociales.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para el pueblo WAYUU en Pijiño del Carmen, citando la concentración del 67.9% de la población indígena en este pueblo.",
+    "Implementar un sistema de registro local de lengua y cultura wayuu, dado que el 67.9% de la población se identifica con este pueblo y no hay datos disponibles.",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado, considerando que el 100% de los casos registrados corresponden a este hecho victimizante.",
+    "Articular con autoridades departamentales para incluir a Pijiño del Carmen en planes de desarrollo con enfoque diferencial, ante la ausencia de datos de NBI y capacidades diversas.",
+    "Fortalecer la recolección de datos desagregados por género y edad en registros de conflicto, dado que los 6 casos de víctimas no permiten análisis de sub-registros."
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "tipo": "mpio",
+  "id": "18460",
+  "nombre": "MILAN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2078,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 2078,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 9,
+      "top": [
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 2026
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 40
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "190",
+        "pueblo": "COREGUAJE",
+        "poblacion": 2026
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 7,
+      "resguardos": [
+        {
+          "nombre": "AGUA NEGRA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1996.245
+        },
+        {
+          "nombre": "HERICHA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1453.344
+        },
+        {
+          "nombre": "JÁCOME",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 899.656
+        },
+        {
+          "nombre": "MATICURÚ",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 450.92
+        },
+        {
+          "nombre": "GORGONIA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 426.717
+        },
+        {
+          "nombre": "SAN LUIS",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 328.749
+        },
+        {
+          "nombre": "GETUCHÁ",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 129.434
+        }
+      ],
+      "bbox": [
+        0.8907162547745484,
+        -75.56863513831047,
+        1.3604757811518224,
+        -75.18609705865993
+      ],
+      "nombre_mpio": "MILAN",
+      "cod_dpto": "18"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 85,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 85,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 54
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 16
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 7
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 5
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 54
+      },
+      "pct_hecho_principal": 63.5
+    },
+    "icv": {
+      "score": 0.005,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.017
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:43:41",
+  "periodo": "2018",
+  "_input_hash": "638eaf5f45ac20c2"
+}

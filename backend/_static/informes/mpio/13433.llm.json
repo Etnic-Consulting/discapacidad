@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Mahates (Bolívar) concentra una población indígena de 151 personas según CNPV 2018, donde el 84.8% (128) pertenece al pueblo Zenú. La ausencia de resguardos y la dispersión en 7 pueblos reflejan una presencia indígena minoritaria y fragmentada. El conflicto territorial se manifiesta principalmente en desplazamiento forzado, con 7 de 8 víctimas registradas en este hecho.",
+  "demografia": "La pirámide etaria en Mahates muestra una población indígena envejecida, con 128 Zenú (84.8%) como grupo dominante y solo 13 personas distribuidas en 6 pueblos minoritarios. La concentración demográfica en un solo pueblo contrasta con la diversidad étnica nominal. No hay datos de estructura etaria detallada que permitan análisis de vitalidad generacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Mahates. La falta de información impide evaluar el sub-registro de patologías en la población indígena local. Se requiere sistematización de registros sanitarios específicos para este municipio.",
+  "territorial": "Mahates registra 0 resguardos indígenas, a pesar de albergar 7 pueblos distintos. La ausencia de territorios colectivos formalizados limita el ejercicio de autonomía y protección territorial. La dispersión geográfica en un área de 10.035 a 10.300 latitud y -75.28 a -75.06 longitud refleja una presencia indígena sin anclaje territorial definido.",
+  "lengua": "Los datos sobre lengua indígena en Mahates no están disponibles. No es posible determinar la vitalidad de las lenguas tradicionales ni su uso en contextos cotidianos o educativos. La ausencia de registros lingüísticos limita la planificación cultural.",
+  "vida": "No hay datos específicos de NBI para Mahates. El promedio indígena nacional de 67.6% sugiere condiciones de pobreza estructural, pero no permite cuantificar la brecha en este municipio. Se requiere desagregación municipal para evaluar necesidades básicas insatisfechas.",
+  "conflicto": "Mahates registra 8 víctimas de conflicto con discapacidad entre 1985-2024, donde el 87.5% (7 casos) corresponde a desplazamiento forzado. Este patrón evidencia la vulnerabilidad territorial del pueblo Zenú, principal afectado. La baja n (8) exige cautela interpretativa, aunque el hecho principal es claro.",
+  "icv": "Mahates presenta un ICV de 0.0, con componentes en cero excepto conflicto (0.002). La fórmula pondera NBI, prevalencia y conflicto, reflejando condiciones críticas en todos los ejes. La posición relativa frente a otros municipios indígenas requiere datos comparativos para contextualizar este resultado.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena en Mahates para garantizar protección territorial, dado que no existen territorios colectivos formalizados y el 84.8% de la población es Zenú.",
+    "Implementar un sistema de registro de lengua indígena en Mahates para documentar la vitalidad cultural, ante la ausencia de datos lingüísticos.",
+    "Diseñar un programa de atención psicosocial para víctimas de desplazamiento forzado, que atienda al 87.5% de los casos registrados en el municipio.",
+    "Realizar un diagnóstico de NBI desagregado para Mahates, comparando con el promedio indígena nacional de 67.6% y priorizando intervenciones.",
+    "Fortalecer la articulación entre el pueblo Zenú y las instituciones locales para visibilizar su presencia y demandas, ante la fragmentación demográfica en 7 pueblos distintos."
+  ]
+}

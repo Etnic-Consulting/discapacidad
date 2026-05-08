@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Napipí, territorio Emberá Eyabida - Emberá Katío en Bojayá (Chocó), alberga 223 habitantes en 21.910 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando una condición crítica en dimensiones como NBI, prevalencia y conflicto. La ausencia de datos en capacidades diversas y NBI limita un diagnóstico integral, pero su vulnerabilidad estructural es evidente.",
+  "demografia": "La población de 223 habitantes presenta una pirámide etaria no detallada en los datos. La fuente DANE-CNPV 2018, con confiabilidad CONFIABLE y n=223, no permite análisis de estructura por edad o género. Se requiere desagregación para evaluar dinámicas generacionales y planificar servicios básicos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Napipí. Los registros del RUV no reportan víctimas con discapacidad (n=0), lo que sugiere sub-registro o falta de sistematización. La confiabilidad es CONFIABLE, pero la ausencia de información impide análisis de salud pública.",
+  "territorial": "Napipí ocupa 21.910 hectáreas en Bojayá, Chocó, con coordenadas que delimitan su territorio en la macro región Occidente. Es un resguardo disperso en una zona de alta biodiversidad y conflicto histórico. La concentración geográfica no refleja densidad poblacional, sino extensión territorial colectiva.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del Emberá Eyabida o Emberá Katío en el territorio. Se requiere investigación etnográfica para documentar prácticas culturales y transmisión intergeneracional.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para Napipí. El promedio indígena nacional es 67.6%, pero su brecha no puede calcularse sin información local. La falta de datos impide evaluar pobreza multidimensional o acceso a servicios esenciales en el resguardo.",
+  "conflicto": "No se registran víctimas con discapacidad en Napipí entre 1985-2024 (n=0), según RUV. La confiabilidad es CONFIABLE, pero la ausencia de hechos violentos no descarta afectaciones indirectas. Se requiere análisis cualitativo para identificar patrones de violencia estructural no capturados en bases de datos.",
+  "icv": "El ICV de Napipí es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia, conflicto). La fórmula (0.4*NBI + 0.3*prev + 0.3*conflicto) refleja una condición de extrema vulnerabilidad. Este resultado posiciona al resguardo en el nivel más bajo de bienestar, exigiendo intervenciones urgentes.",
+  "recomendaciones": [
+    "Realizar un censo etnográfico en Napipí para actualizar datos demográficos y lingüísticos, citando la población total de 223 habitantes.",
+    "Implementar un sistema de registro de salud comunitario para documentar prevalencia de enfermedades, dado que el RUV reporta 0 víctimas con discapacidad.",
+    "Diseñar un plan de emergencia para garantizar acceso a agua potable y saneamiento, considerando la extensión territorial de 21.910 hectáreas.",
+    "Promover la revitalización cultural del Emberá Eyabida y Emberá Katío mediante talleres de transmisión lingüística, ante la falta de datos sobre lengua.",
+    "Solicitar al DANE y al Ministerio de Salud un análisis desagregado de NBI para resguardos, ya que el promedio indígena nacional es 67.6% pero no hay datos locales."
+  ]
+}

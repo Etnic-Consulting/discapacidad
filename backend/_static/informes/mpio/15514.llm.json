@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Páez (Cauca) presenta un vacío crítico en datos indígenas a nivel local según el CNPV 2018. La población total indígena reportada es cero, lo que refleja una falla en la recolección de información o exclusión sistemática de los pueblos en este territorio. Esta ausencia de datos impide evaluar la situación real de los pueblos Nasa, Kokonuko y otros grupos presentes en la zona.",
+  "demografia": "Los datos demográficos para población indígena en Páez no están disponibles (n=0, confiabilidad NO_CONFIABLE). No es posible analizar la pirámide etaria ni su estructura por falta de registros. Esta omisión limita la planificación de políticas públicas para los pueblos originarios en el municipio.",
+  "prevalencia": "No hay datos de prevalencia de condiciones de salud o discapacidad para población indígena en Páez. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. La ausencia de información impide identificar necesidades específicas en salud y discapacidad.",
+  "territorial": "Páez cuenta con 0 resguardos indígenas registrados oficialmente, pese a ser un territorio históricamente habitado por pueblos Nasa. La bbox geográfica del municipio (4.974758154796242, -73.11275178384801 a 5.214520657110614, -72.90382123387047) no incluye territorios colectivos reconocidos.",
+  "lengua": "Los datos sobre lenguas indígenas en Páez no están disponibles. No se puede analizar la vitalidad lingüística ni la presencia de idiomas originarios como el Nasa Yuwe en este territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para población indígena en Páez. El promedio indígena nacional de 67.6% no puede compararse localmente. Esta falta de datos invisibiliza las condiciones de pobreza en el municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Páez entre 1985-2024 (n=0, confiabilidad CONFIABLE). No hay hechos victimizantes reportados. La ausencia de datos no implica ausencia de conflicto, sino fallas en el sistema de registro.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Páez es 0.0, derivado de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no refleja la realidad por ausencia de insumos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para corregir la subrepresentación en el CNPV 2018 y registrar 0 resguardos actuales.",
+    "Implementar un sistema de registro de víctimas indígenas con discapacidad en Páez para superar la omisión en el RUV (n=0 casos reportados).",
+    "Incluir indicadores de lengua Nasa Yuwe en el SMT-ONIC para evaluar vitalidad cultural en un territorio históricamente indígena.",
+    "Articular con el resguardo Nasa de Tierradentro para mapear territorios colectivos no reconocidos oficialmente en la bbox municipal.",
+    "Priorizar la recolección de datos de NBI y prevalencia en salud para pueblos indígenas en Páez, comparando con el promedio nacional de 67.6%."
+  ]
+}

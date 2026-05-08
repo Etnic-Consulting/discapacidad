@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Santa Sofía, territorio del pueblo Magüta-Pöguta en el Amazonas, alberga 828 habitantes según datos DANE-CNPV 2018. Con 3.033 hectáreas, su ubicación en Leticia refleja una concentración territorial en la Amazonía colombiana. La ausencia de datos sobre discapacidad, NBI y lengua limita el análisis integral, aunque su ICV de 0.0 evidencia carencias estructurales en dimensiones clave.",
+  "demografia": "La población total de 828 habitantes presenta una pirámide etaria no disponible en los datos. La confiabilidad de la cifra (n=828) permite contextualizar su tamaño como resguardo, pero la falta de desagregación por edad impide analizar dinámicas generacionales. Se reconoce la limitación interpretativa por ausencia de datos etarios.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección correspondiente no fue reportada, lo que imposibilita evaluar necesidades sanitarias específicas. Se destaca la necesidad de registros locales para identificar prioridades en salud pública indígena.",
+  "territorial": "El resguardo ocupa 3.033 hectáreas en Leticia, con coordenadas que definen su territorio en la Amazonía. Su área reducida (3.033 ha) contrasta con la extensión de otros resguardos amazónicos, sugiriendo alta presión sobre tierras colectivas. La dispersión geográfica es mínima al ser un territorio único.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se reporta información sobre uso de la lengua Magüta-Pöguta u otras, lo que impide evaluar vitalidad cultural lingüística. Se reconoce la ausencia de registros como limitación crítica.",
+  "vida": "No hay datos sobre NBI en el resguardo, aunque el promedio indígena nacional es 67.6%. La falta de información local impide comparar condiciones de vida con otros territorios. Se requiere sistematización de indicadores sociales para priorizar intervenciones.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024 (n=0). La ausencia de hechos violentos reportados sugiere baja visibilidad en el RUV, aunque podría reflejar subregistro. Se recomienda fortalecer mecanismos de denuncia en territorios amazónicos.",
+  "icv": "El ICV del resguardo es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja carencias multidimensionales. Su posición relativa es crítica frente a otros territorios indígenas.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de discapacidad y salud con enfoque diferencial, priorizando pueblos amazónicos como el Magüta-Pöguta, dado que los datos nacionales no desagregan a nivel de resguardo (promedio indígena nacional 67.6% NBI).",
+    "Realizar un censo lingüístico en el resguardo para documentar la vitalidad del Magüta-Pöguta, considerando la ausencia de datos en la sección correspondiente.",
+    "Diseñar un plan de protección territorial para resguardos amazónicos con menos de 5.000 ha, como Santa Sofía (3.033 ha), ante presiones extractivas.",
+    "Fortalecer la articulación con ACITAM para visibilizar conflictos no registrados en el RUV, especialmente en zonas con n=0 víctimas reportadas.",
+    "Priorizar inversiones en infraestructura básica (agua, salud) en el resguardo, dado su ICV de 0.0 y la falta de datos en NBI y prevalencia."
+  ]
+}

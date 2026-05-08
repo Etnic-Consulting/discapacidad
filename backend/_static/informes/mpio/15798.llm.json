@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Tenza, municipio del departamento de Boyacá, reporta una población indígena de 5 personas según el CNPV 2018, concentrada en el pueblo Zenú. La ausencia de resguardos y datos de lengua refleja una presencia indígena mínima y dispersa. El ICV de 0.0 evidencia condiciones críticas en dimensiones socioeconómicas y de conflicto, aunque con limitaciones en la representatividad estadística por el bajo tamaño muestral.",
+  "demografia": "La pirámide etaria no aplica para este nivel de agregación municipal. Los datos demográficos disponibles solo permiten identificar 5 personas del pueblo Zenú, sin estructura etaria discernible. La confiabilidad de estos datos es alta (n=5), pero su utilidad para análisis poblacional es limitada.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este municipio. Los indicadores de salud y bienestar no fueron registrados en las fuentes consultadas. Esta ausencia impide evaluar condiciones de salud específicas, subrayando la necesidad de sistemas de información más robustos a nivel local.",
+  "territorial": "Tenza carece de resguardos indígenas, lo que indica una ausencia de reconocimiento territorial formal. La caja geográfica delimitada (5.037°N a 5.122°N; -73.480°O a -73.384°O) no contiene territorios colectivos. La dispersión geográfica de la población indígena contrasta con la falta de estructuras territoriales propias.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se registran lenguas indígenas en uso dentro del territorio, lo que puede reflejar asimilación cultural o falta de registros sistemáticos. Esta ausencia impide evaluar la vitalidad lingüística de los pueblos presentes.",
+  "vida": "No se reportan datos de NBI para Tenza. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de información sobre necesidades básicas invisibiliza las condiciones de vida de la población indígena, limitando la planificación territorial.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Tenza entre 1985-2024. El valor cero (n=0) refleja ausencia de registros, no necesariamente paz social. La confiabilidad es alta, pero la falta de hechos reportados dificulta un análisis de vulnerabilidad territorial.",
+  "icv": "El ICV de 0.0 en Tenza refleja condiciones críticas en las tres dimensiones (NBI, prevalencia y conflicto). La fórmula ponderada (0.4*NBI + 0.3*prev + 0.3*conflicto) arroja un puntaje mínimo, indicando urgencia en intervenciones integrales. La falta de datos normalizados limita comparaciones.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que la población actual (5 personas) no permite análisis confiables.",
+    "Implementar un sistema de monitoreo de lengua y cultura en Tenza para registrar la vitalidad del pueblo Zenú, ante la ausencia de datos en esta sección.",
+    "Priorizar la creación de un resguardo indígena en Tenza, considerando la ausencia de territorios colectivos y la necesidad de protección legal.",
+    "Incluir a Tenza en programas de salud intercultural, ante la falta de datos de prevalencia y NBI que impiden identificar necesidades específicas.",
+    "Establecer un observatorio municipal de conflicto para documentar situaciones de violencia, dado que los registros históricos (1985-2024) no reportan víctimas."
+  ]
+}

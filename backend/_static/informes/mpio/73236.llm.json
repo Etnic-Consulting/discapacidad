@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Dolores (Tolima) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Arhuaco. Este dato refleja una presencia mínima y dispersa, sin resguardos reconocidos en su territorio. La lectura clave evidencia la casi inexistencia de población indígena organizada en el municipio, limitando la acción colectiva y la incidencia territorial.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la n=1 registrada. La población indígena de Dolores es un caso atípico que no permite análisis demográfico tradicional. La única persona identificada como Arhuaco no configura una estructura poblacional representativa para el municipio.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. No es posible analizar condiciones de salud o discapacidad con la información existente. El sub-registro es total, impidiendo cualquier lectura sobre vulnerabilidades específicas en la población indígena local.",
+  "territorial": "Dolores no cuenta con resguardos indígenas reconocidos, a pesar de tener un territorio municipal definido con coordenadas geográficas específicas. La ausencia de resguardos (n=0) sugiere una desconexión entre la presencia indígena y la institucionalidad territorial en el municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística de la población indígena en Dolores con la información proporcionada.",
+  "vida": "Los datos de NBI no están disponibles para este municipio. No se puede calcular la brecha con el promedio indígena nacional (67.6%) ni analizar las condiciones de vida de la población Arhuaco en Dolores. La falta de información impide cualquier diagnóstico social.",
+  "conflicto": "Se registran 16 víctimas indígenas con discapacidad en Dolores entre 1985-2024, siendo el desplazamiento forzado el hecho victimizante principal con 11 casos (68.8%). Este patrón refleja la violencia histórica en la región, afectando directamente a la población Arhuaco en el municipio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Dolores es de 0.001, con componentes normalizados en cero excepto conflicto (0.003). Este valor extremo refleja la ausencia de datos en NBI y prevalencia, donde solo el conflicto aporta al cálculo. La posición relativa es crítica y subraya la falta de información para una evaluación real.",
+  "recomendaciones": [
+    "Realizar un censo indígena específico en Dolores para actualizar datos demográficos y territoriales, dado que la cifra actual (n=1) no refleja la realidad del pueblo Arhuaco en el municipio.",
+    "Implementar un sistema de registro de víctimas indígenas en Dolores con enfoque diferencial, priorizando el desplazamiento forzado que concentra el 68.8% de los casos registrados.",
+    "Establecer mesas de diálogo con el pueblo Arhuaco para identificar territorios ancestrales no reconocidos como resguardos en Dolores, considerando la ausencia actual (n=0).",
+    "Incluir a Dolores en los planes regionales de protección de pueblos indígenas, dada su ubicación en una zona históricamente afectada por conflicto (16 víctimas registradas).",
+    "Diseñar estrategias de revitalización cultural para el pueblo Arhuaco en Dolores, considerando la falta de datos sobre lengua y la necesidad de fortalecer su identidad en un contexto de casi inexistencia institucional."
+  ]
+}

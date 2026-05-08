@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Piguambí Palangala, territorio ancestral del pueblo Awá en Nariño, alberga una población total de 104 habitantes según datos DANE-CNPV 2018. Con una extensión de 490.715 hectáreas en el municipio de San Andrés de Tumaco, este territorio enfrenta desafíos estructurales en capacidades diversas y condiciones de vida. La ausencia de datos sobre discapacidad y NBI impide evaluar plenamente su situación socioeconómica, aunque el ICV nulo (0.0) refleja graves carencias en dimensiones clave.",
+  "demografia": "La población total del resguardo es de 104 habitantes según DANE-CNPV 2018. No se dispone de datos sobre pirámide etaria ni estructura por edades en este nivel territorial. La población es reducida, lo que limita el análisis demográfico detallado y requiere cruces con fuentes complementarias para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La falta de información impide analizar patrones de morbilidad o acceso a servicios médicos. Se recomienda priorizar la sistematización de registros locales para superar el sub-registro en salud pública.",
+  "territorial": "El resguardo Piguambí Palangala tiene una extensión de 490.715 hectáreas en el municipio de San Andrés de Tumaco, Nariño. Su ubicación en la macro región Occidente lo sitúa en un contexto de alta presión territorial por actores armados y proyectos extractivos. La delimitación geográfica precisa (bbox) facilita la planificación de acciones de protección territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del idioma Awá en el territorio, lo que limita la planificación de estrategias de revitalización cultural y educativa.",
+  "vida": "No hay datos sobre NBI para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar debido a la ausencia de información local. Esta brecha evidencia la necesidad de fortalecer sistemas de monitoreo comunitario para documentar condiciones de vida.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo Piguambí Palangala entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja visibilidad en el RUV, aunque no necesariamente ausencia de afectaciones. Se requiere validación con fuentes comunitarias para confirmar esta situación.",
+  "icv": "El Índice de Condiciones Vitales (ICV) del resguardo es 0.0, con componentes nulos en NBI, prevalencia y conflicto. Esta puntuación refleja la falta de datos sistematizados más que una evaluación real de las condiciones de vida. La fórmula del ICV no puede aplicarse adecuadamente sin información confiable.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de discapacidad y NBI para superar la ausencia de datos y permitir comparaciones con el promedio indígena nacional 67.6%",
+    "Priorizar la recolección de datos sobre lengua Awá en el resguardo para diseñar estrategias de revitalización cultural basadas en evidencia",
+    "Fortalecer la articulación con UNIPA para monitorear la presión territorial en el resguardo, dada su extensión de 490.715 hectáreas en zona de alta conflictividad",
+    "Validar con líderes Awá la ausencia de víctimas en el RUV, considerando posibles subregistros en sistemas oficiales",
+    "Incluir al resguardo en planes de salud pública diferenciada para abordar la falta de datos sobre prevalencia de enfermedades"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Andes (Antioquia) concentra 248 personas indígenas según CNPV 2018, con el 75.4% pertenecientes a los pueblos Emberá Eyábida y Emberá Katío. El territorio colectivo Cristianía (1,121.19 ha) es el único resguardo registrado, evidenciando alta concentración espacial. El conflicto armado impacta con 12 víctimas, donde el 83.3% corresponde a desplazamiento forzado, señalando vulnerabilidad territorial persistente.",
+  "demografia": "La población indígena en Andes suma 248 personas, con pirámide etaria concentrada en adultos jóvenes (95 Emberá Eyábida y 90 Emberá Katío). La diversidad cultural se refleja en 8 pueblos identificados, aunque 4 de ellos tienen menos de 5 personas. La baja representatividad de grupos como Nasa o Arhuaco (1 persona cada uno) sugiere fragmentación demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este nivel municipal. La ausencia de información limita el análisis de necesidades sanitarias específicas. Se requiere cruce con registros departamentales para estimar subregistros en patologías crónicas o emergentes.",
+  "territorial": "Existe un único resguardo (Cristianía) con 1,121.19 ha, lo que refleja alta concentración territorial y posible presión sobre recursos. La bbox geográfica delimita un área de 5.48°N a 5.78°N y -76.07°O a -75.81°O, sugiriendo dispersión limitada. La concentración en un solo territorio contrasta con la diversidad étnica local.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Esta omisión impide evaluar la vitalidad lingüística de los pueblos Emberá presentes. Se recomienda priorizar levantamientos etnográficos para documentar usos y transmisión de lenguas en el territorio.",
+  "vida": "No hay datos de NBI disponibles para Andes, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas en pobreza multidimensional. Se sugiere usar proxies departamentales o encuestas locales para estimar necesidades básicas insatisfechas.",
+  "conflicto": "Se registraron 12 víctimas de conflicto armado (1985-2024), con desplazamiento forzado como hecho principal (83.3%). El homicidio y pérdida de bienes completan el patrón de violencia. La concentración en un solo resguardo expone a la población a riesgos territoriales específicos.",
+  "icv": "El ICV municipal es 0.001, con componentes normalizados en cero excepto conflicto (0.002). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), destacando este último como dimensión dominante. La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Priorizar la delimitación y protección del resguardo Cristianía, garantizando seguridad territorial frente a actores armados (12 víctimas, 83.3% desplazamiento).",
+    "Realizar censo lingüístico para documentar uso de lenguas Emberá Eyábida y Katío, dado el vacío en datos (n_pueblos=8, pero lengua sin registros).",
+    "Implementar rutas de atención psicosocial para víctimas de conflicto, focalizando en desplazamiento forzado (10 casos reportados).",
+    "Diseñar programas de soberanía alimentaria en Cristianía (1,121.19 ha), considerando la alta concentración territorial y presión sobre recursos.",
+    "Articular con el departamento de Antioquia para acceder a datos de NBI y salud, dado que Andes carece de información local (promedio indígena nacional NBI=67.6%)."
+  ]
+}

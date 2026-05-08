@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de La Montañita alberga 146 personas indígenas según el CNPV 2018, distribuidas en 11 pueblos. El 31.5% corresponde al pueblo EMBERA-CHAMI, principal grupo étnico en el territorio. La concentración poblacional en un solo resguardo (123.478 ha) refleja una alta presión sobre el territorio colectivo, agravada por 75 víctimas de violencia armada entre 1985-2024.",
+  "demografia": "La pirámide etaria muestra una población joven con 46 EMBERA-CHAMI (31.5%) como grupo dominante. Los datos no permiten análisis de razones de crecimiento o envejecimiento por limitaciones metodológicas. La diversidad de 11 pueblos en un territorio reducido sugiere dinámicas migratorias internas y presión demográfica sobre recursos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este nivel territorial. La falta de información impide evaluar subregistros o necesidades específicas. Se requiere priorizar sistemas de monitoreo local para pueblos como MURUI (25.3%) y PIJAO (16.4%).",
+  "territorial": "Existe un único resguardo (EL CEDRITO) con 123.478 ha, ocupado por EMBERA EYABIDA y EMBERA KATÍO. La baja diversidad territorial (1 resguardo) limita la autonomía alimentaria y cultural. La dispersión geográfica en la bbox (-75.48 a -74.89) dificulta la conectividad entre comunidades.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. Reconocemos la necesidad de registrar lenguas como el embera-chami (46 personas) y murui (37 personas) para fortalecer la revitalización cultural y la educación propia.",
+  "vida": "No hay datos de NBI disponibles para este municipio. El promedio indígena nacional (67.6%) sirve como referencia para futuras mediciones. La ausencia de información impide evaluar brechas en acceso a servicios básicos para los 146 habitantes indígenas.",
+  "conflicto": "Se registraron 75 víctimas de violencia armada, con desplazamiento forzado como principal hecho (60%). Los 45 casos de desplazamiento (60% del total) evidencian una crisis humanitaria persistente. La vulnerabilidad se agrava por la concentración territorial en un solo resguardo.",
+  "icv": "El ICV de 0.004 refleja condiciones críticas, donde el componente de conflicto (0.015) es el principal determinante. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm prioriza la dimensión de violencia sobre otras necesidades estructurales.",
+  "recomendaciones": [
+    "Implementar un sistema de alerta temprana para pueblos EMBERA-CHAMI y MURUI, dado que concentran el 56.8% de la población y son los más afectados por desplazamiento forzado (45 casos).",
+    "Diseñar un plan de ordenamiento territorial que considere la ampliación del resguardo EL CEDRITO para garantizar autonomía alimentaria y cultural de los 11 pueblos presentes.",
+    "Priorizar la recolección de datos de NBI y lengua en el próximo CNPV para evaluar brechas con el promedio indígena nacional (67.6%).",
+    "Fortalecer la Guardia Indígena en La Montañita para proteger a las 146 personas indígenas de hechos violentos como amenazas (9 casos) y homicidios (6 casos).",
+    "Establecer un fondo de emergencia para víctimas de desplazamiento forzado, considerando que el 60% de los casos (45) corresponden a este municipio."
+  ]
+}

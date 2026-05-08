@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Concordia reporta una población indígena de 13 personas según CNPV 2018, distribuidas en 5 pueblos. El 38.5% (5 personas) corresponde a indígenas venezolanos, seguido por el pueblo Wayúu con 4 personas (30.8%). No se registran resguardos en el municipio. Los indicadores de NBI y lengua no están disponibles a este nivel. La ausencia de datos territoriales y socioeconómicos limita el análisis de brechas.",
+  "demografia": "La población indígena de Concordia presenta una estructura dispersa con 5 pueblos representados. El 38.5% (5 personas) son indígenas venezolanos, seguido por el 30.8% (4 personas) Wayúu. El resto se distribuye entre Ette-E'Neka (2 personas), Arhuaco (1 persona) e indígenas sin información (1 persona). La baja población total (13 personas) impide análisis de pirámide etaria confiables.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Concordia. La sección se encuentra sin información, lo que impide evaluar subregistros o prioridades sanitarias. Se recomienda fortalecer sistemas de registro municipal para pueblos indígenas.",
+  "territorial": "Concordia no cuenta con resguardos indígenas registrados. El municipio presenta una caja de límites geográficos definida, pero sin presencia territorial colectiva reconocida. La ausencia de resguardos contrasta con la presencia de pueblos indígenas, sugiriendo patrones de asentamiento disperso o migración reciente.",
+  "lengua": "Los datos sobre lengua indígena en Concordia no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas nativas entre la población indígena registrada.",
+  "vida": "No hay información sobre NBI para Concordia. El promedio indígena nacional de NBI es 67.6%, pero no se puede calcular la brecha local. La falta de datos impide evaluar condiciones de vida o acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Concordia entre 1985-2024. El indicador de víctimas_total_disc reporta 0 casos, lo que puede reflejar subregistro o baja incidencia. Se requiere validar esta información con fuentes locales.",
+  "icv": "El ICV de Concordia es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de información disponible.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal para actualizar datos demográficos y territoriales, citando la población actual de 13 personas.",
+    "Implementar sistema de registro de NBI y lengua a nivel municipal, considerando el promedio indígena nacional de 67.6%.",
+    "Identificar patrones de asentamiento y migración de pueblos indígenas en Concordia, dado que el 38.5% son indígenas venezolanos.",
+    "Validar datos de conflicto con actores locales, ya que el indicador víctimas_total_disc reporta 0 casos.",
+    "Diseñar políticas de atención diferenciada para pueblos indígenas dispersos, considerando la diversidad de 5 pueblos representados."
+  ]
+}

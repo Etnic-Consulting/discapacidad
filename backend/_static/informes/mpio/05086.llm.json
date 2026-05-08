@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Belmira (Antioquia) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Zenú. La ausencia de resguardos (n=0) y datos territoriales refleja una debilidad organizativa local. La vulnerabilidad se evidencia en un ICV de 0.0, donde todas las dimensiones normativas alcanzan valores nulos, señalando una condición crítica de exclusión histórica.",
+  "demografia": "La pirámide etaria no aplica en este nivel municipal debido a la población total de 1 individuo. Los datos demográficos a este nivel no permiten análisis comparativos ni desagregaciones confiables. La concentración en un solo pueblo (Zenú) limita la diversidad cultural dentro del territorio.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información sobre condiciones de salud o discapacidad impide evaluar brechas específicas. Se requiere priorizar la generación de datos locales para identificar necesidades urgentes en la población indígena existente.",
+  "territorial": "Belmira no cuenta con resguardos indígenas (n=0), lo que contrasta con su bbox municipal que abarca coordenadas geográficas definidas. La ausencia de territorios colectivos limita la autonomía y protección legal del pueblo Zenú en este espacio. La dispersión geográfica no aplica al ser un único municipio sin resguardos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística del pueblo Zenú en Belmira. La falta de registros impide evaluar la transmisión intergeneracional de la lengua ancestral.",
+  "vida": "Los datos de NBI no están disponibles a nivel municipal. El promedio indígena nacional de 67.6% sugiere una brecha crítica no cuantificable aquí. La ausencia de información sobre condiciones de vida invisibiliza las necesidades básicas insatisfechas de la población indígena local.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Belmira (n=0) entre 1985-2024. La ausencia de hechos victimizantes no implica ausencia de riesgo, sino falta de sistematización de datos. Se requiere fortalecer el RUV local para garantizar protección efectiva.",
+  "icv": "El ICV de 0.0 en Belmira refleja un colapso multidimensional: NBI (0.0), prevalencia (0.0) y conflicto (0.0). Este resultado ubica al municipio en la peor posición relativa posible. La fórmula ponderada (40% NBI, 30% prevalencia, 30% conflicto) confirma una crisis integral de derechos.",
+  "recomendaciones": [
+    "Registrar formalmente al pueblo Zenú en Belmira ante el CNPV 2024 para visibilizar su presencia y garantizar acceso a derechos territoriales (población=1).",
+    "Crear un sistema local de recolección de datos sobre NBI, lengua y salud para superar la ausencia de información (NBI y lengua sin datos).",
+    "Priorizar la constitución de un resguardo indígena en Belmira, articulado con la ONIC, para proteger el territorio del pueblo Zenú (n_resguardos=0).",
+    "Implementar un protocolo de prevención de violencia y registro en el RUV municipal, dado el ICV crítico (score=0.0).",
+    "Diseñar un plan de revitalización cultural para el pueblo Zenú en Belmira, incluyendo lengua y tradiciones (datos de lengua no disponibles)."
+  ]
+}

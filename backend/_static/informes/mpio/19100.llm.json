@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Bolívar (Cauca) concentra el 98.5% de su población indígena en el pueblo Yanacona (2,534 personas). Con 16 pueblos registrados, su diversidad étnica contrasta con una alta vulnerabilidad: 147 víctimas de conflicto armado en 40 años, donde el desplazamiento forzado representa el 62.6% de los hechos. La concentración territorial en el resguardo San Juan (225.26 ha) y un ICV de 0.009 reflejan condiciones críticas en un contexto de violencia histórica.",
+  "demografia": "La población indígena de Bolívar es predominantemente joven, con el 98.5% perteneciente al pueblo Yanacona (2,534 personas). Los 16 pueblos restantes suman solo 39 habitantes, evidenciando una alta homogeneidad étnica. La pirámide etaria no puede analizarse con los datos disponibles, que solo desagregan por pueblo sin rangos de edad.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud para este municipio. La sección no aplica al nivel de análisis territorial, limitando la interpretación de indicadores sanitarios. Se requiere desagregación por pueblo para evaluar subregistros en comunidades específicas.",
+  "territorial": "Bolívar alberga 1 resguardo (San Juan) con 225.26 ha, ocupado mayoritariamente por el pueblo Yanacona. La dispersión geográfica es mínima, concentrada en un territorio delimitado. La bounding box (1.64°N, -77.13°O a 2.11°N, -76.81°O) confirma su ubicación en zona montañosa del Cauca.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo en la población Yanacona u otros pueblos.",
+  "vida": "No hay datos de NBI para Bolívar. El promedio indígena nacional (67.6%) no puede compararse localmente. La sección carece de información para evaluar brechas en condiciones de vida, acceso a servicios básicos o pobreza multidimensional.",
+  "conflicto": "Bolívar registra 147 víctimas de conflicto armado (1985-2024), con desplazamiento forzado como principal hecho (92 casos, 62.6%). Le siguen amenazas (24) y homicidios (16). La alta concentración de hechos en desplazamiento refleja patrones de violencia estructural contra el pueblo Yanacona en su territorio.",
+  "icv": "El ICV de Bolívar es 0.009, con conflicto como dimensión dominante (0.029). Los componentes NBI y prevalencia registran 0.0, sugiriendo subregistro o metodologías no aplicables. La fórmula pondera conflicto en un 30%, reflejando su impacto crítico en la calidad de vida indígena.",
+  "recomendaciones": [
+    "Priorizar la protección del resguardo San Juan ante el desplazamiento forzado, que afecta al 62.6% de las víctimas registradas en Bolívar. Se requiere intervención urgente con enfoque diferencial para el pueblo Yanacona.",
+    "Generar datos desagregados por pueblo y rangos de edad para analizar la pirámide etaria y diseñar políticas de salud y educación culturalmente pertinentes.",
+    "Implementar un sistema de alertas tempranas para el pueblo Yanacona, dado su alto riesgo de victimización (147 casos en 40 años).",
+    "Incluir a Bolívar en planes departamentales de restitución de tierras, considerando su único resguardo (225.26 ha) como área prioritaria de intervención.",
+    "Solicitar a la CNPV 2028 desagregación de lenguas indígenas en Bolívar para evaluar la vitalidad del Yanacona y otros pueblos minoritarios."
+  ]
+}

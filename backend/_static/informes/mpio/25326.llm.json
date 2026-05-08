@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guatavita registra una población indígena de 6 personas según CNPV 2018, concentrada en un solo pueblo sin identificación específica. El municipio carece de resguardos y presenta datos limitados en capacidades diversas, lengua y NBI. La ausencia de registros en conflicto y un ICV de 0.0 reflejan vacíos críticos en la información territorial indígena.",
+  "demografia": "La pirámide etaria no puede analizarse al no contar con datos desagregados por edad. La población total indígena asciende a 6 personas, según CNPV 2018. La falta de información sobre grupos etarios impide evaluar dinámicas generacionales o vulnerabilidades específicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros de discapacidad no existen a nivel municipal, según la nota técnica. Esta limitación impide cualquier análisis de sub-registro o necesidades sanitarias prioritarias.",
+  "territorial": "Guatavita no cuenta con resguardos indígenas registrados, a pesar de tener una extensión territorial definida por coordenadas geográficas. La ausencia de territorios colectivos contrasta con la presencia de población indígena identificada. Esta situación refleja posibles vacíos en la titulación o reconocimiento legal.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en la población registrada.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Guatavita. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede contrastarse localmente. La falta de registros impide evaluar brechas en condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Guatavita entre 1985 y 2024. El hecho principal de conflicto es inexistente según el RUV. Esta ausencia de datos no necesariamente indica paz, sino posibles limitaciones en el registro o subnotificación.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Guatavita es 0.0, derivado de componentes normalizados en cero. Las dimensiones de NBI, prevalencia y conflicto aportan igualmente a este resultado. Este valor refleja la carencia de datos más que una evaluación real de condiciones de vida.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por edad, género y pueblo para superar la categoría 'INDIGENA-SIN-INFORMACION' y contar con 6 datos confiables.",
+    "Priorizar la identificación y titulación de territorios colectivos en Guatavita, donde actualmente no existen resguardos registrados.",
+    "Implementar un sistema de registro de discapacidad y salud indígena a nivel municipal, alineado con el promedio nacional de 60.0% en capacidades diversas.",
+    "Generar un diagnóstico lingüístico para evaluar la vitalidad de lenguas originarias en la población de 6 personas.",
+    "Establecer un protocolo de alerta temprana para conflictos territoriales, dado que el ICV de 0.0 no refleja riesgos reales por falta de datos."
+  ]
+}

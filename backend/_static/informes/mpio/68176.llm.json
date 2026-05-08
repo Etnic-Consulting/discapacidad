@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Chima, Santander, reporta datos críticos en su informe territorial. La población indígena total registrada es de 0 personas según CNPV 2018, con confiabilidad NO_CONFIABLE (n=0). Solo se registra 1 víctima de desplazamiento forzado en el RUV entre 1985-2024, representando el 100% de los hechos de conflicto. El ICV municipal es 0.0, reflejando ausencia de datos normalizados en NBI, prevalencia y conflicto.",
+  "demografia": "Los datos demográficos para Chima indican que no hay población indígena registrada en el CNPV 2018 (n=0, confiabilidad NO_CONFIABLE). No se identifican pueblos indígenas residentes ni estructura etaria aplicable. La falta de datos impide análisis de pirámide poblacional o dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Chima (_sin_datos: true). La limitación interpretativa es total al no existir registros confiables. Se desconoce el sub-registro real, pero la ausencia de información sugiere brechas críticas en monitoreo sanitario indígena.",
+  "territorial": "Chima cuenta con 0 resguardos indígenas registrados dentro de su jurisdicción. La delimitación geográfica (bbox) abarca coordenadas entre 6.30°N y 6.47°N, -73.48°O y -73.32°O, pero no hay territorios colectivos reconocidos. La dispersión geográfica no aplica al no existir unidades territoriales indígenas.",
+  "lengua": "Los datos de lengua para Chima no están disponibles (_sin_datos: true). No se registran lenguas indígenas en el municipio según la fuente consultada.",
+  "vida": "No hay información sobre NBI en Chima (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La brecha con el contexto nacional no puede calcularse. La ausencia de datos refleja falta de seguimiento a condiciones de vida en el municipio.",
+  "conflicto": "Chima registra 1 víctima de desplazamiento forzado en el RUV (1985-2024), siendo este el 100% de los hechos de conflicto. La cifra, aunque confiable (n=1), es mínima y no permite análisis de patrones territoriales. El desplazamiento forzado es el único hecho documentado.",
+  "icv": "El ICV de Chima es 0.0, con componentes normalizados en 0.0 para NBI, prevalencia y conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja ausencia total de datos. La posición relativa es inexistente al no haber valores comparables.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con metodología ONIC para superar el n=0 y confiabilidad NO_CONFIABLE en demografía (CNPV 2018).",
+    "Implementar sistema de registro de víctimas indígenas en Chima, priorizando desplazamiento forzado (1 caso identificado) con enfoque diferencial.",
+    "Establecer alianza con resguardos vecinos para identificar población indígena dispersa no registrada en Chima.",
+    "Diseñar línea base de NBI y prevalencia con participación de autoridades indígenas, dado que los datos actuales están sin datos (_sin_datos: true).",
+    "Incluir a Chima en el plan de monitoreo territorial ONIC para departamentos con alta movilidad indígena como Santander."
+  ]
+}

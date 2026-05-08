@@ -43,6 +43,9 @@ backend/.seed_credentials.txt
 backend/_static/informes/**/*.pdf
 backend/_static/informes/**/*.docx
 
+# Scripts auxiliares de release (one-shot)
+_finalize_release.sh
+
 # ============================================================================
 # PYTHON
 # ============================================================================

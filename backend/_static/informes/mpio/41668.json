@@ -1,0 +1,184 @@
+{
+  "tipo": "mpio",
+  "id": "41668",
+  "nombre": "SAN AGUSTIN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 819,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 819,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 10,
+      "top": [
+        {
+          "cod_pueblo": "750",
+          "pueblo": "YANACONA",
+          "poblacion": 504
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 186
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 122
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "410",
+          "pueblo": "MAKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "565",
+          "pueblo": "QUILLACINGA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "731",
+          "pueblo": "MUINANE",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "750",
+        "pueblo": "YANACONA",
+        "poblacion": 504
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 3,
+      "resguardos": [
+        {
+          "nombre": "FIIL VIST LA GRAN PERDIZ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 495.562
+        },
+        {
+          "nombre": "SAN AGUSTÍN",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 212.192
+        },
+        {
+          "nombre": "CABILDO INDÍGENA CASICA IBANASCA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 71.986
+        }
+      ],
+      "bbox": [
+        1.6617820922872035,
+        -76.62466264386802,
+        2.1918114087850142,
+        -76.19457241337017
+      ],
+      "nombre_mpio": "SAN AGUSTIN",
+      "cod_dpto": "41"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 36,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 36,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 23
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 7
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 23
+      },
+      "pct_hecho_principal": 63.9
+    },
+    "icv": {
+      "score": 0.002,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.007
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T19:05:23",
+  "periodo": "2018",
+  "_input_hash": "3badb0d5d9aafd33"
+}

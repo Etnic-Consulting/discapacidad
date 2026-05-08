@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Antonio (Tolima) concentra el 99.7% de su población indígena en el pueblo PIJAO (1.623 personas). La presencia de un solo resguardo (289.5 ha) evidencia alta concentración territorial. El 67% de las víctimas indígenas del municipio son por desplazamiento forzado, con 88 casos registrados entre 1985-2024.",
+  "demografia": "La población indígena de San Antonio es mayoritariamente adulta, con 1.623 personas en el pueblo PIJAO. No hay datos de pirámide etaria a nivel municipal. La población YAGUA (5 personas) representa el 0.3% restante. Los datos provienen del CNPV 2018 y no incluyen estructura por edad.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en el municipio. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse con San Antonio. Se requiere priorizar registros locales para identificar necesidades específicas de salud.",
+  "territorial": "San Antonio cuenta con 1 resguardo indígena (PIJAO) de 289.5 hectáreas. El territorio está delimitado por coordenadas geográficas que abarcan 3.827 a 4.121 latitud y -75.632 a -75.387 longitud. La concentración en un solo resguardo limita la diversificación territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística del pueblo PIJAO en San Antonio sin información específica.",
+  "vida": "No hay datos de NBI disponibles para San Antonio. El promedio indígena nacional es 67.6%, pero no puede compararse. Se requiere generar indicadores locales para evaluar condiciones de vida de la población PIJAO.",
+  "conflicto": "El 67% de las víctimas indígenas (88 casos) corresponde a desplazamiento forzado. Los hechos violentos incluyen amenazas (10), homicidios (6) y pérdida de bienes (4). La concentración de violencia en desplazamiento refleja patrones de despojo territorial histórico.",
+  "icv": "El ICV de San Antonio es 0.005, con conflicto como dimensión dominante (0.018). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.018). La posición relativa es crítica al priorizar conflicto sobre condiciones socioeconómicas.",
+  "recomendaciones": [
+    "Priorizar registro de datos de lengua y NBI para evaluar brechas con el promedio indígena nacional (67.6%) y diseñar estrategias de revitalización cultural.",
+    "Implementar un sistema de alerta temprana para prevenir desplazamiento forzado, dado que el 67% de las víctimas indígenas están asociadas a este hecho.",
+    "Garantizar la protección territorial del resguardo PIJAO (289.5 ha) mediante acciones de titulación y delimitación, considerando su alta concentración.",
+    "Generar un plan de salud diferencial para el pueblo PIJAO, ante la falta de datos de prevalencia y capacidades diversas (promedio nacional 60.0%).",
+    "Articular con autoridades locales para incluir indicadores indígenas en el Plan de Desarrollo Municipal, incorporando la cifra de 1.623 personas PIJAO como base para asignación de recursos."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Labranzagrande (Boyacá) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Muisca. La ausencia de resguardos y la dispersión territorial sin datos de NBI o lengua reflejan vacíos estructurales en el reconocimiento de su presencia. La vulnerabilidad se evidencia en 3 víctimas de conflicto entre 1985-2024, con hechos distribuidos en desplazamiento forzado, homicidio y pérdida de bienes.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos provistos. La población indígena total es de 1 persona, lo que impide análisis demográficos confiables. Se requiere desagregación por grupos de edad para evaluar dinámicas poblacionales. Los datos disponibles no permiten inferir tendencias de crecimiento o envejecimiento.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de información limita el análisis de sub-registro o brechas en acceso a servicios. Se recomienda priorizar estudios locales para identificar necesidades sanitarias específicas de la población Muisca.",
+  "territorial": "Labranzagrande carece de resguardos indígenas, con 0 territorios registrados. La dispersión geográfica se delimita en un bbox de 5.38° a 5.71° N y -72.74° a -72.44° O, sin presencia territorial colectiva reconocida. La ausencia de resguardos contrasta con la presencia histórica del pueblo Muisca en la región.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la transmisión intergeneracional. La ONIC debe impulsar registros lingüísticos locales para preservar el patrimonio cultural Muisca en Labranzagrande.",
+  "vida": "No hay datos de NBI disponibles para Labranzagrande. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide evaluar brechas en condiciones de vida. Se requiere incluir indicadores de pobreza multidimensional en futuros censos municipales.",
+  "conflicto": "Se registraron 3 víctimas de conflicto entre 1985-2024, con hechos distribuidos en desplazamiento forzado (33.3%), homicidio y pérdida de bienes. La dispersión de eventos sugiere vulnerabilidad persistente en la región. La ONIC debe priorizar protección a líderes y territorios Muisca en Boyacá.",
+  "icv": "El ICV de Labranzagrande es 0.0, con componentes normalizados en 0.0 (NBI), 0.0 (prevalencia) y 0.001 (conflicto). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), reflejando la ausencia de datos locales. La posición relativa es indeterminada sin comparadores regionales.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con desagregación por edad y género para superar la limitación de n=1 en población total.",
+    "Gestionar el reconocimiento de al menos un resguardo para el pueblo Muisca en Labranzagrande, priorizando 0 territorios actuales.",
+    "Incluir indicadores de NBI y lengua en el próximo CNPV municipal para comparar con el promedio indígena nacional (67.6%).",
+    "Implementar un sistema de alertas tempranas para 3 víctimas de conflicto registradas (1985-2024), enfocado en desplazamiento forzado.",
+    "Diseñar un plan de salvaguarda cultural para el pueblo Muisca, dado que los datos de lengua no están disponibles y la población es de 1 persona."
+  ]
+}

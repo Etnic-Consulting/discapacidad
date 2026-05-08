@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo PARREROS, territorio Sikuani en Arauca, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 205.917 hectáreas, su territorio se ubica en el municipio de Tame (Arauca), macrorregión ORINOQUIA. La ausencia de datos demográficos y socioeconómicos limita el análisis, aunque se reconoce su condición de territorio colectivo Sikuani bajo organización ASCATIDAR-ONIC.",
+  "demografia": "No se dispone de datos demográficos para PARREROS (población_total: 0). La fuente DANE-CNPV 2018 no reporta registros para este resguardo, lo que impide analizar pirámide etaria o estructura poblacional. Esta limitación refleja vacíos en el sistema de información territorial para territorios pequeños o con baja densidad poblacional.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para PARREROS (_sin_datos: true). A nivel nacional, el promedio indígena de discapacidad es 60.0%, pero su extrapolación a este territorio carece de fundamento. La falta de registros específicos subraya la necesidad de sistemas de monitoreo locales con enfoque diferencial.",
+  "territorial": "PARREROS tiene un área de 205.917 hectáreas en Tame (Arauca), con coordenadas geográficas definidas (bbox). Su ubicación en la macrorregión ORINOQUIA y el departamento Arauca lo sitúa en un contexto de alta conflictividad histórica. Sin embargo, la ausencia de datos poblacionales dificulta evaluar su concentración o dispersión territorial.",
+  "lengua": "No hay datos disponibles sobre lengua en PARREROS (_sin_datos: true). Aunque el pueblo Sikuani tiene presencia en la región, no se cuenta con información específica sobre uso o vitalidad lingüística en este territorio. Esto refleja brechas en la documentación cultural a nivel local.",
+  "vida": "No se reportan datos de NBI para PARREROS (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas socioeconómicas o identificar necesidades prioritarias. Se requiere fortalecer sistemas de información con enfoque territorial.",
+  "conflicto": "PARREROS registra 0 víctimas con discapacidad en el RUV (1985-2024), según datos confiables. La ausencia de hechos victimizantes reportados sugiere baja visibilidad en el sistema, pero no necesariamente ausencia de conflicto. Se recomienda validar esta información con fuentes comunitarias.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de PARREROS es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos disponibles. Este resultado subraya la urgencia de generar información territorial confiable.",
+  "recomendaciones": [
+    "Implementar un sistema de registro poblacional diferencial para resguardos con baja densidad como PARREROS, priorizando la participación de la comunidad Sikuani (área_hectareas: 205.917).",
+    "Realizar un diagnóstico participativo de necesidades básicas insatisfechas (NBI) y condiciones de vida, dado que no hay datos disponibles (_sin_datos: true).",
+    "Validar con ASCATIDAR-ONIC los registros de víctimas en el RUV para confirmar la ausencia de hechos victimizantes (victimas_total_disc: 0).",
+    "Diseñar estrategias de revitalización cultural Sikuani con enfoque territorial, ante la falta de datos sobre lengua (_sin_datos: true).",
+    "Incluir a PARREROS en los planes de monitoreo territorial de la macrorregión ORINOQUIA, dada su ubicación estratégica en Arauca (macro: ORINOQUIA)."
+  ]
+}

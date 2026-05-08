@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Abejorral (Antioquia) registra una población indígena de 2 personas según CNPV 2018, concentrada en el pueblo Emberá-Chamí. No existen resguardos en el territorio, lo que limita la presencia estructural indígena. La ausencia de datos en NBI, lengua y capacidades diversas refleja vacíos críticos para la planificación territorial.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por n=2, insuficiente para análisis demográfico. La población indígena se reduce a 2 personas del pueblo Emberá-Chamí, sin representación etaria diferenciada. Los datos no permiten evaluar dinámicas generacionales o presión demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. La falta de registros impide identificar patrones de vulnerabilidad específica.",
+  "territorial": "El municipio alberga 0 resguardos indígenas, pese a su bbox que abarca 5.664284378100099 a 5.946050888812238 en latitud y -75.55690273609144 a -75.26793311266022 en longitud. La ausencia de territorios colectivos contrasta con la presencia histórica de pueblos embera en la región andina.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Abejorral. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de emberá-chamí u otras lenguas en el territorio.",
+  "vida": "No hay información sobre NBI en el municipio. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de datos impide evaluar brechas en condiciones de vida o acceso a servicios básicos para la población indígena.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Abejorral entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en el registro. Se requiere fortalecer sistemas de información local para detectar violencias estructurales.",
+  "icv": "El ICV municipal es 0.0, derivado de componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula refleja la falta de datos disponibles más que condiciones reales. La posición relativa es indeterminable sin información contrastable.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, priorizando la identificación de población emberá-chamí en el territorio.",
+    "Implementar un sistema de registro de discapacidad y prevalencia de condiciones de salud en población indígena, alineado con el promedio nacional del 60.0%.",
+    "Garantizar la creación de un resguardo indígena en Abejorral, articulado con procesos de titulación colectiva y consulta previa.",
+    "Incluir a Abejorral en los planes departamentales de protección a pueblos embera, considerando su ubicación estratégica en la región andina.",
+    "Fortalecer la recolección de datos sobre lengua indígena y NBI, vinculando a instituciones como el DANE y la ONIC para metodologías interculturales."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "La Plata (Huila) concentra 2.836 personas indígenas según CNPV 2018, con el 79.2% pertenecientes al pueblo Nasa (2.247). Los 7 resguardos existentes —con predominio de Nasa— suman 10.215 hectáreas, evidenciando una alta fragmentación territorial. El conflicto armado impacta con 37 víctimas registradas entre 1985-2024, donde el desplazamiento forzado representa el 73% de los casos.",
+  "demografia": "La población indígena en La Plata presenta una estructura concentrada en el pueblo Nasa (2.247 personas), seguido por Misak (524) y pueblos minoritarios con menos de 15 personas cada uno. La diversidad étnica (16 pueblos) contrasta con la alta homogeneidad en términos poblacionales. No se dispone de datos de pirámide etaria a nivel municipal.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad a nivel municipal. El promedio indígena nacional de discapacidad (60.0%) no puede contrastarse con cifras locales. La ausencia de registros limita el análisis de sub-registros y necesidades específicas.",
+  "territorial": "Se identifican 7 resguardos en La Plata, con áreas que varían desde 32.904 hasta 8.893 hectáreas. El 87% del territorio indígena corresponde al resguardo La Gaitana (MISAK y NASA). La dispersión geográfica refleja una concentración en el norte del municipio, con un área total de 10.215 hectáreas.",
+  "lengua": "Los datos sobre lenguas indígenas en La Plata no están disponibles. No es posible determinar la vitalidad lingüística ni la presencia de lenguas en riesgo en este territorio.",
+  "vida": "No se cuenta con datos de Necesidades Básicas Insatisfechas (NBI) a nivel municipal. El promedio indígena nacional (67.6%) no puede compararse con la situación local. La falta de información impide evaluar brechas en acceso a servicios básicos.",
+  "conflicto": "Entre 1985-2024 se registraron 37 víctimas indígenas en La Plata, con desplazamiento forzado como hecho principal (27 casos, 73%). Otros hechos incluyen amenazas (6) y delitos contra la integridad sexual (1). La concentración de violencia en desplazamiento refleja patrones de despojo territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en La Plata es 0.002, con componentes normalizados en cero excepto conflicto (0.007). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm sugiere que el conflicto armado es el principal determinante de las condiciones de vida.",
+  "recomendaciones": [
+    "Priorizar la protección territorial de los 7 resguardos existentes, especialmente La Gaitana (8.893 ha), mediante acciones contra el desplazamiento forzado que afecta al 73% de las víctimas registradas.",
+    "Generar sistemas de información municipal sobre NBI y discapacidad, alineados con el promedio indígena nacional (67.6% NBI), para diseñar políticas diferenciadas.",
+    "Fortalecer la participación de los pueblos minoritarios (14 pueblos con menos de 15 personas) en la toma de decisiones, garantizando representación en los espacios de gobierno propio.",
+    "Implementar programas de revitalización cultural para el pueblo Nasa, que concentra el 79.2% de la población, en articulación con los resguardos y cabildos locales.",
+    "Establecer un observatorio municipal de conflicto armado con enfoque étnico, registrando sistemáticamente hechos victimizantes y su impacto en la vida comunitaria."
+  ]
+}

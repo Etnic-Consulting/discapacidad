@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "05",
+  "nombre": "ANTIOQUIA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 37398,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 37398,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1610,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1610,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 37398,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 43.1,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "800",
+          "con_disc": 561,
+          "total": 8891
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 404,
+          "total": 17493
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 382,
+          "total": 4413
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 82,
+          "total": 1725
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 37,
+          "total": 422
+        },
+        {
+          "cod_pueblo": "284",
+          "con_disc": 27,
+          "total": 1059
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 18,
+          "total": 113
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 13,
+          "total": 264
+        },
+        {
+          "cod_pueblo": "240",
+          "con_disc": 11,
+          "total": 1697
+        },
+        {
+          "cod_pueblo": "285",
+          "con_disc": 10,
+          "total": 168
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 63,
+      "resguardos": [
+        {
+          "nombre": "RÍO CHAJERADÓ",
+          "mpio": "MURINDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 41757.339
+        },
+        {
+          "nombre": "JAIKERAZAVI",
+          "mpio": "MUTATÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 35318.238
+        },
+        {
+          "nombre": "MURRÍ - PANTANOS",
+          "mpio": "FRONTINO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 31727.254
+        },
+        {
+          "nombre": "PAVARANDÓ Y AMPARRADÓ MEDIO",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22061.907
+        },
+        {
+          "nombre": "RÍO MURINDÓ",
+          "mpio": "MURINDÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 18428.487
+        },
+        {
+          "nombre": "AMPARRADO ALTO Y MEDIO Y QUEBRADA CHONTADURO",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 17784.434
+        },
+        {
+          "nombre": "ANDABÚ",
+          "mpio": "URRAO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 16503.252
+        },
+        {
+          "nombre": "CHAQUENODA",
+          "mpio": "FRONTINO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 15141.489
+        },
+        {
+          "nombre": "CHIMURRO Y NENDÓ",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 13335.311
+        },
+        {
+          "nombre": "GUAGUANDÓ",
+          "mpio": "VIGÍA DEL FUERTE",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 12802.482
+        },
+        {
+          "nombre": "YABERARADÓ",
+          "mpio": "CHIGORODÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 11755.398
+        },
+        {
+          "nombre": "SEVER",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 10201.743
+        },
+        {
+          "nombre": "CHONTADURAL CAÑERO",
+          "mpio": "MUTATÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 9117.107
+        },
+        {
+          "nombre": "CAIMÁN NUEVO",
+          "mpio": "TURBO",
+          "pueblo_onic": "GUANADULE - TULE - CUNA",
+          "area_pg_ha": 9066.202
+        },
+        {
+          "nombre": "VALLE DE PERDIDAS",
+          "mpio": "URRAO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 8679.291
+        },
+        {
+          "nombre": "VALLES DEL SOL",
+          "mpio": "EL BAGRE",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 7214.787
+        },
+        {
+          "nombre": "MAJORÉ - AMBURÁ",
+          "mpio": "URRAO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6799.308
+        },
+        {
+          "nombre": "EL SALADO",
+          "mpio": "VIGÍA DEL FUERTE",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6089.585
+        },
+        {
+          "nombre": "RÍO JARAPETÓ",
+          "mpio": "VIGÍA DEL FUERTE",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 5651.804
+        },
+        {
+          "nombre": "CAÑAVERALES - ANTADÓ",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 4988.81
+        },
+        {
+          "nombre": "JAIDEZAVI",
+          "mpio": "TARAZÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 4907.478
+        },
+        {
+          "nombre": "CHUSCAL Y TUGURIDOCITO",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 4748.518
+        },
+        {
+          "nombre": "JENGADÓ APARTADÓ",
+          "mpio": "VIGÍA DEL FUERTE",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 4478.287
+        },
+        {
+          "nombre": "POLINES",
+          "mpio": "CHIGORODÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 3382.477
+        },
+        {
+          "nombre": "CHOROMANDÓ ALTO Y MEDIO",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 3053.972
+        },
+        {
+          "nombre": "PABLO MUERA",
+          "mpio": "ZARAGOZA",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 2118.468
+        },
+        {
+          "nombre": "TAGUAL - LA PO",
+          "mpio": "SEGOVIA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1836.673
+        },
+        {
+          "nombre": "JAI-DUKAMA",
+          "mpio": "ITUANGO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1285.094
+        },
+        {
+          "nombre": "CRISTIANÍA",
+          "mpio": "ANDES",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 1121.185
+        },
+        {
+          "nombre": "VEGAS DE SEGOVIA",
+          "mpio": "CÁCERES",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 1062.707
+        },
+        {
+          "nombre": "DOKERAZAVI",
+          "mpio": "TURBO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 684.686
+        },
+        {
+          "nombre": "JENATURADÓ",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 595.389
+        },
+        {
+          "nombre": "ZENÚ DE EL VOLAO",
+          "mpio": "NECOCLÍ",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 289.716
+        },
+        {
+          "nombre": "NARIKIZAVI",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 275.776
+        },
+        {
+          "nombre": "NUSIDÓ",
+          "mpio": "FRONTINO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 260.873
+        },
+        {
+          "nombre": "LAS PLAYAS",
+          "mpio": "APARTADÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 200.738
+        },
+        {
+          "nombre": "MONZHOMANDO",
+          "mpio": "DABEIBA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 187.046
+        },
+        {
+          "nombre": "EL NOVENTA",
+          "mpio": "EL BAGRE",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 169.617
+        },
+        {
+          "nombre": "LOS ALMENDROS",
+          "mpio": "SAN JUAN DE URABÁ",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 167.568
+        },
+        {
+          "nombre": "LA MARÍA",
+          "mpio": "VALPARAÍSO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 158.511
+        },
+        {
+          "nombre": "KARAMANDU",
+          "mpio": "PUERTO BERRÍO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 145.98
+        },
+        {
+          "nombre": "EL CHARCÓN",
+          "mpio": "URAMITA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 137.362
+        },
+        {
+          "nombre": "HERMEREGILDO CHAKIAMA",
+          "mpio": "CIUDAD BOLÍVAR",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 117.848
+        },
+        {
+          "nombre": "LA PALMA",
+          "mpio": "APARTADÓ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 115.868
+        },
+        {
+          "nombre": "SOHAIBADO",
+          "mpio": "EL BAGRE",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 114.18
+        },
+        {
+          "nombre": "RIO ALTO DE SAN JUAN (COMPUESTO POR 3 COMUNIDADES: EBANO TACANAL, EL POLVILLO Y NARANJAL)",
+          "mpio": "SAN PEDRO DE URABÁ",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 107.337
+        },
+        {
+          "nombre": "CORIBI BEDADO",
+          "mpio": "MUTATÁ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 105.319
+        },
+        {
+          "nombre": "LA LUCHA DE LOS PUEBLOS ZENÚ",
+          "mpio": "EL BAGRE",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 84.219
+        },
+        {
+          "nombre": "KORODO-ITE",
+          "mpio": "REMEDIOS",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 75.108
+        },
+        {
+          "nombre": "ALTOS DEL TIGRE",
+          "mpio": "CÁCERES",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 73.549
+        }
+      ],
+      "bbox": [
+        5.418558388850213,
+        -77.12783197062322,
+        8.873973719836652,
+        -73.88128210201819
+      ],
+      "nombre_dpto": "ANTIOQUIA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2519,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2519,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1851
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 151
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 147
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 114
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 47
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 37
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 37
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 33
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 27
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 26
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1851
+      },
+      "pct_hecho_principal": 73.5
+    },
+    "icv": {
+      "score": 0.216,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.215,
+        "conflicto_norm": 0.504
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:42:08",
+  "periodo": "2018",
+  "_input_hash": "5e0f2ede8a21aabf"
+}

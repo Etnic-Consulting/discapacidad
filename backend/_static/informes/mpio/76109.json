@@ -1,0 +1,280 @@
+{
+  "tipo": "mpio",
+  "id": "76109",
+  "nombre": "BUENAVENTURA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 3919,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 3919,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "710",
+          "pueblo": "WOUNAN",
+          "poblacion": 2107
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 758
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 430
+        },
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 305
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 75
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 58
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 29
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 25
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 22
+        },
+        {
+          "cod_pueblo": "810",
+          "pueblo": "GUANE",
+          "poblacion": 14
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "150",
+          "pueblo": "ETTE-E'NEKA",
+          "poblacion": 7
+        },
+        {
+          "cod_pueblo": "281",
+          "pueblo": "EMBERA-KATIO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 4
+        },
+        {
+          "cod_pueblo": "284",
+          "pueblo": "EMBERA-DOBIDA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "180",
+          "pueblo": "COCONUCO",
+          "poblacion": 3
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "710",
+        "pueblo": "WOUNAN",
+        "poblacion": 2107
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 9,
+      "resguardos": [
+        {
+          "nombre": "BURUJÓN O LA UNIÓN - SAN BERNARDO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 6349.97
+        },
+        {
+          "nombre": "PAPAYO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 3305.837
+        },
+        {
+          "nombre": "RÍO NAYA COMUNIDAD JOAQUINCITO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 2421.932
+        },
+        {
+          "nombre": "CERRITO BONGO",
+          "pueblo_onic": "WOUNAN",
+          "area_pg_ha": 2405.381
+        },
+        {
+          "nombre": "NUEVO PITALITO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 2272.525
+        },
+        {
+          "nombre": "CHACHAJO",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 2127.191
+        },
+        {
+          "nombre": "CHONARA HUENA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 459.727
+        },
+        {
+          "nombre": "GUAYACÁN - SANTA ROSA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 229.234
+        },
+        {
+          "nombre": "RÍO DAGUA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 51.917
+        }
+      ],
+      "bbox": [
+        3.1080799584689904,
+        -77.54977284276089,
+        4.234653685521439,
+        -76.68768378635389
+      ],
+      "nombre_mpio": "BUENAVENTURA",
+      "cod_dpto": "76"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 182,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 182,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 136
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 20
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 6
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 5
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 4
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 3
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 136
+      },
+      "pct_hecho_principal": 74.7
+    },
+    "icv": {
+      "score": 0.011,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.036
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:28:34",
+  "periodo": "2018",
+  "_input_hash": "6fad1ebea409433d"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL MEDANO, territorio del pueblo SÁLIBA en Casanare, alberga 166 habitantes en 1.963 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando carencias críticas en NBI, prevalencia y conflicto. La ausencia de datos en lengua y NBI limita el análisis integral, pero la vulnerabilidad territorial es evidente.",
+  "demografia": "La población total es de 166 habitantes, según DANE-CNPV 2018. La pirámide etaria no puede analizarse por falta de datos desagregados. La concentración poblacional en un territorio reducido (1.963 ha) sugiere alta densidad demográfica en el resguardo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en EL MEDANO. Los sistemas de registro no capturan información a nivel de resguardo, lo que impide evaluar necesidades sanitarias específicas. Se requiere fortalecer el monitoreo local.",
+  "territorial": "EL MEDANO ocupa 1.963 hectáreas en Orocué, Casanare, dentro de la macro región Orinoquía. Su delimitación geográfica está definida por coordenadas precisas, pero la falta de datos sobre dispersión o concentración de otros pueblos en el área limita el análisis comparativo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Aunque el pueblo SÁLIBA tiene presencia histórica en la zona, no se registra información sobre uso o vitalidad de su idioma en el territorio.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para EL MEDANO. El promedio indígena nacional es 67.6%, pero sin cifras locales no es posible calcular brechas. La ausencia de información refleja debilidades en sistemas de seguimiento territorial.",
+  "conflicto": "No se registran víctimas con discapacidad en EL MEDANO entre 1985-2024. El hecho principal no aplica al no existir eventos reportados. La confiabilidad de los datos es alta, pero la falta de registros no descarta afectaciones no documentadas.",
+  "icv": "El ICV de EL MEDANO es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). Esto indica condiciones de vida críticas, aunque la fórmula del ICV sugiere ponderaciones que podrían ocultar desigualdades específicas. Se requiere validación con datos primarios.",
+  "recomendaciones": [
+    "Implementar un sistema de registro de salud y lengua a nivel de resguardo para superar la falta de datos, priorizando indicadores del pueblo SÁLIBA.",
+    "Realizar un diagnóstico territorial participativo que incluya NBI y prevalencia, usando el promedio indígena nacional (67.6%) como línea base.",
+    "Garantizar protección territorial con enfoque diferencial, dado que el ICV de 0.0 refleja condiciones críticas no documentadas.",
+    "Fortalecer la articulación con ORIC para monitorear conflictos en la Orinoquía, donde la ausencia de víctimas no descarta afectaciones silenciosas.",
+    "Diseñar estrategias de revitalización cultural para el pueblo SÁLIBA, ante la falta de datos sobre lengua y su impacto en la identidad."
+  ]
+}

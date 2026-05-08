@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo KITEK KIWE, territorio Nasa del Cauca con 41.159 hectáreas, alberga 608 habitantes según el DANE-CNPV 2018. La concentración de 56 víctimas de violencia sociopolítica entre 1985-2024 evidencia una afectación crítica, donde el desplazamiento forzado representa el 51.8% de los hechos registrados. El Índice de Condiciones Vitales (ICV) de 0.003 refleja un territorio en emergencia, con componentes de conflicto como dimensión dominante.",
+  "demografia": "La población total de 608 habitantes no permite construir una pirámide etaria confiable. Los datos disponibles no incluyen estructura por edad ni sexo, limitando el análisis demográfico. Se requiere desagregación por cohortes para evaluar dinámicas generacionales y planificar políticas de juventud y vejez.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección se encuentra sin información, lo que impide evaluar el estado epidemiológico. Se recomienda priorizar registros sanitarios locales para superar el sub-registro.",
+  "territorial": "KITEK KIWE ocupa 41.159 hectáreas en el municipio de Timbío, Cauca, con coordenadas que delimitan su territorio ancestral. La concentración geográfica en una sola área protegida refleja la fragmentación territorial histórica de los pueblos Nasa. Se identifican 1 territorio colectivo bajo amenaza de presión externa.",
+  "lengua": "Los datos sobre lengua materna o uso de idioma Nasa no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística ni la transmisión intergeneracional. Se requiere investigación participativa para documentar la situación del nasa yuwe.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en KITEK KIWE. El promedio indígena nacional de 67.6% no puede compararse sin datos locales. La ausencia de registros impide evaluar brechas en acceso a servicios básicos y condiciones de vida.",
+  "conflicto": "Se registraron 56 víctimas de violencia sociopolítica entre 1985-2024, con desplazamiento forzado como hecho principal (29 casos, 51.8%). Los componentes de conflicto en el ICV (0.011) confirman la violencia como eje de afectación territorial. La lectura territorial exige medidas de protección colectiva.",
+  "icv": "El ICV de 0.003 posiciona a KITEK KIWE en el extremo inferior de condiciones vitales, con conflicto como dimensión dominante (0.011). Los componentes de NBI y prevalencia registran 0.0, sugiriendo sub-registro o ausencia de datos. La fórmula aplicada revela un territorio en estado de vulnerabilidad extrema.",
+  "recomendaciones": [
+    "Priorizar la protección territorial con enfoque diferencial, considerando los 29 casos de desplazamiento forzado registrados entre 1985-2024.",
+    "Implementar un sistema de registro comunitario de víctimas para superar el sub-registro en violencia sociopolítica, con énfasis en desplazamiento y amenazas.",
+    "Realizar un censo demográfico participativo que desagregue por edad y sexo, superando la limitación de n=608 habitantes sin estructura etaria.",
+    "Diseñar un plan de revitalización lingüística del nasa yuwe, ante la ausencia de datos sobre lengua en el resguardo.",
+    "Establecer un observatorio de condiciones de vida con indicadores de NBI y salud, dado que los datos locales no están disponibles."
+  ]
+}

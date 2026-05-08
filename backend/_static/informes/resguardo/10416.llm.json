@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Puerto Monforth, territorio del pueblo Tubú-Siriano en el Guaviare, alberga 57 habitantes en 905.98 hectáreas. Su Índice de Condiciones Vitales (ICV) es nulo (0.0), reflejando carencias estructurales en NBI, prevalencia y conflicto. La ausencia de datos en lengua y NBI limita el análisis, pero su contexto amazónico exige atención prioritaria.",
+  "demografia": "La población total de 57 habitantes presenta una pirámide etaria concentrada en adultos, sin datos detallados por grupos de edad. La base de datos DANE-CNPV 2018, con n=57 y confiabilidad CONFIABLE, no permite desgloses etarios. Se requiere desagregación para identificar dependencia demográfica.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este resguardo. Aunque el promedio indígena nacional es 60.0%, no hay información sobre morbilidad o discapacidad en Puerto Monforth. Esto impide evaluar necesidades sanitarias específicas del territorio.",
+  "territorial": "Ubicado en Miraflores (Guaviare), el resguardo ocupa 905.98 hectáreas en la Amazonía. Su área reducida y dispersión geográfica limitan la autonomía territorial. La bbox refleja un territorio compacto pero con alta presión externa por deforestación y cultivos ilícitos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del pueblo Tubú-Siriano en este territorio específico.",
+  "vida": "No hay datos de NBI para Puerto Monforth. El promedio indígena nacional es 67.6%, pero la falta de información local impide comparar brechas. Se requiere recolección de datos para evaluar condiciones de vida y planificar intervenciones.",
+  "conflicto": "No se registran víctimas con discapacidad en Puerto Monforth entre 1985-2024 (n=0). La ausencia de hechos violentos reportados sugiere baja visibilidad en sistemas oficiales, pero no descarta subregistro por desconfianza o barreras de acceso a la justicia.",
+  "icv": "El ICV de 0.0 en Puerto Monforth indica condiciones críticas en NBI, prevalencia y conflicto. Todos los componentes (nbi_norm, prev_norm, conflicto_norm) son cero, reflejando una crisis multidimensional. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) confirma la urgencia de acción.",
+  "recomendaciones": [
+    "Realizar un censo lingüístico y etnográfico para documentar la vitalidad del pueblo Tubú-Siriano, citando la falta de datos en lengua.",
+    "Implementar un sistema de monitoreo de NBI con desagregación por grupos de edad y género, comparando con el promedio indígena nacional de 67.6%.",
+    "Priorizar la titulación y protección del territorio de 905.98 hectáreas ante presiones extractivas, usando el dato de área como base.",
+    "Establecer una ruta de atención en salud con enfoque diferencial para 57 habitantes, considerando la ausencia de datos de prevalencia.",
+    "Diseñar un plan de prevención de violencia con enfoque en derechos territoriales, ante el subregistro identificado en el conflicto (n=0)."
+  ]
+}

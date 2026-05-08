@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Turmeque reporta una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo 'INDIGENA-SIN-INFORMACION'. La ausencia de resguardos (n=0) y datos de lengua o NBI refleja vacíos críticos en la caracterización territorial. La confiabilidad de los datos es alta, pero la representatividad es mínima, limitando análisis comparativos con promedios indígenas nacionales.",
+  "demografia": "La pirámide etaria no aplica para este municipio dado que solo se registra 1 persona indígena. Los datos demográficos a este nivel no permiten análisis de estructura poblacional ni razones de crecimiento o decrecimiento. La nota técnica aclara que la agregación es por CNPV 2018, pero la muestra es insuficiente para inferencias.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Turmeque. La sección 'capacidades_diversas' está explícitamente marcada como _sin_datos, aunque se referencia un promedio indígena nacional del 60.0%. La falta de información impide evaluar subregistros o necesidades específicas.",
+  "territorial": "Turmeque no cuenta con resguardos indígenas (n=0), lo que indica ausencia de territorios colectivos reconocidos. La caja geográfica (bbox) delimita el municipio, pero no hay concentración indígena identificable. La dispersión es total, sin patrones de asentamiento reconocibles en los datos disponibles.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de lenguas indígenas en el territorio. La sección está explícitamente marcada como _sin_datos, sin posibilidad de inferencias.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Turmeque. El promedio indígena nacional de NBI (67.6%) no puede contrastarse localmente debido a la ausencia de datos. La sección 'nbi' está marcada como _sin_datos, lo que impide evaluar brechas o componentes específicos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Turmeque entre 1985-2024 (n=0). La sección 'conflicto' carece de hechos victimizantes relevantes, lo que sugiere ausencia de afectación directa en el periodo analizado. La confiabilidad de los datos es alta, pero la muestra nula limita interpretaciones territoriales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Turmeque es 0.0, derivado de componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la ausencia de datos en todas las dimensiones. La posición relativa es inexistente dado el valor mínimo.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para superar el subregistro actual (solo 1 persona identificada) y actualizar la base de datos del CNPV 2018.",
+    "Incluir a Turmeque en programas de caracterización lingüística y cultural, dado que no hay datos disponibles sobre lengua indígena en el territorio.",
+    "Priorizar la identificación y delimitación de territorios colectivos, considerando que no existen resguardos reconocidos (n=0) en el municipio.",
+    "Evaluar la necesidad de incluir a Turmeque en sistemas de alerta temprana por conflicto, pese a no registrar víctimas en el RUV, para prevenir futuras afectaciones.",
+    "Articular con la ONIC y el Ministerio del Interior para garantizar que los pueblos indígenas sin información en Turmeque accedan a mecanismos de identificación y protección."
+  ]
+}

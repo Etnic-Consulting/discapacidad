@@ -1,0 +1,178 @@
+{
+  "tipo": "mpio",
+  "id": "19809",
+  "nombre": "TIMBIQUI",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 3372,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 3372,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 7,
+      "top": [
+        {
+          "cod_pueblo": "283",
+          "pueblo": "EPERARA-SIAPIDARA",
+          "poblacion": 3356
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "100",
+          "pueblo": "BORA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "283",
+        "pueblo": "EPERARA-SIAPIDARA",
+        "poblacion": 3356
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "RÍO GUANGÜI",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22525.404
+        },
+        {
+          "nombre": "CALLE SANTA ROSA RÍO SAIJA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22282.325
+        },
+        {
+          "nombre": "ALMORZADERO, SAN ISIDRO Y LA NUEVA UNIÓN",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 4953.601
+        },
+        {
+          "nombre": "INFI",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 3303.207
+        }
+      ],
+      "bbox": [
+        2.3810135272435766,
+        -77.80061790640599,
+        2.9477893742058963,
+        -77.2005350982783
+      ],
+      "nombre_mpio": "TIMBIQUI",
+      "cod_dpto": "19"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 90,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 90,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 59
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 21
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 5
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 2
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 59
+      },
+      "pct_hecho_principal": 65.6
+    },
+    "icv": {
+      "score": 0.005,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.018
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:49:53",
+  "periodo": "2018",
+  "_input_hash": "2e2062056ab282ce"
+}

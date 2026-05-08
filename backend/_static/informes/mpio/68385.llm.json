@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Landázuri (Santander) reporta una población indígena de solo 3 personas según el CNPV 2018, distribuida en 3 pueblos sin predominio claro. La ausencia de resguardos y la dispersión geográfica limitan la capacidad de acción colectiva. El ICV de 0.0 refleja condiciones críticas en NBI, prevalencia y conflicto, con el desplazamiento forzado como principal hecho victimizante (50% del total).",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos proporcionados. La población indígena registrada es mínima (n=3), insuficiente para análisis demográficos. Se destaca la presencia de tres pueblos (Zenú, Tayronas e Indígena-sin-información) con igual representación poblacional (1 persona cada uno).",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio (_sin_datos: true). No es posible analizar subregistros ni patrones de afectación en salud. Se recomienda priorizar la generación de información local para evaluar necesidades específicas.",
+  "territorial": "Landázuri no cuenta con resguardos indígenas (n_resguardos: 0), lo que dificulta la protección territorial y cultural. La dispersión geográfica se limita a 3 individuos sin concentración espacial identificable. La ausencia de territorios colectivos agrava la vulnerabilidad frente a dinámicas de conflicto.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en la población registrada.",
+  "vida": "Los datos de NBI no están disponibles (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas locales. Se requiere recolección de datos para identificar necesidades en condiciones de vida.",
+  "conflicto": "Se registran 4 víctimas de conflicto con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho principal (50%). Los otros hechos incluyen amenazas (25%) y pérdida de bienes (25%). La baja n (n=4) limita la confiabilidad interpretativa.",
+  "icv": "El ICV de 0.0 en Landázuri refleja condiciones extremas en NBI, prevalencia y conflicto. El componente de conflicto (0.001) es el único no nulo, pero su peso relativo (30%) no compensa los ceros en NBI y prevalencia. La fórmula evidencia la urgencia de intervenciones integrales.",
+  "recomendaciones": [
+    "Priorizar la identificación y registro de población indígena oculta en el municipio, dado que solo 3 personas aparecen en el CNPV 2018 (n=3).",
+    "Diseñar un plan de protección territorial que incluya la creación de espacios de vida colectiva, ante la ausencia de resguardos (n_resguardos: 0).",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, principal hecho victimizante (50% de los casos).",
+    "Generar datos desagregados de NBI y lengua para Landázuri, actualmente sin información (_sin_datos: true).",
+    "Fortalecer alianzas con pueblos vecinos (Zenú, Tayronas) para abordar vulnerabilidades compartidas, dado el bajo registro poblacional local."
+  ]
+}

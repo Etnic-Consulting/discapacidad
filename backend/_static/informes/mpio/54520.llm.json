@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pamplonita (Norte de Santander) registra una población indígena de 2 personas según CNPV 2018, concentrada en el pueblo MUISCA. La ausencia de resguardos y datos de NBI, lengua o conflicto limita el análisis territorial y de derechos. La brecha entre la población indígena municipal y los promedios nacionales de discapacidad (60.0%) no puede evaluarse por falta de datos locales.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal debido a la reducida población indígena (n=2). La estructura demográfica carece de representatividad estadística para análisis etario o generacional. Los datos reflejan una presencia simbólica sin capacidad de desagregación por grupos de edad.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Pamplonita. Los sistemas de información no capturan indicadores epidemiológicos a nivel municipal para población indígena. Se desconoce el sub-registro real por la ausencia de registros oficiales.",
+  "territorial": "Pamplonita no cuenta con resguardos indígenas registrados (n=0). La delimitación geográfica del municipio (bbox) no incluye territorios colectivos. La dispersión territorial es nula, reflejando una ausencia de presencia indígena organizada en el territorio.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Pamplonita. No se registra información sobre uso o preservación de lenguas originarias en el municipio. La ausencia de datos impide evaluar la vitalidad lingüística en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Pamplonita. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. La brecha en condiciones de vida no puede cuantificarse en este nivel.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Pamplonita (n=0) entre 1985-2024. La ausencia de hechos victimizantes documentados sugiere baja visibilidad o sub-registro. La lectura territorial indica una aparente no afectación, aunque la confiabilidad depende de la calidad de los registros.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Pamplonita es 0.0, con todos sus componentes en 0.0. La fórmula (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) no puede calcularse por falta de datos. La posición relativa es indeterminada frente a otros territorios.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para actualizar la población y caracterizar necesidades, dado que los datos oficiales (n=2) subrepresentan la presencia indígena.",
+    "Implementar un sistema de registro de lengua y cultura en Pamplonita para documentar la vitalidad lingüística, ante la ausencia de datos.",
+    "Incluir a Pamplonita en los programas de fortalecimiento territorial de la ONIC, priorizando la identificación de pueblos indígenas no reconocidos en el municipio.",
+    "Establecer alianzas con la gobernación de Norte de Santander para incorporar indicadores indígenas en los sistemas de información municipal.",
+    "Diseñar un protocolo de atención a víctimas indígenas con enfoque diferencial, pese a la ausencia actual de registros, previniendo futuros sub-registros."
+  ]
+}

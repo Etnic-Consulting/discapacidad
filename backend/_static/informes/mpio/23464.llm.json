@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Momil (Córdoba) concentra el 99.8% de su población indígena en el pueblo Zenú, con 6.555 personas según CNPV 2018. La ausencia de resguardos y la dispersión de 4 pueblos minoritarios (7 Emberá-Katío, 5 sin información, 1 Andoke y 1 Siona) reflejan una homogeneización territorial sin reconocimiento legal. El desplazamiento forzado afecta al 83.3% de las 6 víctimas registradas entre 1985-2024, señalando riesgos persistentes en la región.",
+  "demografia": "La población indígena de Momil es mayoritariamente adulta, con 6.555 Zenú (99.8% del total) y solo 14 personas distribuidas en otros 4 pueblos. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La concentración absoluta en un solo pueblo contrasta con la diversidad nominal reportada, sugiriendo subregistros en identificación étnica.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en Momil. Los registros nacionales indican un promedio indígena de discapacidades del 60.0%, pero este KPI no aplica al municipio por ausencia de información local. La falta de datos limita cualquier análisis de salud pública en la zona.",
+  "territorial": "Momil no cuenta con resguardos indígenas reconocidos, pese a albergar 5 pueblos distintos. La dispersión geográfica se limita a una bbox de 0.19° latitud y 0.13° longitud, sin territorios colectivos formalizados. La ausencia de resguardos refleja debilidad en el reconocimiento territorial y en la implementación de derechos étnicos.",
+  "lengua": "Los datos de lengua no están disponibles para Momil. No se puede determinar el uso de lenguas nativas ni su vitalidad cultural en el municipio. La falta de información impide evaluar la transmisión intergeneracional de saberes lingüísticos.",
+  "vida": "No hay datos de NBI para Momil, aunque el promedio indígena nacional es 67.6%. La brecha con este referente no puede calcularse. La ausencia de información sobre necesidades básicas invisibiliza las condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "El desplazamiento forzado explica el 83.3% de las 6 víctimas registradas en Momil entre 1985-2024. Las amenazas completan el restante 16.7%, evidenciando un patrón de violencia estructural contra la población indígena. La concentración de hechos en un solo tipo de victimización sugiere dinámicas territoriales específicas.",
+  "icv": "El ICV de Momil es 0.0, con componentes nulos en NBI y prevalencia, y un mínimo en conflicto (0.001). La fórmula pondera tres dimensiones, pero la ausencia de datos en dos de ellas anula el indicador. El resultado refleja la falta de información sistemática más que condiciones reales de vida.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para el pueblo Zenú en Momil, dado que alberga el 99.8% de la población indígena, citando la cifra de 6.555 personas.",
+    "Implementar un sistema de registro étnico municipal que desagregue datos por edad, género y pueblo, para superar el subregistro actual (solo 14 personas en 4 pueblos minoritarios).",
+    "Diseñar un plan de atención a víctimas de desplazamiento forzado, que aborde el 83.3% de los casos registrados en la región.",
+    "Realizar un censo lingüístico para evaluar la vitalidad del Zenú y otros pueblos, ante la ausencia de datos en la sección lengua.",
+    "Articular con la gobernación de Córdoba para incluir a Momil en programas de salud pública indígena, considerando el promedio nacional de discapacidades del 60.0%."
+  ]
+}

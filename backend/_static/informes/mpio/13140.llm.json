@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "CALAMAR registra una población indígena de 9 personas según CNPV 2018, distribuidas en 5 pueblos con predominio del pueblo ZENÚ (5 habitantes). La ausencia de resguardos y la alta dispersión territorial (0 resguardos) reflejan una vulnerabilidad estructural. El 77.8% de las víctimas de violencia registradas son por desplazamiento forzado, evidenciando un patrón de afectación territorial crítico.",
+  "demografia": "La pirámide etaria no puede analizarse al nivel municipal con los datos disponibles. La población indígena total asciende a 9 personas, cifra insuficiente para desagregar por grupos de edad o género. Se requiere desagregación a nivel de resguardo o pueblo para análisis demográfico significativo.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones de salud no están disponibles a nivel municipal. Este vacío impide evaluar la carga de morbilidad en la población indígena local. Se recomienda priorizar la sistematización de registros sanitarios diferenciados.",
+  "territorial": "CALAMAR carece de resguardos indígenas, concentrando su población en un territorio sin reconocimiento legal colectivo. La dispersión geográfica (5 pueblos en 26 km²) limita la cohesión territorial y la implementación de estrategias de protección cultural. La ausencia de resguardos agrava la vulnerabilidad frente a actores armados.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Esta limitación impide evaluar la vitalidad lingüística y diseñar políticas de revitalización cultural. Se urge incluir módulos lingüísticos en censos municipales.",
+  "vida": "No hay datos disponibles sobre NBI a nivel municipal. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de información oculta brechas en acceso a servicios básicos como educación, salud y vivienda para la población indígena de CALAMAR.",
+  "conflicto": "Se registran 9 víctimas de violencia con discapacidad entre 1985-2024, donde el 77.8% corresponde a desplazamiento forzado. El hecho principal (7 casos) evidencia una dinámica de despojo territorial sistemático. La concentración de hechos en este municipio refleja su inserción en corredores estratégicos de conflicto.",
+  "icv": "El ICV municipal es 0.001, con componente de conflicto como dimensión dominante (0.002). Este valor, cercano a cero, indica condiciones de vida críticas comparadas con estándares nacionales. La fórmula pondera el conflicto con 30%, reflejando su impacto desproporcionado en la calidad de vida indígena.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena en CALAMAR para garantizar protección territorial, citando la ausencia de resguardos registrada en los datos.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, dado que el 77.8% de las víctimas registradas corresponden a este hecho.",
+    "Diseñar un plan de revitalización cultural para el pueblo ZENÚ (5 habitantes), incorporando datos de población por pueblo en la planificación.",
+    "Incluir módulos específicos sobre pueblos indígenas en el próximo CNPV municipal para superar la limitación de datos en lengua y NBI.",
+    "Fortalecer la articulación con la ONIC para acceder a registros de violencia diferenciados, considerando la confiabilidad de las cifras de víctimas (n=9)."
+  ]
+}

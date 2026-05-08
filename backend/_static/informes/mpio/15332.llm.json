@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guicán, municipio de Boyacá, concentra una población indígena U`WA de 810 personas según CNPV 2018. No registra resguardos ni datos de lengua, lo que limita el análisis de vitalidad cultural. El ICV de 0.0 refleja condiciones críticas en NBI, prevalencia y conflicto, con un solo caso de desplazamiento forzado como hecho victimizante principal.",
+  "demografia": "La pirámide etaria no aplica a este nivel, pues los datos demográficos se agregan por pueblo. El U`WA representa el 100% de la población indígena municipal (810 personas). No hay información sobre distribución por edad o género que permita evaluar dinámicas generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no reporta indicadores de salud específicos, lo que impide evaluar subregistros o patrones epidemiológicos. Se requiere desagregación a nivel pueblo para análisis confiable.",
+  "territorial": "Guicán no cuenta con resguardos indígenas registrados, pese a ser territorio histórico U`WA. La bbox geográfica delimita un área de 6.36°N a 6.76°N y -72.44°O a -72.09°O, sin presencia territorial colectiva reconocida. La ausencia de resguardos contrasta con la población indígena existente.",
+  "lengua": "No hay datos disponibles sobre lengua en este municipio. La sección no reporta información sobre uso o vitalidad de la lengua U`WA, lo que impide evaluar su transmisión intergeneracional o políticas de revitalización.",
+  "vida": "No hay datos de NBI para Guicán, aunque el promedio indígena nacional es 67.6%. La falta de información municipal dificulta comparar brechas socioeconómicas. Se requiere desagregación territorial para priorizar intervenciones en condiciones de vida.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado (1985-2024), representando el 100% de los hechos victimizantes. El dato, aunque confiable por n=1, refleja una afectación mínima pero crítica en contexto de violencia histórica contra el pueblo U`WA.",
+  "icv": "El ICV de 0.0 en Guicán indica condiciones extremas en las tres dimensiones: NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula ponderada (40% NBI, 30% prevalencia, 30% conflicto) evidencia una crisis multidimensional sin atenuantes en los componentes.",
+  "recomendaciones": [
+    "Priorizar la delimitación y constitución de resguardos U`WA en Guicán, dado que el 100% de la población indígena carece de territorio colectivo reconocido según datos territoriales.",
+    "Solicitar al DANE desagregación de NBI por municipio para Guicán, comparando con el promedio indígena nacional de 67.6% y diseñando estrategias de reducción de brechas.",
+    "Implementar un sistema de monitoreo de lengua U`WA en Guicán, ante la ausencia de datos, para evaluar vitalidad cultural y diseñar planes de revitalización.",
+    "Articular con la Unidad de Víctimas la atención psicosocial para el caso de desplazamiento forzado (n=1), garantizando enfoque diferencial indígena y reparación colectiva.",
+    "Incluir a Guicán en los planes regionales de Boyacá para pueblos U`WA, considerando su población de 810 personas y la urgencia de políticas públicas diferenciadas."
+  ]
+}

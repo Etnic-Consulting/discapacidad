@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Circasia registra una población indígena de 23 personas según CNPV 2018, distribuidas en 7 pueblos. El 39.1% (9 personas) pertenece al pueblo Cañamomo-Lomaprieta, el más numeroso. No se identifican resguardos en el municipio, lo que limita la protección territorial colectiva. La ausencia de datos en NBI y lengua refleja vacíos en el monitoreo local.",
+  "demografia": "La población indígena de Circasia es mínima (23 personas) y altamente diversificada, con 7 pueblos representados. El pueblo Cañamomo-Lomaprieta concentra el 39.1% de la población, seguido por Yanacona (26.1%) y Emberá-Chamí (13.0%). La dispersión étnica sugiere migración o asentamientos recientes sin consolidación territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros nacionales indican un promedio indígena de 60.0% en discapacidades, pero este no aplica a Circasia por falta de información local. La ausencia de datos limita cualquier análisis de sub-registro.",
+  "territorial": "Circasia no cuenta con resguardos indígenas registrados, a pesar de albergar 7 pueblos distintos. La caja geográfica del municipio abarca coordenadas que sugieren una zona montañosa en Quindío, pero sin delimitación territorial indígena. La falta de resguardos refleja debilidad en la titulación colectiva.",
+  "lengua": "Los datos sobre lenguas indígenas en Circasia no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de idiomas ancestrales en la población registrada.",
+  "vida": "No hay información sobre NBI en Circasia. El promedio indígena nacional es 67.6%, pero este dato no es comparable con el municipio. La ausencia de registros impide evaluar condiciones de vida, pobreza o acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Circasia entre 1985-2024. El dato de 0 víctimas es confiable pero no refleja necesariamente ausencia de violencia, dado el bajo tamaño poblacional (n=23). La falta de hechos violentos reportados no descarta riesgos territoriales.",
+  "icv": "El ICV de Circasia es 0.0, derivado de la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula pondera estos componentes, pero la falta de información invalida cualquier interpretación comparativa. El municipio carece de métricas para evaluar bienestar.",
+  "recomendaciones": [
+    "Realizar censo indígena local para actualizar datos demográficos y territoriales, dado que la población registrada (23 personas) es mínima y dispersa.",
+    "Iniciar proceso de titulación de resguardos para los 7 pueblos identificados, especialmente Cañamomo-Lomaprieta (9 personas), garantizando protección colectiva.",
+    "Implementar sistema de monitoreo en salud y discapacidad con enfoque diferencial, considerando el promedio nacional de 60.0% en discapacidades.",
+    "Documentar lenguas indígenas presentes en el municipio para preservar la diversidad cultural, ante la ausencia actual de datos.",
+    "Fortalecer registros de violencia en territorios indígenas de Quindío, pese a los 0 casos reportados, dado el bajo n=23 que limita la confiabilidad."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Guayabero de la María, territorio del pueblo Jiw-Guayabero en el Guaviare, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 495.388 hectáreas, este territorio enfrenta vacíos críticos en datos básicos como lengua, NBI y discapacidad. La ausencia de registros poblacionales y de víctimas en el RUV sugiere limitaciones en la cobertura de sistemas de información territorial.",
+  "demografia": "Los datos demográficos para este resguardo no están disponibles en las fuentes consultadas (n=0). Esta ausencia de información impide analizar la pirámide etaria o su dinámica poblacional. Se requiere cruzar registros administrativos con metodologías participativas indígenas para subsanar este vacío.",
+  "prevalencia": "No se cuenta con datos de prevalencia de enfermedades o condiciones de salud para este resguardo. Los sistemas de salud no registran información desagregada a nivel de resguardo, lo que limita el análisis de sub-registros. La falta de datos confiables (n < 30) impide cualquier afirmación sobre patrones de morbilidad.",
+  "territorial": "El resguardo Guayabero de la María tiene un área de 495.388 hectáreas en el municipio de San José del Guaviare. Su ubicación en la Amazonía lo sitúa en una zona de alta vulnerabilidad ecológica y presión extractiva. La delimitación territorial no coincide con registros poblacionales, generando inconsistencias en la gestión del territorio.",
+  "lengua": "Los datos sobre lengua para este resguardo no están disponibles. No se cuenta con información sobre el uso de la lengua Jiw-Guayabero en el territorio, lo que dificulta evaluar la vitalidad cultural y las estrategias de revitalización lingüística necesarias.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI (67.6%) no puede contrastarse con datos locales. Esta ausencia de información impide medir brechas en acceso a servicios básicos como agua, educación o vivienda.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en este resguardo según el RUV (n=0). La ausencia de hechos victimizantes reportados no implica ausencia de violencia, sino limitaciones en la sistematización de datos. Se requieren mecanismos de registro comunitario para visibilizar afectaciones territoriales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Guayabero de la María es 0.0, con todos sus componentes en 0.0. Esta métrica refleja la falta de datos desagregados en NBI, prevalencia y conflicto, imposibilitando un diagnóstico integral. La fórmula aplicada no puede calcularse sin información confiable.",
+  "recomendaciones": [
+    "Realizar un censo comunitario participativo para actualizar datos demográficos y de población, dado que los registros oficiales muestran n=0 (poblacion_total: 0).",
+    "Implementar un sistema de registro de lengua Jiw-Guayabero en coordinación con la OPIAC para documentar vitalidad cultural (lengua: _sin_datos).",
+    "Diseñar un protocolo de recolección de datos de NBI con enfoque territorial, usando metodologías propias del pueblo Jiw-Guayabero (nbi: _sin_datos).",
+    "Establecer un observatorio de conflicto con participación comunitaria para registrar afectaciones no visibles en sistemas oficiales (victimas_total_disc: 0).",
+    "Priorizar la titulación y protección del territorio ante presiones extractivas, dado su área de 495.388 hectáreas y ubicación en Amazonía (territorial: area_hectareas: 495.388)."
+  ]
+}

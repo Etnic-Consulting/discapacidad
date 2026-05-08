@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Vetas reporta una población indígena de 1 habitante según CNPV 2018, concentrada en la categoría 'INDIGENA-SIN-INFORMACION'. La ausencia de resguardos y datos de lengua refleja una invisibilización estructural. La falta de información sobre NBI, conflicto y capacidades diversas limita el análisis, pero evidencia vacíos críticos en la caracterización territorial indígena.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la n=1. Solo se registra 1 habitante indígena sin desagregación por edad o género. Los datos demográficos a este nivel no permiten análisis comparativos ni identificación de grupos etarios vulnerables. La confiabilidad es alta (n=1), pero la representatividad es nula.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Vetas. Los sistemas de salud no capturan información indígena a nivel municipal, lo que impide evaluar necesidades específicas. El sub-registro es total, ocultando posibles emergencias sanitarias en la población existente.",
+  "territorial": "Vetas no cuenta con resguardos indígenas, pese a tener un territorio delimitado geográficamente. La ausencia de resguardos contrasta con la presencia de población indígena mínima, sugiriendo procesos de despojo o falta de reconocimiento legal. La dispersión geográfica es irrelevante al no existir territorios colectivos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se registra información sobre lenguas indígenas habladas, lo que impide evaluar vitalidad cultural o procesos de pérdida lingüística. La invisibilización lingüística es un patrón en municipios con población indígena mínima.",
+  "vida": "No hay datos de NBI para Vetas, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros territorios. La brecha con el promedio nacional no puede calcularse, pero la ausencia de registros sugiere exclusión de políticas sociales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Vetas entre 1985-2024. La ausencia de hechos violentos no implica paz, sino falta de sistematización de datos. El RUV no captura violencia en municipios con población indígena residual, ocultando posibles afectaciones.",
+  "icv": "El ICV de Vetas es 0.0, con componentes nulos en NBI, prevalencia y conflicto. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja cero al no existir datos. La posición relativa es indeterminable por falta de información, pero refleja exclusión en indicadores sociales.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para identificar población oculta, citando la cifra de 1 habitante en CNPV 2018.",
+    "Sistematizar datos de NBI y conflicto en municipios con población indígena mínima, usando el promedio nacional 67.6% como línea base.",
+    "Reconocer territorios indígenas en Vetas mediante procesos de titulación colectiva, dado que no existen resguardos pese a presencia indígena.",
+    "Incluir lengua y capacidades diversas en registros municipales, priorizando pueblos sin información como 'INDIGENA-SIN-INFORMACION'.",
+    "Articular con ONIC para diseñar políticas de visibilización de pueblos invisibilizados, considerando la n=1 como alerta de exclusión."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Santa María (Boyacá) registra ausencia de datos oficiales sobre población indígena en el CNPV 2018 (n=0, confiabilidad NO_CONFIABLE). Esta brecha impide evaluar su presencia territorial y condiciones de vida. La falta de registros en resguardos, lengua y NBI confirma un vacío crítico en la caracterización sociodemográfica indígena a nivel municipal.",
+  "demografia": "No se dispone de datos confiables sobre población indígena en Santa María (n=0, confiabilidad NO_CONFIABLE). La pirámide etaria no puede analizarse sin registros poblacionales. Esta omisión refleja debilidades en los sistemas de información territorial que invisibilizan a posibles comunidades indígenas en el municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Santa María (sin datos a nivel municipal). El promedio indígena nacional del 60% no puede contrastarse localmente. La ausencia de registros limita cualquier análisis de sub-registro o necesidades específicas en el municipio.",
+  "territorial": "Santa María no cuenta con resguardos indígenas registrados (n=0). La bbox geográfica delimita un área sin presencia territorial colectiva reconocida. Esta situación contrasta con la existencia de resguardos en departamentos cercanos, evidenciando una posible debilidad en la titulación o reconocimiento de territorios indígenas en Boyacá.",
+  "lengua": "Los datos de lengua no están disponibles para Santa María (sin datos). No es posible identificar lenguas indígenas presentes ni su vitalidad cultural. Esta carencia impide diseñar políticas de revitalización lingüística adaptadas al contexto local.",
+  "vida": "No hay información sobre NBI en Santa María (sin datos). El promedio indígena nacional del 67.6% no puede compararse localmente. La falta de registros dificulta evaluar brechas en condiciones de vida y priorizar intervenciones sociales para posibles comunidades indígenas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Santa María entre 1985-2024 (n=0, confiabilidad CONFIABLE). La ausencia de hechos violentos reportados no descarta sub-registro. Esta situación podría reflejar tanto baja incidencia como limitaciones en la sistematización de datos de conflicto a nivel municipal.",
+  "icv": "El ICV de Santa María es 0.0, con componentes normalizados en cero (nbi_norm, prevalencia_norm, conflicto_norm). La fórmula del ICV (0.4*nbi + 0.3*prev + 0.3*conflicto) no puede calcularse sin datos. Este resultado subraya la urgencia de mejorar la recolección de información para evaluar el bienestar indígena.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con metodologías participativas para superar la omisión en el CNPV 2018 (n=0, confiabilidad NO_CONFIABLE).",
+    "Implementar un sistema de registro de resguardos y territorios colectivos en Boyacá para identificar posibles comunidades no tituladas (n_resguardos=0).",
+    "Diseñar un protocolo de recolección de datos de NBI y lengua en municipios sin información, alineado con el promedio indígena nacional 67.6%.",
+    "Fortalecer la sistematización de víctimas de conflicto en municipios con n=0, cruzando bases de datos locales y nacionales para detectar sub-registro.",
+    "Priorizar Santa María en programas de titulación territorial y revitalización cultural, dada la ausencia de resguardos y datos lingüísticos (sin datos en lengua)."
+  ]
+}

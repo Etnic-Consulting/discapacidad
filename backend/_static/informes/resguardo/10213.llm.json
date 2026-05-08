@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Polindara, territorio Nasa en el Cauca, alberga 2,029 habitantes según datos DANE-CNPV 2018. Con 2,168.34 hectáreas, su área geográfica se ubica en Totoró, macrorregión Occidente. La ausencia de datos sobre discapacidad, NBI y lengua limita el análisis integral, aunque su población total y ubicación territorial están claramente definidas.",
+  "demografia": "La población total de Polindara asciende a 2,029 habitantes, con datos confiables según DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel de desagregación. La falta de datos demográficos detallados impide evaluar dinámicas generacionales o presión territorial en el resguardo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Polindara. La sección se marca explícitamente como sin datos, lo que imposibilita analizar carga de morbilidad o acceso a servicios. Se requiere sistematización local para subsanar este vacío informativo crítico.",
+  "territorial": "Polindara ocupa 2,168.34 hectáreas en Totoró, Cauca, con coordenadas geográficas precisas. Su ubicación en la macrorregión Occidente y el departamento del Cauca lo sitúa en un contexto de alta presencia indígena. La delimitación territorial está claramente establecida, aunque sin análisis de presión demográfica o fragmentación.",
+  "lengua": "Los datos sobre lengua en Polindara no están disponibles. No se registra información sobre uso de la lengua Nasa ni su vitalidad cultural en este territorio. La ausencia de datos lingüísticos impide evaluar la transmisión intergeneracional o estrategias de revitalización cultural.",
+  "vida": "No se reportan datos de NBI para Polindara, aunque el promedio indígena nacional es 67.6%. La sección se marca sin datos, lo que imposibilita comparar condiciones de vida con estándares nacionales. Se requiere levantar información local para dimensionar brechas en acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en Polindara entre 1985-2024. El dato de cero víctimas es confiable pero no refleja necesariamente la realidad, dado el subregistro histórico en territorios indígenas. La ausencia de hechos victimizantes reportados sugiere silencio estadístico más que paz territorial.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de Polindara es 0.0, calculado con componentes normalizados en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm no puede aplicarse por falta de datos. Este resultado refleja vacíos informativos, no condiciones reales de vida.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de discapacidad y NBI en Polindara, alineado con metodologías ONIC, para superar la ausencia de datos críticos (promedio indígena nacional NBI 67.6%).",
+    "Realizar un censo lingüístico en el resguardo para documentar uso de la lengua Nasa y diseñar planes de revitalización cultural con participación comunitaria.",
+    "Establecer un observatorio territorial en Totoró que sistematice datos de salud, conflicto y condiciones de vida, priorizando indicadores con enfoque diferencial indígena.",
+    "Fortalecer alianzas con el CRIC para articular Polindara con estrategias regionales de incidencia política en Cauca y Occidente.",
+    "Promover investigaciones participativas con la comunidad Nasa para generar datos propios que complementen las fuentes oficiales y reduzcan el subregistro."
+  ]
+}

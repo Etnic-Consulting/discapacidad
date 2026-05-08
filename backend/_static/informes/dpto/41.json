@@ -1,0 +1,344 @@
+{
+  "tipo": "dpto",
+  "id": "41",
+  "nombre": "HUILA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 12120,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 12120,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1023,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1023,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 12120,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 84.4,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "500",
+          "con_disc": 313,
+          "total": 5655
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 233,
+          "total": 2491
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 229,
+          "total": 1381
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 70,
+          "total": 949
+        },
+        {
+          "cod_pueblo": "270",
+          "con_disc": 58,
+          "total": 586
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 44,
+          "total": 273
+        },
+        {
+          "cod_pueblo": "505",
+          "con_disc": 31,
+          "total": 158
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 22,
+          "total": 192
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 3,
+          "total": 35
+        },
+        {
+          "cod_pueblo": "730",
+          "con_disc": 2,
+          "total": 26
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 23,
+      "resguardos": [
+        {
+          "nombre": "LA GAITANA",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "MISAK Y NASA",
+          "area_pg_ha": 8893.052
+        },
+        {
+          "nombre": "HUILA",
+          "mpio": "ÍQUIRA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1836.882
+        },
+        {
+          "nombre": "TAMA DEL CAGUÁN",
+          "mpio": "RIVERA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 950.191
+        },
+        {
+          "nombre": "NAM MISAK",
+          "mpio": "LA ARGENTINA",
+          "pueblo_onic": "MISAK",
+          "area_pg_ha": 840.137
+        },
+        {
+          "nombre": "TAMA - PAEZ LA GABRIELA",
+          "mpio": "NEIVA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 563.278
+        },
+        {
+          "nombre": "FIIL VIST LA GRAN PERDIZ",
+          "mpio": "SAN AGUSTÍN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 495.562
+        },
+        {
+          "nombre": "LLANO BUCO BUKJ UKUE",
+          "mpio": "NÁTAGA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 464.491
+        },
+        {
+          "nombre": "LA ESTACIÓN TÁLAGA",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 405.796
+        },
+        {
+          "nombre": "PICKWE IKH",
+          "mpio": "LA ARGENTINA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 374.369
+        },
+        {
+          "nombre": "CABILDO SAN MIGUEL",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 324.458
+        },
+        {
+          "nombre": "NUEVO AMANECER - LA MESETA",
+          "mpio": "LA ARGENTINA",
+          "pueblo_onic": "MISAK",
+          "area_pg_ha": 312.308
+        },
+        {
+          "nombre": "RUMIYACO",
+          "mpio": "PITALITO",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 293.19
+        },
+        {
+          "nombre": "POTRERITO",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 289.844
+        },
+        {
+          "nombre": "LA TATACOA",
+          "mpio": "VILLAVIEJA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 287.574
+        },
+        {
+          "nombre": "SAN AGUSTÍN",
+          "mpio": "SAN AGUSTÍN",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 212.192
+        },
+        {
+          "nombre": "BACHÉ",
+          "mpio": "PALERMO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 197.781
+        },
+        {
+          "nombre": "EL ROSAL (YANACONA)",
+          "mpio": "OPORAPA",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 158.44
+        },
+        {
+          "nombre": "LA REFORMA",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 148.67
+        },
+        {
+          "nombre": "SAN JOSÉ DE ISNOS",
+          "mpio": "ISNOS",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 108.029
+        },
+        {
+          "nombre": "CABILDO INTILLAGTA HIJOS DEL SOL",
+          "mpio": "PITALITO",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 90.443
+        },
+        {
+          "nombre": "CABILDO INDÍGENA CASICA IBANASCA",
+          "mpio": "SAN AGUSTÍN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 71.986
+        },
+        {
+          "nombre": "LA NUEVA ESPERANZA",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 70.485
+        },
+        {
+          "nombre": "COMUNIDAD FIW PAEZ (NUEVA IRLANDA)",
+          "mpio": "LA PLATA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 32.904
+        }
+      ],
+      "bbox": [
+        1.552125171109251,
+        -76.62466264386802,
+        3.843208042768306,
+        -74.4130317915899
+      ],
+      "nombre_dpto": "HUILA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 426,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 426,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 291
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 59
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 27
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 16
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 11
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 5
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 5
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 5
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 3
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 291
+      },
+      "pct_hecho_principal": 68.3
+    },
+    "icv": {
+      "score": 0.152,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.422,
+        "conflicto_norm": 0.085
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:49:39",
+  "periodo": "2018",
+  "_input_hash": "f6fdece506f41689"
+}

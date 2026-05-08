@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Aquitania (Boyacá) concentra una población indígena de 9 personas según CNPV 2018, distribuidas en 5 pueblos. El 44.4% (4 personas) corresponde a indígenas venezolanos, evidenciando movilidad transfronteriza. La ausencia de resguardos y datos de NBI o lengua refleja vacíos en el registro territorial y socioeconómico, limitando la planificación diferenciada.",
+  "demografia": "La pirámide etaria no aplica por el bajo n=9. La población se distribuye en 5 pueblos, con predominio de indígenas venezolanos (4 personas). La dispersión poblacional y la falta de datos de capacidades diversas impiden análisis de vulnerabilidad por grupo etario o discapacidad.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La ausencia de registros en salud indígena y conflicto (victimas_total_disc=0) sugiere sub-registro o falta de sistematización de información a nivel local. Se requiere fortalecer la recolección de datos primarios.",
+  "territorial": "Aquitania carece de resguardos indígenas (n_resguardos=0), pese a su bbox en Boyacá. La ausencia de territorios colectivos limita la aplicación de derechos territoriales y políticas de autonomía. La dispersión geográfica de la población (5 pueblos) dificulta la concentración de acciones institucionales.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. La falta de registros lingüísticos impide evaluar la vitalidad cultural y priorizar la revitalización de lenguas nativas en la zona.",
+  "vida": "El NBI no está disponible para Aquitania. El promedio indígena nacional de 67.6% contrasta con la ausencia de datos locales, invisibilizando brechas socioeconómicas. La falta de información impide comparar condiciones de vida con otros municipios o pueblos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Aquitania (victimas_total_disc=0) entre 1985-2024. La ausencia de hechos victimizantes reportados puede reflejar sub-registro o baja incidencia, pero también falta de mecanismos de denuncia y acompañamiento territorial.",
+  "icv": "El ICV de Aquitania es 0.0, con componentes en cero por falta de datos. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse, lo que invalida comparaciones con otros territorios. Se requiere priorizar la recolección de datos básicos.",
+  "recomendaciones": [
+    "Realizar censo indígena local con enfoque diferencial para actualizar datos demográficos y socioeconómicos, priorizando la identificación de pueblos en movilidad como los venezolanos (4 personas).",
+    "Establecer un sistema de registro de víctimas y hechos de conflicto en coordinación con la ONIC y autoridades locales para superar el sub-registro actual.",
+    "Promover la creación de resguardos o figuras de protección territorial en Aquitania, considerando la ausencia actual (n_resguardos=0) y la necesidad de garantizar derechos colectivos.",
+    "Incluir en el Plan de Desarrollo Municipal un componente de revitalización cultural que aborde la falta de datos de lengua y promueva la identidad indígena.",
+    "Articular con el Ministerio de Salud y la IPS indígena para generar información de prevalencia y NBI, superando la ausencia actual y permitiendo comparaciones con el promedio nacional (67.6%)."
+  ]
+}

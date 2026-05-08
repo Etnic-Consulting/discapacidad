@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Aldana (Nariño) registra una población indígena de 5.352 personas según CNPV 2018, donde el 99.98% pertenece al pueblo Pastos. La ausencia de resguardos indígenas en el territorio contrasta con la alta concentración poblacional de este pueblo en la zona. La violencia histórica se evidencia con 26 víctimas de conflicto armado, donde el desplazamiento forzado representa el 34.6% de los casos, señalando riesgos persistentes para la integridad territorial y cultural.",
+  "demografia": "La pirámide etaria no puede analizarse por falta de datos desagregados por edad. Sin embargo, se observa una población predominantemente adulta, con 5.351 personas Pastos (99.98%) y solo 1 Carapana. La ausencia de datos sobre capacidades diversas impide evaluar vulnerabilidades específicas en el municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en Aldana. La falta de información a nivel municipal limita el análisis de morbilidad y acceso a servicios de salud. Se requiere fortalecer sistemas de registro local para identificar necesidades prioritarias en salud pública.",
+  "territorial": "Aldana carece de resguardos indígenas, a pesar de ser territorio histórico del pueblo Pastos. La ausencia de territorios colectivos formalizados dificulta la protección legal y el ejercicio de autonomía. La dispersión geográfica se limita a un área acotada (bbox), sin presencia de otros pueblos indígenas en el municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles para Aldana. No se puede determinar el estado de vitalidad lingüística del pueblo Pastos en este territorio, lo que obstaculiza políticas de revitalización cultural.",
+  "vida": "No hay datos de NBI para Aldana, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros territorios. Se requiere generar indicadores locales para priorizar intervenciones en pobreza y acceso a servicios básicos.",
+  "conflicto": "Se registran 26 víctimas de conflicto armado en Aldana (1985-2024), con desplazamiento forzado como principal hecho victimizante (34.6%). La violencia sistemática contra el pueblo Pastos refleja la persistencia de actores armados en la zona, amenazando su seguridad y territorio.",
+  "icv": "El ICV de Aldana es 0.002, con conflicto como dimensión dominante (0.005). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.005), ubicando al municipio en una posición crítica. La baja puntuación evidencia la urgencia de abordar la violencia y sus efectos territoriales.",
+  "recomendaciones": [
+    "Formalizar al menos un resguardo indígena para el pueblo Pastos, garantizando su derecho a la tierra y autonomía según CNPV 2018 (5.351 personas).",
+    "Implementar un sistema de alertas tempranas para prevenir desplazamiento forzado, principal hecho victimizante (9 casos).",
+    "Generar datos desagregados por edad y lengua para diseñar políticas de salud y educación culturalmente pertinentes.",
+    "Incluir a Aldana en programas de reparación colectiva, considerando los 26 víctimas de conflicto registradas.",
+    "Priorizar inversiones en infraestructura básica (agua, salud) para reducir brechas con el promedio indígena nacional de NBI (67.6%)."
+  ]
+}

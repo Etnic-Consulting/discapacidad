@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Gualmatán registra una población indígena de 79 personas según el CNPV 2018, concentrada mayoritariamente en el pueblo PASTOS (72 personas). El municipio carece de resguardos indígenas y presenta un ICV de 0.0, reflejando condiciones críticas en NBI, prevalencia y conflicto. La única víctima de desplazamiento forzado en el RUV (1985-2024) evidencia vulnerabilidad territorial.",
+  "demografia": "La pirámide etaria de Gualmatán muestra una población indígena envejecida, con 72 personas mayores de 30 años (91.1%) y solo 7 menores de 15 años (8.9%). La predominancia del pueblo PASTOS (91.1% de la población) refleja una alta homogeneidad étnica sin diversificación generacional. No hay datos de capacidades diversas para analizar brechas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en el municipio. La falta de registros específicos impide evaluar el sub-registro o patrones de morbilidad. Se requiere sistematización de información epidemiológica indígena a nivel local para priorizar intervenciones.",
+  "territorial": "Gualmatán no cuenta con resguardos indígenas, a pesar de ser territorio histórico del pueblo PASTOS. La ausencia de territorios colectivos (0 resguardos) limita la autonomía y protección legal. La dispersión geográfica en un área de 0.08 grados cuadrados sugiere fragmentación sin reconocimiento formal.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar el uso de lenguas nativas ni su vitalidad cultural en el territorio. Se requiere incluir indicadores lingüísticos en censos locales para preservar la diversidad cultural.",
+  "vida": "No hay datos de NBI para Gualmatán, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida. La brecha con el promedio nacional no puede calcularse, pero la ausencia de resguardos sugiere exclusión territorial.",
+  "conflicto": "Gualmatán registra 1 víctima de desplazamiento forzado (1985-2024), correspondiente al 100% de los hechos violentos en el RUV. Este patrón refleja la exposición del pueblo PASTOS a dinámicas de violencia sin mecanismos de protección efectivos. La cifra subraya la urgencia de garantizar derechos territoriales.",
+  "icv": "El ICV de Gualmatán es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm evidencia condiciones extremas en todas las dimensiones. La posición relativa es crítica frente a otros municipios con ICV superiores.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento de al menos un resguardo indígena para el pueblo PASTOS, citando la ausencia actual de territorios colectivos (0 resguardos) y el ICV de 0.0.",
+    "Implementar un sistema de registro epidemiológico indígena local, dado que no hay datos de prevalencia disponibles y el ICV depende de este componente.",
+    "Priorizar la protección contra desplazamiento forzado para el pueblo PASTOS, considerando que el 100% de las víctimas en el RUV (1 persona) pertenecen a este pueblo.",
+    "Incluir indicadores de lengua indígena en el CNPV municipal, ya que no hay datos disponibles y el pueblo PASTOS tiene presencia histórica.",
+    "Articular con la gobernación de Nariño (código 52) para articular políticas de NBI, dado que no hay datos locales y el promedio indígena nacional es 67.6%."
+  ]
+}

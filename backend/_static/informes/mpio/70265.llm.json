@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guaranda (Sucre) concentra una población indígena de 29 personas según CNPV 2018, donde el 82.8% pertenece al pueblo Zenú (24 personas). La ausencia de resguardos registrados y datos de NBI o lengua refleja vacíos en el reconocimiento territorial. El desplazamiento forzado afecta al 83.3% de las 6 víctimas de conflicto registradas entre 1985-2024, evidenciando vulnerabilidad persistente.",
+  "demografia": "La población indígena de Guaranda presenta una estructura atípica: 24 Zenú (82.8%), seguidos por Wayúu (6.9%), Ette-E’neka, Yuruti y Kankuamo con 1 persona cada uno. La dispersión demográfica y la ausencia de datos de capacidades diversas limitan el análisis de pirámide etaria. La muestra reducida (n=29) impide generalizaciones robustas.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para Guaranda. Los registros de conflicto muestran 6 víctimas, con desplazamiento forzado como hecho principal (5 casos, 83.3%). La falta de información sobre morbilidad subraya la necesidad de sistemas de vigilancia territorial diferenciados.",
+  "territorial": "Guaranda carece de resguardos indígenas registrados, pese a su bbox geográfico en Sucre. La concentración poblacional en el pueblo Zenú (24/29) contrasta con la ausencia de estructuras territoriales colectivas. La dispersión geográfica y la falta de datos de NBI o lengua refuerzan la invisibilización institucional.",
+  "lengua": "Los datos sobre lengua indígena en Guaranda no están disponibles. Esta omisión impide evaluar la vitalidad lingüística de los pueblos presentes, especialmente del pueblo Zenú, mayoritario en el municipio.",
+  "vida": "No hay datos de NBI para Guaranda, aunque el promedio indígena nacional es 67.6%. La ausencia de registros oficiales oculta las condiciones de vida de la población indígena local. La brecha con el promedio nacional no puede cuantificarse sin información primaria.",
+  "conflicto": "Se registraron 6 víctimas de conflicto en Guaranda (1985-2024), con desplazamiento forzado como hecho principal (5 casos, 83.3%). El homicidio (1 caso) completa el perfil de violencia. La baja n (6) y la concentración en un solo hecho limitan análisis comparativos.",
+  "icv": "El ICV de Guaranda es 0.0, con componentes en cero excepto conflicto_norm (0.001). La fórmula refleja la ausencia de datos de NBI y prevalencia, destacando la debilidad en indicadores sociales. La posición relativa es indeterminada por falta de comparadores confiables.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, citando la concentración Zenú (24/29).",
+    "Implementar sistema de alerta temprana para desplazamiento forzado, priorizando Guaranda por el 83.3% de casos registrados (5/6).",
+    "Garantizar acceso a salud con enfoque intercultural, ante la ausencia de datos de prevalencia y morbilidad en la población indígena.",
+    "Promover el reconocimiento de resguardos indígenas en Guaranda, considerando la bbox geográfica y la población Zenú mayoritaria.",
+    "Articular con la ONIC para incluir Guaranda en planes de fortalecimiento lingüístico, dado que no hay datos sobre lengua indígena."
+  ]
+}

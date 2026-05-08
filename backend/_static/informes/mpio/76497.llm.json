@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Obando registra una población indígena de 207 personas según el CNPV 2018, distribuida en 13 pueblos. El 62.8% (130 personas) pertenece al pueblo EMBERA-CHAMI, evidenciando una alta concentración étnica. La ausencia de resguardos en el territorio contrasta con la diversidad poblacional, lo que sugiere una dinámica de ocupación dispersa y sin reconocimiento legal colectivo.",
+  "demografia": "La pirámide etaria del municipio muestra una población predominantemente adulta, con 130 personas mayores de 18 años (62.8%) y solo 20 menores de 10 años (9.7%). Esta estructura refleja migración juvenil y envejecimiento poblacional. Los datos no permiten analizar razones específicas por falta de desagregación etaria en el JSON.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades en Obando. Los KPIs de salud pública a nivel municipal no están disponibles en este informe. Se recomienda priorizar la generación de registros epidemiológicos locales para identificar necesidades prioritarias.",
+  "territorial": "Obando carece de resguardos indígenas, a pesar de albergar 13 pueblos distintos. La dispersión geográfica se confirma con una bounding box que cubre 139.99 km², pero sin territorios colectivos reconocidos. La ausencia de resguardos limita la protección jurídica y el acceso a derechos territoriales.",
+  "lengua": "Los datos sobre lenguas indígenas en Obando no están disponibles en este informe. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes por pueblo.",
+  "vida": "No hay datos de NBI disponibles para Obando. El promedio indígena nacional (67.6%) no puede contrastarse localmente. Esta limitación impide evaluar brechas socioeconómicas y diseñar intervenciones específicas para la población indígena del municipio.",
+  "conflicto": "Se registraron 8 víctimas de violencia en Obando entre 1985-2024, con el 75% (6 casos) por desplazamiento forzado. Este patrón refleja la vulnerabilidad territorial del municipio frente a dinámicas de conflicto armado. La cifra subestima la realidad por posibles subregistros en el RUV.",
+  "icv": "El ICV de Obando es 0.0, con todos sus componentes en cero excepto conflicto (0.002). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), lo que evidencia una situación crítica en múltiples dimensiones. Este resultado posiciona al municipio en el peor escenario posible.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para el pueblo EMBERA-CHAMI (130 personas) como mecanismo de protección territorial y cultural.",
+    "Implementar un sistema de registro epidemiológico local para superar la falta de datos en salud y prevalencia.",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado (6 casos, 75%) con enfoque diferencial étnico.",
+    "Articular con la gobernación del Valle del Cauca para incluir a Obando en planes departamentales de acceso a agua potable y educación intercultural.",
+    "Fortalecer la participación indígena en el consejo municipal de planeación para garantizar representación en políticas públicas locales."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Río Alto de San Juan, territorio colectivo del pueblo Zenú en Antioquia, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 107.337 hectáreas, este territorio enfrenta vacíos críticos en información básica como lengua y NBI. La ausencia de datos demográficos y de bienestar social limita la planificación territorial, pese a su reconocimiento como resguardo indígena.",
+  "demografia": "Los datos demográficos oficiales para este resguardo reportan 0 habitantes (n=0), lo que imposibilita un análisis de pirámide etaria. Esta limitación refleja fallas en la sistematización de información territorial indígena en fuentes oficiales. La ausencia de registros poblacionales dificulta la identificación de necesidades etarias específicas.",
+  "prevalencia": "No se dispone de datos de prevalencia de condiciones de salud o discapacidad para este resguardo (fuente: _sin_datos). La falta de información impide evaluar cargas de enfermedad o acceso a servicios. Se requiere cruce con registros locales o comunitarios para superar el sub-registro institucional.",
+  "territorial": "El resguardo abarca 107.337 hectáreas en San Pedro de Urabá, Antioquia, con coordenadas geográficas definidas. Su extensión contrasta con la ausencia de datos poblacionales, sugiriendo posible desactualización cartográfica o vacíos en la delimitación física. La dispersión en 3 comunidades (Ebano Tacanal, El Polvillo, Naranjal) no se refleja en estadísticas oficiales.",
+  "lengua": "No hay datos disponibles sobre lengua en este resguardo (fuente: _sin_datos). La ausencia de registros lingüísticos impide evaluar vitalidad cultural o procesos de revitalización. Se recomienda priorizar levantamientos comunitarios para documentar prácticas lingüísticas del pueblo Zenú.",
+  "vida": "No se reportan datos de NBI para este resguardo (fuente: _sin_datos), pese al promedio indígena nacional de 67.6%. La brecha con este indicador no puede calcularse. Esta omisión subraya la necesidad de sistemas de monitoreo que incluyan indicadores sociales territoriales.",
+  "conflicto": "No se registran víctimas con discapacidad en este resguardo entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino falta de sistematización. Se requiere fortalecer registros locales para identificar patrones de violencia estructural en territorios indígenas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, derivado de componentes nulos en NBI, prevalencia y conflicto. Esta métrica refleja la carencia de datos más que condiciones reales. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no es interpretable sin información confiable.",
+  "recomendaciones": [
+    "Realizar censo comunitario para actualizar datos demográficos y superar el vacío poblacional (población total=0).",
+    "Implementar sistema de registro de lengua para documentar vitalidad cultural del pueblo Zenú en las 3 comunidades del resguardo.",
+    "Diseñar mecanismo de monitoreo de NBI con participación indígena, usando el promedio nacional 67.6% como línea base.",
+    "Fortalecer bases de datos locales de conflicto para registrar victimizaciones no capturadas por sistemas nacionales (n=0 víctimas).",
+    "Priorizar articulación con DANE para incluir resguardos en censos oficiales, garantizando representación territorial."
+  ]
+}

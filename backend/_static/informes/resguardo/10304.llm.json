@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Peñas del Olvido, territorio Emberá Chamí en Chocó, registra una población total de 3 habitantes según datos DANE-CNPV 2018. Con un área de 246.24 hectáreas, su ICV es 0.0, reflejando condiciones críticas en NBI, prevalencia y conflicto. La ausencia de datos en lengua, NBI y capacidades diversas limita el análisis integral, pero evidencia la urgencia de atención estatal diferenciada para este pequeño territorio colectivo.",
+  "demografia": "La pirámide etaria no aplica para este resguardo debido a su población total de 3 habitantes. Los datos demográficos a este nivel no permiten análisis de estructura por edad o género. Se requiere cruce con fuentes comunitarias para validar la población real, dado el posible subregistro en fuentes oficiales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. Los sistemas de información no capturan indicadores sanitarios a nivel de territorio colectivo indígena. Esto impide evaluar necesidades específicas en salud pública para la población Emberá Chamí residente.",
+  "territorial": "Peñas del Olvido tiene un área de 246.24 hectáreas en el municipio de Medio San Juan, Chocó. Su delimitación geográfica es precisa (bbox validada), pero la dispersión poblacional es extrema al concentrar solo 3 habitantes en un territorio extenso. Esto refleja patrones de abandono estatal y presión sobre tierras ancestrales.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar la vitalidad del Emberá Chamí en el territorio ni su uso en la vida cotidiana de sus habitantes. Se recomienda priorizar registros lingüísticos comunitarios para preservar este patrimonio cultural.",
+  "vida": "No hay información sobre NBI para este resguardo. El promedio indígena nacional es 67.6%, pero sin datos locales no se puede calcular la brecha específica. La ausencia de indicadores socioeconómicos impide diseñar estrategias de desarrollo diferencial para este territorio Emberá Chamí.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en este resguardo (0 casos entre 1985-2024). La ausencia de hechos victimizantes no implica paz, sino falta de visibilización en sistemas de información. Se requiere fortalecer mecanismos de denuncia y protección territorial.",
+  "icv": "El ICV de 0.0 en Peñas del Olvido es resultado de componentes nulos en NBI, prevalencia y conflicto. Este indicador sintetiza la extrema vulnerabilidad del territorio, donde todos los ejes de desarrollo están en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm confirma condiciones de desprotección total.",
+  "recomendaciones": [
+    "Priorizar censo comunitario para validar población real y evitar subregistro en fuentes oficiales, citando la cifra de 3 habitantes del DANE-CNPV 2018.",
+    "Implementar brigadas móviles de salud intercultural para Peñas del Olvido, dado que no hay datos de prevalencia y el ICV en salud es 0.0.",
+    "Diseñar un plan de protección territorial específico para el resguardo, considerando su área de 246.24 hectáreas y la ausencia de víctimas registradas en el RUV.",
+    "Restablecer el uso de la lengua Emberá Chamí en el territorio mediante programas educativos comunitarios, ante la falta de datos lingüísticos oficiales.",
+    "Incluir a Peñas del Olvido en el Plan de Desarrollo con Enfoque Diferencial del Chocó, usando el ICV de 0.0 como criterio de priorización."
+  ]
+}

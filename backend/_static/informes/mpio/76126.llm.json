@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Caliima presenta una población indígena de 149 personas según CNPV 2018, concentrada en un solo resguardo de 320.135 hectáreas. El 75.8% pertenece al pueblo EMBERA-CHAMÍ, evidenciando alta homogeneidad étnica. La vulnerabilidad se refleja en 16 víctimas de conflicto con discapacidad entre 1985-2024, donde el desplazamiento forzado representa el 50% de los casos.",
+  "demografia": "La población indígena de Caliima tiene una estructura etaria concentrada en adultos (113 EMBERA-CHAMÍ), con solo 5 Nasa y 3 Wayuu. La pirámide muestra ausencia de datos para menores de 15 años y adultos mayores, limitando el análisis generacional. La n=149 impide conclusiones robustas sobre dinámicas poblacionales.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles para este municipio. La falta de registros específicos impide evaluar la carga de enfermedades crónicas o condiciones de discapacidad en la población indígena local. Se requiere desagregación por pueblo para análisis confiable.",
+  "territorial": "Existe un único resguardo (NAVERA DRUA) de 320.135 ha que alberga al 75.8% de la población indígena. La dispersión geográfica es mínima, con un bbox que abarca áreas urbanas y rurales de Caliima. La concentración territorial contrasta con la diversidad de 11 pueblos registrados.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo en la población indígena de Caliima.",
+  "vida": "No hay datos disponibles sobre NBI para Caliima. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide evaluar brechas en condiciones de vida como educación, vivienda o servicios básicos.",
+  "conflicto": "Se registraron 16 víctimas de conflicto con discapacidad entre 1985-2024, con desplazamiento forzado como hecho principal (50%). Los datos muestran subregistro potencial por n=16 y período amplio. La concentración en un solo hecho refleja patrones de violencia estructural contra pueblos indígenas.",
+  "icv": "El ICV de Caliima es 0.001, con componentes normalizados en cero excepto conflicto (0.003). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), pero la ausencia de datos clave limita su interpretación. El score refleja alta vulnerabilidad no cuantificada.",
+  "recomendaciones": [
+    "Priorizar el registro de discapacidades y NBI en el resguardo NAVERA DRUA con enfoque diferencial por pueblo, citando la falta actual de datos en capacidades_diversas y nbi.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado en Caliima, dado que el 50% de las víctimas con discapacidad están asociadas a este hecho según conflicto.hecho_principal.",
+    "Realizar un censo étnico municipal desagregado por lengua y grupo de edad para superar la limitación de n=149 en demografia y lengua.",
+    "Diseñar programas de salud intercultural con enfoque en EMBERA-CHAMÍ, que representa el 75.8% de la población según pueblos_indigenas.principal.",
+    "Incluir a Caliima en estrategias regionales de protección territorial, considerando su único resguardo de 320.135 ha y la alta concentración poblacional según territorial.n_resguardos."
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "tipo": "dpto",
+  "id": "76",
+  "nombre": "VALLE DEL CAUCA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 30659,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 30659,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 2826,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 2826,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 30659,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 92.2,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "999",
+          "con_disc": 963,
+          "total": 5882
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 802,
+          "total": 10244
+        },
+        {
+          "cod_pueblo": "710",
+          "con_disc": 207,
+          "total": 2236
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 169,
+          "total": 1394
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 168,
+          "total": 4565
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 92,
+          "total": 1085
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 86,
+          "total": 1811
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 58,
+          "total": 425
+        },
+        {
+          "cod_pueblo": "900",
+          "con_disc": 35,
+          "total": 380
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 33,
+          "total": 183
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 32,
+      "resguardos": [
+        {
+          "nombre": "BURUJÓN O LA UNIÓN - SAN BERNARDO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 6349.97
+        },
+        {
+          "nombre": "TRIUNFO CRISTAL",
+          "mpio": "FLORIDA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 5851.483
+        },
+        {
+          "nombre": "PAPAYO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 3305.837
+        },
+        {
+          "nombre": "CAÑÓN DEL RÍO SANQUININÍ",
+          "mpio": "BOLÍVAR",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 2739.977
+        },
+        {
+          "nombre": "KWE´SX YU KIWE",
+          "mpio": "FLORIDA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2539.106
+        },
+        {
+          "nombre": "RÍO NAYA COMUNIDAD JOAQUINCITO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 2421.932
+        },
+        {
+          "nombre": "YU YIC KWE",
+          "mpio": "DAGUA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2410.733
+        },
+        {
+          "nombre": "CERRITO BONGO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAN",
+          "area_pg_ha": 2405.381
+        },
+        {
+          "nombre": "NUEVO PITALITO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 2272.525
+        },
+        {
+          "nombre": "CHACHAJO",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 2127.191
+        },
+        {
+          "nombre": "KWET WALA (PIEDRA GRANDE)",
+          "mpio": "PRADERA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 891.538
+        },
+        {
+          "nombre": "LA DELFINA",
+          "mpio": "DAGUA",
+          "pueblo_onic": "NASA - EMBERA CHAMI",
+          "area_pg_ha": 781.066
+        },
+        {
+          "nombre": "CHONARA HUENA",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 459.727
+        },
+        {
+          "nombre": "NAVERA DRUA",
+          "mpio": "CALIMA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 320.135
+        },
+        {
+          "nombre": "GUAYACÁN - SANTA ROSA",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 229.234
+        },
+        {
+          "nombre": "NASA THA",
+          "mpio": "FLORIDA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 187.09
+        },
+        {
+          "nombre": "EMBERA CHAMÍ CACIQUE QUERAGAMA",
+          "mpio": "BUGALAGRANDE",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 118.84
+        },
+        {
+          "nombre": "BAJO CÁCERES",
+          "mpio": "TRUJILLO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 117.087
+        },
+        {
+          "nombre": "DAI UMADAMIA",
+          "mpio": "EL DOVIO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 110.883
+        },
+        {
+          "nombre": "DOXURA",
+          "mpio": "EL CAIRO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 108.394
+        },
+        {
+          "nombre": "VANIA CHAMÍ DE ARGELIA",
+          "mpio": "ARGELIA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 89.951
+        },
+        {
+          "nombre": "NASA KWE´S KIWE",
+          "mpio": "FLORIDA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 87.141
+        },
+        {
+          "nombre": "DRUA DÓ (PORTALES DEL RÍO)",
+          "mpio": "TRUJILLO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 81.681
+        },
+        {
+          "nombre": "DACHI DRUA MUNDI",
+          "mpio": "ANSERMANUEVO",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 64.714
+        },
+        {
+          "nombre": "DACHI DRUA CHAMÍ",
+          "mpio": "TULUÁ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 55.347
+        },
+        {
+          "nombre": "RÍO DAGUA",
+          "mpio": "BUENAVENTURA",
+          "pueblo_onic": "WOUNAAN",
+          "area_pg_ha": 51.917
+        },
+        {
+          "nombre": "WASIRUMA",
+          "mpio": "VIJES",
+          "pueblo_onic": "EMBERA",
+          "area_pg_ha": 48.601
+        },
+        {
+          "nombre": "KARABIDRUA",
+          "mpio": "CAICEDONIA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 43.241
+        },
+        {
+          "nombre": "LOS NIASA",
+          "mpio": "RESTREPO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 37.332
+        },
+        {
+          "nombre": "KWES KIWE NASA",
+          "mpio": "JAMUNDÍ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 36.162
+        },
+        {
+          "nombre": "BIDUKAR MECENIA",
+          "mpio": "BUGALAGRANDE",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 20.407
+        },
+        {
+          "nombre": "ANCORE DRUA",
+          "mpio": "SEVILLA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 17.432
+        }
+      ],
+      "bbox": [
+        3.0912385250360868,
+        -77.54977284276089,
+        5.0473936132030275,
+        -75.70723569590905
+      ],
+      "nombre_dpto": "VALLE DEL CAUCA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1144,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1144,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 747
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 188
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 75
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 27
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 25
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 22
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 19
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 16
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 11
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 5
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 747
+      },
+      "pct_hecho_principal": 65.3
+    },
+    "icv": {
+      "score": 0.207,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.461,
+        "conflicto_norm": 0.229
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:56:49",
+  "periodo": "2018",
+  "_input_hash": "d36fbf2efca1ffc8"
+}

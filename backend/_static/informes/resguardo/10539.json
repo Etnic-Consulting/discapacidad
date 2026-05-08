@@ -1,0 +1,92 @@
+{
+  "tipo": "resguardo",
+  "id": "10539",
+  "nombre": "SANTA ROSA SUCUMBÍOS EL DIVISO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 145,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 145,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "SANTA ROSA SUCUMBÍOS EL DIVISO",
+      "dpto": "NARIÑO",
+      "cod_dpto": "52",
+      "mpio": "IPIALES",
+      "cod_mpio": "52356",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "KOFÁN",
+      "organizacion_nacional": "AICO",
+      "organizacion_regional": "AICO",
+      "area_hectareas": 1093.297
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        0.3731378460000201,
+        -77.15283186499994,
+        0.41459762100004127,
+        -77.11254559599996
+      ],
+      "area_hectareas": 1093.297,
+      "macro": "OCCIDENTE",
+      "dpto": "NARIÑO",
+      "mpio": "IPIALES"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:44:47",
+  "periodo": "2018",
+  "_input_hash": "b20052325d75ec68"
+}

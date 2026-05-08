@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Gramalote registra una población indígena total de 1 persona según el CNPV 2018, concentrada en el pueblo Bari. La ausencia de resguardos y datos territoriales específicos limita la visibilidad de su presencia histórica. La vulnerabilidad del territorio se refleja en un ICV de 0.0, resultado de la falta de información en componentes clave como NBI y prevalencia.",
+  "demografia": "La pirámide etaria no aplica para este nivel municipal debido a la población total de 1 individuo. Los datos demográficos agregados por pueblo no permiten análisis etario ni comparativos. Se reconoce la limitación metodológica para caracterizar dinámicas poblacionales en este contexto.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Gramalote. La sección de conflicto reporta 0 víctimas con discapacidad entre 1985-2024, cifra que carece de confiabilidad interpretativa al no alcanzar el umbral mínimo de análisis (n < 30).",
+  "territorial": "Gramalote no cuenta con resguardos indígenas registrados, lo que contrasta con su bbox municipal que abarca coordenadas entre 7.82675332234246 y 8.017620226063514 de latitud, y -72.90130389731678 a -72.74821192968687 de longitud. La ausencia de territorios colectivos limita la protección jurídica y cultural del pueblo Bari.",
+  "lengua": "Los datos sobre lenguas indígenas en Gramalote no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de la lengua Bari en el territorio municipal.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Gramalote. El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la falta de datos locales. Se reconoce la ausencia de indicadores socioeconómicos para este municipio.",
+  "conflicto": "El sistema reporta 0 víctimas indígenas con discapacidad en Gramalote entre 1985-2024. Esta cifra, aunque técnica, no refleja la realidad del conflicto armado en la región. No se identifican hechos victimizantes principales en el período analizado.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Gramalote es 0.0, derivado de la normalización de componentes sin datos (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados significativos ante la ausencia de información.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para Gramalote, priorizando la identificación del pueblo Bari y sus características demográficas, dado que la población actual (1 persona) no refleja la realidad territorial.",
+    "Incluir a Gramalote en programas de titulación de resguardos, considerando su bbox municipal y la necesidad de proteger los derechos territoriales del pueblo Bari.",
+    "Generar datos desagregados sobre NBI y prevalencia en municipios con población indígena menor a 30 personas, para evitar subregistros como el actual ICV de 0.0.",
+    "Implementar un sistema de monitoreo de víctimas con enfoque diferencial en municipios con n < 30, evitando que cifras como 0 víctimas oculten dinámicas de violencia estructural.",
+    "Articular con el pueblo Bari para documentar su presencia histórica en Gramalote y diseñar estrategias de revitalización cultural, ante la ausencia de datos sobre lengua y territorio."
+  ]
+}

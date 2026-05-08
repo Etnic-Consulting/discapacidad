@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cucutilla registra una población indígena de solo 7 personas según CNPV 2018, concentrada en dos pueblos: Makuna (4) y Wayúu (3). La ausencia de resguardos y datos de lengua refleja una presencia indígena marginal en el municipio. La vulnerabilidad territorial se confirma con un ICV de 0.0, donde todas las dimensiones normalizadas son nulas, indicando condiciones de vida críticas.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida población (n=7). Los datos demográficos muestran una distribución dispersa sin concentración etaria relevante. La confiabilidad de los datos es alta (n=7), pero la representatividad es cuestionable por el tamaño muestral.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en el municipio. Los indicadores de salud pública indígena no están desagregados a nivel municipal en las fuentes consultadas. Se reconoce un sub-registro estructural en este tipo de información.",
+  "territorial": "Cucutilla carece de resguardos indígenas, con un territorio municipal de 7.358 a 7.640 km² de extensión. La ausencia de resguardos y la baja población indígena (7 personas) confirman una presencia territorial mínima. La dispersión geográfica no aplica por la inexistencia de territorios colectivos.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes en la población registrada.",
+  "vida": "No hay datos de NBI disponibles para Cucutilla. El promedio indígena nacional de NBI es 67.6%, pero no se puede calcular la brecha local. La falta de información impide evaluar condiciones de vida en el municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Cucutilla entre 1985-2024 (n=0). La ausencia de hechos victimizantes confirma un contexto de baja afectación directa. La confiabilidad de estos datos es alta, pero no refleja dinámicas históricas.",
+  "icv": "El ICV de 0.0 en Cucutilla indica condiciones de vida críticas, con todas las dimensiones normalizadas en cero. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja un colapso en indicadores sociales, de salud y seguridad.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para superar el sub-registro actual (solo 7 personas registradas en CNPV 2018).",
+    "Priorizar la creación de un resguardo indígena en Cucutilla para garantizar derechos territoriales colectivos.",
+    "Implementar un sistema de monitoreo de salud pública indígena con desagregación municipal.",
+    "Diseñar políticas de revitalización cultural que incluyan recolección de datos lingüísticos.",
+    "Articular con la ONIC para incluir a Cucutilla en programas de fortalecimiento territorial indígena."
+  ]
+}

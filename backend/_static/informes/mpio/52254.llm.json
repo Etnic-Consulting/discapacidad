@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de El Peñol reporta una población indígena de 1 persona según el CNPV 2018, concentrada en un solo pueblo sin identificación específica. La ausencia de resguardos (0) y la falta de datos en capacidades diversas y NBI dificultan un análisis integral. El ICV de 0.0 refleja la precariedad de los indicadores disponibles, donde el desplazamiento forzado (2 víctimas) emerge como el hecho victimizante dominante.",
+  "demografia": "La pirámide etaria no puede analizarse con una muestra de 1 persona. El dato de población total indígena (1) es insuficiente para evaluar estructura demográfica o razones de crecimiento. Se requiere desagregación por grupos de edad para identificar dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en El Peñol. La falta de información impide evaluar sub-registros o patrones de morbilidad. Se recomienda priorizar sistemas de recolección de datos locales para superar esta limitación.",
+  "territorial": "El municipio carece de resguardos indígenas (0), lo que limita la protección territorial colectiva. La dispersión geográfica no aplica al no existir territorios delimitados. La bbox registrada no refleja ocupación indígena efectiva, evidenciando vacío en reconocimiento territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para El Peñol. No se puede determinar la vitalidad de lenguas indígenas ni su uso en contextos comunitarios. Se requiere incluir variables lingüísticas en futuros censos municipales.",
+  "vida": "No hay datos de NBI para El Peñol, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas en condiciones de vida. La ausencia de resguardos sugiere una posible invisibilización de la población indígena local.",
+  "conflicto": "Se registran 2 víctimas de desplazamiento forzado entre 1985-2024, constituyendo el 100% de los hechos victimizantes. Este patrón refleja vulnerabilidad extrema con n=2, lo que limita generalizaciones pero confirma la gravedad del conflicto armado en la zona.",
+  "icv": "El ICV de 0.0 en El Peñol se explica por la normalización de componentes (NBI, prevalencia y conflicto) en cero. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no captura la realidad local debido a datos ausentes. Se requiere ajustar metodologías para territorios con poblaciones mínimas.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de población indígena con desagregación por pueblo y grupo de edad para superar la invisibilización actual (población=1).",
+    "Priorizar la identificación y delimitación de territorios indígenas en El Peñol, donde actualmente no existen resguardos (n_resguardos=0).",
+    "Diseñar un plan de atención psicosocial para las 2 víctimas de desplazamiento forzado, dado que este hecho representa el 100% de los registros de conflicto.",
+    "Incluir variables de lengua y NBI en el próximo CNPV municipal para alinear con estándares indígenas nacionales (promedio NBI=67.6%).",
+    "Articular con la ONIC y el Ministerio del Interior para garantizar el derecho a la consulta previa en políticas públicas que afecten el territorio, ante la ausencia de resguardos."
+  ]
+}

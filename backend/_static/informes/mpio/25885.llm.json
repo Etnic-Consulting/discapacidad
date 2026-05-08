@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Yacopí registra una población indígena de 18 personas según CNPV 2018, concentrada en 3 pueblos donde el 61.1% (11) no tiene identificación étnica específica. La ausencia de resguardos y la dispersión territorial —sin datos de lengua ni NBI— limitan el análisis de capacidades culturales y socioeconómicas. El ICV de 0.0 refleja condiciones críticas en dimensiones no cuantificables, agravadas por un único caso de desplazamiento forzado en 60 años.",
+  "demografia": "La pirámide etaria no aplica por n=18 y falta de desagregación por edad. Los datos muestran 3 pueblos indígenas, con el 61.1% (11) sin información étnica específica. La población Muisca (6) y Arhuaca (1) representan el 38.9% restante, sin estructura etaria que permita análisis demográfico. La confiabilidad es alta pero la muestra es insuficiente para generalizaciones.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no aplica al nivel municipal según la fuente. Se reconoce la limitación interpretativa por ausencia de registros oficiales. La lectura de sub-registro es imposible sin datos primarios.",
+  "territorial": "Yacopí no cuenta con resguardos indígenas registrados (n=0). La dispersión territorial se limita a un área geográfica sin delimitación colectiva. La bbox abarca coordenadas sin correlato con territorios ancestrales. La ausencia de resguardos refleja debilidad en la titulación territorial indígena en este municipio.",
+  "lengua": "Los datos de lengua no están disponibles para Yacopí. No se puede analizar vitalidad lingüística ni patrones de uso. La sección se reconoce explícitamente como sin datos sin inventar información.",
+  "vida": "El NBI no está disponible para Yacopí. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. La brecha socioeconómica no es cuantificable. Se reconoce la limitación de datos para evaluar condiciones de vida.",
+  "conflicto": "Yacopí registra 1 víctima de desplazamiento forzado (100% del total) entre 1985-2024. El hecho principal es consistente con patrones regionales de violencia contra pueblos indígenas. La confiabilidad es alta pero n=1 limita análisis de tendencias. La lectura territorial sugiere vulnerabilidad extrema en contextos de conflicto armado.",
+  "icv": "El ICV de Yacopí es 0.0, con componentes en 0.0 (NBI, prevalencia y conflicto normalizados). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja condiciones críticas en todas las dimensiones. La posición relativa es la más baja posible, indicando exclusión estructural.",
+  "recomendaciones": [
+    "Priorizar titulación de resguardos en Yacopí, donde n_resguardos=0 y la población indígena dispersa requiere protección territorial urgente.",
+    "Implementar censos étnicos municipales con enfoque diferencial para reducir el 61.1% de población sin identificación específica (11 de 18).",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado, dado que el 100% de los casos registrados (1) corresponde a este hecho.",
+    "Incluir a Yacopí en programas de fortalecimiento cultural con enfoque en pueblos Muisca y Arhuaco, que representan el 38.9% de la población.",
+    "Sistematizar datos de NBI y lengua a nivel municipal para superar la ausencia de información y permitir comparaciones con promedios nacionales."
+  ]
+}

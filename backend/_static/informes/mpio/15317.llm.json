@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Guacamayas (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 y confiabilidad NO_CONFIABLE. La caja geográfica del territorio (6.3977, -72.5564 a 6.4888, -72.4714) delimita un área sin resguardos indígenas reconocidos. Esta condición contrasta con el promedio nacional indígena de NBI 67.6%, sugiriendo subregistro o invisibilización histórica en el territorio.",
+  "demografia": "Los datos demográficos para Guacamayas indican n=0 en población indígena (CNPV 2018), lo que imposibilita análisis de pirámide etaria. Esta ausencia refleja limitaciones en el registro oficial que invisibilizan posibles comunidades o migraciones recientes. Se requiere validación con fuentes comunitarias para confirmar este escenario.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Guacamayas (n=0). La falta de registros impide evaluar condiciones de salud o acceso a servicios. Este vacío evidencia la necesidad de sistemas de monitoreo territorial con participación indígena para superar el sub-registro en municipios con baja visibilidad estadística.",
+  "territorial": "Guacamayas cuenta con 0 resguardos indígenas registrados, a pesar de su delimitación geográfica precisa. La ausencia de territorios colectivos reconocidos contrasta con la presencia de bbox en Boyacá, departamento con 102 resguardos. Esta situación refleja vacíos en la titulación o reconocimiento legal de tierras indígenas en la zona.",
+  "lengua": "Los datos de lengua no están disponibles para Guacamayas. Esta carencia impide analizar la vitalidad lingüística en un territorio donde podrían coexistir lenguas minorizadas. Se recomienda priorizar levantamientos participativos con comunidades para documentar prácticas culturales y lingüísticas locales.",
+  "vida": "No hay datos de NBI para Guacamayas (n=0). La brecha con el promedio indígena nacional (67.6%) no puede calcularse, pero subraya la urgencia de diagnosticar condiciones de vida en un municipio donde la población indígena podría estar invisibilizada. Se requiere cruce con registros municipales y comunitarios.",
+  "conflicto": "Guacamayas reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con n=0 y confiabilidad CONFIABLE. La ausencia de hechos victimizantes registrados no descarta afectaciones no documentadas. Este vacío destaca la necesidad de sistemas de alerta temprana con enfoque diferencial en municipios con baja presencia indígena registrada.",
+  "icv": "El ICV de Guacamayas es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). Esta puntuación refleja la falta de datos desagregados, no una condición real del territorio. Comparado con el ICV indígena nacional, evidencia la exclusión estadística de Guacamayas en políticas públicas.",
+  "recomendaciones": [
+    "Realizar censo comunitario participativo para validar presencia indígena en Guacamayas, dado que el CNPV 2018 reporta n=0 con confiabilidad NO_CONFIABLE.",
+    "Priorizar titulación de tierras en la bbox de Guacamayas, donde existen 0 resguardos registrados pese a delimitación geográfica clara.",
+    "Implementar sistema de alerta temprana con enfoque diferencial en Boyacá, dado que el RUV reporta 0 víctimas indígenas con discapacidad (n=0).",
+    "Diseñar políticas de salud intercultural para Guacamayas, donde no hay datos de prevalencia disponibles (n=0).",
+    "Incluir a Guacamayas en el Plan de Vida de Boyacá, considerando su ICV de 0.0 y la necesidad de superar el sub-registro estadístico."
+  ]
+}

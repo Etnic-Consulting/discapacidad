@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Jenesano (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 y confiabilidad NO_CONFIABLE en su dato demográfico. La caja geográfica del municipio (15 resguardos) no alberga territorios colectivos reconocidos. El ICV municipal es 0.0, reflejando vacíos en datos de NBI, prevalencia y conflicto, lo que limita cualquier análisis de bienestar territorial.",
+  "demografia": "Los datos demográficos para Jenesano indican n=0 en población indígena registrada, imposibilitando análisis de pirámide etaria o estructura poblacional. La nota técnica aclara que la agregación se realiza por pueblo, pero en este caso no hay registros. Se reconoce explícitamente la ausencia de datos sin inferencias.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Jenesano (n=0). La sección reconoce que los registros de discapacidad por municipio no existen, limitando cualquier análisis de sub-registro o brechas. Se prioriza la transparencia sobre la omisión de cifras.",
+  "territorial": "Jenesano cuenta con una caja geográfica definida pero sin resguardos registrados (n=0). La ausencia de territorios colectivos indígenas contrasta con la delimitación municipal. Este patrón sugiere desarticulación entre la jurisdicción administrativa y la presencia indígena histórica en la zona.",
+  "lengua": "Los datos de lengua no están disponibles para Jenesano. No se registran lenguas indígenas en el municipio según la fuente consultada. Se mantiene la coherencia con la ausencia de población indígena declarada en el CNPV 2018.",
+  "vida": "No hay datos de NBI para Jenesano (n=0), lo que impide comparar con el promedio indígena nacional (67.6%). La sección reconoce explícitamente la falta de información sin estimaciones. Se prioriza la honestidad metodológica sobre la generación de datos inexistentes.",
+  "conflicto": "Jenesano reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con n=0 y confiabilidad CONFIABLE. La ausencia de hechos victimizantes registrados no implica ausencia de conflicto, sino limitaciones en el sistema de información. Se advierte sobre la posible subnotificación.",
+  "icv": "El ICV de Jenesano es 0.0, derivado de la normalización de componentes nulos (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la falta de datos desagregados. Este resultado subraya la urgencia de sistemas de monitoreo territorial robustos.",
+  "recomendaciones": [
+    "Implementar un censo indígena municipal con enfoque diferencial, citando la ausencia de datos en CNPV 2018 (n=0).",
+    "Establecer un sistema de registro de discapacidad indígena a nivel municipal, dado que los datos actuales no existen (promedio_indigena_nacional: 60.0).",
+    "Mapear la presencia histórica indígena en Jenesano mediante etnohistoria y consultas comunitarias, ante la falta de resguardos registrados (n_resguardos: 0).",
+    "Fortalecer la articulación entre la administración municipal y las organizaciones indígenas regionales para mejorar la recolección de datos (ICV: 0.0).",
+    "Priorizar la inclusión de Jenesano en programas de salud intercultural, considerando la ausencia de registros de prevalencia y NBI."
+  ]
+}

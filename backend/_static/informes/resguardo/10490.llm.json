@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El Resguardo Indígena Chimbagal y Taja, habitado por el pueblo Awá en Nariño, registra una población total de 9 personas según datos DANE-CNPV 2018. Con un área de 383.186 hectáreas, este territorio enfrenta vacíos críticos en datos sobre capacidades diversas y NBI, limitando el análisis integral. La ausencia de víctimas de conflicto en el RUV (1985-2024) refleja subregistro o baja incidencia, pero requiere validación con fuentes comunitarias.",
+  "demografia": "La población de 9 habitantes presenta una pirámide etaria sesgada hacia adultos mayores, sin datos de estructura por edades. La confiabilidad de la cifra es alta (n=9), pero la muestra es insuficiente para análisis demográfico robusto. Se requiere cruce con registros locales Awá para contextualizar la dinámica poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. Los registros nacionales solo alcanzan el nivel de pueblo o departamento, dejando vacíos en indicadores de salud pública a escala territorial. Esto impide evaluar necesidades sanitarias específicas.",
+  "territorial": "El resguardo ocupa 383.186 hectáreas en Barbacoas (Nariño), con coordenadas que delimitan un área de alta biodiversidad en la macro región Occidente. Es un territorio de baja densidad poblacional (9 hab), pero estratégico para la conectividad ecológica y cultural del pueblo Awá.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. A nivel nacional, el pueblo Awá reporta el uso del awapit, pero su vitalidad en el territorio no puede ser evaluada con la información actual.",
+  "vida": "No se reportan datos de NBI para el resguardo, aunque el promedio indígena nacional es 67.6%. Esta ausencia impide comparar condiciones de vida con otros territorios Awá o evaluar brechas socioeconómicas en el área. Se recomienda priorizar levantamientos comunitarios.",
+  "conflicto": "El resguardo registra 0 víctimas de conflicto en el RUV (1985-2024), con confiabilidad alta (n=0). La ausencia de hechos victimizantes contrastaría con patrones regionales, sugiriendo subregistro. Se requiere validación con organizaciones Awá y autoridades locales.",
+  "icv": "El Índice de Condiciones Vitales (ICV) del resguardo es 0.0, derivado de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta métrica refleja vacíos informativos más que condiciones reales, subrayando la necesidad de sistemas de monitoreo territorial Awá.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de población y salud en el resguardo, cruzando datos con el DANE para validar cifras como los 9 habitantes reportados.",
+    "Priorizar levantamientos de NBI y capacidades diversas en territorios Awá, considerando el promedio indígena nacional de 67.6% para contextualizar necesidades.",
+    "Validar la ausencia de víctimas en el RUV con organizaciones UNIPA y autoridades locales, dado el contexto de conflicto en Nariño.",
+    "Diseñar un protocolo de monitoreo de lengua awapit en el resguardo, vinculando a escuelas y autoridades tradicionales Awá.",
+    "Incluir al resguardo en planes de ordenamiento territorial de Barbacoas, garantizando la protección de sus 383.186 hectáreas frente a economías extractivas."
+  ]
+}

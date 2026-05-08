@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Buenos Aires (Cauca) concentra 6.428 personas indígenas, donde el 99,1% pertenece al pueblo Nasa (6.372). Este municipio alberga 3 resguardos con 2.082,73 hectáreas, todos bajo dominio Nasa. La violencia sistemática se expresa en 192 víctimas de conflicto, con desplazamiento forzado como principal hecho (135 casos, 70,3%). La precariedad territorial y la victimización histórica definen el panorama actual.",
+  "demografia": "La población indígena en Buenos Aires presenta una estructura concentrada: el 99,1% corresponde al pueblo Nasa (6.372 personas), mientras los 13 pueblos restantes suman solo 56 individuos. Esta homogeneidad refleja la dominancia territorial Nasa en el municipio. No se disponen datos de pirámide etaria específica para este nivel territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en este municipio. Se reconoce la limitación para analizar condiciones de salud pública a nivel municipal, lo que impide evaluar subregistros o patrones específicos. La ausencia de información restringe la planificación sanitaria diferenciada.",
+  "territorial": "Buenos Aires alberga 3 resguardos indígenas con un área total de 2.082,73 hectáreas, todos bajo jurisdicción Nasa. La dispersión geográfica es limitada, concentrándose en tres territorios contiguos. La delimitación territorial refleja la histórica ocupación Nasa en el norte del Cauca.",
+  "lengua": "Los datos sobre lenguas indígenas en este municipio no están disponibles. No es posible determinar la vitalidad lingüística ni la presencia de lenguas propias entre la población indígena local.",
+  "vida": "No se reportan datos de NBI para este municipio. El promedio indígena nacional (67,6%) no puede contrastarse localmente. La falta de información impide evaluar brechas en condiciones de vida frente a otros contextos indígenas.",
+  "conflicto": "Se registran 192 víctimas de conflicto en Buenos Aires (1985-2024), con desplazamiento forzado como principal hecho violento (135 casos, 70,3%). La victimización afecta principalmente a la población Nasa, evidenciando un patrón de violencia sistemática en su territorio ancestral.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Buenos Aires es de 0.012, con conflicto como dimensión dominante (0.038). El componente de NBI normalizado registra 0.0, lo que sugiere condiciones extremas de pobreza. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja una crisis multidimensional.",
+  "recomendaciones": [
+    "Priorizar la protección territorial de los 3 resguardos Nasa en Buenos Aires, garantizando la titulación y desminado de las 2.082,73 hectáreas registradas.",
+    "Implementar un sistema de alerta temprana para prevenir desplazamientos forzados, dado que el 70,3% de las víctimas (135 casos) corresponden a este hecho.",
+    "Diseñar políticas de salud intercultural con enfoque Nasa, considerando la ausencia de datos de prevalencia y la necesidad de registros diferenciados.",
+    "Fortalecer la autonomía alimentaria en los resguardos, ante la falta de datos de NBI que impide evaluar brechas en condiciones de vida.",
+    "Promover la revitalización lingüística Nasa en el municipio, ante la ausencia de información sobre lenguas propias y su posible erosión cultural."
+  ]
+}

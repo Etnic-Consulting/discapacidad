@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Granada (Meta) registra una población indígena de 11 personas según CNPV 2018, distribuidas en 6 pueblos. El Tukano concentra el 36.4% (4 personas), seguido por Cofán y Yanacona con 2 cada uno. La ausencia de resguardos y datos de lengua o NBI limita el análisis territorial y socioeconómico. La vulnerabilidad se evalúa mediante el ICV de 0.0, reflejando carencias estructurales en dimensiones clave.",
+  "demografia": "La pirámide etaria no aplica por la reducida muestra (n=11). La población se distribuye en 6 pueblos, con predominio del Tukano (4 personas). La dispersión demográfica impide análisis de estructura por edades. Granada presenta una fragmentación étnica sin concentración significativa en un grupo mayoritario.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. Los registros del RUV no reportan víctimas con discapacidad entre 1985-2024. Esta ausencia de información subraya la necesidad de sistemas de monitoreo locales que capturen vulnerabilidades específicas.",
+  "territorial": "Granada carece de resguardos indígenas, lo que refleja una debilidad en la titulación colectiva. La ubicación geográfica (bbox) abarca coordenadas en Meta, pero sin territorios reconocidos. La ausencia de resguardos limita la protección legal y el ejercicio de autonomía territorial para los pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Esta omisión impide evaluar la vitalidad lingüística o la pérdida cultural en la población indígena local. Se requiere investigación participativa para documentar el uso de lenguas propias.",
+  "vida": "No se dispone de datos de NBI para Granada. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información oculta brechas socioeconómicas y limita la priorización de políticas públicas para esta población.",
+  "conflicto": "El RUV no registra víctimas con discapacidad en Granada entre 1985-2024. La ausencia de hechos violentos reportados sugiere subregistro o baja incidencia, pero no confirma seguridad. Se recomienda fortalecer mecanismos de denuncia y acompañamiento psicosocial para pueblos indígenas.",
+  "icv": "El ICV de 0.0 en Granada indica una situación crítica en dimensiones socioeconómicas, de salud y conflicto. Todos los componentes (NBI, prevalencia, conflicto) tienen score 0.0, reflejando datos ausentes o carencias extremas. Este resultado exige intervención prioritaria en políticas integrales.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de población indígena con desagregación por pueblo y edad, dado que los datos actuales (n=11) son insuficientes para análisis robustos.",
+    "Promover la titulación de resguardos en Granada, donde no existen territorios colectivos reconocidos, para garantizar protección legal y autonomía.",
+    "Realizar un diagnóstico participativo de necesidades básicas insatisfechas (NBI) y condiciones de vida, ya que los datos están marcados como sin información.",
+    "Fortalecer la recolección de datos sobre lengua y cultura en coordinación con las autoridades indígenas locales, ante la ausencia de registros.",
+    "Diseñar programas de prevención de violencia y atención psicosocial, considerando el ICV de 0.0 y la falta de datos sobre víctimas."
+  ]
+}

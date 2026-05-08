@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo MACUCUANA, territorio del pueblo SÁLIBA en Casanare, concentra 137 habitantes en 6.659,5 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando carencias estructurales en NBI, prevalencia y conflicto. La ausencia de datos en lengua, NBI y capacidades diversas limita el análisis integral, pero evidencia vacíos críticos en la garantía de derechos territoriales.",
+  "demografia": "La población total es de 137 habitantes, según datos DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades, lo que impide evaluar dinámicas generacionales. La cifra refleja una comunidad pequeña, vulnerable a presiones demográficas externas. La falta de desagregación por género o grupos etarios restringe la identificación de necesidades específicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección no aplica al nivel territorial analizado. Se reconoce un sub-registro sistemático en salud indígena, donde el 67.6% del promedio nacional en NBI sugiere condiciones precarias no capturadas en este territorio.",
+  "territorial": "MACUCUANA ocupa 6.659,5 hectáreas en la macro Orinoquía, con coordenadas que delimitan su territorio ancestral. Es un resguardo de pequeña extensión, lo que limita su capacidad productiva y autonomía alimentaria. La concentración geográfica en Orocué (Casanare) lo expone a conflictos por uso del suelo y presión de actores externos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del pueblo SÁLIBA en este territorio. La ausencia de registros oficiales refleja la debilidad en políticas de salvaguarda cultural.",
+  "vida": "No hay datos de NBI para MACUCUANA, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar brechas. Se infiere una situación de alta vulnerabilidad, alineada con el ICV de 0.0 y la ausencia de registros en salud o capacidades diversas.",
+  "conflicto": "No se registran víctimas con discapacidad en MACUCUANA entre 1985-2024. El hecho principal es la ausencia de datos, no la ausencia de conflicto. Esto no descarta afectaciones indirectas como desplazamiento o despojo, no capturadas en el RUV.",
+  "icv": "El ICV de MACUCUANA es 0.0, con componentes en 0.0 (NBI, prevalencia y conflicto normalizados). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja un colapso en condiciones de vida. La dimensión dominante es el NBI, vinculado a pobreza estructural y falta de acceso a servicios básicos.",
+  "recomendaciones": [
+    "Priorizar censos comunitarios con enfoque diferencial para registrar datos de lengua, salud y NBI en MACUCUANA, citando la ausencia de información oficial (lengua: _sin_datos).",
+    "Diseñar un plan de salvaguarda cultural para el pueblo SÁLIBA, incluyendo documentación lingüística y pedagógica, ante el vacío en datos (lengua: _sin_datos).",
+    "Implementar un sistema de alerta temprana para conflictos territoriales en Orocué, dado el ICV de 0.0 y la presión sobre 6.659,5 hectáreas (territorial: area_hectareas: 6659.504).",
+    "Garantizar acceso a salud con enfoque intercultural, considerando el promedio indígena nacional de NBI 67.6% y la falta de datos locales (nbi: _sin_datos).",
+    "Fortalecer la autonomía alimentaria en MACUCUANA mediante proyectos productivos sostenibles, ante el riesgo de vulnerabilidad por su pequeña extensión territorial (territorial: area_hectareas: 6659.504)."
+  ]
+}

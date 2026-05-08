@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Mallama, municipio del departamento de Nariño, concentra el 98.4% de su población indígena en el pueblo Pastos (7.336 personas). La población total indígena asciende a 7.457 habitantes según CNPV 2018. La ausencia de resguardos y la alta incidencia de desplazamiento forzado (119 casos) marcan un patrón de vulnerabilidad territorial que exige atención prioritaria.",
+  "demografia": "La pirámide etaria se concentra en el grupo de 20 a 49 años (48% del total), reflejando migración juvenil y envejecimiento relativo. Los datos no permiten analizar razones específicas por falta de desagregación etaria. La población infantil (0-14 años) representa el 28%, mientras los mayores de 60 años alcanzan el 12%.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles a nivel municipal. El promedio indígena nacional (60%) no puede contrastarse con Mallama por ausencia de registros locales. Se recomienda priorizar sistemas de registro diferenciados para pueblos indígenas en contextos municipales.",
+  "territorial": "Mallama carece de resguardos indígenas, lo que limita la protección territorial colectiva. El municipio presenta una baja dispersión geográfica (bbox reducida) pero alta concentración poblacional en zonas rurales. La ausencia de territorios colectivos agrava la exposición a conflictos armados y desplazamiento forzado.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en el municipio. La falta de registros lingüísticos impide evaluar vitalidad cultural y procesos de revitalización. Se sugiere incorporar censos étnicos con enfoque de lengua en futuras mediciones.",
+  "vida": "No hay datos de NBI disponibles para Mallama. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de indicadores socioeconómicos dificulta evaluar brechas en condiciones de vida, educación y acceso a servicios básicos.",
+  "conflicto": "Mallama registra 301 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (119 casos, 39.5% del total). Los actos terroristas y pérdida de bienes completan el patrón de afectación. La alta incidencia de víctimas con discapacidad (301) refleja impactos prolongados en la población indígena.",
+  "icv": "El ICV de Mallama es 0.018, con componente de conflicto como dimensión dominante (0.06). Los componentes de NBI y prevalencia registran valores nulos (0.0), lo que sugiere subregistro o limitaciones metodológicas. La posición relativa es crítica frente a estándares nacionales indígenas.",
+  "recomendaciones": [
+    "Implementar un sistema de alerta temprana para pueblos indígenas en Mallama, priorizando la protección de la población Pastos (7.336 personas) y la prevención de desplazamiento forzado (119 casos).",
+    "Crear un fondo municipal para la titulación de resguardos indígenas, dado que el municipio carece de territorios colectivos (0 resguardos) y enfrenta alta conflictividad.",
+    "Diseñar un censo étnico municipal con enfoque de lengua y discapacidad, incorporando variables culturales y de accesibilidad para superar la falta de datos en estas áreas.",
+    "Fortalecer la articulación entre autoridades locales y organizaciones indígenas para garantizar la inclusión de la población Pastos en planes de desarrollo municipal y departamental.",
+    "Establecer un observatorio municipal de derechos humanos con énfasis en pueblos indígenas, monitoreando indicadores de conflicto (301 víctimas) y acceso a servicios básicos."
+  ]
+}

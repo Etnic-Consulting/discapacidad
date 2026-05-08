@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Armero registra una población indígena de 8 personas según CNPV 2018, distribuidas en 5 pueblos. Los Panches concentran el 37.5% (3 personas), siendo el grupo principal. No se identifican resguardos en el municipio, lo que limita la protección territorial colectiva. La ausencia de datos sobre lengua y NBI impide evaluar dimensiones clave de bienestar indígena.",
+  "demografia": "La pirámide etaria no aplica por la reducida muestra (n=8). La población se distribuye en 5 pueblos con predominio de Panches (3 personas), Murui (2) y Pijao (1). Los datos reflejan una fragmentación extrema sin grupos etarios definidos. La confiabilidad es alta (n=8), pero la representatividad es cuestionable para análisis demográfico.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Armero. El promedio indígena nacional (60.0%) no puede contrastarse localmente. La falta de información impide identificar necesidades específicas o subregistros en este municipio.",
+  "territorial": "Armero no cuenta con resguardos indígenas (n=0), a pesar de su bbox geográfico definida. La ausencia de territorios colectivos contrasta con la presencia de 5 pueblos. Esta situación refleja una debilidad en la garantía de derechos territoriales en el municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles para Armero. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en el municipio. Esta omisión limita la comprensión de la diversidad cultural local.",
+  "vida": "No hay datos sobre NBI en Armero. El promedio indígena nacional (67.6%) no puede compararse. La falta de información impide evaluar brechas en condiciones de vida como educación, vivienda o ingresos para la población indígena del municipio.",
+  "conflicto": "Armero registra 3 víctimas indígenas de desplazamiento forzado entre 1985-2024 (100% del total). Este hecho principal evidencia la vulnerabilidad territorial del municipio. Los datos son confiables (n=3), pero la baja magnitud sugiere subregistro en contextos de alta violencia estructural.",
+  "icv": "El ICV de Armero es 0.0, con componentes nulos en NBI y prevalencia, y un mínimo en conflicto (0.001). La fórmula pondera dimensiones críticas, pero la ausencia de datos clave distorsiona el indicador. La posición relativa es crítica frente a estándares indígenas nacionales.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de resguardos para los 5 pueblos registrados, especialmente para el pueblo Panches que concentra el 37.5% de la población indígena (3 personas).",
+    "Generar un censo lingüístico local para determinar la vitalidad de lenguas indígenas, dado que los datos actuales no permiten evaluar este aspecto en Armero.",
+    "Implementar un sistema de registro de NBI específico para población indígena en el municipio, considerando el promedio nacional del 67.6% como referencia.",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado, que representan el 100% de los casos registrados (3 personas) en el período 1985-2024.",
+    "Fortalecer la articulación con la ONIC para garantizar el derecho a la consulta previa en proyectos que afecten el territorio de Armero, dada la ausencia de resguardos."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL CHARCÓN, ubicado en Uramita (Antioquia), alberga a 59 personas del pueblo Emberá Eyabida - Emberá Katío en un territorio de 137.362 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando carencias críticas en dimensiones clave. La ausencia de datos en NBI, lengua y capacidades diversas limita un diagnóstico integral, pero evidencia vacíos en información territorial.",
+  "demografia": "La población total del resguardo es de 59 habitantes según datos DANE-CNPV 2018. Dada la escala reducida, no aplica análisis de pirámide etaria ni razones de crecimiento. La confiabilidad es alta (n=59), pero la representatividad estadística es limitada para generalizaciones demográficas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en EL CHARCÓN. Los registros oficiales no capturan este nivel de desagregación, lo que impide evaluar el sub-registro. Se requiere fortalecer sistemas de información locales para monitorear condiciones de vida.",
+  "territorial": "EL CHARCÓN ocupa 137.362 hectáreas en Uramita (Antioquia), con coordenadas geográficas definidas. Es un territorio de alta dispersión en la macro región OCCIDENTE. La ausencia de datos sobre concentración poblacional o conflictos territoriales dificulta un análisis comparativo con otros resguardos.",
+  "lengua": "Los datos sobre lengua en EL CHARCÓN no están disponibles. No se puede determinar el estado de vitalidad lingüística del pueblo Emberá Eyabida - Emberá Katío en este territorio. Se recomienda priorizar registros etnográficos para preservar la diversidad cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en EL CHARCÓN. El promedio indígena nacional (67.6%) no puede contrastarse debido a la falta de datos. Esta omisión refleja debilidades en sistemas de monitoreo territorial para resguardos pequeños.",
+  "conflicto": "No se registran víctimas con discapacidad en EL CHARCÓN entre 1985-2024 (n=0). La confiabilidad es alta, pero la ausencia de hechos violentos no descarta dinámicas de conflicto no documentadas. Se sugiere investigar causas de sub-registro en contextos rurales.",
+  "icv": "El ICV de EL CHARCÓN es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja condiciones críticas. La falta de datos en dimensiones clave sesga la medición hacia cero.",
+  "recomendaciones": [
+    "Implementar un sistema de información local para registrar NBI, lengua y capacidades diversas en resguardos pequeños como EL CHARCÓN, priorizando indicadores culturales y de salud con enfoque diferencial.",
+    "Realizar un diagnóstico participativo con la comunidad Emberá Eyabida - Emberá Katío para identificar necesidades urgentes, dado que los datos oficiales no capturan su realidad territorial.",
+    "Fortalecer la articulación con la Organización Indígena de Antioquia (OIA) para monitorear conflictos territoriales y garantizar la protección de los 137.362 hectáreas del resguardo.",
+    "Incluir el resguardo en planes regionales de salud intercultural, considerando su ICV de 0.0 y la ausencia de datos en dimensiones críticas.",
+    "Promover alianzas con instituciones académicas para documentar la lengua y cultura Emberá en EL CHARCÓN, evitando la pérdida de conocimientos tradicionales por falta de registros."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Fernando (Bolívar) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 en todos los indicadores demográficos. La falta de datos impide análisis de vitalidad cultural o concentración territorial. Este vacío evidencia la necesidad de estrategias de identificación étnica diferenciada en territorios con presencia histórica de pueblos como los Zenú.",
+  "demografia": "Los datos demográficos para San Fernando no aplican al ser n=0 en población indígena registrada. La pirámide etaria no puede analizarse sin registros poblacionales. Se requiere cruzar fuentes administrativas con metodologías étnicas para superar la subrepresentación en censos oficiales.",
+  "prevalencia": "No hay datos de prevalencia de condiciones de salud o discapacidad en el municipio (n=0). La falta de registros sistemáticos impide evaluar necesidades específicas. Se recomienda implementar sistemas de información con enfoque diferencial indígena para superar el sub-registro.",
+  "territorial": "San Fernando cuenta con 0 resguardos indígenas registrados, pese a su ubicación en zona de influencia Zenú. La bbox geográfica no refleja presencia territorial colectiva. La ausencia de resguardos contrasta con la historia de ocupación indígena en la región, sugiriendo vacíos en titulación o reconocimiento.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede evaluar vitalidad lingüística ni presencia de lenguas nativas. La ONIC debe priorizar levantamientos de información cultural en territorios con memoria histórica indígena.",
+  "vida": "No hay datos de NBI disponibles para San Fernando (n=0). La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La falta de información impide priorizar intervenciones en condiciones de vida, especialmente en un municipio con contexto de pobreza multidimensional.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en San Fernando entre 1985-2024 (n=0). La ausencia de hechos violentos reportados no descarta afectaciones no documentadas. Se requiere fortalecer el RUV con enfoque étnico para visibilizar violencias estructurales.",
+  "icv": "El ICV de San Fernando es 0.0, con componentes nulos (NBI=0.0, prevalencia=0.0, conflicto=0.0). La fórmula del ICV no aplica al no existir datos confiables. Este resultado refleja la invisibilización estadística de la población indígena en el municipio.",
+  "recomendaciones": [
+    "Implementar censo étnico diferenciado en San Fernando con participación de la ONIC para superar el sub-registro en CNPV 2018 (n=0 población indígena)",
+    "Diseñar un sistema de información municipal con enfoque indígena que incluya lengua, NBI y conflicto, alineado con el promedio nacional de 67.6% NBI",
+    "Priorizar titulación de resguardos en zonas de influencia Zenú, dado que el municipio tiene 0 resguardos registrados pese a su contexto histórico",
+    "Fortalecer el RUV municipal con enfoque étnico para documentar violencias no registradas (actualmente n=0 víctimas con discapacidad)",
+    "Establecer alianzas con pueblos indígenas para levantar datos de capacidades diversas, considerando que el promedio indígena nacional es 60.0% y no hay registros locales"
+  ]
+}

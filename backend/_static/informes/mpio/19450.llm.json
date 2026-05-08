@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Mercaderes (Cauca) concentra una población indígena de 30 personas según CNPV 2018, distribuidas en 7 pueblos. El Inga es el grupo dominante con 9 habitantes, seguido por Yanacona (7) y Nasa (4). La ausencia de resguardos en el municipio refleja una debilidad en la protección territorial. La alta incidencia de desplazamiento forzado (14 casos, 53.8% del total de víctimas) exige atención prioritaria.",
+  "demografia": "La población indígena de Mercaderes presenta una estructura dispersa con 7 pueblos representados. El Inga lidera con 9 personas, seguido por Yanacona (7) y Nasa (4). Los datos no permiten analizar pirámide etaria ni razones de distribución por limitaciones de n=30. La diversidad cultural contrasta con la baja densidad poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este municipio. La sección correspondiente fue marcada como _sin_datos. Se reconoce la limitación para evaluar necesidades específicas en este territorio.",
+  "territorial": "Mercaderes no cuenta con resguardos indígenas registrados, a pesar de albergar 7 pueblos distintos. La caja geográfica del municipio abarca coordenadas que podrían incluir áreas de interés cultural. La ausencia de territorios colectivos formalizados limita la protección legal y el desarrollo de planes de vida propios.",
+  "lengua": "Los datos sobre lenguas indígenas en Mercaderes no están disponibles en este informe. No se puede determinar la vitalidad lingüística ni las estrategias de revitalización en el municipio.",
+  "vida": "No se dispone de información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Mercaderes. El promedio indígena nacional de NBI es 67.6%, pero no hay datos locales para comparar. Se requiere generar información específica para este territorio.",
+  "conflicto": "Mercaderes registra 26 víctimas de violencia entre 1985-2024, con desplazamiento forzado como hecho principal (14 casos, 53.8%). Le siguen homicidios (7) y amenazas (2). La concentración de hechos violentos en un grupo reducido de personas evidencia un patrón de afectación individual y colectiva.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Mercaderes es 0.002, con componente de conflicto como dimensión dominante (0.005). Los valores de NBI y prevalencia son 0.0, lo que sugiere subregistro o limitaciones metodológicas. La posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar datos demográficos y territoriales, citando la dispersión actual de 7 pueblos con n=30.",
+    "Diseñar un plan de protección territorial que incluya la creación de resguardos para los pueblos Inga, Yanacona y Nasa, considerando su población de 9, 7 y 4 personas respectivamente.",
+    "Implementar un sistema de alerta temprana contra desplazamiento forzado, dado que el 53.8% de las víctimas (14 casos) corresponden a este hecho.",
+    "Generar información sobre NBI y condiciones de vida para comparar con el promedio indígena nacional de 67.6%, actualmente sin datos en el municipio.",
+    "Fortalecer estrategias de revitalización cultural y lingüística para los 7 pueblos presentes, ante la ausencia de información sobre lengua en el informe."
+  ]
+}

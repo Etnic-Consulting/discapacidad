@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Guaca (Santander) registra una población indígena de 1 persona según el CNPV 2018, correspondiente al pueblo Murui. La ausencia de resguardos y la concentración poblacional mínima contrastan con la diversidad étnica nacional. La falta de datos en NBI, lengua y capacidades diversas limita el análisis integral, pero evidencia la necesidad de fortalecer la identificación estadística local.",
+  "demografia": "La pirámide etaria no aplica en este municipio debido a la población de 1 habitante. La concentración en un solo pueblo (Murui) refleja una diversidad nula a nivel local. Los datos demográficos carecen de representatividad estadística (n=1), lo que impide análisis comparativos o inferencias sobre dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Guaca. La falta de registros específicos para este municipio impide evaluar la situación epidemiológica. Se requiere priorizar la sistematización de información sanitaria local para identificar necesidades prioritarias.",
+  "territorial": "Guaca no cuenta con resguardos indígenas registrados, lo que limita la protección territorial del pueblo Murui. La dispersión geográfica es nula al no existir territorios colectivos. La bbox del municipio abarca 0.25 grados de latitud y 0.20 de longitud, sin presencia de áreas indígenas delimitadas.",
+  "lengua": "Los datos sobre lenguas indígenas en Guaca no están disponibles. Esta ausencia impide evaluar la vitalidad cultural y lingüística del pueblo Murui en el territorio. Se recomienda incluir indicadores lingüísticos en futuros censos para monitorear la transmisión intergeneracional.",
+  "vida": "No hay información sobre NBI en Guaca, aunque el promedio indígena nacional es 67.6%. La falta de datos impide calcular brechas o priorizar intervenciones. La invisibilización estadística dificulta el diseño de políticas públicas diferenciadas para la población indígena local.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Guaca entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgos. La falta de registros detallados oculta posibles afectaciones no documentadas en contextos rurales dispersos.",
+  "icv": "El ICV de Guaca es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula aplicada refleja la ausencia de datos en todas las dimensiones. Este resultado subraya la urgencia de mejorar la recolección de información para calcular indicadores de bienestar territorial.",
+  "recomendaciones": [
+    "Implementar un censo local específico para pueblos indígenas en Guaca, priorizando la identificación del pueblo Murui y sus necesidades (n=1 población actual).",
+    "Establecer acuerdos con el DANE para desagregar datos municipales por etnia, superando la limitación actual de agregación genérica (n=1).",
+    "Diseñar un plan de fortalecimiento institucional para registrar resguardos y territorios colectivos, dado que actualmente no existen (n_resguardos=0).",
+    "Incluir indicadores de lengua y cultura en los sistemas de información municipal, ante la ausencia de datos (lengua sin datos).",
+    "Priorizar la recolección de datos sobre NBI y salud en Guaca, comparando con el promedio indígena nacional (67.6% NBI)."
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "86",
+  "nombre": "PUTUMAYO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 50013,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 50013,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 5314,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 5314,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 50013,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 106.3,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "340",
+          "con_disc": 1436,
+          "total": 12323
+        },
+        {
+          "cod_pueblo": "350",
+          "con_disc": 962,
+          "total": 6999
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 958,
+          "total": 6091
+        },
+        {
+          "cod_pueblo": "210",
+          "con_disc": 399,
+          "total": 5096
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 317,
+          "total": 4380
+        },
+        {
+          "cod_pueblo": "565",
+          "con_disc": 304,
+          "total": 1391
+        },
+        {
+          "cod_pueblo": "590",
+          "con_disc": 210,
+          "total": 2074
+        },
+        {
+          "cod_pueblo": "730",
+          "con_disc": 146,
+          "total": 3549
+        },
+        {
+          "cod_pueblo": "840",
+          "con_disc": 130,
+          "total": 2448
+        },
+        {
+          "cod_pueblo": "360",
+          "con_disc": 117,
+          "total": 1396
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 74,
+      "resguardos": [
+        {
+          "nombre": "VILLA CATALINA DE PUERTO ROSARIO",
+          "mpio": "PUERTO GUZMÁN",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 68176.494
+        },
+        {
+          "nombre": "KAMÉNTSÁ BIYA DE SIBUNDOY",
+          "mpio": "MOCOA",
+          "pueblo_onic": "KAMËNTSA",
+          "area_pg_ha": 42630.2
+        },
+        {
+          "nombre": "NUKANCHIPA ALPA AMUKUNAPA WASI",
+          "mpio": "VILLAGARZÓN",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 30803.067
+        },
+        {
+          "nombre": "YUNGILLO",
+          "mpio": "MOCOA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 26663.539
+        },
+        {
+          "nombre": "SAN FRANCISCO",
+          "mpio": "SAN FRANCISCO",
+          "pueblo_onic": "KAMËNTSA",
+          "area_pg_ha": 17419.91
+        },
+        {
+          "nombre": "SIMORNA",
+          "mpio": "ORITO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 13374.966
+        },
+        {
+          "nombre": "INGA DE SAN ANDRÉS",
+          "mpio": "SANTIAGO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 13364.703
+        },
+        {
+          "nombre": "LA PRIMAVERA ETNIA HUITOTO",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 12831.542
+        },
+        {
+          "nombre": "ALTO ORITO",
+          "mpio": "ORITO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 12269.589
+        },
+        {
+          "nombre": "LA FLORIDA",
+          "mpio": "SAN FRANCISCO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 8481.271
+        },
+        {
+          "nombre": "LA PERECERA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "INGA - KICHWA",
+          "area_pg_ha": 6833.492
+        },
+        {
+          "nombre": "CECILIA COCHA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 6474.631
+        },
+        {
+          "nombre": "INGA DE SANTIAGO",
+          "mpio": "SANTIAGO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 6353.067
+        },
+        {
+          "nombre": "EL HACHA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 5759.875
+        },
+        {
+          "nombre": "LA PAYA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 5604.825
+        },
+        {
+          "nombre": "CALARCÁ",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 5555.9
+        },
+        {
+          "nombre": "EL TABLERO",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 5531.181
+        },
+        {
+          "nombre": "JERUSALÉN - SAN LUIS - ALTO PICUDITO",
+          "mpio": "PUERTO CAICEDO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 4981.782
+        },
+        {
+          "nombre": "BUENAVISTA",
+          "mpio": "PUERTO ASÍS",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 4504.099
+        },
+        {
+          "nombre": "JIRIJIRI",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 4380.724
+        },
+        {
+          "nombre": "LAGARTO COCHA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 4035.452
+        },
+        {
+          "nombre": "TUKUNARÉ",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 3401.27
+        },
+        {
+          "nombre": "INGA DE CONDAGUA",
+          "mpio": "MOCOA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 3324.862
+        },
+        {
+          "nombre": "EL PORVENIR - LA BARRIALOSA",
+          "mpio": "PUERTO GUZMÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 3285.5
+        },
+        {
+          "nombre": "YARINAL (SAN MARCELINO)",
+          "mpio": "SAN MIGUEL",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 2898.871
+        },
+        {
+          "nombre": "AGUA NEGRA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 2856.548
+        },
+        {
+          "nombre": "CONSARA - MECAYA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 2785.907
+        },
+        {
+          "nombre": "CALENTURAS",
+          "mpio": "PUERTO GUZMÁN",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2612.88
+        },
+        {
+          "nombre": "EL PROGRESO",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 2099.545
+        },
+        {
+          "nombre": "CAÑAVERAL",
+          "mpio": "ORITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2035.444
+        },
+        {
+          "nombre": "EL ESPINGO",
+          "mpio": "ORITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1973.975
+        },
+        {
+          "nombre": "SANTA CRUZ DE PIÑUÑA BLANCO",
+          "mpio": "PUERTO ASÍS",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 1870.738
+        },
+        {
+          "nombre": "BAJO CASACUNTE",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "SIONA",
+          "area_pg_ha": 1865.854
+        },
+        {
+          "nombre": "SAN ANDRÉS - LAS VEGAS - VILLA UNIÓN",
+          "mpio": "PUERTO CAICEDO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1603.207
+        },
+        {
+          "nombre": "SANTA ROSA DE JUANAMBÚ - CAMPO ALEGRE - ALPES ORIENTALES",
+          "mpio": "PUERTO CAICEDO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1584.348
+        },
+        {
+          "nombre": "LA AGUADITA",
+          "mpio": "PUERTO GUZMÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1560.163
+        },
+        {
+          "nombre": "VILLA MARÍA DE ANAMÚ",
+          "mpio": "MOCOA",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 1495.568
+        },
+        {
+          "nombre": "SANTA RITA",
+          "mpio": "PUERTO LEGUÍZAMO",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 1387.828
+        },
+        {
+          "nombre": "ALTO LORENZO",
+          "mpio": "PUERTO ASÍS",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1376.957
+        },
+        {
+          "nombre": "AGUA BLANCA",
+          "mpio": "ORITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1254.627
+        },
+        {
+          "nombre": "BOCANA DE LUZÓN",
+          "mpio": "ORITO",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 1200.494
+        },
+        {
+          "nombre": "CAICEDONIA",
+          "mpio": "ORITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1091.066
+        },
+        {
+          "nombre": "BELLA VISTA",
+          "mpio": "ORITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 944.905
+        },
+        {
+          "nombre": "CAMPO ALEGRE DEL AFILADOR",
+          "mpio": "SAN MIGUEL",
+          "pueblo_onic": "KOFÁN",
+          "area_pg_ha": 894.491
+        },
+        {
+          "nombre": "DAMASCO VIDES",
+          "mpio": "PUERTO CAICEDO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 862.708
+        },
+        {
+          "nombre": "SANTA ROSA DEL GUAMUÉZ",
+          "mpio": "VALLE DEL GUAMUEZ",
+          "pueblo_onic": "KOFAN INGA",
+          "area_pg_ha": 789.486
+        },
+        {
+          "nombre": "LA ITALIA",
+          "mpio": "PUERTO ASÍS",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 734.845
+        },
+        {
+          "nombre": "WASIPUNGO",
+          "mpio": "MOCOA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 719.439
+        },
+        {
+          "nombre": "PLAYA LARGA",
+          "mpio": "VILLAGARZÓN",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 669.341
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA AWÁ LA TURBIA",
+          "mpio": "VILLAGARZÓN",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 659.199
+        }
+      ],
+      "bbox": [
+        -0.5622775888021904,
+        -77.18680573240476,
+        1.4673152680449035,
+        -73.84131793299804
+      ],
+      "nombre_dpto": "PUTUMAYO"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 3580,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 3580,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 2414
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 358
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 316
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 111
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 95
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 53
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 47
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 46
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 39
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 26
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 2414
+      },
+      "pct_hecho_principal": 67.4
+    },
+    "icv": {
+      "score": 0.374,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.531,
+        "conflicto_norm": 0.716
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:58:44",
+  "periodo": "2018",
+  "_input_hash": "3228a3e450b88f8b"
+}

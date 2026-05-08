@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Tona (Santander) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Muisca. La ausencia de resguardos y datos de lengua refleja una debilidad institucional en el reconocimiento territorial. La única víctima de conflicto reportada corresponde a desplazamiento forzado, lo que subraya la vulnerabilidad extrema de este grupo en el contexto municipal.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos disponibles. La población indígena total es de 1 persona, lo que impide análisis demográficos detallados. La concentración en un solo pueblo (Muisca) limita la diversidad cultural en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Tona. La sección de capacidades diversas carece de información, lo que impide evaluar brechas en discapacidad. Se requiere desagregación municipal para análisis confiables.",
+  "territorial": "Tona no cuenta con resguardos indígenas según registros oficiales. La caja geográfica del municipio abarca coordenadas que no incluyen territorios colectivos. La ausencia de resguardos contrasta con la presencia histórica del pueblo Muisca en la región.",
+  "lengua": "Los datos sobre lengua indígena en Tona no están disponibles. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes del muisca en el municipio. Se requiere investigación específica para este indicador.",
+  "vida": "No hay datos de NBI disponibles para Tona. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide evaluar condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "Se registra 1 víctima de conflicto en Tona entre 1985-2024, correspondiente a desplazamiento forzado (100% del total). Este hecho único evidencia la extrema vulnerabilidad del pueblo Muisca en el municipio. La concentración de violencia en un solo evento limita análisis comparativos.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Tona es 0.0, con componentes normalizados en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la ausencia de datos normalizados. Este resultado subraya la falta de información para evaluar condiciones de vida.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal desagregado para superar la limitación de n=1 en población total, citando la cifra actual de 1 persona.",
+    "Incluir a Tona en programas de reconocimiento de resguardos indígenas, considerando la ausencia actual de territorios colectivos.",
+    "Implementar un sistema de registro de víctimas de conflicto con enfoque étnico en el municipio, dado el 100% de casos de desplazamiento forzado.",
+    "Articular con el pueblo Muisca para documentar su presencia histórica y cultural en Tona, ante la falta de datos sobre lengua.",
+    "Solicitar al DANE desagregación municipal de indicadores sociales para pueblos indígenas, evitando comparaciones con promedios nacionales sin base local."
+  ]
+}

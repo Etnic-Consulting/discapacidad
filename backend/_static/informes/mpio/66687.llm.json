@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "SANTUARIO (Risaralda) concentra 192 personas indígenas según CNPV 2018, donde el 60.4% pertenece al pueblo EMBERA-KATIO (116 personas). La ausencia de resguardos registrados refleja una debilidad en el reconocimiento territorial. El desplazamiento forzado afecta al 87.5% de las víctimas indígenas, evidenciando una crisis humanitaria persistente en el municipio.",
+  "demografia": "La población indígena de SANTUARIO presenta una estructura joven, con predominio de EMBERA-KATIO (116 personas) y EMBERA-CHAMI (53 personas). El pueblo Nasa registra solo 1 persona, mostrando una alta concentración étnica. Los datos, con n=192 y confiabilidad CONFIABLE, no permiten análisis de pirámide etaria detallada.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Se reconoce la falta de información como limitante crítica para evaluar necesidades sanitarias. El sub-registro en salud indígena en contextos municipales es un patrón nacional no abordado en este informe.",
+  "territorial": "SANTUARIO carece de resguardos indígenas registrados (n=0), pese a albergar 5 pueblos distintos. La dispersión geográfica se limita a un área delimitada por coordenadas (bbox), sin territorios colectivos reconocidos. Esta ausencia de resguardos contrasta con la presencia de pueblos como EMBERA-KATIO y EMBERA-CHAMI.",
+  "lengua": "Los datos sobre lenguas indígenas en SANTUARIO no están disponibles (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de lenguas propias en el territorio. Esta omisión refleja brechas en el registro cultural a nivel municipal.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para SANTUARIO (_sin_datos: true). El promedio indígena nacional de NBI es 67.6%, pero no se puede calcular la brecha local. La falta de información impide evaluar condiciones de vida en el municipio.",
+  "conflicto": "8 víctimas indígenas registradas entre 1985-2024, con desplazamiento forzado como hecho principal (7 casos, 87.5%). El homicidio representa el 12.5% restante. Los datos, con n=8 y confiabilidad CONFIABLE, subrayan la violencia estructural contra pueblos como EMBERA-KATIO.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de SANTUARIO es 0.0, con componentes normalizados en cero excepto conflicto (0.002). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja un escenario de extrema vulnerabilidad sin datos para NBI ni prevalencia.",
+  "recomendaciones": [
+    "Solicitar al IGAC y ONIC la actualización del registro de resguardos en SANTUARIO, donde 5 pueblos indígenas carecen de territorios reconocidos pese a contar con 192 personas.",
+    "Priorizar acciones humanitarias para las 8 víctimas indígenas, donde el 87.5% sufre desplazamiento forzado según RUV (1985-2024).",
+    "Exigir al Ministerio de Salud y DNP la inclusión de SANTUARIO en sistemas de monitoreo de NBI y salud indígena, actualmente sin datos (_sin_datos: true).",
+    "Realizar un censo lingüístico en SANTUARIO para documentar la vitalidad de lenguas embera, dado que los datos sobre lengua están ausentes (_sin_datos: true).",
+    "Articular con la Gobernación de Risaralda y la ONIC para diseñar un plan de protección territorial que aborde la ausencia de resguardos (n=0) y la concentración de población EMBERA-KATIO."
+  ]
+}

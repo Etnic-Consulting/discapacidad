@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Puerto Lleras registra una población indígena de 58 personas según CNPV 2018, distribuidas en 17 pueblos con predominio del pueblo Piratapuyo (22 habitantes). La ausencia de resguardos y la dispersión poblacional reflejan una debilidad en la territorialidad colectiva. El conflicto armado impacta con 15 víctimas, donde el desplazamiento forzado representa el 60% de los hechos registrados.",
+  "demografia": "La población indígena en Puerto Lleras es minoritaria y altamente fragmentada, con 17 pueblos representados pero ninguno superando el 40% del total. La pirámide etaria no puede analizarse por falta de datos desagregados por edad y sexo. La concentración en el pueblo Piratapuyo (37.9%) contrasta con la presencia de 13 pueblos con menos de 3 habitantes cada uno.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones específicas no están disponibles para este municipio. Se reconoce un sub-registro probable dado el tamaño poblacional reducido (n=58) y la dispersión geográfica. La falta de información impide evaluar la carga de morbilidad o acceso a servicios de salud en esta población.",
+  "territorial": "No existen resguardos indígenas en Puerto Lleras, lo que limita la protección territorial colectiva. La georreferenciación indica un área dispersa entre coordenadas que abarcan municipios vecinos. La ausencia de territorios legalmente reconocidos contrasta con la presencia de 17 pueblos, sugiriendo una debilidad en la implementación de derechos territoriales.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la diversidad idiomática de la población indígena residente.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Puerto Lleras. El promedio indígena nacional (67.6%) no puede compararse debido a la falta de información local. Se requiere un diagnóstico específico para evaluar las condiciones de vida de esta población.",
+  "conflicto": "Se registraron 15 víctimas del conflicto armado entre 1985-2024, con el desplazamiento forzado como hecho principal (9 casos, 60%). Los demás hechos (amenazas, delitos sexuales, homicidios) tienen incidencia marginal. La alta proporción de desplazamiento refleja una dinámica de violencia estructural en la región.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Puerto Lleras es extremadamente bajo (0.001), con componentes en cero excepto conflicto (0.003). Esta puntuación refleja condiciones críticas en NBI, prevalencia y conflicto, ubicándolo en la peor posición relativa. La fórmula ponderada evidencia una crisis multidimensional.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios colectivos para los 17 pueblos presentes, dado que no existen resguardos registrados y la población es altamente dispersa (n=58).",
+    "Implementar un sistema de alerta temprana para el desplazamiento forzado, que representa el 60% de los hechos de violencia registrados (9 casos).",
+    "Realizar un censo étnico local que desagregue datos por edad, sexo y pueblo para superar la fragmentación actual y diseñar políticas diferenciadas.",
+    "Establecer rutas de atención en salud con enfoque intercultural, considerando la ausencia de datos de prevalencia y la alta vulnerabilidad de la población.",
+    "Articular con la ONIC y autoridades departamentales para garantizar la protección territorial y el acceso a derechos colectivos, ante la debilidad institucional local."
+  ]
+}

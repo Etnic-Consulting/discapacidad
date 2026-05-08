@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cacota (N. de Santander) registra una población indígena de 1 persona según CNPV 2018, correspondiente al pueblo Nasa. La ausencia de resguardos (n=0) y datos territoriales detallados limita la lectura de su presencia histórica. El ICV de 0.0 refleja vacíos críticos en indicadores socioeconómicos y de conflicto, señalando una situación de extrema vulnerabilidad no documentada adecuadamente.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. La población indígena total es de 1 persona, lo que impide análisis demográfico. Se requiere desagregación por grupos de edad para evaluar dinámicas generacionales y planificar políticas públicas ajustadas a la realidad local.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información sobre condiciones de salud y discapacidad (n=0 en víctimas con discapacidad) subraya la ausencia de registros confiables. Esto imposibilita identificar brechas en acceso a salud o patrones de afectación específicos.",
+  "territorial": "Cacota no cuenta con resguardos indígenas (n=0), lo que contrasta con la presencia histórica de pueblos como el Nasa. La bbox geográfica delimita un área de 7.189-7.332 latitud y -72.730 a -72.579 longitud, pero sin territorios colectivos reconocidos, la gestión territorial indígena es inexistente en este municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de lenguas indígenas ni su vitalidad cultural. Esta omisión dificulta la implementación de políticas de revitalización lingüística y educación intercultural.",
+  "vida": "Los datos de NBI no están disponibles para Cacota. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide evaluar condiciones de vida, acceso a servicios básicos o brechas socioeconómicas que afectan al único habitante indígena registrado.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Cacota (n=0) entre 1985-2024. La ausencia de hechos victimizantes documentados no implica ausencia de conflicto, sino falta de registros. Esto invisibiliza posibles afectaciones no reportadas en sistemas oficiales.",
+  "icv": "El ICV de 0.0 en Cacota refleja la suma de componentes nulos (NBI, prevalencia y conflicto normalizados). Esta métrica subraya la carencia de datos básicos para calcular un índice de condiciones de vida. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados útiles por vacíos en insumos.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, priorizando la identificación de pueblos como el Nasa en Cacota.",
+    "Implementar un sistema de registro de víctimas indígenas con discapacidad en coordinación con la ONIC y entidades locales para superar la subnotificación actual.",
+    "Diseñar un plan de revitalización cultural que incluya recolección de datos sobre lengua y prácticas tradicionales, dado el vacío identificado.",
+    "Promover el reconocimiento de resguardos indígenas en Cacota mediante gestiones con el Ministerio del Interior y la Defensoría del Pueblo, considerando la presencia histórica del pueblo Nasa.",
+    "Incluir a Cacota en programas nacionales de ICV con acompañamiento técnico para garantizar la recolección de datos básicos en los componentes del índice."
+  ]
+}

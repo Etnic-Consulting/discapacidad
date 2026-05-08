@@ -1,0 +1,136 @@
+{
+  "tipo": "resguardo",
+  "id": "10274",
+  "nombre": "PUERTO ANTIOQUIA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 103,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 103,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "PUERTO ANTIOQUIA",
+      "dpto": "CHOCÓ",
+      "cod_dpto": "27",
+      "mpio": "BOJAYÁ",
+      "cod_mpio": "27099",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "EMBERA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "FEDEOREWA",
+      "area_hectareas": 285.827
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        6.461481966000065,
+        -76.99753394299995,
+        6.479939474000048,
+        -76.96508532399997
+      ],
+      "area_hectareas": 285.827,
+      "macro": "OCCIDENTE",
+      "dpto": "CHOCÓ",
+      "mpio": "BOJAYÁ"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 211,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 211,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 99
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 88
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 12
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 3
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 99
+      },
+      "pct_hecho_principal": 46.9
+    },
+    "icv": {
+      "score": 0.013,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.042
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:06:15",
+  "periodo": "2018",
+  "_input_hash": "1c648762b101b825"
+}

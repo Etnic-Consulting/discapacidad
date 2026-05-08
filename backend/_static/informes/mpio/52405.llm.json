@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Leiva (Nariño) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo Nasa. La ausencia de resguardos (n=0) y datos demográficos detallados limita el análisis territorial. El conflicto armado impacta fuertemente: 16 víctimas con discapacidad entre 1985-2024, donde el 81.2% corresponde a desplazamiento forzado (13 casos).",
+  "demografia": "La pirámide etaria no aplica para este municipio dado que la población indígena total es de 1 persona. Los datos disponibles no permiten desagregar grupos etarios ni comparar con estructuras poblacionales nacionales. Se requiere desagregación por grupos de edad para análisis demográfico confiable.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio (_sin_datos: true). No es posible analizar indicadores de salud específicos ni comparar con promedios regionales. La falta de información impide identificar patrones de morbilidad o acceso a servicios.",
+  "territorial": "Leiva no cuenta con resguardos indígenas (n=0), pese a ubicarse en un área geográfica definida por coordenadas (bbox). La ausencia de territorios colectivos contrasta con la presencia histórica de pueblos indígenas en la región. La dispersión territorial no aplica al no existir unidades de gestión colectiva.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles (_sin_datos: true). No es posible evaluar brechas con el promedio indígena nacional (67.6%). La falta de información impide priorizar intervenciones en condiciones de vida.",
+  "conflicto": "Entre 1985-2024, Leiva registra 16 víctimas indígenas con discapacidad, donde el 81.2% (13 casos) corresponde a desplazamiento forzado. El homicidio (2 casos) y delitos sexuales (1 caso) completan el perfil de violencia. La concentración en hechos de desplazamiento refleja patrones de despojo territorial.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Leiva es 0.001, con componentes en cero excepto conflicto (0.003). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero la ausencia de datos en dos dimensiones anula su utilidad analítica. La posición relativa es crítica pero no comparable.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con desagregación etaria y de discapacidad para superar la limitación de n=1 y datos _sin_datos en NBI y lengua.",
+    "Implementar un plan de protección territorial para pueblos indígenas en municipios sin resguardos, priorizando Leiva por su alta tasa de desplazamiento (81.2% de víctimas).",
+    "Articular con la CNPV 2024 para actualizar datos de lengua y capacidades diversas, dado que los registros actuales no reflejan la realidad sociocultural.",
+    "Diseñar rutas de atención psicosocial para víctimas de desplazamiento forzado, considerando que el 100% de los casos registrados (16) requieren seguimiento especializado.",
+    "Incluir a Leiva en programas de titulación colectiva de tierras, pese a la ausencia actual de resguardos, para prevenir nuevos casos de despojo."
+  ]
+}

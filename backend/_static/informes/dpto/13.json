@@ -1,0 +1,205 @@
+{
+  "tipo": "dpto",
+  "id": "13",
+  "nombre": "BOLIVAR",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 5199,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 5199,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 291,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 291,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 5199,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 56.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "800",
+          "con_disc": 229,
+          "total": 4251
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 15,
+          "total": 123
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 12,
+          "total": 275
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 4,
+          "total": 75
+        },
+        {
+          "cod_pueblo": "150",
+          "con_disc": 4,
+          "total": 21
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 4,
+          "total": 65
+        },
+        {
+          "cod_pueblo": "900",
+          "con_disc": 3,
+          "total": 62
+        },
+        {
+          "cod_pueblo": "460",
+          "con_disc": 2,
+          "total": 3
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 1,
+          "total": 3
+        },
+        {
+          "cod_pueblo": "660",
+          "con_disc": 1,
+          "total": 5
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        6.999159856381856,
+        -76.19048219287413,
+        10.781876373126396,
+        -73.74578008334049
+      ],
+      "nombre_dpto": "BOLIVAR"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 860,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 860,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 731
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 38
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 22
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 15
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 10
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 9
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 9
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 7
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 5
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 731
+      },
+      "pct_hecho_principal": 85.0
+    },
+    "icv": {
+      "score": 0.136,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.28,
+        "conflicto_norm": 0.172
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:44:02",
+  "periodo": "2018",
+  "_input_hash": "c414cf206dfa34cf"
+}

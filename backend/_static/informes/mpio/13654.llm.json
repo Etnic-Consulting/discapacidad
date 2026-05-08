@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Jacinto (Bolívar) concentra 74 personas indígenas según CNPV 2018, con el 71.6% pertenecientes al pueblo Zenú (53 personas). La ausencia de resguardos registrados refleja una debilidad en la titulación territorial. El 100% de las víctimas de conflicto (9 casos) corresponde a desplazamiento forzado, evidenciando una afectación crítica en derechos humanos.",
+  "demografia": "La población indígena en San Jacinto presenta una estructura dispersa con 5 pueblos representados. El pueblo Zenú domina con 53 personas (71.6%), seguido por Arhuaco (9) y grupos sin información (8). La baja n=74 limita análisis demográficos detallados, pero destaca la concentración en un solo pueblo. No hay datos de pirámide etaria a este nivel.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide evaluar necesidades sanitarias específicas. Se requiere priorizar sistemas de registro local para superar sub-registros históricos en territorios no titulados.",
+  "territorial": "San Jacinto carece de resguardos indígenas registrados (n=0), pese a su bbox que abarca 9.7586 a 9.9216 latitud y -75.3195 a -74.9185 longitud. Esta ausencia de territorios colectivos limita la autonomía y protección cultural. La dispersión geográfica sin delimitación legal agrava riesgos de despojo.",
+  "lengua": "Los datos sobre lenguas indígenas en San Jacinto no están disponibles. Esta omisión invisibiliza la diversidad cultural y lingüística local, especialmente en pueblos como Zenú y Arhuaco. La falta de registros dificulta políticas de revitalización idiomática.",
+  "vida": "No hay datos de NBI disponibles para San Jacinto, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide comparar condiciones de vida. Se requiere incluir indicadores de pobreza multidimensional en censos locales para orientar intervenciones.",
+  "conflicto": "San Jacinto registra 9 víctimas de conflicto (1985-2024), todas por desplazamiento forzado (100%). Este patrón refleja la violencia histórica en Bolívar contra pueblos indígenas. La n=9, aunque confiable, subestima impactos acumulados en territorios no protegidos.",
+  "icv": "El ICV de San Jacinto es 0.001, con componentes en cero excepto conflicto (0.002). La dimensión dominante es el conflicto, que explica el 200% del índice. Esta puntuación refleja una crisis multidimensional donde la violencia sistemática anula avances en NBI o salud.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos en San Jacinto, considerando que n=0 territorios registrados vulneran derechos territoriales del 71.6% Zenú (53 personas).",
+    "Implementar un sistema de registro local de lenguas indígenas para superar la falta de datos y diseñar estrategias de revitalización cultural.",
+    "Incluir indicadores de NBI en censos municipales, dado que el promedio indígena nacional es 67.6% y no hay datos para San Jacinto.",
+    "Fortalecer rutas de atención a víctimas de desplazamiento forzado, donde el 100% de los 9 casos registrados requieren reparación integral.",
+    "Articular con la ONIC para incorporar datos de pueblos sin información (8 personas), garantizando su inclusión en políticas públicas."
+  ]
+}

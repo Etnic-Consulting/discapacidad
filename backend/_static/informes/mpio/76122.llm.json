@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Caicedonia registra una población indígena de 177 personas según CNPV 2018, concentrada en un solo resguardo. El 63.8% (113) pertenece al pueblo EMBERA-CHAMI, evidenciando alta homogeneidad étnica. La ausencia de datos en NBI y lengua limita el análisis integral, pero la concentración territorial en un resguardo de 43.241 ha refleja patrones de ocupación histórica.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles. La población total indígena es de 177 personas, con 11 pueblos identificados. El EMBERA-CHAMI representa el 63.8% (113), seguido por población sin información (24.3%). La diversidad étnica coexiste con una alta concentración en un solo pueblo, sin datos para evaluar distribución por edad o género.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no incluye información sobre condiciones de salud o acceso a servicios. Se reconoce la limitación interpretativa por ausencia de datos confiables, lo que impide evaluar subregistros o patrones de afectación en la población indígena.",
+  "territorial": "Caicedonia cuenta con 1 resguardo indígena (KARABIDRUA) de 43.241 ha, ocupado por el pueblo EMBERA-CHAMI. La dispersión geográfica es mínima, concentrada en un solo territorio. La bbox delimitada (4.198995731690757, -75.8942698948963 a 4.41528089087305, -75.7873094425637) refleja un área reducida de ocupación colectiva.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se registra información sobre uso o pérdida de lenguas indígenas en la población. Se reconoce la ausencia de datos sin inventar alternativas.",
+  "vida": "Los datos de NBI no están disponibles para Caicedonia. El promedio indígena nacional es 67.6%, pero no hay cifras locales para comparar. La sección no permite evaluar brechas en condiciones de vida, acceso a servicios básicos o calidad habitacional.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Caicedonia entre 1985-2024 (n=0). La ausencia de hechos victimizantes sugiere baja visibilidad en el RUV, aunque podría reflejar subregistro. La lectura territorial indica ausencia de patrones de violencia estructural en el municipio.",
+  "icv": "El ICV de Caicedonia es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula (0.4*NBI + 0.3*prev + 0.3*conflicto) refleja la falta de datos en todas las dimensiones. La posición relativa es indeterminada por ausencia de valores comparativos.",
+  "recomendaciones": [
+    "Priorizar levantamiento de datos de NBI y lengua en Caicedonia, citando la ausencia de información en las secciones correspondientes.",
+    "Implementar un sistema de monitoreo local para registrar condiciones de vida de los 113 EMBERA-CHAMI en el resguardo KARABIDRUA, usando el dato de población como base.",
+    "Fortalecer la articulación con el pueblo EMBERA-CHAMI para diseñar políticas de salud intercultural, dado que representan el 63.8% de la población indígena.",
+    "Realizar un diagnóstico territorial detallado del resguardo KARABIDRUA (43.241 ha) para evaluar presión demográfica y acceso a recursos naturales.",
+    "Incluir a Caicedonia en planes regionales de prevención de violencia, pese a la ausencia de registros en el RUV, para garantizar protección preventiva."
+  ]
+}

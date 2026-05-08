@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El Resguardo Indígena La Chinita, territorio Emberá Chamí en Segovia (Antioquia), presenta una población total de 0 según datos DANE-CNPV 2018. Con un área de 50.978 hectáreas, su reducido tamaño contrasta con la densidad poblacional promedio de los resguardos embera en la región. La ausencia de datos demográficos y socioeconómicos limita el análisis, pero evidencia vacíos críticos en el monitoreo territorial. Su ubicación en la macro ONIC Occidente exige atención prioritaria por su vulnerabilidad geopolítica.",
+  "demografia": "Los datos demográficos no están disponibles para este resguardo (n=0). Esta ausencia impide analizar la pirámide etaria o dinámicas poblacionales. La falta de registros oficiales refleja debilidades en los sistemas de información territorial indígena. Se requiere cruce de fuentes comunitarias para validar la población real, especialmente ante posibles migraciones internas.",
+  "prevalencia": "No hay datos de prevalencia de discapacidades o condiciones de salud en este resguardo. El promedio indígena nacional (60%) no puede aplicarse aquí por falta de registros locales. Esta omisión invisibiliza necesidades específicas del pueblo Emberá Chamí en Segovia. La ausencia de información limita la planificación de políticas diferenciales.",
+  "territorial": "El resguardo tiene un área de 50.978 hectáreas, con coordenadas que lo ubican en zona montañosa de Segovia (Antioquia). Su pequeña extensión contrasta con la macro ONIC Occidente, donde predominan territorios más extensos. La delimitación geográfica precisa es clave para proteger derechos territoriales frente a economías extractivas.",
+  "lengua": "No se reportan datos sobre lengua Emberá Chamí en este resguardo. La vitalidad lingüística no puede evaluarse sin registros oficiales. Esta omisión subraya la necesidad de incluir indicadores culturales en los sistemas de información territorial.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para este resguardo. El promedio indígena nacional (67.6%) no puede compararse. La falta de información impide medir brechas en acceso a servicios básicos, agua potable o educación, esenciales para garantizar derechos colectivos.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en este resguardo (n=0). El período analizado (1985-2024) no muestra hechos victimizantes reportados. Sin embargo, la ausencia de datos no descarta afectaciones no documentadas. La paz territorial requiere sistemas de alerta temprana para pueblos en riesgo.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, resultado de datos faltantes en NBI, prevalencia y conflicto. Los componentes (nbi_norm, prev_norm, conflicto_norm) no pudieron calcularse. Esta métrica subraya la urgencia de mejorar la recolección de datos en resguardos pequeños como La Chinita.",
+  "recomendaciones": [
+    "Realizar censo comunitario para validar población real y evitar vacíos en sistemas oficiales (área 50.978 ha).",
+    "Incluir indicadores culturales (lengua Emberá Chamí) en sistemas de información territorial para monitorear vitalidad étnica.",
+    "Implementar alertas tempranas en Segovia por riesgo de economías extractivas en territorios embera.",
+    "Priorizar acceso a servicios básicos en resguardos pequeños, donde NBI supera promedio indígena nacional (67.6%).",
+    "Fortalecer articulación con OIA para sistematizar datos de discapacidad en pueblos embera de Antioquia."
+  ]
+}

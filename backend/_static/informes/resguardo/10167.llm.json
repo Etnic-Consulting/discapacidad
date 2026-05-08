@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo indígena CALDERAS, territorio Nasa en el municipio de Inzá (Cauca), concentra 1.190 habitantes en 1.275 hectáreas. Su población enfrenta una afectación histórica por violencia, con 142 víctimas registradas entre 1985-2024, donde el desplazamiento forzado representa el 47.9% de los hechos. El Índice de Condiciones de Vida (ICV) de 0.009 refleja una vulnerabilidad crítica, impulsada principalmente por el componente de conflicto (0.028).",
+  "demografia": "La población de CALDERAS asciende a 1.190 habitantes según datos DANE-CNPV 2018. La pirámide etaria no puede analizarse con los datos disponibles, ya que el JSON no desagrega grupos de edad. Se requiere cruzar con fuentes complementarias para evaluar estructura demográfica y dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. Los indicadores de discapacidad y salud no están desagregados a nivel de resguardo en las fuentes consultadas. Esto impide evaluar cargas de enfermedad o acceso a servicios.",
+  "territorial": "CALDERAS ocupa 1.275 hectáreas en el municipio de Inzá (Cauca), con coordenadas que delimitan un territorio compacto. No se reportan otros territorios asociados en este nivel. La concentración espacial es alta, pero la dispersión no aplica al ser un único resguardo. La autonomía territorial es limitada por presiones externas.",
+  "lengua": "No hay datos disponibles sobre lengua materna o uso de idioma Nasa Yuwe en este resguardo. La vitalidad cultural lingüística no puede evaluarse con la información actual. Se recomienda priorizar estudios etnográficos para documentar la transmisión intergeneracional.",
+  "vida": "No se reportan datos de NBI para CALDERAS. El promedio indígena nacional es 67.6%, pero sin cifras locales no es posible calcular brechas. La falta de información impide analizar pobreza multidimensional o acceso a servicios básicos en este territorio.",
+  "conflicto": "Se registraron 142 víctimas de violencia en CALDERAS entre 1985-2024, con desplazamiento forzado como principal hecho (68 casos, 47.9%). Los componentes de conflicto armado (minas antipersonal, homicidios) completan el patrón de afectación. La lectura territorial evidencia un resguardo bajo presión constante.",
+  "icv": "El ICV de CALDERAS es 0.009, con el componente de conflicto (0.028) como principal determinante. Los componentes de NBI y prevalencia no están disponibles. La posición relativa es crítica, reflejando condiciones de vida precarias vinculadas a la violencia estructural.",
+  "recomendaciones": [
+    "Priorizar la atención humanitaria a 142 víctimas registradas, enfocándose en 68 casos de desplazamiento forzado con rutas de retorno seguro y reparación integral.",
+    "Realizar un censo étnico-lingüístico para documentar la vitalidad del Nasa Yuwe, dado que no hay datos disponibles sobre lengua materna.",
+    "Implementar un sistema de alertas tempranas para prevenir 27 actos terroristas y 24 amenazas reportadas en el resguardo.",
+    "Garantizar el acceso a tierras para 4 casos de despojo forzado, mediante titulación colectiva y acompañamiento jurídico.",
+    "Diseñar un plan de desarrollo con enfoque diferencial para 1.190 habitantes, incorporando indicadores de NBI y salud que actualmente no están disponibles."
+  ]
+}

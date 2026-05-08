@@ -1,0 +1,427 @@
+{
+  "tipo": "macro",
+  "id": "5",
+  "nombre": "ORINOQUIA",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 51772,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 51772,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 1023616,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 50.6,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1741,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2) IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1741,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1147
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 154
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 106
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 66
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 64
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 53
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 45
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 35
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 29
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 17
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1147
+      },
+      "pct_hecho_principal": 65.9
+    },
+    "demografia": {
+      "_nota": "agregación demográfica a nivel macro · ver sección territorial",
+      "n_dptos": 10,
+      "n_resguardos": 119
+    },
+    "territorial": {
+      "n_resguardos": 119,
+      "n_departamentos": 10,
+      "departamentos": [
+        {
+          "cod_dpto": "15",
+          "nom_dpto": "BOYACA"
+        },
+        {
+          "cod_dpto": "50",
+          "nom_dpto": "META"
+        },
+        {
+          "cod_dpto": "81",
+          "nom_dpto": "ARAUCA"
+        },
+        {
+          "cod_dpto": "85",
+          "nom_dpto": "CASANARE"
+        },
+        {
+          "cod_dpto": "94",
+          "nom_dpto": "GUAINÍA"
+        },
+        {
+          "cod_dpto": "94",
+          "nom_dpto": "VICHADA"
+        },
+        {
+          "cod_dpto": "95",
+          "nom_dpto": "GUAVIARE"
+        },
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "GUAINÍA"
+        },
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "META"
+        },
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "VICHADA"
+        }
+      ],
+      "resguardos": [
+        {
+          "nombre": "SELVA DE MATAVÉN",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 1858084.545
+        },
+        {
+          "nombre": "NUKAK - MAKÚ",
+          "dpto": "GUAVIARE",
+          "dpto_ccdgo": "95",
+          "mpio": "SAN JOSÉ DEL GUAVIARE",
+          "pueblo_onic": "JUDPA - JUJUPDA",
+          "area_pg_ha": 957379.917
+        },
+        {
+          "nombre": "TONINA, SEJAL, SAN JOSÉ Y OTRAS",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "PUERTO COLOMBIA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 923145.445
+        },
+        {
+          "nombre": "RÍOS CUIARI E ISANA",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "PANA PANA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 918882.099
+        },
+        {
+          "nombre": "BAJO RÍO GUAINÍA Y RÍO NEGRO",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "SAN FELIPE",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 756690.006
+        },
+        {
+          "nombre": "ALTO UNUMA",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 674179.291
+        },
+        {
+          "nombre": "RÍO ATABAPO E INÍRIDA",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "CACAHUAL",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 522435.093
+        },
+        {
+          "nombre": "PARTE ALTA DEL RÍO GUAINÍA",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "PANA PANA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 427800.932
+        },
+        {
+          "nombre": "UNIDO UWA",
+          "dpto": "BOYACA",
+          "dpto_ccdgo": "15",
+          "mpio": "CUBARÁ",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 223511.049
+        },
+        {
+          "nombre": "SANTA TERESITA DEL TUPARRO",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 205282.524
+        },
+        {
+          "nombre": "SARACURE - CADÁ",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 184368.759
+        },
+        {
+          "nombre": "AWIA TUPARRO SIKUANI (MARIMBA)",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 146875.325
+        },
+        {
+          "nombre": "LAGUNA NIÑAL, COCUY, LOMA BAJA Y LOMA ALTA DEL CAÑO GUARIBEN",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 142376.872
+        },
+        {
+          "nombre": "NACUAÑEDORRO TUPARRO",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "MAPAYERRI",
+          "area_pg_ha": 95030.706
+        },
+        {
+          "nombre": "CAÑO MOCHUELO",
+          "dpto": "CASANARE",
+          "dpto_ccdgo": "85",
+          "mpio": "PAZ DE ARIPORO",
+          "pueblo_onic": "CUIBA",
+          "area_pg_ha": 93397.028
+        },
+        {
+          "nombre": "CONCORDIA",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 90354.496
+        },
+        {
+          "nombre": "RÍOS MUCO Y GUARROJO",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 85336.069
+        },
+        {
+          "nombre": "BACHACO BUENAVISTA",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 83489.459
+        },
+        {
+          "nombre": "CAÑO MESETAS - DAGUA Y MURCIÉLAGO",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "AMORÚA",
+          "area_pg_ha": 82686.942
+        },
+        {
+          "nombre": "REMANSO - CHORRO BOCÓN",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 76086.631
+        },
+        {
+          "nombre": "LA LLANURA",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "LA PRIMAVERA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 66146.509
+        },
+        {
+          "nombre": "RÍOS TOMO Y WEBERI",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 61171.074
+        },
+        {
+          "nombre": "CALI - BARRANQUILLA",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 56396.074
+        },
+        {
+          "nombre": "PAUJIL",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 54376.749
+        },
+        {
+          "nombre": "GUACO BAJO Y GUACO ALTO",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 49532.929
+        },
+        {
+          "nombre": "EL TIGRE",
+          "dpto": "META",
+          "dpto_ccdgo": "50",
+          "mpio": "PUERTO GAITÁN",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 47059.107
+        },
+        {
+          "nombre": "RÍO SIARE",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 46615.019
+        },
+        {
+          "nombre": "PUEBLO NUEVO - LAGUNA COLORADA",
+          "dpto": "VICHADA",
+          "dpto_ccdgo": "94",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 46039.441
+        },
+        {
+          "nombre": "CARANACOA YURI - LAGUNA MOROCOTO",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "94",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 45003.755
+        },
+        {
+          "nombre": "CARPINTERO PALOMAS",
+          "dpto": "GUAINÍA",
+          "dpto_ccdgo": "99",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 42764.644
+        }
+      ],
+      "bbox": [
+        0.655412580757105,
+        -74.93334680961107,
+        7.104380670369684,
+        -66.8472154266633
+      ]
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no agregable a nivel macro · ver informes por pueblo"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "icv": {
+      "score": 0.18,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.253,
+        "conflicto_norm": 0.348
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:41:31",
+  "periodo": "2018",
+  "_input_hash": "28940daae35e63dc"
+}

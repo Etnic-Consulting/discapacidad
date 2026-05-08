@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Ana (CNPV 2018) registra 31 personas indígenas, concentradas en 6 pueblos. El 48.4% (15) son wayúu, el grupo dominante. La ausencia de resguardos y datos de NBI y lengua refleja vacíos estructurales en el registro territorial. La vulnerabilidad se expresa en 7 víctimas de conflicto, con desplazamiento forzado como hecho principal (57.1%).",
+  "demografia": "La población indígena de Santa Ana es mínima (31 personas) y dispersa en 6 pueblos. El 48.4% son wayúu (15), seguido por arhuacos (7) y otros grupos minoritarios. La pirámide etaria no puede analizarse por falta de datos desagregados. La baja representatividad sugiere subregistro o migración hacia centros urbanos.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el municipio. La sección no aplica al nivel de análisis. Se requiere priorizar la recolección de información epidemiológica para identificar patrones de morbilidad y mortalidad en esta población minoritaria.",
+  "territorial": "Santa Ana carece de resguardos indígenas, pese a su ubicación en La Guajira (código 47). La dispersión geográfica de la población indígena (6 pueblos) contrasta con la ausencia de territorios colectivos. La bbox [9.25, -74.65, 9.75, -73.80] delimita un área sin presencia formal de resguardos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en Santa Ana. Se recomienda incluir preguntas específicas sobre lengua en futuros censos o registros territoriales.",
+  "vida": "No hay datos de NBI para Santa Ana. El promedio indígena nacional (67.6%) no puede compararse. La falta de información impide evaluar brechas en acceso a servicios básicos, educación o salud para esta población. Urge generar registros locales confiables.",
+  "conflicto": "Santa Ana registra 7 víctimas de conflicto entre 1985-2024, con desplazamiento forzado como hecho principal (4 casos, 57.1%). El homicidio (3 casos) completa el perfil de violencia. La baja n (7) limita análisis estadísticos, pero evidencia riesgos persistentes para la población indígena.",
+  "icv": "El ICV de Santa Ana es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula refleja ausencia de datos en NBI y prevalencia. La posición relativa es crítica: el 0.0% en NBI y prevalencia indica carencias extremas no cuantificadas. El conflicto aporta un mínimo al índice.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para registrar 31 personas dispersas en 6 pueblos y validar datos de NBI y lengua, citando la falta actual de información.",
+    "Garantizar la creación de al menos un resguardo indígena en Santa Ana, priorizando el territorio wayúu (15 personas), para proteger su patrimonio cultural y acceso a recursos.",
+    "Implementar un sistema de alerta temprana para víctimas de conflicto, dado que el 57.1% de los casos son desplazamiento forzado, citando los 4 eventos registrados.",
+    "Incluir preguntas sobre lengua indígena en el próximo CNPV para Santa Ana, donde actualmente no hay datos, y así evaluar la vitalidad cultural.",
+    "Articular con la ONIC y el Ministerio del Interior para que los 6 pueblos indígenas en Santa Ana accedan a programas de salud y educación con enfoque intercultural, citando la ausencia de registros en estas áreas."
+  ]
+}

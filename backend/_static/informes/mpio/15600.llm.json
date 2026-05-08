@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Raquira registra una población indígena de 16 personas según CNPV 2018, concentrada en 6 pueblos donde el 62.5% (10 personas) corresponde al pueblo Muisca. No se identifican resguardos en el municipio, lo que limita la protección territorial colectiva. El ICV de 0.0 refleja la ausencia de datos en componentes clave como NBI y prevalencia, evidenciando vacíos en el diagnóstico territorial.",
+  "demografia": "La población indígena de Raquira suma 16 personas con una pirámide etaria sesgada hacia adultos (10 Muisca). Los datos no permiten análisis detallado por grupos de edad. La dispersión poblacional entre 6 pueblos (Muisca, Arhuaco, Wiwa, Cocama, Nasa e indígenas sin información) refleja fragmentación identitaria y baja densidad demográfica.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para Raquira. La falta de información impide evaluar condiciones de salud o acceso a servicios. Se requiere priorizar registros locales para superar el sub-registro y diseñar estrategias diferenciadas por pueblo.",
+  "territorial": "Raquira no cuenta con resguardos indígenas, a pesar de su bbox geográfico. La ausencia de territorios colectivos (0 resguardos) contrasta con la presencia de 6 pueblos, sugiriendo pérdida de autonomía territorial. La delimitación de espacios ancestrales es urgente para garantizar derechos colectivos.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en Raquira. La ausencia de registros lingüísticos dificulta la revitalización cultural. Se recomienda incluir preguntas específicas sobre lengua en futuros censos para identificar necesidades de preservación.",
+  "vida": "No se reportan datos de NBI para Raquira. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide medir brechas en condiciones de vida, obstaculizando la focalización de políticas sociales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Raquira entre 1985-2024 (0 casos). La ausencia de hechos victimizantes no descarta riesgos latentes. Se debe fortalecer el monitoreo comunitario para prevenir violencias estructurales.",
+  "icv": "El ICV de Raquira es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula del ICV no puede aplicarse sin información, subrayando la necesidad de registros locales confiables para evaluar desarrollo territorial.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en Raquira para actualizar datos demográficos y lingüísticos, citando la necesidad de superar la fragmentación identitaria (6 pueblos).",
+    "Gestionar con la ANLA y la Dirección de Asuntos Indígenas la delimitación de resguardos, dado que no existen territorios colectivos (0 resguardos).",
+    "Incluir en el CNPV 2024 preguntas sobre lengua y discapacidad para Raquira, considerando la falta de datos en estas secciones.",
+    "Diseñar un plan de prevención de violencias basado en el ICV 0.0, priorizando monitoreo comunitario ante la ausencia de registros oficiales.",
+    "Articular con el pueblo Muisca (62.5% de la población) estrategias de revitalización cultural, dado su predominio demográfico."
+  ]
+}

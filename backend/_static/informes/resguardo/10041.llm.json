@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo JENATURADÓ, ubicado en Dabeiba (Antioquia), registra una población total de 0 según datos DANE-CNPV 2018. Con un área de 595.389 hectáreas y perteneciente al pueblo Emberá Eyabida - Emberá Katío, este territorio enfrenta vacíos críticos en datos socioeconómicos. La ausencia de información sobre lengua, NBI y conflicto limita la evaluación integral de sus condiciones de vida.",
+  "demografia": "Los datos demográficos para JENATURADÓ no están disponibles en el sistema (n=0). Esta ausencia impide analizar la pirámide etaria o las razones de crecimiento poblacional. La falta de registros confiables a nivel de resguardo exige priorizar la actualización censal para este territorio Emberá.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para JENATURADÓ. La sección correspondiente no contiene información, lo que imposibilita evaluar cargas epidemiológicas o subregistros. Se requiere fortalecer los sistemas de información en salud indígena a nivel local.",
+  "territorial": "JENATURADÓ ocupa 595.389 hectáreas en Dabeiba (Antioquia), con coordenadas que delimitan su territorio en la macrorregión Occidente. Este resguardo es el único registrado en el municipio según los datos disponibles. La concentración territorial es exclusiva para este pueblo Emberá, sin superposición con otros grupos.",
+  "lengua": "Los datos sobre lengua no están disponibles para JENATURADÓ. No se puede determinar la vitalidad de las lenguas Emberá Eyabida o Emberá Katío en este territorio. Esta ausencia de información dificulta la planificación de estrategias de revitalización lingüística.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para JENATURADÓ. El promedio indígena nacional de NBI es 67.6%, pero este resguardo carece de registros. La falta de información impide comparar brechas o priorizar intervenciones en condiciones de vida.",
+  "conflicto": "JENATURADÓ reporta 0 víctimas de conflicto con discapacidad entre 1985-2024. No se identifican hechos victimizantes principales en este territorio. La ausencia de registros no necesariamente indica ausencia de violencia, sino limitaciones en los sistemas de reporte local.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para JENATURADÓ es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos. Este resultado subraya la urgencia de generar información primaria.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en JENATURADÓ para actualizar datos demográficos y socioeconómicos, dado que los registros oficiales muestran n=0 (poblacion_total.value=0).",
+    "Implementar un sistema de monitoreo de salud indígena con enfoque diferencial, priorizando la recolección de datos de prevalencia (sección_prevalencia._sin_datos=true).",
+    "Diseñar estrategias de revitalización lingüística para las lenguas Emberá Eyabida y Emberá Katío, considerando la ausencia de datos en la sección lengua (_sin_datos=true).",
+    "Establecer un protocolo de reporte de violencia en territorios indígenas, especialmente en resguardos sin registros como JENATURADÓ (victimas_total_disc.value=0).",
+    "Incluir a JENATURADÓ en los planes regionales de Antioquia para garantizar acceso a información estadística básica, dado su vacío en NBI y conflicto (secciones_nbi._sin_datos=true y conflicto.victimas_total_disc.value=0)."
+  ]
+}

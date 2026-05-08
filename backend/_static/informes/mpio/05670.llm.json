@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Roque (Antioquia) concentra una población indígena de 1 persona según CNPV 2018, correspondiente al pueblo Nasa. La ausencia de resguardos (n=0) y datos de lengua o NBI limita el análisis territorial y socioeconómico. El ICV de 0.0 refleja la precariedad estructural, agravada por un caso de desplazamiento forzado como hecho victimizante principal.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por n=1. La población indígena registrada es mínima (1 persona), sin datos de capacidades diversas disponibles. La concentración en un solo pueblo (Nasa) sugiere una presencia indígena marginal en el territorio. Los datos demográficos a este nivel no permiten análisis comparativos.",
+  "prevalencia": "No hay datos de prevalencia disponibles para San Roque. La falta de información sobre discapacidades o condiciones de salud impide evaluar subregistros o necesidades específicas. Se requiere desagregación municipal para análisis confiables. La confiabilidad de los datos existentes es limitada por el tamaño muestral.",
+  "territorial": "San Roque no cuenta con resguardos indígenas (n=0), lo que indica ausencia de territorios colectivos reconocidos. La bbox geográfica delimita un área sin presencia indígena organizada. La dispersión territorial es total, sin concentración de comunidades. La ausencia de datos de lengua refuerza la invisibilización.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas. La falta de información impide evaluar la transmisión intergeneracional o políticas de revitalización.",
+  "vida": "No hay datos de NBI disponibles para San Roque. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de información sobre necesidades básicas insatisfechas oculta la precariedad socioeconómica. Se requiere recolección de datos primarios para evaluar condiciones de vida.",
+  "conflicto": "San Roque registra 1 víctima de desplazamiento forzado (1985-2024), constituyendo el 100% de los hechos victimizantes. El bajo n (1) limita la generalización, pero evidencia riesgos territoriales. La concentración en un solo hecho victimizante refleja vulnerabilidad extrema. La confiabilidad es alta, pero el tamaño muestral es crítico.",
+  "icv": "El ICV de 0.0 en San Roque refleja la suma de componentes nulos (NBI, prevalencia y conflicto normalizados). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja un valor mínimo, indicando condiciones de vida críticas. La dimensión dominante es el conflicto, con un peso del 30% en el cálculo.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal para superar el subregistro actual (n=1) y actualizar datos demográficos con enfoque diferencial.",
+    "Diseñar un plan de reconocimiento de resguardos en San Roque, priorizando la titulación colectiva para garantizar derechos territoriales.",
+    "Incluir a San Roque en el Sistema de Alertas Tempranas de la ONIC para monitorear riesgos de desplazamiento forzado y proteger a la población Nasa.",
+    "Articular con el Ministerio de Cultura programas de revitalización lingüística, dado que no hay datos disponibles sobre lengua indígena en el municipio.",
+    "Solicitar al DANE la desagregación municipal de indicadores socioeconómicos (NBI, discapacidad) para evaluar brechas con el promedio indígena nacional (67.6%)."
+  ]
+}

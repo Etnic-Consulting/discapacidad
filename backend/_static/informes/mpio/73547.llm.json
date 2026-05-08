@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Piedras alberga una población indígena de 11 personas, distribuidas en 3 pueblos: Pijao (8), Zenú (2) y Tayronas (1). La ausencia de resguardos indígenas en el territorio contrasta con la presencia histórica de estos pueblos en la región. La única víctima de conflicto registrada corresponde a desplazamiento forzado, lo que refleja una afectación mínima pero significativa en un contexto de violencia estructural.",
+  "demografia": "La población indígena de Piedras es reducida (11 personas) y concentrada en el pueblo Pijao, que representa el 72.7% del total. Los datos provienen de la CNPV 2018 y no incluyen pirámide etaria detallada. La falta de desagregación por grupos de edad limita el análisis de dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Piedras. La sección de capacidades diversas carece de información, impidiendo evaluar brechas en salud o discapacidad. Se reconoce un sub-registro potencial en estos indicadores.",
+  "territorial": "Piedras no cuenta con resguardos indígenas, a pesar de albergar a pueblos con presencia histórica en la región. El municipio abarca un área geográfica definida por coordenadas, pero sin territorios colectivos reconocidos. La ausencia de resguardos limita la autonomía territorial y el ejercicio de derechos colectivos.",
+  "lengua": "Los datos sobre lenguas indígenas en Piedras no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Piedras. El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la falta de datos locales. La ausencia de este indicador dificulta evaluar condiciones de vida.",
+  "conflicto": "Se registra 1 víctima de conflicto en Piedras, correspondiente a desplazamiento forzado (100% de los casos). El dato proviene del RUV entre 1985-2024 y es confiable, aunque limitado por el bajo número de registros. La afectación refleja riesgos persistentes en el territorio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Piedras es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una situación crítica en todas las dimensiones evaluadas.",
+  "recomendaciones": [
+    "Reconocer y delimitar territorios colectivos para los pueblos Pijao, Zenú y Tayronas en Piedras, garantizando su autonomía y protección, dado que no existen resguardos registrados pese a su presencia histórica.",
+    "Implementar un sistema de registro de datos locales sobre salud, discapacidad y NBI para superar la ausencia de información y permitir diagnósticos precisos.",
+    "Priorizar acciones contra el desplazamiento forzado en Piedras, donde el 100% de las víctimas registradas (1 caso) corresponde a este hecho violento.",
+    "Fortalecer la participación de los pueblos indígenas de Piedras en políticas públicas municipales, considerando su baja representación numérica pero derechos territoriales históricos.",
+    "Diseñar estrategias de revitalización cultural para los pueblos Pijao, Zenú y Tayronas, incluyendo la recuperación de lenguas originarias, ante la falta de datos sobre vitalidad lingüística."
+  ]
+}

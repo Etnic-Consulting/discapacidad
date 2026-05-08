@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Salgar registra una población indígena de 7 personas según el CNPV 2018, distribuidas en 5 pueblos, siendo el EMBERA-CHAMI el más numeroso con 2 individuos. La ausencia de resguardos y datos de lengua refleja una debilidad institucional en el reconocimiento territorial. La prevalencia de víctimas de desplazamiento forzado (50% del total) evidencia la vulnerabilidad histórica de estos pueblos en la zona.",
+  "demografia": "La población indígena de Salgar suma 7 personas, con una pirámide etaria no aplicable por el bajo tamaño muestral (n=7). Los datos provienen del CNPV 2018 y muestran una distribución dispersa entre 5 pueblos, sin concentración demográfica relevante. La confiabilidad es alta, pero la representatividad es limitada.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en este municipio. La sección no aplica a nivel municipal según la fuente consultada. Se reconoce la falta de información sin recurrir a estimaciones externas.",
+  "territorial": "Salgar cuenta con 0 resguardos indígenas registrados, pese a tener una extensión geográfica definida por coordenadas (bbox). La ausencia de territorios colectivos contrasta con la presencia de 5 pueblos distintos. La dispersión poblacional y la falta de reconocimiento territorial limitan la autonomía indígena.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se pueden inferir patrones lingüísticos sin información primaria.",
+  "vida": "No hay datos de NBI disponibles para Salgar. El promedio indígena nacional (67.6%) no puede ser contrastado localmente. Se reconoce la falta de información sin recurrir a extrapolaciones.",
+  "conflicto": "Se registran 4 víctimas de violencia en Salgar entre 1985-2024, con desplazamiento forzado como hecho principal (50% del total). Los datos provienen del RUV y son confiables, pero la muestra es reducida (n=4). La lectura territorial sugiere una afectación histórica en derechos humanos.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Salgar es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula refleja una situación crítica en NBI, prevalencia y conflicto. La posición relativa es crítica frente a estándares indígenas nacionales.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para los 5 pueblos identificados, dado que no existen territorios colectivos registrados pese a la presencia histórica.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, ya que este hecho representa el 50% de las víctimas registradas en el municipio.",
+    "Generar un censo lingüístico local para documentar la vitalidad cultural, ante la ausencia de datos sobre lengua.",
+    "Articular con el DNP y la ONIC para incluir a Salgar en programas de NBI con enfoque diferencial, dado que no hay datos disponibles.",
+    "Fortalecer la base de datos municipal con desagregación por pueblo, pues la población total (7 personas) no refleja la diversidad étnica existente."
+  ]
+}

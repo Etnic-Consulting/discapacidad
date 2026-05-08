@@ -1,0 +1,305 @@
+{
+  "tipo": "mpio",
+  "id": "73504",
+  "nombre": "ORTEGA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 14748,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 14748,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 10,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 14730
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "610",
+          "pueblo": "TAIWANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 14730
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 24,
+      "resguardos": [
+        {
+          "nombre": "PASO ANCHO - CHICUAMBE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 798.522
+        },
+        {
+          "nombre": "GUAIPA UNO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 709.047
+        },
+        {
+          "nombre": "GUATAVITA TUA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 619.052
+        },
+        {
+          "nombre": "AICO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 499.548
+        },
+        {
+          "nombre": "CHICUAMBE LAS BRISAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 458.19
+        },
+        {
+          "nombre": "RECINTO PALMAROSA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 380.276
+        },
+        {
+          "nombre": "NICOLÁS RAMÍREZ",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 372.713
+        },
+        {
+          "nombre": "MESA DE ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 339.15
+        },
+        {
+          "nombre": "BALSILLAS LIMÓN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 320.077
+        },
+        {
+          "nombre": "POCARÁ",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 246.135
+        },
+        {
+          "nombre": "LA FLECHA ALTOZANO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 236.275
+        },
+        {
+          "nombre": "LA SORTIJA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 184.859
+        },
+        {
+          "nombre": "GUAIPA CENTRO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 140.306
+        },
+        {
+          "nombre": "BALSILLAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 139.589
+        },
+        {
+          "nombre": "PALERMO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 127.989
+        },
+        {
+          "nombre": "CALARA SAN MARTÍN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 117.989
+        },
+        {
+          "nombre": "VUELTA DEL RÍO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 88.905
+        },
+        {
+          "nombre": "EL VERGEL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 57.149
+        },
+        {
+          "nombre": "CAMPOALEGRE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 31.973
+        },
+        {
+          "nombre": "BOCAS DE TETUÁN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 31.575
+        },
+        {
+          "nombre": "QUINTÍN LAME",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 31.159
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA PUERTO SAMARIA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 27.081
+        },
+        {
+          "nombre": "SAN DIEGO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 26.3
+        },
+        {
+          "nombre": "ANABA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 9.961
+        }
+      ],
+      "bbox": [
+        3.7462268822714946,
+        -75.44385810717023,
+        4.119692198482147,
+        -75.0726247846103
+      ],
+      "nombre_mpio": "ORTEGA",
+      "cod_dpto": "73"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 246,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 246,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 188
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 31
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 3
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Tortura",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 188
+      },
+      "pct_hecho_principal": 76.4
+    },
+    "icv": {
+      "score": 0.015,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.049
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:25:11",
+  "periodo": "2018",
+  "_input_hash": "3703f22ef924c3d2"
+}

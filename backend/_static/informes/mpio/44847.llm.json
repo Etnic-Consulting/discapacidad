@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Uribia, municipio de La Guajira, concentra el 99.97% de su población indígena en el pueblo Wayúu (154,856 personas). La presencia de 15 pueblos en el territorio refleja diversidad cultural, pero con una hegemonía demográfica abrumadora. La concentración territorial en un solo resguardo (1,085,157.71 ha) evidencia una presión sobre el hábitat wayúu, donde el desplazamiento forzado (29 casos) es el principal riesgo.",
+  "demografia": "La pirámide etaria indígena en Uribia muestra una estructura joven, con 154,856 wayúus como grupo dominante. Los datos no desagregan por grupos de edad, pero la predominancia del pueblo Wayúu sugiere una base poblacional amplia. No hay datos disponibles sobre capacidades diversas para evaluar brechas internas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades a nivel municipal. La falta de información limita el análisis de salud pública. Se requiere desagregar registros por pueblo para identificar patrones de morbilidad en la población wayúu, históricamente afectada por barreras de acceso.",
+  "territorial": "Uribia alberga 1 resguardo (Alta y Media Guajira) con 1,085,157.71 ha, que alberga al 99.97% de la población indígena municipal. La dispersión geográfica es mínima, concentrada en un territorio extenso pero con alta presión demográfica. La bbox delimita un área crítica para la planificación territorial.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede evaluar la vitalidad lingüística de los pueblos presentes, especialmente del wayúu, cuya lengua es clave para la identidad cultural.",
+  "vida": "No hay datos de NBI para Uribia. El promedio indígena nacional (67.6%) sugiere una situación crítica, pero no se puede contrastar. Se requiere priorizar la recolección de datos socioeconómicos para diseñar políticas diferenciadas.",
+  "conflicto": "El desplazamiento forzado afecta al 80.6% de las 36 víctimas registradas en Uribia (29 casos). El homicidio (2 casos) y delitos sexuales (1) completan el perfil de violencia. La concentración en hechos violentos refleja la vulnerabilidad del territorio wayúu en La Guajira.",
+  "icv": "El ICV de Uribia (0.002) está dominado por el componente de conflicto (0.007), seguido de NBI y prevalencia (0.0). La fórmula refleja una crisis multidimensional donde la violencia estructural pesa más que las carencias socioeconómicas. La posición relativa es crítica frente a otros municipios.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación del Resguardo Alta y Media Guajira para garantizar el territorio del pueblo Wayúu, dado que el 99.97% de la población indígena depende de este espacio.",
+    "Diseñar un plan de atención psicosocial para las 36 víctimas de conflicto, con enfoque en desplazamiento forzado (29 casos) y delitos sexuales (1 caso), articulado con la Ruta de Atención Integral.",
+    "Implementar un sistema de monitoreo de salud pública desagregado por pueblos, especialmente para el Wayúu, ante la ausencia de datos de prevalencia.",
+    "Incluir a Uribia en el Plan Nacional de Desarrollo con enfoque diferencial, considerando su ICV (0.002) y la urgencia de reducir el componente de conflicto (0.007).",
+    "Fortalecer la recolección de datos de NBI y lengua en coordinación con el DANE y el Ministerio de Cultura para superar las limitaciones actuales."
+  ]
+}

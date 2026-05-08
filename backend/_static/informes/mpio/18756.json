@@ -1,0 +1,315 @@
+{
+  "tipo": "mpio",
+  "id": "18756",
+  "nombre": "SOLANO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 2083,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 2083,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 18,
+      "top": [
+        {
+          "cod_pueblo": "730",
+          "pueblo": "MURUI",
+          "poblacion": 836
+        },
+        {
+          "cod_pueblo": "190",
+          "pueblo": "COREGUAJE",
+          "poblacion": 422
+        },
+        {
+          "cod_pueblo": "030",
+          "pueblo": "ANDOKE",
+          "poblacion": 399
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 194
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 143
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 41
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 21
+        },
+        {
+          "cod_pueblo": "731",
+          "pueblo": "MUINANE",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "770",
+          "pueblo": "YUKUNA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "450",
+          "pueblo": "MATAPI",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "590",
+          "pueblo": "SIONA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "282",
+          "pueblo": "EMBERA-CHAMI",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "390",
+          "pueblo": "MAKAGUAJE",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "410",
+          "pueblo": "MAKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "490",
+          "pueblo": "OCAINA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "660",
+          "pueblo": "TIKUNA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "780",
+          "pueblo": "YUKPA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "730",
+        "pueblo": "MURUI",
+        "poblacion": 836
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 18,
+      "resguardos": [
+        {
+          "nombre": "PUERTO SÁBALO - LOS MONOS",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 624487.793
+        },
+        {
+          "nombre": "MONOCHOA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 414846.874
+        },
+        {
+          "nombre": "WITORA O HUITORA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 131560.431
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA LA VICTORIA",
+          "pueblo_onic": "Por definir",
+          "area_pg_ha": 61105.192
+        },
+        {
+          "nombre": "JERICÓ - CONSAYA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 32717.501
+        },
+        {
+          "nombre": "COROPOYA",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 28512.063
+        },
+        {
+          "nombre": "AGUAS NEGRAS",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 18423.017
+        },
+        {
+          "nombre": "MESAI",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 7082.013
+        },
+        {
+          "nombre": "NIÑERAS",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 3392.647
+        },
+        {
+          "nombre": "PUERTO NARANJO, PEÑAS ROJAS, CUERAZO Y EL DIAMANTE",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 2219.692
+        },
+        {
+          "nombre": "LA TEÓFILA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 1676.6
+        },
+        {
+          "nombre": "EL QUINCE",
+          "pueblo_onic": "UITOTO",
+          "area_pg_ha": 1272.566
+        },
+        {
+          "nombre": "EL GUAYABAL",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 607.223
+        },
+        {
+          "nombre": "EL PORVENIR KANANGUCHAL",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 530.336
+        },
+        {
+          "nombre": "PAEZ DE EL LÍBANO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 446.886
+        },
+        {
+          "nombre": "EL TRIUNFO",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 194.139
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 173.008
+        },
+        {
+          "nombre": "LA ESPERANZA",
+          "pueblo_onic": "KOREGUAJE",
+          "area_pg_ha": 114.486
+        }
+      ],
+      "bbox": [
+        -0.7058400442294057,
+        -75.51991836298998,
+        1.1878569955662803,
+        -71.25384590373017
+      ],
+      "nombre_mpio": "SOLANO",
+      "cod_dpto": "18"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 162,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 162,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 115
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 21
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 11
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 4
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 115
+      },
+      "pct_hecho_principal": 71.0
+    },
+    "icv": {
+      "score": 0.01,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.032
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:44:25",
+  "periodo": "2018",
+  "_input_hash": "006b76bfb9797e1f"
+}

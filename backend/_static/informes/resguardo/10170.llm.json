@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL MORAL, territorio del pueblo YANAKONA-YANAKUNA en el Cauca, alberga 550 habitantes según datos DANE-CNPV 2018. Con 42.051 hectáreas, su área es reducida pero estratégica en la macro OCCIDENTE. La ausencia de datos en NBI, lengua y conflicto limita un diagnóstico integral, aunque su ICV de 0.0 refleja condiciones críticas no cuantificables en este informe.",
+  "demografia": "La población total del resguardo es de 550 habitantes, con datos confiables según DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel territorial. La falta de desagregación impide analizar dinámicas demográficas como envejecimiento o natalidad, limitando la planificación comunitaria.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en EL MORAL. La ausencia de registros específicos para resguardos impide evaluar necesidades sanitarias. Este vacío evidencia la necesidad de sistemas de información diferenciados para territorios indígenas, donde el sub-registro suele ser alto.",
+  "territorial": "EL MORAL ocupa 42.051 hectáreas en el municipio de LA SIERRA, Cauca, con coordenadas geográficas precisas. Su ubicación en la macro OCCIDENTE lo sitúa en un contexto de alta presión territorial. La delimitación exacta facilita acciones de protección ambiental y cultural, pero requiere fortalecimiento institucional para su defensa.",
+  "lengua": "Los datos sobre lengua en EL MORAL no están disponibles. La ausencia de información lingüística impide evaluar la vitalidad del idioma YANAKONA-YANAKUNA en este territorio. Este vacío obstaculiza la implementación de políticas de revitalización cultural y educativa desde las comunidades.",
+  "vida": "No se reportan datos de NBI para EL MORAL, aunque el promedio indígena nacional es 67.6%. La falta de información específica oculta las condiciones de vida de la población. Esta brecha evidencia la necesidad de sistemas de monitoreo territorial con enfoque diferencial para resguardos.",
+  "conflicto": "El resguardo EL MORAL registra 0 víctimas de conflicto con discapacidad según RUV (1985-2024). La ausencia de hechos victimizantes no implica ausencia de riesgos, sino limitaciones en los registros. Este dato debe interpretarse con cautela, dado el sub-registro histórico en territorios indígenas.",
+  "icv": "El ICV de EL MORAL es 0.0, calculado con componentes nulos (NBI, prevalencia y conflicto). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja datos no disponibles. Este resultado subraya la urgencia de sistemas de información confiables para territorios indígenas.",
+  "recomendaciones": [
+    "Implementar un sistema de información territorial para resguardos que incluya NBI, lengua y salud, priorizando los 550 habitantes de EL MORAL.",
+    "Fortalecer la recolección de datos sobre víctimas de conflicto en territorios indígenas, donde el sub-registro es alto como evidencia el 0 reportado.",
+    "Diseñar estrategias de revitalización lingüística para el pueblo YANAKONA-YANAKUNA, dado que no hay datos disponibles sobre lengua en EL MORAL.",
+    "Promover acciones de protección territorial en LA SIERRA, Cauca, considerando su ubicación estratégica en la macro OCCIDENTE.",
+    "Establecer alianzas con el CRIC para monitorear condiciones de vida en resguardos, dado que el ICV de 0.0 refleja datos ausentes."
+  ]
+}

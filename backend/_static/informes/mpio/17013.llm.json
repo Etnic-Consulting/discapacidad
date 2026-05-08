@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "En Aguadas (Caldas), la población indígena registrada suma 65 personas según CNPV 2018, concentrada en 6 pueblos. El 63.1% (41 personas) pertenece al pueblo EMBERÁ, evidenciando una diversidad étnica limitada pero con un grupo dominante claro. La ausencia de resguardos y datos de lengua refleja vacíos en el reconocimiento territorial y cultural, pese a la presencia histórica de pueblos como SIKUANI y WAYUU.",
+  "demografia": "La pirámide etaria no aplica directamente al nivel municipal, ya que los datos agregados no desagregan por grupos de edad. La población total indígena es de 65 personas, con el 63.1% (41) correspondiente al pueblo EMBERÁ. La falta de desglose etario impide analizar dinámicas generacionales o envejecimiento poblacional en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este nivel municipal. Los registros del RUV no incluyen información específica para Aguadas, lo que limita el análisis de sub-registros o patrones de afectación. Se requiere cruce con fuentes departamentales para aproximar la situación.",
+  "territorial": "Aguadas cuenta con 0 resguardos indígenas, pese a albergar 6 pueblos distintos. La dispersión geográfica se limita a un municipio sin delimitación territorial colectiva, contrastando con la presencia de pueblos como ZENU y PIAPOCO. La bbox registrada no refleja territorios ancestrales, sino límites administrativos municipales.",
+  "lengua": "Los datos sobre lenguas indígenas en Aguadas no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de idiomas ancestrales como el embera o el sikuani en el territorio. Este vacío obstaculiza la planificación de políticas de revitalización cultural.",
+  "vida": "No hay datos de NBI para Aguadas, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide comparar brechas en condiciones de vida. Se desconoce el acceso a servicios básicos, educación o salud para los 65 indígenas registrados en el municipio.",
+  "conflicto": "Se registraron 2 víctimas de conflicto con discapacidad entre 1985-2024, con hechos principales de amenaza (50%) y desplazamiento forzado (50%). La baja cifra (n=2) limita análisis estadísticos, pero evidencia presencia de violencia estructural. La falta de resguardos agrava la vulnerabilidad territorial.",
+  "icv": "El ICV de Aguadas es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja una condición crítica en todas las dimensiones. Este resultado subraya la urgencia de políticas integrales para este municipio.",
+  "recomendaciones": [
+    "Realizar un censo étnico municipal que desagregue por edad, lengua y condiciones de vida para superar los vacíos en los datos actuales (población total: 65).",
+    "Promover la creación de un resguardo indígena en Aguadas, priorizando al pueblo EMBERÁ como actor dominante (41 personas, 63.1%).",
+    "Implementar un sistema de alertas tempranas para prevenir amenazas y desplazamientos forzados, dado que el 50% de los hechos de conflicto registrados son amenazas (n=1).",
+    "Diseñar programas de revitalización cultural que incluyan la documentación de lenguas indígenas, ante la ausencia de datos en este municipio.",
+    "Articular con Caldas (departamento) para replicar estrategias de reconocimiento territorial, considerando que no hay resguardos en el municipio (n_resguardos: 0)."
+  ]
+}

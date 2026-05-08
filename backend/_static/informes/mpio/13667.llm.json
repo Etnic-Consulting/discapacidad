@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Martín de Loba (Bolívar) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 en todos los indicadores demográficos. La única víctima de conflicto identificada corresponde a desplazamiento forzado (1 caso, 100% del total). El ICV municipal es 0.0, reflejando la imposibilidad de calcular indicadores por falta de datos. Esta situación evidencia vacíos en el reconocimiento territorial y la protección de derechos indígenas.",
+  "demografia": "Los datos demográficos para San Martín de Loba no están disponibles (n=0). No es posible analizar la pirámide etaria ni la distribución poblacional. La ausencia de registros impide identificar la presencia histórica de pueblos indígenas en el municipio, contrastando con el promedio indígena nacional de 60.0% en capacidades diversas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el municipio (datos no aplican al nivel). La falta de información limita el análisis de sub-registros y patrones epidemiológicos. Se requiere fortalecer sistemas de información diferenciada para pueblos indígenas en contextos municipales.",
+  "territorial": "San Martín de Loba no registra resguardos indígenas (n=0). El municipio tiene una extensión geográfica definida por coordenadas (bbox), pero sin territorios colectivos reconocidos. Esta ausencia contrasta con la presencia de pueblos indígenas en departamentos cercanos como Sucre o Córdoba, sugiriendo posibles vacíos en titulación o invisibilización.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas. Esta carencia refleja la necesidad de incluir variables culturales en los censos municipales.",
+  "vida": "No hay datos de NBI disponibles para San Martín de Loba. El promedio indígena nacional es 67.6%, pero no se puede calcular la brecha municipal. La falta de información impide evaluar condiciones de vida como acceso a servicios básicos o educación.",
+  "conflicto": "Se registró 1 víctima de conflicto en San Martín de Loba, correspondiente a desplazamiento forzado (100% del total). Este único caso, aunque confiable (n=1), no permite análisis de patrones territoriales. La invisibilización de víctimas indígenas en contextos municipales dificulta la implementación de medidas de protección.",
+  "icv": "El Índice de Condiciones de Vida (ICV) municipal es 0.0, derivado de la ausencia de datos en componentes clave (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no pudo calcularse por falta de inputs. Esto refleja la urgencia de sistemas de información robustos.",
+  "recomendaciones": [
+    "Realizar un censo municipal con enfoque étnico para identificar población indígena oculta, citando la ausencia actual de registros (n=0 en demografía).",
+    "Incluir variables de lengua y cultura en los sistemas de información municipal, dado que los datos actuales no permiten análisis lingüísticos (lengua: _sin_datos).",
+    "Implementar un protocolo de atención a víctimas indígenas en desplazamiento forzado, priorizando el único caso registrado (1 víctima, 100%).",
+    "Promover la titulación de resguardos en San Martín de Loba, considerando la ausencia de territorios reconocidos (n_resguardos: 0).",
+    "Fortalecer la articulación con el CNPV para desagregar datos municipales por pueblo indígena, evitando la invisibilización de colectivos (confiabilidad: NO_CONFIABLE)."
+  ]
+}

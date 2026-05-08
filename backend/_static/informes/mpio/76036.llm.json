@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Andalucía (Valle del Cauca) reporta una población indígena de solo 2 personas según el CNPV 2018, concentrada en un único pueblo sin identificación específica. La ausencia de resguardos y datos lingüísticos refleja una condición de invisibilización territorial. La vulnerabilidad se evidencia en el desplazamiento forzado como único hecho victimizante registrado, con 2 casos en 40 años.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la mínima población reportada (n=2). La estructura demográfica carece de representatividad estadística para análisis etario o generacional. Se requiere desagregación por pueblos para validar patrones demográficos reales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio (_sin_datos: true). Esta limitación impide evaluar condiciones de salud o acceso a servicios en la población indígena local. El sub-registro es evidente al no existir registros diferenciados.",
+  "territorial": "Andalucía no registra resguardos indígenas (n_resguardos: 0), lo que contrasta con su bbox municipal que abarca 4.06601308515518,-76.25076279243308 a 4.217367506616769,-76.07050402868805. La dispersión geográfica sin territorios colectivos configura un patrón de despojo territorial.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes en la población indígena local.",
+  "vida": "Los datos de NBI no están disponibles (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. Esta brecha metodológica impide comparar condiciones de vida. La invisibilización estadística limita la identificación de necesidades críticas.",
+  "conflicto": "Se registran 2 víctimas de desplazamiento forzado entre 1985-2024, constituyendo el 100% de los hechos victimizantes. Este patrón refleja la exclusión histórica del pueblo indígena en el municipio. La confiabilidad es alta (n=2), pero el bajo N sugiere sub-registro.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, con componentes normalizados a cero en NBI, prevalencia y conflicto. Esta puntuación extrema evidencia la ausencia de datos locales para calcular el índice. La fórmula aplicada no refleja la realidad territorial.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para identificar población real y pueblos presentes, citando n_pueblos: 1 y población: 2.",
+    "Establecer mecanismos de registro de víctimas indígenas en el RUV con desagregación municipal, citando víctimas_total_disc: 2.",
+    "Implementar programa de recuperación territorial con enfoque en Andalucía, citando n_resguardos: 0.",
+    "Generar línea base de NBI y condiciones de vida con metodología ONIC, citando _sin_datos: true en nbi.",
+    "Incluir lengua y cultura en el SMT-ONIC para municipios sin datos, citando _sin_datos: true en lengua."
+  ]
+}

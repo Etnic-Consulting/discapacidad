@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Jagual Río Chintadó, territorio Emberá Eyabida - Emberá Katío en el Chocó, alberga 940 habitantes en 40.656 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. La falta de información en capacidades diversas y lengua limita un diagnóstico integral, aunque el territorio mantiene su continuidad histórica en la macro ONIC Occidente.",
+  "demografia": "La población total de 940 habitantes presenta una estructura demográfica no detallada en los datos disponibles. Dado que el resguardo no cuenta con información específica sobre pirámide etaria, no es posible analizar su composición por grupos de edad ni las razones de su distribución. Los datos a este nivel no están disponibles para este indicador.",
+  "prevalencia": "No se registran datos de prevalencia de enfermedades o condiciones de salud en el resguardo. La ausencia de información impide analizar patrones de morbilidad o sub-registro. Los datos a este nivel no están disponibles para este indicador.",
+  "territorial": "El resguardo ocupa 40.656 hectáreas en el municipio de Carmen del Darién, Chocó, con coordenadas que delimitan su territorio en la macro ONIC Occidente. Su área representa un espacio de vida colectiva para el pueblo Emberá Eyabida - Emberá Katío. No se reportan territorios adicionales ni dispersión geográfica dentro del resguardo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No es posible determinar el uso de lenguas nativas ni su vitalidad cultural a partir de la información proporcionada.",
+  "vida": "No se cuenta con datos sobre Necesidades Básicas Insatisfechas (NBI) para el resguardo. La comparación con el promedio indígena nacional (67.6%) no puede realizarse. Los datos a este nivel no están disponibles para este indicador.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo (0 casos). La ausencia de hechos victimizantes reportados sugiere un contexto de baja visibilidad en el Registro Único de Víctimas. Los datos a este nivel no permiten análisis de patrones territoriales.",
+  "icv": "El ICV del resguardo es 0.0, derivado de la normalización de componentes ausentes (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados significativos al no existir datos confiables. La posición relativa no puede determinarse.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de capacidades diversas, priorizando la identificación de grupos etarios y condiciones de discapacidad, dado que el resguardo alberga 940 habitantes sin información detallada.",
+    "Implementar un sistema de registro propio de morbilidad y prevalencia de enfermedades, considerando que no existen datos disponibles en este nivel y el promedio indígena nacional de NBI es 67.6%.",
+    "Documentar la vitalidad lingüística del pueblo Emberá Eyabida - Emberá Katío en el resguardo, ante la ausencia de información sobre lengua y su importancia cultural.",
+    "Fortalecer la articulación con el CRICH y ASOREWA para visibilizar el resguardo en el RUV, ya que no se registran víctimas de conflicto con discapacidad (0 casos) pero persisten riesgos territoriales.",
+    "Diseñar un plan de monitoreo territorial con enfoque diferencial, dado que el ICV es 0.0 por falta de datos normalizados y se requiere información confiable para la toma de decisiones."
+  ]
+}

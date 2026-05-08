@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Facatativá registra una población indígena de 150 personas según CNPV 2018, distribuida en 20 pueblos con predominio de los Pastos (26) y Muisca (22). La ausencia de resguardos y datos de NBI y lengua limita el análisis de condiciones estructurales. El ICV de 0.0 refleja vacíos en indicadores clave, destacando la necesidad de fortalecer la recolección de datos locales.",
+  "demografia": "La población indígena en Facatativá suma 150 personas, con una pirámide etaria dispersa donde el 17.3% (26) corresponde a Pastos y el 14.7% (22) a Muisca. La diversidad cultural se evidencia en 20 pueblos representados, aunque con poblaciones menores a 10 en el 70% de los casos. No hay datos de estructura etaria detallada para este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud en Facatativá. La falta de información impide analizar subregistros o patrones epidemiológicos específicos. Se requiere priorizar la sistematización de datos de salud pública a nivel municipal para identificar necesidades territoriales.",
+  "territorial": "Facatativá no cuenta con resguardos indígenas registrados, a pesar de albergar 20 pueblos distintos. La dispersión geográfica de la población indígena contrasta con la ausencia de territorios colectivos reconocidos. La caja de coordenadas (4.76, -74.42 a 4.90, -74.26) delimita un área sin presencia institucional de resguardos.",
+  "lengua": "Los datos de lengua no están disponibles para Facatativá. No es posible determinar la vitalidad lingüística ni las lenguas en uso entre la población indígena. Esta carencia obstaculiza la planificación de estrategias de revitalización cultural y educativa desde la perspectiva de los pueblos.",
+  "vida": "No hay datos de NBI para Facatativá. El promedio indígena nacional de 67.6% subraya la urgencia de medir condiciones de vida locales. La ausencia de información impide comparar brechas con el contexto nacional o departamental (Cundinamarca). Se requiere incluir indicadores socioeconómicos en censos municipales.",
+  "conflicto": "Facatativá reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024). La ausencia de hechos victimizantes registrados no descarta dinámicas de violencia no documentadas. La limitación de datos a nivel municipal exige cruzar fuentes locales para validar este indicador.",
+  "icv": "El ICV de 0.0 en Facatativá refleja la imposibilidad de calcularlo por falta de datos en NBI, prevalencia y conflicto. Los componentes normalizados (0.0 en todos) evidencian vacíos críticos en indicadores sociales. Este resultado subraya la necesidad de invertir en sistemas de información territorial.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de pueblos indígenas con desagregación por lengua y territorio, priorizando la inclusión de 20 pueblos identificados (ej. Pastos con 26 personas).",
+    "Realizar un censo local de condiciones de vida (NBI) para comparar con el promedio indígena nacional (67.6%) y diseñar estrategias de reducción de brechas.",
+    "Establecer un protocolo de articulación con autoridades departamentales para reconocer resguardos en Facatativá, considerando la diversidad cultural existente.",
+    "Incluir indicadores de salud pública (prevalencia) en el sistema de información municipal para identificar necesidades específicas de los pueblos.",
+    "Fortalecer la recolección de datos sobre víctimas de conflicto en fuentes locales, cruzando información con organizaciones indígenas para validar registros del RUV."
+  ]
+}

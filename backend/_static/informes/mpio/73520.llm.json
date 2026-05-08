@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Palocabildo registra una población indígena de 1 persona según CNPV 2018, concentrada en un municipio sin resguardos. La ausencia de datos sobre pueblos específicos y territorios colectivos limita el análisis de su realidad étnica. La única víctima de desplazamiento forzado identificada refleja una vulnerabilidad extrema en un contexto de invisibilización institucional.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal con n=1. La población indígena de Palocabildo se reduce a un registro único sin desagregación por edad o género. Los datos demográficos a este nivel no permiten análisis comparativos ni identificación de dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Palocabildo. La falta de información impide evaluar la carga de morbilidad o identificar prioridades sanitarias. Se reconoce el sub-registro como limitación estructural en municipios con baja población indígena.",
+  "territorial": "Palocabildo no cuenta con resguardos indígenas registrados, pese a su bbox geográfico en el Tolima. La ausencia de territorios colectivos contrasta con la presencia de población indígena dispersa. La concentración geográfica se limita a un punto sin continuidad territorial reconocida.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en la comunidad.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Palocabildo. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La invisibilización estadística impide evaluar condiciones de vida de la población indígena local.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado entre 1985-2024, correspondiente al 100% de los casos. El hecho principal identificado es el desplazamiento forzado, evidenciando una afectación territorial extrema. La escala reducida limita análisis comparativos pero señala una vulnerabilidad crítica.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Palocabildo es 0.0, con componentes normalizados en cero. La fórmula aplicada (0.4*NBI + 0.3*prev + 0.3*conflicto) refleja la ausencia de datos en todas las dimensiones. Este resultado subraya la falta de información estadística para evaluar condiciones de vida.",
+  "recomendaciones": [
+    "Realizar censo étnico municipal con enfoque diferencial para identificar población indígena oculta y caracterizar su realidad territorial, citando la población de 1 persona registrada en CNPV 2018.",
+    "Garantizar la creación de un resguardo indígena en Palocabildo, considerando la ausencia actual de territorios colectivos pese a la presencia de población indígena.",
+    "Implementar sistema de alerta temprana para víctimas de desplazamiento forzado, dado que el 100% de los casos registrados corresponden a este hecho violento.",
+    "Diseñar políticas de recuperación cultural para la población indígena dispersa, ante la falta de datos sobre lengua y tradiciones en el municipio.",
+    "Articular con el DANE para incorporar módulos étnicos en encuestas municipales, superando el sub-registro actual de datos indígenas."
+  ]
+}

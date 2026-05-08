@@ -1,0 +1,16 @@
+{
+  "ejecutivo": "Caldono (Cauca) concentra el 94.3% de su población indígena en el pueblo Nasa (25.556 personas). La población total municipal asciende a 27.088 habitantes según CNPV 2018. El territorio presenta alta fragmentación con solo 2 resguardos que suman 511.651 hectáreas, evidenciando presión sobre tierras colectivas.",
+  "demografia": "La pirámide etaria indígena en Caldono muestra concentración en grupos productivos (15-64 años) con 18.936 personas. Los menores de 15 años representan el 30.1% (7.660) y los mayores de 65 años el 5.2% (1.358). La estructura refleja dinámica demográfica joven propia de pueblos en resistencia territorial.",
+  "prevalencia": "Los datos de discapacidad no están disponibles a nivel municipal. El promedio indígena nacional reportado es 60.0%. Esta limitación impide analizar brechas específicas en Caldono, subrayando la necesidad de sistemas de información desagregados por municipio para pueblos indígenas.",
+  "territorial": "Caldono alberga 2 resguardos: La Laguna-Siberia (369.654 ha) y Las Mercedes (141.997 ha), ambos bajo dominio Nasa. La dispersión territorial se evidencia en la bounding box que abarca coordenadas entre -76.359 y -76.630 longitud, reflejando fragmentación geográfica en zona de alta conflictividad.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Caldono. Esta ausencia impide evaluar vitalidad cultural y estrategias de revitalización lingüística, elemento crítico para la pervivencia del pueblo Nasa en su territorio histórico.",
+  "vida": "Los datos de NBI no están disponibles a nivel municipal. El promedio indígena nacional es 67.6%. La falta de información específica para Caldono limita el análisis de condiciones de vida y diseño de políticas públicas diferenciadas para este territorio indígena en el Cauca.",
+  "conflicto": "Caldono registra 471 víctimas de conflicto armado con discapacidad entre 1985-2024. El desplazamiento forzado es el hecho victimizante principal con 223 casos (47.3%). La violencia se concentra en pérdida de bienes, homicidios y amenazas, afectando directamente la autonomía territorial Nasa.",
+  "icv": "El ICV de Caldono es 0.028, con componente de conflicto como dimensión dominante (0.094). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja que el 30% del índice depende de variables no disponibles (NBI y prevalencia). La posición relativa es crítica frente a otros territorios.",
+  "recomendaciones": [
+    "Priorizar la creación de un sistema municipal de información indígena con desagregación por pueblo y lengua, incorporando indicadores de discapacidad y NBI para superar las actuales limitaciones de datos (471 víctimas de conflicto, 2 resguardos)",
+    "Diseñar un plan de protección territorial para los resguardos La Laguna-Siberia y Las Mercedes, considerando la alta fragmentación geográfica y el hecho victimizante principal de desplazamiento forzado (223 casos)",
+    "Implementar programas de salud intercultural con enfoque en discapacidad, basado en el promedio indígena nacional de 60.0% y las necesidades específicas del pueblo Nasa (25.556 personas)",
+    "Fortalecer estrategias de revitalización lingüística para el pueblo Nasa, ante la ausencia de datos sobre lenguas en Caldono, articulando con el ICV que depende en 30% de variables no disponibles"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Zapatoca (Santander) registra una población indígena de 1 persona según CNPV 2018, perteneciente al pueblo INDÍGENAS-PANAMÁ. La ausencia de resguardos y la concentración geográfica en un municipio sin datos de lengua o NBI reflejan una invisibilización estructural. La única víctima de conflicto identificada corresponde a desplazamiento forzado, lo que limita el análisis pero evidencia riesgos persistentes.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal con n=1. La población indígena total (1 persona) impide análisis etario o comparativo. Se requiere desagregación por grupos de edad para evaluar dinámicas generacionales, actualmente no disponibles en este nivel territorial.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para Zapatoca. La falta de registros específicos sobre discapacidades o condiciones de salud en población indígena municipal dificulta evaluar necesidades. Se recomienda priorizar sistemas de información locales con enfoque diferencial.",
+  "territorial": "Zapatoca no cuenta con resguardos indígenas registrados (n=0). La bbox geográfica delimita un área sin presencia territorial colectiva reconocida. Esta dispersión administrativa contrasta con la necesidad de garantizar derechos territoriales para pueblos como los INDÍGENAS-PANAMÁ.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. La ausencia de registros lingüísticos impide evaluar vitalidad cultural o pérdida de lenguas originarias en la zona. Se requiere fortalecer censos con enfoque étnico en territorios sin presencia resguardada.",
+  "vida": "Los datos de NBI no están disponibles para Zapatoca. La comparación con el promedio indígena nacional (67.6%) no es posible sin información local. La falta de datos refleja brechas en el sistema de monitoreo territorial para municipios con población indígena mínima.",
+  "conflicto": "Zapatoca registra 1 víctima de conflicto con discapacidad, asociada exclusivamente a desplazamiento forzado (100%). Este dato, aunque limitado por n=1, confirma patrones de violencia histórica contra pueblos indígenas en Santander. La concentración en un solo hecho subraya la urgencia de protección territorial.",
+  "icv": "El ICV de Zapatoca es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula aplicada refleja la ausencia de datos desagregados más que una condición real. Este resultado destaca la necesidad de mejorar sistemas de información para territorios con población indígena minoritaria.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal con enfoque étnico para pueblos como INDÍGENAS-PANAMÁ, dado que la población actual (1 persona) no permite análisis confiables pero sí requiere protección.",
+    "Priorizar la identificación y delimitación de territorios colectivos en Zapatoca, pese a la ausencia actual de resguardos, para prevenir futuras afectaciones.",
+    "Incluir en censos locales preguntas sobre lengua y discapacidad, áreas sin datos en este municipio, para cerrar brechas de información.",
+    "Diseñar estrategias de prevención del desplazamiento forzado en Santander, considerando que el 100% de las víctimas indígenas en Zapatoca están asociadas a este hecho.",
+    "Articular con la ONIC y autoridades departamentales para garantizar que municipios con población indígena mínima no sean excluidos de políticas de protección territorial y cultural."
+  ]
+}

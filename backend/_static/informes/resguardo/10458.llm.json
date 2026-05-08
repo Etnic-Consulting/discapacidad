@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo RODEITO EL POZO, territorio wayúu en La Guajira, alberga 724 habitantes según datos DANE-CNPV 2018. Con una extensión de 106.791 hectáreas, este territorio enfrenta vacíos críticos en información sobre capacidades diversas y lengua, limitando la planificación con enfoque diferencial. La ausencia de víctimas de conflicto registradas (0 casos) no refleja necesariamente la realidad, dado el subregistro histórico en zonas rurales indígenas.",
+  "demografia": "La población total del resguardo asciende a 724 habitantes, con datos confiables según fuente DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel territorial. La falta de desagregación demográfica impide analizar dinámicas generacionales o presión sobre recursos locales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. Los sistemas de información no capturan indicadores epidemiológicos a nivel de territorio colectivo, lo que invisibiliza necesidades sanitarias específicas de la población wayúu.",
+  "territorial": "RODEITO EL POZO ocupa 106.791 hectáreas en el municipio de Hatonuevo, La Guajira. Su delimitación geográfica está definida por coordenadas BBOX precisas, pero no se reportan territorios asociados ni patrones de dispersión. La concentración territorial es absoluta al tratarse de un único resguardo sin subdivisiones registradas.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se cuenta con información sobre uso del wayuunaiki u otras lenguas indígenas en el territorio, lo que dificulta evaluar la vitalidad cultural y estrategias de revitalización lingüística.",
+  "vida": "No se registran datos de Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI (67.6%) no puede contrastarse localmente debido a la ausencia de información, lo que impide medir brechas de pobreza multidimensional en el territorio.",
+  "conflicto": "No se reportan víctimas de conflicto con discapacidad en el resguardo (0 casos) según el RUV entre 1985-2024. La ausencia de hechos victimizantes registrados contrasta con el contexto de violencia estructural en La Guajira, sugiriendo subregistro en sistemas de información oficiales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, calculado con componentes normalizados a cero (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos disponibles más que condiciones reales, invalidando comparaciones con otros territorios.",
+  "recomendaciones": [
+    "Implementar un sistema de registro territorial específico para resguardos que capture datos demográficos, lingüísticos y de capacidades diversas, priorizando la participación de la AACIWASUG y autoridades wayúu.",
+    "Realizar un censo comunitario participativo en RODEITO EL POZO para actualizar la población y caracterizar necesidades en salud, educación y vivienda con enfoque diferencial.",
+    "Articular con el DANE y el Ministerio de Salud para incluir indicadores indígenas en encuestas nacionales, garantizando desagregación por resguardo y pueblo.",
+    "Documentar y visibilizar casos de violencia estructural en La Guajira mediante mecanismos de denuncia comunitaria, superando la subestimación en sistemas oficiales.",
+    "Diseñar un plan de revitalización lingüística wayúu con participación de sabedores tradicionales, vinculando escuelas comunitarias y medios locales."
+  ]
+}

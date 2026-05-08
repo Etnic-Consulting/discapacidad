@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo La Unión Chocó - San Cristóbal, territorio Wounaan en Istmina (Chocó), alberga 624 habitantes en 19.564 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando carencias estructurales en NBI, prevalencia y conflicto. La ausencia de datos sobre lengua y discapacidad limita diagnósticos integrales, pero evidencia brechas críticas en información básica para la planificación territorial.",
+  "demografia": "La población total es de 624 habitantes según DANE-CNPV 2018. No se cuenta con datos de pirámide etaria ni razones de crecimiento/disminución en este nivel. La falta de desglose etario impide analizar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección se marca sin datos (_sin_datos: true), lo que imposibilita evaluar el estado epidemiológico o identificar prioridades sanitarias para la comunidad Wounaan.",
+  "territorial": "El resguardo ocupa 19.564 hectáreas en el municipio de Istmina, Chocó, con coordenadas que delimitan su territorio en la macrorregión Occidente. Su extensión refleja un patrón de tenencia colectiva, pero la ausencia de datos sobre concentración de población o dispersión limita análisis de accesibilidad y presión territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). No se puede determinar el estado de vitalidad del idioma Wounaan ni su uso en la comunidad, aspecto clave para la identidad cultural y la educación propia.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en el resguardo. El promedio indígena nacional (67.6%) no puede compararse debido a la falta de datos locales. Esta omisión obstaculiza la identificación de brechas socioeconómicas y la priorización de intervenciones.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024 (0 casos). La ausencia de hechos victimizantes relevantes sugiere baja visibilidad en el RUV, pero podría reflejar subregistro o falta de sistematización de datos locales. Se requiere validación con fuentes comunitarias.",
+  "icv": "El ICV es 0.0, resultado de la fórmula aplicada (0.4*NBI + 0.3*prevalencia + 0.3*conflicto). Todos los componentes (NBI, prevalencia, conflicto) tienen score 0.0, indicando condiciones de vida críticas. La metodología refleja la urgencia de abordar múltiples dimensiones simultáneamente.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de lengua, priorizando la identificación de grupos etarios y estado del idioma Wounaan (población_total: 624).",
+    "Implementar un sistema de registro de NBI y prevalencia con enfoque diferencial, alineado al promedio indígena nacional (67.6%), para dimensionar brechas socioeconómicas.",
+    "Fortalecer la articulación con el RUV para validar datos de conflicto, dado que el resguardo reporta 0 víctimas pero carece de información sobre hechos victimizantes (victimas_total_disc: 0).",
+    "Diseñar un plan de manejo territorial que integre datos de área (19.564 hectáreas) y macrorregión Occidente, incorporando la perspectiva Wounaan en el ordenamiento.",
+    "Promover alianzas con GOBIERNO MAYOR y WOUNDEKO para sistematizar información sobre discapacidad y salud, superando la limitación actual (_sin_datos: true en capacidades_diversas)."
+  ]
+}

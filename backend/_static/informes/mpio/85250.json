@@ -1,0 +1,204 @@
+{
+  "tipo": "mpio",
+  "id": "85250",
+  "nombre": "PAZ DE ARIPORO",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1292,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1292,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "440",
+          "pueblo": "MASIGUARE",
+          "poblacion": 504
+        },
+        {
+          "cod_pueblo": "020",
+          "pueblo": "AMORUA",
+          "poblacion": 231
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 139
+        },
+        {
+          "cod_pueblo": "025",
+          "pueblo": "YAMALERO",
+          "poblacion": 95
+        },
+        {
+          "cod_pueblo": "026",
+          "pueblo": "YARURO",
+          "poblacion": 70
+        },
+        {
+          "cod_pueblo": "021",
+          "pueblo": "WIPIWI",
+          "poblacion": 60
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 60
+        },
+        {
+          "cod_pueblo": "570",
+          "pueblo": "SALIBA",
+          "poblacion": 52
+        },
+        {
+          "cod_pueblo": "670",
+          "pueblo": "TSIRIPU",
+          "poblacion": 48
+        },
+        {
+          "cod_pueblo": "230",
+          "pueblo": "CUIBA",
+          "poblacion": 16
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "170",
+          "pueblo": "COCAMA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "350",
+          "pueblo": "KAMËNTSA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "431",
+          "pueblo": "KAKUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "470",
+          "pueblo": "MUISCA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "440",
+        "pueblo": "MASIGUARE",
+        "poblacion": 504
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "CAÑO MOCHUELO",
+          "pueblo_onic": "CUIBA",
+          "area_pg_ha": 93397.028
+        }
+      ],
+      "bbox": [
+        5.416197199380311,
+        -72.04884904015938,
+        6.126974968737242,
+        -69.83590992178137
+      ],
+      "nombre_mpio": "PAZ DE ARIPORO",
+      "cod_dpto": "85"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 2
+      },
+      "pct_hecho_principal": 100.0
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:34:00",
+  "periodo": "2018",
+  "_input_hash": "b2e3b9c9403d440f"
+}

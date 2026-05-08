@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo VALLES DEL SOL, territorio del pueblo ZENÚ en Antioquia, alberga 368 habitantes en 7.214 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. La falta de información sobre lengua y discapacidad limita el análisis integral de sus capacidades diversas.",
+  "demografia": "La población total de 368 personas presenta una estructura demográfica no detallada en los datos disponibles. No se cuenta con pirámide etaria ni razones de dependencia por grupos de edad. La información demográfica se limita a este valor agregado, sin desagregación que permita analizar dinámicas poblacionales internas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el resguardo. El promedio indígena nacional de 60.0% en discapacidad no puede contrastarse localmente. Se reconoce un sub-registro crítico al no existir registros específicos para este territorio.",
+  "territorial": "VALLES DEL SOL ocupa 7.214 hectáreas en el municipio de EL BAGRE, Antioquia. Su ubicación geográfica está definida por coordenadas que delimitan un área de 7.214 hectáreas. Es un territorio de concentración indígena ZENÚ en la macrorregión OCCIDENTE, con límites precisos pero sin datos sobre densidad poblacional.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se cuenta con información sobre uso de lenguas indígenas ni procesos de revitalización cultural. Esta ausencia impide evaluar la vitalidad lingüística del pueblo ZENÚ en este territorio específico.",
+  "vida": "No se dispone de datos sobre Necesidades Básicas Insatisfechas (NBI) para VALLES DEL SOL. El promedio indígena nacional de 67.6% no puede compararse con este territorio. La falta de información impide analizar brechas en condiciones de vida o identificar prioridades de intervención.",
+  "conflicto": "No se registran víctimas con discapacidad en VALLES DEL SOL entre 1985 y 2024. El valor de 0 víctimas totales discapacitadas sugiere ausencia de registros o sub-registro en el sistema. Este dato, aunque confiable, no refleja necesariamente la realidad de afectación por violencia en el territorio.",
+  "icv": "El ICV de 0.0 en VALLES DEL SOL se explica por la ausencia de datos normalizados en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada no puede calcularse adecuadamente sin información base. Este resultado subraya la necesidad de generar datos territoriales específicos.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar la población total y desagregar datos demográficos por grupos de edad y género, citando la cifra actual de 368 habitantes.",
+    "Implementar un sistema de registro de discapacidad y condiciones de salud con enfoque diferencial indígena, considerando el promedio nacional de 60.0% como referencia.",
+    "Diseñar un protocolo de recolección de datos sobre lengua y revitalización cultural, reconociendo la ausencia actual de información.",
+    "Establecer un observatorio territorial de NBI en coordinación con el DANE, utilizando el promedio indígena nacional de 67.6% como línea base.",
+    "Fortalecer la base de datos de víctimas con enfoque en pueblos indígenas, dado que el registro actual de 0 víctimas en 40 años no refleja la realidad de afectación en territorios como VALLES DEL SOL."
+  ]
+}

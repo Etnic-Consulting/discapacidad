@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Fuente de Oro registra una población indígena de 8 personas según CNPV 2018, concentrada en 3 pueblos. El 50% pertenece al pueblo Sikuani, principal grupo étnico del municipio. La ausencia de resguardos y datos de NBI refleja vacíos en el reconocimiento territorial y socioeconómico de estas comunidades.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. El informe reporta solo 8 personas indígenas, lo que impide análisis demográficos confiables. Se requiere desagregación por edades para evaluar dinámicas poblacionales y envejecimiento.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el municipio. Los registros nacionales indican un promedio indígena del 60%, pero este dato no es aplicable localmente. Se subraya la necesidad de sistemas de información específicos.",
+  "territorial": "Fuente de Oro no cuenta con resguardos indígenas reconocidos, pese a albergar 3 pueblos. La dispersión geográfica se limita a 8 personas en un área de 3.23 a 3.55 latitud y -73.74 a -73.42 longitud. La ausencia de territorios colectivos agrava la vulnerabilidad.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de lenguas indígenas en el territorio. Se requiere investigación participativa para documentar esta dimensión cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en el municipio. El promedio indígena nacional es 67.6%, pero este dato no refleja la realidad local. La falta de registros impide evaluar brechas socioeconómicas.",
+  "conflicto": "Se registran 4 víctimas de desplazamiento forzado entre 1985-2024, equivalentes al 100% de los casos de conflicto. Este hecho principal evidencia la violencia histórica contra las comunidades indígenas en el municipio. La cifra subraya la urgencia de protección territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula refleja la ausencia de datos en NBI y prevalencia, priorizando el conflicto como único indicador disponible. La metodología limita su utilidad.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y socioeconómicos, citando la población actual de 8 personas.",
+    "Promover el reconocimiento de resguardos para los pueblos Sikuani, Tukano e Indígena-sin-información, dado que no existen territorios colectivos registrados.",
+    "Implementar un sistema de alerta temprana contra desplazamiento forzado, considerando que el 100% de las víctimas reportadas son por este hecho.",
+    "Diseñar programas de revitalización cultural con enfoque en lengua, ante la ausencia de datos disponibles.",
+    "Articular con autoridades departamentales para incluir a Fuente de Oro en el Sistema de Información Indígena Nacional, dado el subregistro en NBI y prevalencia."
+  ]
+}

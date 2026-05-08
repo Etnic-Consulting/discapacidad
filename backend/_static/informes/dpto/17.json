@@ -1,0 +1,230 @@
+{
+  "tipo": "dpto",
+  "id": "17",
+  "nombre": "CALDAS",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 55632,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 55632,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 5905,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 5905,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 55632,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 106.1,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "282",
+          "con_disc": 5046,
+          "total": 43826
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 401,
+          "total": 4742
+        },
+        {
+          "cod_pueblo": "330",
+          "con_disc": 176,
+          "total": 1818
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 60,
+          "total": 1063
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 47,
+          "total": 396
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 27,
+          "total": 351
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 23,
+          "total": 2057
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 19,
+          "total": 126
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 19,
+          "total": 185
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 14,
+          "total": 189
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "SAN LORENZO",
+          "mpio": "RIOSUCIO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 6016.964
+        },
+        {
+          "nombre": "ESCOPETERA - PIRZA",
+          "mpio": "RIOSUCIO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 439.843
+        },
+        {
+          "nombre": "LA ALBANIA",
+          "mpio": "RISARALDA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 128.804
+        },
+        {
+          "nombre": "TOTUMAL",
+          "mpio": "VITERBO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 117.82
+        }
+      ],
+      "bbox": [
+        4.799699846585514,
+        -75.92251011664763,
+        5.779181504391307,
+        -74.62745595713278
+      ],
+      "nombre_dpto": "CALDAS"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 734,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 734,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 528
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 100
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 43
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 15
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 10
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 9
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 8
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 7
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 6
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 4
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 528
+      },
+      "pct_hecho_principal": 71.9
+    },
+    "icv": {
+      "score": 0.203,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.53,
+        "conflicto_norm": 0.147
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:45:18",
+  "periodo": "2018",
+  "_input_hash": "d8e77396894bc1ed"
+}

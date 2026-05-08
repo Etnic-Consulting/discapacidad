@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Subachoque registra una población indígena de 31 personas según el CNPV 2018, distribuida en 7 pueblos. Los Pastos concentran el 42% de esta población, seguidos por los Misak y los Totoro. La ausencia de resguardos y la dispersión geográfica limitan la consolidación territorial. La falta de datos en NBI y lengua refleja vacíos en el registro municipal.",
+  "demografia": "La población indígena de Subachoque suma 31 personas, con una pirámide etaria concentrada en adultos jóvenes y adultos. Los Pastos (13 personas) son el grupo dominante, seguidos por los Misak (7) y los Totoro (5). La diversidad étnica no se traduce en presencia territorial organizada, dado que no existen resguardos en el municipio.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para Subachoque. La ausencia de registros específicos impide analizar condiciones de salud o educación. La limitación interpretativa es alta, ya que no hay cifras confiables para este KPI en el municipio.",
+  "territorial": "Subachoque alberga 0 resguardos indígenas, lo que refleja una desconexión entre la presencia poblacional y la organización territorial. La dispersión geográfica de la población indígena contrasta con la ausencia de estructuras colectivas. La bbox del municipio delimita un área sin presencia de territorios indígenas legalmente reconocidos.",
+  "lengua": "Los datos sobre lengua no están disponibles para Subachoque. No hay registros que permitan identificar el uso de lenguas indígenas en el municipio. Esta falta de información limita el análisis sobre vitalidad cultural y prácticas lingüísticas.",
+  "vida": "Los datos de NBI no están disponibles para Subachoque. El promedio indígena nacional de NBI es 67.6%, pero no hay cifras locales para comparar. La ausencia de registros impide evaluar brechas en condiciones de vida para la población indígena del municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Subachoque entre 1985 y 2024. La ausencia de hechos violentos en el RUV sugiere baja visibilidad de la población indígena en registros de conflicto. Sin embargo, la falta de datos específicos limita la interpretación sobre vulnerabilidades.",
+  "icv": "El ICV de Subachoque es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Los componentes del índice (nbi_norm, prev_norm, conflicto_norm) no aportan información debido a la falta de registros. La posición relativa del municipio no puede determinarse por la carencia de datos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal para actualizar datos demográficos y territoriales, dado que la población registrada (31 personas) puede estar subestimada.",
+    "Promover la creación de resguardos indígenas en Subachoque para garantizar el derecho territorial, considerando la presencia de 7 pueblos distintos.",
+    "Incluir a Subachoque en programas de registro de lenguas indígenas para documentar la vitalidad cultural, ya que los datos actuales no están disponibles.",
+    "Articular con el CNPV 2024 para mejorar la recolección de datos de NBI y prevalencia en el municipio.",
+    "Fortalecer la participación indígena en el RUV para visibilizar posibles casos de conflicto, dado que actualmente no hay registros de víctimas con discapacidad."
+  ]
+}

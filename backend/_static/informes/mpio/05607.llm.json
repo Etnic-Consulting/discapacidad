@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de RETIRO registra una población indígena de solo 2 personas según el CNPV 2018, distribuidas en dos pueblos: Emberá y Emberá-Katío. Esta cifra refleja una presencia indígena mínima en el territorio, con ausencia total de resguardos. El desplazamiento forzado es el único hecho victimizante registrado, con 1 caso vinculado a discapacidad, lo que evidencia vulnerabilidades críticas en un contexto de casi nula institucionalidad territorial indígena.",
+  "demografia": "La pirámide etaria no aplica para este nivel municipal debido a la reducida población indígena (n=2). Los datos muestran una distribución equitativa entre dos pueblos sin predominio etario claro. La confiabilidad de los datos es alta (n=2), pero su representatividad es cuestionable por el tamaño muestral mínimo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en RETIRO. La sección de capacidades diversas carece de información a nivel municipal, limitando el análisis de brechas. El promedio indígena nacional de 60.0% en discapacidad no puede contrastarse localmente por falta de registros.",
+  "territorial": "RETIRO no cuenta con resguardos indígenas, lo que confirma la ausencia de reconocimiento territorial formal. La caja geográfica (bbox) delimita un área de 0.2° de latitud y 0.15° de longitud, pero sin presencia indígena organizada. La dispersión geográfica es nula al no existir territorios colectivos.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes en RETIRO.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para RETIRO. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de datos impide evaluar brechas en condiciones de vida para la población indígena en el municipio.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado con discapacidad en RETIRO entre 1985-2024. Este hecho representa el 100% de los eventos victimizantes, destacando la gravedad de la violencia en un contexto de casi inexistencia indígena. La confiabilidad de los datos es alta (n=1).",
+  "icv": "El Índice de Condiciones Vitales (ICV) en RETIRO es 0.0, con todos sus componentes en cero (NBI, prevalencia y conflicto). Esta puntuación refleja la ausencia de indicadores positivos en el municipio. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja un resultado nulo por falta de datos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal para actualizar datos demográficos y territoriales, dado que la población actual (2 personas) no refleja la realidad histórica del municipio.",
+    "Establecer un proceso de reconocimiento de resguardos indígenas en RETIRO, considerando la ausencia total de territorios colectivos formales.",
+    "Implementar un sistema de registro de víctimas indígenas a nivel municipal para monitorear hechos victimizantes como el desplazamiento forzado (1 caso registrado).",
+    "Diseñar estrategias de recuperación cultural y lingüística en RETIRO, ante la falta de datos sobre lengua indígena y la presencia de pueblos Emberá.",
+    "Priorizar la atención en salud y discapacidad para la población indígena en RETIRO, frente al promedio nacional de 60.0% en discapacidad y la ausencia de registros locales."
+  ]
+}

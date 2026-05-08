@@ -1,0 +1,120 @@
+{
+  "tipo": "resguardo",
+  "id": "10192",
+  "nombre": "LA LEONA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 14,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 14,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "LA LEONA",
+      "dpto": "CAUCA",
+      "cod_dpto": "19",
+      "mpio": "PIAMONTE",
+      "cod_mpio": "19533",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "INGA",
+      "organizacion_nacional": "CRIC",
+      "organizacion_regional": "CRIC",
+      "area_hectareas": 162.272
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        1.1106503330000237,
+        -76.28997047899998,
+        1.1300118320000365,
+        -76.26590987399999
+      ],
+      "area_hectareas": 162.272,
+      "macro": "OCCIDENTE",
+      "dpto": "CAUCA",
+      "mpio": "PIAMONTE"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 77,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 77,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 63
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 5
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 4
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 63
+      },
+      "pct_hecho_principal": 81.8
+    },
+    "icv": {
+      "score": 0.005,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.015
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T11:15:49",
+  "periodo": "2018",
+  "_input_hash": "2d8c854131cb4b68"
+}

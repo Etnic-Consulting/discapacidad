@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Caramanta (Antioquia) registra una población indígena de 1 persona según CNPV 2018, correspondiente al pueblo EMBERÁ-CHAMÍ. El municipio carece de resguardos indígenas y no presenta datos de lengua, NBI o capacidades diversas. La ausencia de territorios colectivos y la concentración poblacional mínima reflejan una presencia indígena marginal en el contexto municipal.",
+  "demografia": "La pirámide etaria no aplica por la población total de 1 individuo. La base de datos solo identifica al pueblo EMBERÁ-CHAMÍ con 1 habitante, sin estructura demográfica observable. Los datos demográficos a este nivel son insuficientes para análisis comparativos o generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros de víctimas de conflicto tampoco reportan casos en el período 1985-2024. La falta de información limita cualquier análisis de sub-registro o priorización sanitaria.",
+  "territorial": "Caramanta no cuenta con resguardos indígenas, a pesar de su ubicación en el departamento de Antioquia (código 05). La bounding box del municipio delimita un área geográfica sin presencia territorial indígena reconocida. La dispersión es nula al no existir territorios colectivos.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en la población registrada.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Caramanta. El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la ausencia de datos locales. La brecha con el promedio nacional no es calculable.",
+  "conflicto": "El Registro Único de Víctimas (RUV) no reporta personas con discapacidad víctimas de conflicto en Caramanta durante 1985-2024. La ausencia de hechos victimizantes sugiere una baja afectación directa, aunque la confiabilidad de los datos depende de la cobertura del sistema.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Caramanta es 0.0, derivado de componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una condición de vida crítica, aunque los datos subyacentes son limitados.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para validar la presencia de 1 habitante reportado en CNPV 2018 y evitar subregistros en futuras políticas públicas.",
+    "Incluir a Caramanta en programas de fortalecimiento territorial indígena, priorizando la identificación de posibles territorios ancestrales no reconocidos oficialmente.",
+    "Solicitar al Ministerio de Salud datos desagregados por municipio para evaluar necesidades sanitarias en poblaciones indígenas mínimas como la de Caramanta.",
+    "Coordinar con la Gobernación de Antioquia la verificación de la ausencia de resguardos y explorar mecanismos de protección para posibles territorios en riesgo.",
+    "Diseñar un plan de emergencia para pueblos indígenas con menos de 10 habitantes, garantizando acceso a derechos básicos y prevención de extinción cultural."
+  ]
+}

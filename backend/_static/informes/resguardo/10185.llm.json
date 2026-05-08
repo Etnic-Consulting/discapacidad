@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Kokonuco, territorio del pueblo Nasa en el Cauca, alberga 2,722 habitantes según datos DANE-CNPV 2018. Con 8,990.64 hectáreas, su territorio se ubica en Puracé, macrorregión Occidente. La ausencia de datos en NBI y lengua refleja vacíos críticos en el monitoreo de condiciones de vida y diversidad cultural en este territorio colectivo.",
+  "demografia": "La población total del resguardo Kokonuco asciende a 2,722 habitantes, según fuente DANE-CNPV 2018. No se dispone de datos sobre pirámide etaria ni estructura por edades en este nivel territorial. La falta de desagregación etaria impide analizar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "No se reportan datos de prevalencia de condiciones de salud o discapacidad para Kokonuco. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse con este territorio. La ausencia de información limita cualquier análisis de sub-registro o necesidades específicas en salud.",
+  "territorial": "El resguardo Kokonuco ocupa 8,990.64 hectáreas en Puracé, Cauca, con coordenadas que definen su área de influencia. Su territorio se enmarca en la macrorregión Occidente y el departamento del Cauca. La delimitación geográfica clara contrasta con la falta de datos socioeconómicos para este espacio colectivo.",
+  "lengua": "Los datos sobre lengua en Kokonuco no están disponibles en este informe. No se puede determinar la vitalidad del nasa yuwe ni su uso en el territorio. La ausencia de información lingüística refleja debilidades en el registro de la diversidad cultural en resguardos.",
+  "vida": "No se cuenta con datos de NBI para Kokonuco, a pesar de que el promedio indígena nacional es 67.6%. Esta carencia impide evaluar brechas en condiciones de vida o priorizar intervenciones en el territorio. La falta de información limita la planificación con enfoque diferencial.",
+  "conflicto": "El resguardo Kokonuco reporta 0 víctimas con discapacidad en el RUV (1985-2024). La ausencia de hechos victimizantes en el registro oficial contrasta con el contexto de violencia estructural en el Cauca. La falta de datos detallados impide analizar patrones de afectación local.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Kokonuco es 0.0, calculado con componentes nulos en NBI, prevalencia y conflicto. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la ausencia de datos. Esta métrica subraya la urgencia de mejorar el monitoreo territorial.",
+  "recomendaciones": [
+    "Implementar un sistema de registro de datos socioeconómicos y culturales en resguardos como Kokonuco, priorizando NBI y lengua, citando la falta actual de información.",
+    "Realizar un censo lingüístico en Kokonuco para documentar el uso del nasa yuwe y su vitalidad cultural, dado que los datos no están disponibles.",
+    "Establecer un mecanismo de alerta temprana para violencia en Puracé, contrastando el 0 víctimas reportado con el contexto regional de conflicto.",
+    "Diseñar un plan de fortalecimiento institucional en el CRIC para mejorar la recolección de datos territoriales, usando como referencia la población de 2,722 habitantes.",
+    "Incluir Kokonuco en estudios de capacidades diversas a nivel nacional, considerando el promedio indígena de 60.0% como línea base."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Chibolo, municipio de Bolívar, concentra una población indígena de 15 personas según el CNPV 2018, donde el pueblo WAYUU representa el 66.7% con 10 habitantes. La ausencia de resguardos y la dispersión geográfica sin datos de lengua o NBI limitan la comprensión de su territorialidad y condiciones de vida. El conflicto armado registra 31 víctimas con discapacidad, siendo el desplazamiento forzado el hecho victimizante principal (74.2%).",
+  "demografia": "La población indígena de Chibolo es reducida (15 personas) y está compuesta por 4 pueblos, liderados por los WAYUU con 10 habitantes. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La concentración en un solo pueblo dominante refleja una diversidad cultural mínima en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide evaluar el sub-registro o las brechas en acceso a servicios. Se requiere desagregación por pueblo para identificar vulnerabilidades específicas.",
+  "territorial": "Chibolo no cuenta con resguardos indígenas, lo que evidencia una ausencia de reconocimiento territorial formal. La bounding box geográfica delimita un área sin presencia de territorios colectivos. La dispersión sin datos de concentración limita el análisis de patrones de ocupación indígena.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "No hay datos de NBI para Chibolo, lo que impide comparar su situación con el promedio indígena nacional (67.6%). La falta de información sobre condiciones de vida invisibiliza las necesidades básicas insatisfechas de la población indígena en el municipio.",
+  "conflicto": "Chibolo registra 31 víctimas indígenas con discapacidad entre 1985 y 2024, con el desplazamiento forzado como principal hecho victimizante (23 casos, 74.2%). La concentración de hechos en este tipo de violencia refleja un patrón de afectación territorial vinculado al conflicto armado. Los datos son confiables pero subrepresentan la magnitud real.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Chibolo es de 0.002, con componentes normalizados en cero excepto conflicto (0.006). La dimensión de conflicto es la única con peso significativo, reflejando la alta victimización registrada. El ICV se ubica en el extremo inferior de la escala, indicando condiciones críticas.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con desagregación por pueblo y edad para superar la limitación de n=15 y caracterizar la pirámide etaria, citando la población total (15).",
+    "Solicitar al Ministerio de Salud datos de prevalencia de enfermedades en población indígena de Chibolo para identificar necesidades sanitarias prioritarias, dado que no hay información disponible.",
+    "Gestionar el reconocimiento de resguardos indígenas en Chibolo, considerando que no existen territorios colectivos formales, citando n_resguardos=0.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado en Chibolo, donde el 74.2% de las víctimas indígenas con discapacidad están asociadas a este hecho.",
+    "Incluir a Chibolo en programas de atención psicosocial para víctimas de conflicto, priorizando a los 31 casos registrados con discapacidad."
+  ]
+}

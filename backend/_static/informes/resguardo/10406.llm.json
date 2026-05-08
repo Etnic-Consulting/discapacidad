@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EL ITILLA, territorio del pueblo CARAPANA en el Guaviare, registra una población total de 30 habitantes según datos DANE-CNPV 2018. Con un área de 8.477,5 hectáreas, su ICV de 0.0 refleja condiciones críticas en dimensiones clave. La ausencia de datos en NBI, lengua y capacidades diversas limita un análisis integral, pero su contexto de alta vulnerabilidad territorial exige atención prioritaria.",
+  "demografia": "La población de 30 habitantes en EL ITILLA presenta una estructura demográfica reducida y potencialmente envejecida, sin datos detallados de pirámide etaria disponibles. La confiabilidad de la cifra (n=30) sugiere precaución en generalizaciones, aunque el tamaño poblacional refleja desafíos para la sostenibilidad cultural y demográfica del resguardo.",
+  "prevalencia": "Los datos de prevalencia no están disponibles en este nivel de desagregación. La falta de información sobre condiciones de salud o discapacidad impide evaluar brechas específicas, aunque el promedio indígena nacional del 60.0% en capacidades diversas subraya la necesidad de estudios locales.",
+  "territorial": "EL ITILLA ocupa 8.477,5 hectáreas en el municipio de Calamar (Guaviare), dentro de la macrorregión AMAZONIA. Su delimitación geográfica (bbox) confirma un territorio compacto pero de extensión reducida, con límites administrativos claros en el departamento de Guaviare.",
+  "lengua": "No hay datos disponibles sobre lengua en este resguardo. La ausencia de información impide evaluar la vitalidad lingüística del pueblo CARAPANA en EL ITILLA, aunque su pertenencia a la OPIAC y CRIGUA II sugiere esfuerzos organizativos en este ámbito.",
+  "vida": "Los datos de NBI no están disponibles para EL ITILLA. La falta de información impide comparar su situación con el promedio indígena nacional del 67.6%, aunque el contexto amazónico y la población reducida indican riesgos de exclusión socioeconómica.",
+  "conflicto": "No se registran víctimas con discapacidad en EL ITILLA entre 1985-2024 (n=0). La ausencia de hechos victimizantes destacados sugiere baja visibilidad en sistemas de registro, aunque no descarta dinámicas de violencia estructural no documentadas en este territorio.",
+  "icv": "El ICV de 0.0 en EL ITILLA refleja condiciones críticas en las tres dimensiones (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia un territorio en estado de alta vulnerabilidad, con necesidad urgente de intervenciones integrales.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de capacidades diversas, dado que la población de 30 habitantes (n=30) requiere validación participativa.",
+    "Implementar un plan de revitalización lingüística con apoyo de la OPIAC y CRIGUA II, ante la ausencia de datos sobre lengua en EL ITILLA.",
+    "Priorizar proyectos productivos sostenibles que fortalezcan la seguridad alimentaria, considerando el contexto amazónico y la falta de datos de NBI.",
+    "Establecer un sistema de alerta temprana para violencia estructural, pese a que no hay registros de víctimas (n=0), dado el subregistro histórico en territorios indígenas.",
+    "Diseñar una estrategia de articulación con instituciones departamentales para garantizar acceso a servicios básicos, ante la ausencia de datos socioeconómicos."
+  ]
+}

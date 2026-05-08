@@ -1,0 +1,1270 @@
+{
+  "tipo": "pueblo",
+  "id": "200",
+  "nombre": "Pijao",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 51635,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": 51635,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hombres": {
+        "value": 26009,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "mujeres": {
+        "value": 25626,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "razon_masculinidad": {
+        "value": 101.5,
+        "_meta": {
+          "query": "calc h/m*100",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_dependencia": {
+        "value": 53.1,
+        "_meta": {
+          "query": "calc dep",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_envejecimiento": {
+        "value": 41.2,
+        "_meta": {
+          "query": "calc env",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "grupos_edad": {
+        "0-14": {
+          "h": 6513,
+          "m": 6170,
+          "total": 12683
+        },
+        "15-64": {
+          "h": 16743,
+          "m": 16982,
+          "total": 33725
+        },
+        "65+": {
+          "h": 2753,
+          "m": 2474,
+          "total": 5227
+        }
+      },
+      "piramide": [
+        {
+          "grupo_edad": "0-4",
+          "sexo": "HOMBRE",
+          "valor": 1756
+        },
+        {
+          "grupo_edad": "0-4",
+          "sexo": "MUJER",
+          "valor": 1728
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "HOMBRE",
+          "valor": 2448
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "MUJER",
+          "valor": 2415
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "HOMBRE",
+          "valor": 2655
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "MUJER",
+          "valor": 2525
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "HOMBRE",
+          "valor": 2269
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "MUJER",
+          "valor": 2262
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "HOMBRE",
+          "valor": 1833
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "MUJER",
+          "valor": 1895
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "HOMBRE",
+          "valor": 1617
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "MUJER",
+          "valor": 1741
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "HOMBRE",
+          "valor": 1621
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "MUJER",
+          "valor": 1676
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "HOMBRE",
+          "valor": 1490
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "MUJER",
+          "valor": 1590
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "HOMBRE",
+          "valor": 1489
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "MUJER",
+          "valor": 1629
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "HOMBRE",
+          "valor": 1459
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "MUJER",
+          "valor": 1363
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "HOMBRE",
+          "valor": 1240
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "MUJER",
+          "valor": 1318
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "HOMBRE",
+          "valor": 2309
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "MUJER",
+          "valor": 2027
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "HOMBRE",
+          "valor": 1070
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "MUJER",
+          "valor": 983
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "HOMBRE",
+          "valor": 974
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "MUJER",
+          "valor": 777
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "HOMBRE",
+          "valor": 767
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "MUJER",
+          "valor": 648
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "HOMBRE",
+          "valor": 441
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "MUJER",
+          "valor": 486
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "HOMBRE",
+          "valor": 328
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "MUJER",
+          "valor": 324
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "HOMBRE",
+          "valor": 243
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "MUJER",
+          "valor": 239
+        }
+      ]
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 3873,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 3873,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 51529,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 75.2,
+        "_meta": {
+          "query": "calc x1000",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "tipos_limitacion": [
+        {
+          "tipo_limitacion": "Ver",
+          "total": 1439,
+          "pct": 37.6
+        },
+        {
+          "tipo_limitacion": "Caminar",
+          "total": 1100,
+          "pct": 28.8
+        },
+        {
+          "tipo_limitacion": "Oir",
+          "total": 389,
+          "pct": 10.2
+        },
+        {
+          "tipo_limitacion": "Relacionarse",
+          "total": 266,
+          "pct": 7.0
+        },
+        {
+          "tipo_limitacion": "Aprender",
+          "total": 232,
+          "pct": 6.1
+        },
+        {
+          "tipo_limitacion": "Hablar",
+          "total": 212,
+          "pct": 5.5
+        },
+        {
+          "tipo_limitacion": "Agarrar",
+          "total": 149,
+          "pct": 3.9
+        },
+        {
+          "tipo_limitacion": "Actividades diarias",
+          "total": 23,
+          "pct": 0.6
+        },
+        {
+          "tipo_limitacion": "Autocuidado",
+          "total": 16,
+          "pct": 0.4
+        }
+      ]
+    },
+    "territorial": {
+      "departamentos": [
+        {
+          "cod_dpto": "73",
+          "nom_dpto": "TOLIMA",
+          "total": 41997,
+          "con_discapacidad": 2824,
+          "tasa_x_1000": "67.24",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "11",
+          "nom_dpto": "BOGOTA D.C.",
+          "total": 4385,
+          "con_discapacidad": 486,
+          "tasa_x_1000": "110.83",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "41",
+          "nom_dpto": "HUILA",
+          "total": 1381,
+          "con_discapacidad": 229,
+          "tasa_x_1000": "165.82",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "25",
+          "nom_dpto": "CUNDINAMARCA",
+          "total": 1189,
+          "con_discapacidad": 95,
+          "tasa_x_1000": "79.90",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "18",
+          "nom_dpto": "CAQUETA",
+          "total": 909,
+          "con_discapacidad": 78,
+          "tasa_x_1000": "85.81",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "50",
+          "nom_dpto": "META",
+          "total": 569,
+          "con_discapacidad": 36,
+          "tasa_x_1000": "63.27",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "76",
+          "nom_dpto": "VALLE DEL CAUCA",
+          "total": 183,
+          "con_discapacidad": 33,
+          "tasa_x_1000": "180.33",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "86",
+          "nom_dpto": "PUTUMAYO",
+          "total": 145,
+          "con_discapacidad": 17,
+          "tasa_x_1000": "117.24",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "63",
+          "nom_dpto": "QUINDIO",
+          "total": 145,
+          "con_discapacidad": 7,
+          "tasa_x_1000": "48.28",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "05",
+          "nom_dpto": "ANTIOQUIA",
+          "total": 113,
+          "con_discapacidad": 18,
+          "tasa_x_1000": "159.29",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "95",
+          "nom_dpto": "GUAVIARE",
+          "total": 81,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "24.69",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "66",
+          "nom_dpto": "RISARALDA",
+          "total": 81,
+          "con_discapacidad": 16,
+          "tasa_x_1000": "197.53",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "17",
+          "nom_dpto": "CALDAS",
+          "total": 58,
+          "con_discapacidad": 3,
+          "tasa_x_1000": "51.72",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "85",
+          "nom_dpto": "CASANARE",
+          "total": 53,
+          "con_discapacidad": 3,
+          "tasa_x_1000": "56.60",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "19",
+          "nom_dpto": "CAUCA",
+          "total": 33,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "30.30",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "20",
+          "nom_dpto": "CESAR",
+          "total": 25,
+          "con_discapacidad": 8,
+          "tasa_x_1000": "320.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "08",
+          "nom_dpto": "ATLANTICO",
+          "total": 23,
+          "con_discapacidad": 5,
+          "tasa_x_1000": "217.39",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "68",
+          "nom_dpto": "SANTANDER",
+          "total": 20,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "81",
+          "nom_dpto": "ARAUCA",
+          "total": 16,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "62.50",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "13",
+          "nom_dpto": "BOLIVAR",
+          "total": 16,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "62.50",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "15",
+          "nom_dpto": "BOYACA",
+          "total": 15,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "VICHADA",
+          "total": 14,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "47",
+          "nom_dpto": "MAGDALENA",
+          "total": 13,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "76.92",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "44",
+          "nom_dpto": "LA GUAJIRA",
+          "total": 13,
+          "con_discapacidad": 3,
+          "tasa_x_1000": "230.77",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "52",
+          "nom_dpto": "NARINO",
+          "total": 12,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "83.33",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "91",
+          "nom_dpto": "AMAZONAS",
+          "total": 10,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "100.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "54",
+          "nom_dpto": "NORTE DE SANTANDER",
+          "total": 9,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "222.22",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "94",
+          "nom_dpto": "GUAINIA",
+          "total": 8,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "250.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "23",
+          "nom_dpto": "CORDOBA",
+          "total": 7,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "70",
+          "nom_dpto": "SUCRE",
+          "total": 4,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "88",
+          "nom_dpto": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      ],
+      "n_departamentos": 31,
+      "departamento_principal": {
+        "cod_dpto": "73",
+        "nom_dpto": "TOLIMA",
+        "total": 41997,
+        "con_discapacidad": 2824,
+        "tasa_x_1000": "67.24",
+        "confiabilidad": "CONFIABLE"
+      },
+      "resguardos": [
+        {
+          "nombre": "Paso Ancho (1440)",
+          "poblacion": 1064,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Guatavita Tua  (1437)",
+          "poblacion": 925,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Pocara (1548)",
+          "poblacion": 581,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Vuelta del Rio (1442)",
+          "poblacion": 543,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "El Vergel (1570)",
+          "poblacion": 530,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Palermo (1630)",
+          "poblacion": 486,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Nicolas Ramirez (1439)",
+          "poblacion": 471,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Guaipa Centro (1436)",
+          "poblacion": 462,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Anaba (1807)",
+          "poblacion": 419,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Lomas de Guaguarco (1779)",
+          "poblacion": 389,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Recinto Palmarosa (1441)",
+          "poblacion": 362,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Totarco Dinde Tradicional (1422)",
+          "poblacion": 360,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Mesa de Ortega (1611)",
+          "poblacion": 340,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Campoalegre (1808)",
+          "poblacion": 333,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "La Flecha Altozano (1629)",
+          "poblacion": 314,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Chenche Amayarco (1411)",
+          "poblacion": 304,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Balsillas (1741)",
+          "poblacion": 277,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "San Miguel (1087)",
+          "poblacion": 277,
+          "dpto": "CAQUETÁ",
+          "mpio": "SAN JOSÉ DEL FRAGUA"
+        },
+        {
+          "nombre": "Lomas de Hilarco (1607)",
+          "poblacion": 257,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Totarco Piedras (1425)",
+          "poblacion": 256,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Totarco Tamarindo (1426)",
+          "poblacion": 254,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "San Diego (1550)",
+          "poblacion": 249,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Zaragoza Tamarindo (1608)",
+          "poblacion": 230,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Floral Tradicional (1748)",
+          "poblacion": 226,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Totarco Dinde-Independiente (1423)",
+          "poblacion": 225,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Bocas de Tetuan (1714)",
+          "poblacion": 218,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Chenche-Socorro-Los Guayabos (1413)",
+          "poblacion": 213,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Santa Marta Inspeccion (1551)",
+          "poblacion": 207,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Santa Marta-Diamante (1421)",
+          "poblacion": 204,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Guaipa (1628)",
+          "poblacion": 194,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Chenche Balsillas (1711)",
+          "poblacion": 192,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Yaguara II-Llanos del Yari (1089)",
+          "poblacion": 179,
+          "dpto": "GUAVIARE",
+          "mpio": "CALAMAR"
+        },
+        {
+          "nombre": "La Sortija (1438)",
+          "poblacion": 179,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Aico   (1435)",
+          "poblacion": 178,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Potrerito-Doyare (1418)",
+          "poblacion": 156,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Chenche Media Luna (1566)",
+          "poblacion": 155,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "San Antonio de Calarma (1612)",
+          "poblacion": 152,
+          "dpto": "TOLIMA",
+          "mpio": "SAN ANTONIO"
+        },
+        {
+          "nombre": "Pijao de la Tatacoa (1315)",
+          "poblacion": 151,
+          "dpto": "HUILA",
+          "mpio": "VILLAVIEJA"
+        },
+        {
+          "nombre": "Chicuambe Las Brisas (1799)",
+          "poblacion": 149,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Castilla - Angosturas (1571)",
+          "poblacion": 126,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Chenche Buenos Aires Tradicional (1412)",
+          "poblacion": 120,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Pueblo Nuevo (1123)",
+          "poblacion": 108,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Beltrán (1732)",
+          "poblacion": 99,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Yaco Molana (1579)",
+          "poblacion": 95,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Santa Marta Palmar   (1420)",
+          "poblacion": 89,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Pacande (1578)",
+          "poblacion": 85,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Anacarco (1428)",
+          "poblacion": 82,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Las Palmas (1416)",
+          "poblacion": 76,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Balsillas El Limón (1742)",
+          "poblacion": 76,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Los Pijaos (1646)",
+          "poblacion": 75,
+          "dpto": "CAQUETÁ",
+          "mpio": "ALBANIA"
+        },
+        {
+          "nombre": "Nueva Esperanza (2155)",
+          "poblacion": 73,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "El Tambo (1414)",
+          "poblacion": 72,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Totarco Niple (1424)",
+          "poblacion": 69,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Guadualito (1163)",
+          "poblacion": 68,
+          "dpto": "CAUCA",
+          "mpio": "SANTANDER DE QUILICHAO"
+        },
+        {
+          "nombre": "Chenche Buenavista (1789)",
+          "poblacion": 66,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Zanja Honda (1756)",
+          "poblacion": 63,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Meche San Cayetano (1790)",
+          "poblacion": 54,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Bateas (1429)",
+          "poblacion": 48,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Los Angeles (1547)",
+          "poblacion": 47,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Cocana (1712)",
+          "poblacion": 39,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Tinajas (1434)",
+          "poblacion": 37,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Tamirco (1433)",
+          "poblacion": 37,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Potrerito (1549)",
+          "poblacion": 36,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Pocharco (1431)",
+          "poblacion": 35,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Chenche Buenos Aires Independiente (1544)",
+          "poblacion": 31,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Yaporogos Taira (1822)",
+          "poblacion": 30,
+          "dpto": "TOLIMA",
+          "mpio": "PRADO"
+        },
+        {
+          "nombre": "Aco Viejo Patio Bonito (1804)",
+          "poblacion": 28,
+          "dpto": "TOLIMA",
+          "mpio": "PRADO"
+        },
+        {
+          "nombre": "Rincon Bodega (1610)",
+          "poblacion": 28,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Mercadillo (1637)",
+          "poblacion": 27,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Tres Esquinas (1427)",
+          "poblacion": 25,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Chaquira (1594)",
+          "poblacion": 22,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Hilarquito (1546)",
+          "poblacion": 16,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Diamante (1609)",
+          "poblacion": 12,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Guasimal (1545)",
+          "poblacion": 9,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Mesas de San Juan (1803)",
+          "poblacion": 9,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Imba (1626)",
+          "poblacion": 7,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Nataroco (1806)",
+          "poblacion": 5,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Olirco (1627)",
+          "poblacion": 5,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Velú Centro (1793)",
+          "poblacion": 4,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Quebraditas (1638)",
+          "poblacion": 2,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Gualeras (1805)",
+          "poblacion": 1,
+          "dpto": "TOLIMA",
+          "mpio": "NATAGAIMA"
+        },
+        {
+          "nombre": "Citronela Río Dagua (2113)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Caicedonia (1723)",
+          "poblacion": 1,
+          "dpto": "PUTUMAYO",
+          "mpio": "ORITO"
+        },
+        {
+          "nombre": "Nasa Chamb (1776)",
+          "poblacion": 1,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO ASÍS"
+        },
+        {
+          "nombre": "Predio Putumayo (1001)",
+          "poblacion": 1,
+          "dpto": "AMAZONAS",
+          "mpio": "LA CHORRERA"
+        },
+        {
+          "nombre": "Consara-Mecaya (1401)",
+          "poblacion": 1,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO LEGUÍZAMO"
+        },
+        {
+          "nombre": "San Andres de Pisimbala (1127)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Caño Mesetas-Dagua (1498)",
+          "poblacion": 1,
+          "dpto": "VICHADA",
+          "mpio": "PUERTO CARREÑO"
+        },
+        {
+          "nombre": "Las Mercedes (1695)",
+          "poblacion": 1,
+          "dpto": "CAUCA",
+          "mpio": "CALDONO"
+        }
+      ],
+      "n_resguardos": 89,
+      "bbox": [
+        1.1966180600000484,
+        -76.28383495799994,
+        4.043241667000075,
+        -73.29134236599998
+      ]
+    },
+    "lengua": {
+      "pct_habla": 0.0,
+      "pct_entiende": 0.0,
+      "n_total": 51635,
+      "habla_total": 0,
+      "entiende_total": 0
+    },
+    "nbi": {
+      "pct_nbi": {
+        "value": 24.95,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pct_miseria": {
+        "value": 6.43,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "componentes": {
+        "vivienda": 6.94,
+        "servicios": 6.52,
+        "hacinamiento": 9.54,
+        "inasistencia": 2.74,
+        "dependencia": 7.24
+      },
+      "n_personas": 51529,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2298,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2298,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1610
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 352
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 128
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 48
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 43
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 25
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 23
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 17
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 16
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 11
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1610
+      },
+      "pct_hecho_principal": 70.1
+    },
+    "icv": {
+      "score": 0.35,
+      "componentes": {
+        "nbi_norm": 0.249,
+        "prevalencia_norm": 0.376,
+        "conflicto_norm": 0.46
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:17:20",
+  "periodo": "2018",
+  "_input_hash": "fe19ebc84ec77648"
+}

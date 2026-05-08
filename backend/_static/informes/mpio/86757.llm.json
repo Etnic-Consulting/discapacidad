@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Miguel (Putumayo) concentra 2.721 indígenas de 20 pueblos, donde el AWA es mayoritario con 1.129 personas. La violencia sistemática registra 434 víctimas, siendo el desplazamiento forzado el hecho principal (260 casos, 59.9%). La dispersión territorial se reduce a 2 resguardos Kofán con 3.793 ha, evidenciando alta vulnerabilidad por concentración física y exposición a conflictos armados.",
+  "demografia": "La población indígena en San Miguel presenta una estructura dispersa con 20 pueblos identificados. El AWA (1.129) y Kichwa (705) concentran el 67.5% de la población, mientras los 18 restantes suman 887 personas. La fragmentación étnica refleja procesos históricos de desplazamiento y asimilación forzada en la región amazónica.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles a nivel municipal. Solo se cuenta con un promedio indígena nacional del 60.0%, lo que impide evaluar la situación específica de San Miguel. Se requiere desagregación municipal para identificar brechas ocultas en salud diferencial.",
+  "territorial": "Existen 2 resguardos (Yarinal y Campo Alegre del Afilador) con 3.793 ha, ambos bajo dominio Kofán. La caja geográfica (0.239°-0.383°N; -77.049°--76.641°W) muestra alta fragmentación territorial. La concentración en dos áreas vulnerables limita la autonomía alimentaria y cultural de los pueblos.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede evaluar la vitalidad lingüística ni los procesos de revitalización en curso.",
+  "vida": "Los indicadores de NBI no están disponibles a nivel municipal. El promedio indígena nacional (67.6%) sugiere condiciones precarias, pero San Miguel requiere análisis específico para priorizar intervenciones en vivienda, educación y salud con enfoque diferencial.",
+  "conflicto": "Se registran 434 víctimas de violencia armada, donde el desplazamiento forzado (260 casos) domina el patrón de afectación. Le siguen amenazas (48) y homicidios (37). La exposición prolongada al conflicto (1985-2024) evidencia un territorio militarizado que vulnera derechos colectivos e individuales.",
+  "icv": "El Índice de Condiciones Vitales (ICV) alcanza 0.026, con el componente de conflicto como principal determinante (0.087). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.087), señalando que la violencia armada es el factor crítico de exclusión en San Miguel.",
+  "recomendaciones": [
+    "Priorizar la delimitación y ampliación de los resguardos Yarinál y Campo Alegre del Afilador, incorporando 3.793 ha actuales para garantizar autonomía territorial (área_pg_ha: 2898.871 y 894.491).",
+    "Diseñar rutas de atención psicosocial para 434 víctimas de violencia, enfocadas en 260 casos de desplazamiento forzado (hecho_principal: Desplazamiento forzado).",
+    "Implementar un sistema de alerta temprana contra minas antipersonal y UXO, dado que 8 víctimas registran este tipo de afectación (hecho: Minas Antipersonal...).",
+    "Establecer programas de salud intercultural con enfoque en discapacidades, usando el promedio indígena nacional (60.0%) como línea base para evaluar avances.",
+    "Fortalecer la gobernanza territorial con participación de los 20 pueblos, especialmente AWA (1.129) y Kichwa (705), para incidir en políticas públicas diferenciadas."
+  ]
+}

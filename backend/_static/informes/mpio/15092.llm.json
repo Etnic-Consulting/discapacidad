@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "BETEITIVA (Boyacá) registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo MUISCA. La ausencia de resguardos y datos de NBI o lengua refleja una invisibilización territorial. La métrica crítica es la población total de 1, que limita cualquier análisis demográfico o de prevalencia en este municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la población total de 1. La base de datos solo identifica al pueblo MUISCA con 1 habitante, sin estructura etaria discernible. Los datos demográficos a este nivel son insuficientes para análisis comparativos o de vitalidad poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en BETEITIVA. La nota técnica indica que estos indicadores solo existen a nivel pueblo o departamento. La falta de registros impide evaluar subregistros o patrones de afectación en la población indígena local.",
+  "territorial": "BETEITIVA no cuenta con resguardos indígenas registrados. El municipio tiene una extensión geográfica definida por coordenadas (5.866178276909145, -72.92529172917784 a 5.976807698819049, -72.77920611520614), pero sin territorios colectivos reconocidos. La ausencia de resguardos limita la protección legal y cultural del pueblo MUISCA en este territorio.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para BETEITIVA. No se registra información sobre uso o preservación de lenguas originarias en este municipio. La ausencia de datos impide evaluar la vitalidad lingüística del pueblo MUISCA en su territorio histórico.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para BETEITIVA. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede compararse localmente. La falta de registros impide analizar brechas en condiciones de vida para la población indígena del municipio.",
+  "conflicto": "BETEITIVA reporta 0 víctimas de conflicto con discapacidad entre 1985-2024. La ausencia de hechos victimizantes registrados sugiere baja visibilidad en el RUV, pero la muestra (n=0) no permite inferencias estadísticas. La lectura territorial indica una posible subnotificación de afectaciones en este municipio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en BETEITIVA es 0.0, derivado de componentes normalizados (NBI, prevalencia y conflicto) en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos disponibles. Este resultado subraya la urgencia de generar información territorial para este municipio.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar la población de 1 habitante y validar la presencia del pueblo MUISCA en BETEITIVA, citando el dato de población total de 1 en CNPV 2018.",
+    "Incluir a BETEITIVA en programas de reconocimiento de resguardos, dado que no tiene territorios colectivos registrados, según la sección territorial.",
+    "Generar registros sistemáticos de NBI y lengua en el municipio para comparar con el promedio indígena nacional de 67.6% en NBI.",
+    "Fortalecer la articulación con el pueblo MUISCA para documentar afectaciones por conflicto, considerando el 0% de víctimas registradas en el RUV.",
+    "Priorizar la recolección de datos de discapacidad y prevalencia en municipios, ya que los datos solo existen a nivel pueblo o departamento según la nota técnica."
+  ]
+}

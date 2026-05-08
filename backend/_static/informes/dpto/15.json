@@ -1,0 +1,208 @@
+{
+  "tipo": "dpto",
+  "id": "15",
+  "nombre": "BOYACA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6877,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 6877,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 93,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 93,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 6877,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 13.5,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "690",
+          "con_disc": 51,
+          "total": 6210
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 11,
+          "total": 149
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 10,
+          "total": 154
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 4,
+          "total": 8
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 3,
+          "total": 48
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 3,
+          "total": 54
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 2,
+          "total": 15
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 2,
+          "total": 24
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 2,
+          "total": 2
+        },
+        {
+          "cod_pueblo": "080",
+          "con_disc": 1,
+          "total": 7
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 1,
+      "resguardos": [
+        {
+          "nombre": "UNIDO UWA",
+          "mpio": "CUBARÁ",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 223511.049
+        }
+      ],
+      "bbox": [
+        4.6551956927837095,
+        -74.66496042555377,
+        7.0474749946172,
+        -71.94885388215556
+      ],
+      "nombre_dpto": "BOYACA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 54,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 54,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 27
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 11
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 7
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 27
+      },
+      "pct_hecho_principal": 50.0
+    },
+    "icv": {
+      "score": 0.023,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.068,
+        "conflicto_norm": 0.011
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:44:43",
+  "periodo": "2018",
+  "_input_hash": "29b79b560e2bc499"
+}

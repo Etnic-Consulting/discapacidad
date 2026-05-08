@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Bochalema registra una población indígena de 3 personas según el CNPV 2018, concentrada en el pueblo Muisca. El municipio carece de resguardos indígenas y no presenta datos de NBI o lengua. El ICV de 0.0 refleja la ausencia de indicadores territoriales afectados, aunque la confiabilidad de los datos es limitada por el bajo n=3.",
+  "demografia": "La pirámide etaria no aplica en este nivel por n=3. La población indígena total es de 3 personas, todas pertenecientes al pueblo Muisca. Los datos demográficos a este nivel no permiten análisis de estructura etaria o razones de crecimiento.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Bochalema. Los indicadores de discapacidad y salud no están registrados a nivel municipal en las fuentes consultadas. Se reconoce un sub-registro total en este ámbito.",
+  "territorial": "Bochalema no cuenta con resguardos indígenas registrados. La extensión territorial del municipio abarca coordenadas entre 7.525° y 7.762° de latitud norte y -72.743° a -72.575° de longitud oeste. La ausencia de territorios colectivos indígenas contrasta con la presencia de población dispersa.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en la población registrada.",
+  "vida": "No hay información sobre NBI en Bochalema. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede compararse con el municipio por falta de registros locales. Se evidencia una brecha de información crítica.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Bochalema entre 1985 y 2024. El hecho principal y su porcentaje no aplican por ausencia de datos. La lectura territorial indica ausencia de afectación directa en este indicador.",
+  "icv": "El ICV de Bochalema es 0.0, derivado de componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la falta de datos afectados. La confiabilidad es limitada por n=3.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que el n=3 limita cualquier análisis confiable.",
+    "Incluir a Bochalema en programas de fortalecimiento de identificación étnica para visibilizar la presencia Muisca y evitar su invisibilización en políticas públicas.",
+    "Solicitar a la CNPV 2024 la desagregación municipal de indicadores de NBI y lengua para este territorio.",
+    "Articular con la gobernación de Norte de Santander la creación de un resguardo o figura de protección territorial para la población Muisca identificada.",
+    "Priorizar la recolección de datos de discapacidad y salud en comunidades indígenas dispersas, donde los registros actuales son inexistentes."
+  ]
+}

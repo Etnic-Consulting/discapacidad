@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Guayatá presenta una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo WAYUU. La ausencia de resguardos y datos de NBI o lengua refleja vacíos en la caracterización territorial. El ICV de 0.0 evidencia limitaciones metodológicas por subregistro en indicadores clave.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por n=1. La población indígena registrada (1 persona) impide análisis demográfico. Se requiere desagregación por grupos etarios para evaluar dinámicas poblacionales en territorios con presencia Wayúu.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Guayatá. El promedio indígena nacional (60.0%) no puede contrastarse localmente. La falta de registros limita la identificación de necesidades prioritarias.",
+  "territorial": "Guayatá no cuenta con resguardos indígenas según registros oficiales. La bbox geográfica delimita un área sin presencia territorial colectiva reconocida. La dispersión de 0 resguardos contrasta con la presencia histórica Wayúu en la región.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística del pueblo WAYUU en el territorio. Se requiere investigación específica para evaluar la transmisión intergeneracional.",
+  "vida": "No hay información sobre NBI en Guayatá. El promedio indígena nacional (67.6%) no puede compararse. La ausencia de datos impide analizar brechas en condiciones de vida para la población Wayúu residente.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Guayatá entre 1985-2024. El hecho principal es inexistente por n=0. La falta de registros no descarta afectaciones no documentadas en contextos de violencia estructural.",
+  "icv": "El ICV de 0.0 en Guayatá refleja normalización de componentes (NBI, prevalencia, conflicto) con valores nulos. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no captura realidades territoriales. Se requiere ajuste metodológico.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para superar n=1 y caracterizar la población Wayúu residente. Citar: población_total=1 en CNPV 2018.",
+    "Incluir Guayatá en planes de caracterización lingüística para evaluar vitalidad del Wayuunaiki. Citar: _sin_datos en lengua.",
+    "Implementar sistema de registro de NBI y discapacidad con desagregación étnica. Citar: _sin_datos en nbi y promedio_indigena_nacional=67.6.",
+    "Promover articulación con resguardos vecinos para garantizar derechos territoriales. Citar: n_resguardos=0 en territorial.",
+    "Diseñar estrategias de memoria histórica ante posible subregistro de víctimas. Citar: victimas_total_disc=0 en conflicto."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pandi (Cundinamarca) registra una población indígena de 1 persona según CNPV 2018, concentrada en la categoría 'INDIGENA-SIN-INFORMACION'. La ausencia de resguardos y la falta de datos en lenguas, NBI y capacidades diversas limitan el análisis territorial y socioeconómico. La única víctima de conflicto registrada corresponde a un homicidio, representando el 100% de los hechos violentos en el municipio entre 1985-2024.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según la estructura de datos disponible. La población indígena total es de 1 persona, sin desagregación por grupos de edad o género. Esta cifra refleja la invisibilización estadística de los pueblos indígenas en contextos municipales con presencia mínima o nula de resguardos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Pandi. La sección de conflicto reporta 1 víctima de homicidio, pero la confiabilidad de este dato es limitada dado el tamaño muestral (n=1). Se requiere fortalecer sistemas de registro local para identificar patrones de afectación en salud y violencia.",
+  "territorial": "Pandi no cuenta con resguardos indígenas según el registro oficial. La bounding box del municipio delimita un área de 0.13 grados cuadrados, sin presencia de territorios colectivos. Esta ausencia de resguardos contrasta con la existencia de 1 persona indígena, sugiriendo dispersión o migración sin reconocimiento territorial.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en la población registrada.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Pandi. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede contrastarse con el municipio. La falta de registros impide evaluar brechas socioeconómicas o condiciones de vida de la población indígena local.",
+  "conflicto": "Se registra 1 víctima de conflicto en Pandi, correspondiente a un homicidio (100% de los hechos). Este dato, aunque confiable metodológicamente, carece de contexto temporal o espacial detallado. La ausencia de otros tipos de violencia sugiere subregistro o baja incidencia en el período analizado.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Pandi es 0.0, con todos sus componentes (NBI, prevalencia y conflicto) en 0.0. Esta puntuación refleja la falta de datos disponibles para calcular el índice, no necesariamente condiciones de vida óptimas. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no pudo ser operacionalizada.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para identificar a la población y sus necesidades, dado que solo 1 persona está registrada en CNPV 2018.",
+    "Implementar un sistema de registro de lenguas indígenas en el municipio para documentar la vitalidad cultural, considerando la ausencia de datos en esta sección.",
+    "Fortalecer la recolección de datos sobre NBI y capacidades diversas en coordinación con el DANE, usando metodologías indígenas para garantizar pertinencia cultural.",
+    "Investigar las causas del homicidio registrado (1 víctima) para prevenir violencias futuras, priorizando enfoques comunitarios de justicia restaurativa.",
+    "Promover la creación de resguardos o figuras de protección territorial en Pandi, dado que actualmente no existen registros de territorios indígenas."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Contratación (Santander) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 en todos los indicadores demográficos. La única víctima de conflicto registrada corresponde a un homicidio, representando el 100% de los hechos violentos en el periodo 1985-2024. El ICV de 0.0 refleja la imposibilidad de calcular indicadores por falta de datos poblacionales.",
+  "demografia": "Los datos demográficos para Contratación indican n=0 en población indígena (CNPV 2018), lo que invalida cualquier análisis de pirámide etaria o distribución por sexo. La confiabilidad es NO_CONFIABLE según metadatos. Este vacío estadístico impide evaluar la vitalidad demográfica del territorio.",
+  "prevalencia": "No se registran datos de prevalencia de enfermedades o condiciones de salud para población indígena en Contratación. La sección no aplica al nivel municipal según la fuente. Se reconoce la ausencia de información sin posibilidad de estimar sub-registros.",
+  "territorial": "Contratación cuenta con 0 resguardos indígenas registrados, pese a tener una extensión geográfica definida (bbox con coordenadas válidas). La ausencia de territorios colectivos contrastan con la presencia de límites municipales. Este patrón sugiere desarticulación territorial indígena en el municipio.",
+  "lengua": "Los datos de lengua no están disponibles para Contratación. No se puede determinar presencia de lenguas indígenas ni su vitalidad cultural en el territorio municipal.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para población indígena en Contratación. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. Se reconoce la ausencia de información sin posibilidad de calcular brechas.",
+  "conflicto": "Contratación registra 1 víctima de conflicto con discapacidad, correspondiente a un homicidio (100% de los hechos). El dato es confiable (n=1), pero su representatividad es limitada. La violencia homicida es el patrón dominante en el municipio para el periodo analizado.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Contratación es 0.0, derivado de la imposibilidad de calcular componentes (nbi_norm, prev_norm, conflicto_norm) por ausencia de datos poblacionales. La fórmula no puede aplicarse en este contexto.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para validar presencia poblacional, dado que los datos actuales (n=0) son NO_CONFIABLES y no reflejan la realidad territorial.",
+    "Implementar sistema de registro de víctimas indígenas con enfoque municipal para superar la limitación actual (n=1) y mejorar la precisión de indicadores de conflicto.",
+    "Articular con la ONIC y autoridades locales para identificar y delimitar resguardos indígenas en Contratación, considerando la ausencia actual (0 resguardos) y la necesidad de garantizar derechos territoriales.",
+    "Diseñar políticas públicas con enfoque intercultural que aborden la brecha de datos en salud, NBI y lengua, priorizando la recolección de información desagregada por pueblo indígena.",
+    "Incluir a Contratación en los planes de acción de la macro ONIC Santander para fortalecer la participación indígena en la toma de decisiones municipales."
+  ]
+}

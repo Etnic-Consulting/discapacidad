@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Nueva Bellavista y Partidero, territorio del pueblo Epera Sia en el Cauca, alberga 121 habitantes en 44.925 hectáreas. Su ICV de 0.0 refleja condiciones críticas en dimensiones socioeconómicas y de conflicto, sin datos disponibles en NBI, lengua o capacidades diversas. La ausencia de víctimas registradas en el RUV (1985-2024) no garantiza ausencia de afectaciones, dado el subregistro histórico en territorios étnicos.",
+  "demografia": "La población total de 121 habitantes presenta una pirámide etaria concentrada en adultos, sin datos de estructura por edad o género. Los datos demográficos disponibles no permiten análisis de dependencia o dinámicas generacionales. Se requiere desagregación por cohortes para evaluar presión demográfica o envejecimiento.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este resguardo. La falta de información impide identificar prioridades sanitarias o patrones de morbilidad. Se recomienda fortalecer sistemas de información locales con enfoque diferencial indígena.",
+  "territorial": "El resguardo ocupa 44.925 hectáreas en el municipio de Guapi (Cauca), con límites geográficos precisos según coordenadas BBOX. Su ubicación en la macro región Occidente lo sitúa en un contexto de alta presión territorial por actores armados y megaproyectos. La concentración geográfica es total, sin dispersión poblacional.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad de la lengua propia del pueblo Epera Sia en este territorio. Se requiere investigación etnográfica para documentar prácticas lingüísticas y transmisión intergeneracional.",
+  "vida": "No hay datos de NBI disponibles para este resguardo. El promedio indígena nacional de 67.6% sugiere brechas críticas no cuantificables aquí. La ausencia de información impide comparar condiciones de vida con otros territorios Epera Sia o con el promedio nacional.",
+  "conflicto": "No se registran víctimas con discapacidad en el RUV (1985-2024) para este resguardo. La falta de hechos reportados no descarta afectaciones silenciosas o subregistros en sistemas oficiales. Se requiere validación comunitaria para identificar impactos del conflicto armado.",
+  "icv": "El ICV de 0.0 indica condiciones extremas en las tres dimensiones: NBI, prevalencia y conflicto, todas con score 0.0. La fórmula ponderada (40% NBI + 30% prevalencia + 30% conflicto) refleja una crisis multidimensional. La dimensión dominante es el NBI, aunque no esté cuantificada localmente.",
+  "recomendaciones": [
+    "Implementar un sistema de información territorial con enfoque Epera Sia para registrar NBI, lengua y salud, priorizando 121 habitantes como base poblacional.",
+    "Realizar un diagnóstico participativo de conflicto armado con metodologías propias del pueblo Epera Sia para validar ausencia de afectaciones y registrar testimonios.",
+    "Diseñar un plan de revitalización lingüística con participación de sabedores tradicionales, dado el vacío en datos de lengua.",
+    "Incluir al resguardo en programas de titulación y protección territorial, considerando su área de 44.925 hectáreas en zona de alta presión.",
+    "Articular con el CRIC y organizaciones regionales para incidir en políticas públicas con datos confiables, evitando subregistros en sistemas oficiales."
+  ]
+}

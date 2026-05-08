@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Amalfi registra una población indígena de 2 personas según el CNPV 2018, distribuidas en dos pueblos: Arhuaco (1) y Coconuco (1). Este municipio del departamento de Antioquia no cuenta con resguardos indígenas, lo que limita la presencia territorial organizada. La cifra de víctimas de conflicto con discapacidad (9) y el hecho principal de minas antipersonal (4 casos) revelan una afectación crítica en seguridad humana, pese a la baja población indígena.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la n=2, que impide análisis demográfico significativo. Los datos demográficos a nivel municipal no permiten desagregar grupos etarios ni razones de crecimiento o decrecimiento poblacional. Se requiere desagregación a nivel de resguardo o pueblo para análisis confiable.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud en Amalfi. Los sistemas de información no capturan este KPI a nivel municipal, lo que dificulta evaluar necesidades sanitarias. El sub-registro es evidente al no existir registros públicos que permitan contrastar con el promedio nacional.",
+  "territorial": "Amalfi no registra resguardos indígenas, lo que refleja una ausencia de territorios colectivos reconocidos. La dispersión geográfica de la población indígena (2 personas) no configura concentración territorial. La bbox del municipio no contiene áreas de ocupación indígena histórica, según los datos disponibles.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No hay registros que indiquen la presencia de lenguas indígenas en uso o en riesgo en Amalfi. Esta ausencia de información limita la valoración de la vitalidad cultural y lingüística en el territorio.",
+  "vida": "No hay datos de NBI disponibles para Amalfi. El promedio indígena nacional (67.6%) no puede contrastarse con el municipio. La falta de información impide evaluar condiciones de vida como educación, vivienda o acceso a servicios básicos para la población indígena local.",
+  "conflicto": "Amalfi registra 9 víctimas de conflicto con discapacidad entre 1985-2024, con el hecho principal siendo minas antipersonal (4 casos, 44.4%). Las lesiones personales y homicidios completan el perfil de violencia. La afectación por artefactos explosivos refleja riesgos persistentes en el territorio, pese a la baja población indígena.",
+  "icv": "El ICV de Amalfi es 0.001, con componentes nulos en NBI y prevalencia, y un aporte mínimo del conflicto (0.002). La fórmula pondera el conflicto como principal dimensión, pero su bajo peso relativo refleja la escasa población indígena. La posición relativa es crítica, aunque no comparable por falta de datos a nivel municipal.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para superar el sub-registro actual y validar la presencia de 2 personas en el CNPV 2018.",
+    "Priorizar desminado humanitario en zonas rurales de Amalfi, dado que el 44.4% de las víctimas registradas corresponden a minas antipersonal.",
+    "Articular con el pueblo Arhuaco para identificar posibles ocupaciones históricas no reconocidas y gestionar titulación de resguardos.",
+    "Incluir a Amalfi en el Sistema de Información de Pueblos Indígenas (SIPI) para mejorar la recolección de datos de NBI, lengua y prevalencia.",
+    "Diseñar un plan de atención psicosocial para las 9 víctimas de conflicto con discapacidad, con enfoque en rehabilitación y reparación integral."
+  ]
+}

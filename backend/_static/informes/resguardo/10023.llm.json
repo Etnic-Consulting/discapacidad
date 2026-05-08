@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo ANDABÚ, ubicado en Urrao (Antioquia), alberga 464 habitantes según el DANE-CNPV 2018. Con un área de 16.503 hectáreas, es territorio colectivo de los pueblos Emberá Eyábida y Emberá Katío, bajo la organización ASOREWA-CRICH. Su ICV de 0.0 refleja la ausencia de datos en NBI, prevalencia y conflicto, lo que limita la lectura integral de su situación socioeconómica y de derechos humanos.",
+  "demografia": "La población total registrada es de 464 habitantes. No se cuenta con datos de pirámide etaria ni estructura por edades en este nivel territorial. La fuente DANE-CNPV 2018, aunque confiable (n=464), no desagrega variables demográficas clave para este resguardo. Se requiere cruce con fuentes comunitarias para análisis etario.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en ANDABÚ. El campo `prevalencia` no aplica a nivel de resguardo según la estructura de datos. Se reconoce la limitación metodológica para evaluar carga de enfermedad en este territorio.",
+  "territorial": "ANDABÚ ocupa 16.503 hectáreas en Urrao, Antioquia, con coordenadas que delimitan su territorio en la macro región Occidente. Es un resguardo único sin dispersión geográfica adicional. La concentración territorial es total, al ser un solo territorio colectivo reconocido.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se cuenta con información sobre uso de lenguas emberá en el territorio, lo que impide evaluar vitalidad lingüística o procesos de revitalización cultural.",
+  "vida": "No se registran datos de NBI para ANDABÚ. El promedio indígena nacional de NBI es 67.6%, pero este resguardo no cuenta con cifras oficiales. La falta de información impide comparar brechas socioeconómicas con el estándar nacional indígena.",
+  "conflicto": "No se reportan víctimas de conflicto con discapacidad en ANDABÚ (valor=0) según el RUV 1985-2024. La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitación en el registro oficial. Se recomienda validar con autoridades comunitarias.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de ANDABÚ es 0.0, resultado de la falta de datos en sus tres componentes (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin inputs confiables.",
+  "recomendaciones": [
+    "Realizar censo comunitario para actualizar datos demográficos y socioeconómicos, priorizando variables como NBI y estructura etaria, citando la población total de 464 habitantes.",
+    "Implementar sistema de registro propio de salud y conflicto, dado que los datos oficiales no capturan la realidad territorial, considerando la ausencia de víctimas reportadas.",
+    "Diseñar estrategias de revitalización lingüística con participación de los pueblos Emberá Eyábida y Emberá Katío, ante la falta de datos sobre lengua en el resguardo.",
+    "Fortalecer articulación con ASOREWA-CRICH para incidir en políticas públicas diferenciadas, usando el área de 16.503 hectáreas como base territorial de planificación.",
+    "Promover alianzas con instituciones académicas para generar datos propios que complementen las limitaciones de las fuentes oficiales."
+  ]
+}

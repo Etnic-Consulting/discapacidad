@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pueblo Rico (Risaralda) concentra 7.578 indígenas según CNPV 2018, donde el 62.3% pertenece al pueblo EMBERA-CHAMÍ (4.724 personas). La presencia de 10 pueblos refleja diversidad étnica, aunque con predominio de un grupo. Los datos de conflicto revelan 241 víctimas de violencia, con desplazamiento forzado como principal hecho victimizante (77.6% de los casos).",
+  "demografia": "La población indígena en Pueblo Rico presenta una estructura etaria concentrada en adultos jóvenes, con 4.724 EMBERA-CHAMÍ (62.3% del total) como grupo dominante. Los datos no permiten análisis de pirámide etaria detallada. La alta proporción de población adulta refleja dinámicas migratorias históricas hacia zonas urbanas.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones específicas no están disponibles para este municipio. Se reconoce la limitación de no contar con información epidemiológica desagregada. La falta de datos impide evaluar subregistros o patrones de salud indígena en el territorio.",
+  "territorial": "Existe un único resguardo registrado: GITÓ DOCABÚ (2.452,88 ha), bajo dominio EMBERA-CHAMÍ. La dispersión geográfica es limitada, concentrada en un territorio colectivo. La bounding box (5.13°-5.45°N, -76.21°--75.92°W) delimita un área reducida con alta presión antrópica.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede inferir vitalidad lingüística ni uso de lenguas propias en la población indígena local.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para Pueblo Rico. El promedio indígena nacional es 67.6%, pero no hay referencia local para comparar brechas. Se requiere información actualizada para evaluar condiciones de vida.",
+  "conflicto": "Se registran 241 víctimas de violencia (1985-2024), con desplazamiento forzado como principal hecho (187 casos, 77.6%). La concentración de hechos victimizantes en este municipio refleja alta exposición a dinámicas de conflicto armado. Los datos son confiables pero no distinguen entre pueblos indígenas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.014, con componente de conflicto como dimensión dominante (0.048). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero el bajo score sugiere condiciones críticas. La normalización limita comparabilidad con otros territorios.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación del resguardo GITÓ DOCABÚ, dado su área reducida (2.452,88 ha) para 4.724 EMBERA-CHAMÍ, citando el dato de población del pueblo principal.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, considerando que el 77.6% de las víctimas registradas (187 casos) corresponden a este municipio.",
+    "Generar un diagnóstico lingüístico en Pueblo Rico, ante la ausencia de datos sobre lenguas indígenas, para diseñar estrategias de revitalización cultural.",
+    "Incluir a Pueblo Rico en el Plan de Vida de los EMBERA-CHAMÍ, incorporando los 241 casos de víctimas de conflicto como línea base para reparación.",
+    "Solicitar al DANE la desagregación de NBI por pueblos indígenas en Pueblo Rico, dado que el promedio nacional (67.6%) no refleja la realidad local."
+  ]
+}

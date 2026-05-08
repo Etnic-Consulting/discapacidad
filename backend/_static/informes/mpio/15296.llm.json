@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Gameza (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 y confiabilidad NO_CONFIABLE. Este vacío estadístico impide analizar su estructura demográfica o patrones de afectación. La falta de datos refleja debilidades en sistemas de identificación étnica a nivel municipal, ocultando posibles realidades territoriales.",
+  "demografia": "Los datos demográficos para Gameza indican n=0 en población indígena registrada, lo que imposibilita analizar la pirámide etaria o razones de crecimiento. Esta ausencia de registros oficiales sugiere fallas en la recolección de datos o subrepresentación étnica. Sin cifras confiables, no es posible comparar con tendencias nacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Gameza. La ausencia de registros impide evaluar subregistros o patrones de morbilidad. Esta limitación metodológica dificulta identificar prioridades sanitarias para eventuales comunidades no visibles en censos.",
+  "territorial": "Gameza cuenta con 0 resguardos indígenas registrados, pese a tener un área geográfica delimitada (bbox con coordenadas válidas). La ausencia de territorios colectivos reconocidos contrasta con la presencia de límites municipales definidos. Este vacío territorial refleja posibles procesos de despojo o falta de titulación.",
+  "lengua": "Los datos sobre lengua indígena en Gameza no están disponibles. No es posible identificar lenguas en uso ni su vitalidad cultural. Esta omisión limita el análisis de diversidad lingüística y su relación con procesos de asimilación o resistencia cultural.",
+  "vida": "No hay información sobre NBI en Gameza, aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar brechas socioeconómicas. Esta carencia estadística invisibiliza necesidades básicas insatisfechas en posibles comunidades no registradas.",
+  "conflicto": "Gameza reporta 0 víctimas de conflicto con discapacidad (n=0, 1985-2024), con confiabilidad CONFIABLE. La ausencia de registros no implica paz territorial, sino posibles fallas en sistemas de denuncia o subregistro. Este dato subraya la necesidad de fortalecer mecanismos de protección.",
+  "icv": "El ICV de Gameza es 0.0, con componentes normalizados en 0.0. La fórmula (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) refleja la ausencia de datos. Este resultado subraya la urgencia de sistemas de monitoreo que capturen realidades territoriales ocultas.",
+  "recomendaciones": [
+    "Implementar censos municipales con enfoque étnico para corregir el subregistro en Gameza, priorizando metodologías participativas con pueblos indígenas",
+    "Realizar mapeo territorial comunitario para identificar posibles resguardos no titulados o territorios ancestrales no reconocidos",
+    "Fortalecer sistemas de denuncia de víctimas en municipios con n=0, garantizando confidencialidad y acceso a justicia",
+    "Articular con la CNPV 2025 para incluir preguntas sobre autoidentificación étnica en municipios con vacíos como Gameza",
+    "Priorizar proyectos de titulación de tierras en Boyacá, dado que el 0% de resguardos registrados en Gameza sugiere procesos históricos de despojo"
+  ]
+}

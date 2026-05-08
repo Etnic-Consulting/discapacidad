@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Cuitiva reporta una población indígena de 2 personas según el CNPV 2018, concentrada en el pueblo U`WA. La ausencia de resguardos y datos de lengua refleja una debilidad en la institucionalización territorial de los pueblos. La vulnerabilidad se acentúa al no contar con información sobre NBI o capacidades diversas, limitando la planificación con enfoque diferencial.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la mínima población registrada (2 personas). Los datos demográficos a nivel municipal no permiten análisis etarios ni comparativos con otros grupos etarios. Se requiere desagregar la información a nivel de resguardo o pueblo para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Cuitiva. La sección no aplica al nivel municipal según la fuente consultada. Esta limitación impide identificar prioridades sanitarias específicas para la población U`WA residente.",
+  "territorial": "Cuitiva no registra resguardos indígenas, pese a su ubicación en Boyacá (código 15). La dispersión geográfica se limita a 2 personas sin delimitación territorial colectiva. La ausencia de resguardos contrasta con la presencia histórica del pueblo U`WA en la región, sugiriendo procesos de despojo o invisibilización territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de la lengua U`WA ni su vitalidad en el territorio. Esta falta de información dificulta la implementación de políticas de revitalización lingüística.",
+  "vida": "No hay información sobre NBI para Cuitiva, aunque el promedio indígena nacional es 67.6%. La brecha no puede calcularse por ausencia de datos locales. Se evidencia una falla en el registro de condiciones de vida, clave para diseñar intervenciones sociales con enfoque diferencial.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Cuitiva (0 casos entre 1985-2024). La ausencia de hechos victimizantes no descarta vulnerabilidades no documentadas. La limitación en el RUV municipal subraya la necesidad de sistemas de alerta temprana locales.",
+  "icv": "El ICV de Cuitiva es 0.0, determinado por la falta de datos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con precisión. Este resultado refleja la carencia de información estadística básica para evaluar bienestar.",
+  "recomendaciones": [
+    "Realizar un censo comunitario U`WA en Cuitiva para actualizar datos demográficos y territoriales, dado que el CNPV 2018 registra solo 2 personas.",
+    "Gestionar con el IGAC la delimitación de resguardos para el pueblo U`WA en Boyacá, considerando su presencia histórica en la región.",
+    "Solicitar al DANE incluir preguntas sobre lengua y NBI en futuras encuestas municipales para superar la falta de datos.",
+    "Implementar un sistema de alerta temprana local con participación U`WA para documentar vulnerabilidades no registradas en el RUV.",
+    "Priorizar proyectos de soberanía alimentaria y acceso a agua potable, dado que el ICV 0.0 refleja vacíos estructurales en condiciones de vida."
+  ]
+}

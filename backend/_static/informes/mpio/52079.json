@@ -1,0 +1,235 @@
+{
+  "tipo": "mpio",
+  "id": "52079",
+  "nombre": "BARBACOAS",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 9729,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 9729,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 5,
+      "top": [
+        {
+          "cod_pueblo": "210",
+          "pueblo": "AWA",
+          "poblacion": 9632
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 81
+        },
+        {
+          "cod_pueblo": "560",
+          "pueblo": "PASTOS",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "360",
+          "pueblo": "COFAN",
+          "poblacion": 2
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "210",
+        "pueblo": "AWA",
+        "poblacion": 9632
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 15,
+      "resguardos": [
+        {
+          "nombre": "EL GRAN SÁBALO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 42482.522
+        },
+        {
+          "nombre": "LA TURBIA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 28627.987
+        },
+        {
+          "nombre": "TORTUGAÑA, TELEMBÍ, PUNDE, PITADERO, BRAVO, TRONQUERÍA Y ZABALETA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 22118.439
+        },
+        {
+          "nombre": "PINGULLO - SARDINERO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 12047.741
+        },
+        {
+          "nombre": "TRONQUERÍA, PULGANDE - PALICITO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 10428.625
+        },
+        {
+          "nombre": "NUNALBÍ ALTO ULBÍ",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 9632.469
+        },
+        {
+          "nombre": "AWÁ ÑAMBÍ PIEDRA VERDE",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 7330.714
+        },
+        {
+          "nombre": "CUAYQUER DEL ALTO ALBI",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 4337.381
+        },
+        {
+          "nombre": "CHAGÜÍ CHIMBUZA VEGAS Y OTROS",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 3456.108
+        },
+        {
+          "nombre": "PIPALTA - PALBI - YAGUAPÍ",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2607.151
+        },
+        {
+          "nombre": "GUELMAMBÍ CARAÑO",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2586.133
+        },
+        {
+          "nombre": "CUAMBI - YASLAMBI",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 2534.753
+        },
+        {
+          "nombre": "CUASBIL - LA FALDADA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 1162.015
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA CHIMBAGAL Y TAJA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 383.186
+        },
+        {
+          "nombre": "HONDA RÍO GUIZA",
+          "pueblo_onic": "AWÁ",
+          "area_pg_ha": 304.393
+        }
+      ],
+      "bbox": [
+        1.1381252363552716,
+        -78.50970472078183,
+        1.8540558406107872,
+        -77.79160723458023
+      ],
+      "nombre_mpio": "BARBACOAS",
+      "cod_dpto": "52"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 403,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 403,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 286
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 31
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 27
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 16
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 11
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 10
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 8
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 4
+        },
+        {
+          "hecho": "Confinamiento",
+          "total": 4
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 3
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 286
+      },
+      "pct_hecho_principal": 71.0
+    },
+    "icv": {
+      "score": 0.024,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.081
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:47:54",
+  "periodo": "2018",
+  "_input_hash": "1287a958de42641e"
+}

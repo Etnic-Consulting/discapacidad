@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "VillaVieja alberga una población indígena de 179 personas según el CNPV 2018, concentrada mayoritariamente en el resguardo La Tatacoa (174 pijaos). La presencia de solo 3 pueblos indígenas refleja una homogeneidad étnica marcada, con el pueblo Pijao como actor dominante. El municipio registra 4 víctimas de conflicto con discapacidad entre 1985-2024, donde el desplazamiento forzado representa el 75% de los hechos victimizantes.",
+  "demografia": "La población indígena de VillaVieja presenta una pirámide etaria concentrada en adultos (174 pijaos), con solo 5 personas de otros pueblos (3 inga y 2 zenú). Esta estructura refleja una comunidad envejecida y con baja diversidad poblacional. Los datos no permiten analizar razones de esta concentración por falta de desagregación etaria.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en VillaVieja. La ausencia de información impide evaluar el sub-registro de condiciones médicas en esta población indígena. Se requiere sistematización de registros sanitarios locales para superar esta limitación.",
+  "territorial": "VillaVieja cuenta con un solo resguardo indígena (La Tatacoa) de 287.574 hectáreas, administrado por el pueblo Pijao. La extensión territorial contrasta con la reducida población (179 personas), sugiriendo baja densidad poblacional. La ubicación geográfica en el Huila ubica al territorio en una zona de transición andino-amazónica.",
+  "lengua": "Los datos sobre lenguas indígenas en VillaVieja no están disponibles en las fuentes consultadas. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en este municipio.",
+  "vida": "No se registran datos de NBI para VillaVieja en las fuentes oficiales. El promedio indígena nacional de NBI es 67.6%, pero no hay información para comparar la situación de este municipio. La falta de datos impide evaluar brechas socioeconómicas.",
+  "conflicto": "VillaVieja reporta 4 víctimas de conflicto con discapacidad entre 1985-2024, donde el desplazamiento forzado (3 casos) representa el 75% de los hechos. La pérdida de bienes (1 caso) completa el patrón victimizante. Estos datos subrayan la persistencia de violencias estructurales contra la población indígena.",
+  "icv": "VillaVieja registra un ICV de 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja una situación crítica en NBI y prevalencia. El valor de conflicto, aunque mínimo, indica afectación territorial persistente.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación del resguardo La Tatacoa para garantizar la seguridad territorial del pueblo Pijao, considerando sus 287.574 hectáreas y la población de 174 personas.",
+    "Implementar un sistema de registro sanitario local para documentar prevalencia de enfermedades y condiciones de salud en la población indígena de VillaVieja, dado el vacío de datos actual.",
+    "Diseñar programas de atención psicosocial para víctimas de desplazamiento forzado, que representaron el 75% de los hechos victimizantes (3 de 4 casos) entre 1985-2024.",
+    "Establecer un observatorio municipal de derechos indígenas con enfoque en NBI y acceso a servicios básicos, ante la ausencia de datos oficiales.",
+    "Fortalecer alianzas con el pueblo Pijao para revitalizar prácticas culturales y lingüísticas, considerando la falta de información sobre lengua y la necesidad de preservar identidad."
+  ]
+}

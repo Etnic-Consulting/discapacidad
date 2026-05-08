@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cerinza (Boyacá) concentra una población indígena mínima de 3 personas, todas pertenecientes al pueblo Pijao según CNPV 2018. La ausencia de resguardos y territorios colectivos refleja una pérdida histórica de reconocimiento territorial. Este escenario limita la capacidad de ejercicio de derechos étnicos y acceso a políticas diferenciadas.",
+  "demografia": "La pirámide etaria no aplica en este nivel territorial dado que la población indígena total asciende a solo 3 personas. La base de datos no desagrega grupos etarios ni permite análisis demográfico confiable. Se requiere desagregación por edad para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de registros específicos impide identificar patrones de morbilidad o prioridades sanitarias. Se subraya la necesidad de sistemas de información locales con enfoque étnico.",
+  "territorial": "Cerinza carece de resguardos indígenas, lo que evidencia una brecha crítica en el reconocimiento territorial. La bbox geográfica delimita un área municipal sin presencia de territorios colectivos. Esta situación contrasta con la existencia de 1 pueblo indígena identificado, pero sin base territorial.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias. La ausencia de registros lingüísticos refleja una debilidad en la salvaguarda cultural.",
+  "vida": "No se reportan datos de NBI para Cerinza, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con el estándar nacional. Se requiere incorporar indicadores de pobreza multidimensional en sistemas locales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Cerinza entre 1985-2024. La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en el registro. Se debe fortalecer la sistematización de violencias en territorios sin reconocimiento.",
+  "icv": "El ICV de Cerinza es 0.0, resultado de la normalización de componentes nulos (NBI, prevalencia y conflicto). Esta métrica refleja la invisibilización estadística de la población indígena local. La fórmula pondera componentes ausentes, generando una valoración extrema.",
+  "recomendaciones": [
+    "Realizar censo étnico municipal con enfoque diferencial para identificar población indígena oculta, dado que solo se registran 3 personas en CNPV 2018.",
+    "Promover el reconocimiento de resguardos indígenas en Cerinza mediante gestiones con la ANI y el Ministerio del Interior, considerando la ausencia actual de territorios colectivos.",
+    "Implementar un sistema de información de salud con desagregación étnica para diagnosticar necesidades prioritarias, ante la falta de datos de prevalencia.",
+    "Incluir indicadores de pobreza multidimensional en el Sisbén municipal, comparando con el promedio indígena nacional de 67.6% NBI.",
+    "Fortalecer la articulación con la ONIC para registrar violencias en territorios sin reconocimiento, evitando subregistros como el actual de 0 víctimas."
+  ]
+}

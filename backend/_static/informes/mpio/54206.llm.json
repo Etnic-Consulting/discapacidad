@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Convención (Norte de Santander) concentra el 97% de su población indígena en el pueblo BARÍ (639 personas de 658 totales). Este territorio alberga un solo resguardo (Motilón-Barí) con 106,490.197 hectáreas, reflejando una alta concentración territorial. La vulnerabilidad se evidencia en 23 víctimas de conflicto, donde el desplazamiento forzado representa el 56.5% de los casos registrados entre 1985-2024.",
+  "demografia": "La pirámide etaria del municipio muestra una población predominantemente adulta, con 639 personas BARÍ (97% del total indígena). Los datos no permiten analizar distribución por edades o razones de estructura poblacional. La concentración en un solo pueblo limita la diversidad demográfica local.",
+  "prevalencia": "Los datos de prevalencia de discapacidades no están disponibles a nivel municipal según la fuente consultada. El promedio indígena nacional (60%) no puede contrastarse con cifras locales. Se requiere desagregación por pueblo para evaluar subregistros en este indicador.",
+  "territorial": "Convención alberga 1 resguardo (Motilón-Barí) con 106,490.197 hectáreas, ocupando la totalidad del territorio indígena municipal. La bbox delimita un área de alta biodiversidad en la zona limítrofe con Venezuela. La concentración en un solo territorio refleja patrones de asentamiento histórico del pueblo BARÍ.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se pueden inferir patrones de vitalidad lingüística ni estrategias de revitalización a partir de la información proporcionada.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles a nivel municipal. El promedio indígena nacional (67.6%) no puede compararse con la situación local. Se requiere desagregación por resguardo para evaluar brechas en condiciones de vida.",
+  "conflicto": "Se registraron 23 víctimas indígenas, con desplazamiento forzado como hecho principal (13 casos, 56.5%). Los homicidios (4) y lesiones personales (3) completan los eventos más recurrentes. La concentración de hechos en un municipio fronterizo subraya riesgos asociados a dinámicas de violencia transnacional.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.001, con componentes normalizados en cero excepto conflicto (0.005). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), destacando la dimensión de violencia como factor crítico. La posición relativa refleja condiciones extremas de vulnerabilidad.",
+  "recomendaciones": [
+    "Priorizar la protección del resguardo Motilón-Barí con enfoque en prevención de desplazamiento forzado, dado que el 56.5% de las víctimas registradas corresponden a este hecho (23 víctimas totales).",
+    "Implementar programas de salud intercultural para pueblos indígenas en Convención, considerando la ausencia de datos sobre discapacidades y NBI que impide diseñar respuestas específicas.",
+    "Fortalecer la titulación y protección de 106,490.197 hectáreas del resguardo Motilón-Barí ante presiones extractivas en zona fronteriza.",
+    "Generar un sistema de alerta temprana para violencia en municipios con alta concentración indígena, como Convención (658 personas), donde el ICV de 0.001 refleja condiciones críticas.",
+    "Promover censos municipales con desagregación étnica para superar la falta de datos en NBI, lengua y discapacidades que limita la planificación territorial."
+  ]
+}

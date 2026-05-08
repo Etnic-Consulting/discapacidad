@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Cartagena del Chaira registra una población indígena de 179 personas según CNPV 2018, distribuidas en 18 pueblos. El 33.5% pertenece al pueblo EMBERA, principal grupo en el municipio. La concentración en un solo resguardo (FUNES) y la alta incidencia de desplazamiento forzado (76.5% de las 85 víctimas) revelan vulnerabilidad territorial y organizativa.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal según la nota técnica. Los datos demográficos se presentan agregados por pueblo sin desagregación etaria. Se requiere cruce con fuentes locales para análisis poblacional detallado.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no aplica en el JSON canónico. Se recomienda priorizar la sistematización de registros de salud indígena a nivel local para subsanar esta brecha.",
+  "territorial": "Existe un único resguardo (FUNES) con 12,273.46 ha, ocupado predominantemente por el pueblo PASTO. La dispersión geográfica abarca coordenadas extremas entre -75.08 y -73.14, sugiriendo fragmentación territorial. La concentración en un solo territorio limita la autonomía cultural y productiva de los 18 pueblos presentes.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. Se reconoce la ausencia de información sin posibilidad de inferencia.",
+  "vida": "El NBI no está disponible a nivel municipal. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de datos impide evaluar condiciones de vida, aunque el contexto de conflicto sugiere vulnerabilidad socioeconómica.",
+  "conflicto": "Se registran 85 víctimas de conflicto armado con discapacidad entre 1985-2024. El 76.5% corresponde a desplazamiento forzado (65 casos), seguido de amenazas (8) y homicidios (5). La victimización afecta transversalmente a los pueblos, con mayor impacto en EMBERA y EMBERA-CHAMI por su presencia territorial.",
+  "icv": "El ICV municipal es 0.005, con componente de conflicto como dimensión dominante (0.017). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.017). La posición relativa es crítica, reflejando alta exposición a violencias y debilidad institucional para garantizar derechos territoriales.",
+  "recomendaciones": [
+    "Priorizar la delimitación y ampliación del resguardo FUNES para garantizar autonomía territorial al pueblo PASTO y otros 17 pueblos presentes, citando el único territorio existente (12,273.46 ha).",
+    "Implementar un sistema de alertas tempranas contra desplazamiento forzado en Cartagena del Chaira, dado que el 76.5% de las 85 víctimas registradas corresponden a este hecho.",
+    "Fortalecer la recolección de datos de NBI y lengua a nivel municipal para contrastar con el promedio indígena nacional (67.6%), subsanando la ausencia actual de información.",
+    "Diseñar programas de salud intercultural que aborden las secuelas de violencia en la población indígena, especialmente en EMBERA y EMBERA-CHAMI, pueblos con mayor población (60 y 29 personas).",
+    "Articular con la ONIC y autoridades locales para incluir a los 18 pueblos en planes de desarrollo municipal, considerando su diversidad cultural y los riesgos de asimilación."
+  ]
+}

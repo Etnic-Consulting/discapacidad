@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Angostura (Antioquia) reporta ausencia de población indígena identificada en datos oficiales (CNPV 2018). La falta de registros en pueblos indígenas, resguardos y variables sociodemográficas refleja una brecha crítica en la caracterización territorial. Este vacío limita la planificación diferenciada, pese a la presencia histórica de pueblos en la región. La confiabilidad nula en datos poblacionales (n=0) exige revisión metodológica para garantizar derechos indígenas.",
+  "demografia": "Los datos demográficos para Angostura no aplican al nivel municipal según la fuente consultada (n=0, confiabilidad NO_CONFIABLE). No se identifican pueblos indígenas en el municipio, lo que impide analizar la pirámide etaria o dinámicas poblacionales. Esta ausencia de registros contrasta con la presencia histórica de pueblos en Antioquia, sugiriendo subregistro en censos oficiales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Angostura (sin datos a nivel municipal). La referencia a discapacidad en víctimas (n=0) no permite análisis de sub-registro. La falta de información confiable (n < 30) imposibilita identificar patrones de afectación en la población indígena del territorio.",
+  "territorial": "Angostura no registra resguardos indígenas en su jurisdicción (n_resguardos=0). La delimitación geográfica del municipio (bbox) no coincide con territorios colectivos reconocidos. Esta ausencia de resguardos formalizados limita la protección territorial y la implementación de planes de vida indígena en el área.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Angostura. No se cuenta con información sobre uso de lenguas originarias en el municipio, lo que impide evaluar la vitalidad cultural de posibles pueblos presentes en el territorio.",
+  "vida": "No hay datos de NBI disponibles para Angostura (sin datos a nivel municipal). El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información impide analizar brechas en condiciones de vida de la población indígena del municipio.",
+  "conflicto": "Angostura reporta cero víctimas indígenas con discapacidad en el RUV (1985-2024, n=0). La ausencia de hechos victimizantes registrados no refleja necesariamente la realidad del territorio. Dada la confiabilidad del dato (CONFIABLE), se requiere validación con fuentes comunitarias para descartar sub-registro.",
+  "icv": "El ICV de Angostura es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto normalizados). Esta métrica refleja la falta de datos desagregados a nivel municipal. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no captura la realidad territorial por ausencia de insumos.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para identificar pueblos y territorios, citando la ausencia de datos (n_pueblos=0).",
+    "Validar con autoridades indígenas locales la presencia de pueblos no registrados en censos oficiales, considerando la historia regional.",
+    "Implementar sistema de alerta temprana para violencia contra pueblos indígenas, dado el sub-registro en víctimas (victimas_total_disc=0).",
+    "Articular con la ONIC y el Ministerio del Interior para reconocer resguardos no formalizados en Angostura, ante n_resguardos=0.",
+    "Incluir variables indígenas en encuestas municipales (ej. lengua, NBI) para superar la falta de datos (_sin_datos=true en nbi/lengua)."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Francisco (Antioquia) registra una población indígena de solo 1 habitante según CNPV 2018, concentrada en un pueblo sin identificación específica. La ausencia de resguardos y datos demográficos detallados refleja una presencia indígena marginal en el municipio. La única cifra crítica disponible es el desplazamiento forzado de 12 víctimas con discapacidad entre 1985-2024, que representa el 100% de los hechos violentos registrados.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. La población total indígena de 1 habitante impide análisis etarios o comparativos. Se reconoce la limitación metodológica: los datos demográficos indígenas a nivel municipal no están disponibles en las fuentes consultadas.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este municipio. La sección se omite por ausencia total de registros. Se advierte que cualquier interpretación sin datos sería especulativa y contraria a los protocolos de la ONIC.",
+  "territorial": "No existen resguardos indígenas en San Francisco, según los registros oficiales. El municipio presenta una dispersión geográfica sin territorios colectivos reconocidos. La caja delimitadora (bbox) refleja un área municipal sin concentración indígena espacialmente definida.",
+  "lengua": "Los datos de lengua indígena no están disponibles para este municipio. Se reconoce explícitamente la ausencia de información sin recurrir a estimaciones externas.",
+  "vida": "No hay datos de Necesidades Básicas Insatisfechas (NBI) disponibles para San Francisco. El promedio indígena nacional del 67.6% no puede compararse localmente por falta de registros. La brecha con el contexto nacional no puede calcularse con la información existente.",
+  "conflicto": "Se registraron 12 víctimas de desplazamiento forzado con discapacidad entre 1985-2024, constituyendo el 100% de los hechos violentos. Este patrón refleja una afectación histórica concentrada en desplazamiento, sin otros tipos de violencia documentados. La cifra subraya la vulnerabilidad extrema de la población indígena local.",
+  "icv": "El Índice de Condiciones de Vida (ICV) alcanza 0.001, con componentes normalizados en cero excepto conflicto (0.002). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm muestra una dimensión dominante de conflicto. La posición relativa es crítica, cercana al mínimo posible.",
+  "recomendaciones": [
+    "Priorizar la identificación y registro oficial de la población indígena en San Francisco, dado que solo 1 habitante está documentado (población_total.value: 1).",
+    "Implementar un sistema de alerta temprana para prevenir desplazamiento forzado, considerando que el 100% de los hechos violentos registrados corresponden a este tipo (pct_hecho_principal: 100.0).",
+    "Establecer acuerdos interinstitucionales para generar datos de NBI, lengua y capacidades diversas, actualmente sin registros (nbi._sin_datos: true).",
+    "Diseñar políticas de retorno y protección territorial para la población indígena, ante la ausencia de resguardos en el municipio (n_resguardos: 0).",
+    "Incluir a San Francisco en programas de salud intercultural, dada la falta total de datos de prevalencia que impide intervenciones focalizadas (prevalencia._sin_datos: true)."
+  ]
+}

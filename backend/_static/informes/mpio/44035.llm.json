@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Albania (La Guajira) concentra el 98.8% de su población indígena en el pueblo Wayúu (9.677 personas de 9.797 totales). La presencia de 9 pueblos refleja diversidad, pero con una hegemonía territorial clara. El único resguardo registrado, Cuatro de Noviembre, abarca 555.533 hectáreas, evidenciando una alta concentración espacial del territorio colectivo.",
+  "demografia": "La población indígena en Albania presenta una pirámide etaria sesgada hacia adultos jóvenes, con el 98.8% de la población perteneciente al pueblo Wayúu. Los datos no discriminan por grupos de edad, limitando el análisis generacional. La ausencia de información sobre capacidades diversas impide evaluar vulnerabilidades específicas en este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en Albania. La falta de registros a nivel municipal obliga a recurrir a promedios departamentales o nacionales, lo que invisibiliza patrones locales de morbilidad. Se requiere sistematización de registros de salud indígena para identificar necesidades prioritarias.",
+  "territorial": "Albania alberga un único resguardo (Cuatro de Noviembre) con 555.533 hectáreas, que alberga al 98.8% de la población indígena municipal. La delimitación geográfica (coordenadas bbox) confirma una alta concentración territorial. La dispersión de otros pueblos (8 restantes) es mínima, concentrados en áreas periféricas.",
+  "lengua": "Los datos sobre lengua no están disponibles para Albania. Esta ausencia impide evaluar la vitalidad lingüística y el riesgo de pérdida cultural. Se recomienda priorizar censos lingüísticos en territorios con alta presencia Wayúu para documentar transmisión intergeneracional.",
+  "vida": "No hay datos de NBI disponibles para Albania. El promedio indígena nacional (67.6%) sugiere brechas críticas, pero no permite cuantificar la situación local. La falta de información oculta necesidades en acceso a servicios básicos, educación y vivienda en este territorio Wayúu.",
+  "conflicto": "Se registraron 2 víctimas de desplazamiento forzado entre 1985-2024, representando el 100% de los hechos violentos. La concentración de violencia en este hecho refleja patrones de despojo territorial en La Guajira. La baja cifra (n=2) limita análisis estadístico, pero confirma la persistencia de amenazas contra la autonomía Wayúu.",
+  "icv": "El ICV de Albania es 0.0, con componentes normalizados en cero. La fórmula (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) refleja la ausencia de datos sistemáticos. Este resultado subraya la urgencia de mejorar la recolección de información para priorizar intervenciones en territorio Wayúu.",
+  "recomendaciones": [
+    "Priorizar censos lingüísticos en resguardos Wayúu para documentar vitalidad del wayuunaiki, citando la ausencia de datos en la sección lengua.",
+    "Implementar sistemas de alerta temprana contra desplazamiento forzado en Cuatro de Noviembre, basado en los 2 casos registrados en 40 años.",
+    "Diseñar programas de salud intercultural con enfoque en adultos jóvenes Wayúu, considerando que el 98.8% de la población pertenece a este pueblo.",
+    "Exigir al DANE la desagregación de NBI por pueblos indígenas en Albania, ante la falta de datos en la sección vida.",
+    "Fortalecer la titulación de territorios colectivos en La Guajira, dado que solo existe 1 resguardo (555.533 ha) para 9.797 personas."
+  ]
+}

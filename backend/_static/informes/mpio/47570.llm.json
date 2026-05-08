@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pueblo Viejo (Magdalena) registra una población indígena de 1 persona según CNPV 2018, correspondiente al pueblo Wiwa. La ausencia de resguardos y datos de lengua refleja una vulnerabilidad territorial extrema. La concentración de víctimas de conflicto (3 casos) evidencia riesgos desproporcionados para un territorio sin reconocimiento legal.",
+  "demografia": "La pirámide etaria no aplica por n=1. La población total indígena es de 1 habitante, perteneciente al pueblo Wiwa. La falta de datos desagregados impide análisis de estructura etaria o dinámicas generacionales en este municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud. Los indicadores de discapacidad y NBI no están registrados para este municipio. Se requiere sistematización de información primaria para evaluar necesidades sanitarias.",
+  "territorial": "El municipio cuenta con 0 resguardos indígenas. La dispersión geográfica se limita a un punto sin reconocimiento territorial colectivo. La bbox registrada (10.657647343496128, -74.48479171978437 a 11.006811343410936, -74.21931640059034) no alberga territorios ancestrales legalizados.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Pueblo Viejo. No se puede determinar la vitalidad lingüística ni prácticas culturales asociadas a la transmisión intergeneracional.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para este municipio. El promedio indígena nacional (67.6%) no puede compararse debido a la falta de registros locales.",
+  "conflicto": "Se registran 3 víctimas de conflicto con discapacidad entre 1985-2024. El desplazamiento forzado representa el 66.7% de los hechos (2 casos). La concentración de violencia contra personas indígenas en un territorio sin protección legal es alarmante.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con componentes normalizados en 0.0 (NBI), 0.0 (prevalencia) y 0.001 (conflicto). La fórmula ponderada refleja condiciones de extrema vulnerabilidad sin acceso a servicios básicos ni protección territorial.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena para el pueblo Wiwa en Pueblo Viejo, dado que actualmente no existen territorios legalizados (n_resguardos=0).",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, que concentra el 66.7% de los hechos de violencia registrados (2 de 3 casos).",
+    "Realizar un censo indígena local para superar la subrepresentación actual (población_total=1), incorporando variables de lengua y NBI.",
+    "Diseñar programas de salud intercultural que aborden la falta de datos de prevalencia y discapacidad en el municipio.",
+    "Articular con la ONIC y autoridades departamentales para garantizar el derecho a la consulta previa en proyectos que afecten el territorio Wiwa."
+  ]
+}

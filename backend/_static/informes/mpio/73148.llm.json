@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Carmen de Apicalá registra una población indígena de solo 3 personas según el CNPV 2018, distribuidas en tres pueblos: Wiwa, Pijao y Muisca, cada uno con 1 individuo. La ausencia de resguardos y la dispersión territorial en un área de 13.6 km² reflejan una presencia indígena marginal. La falta de datos en NBI, lengua y conflicto limita el análisis integral, pero evidencia la invisibilización estadística de los pueblos en este municipio.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la escasa población indígena (n=3). La distribución equitativa entre Wiwa, Pijao y Muisca sugiere ausencia de concentración demográfica. La confiabilidad de los datos es alta (n=3), pero la representatividad es cuestionable por el tamaño muestral mínimo.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros nacionales indican un promedio indígena de 60% en discapacidades, pero este dato no es aplicable a Carmen de Apicalá. La falta de información impide evaluar sub-registros o necesidades específicas.",
+  "territorial": "El municipio alberga 0 resguardos indígenas, confirmando la inexistencia de territorios colectivos. La bounding box de 13.6 km² delimita un área reducida sin presencia territorial indígena organizada. La dispersión geográfica y la ausencia de resguardos contrastan con la diversidad étnica reportada.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Carmen de Apicalá. El promedio indígena nacional es 67.6%, pero este dato no puede compararse localmente por falta de registros. La invisibilidad estadística impide evaluar brechas socioeconómicas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en el RUV entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja incidencia, pero la confiabilidad es limitada por el tamaño muestral (n=0). No hay patrones territoriales identificables en este indicador.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la falta de datos disponibles. La posición relativa no puede determinarse por ausencia de comparadores.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque étnico para superar el sub-registro actual (población total: 3 personas)",
+    "Identificar y reconocer territorios ancestrales aunque no estén formalizados como resguardos (n_resguardos: 0)",
+    "Incluir a Carmen de Apicalá en programas de salud intercultural para pueblos sin datos específicos",
+    "Documentar la diversidad lingüística local mediante estudios comunitarios (datos lengua: _sin_datos)",
+    "Priorizar la inclusión de este municipio en sistemas de información territorial indígena a nivel departamental (cod_dpto: 73)"
+  ]
+}

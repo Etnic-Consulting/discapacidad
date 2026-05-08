@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Ciénaga (Magdalena) concentra 2.342 personas indígenas según CNPV 2018, con el 66.3% pertenecientes al pueblo Kogui. La ausencia de resguardos registrados refleja debilidad en la titulación territorial. El desplazamiento forzado afecta al 89.8% de las 49 víctimas de violencia en el municipio entre 1985-2024.",
+  "demografia": "La población indígena en Ciénaga presenta una estructura joven con 1.552 Kogui (66.3%), 457 Arhuacos (19.5%) y 230 Wayúu (9.8%). Los datos no permiten análisis de pirámide etaria por falta de desagregación por edad. La diversidad étnica (11 pueblos) contrasta con la ausencia de datos sobre capacidades diversas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en el municipio. Los indicadores de salud requieren desagregación por pueblo para análisis confiable. Se recomienda priorizar sistemas de información diferenciados que capturen necesidades específicas de cada grupo étnico.",
+  "territorial": "El municipio carece de resguardos indígenas registrados (n=0), pese a albergar 11 pueblos. La bbox geográfica delimita un área de 10.6°-11.1°N y -74.3°--73.8°W en la Sierra Nevada de Santa Marta. La ausencia de territorios colectivos limita el ejercicio de autonomía y protección cultural.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Se requiere implementar censos lingüísticos diferenciados que registren la vitalidad de las 4 lenguas reportadas (Kogui, Arhuaco, Wayuunaiki, Wiwa) en contextos cotidianos y educativos.",
+  "vida": "No hay datos específicos de NBI para Ciénaga. El promedio indígena nacional es 67.6%, lo que sugiere brechas críticas no cuantificadas. La falta de información impide evaluar condiciones de vida como acceso a agua, educación y vivienda en este territorio.",
+  "conflicto": "El desplazamiento forzado representa el 89.8% de las 49 víctimas registradas en el RUV (1985-2024). Los homicidios (6.1%) y delitos sexuales (2%) completan el patrón de violencia. La concentración de hechos en este municipio refleja la presión territorial en la Sierra Nevada.",
+  "icv": "El ICV de 0.003 en Ciénaga ubica al municipio en el nivel más bajo de condiciones de vida. El componente de conflicto (0.01) es el único con peso significativo en la fórmula. La ausencia de datos de NBI y prevalencia limita la precisión del indicador.",
+  "recomendaciones": [
+    "Implementar un sistema de información territorial indígena en Ciénaga que desagregue datos por pueblo y género, priorizando salud y educación con enfoque diferencial.",
+    "Gestionar la titulación de al menos 3 resguardos para los pueblos Kogui y Arhuaco, con participación de las autoridades tradicionales.",
+    "Diseñar rutas de atención psicosocial para 49 víctimas de desplazamiento forzado, articulando con la ONIC y organizaciones de base.",
+    "Realizar un censo lingüístico que identifique hablantes de Kogui, Arhuaco y Wayuunaiki, vinculando a las escuelas propias.",
+    "Incluir a Ciénaga en el plan de emergencia humanitaria para la Sierra Nevada, con enfoque en seguridad alimentaria y protección de líderes."
+  ]
+}

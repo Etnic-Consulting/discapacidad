@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Santa Marta de Curiche, territorio Wounaan en el Chocó, registra una población total de 19 habitantes según datos DANE-CNPV 2018. Con un área de 10.101 hectáreas, este territorio enfrenta vacíos críticos en datos socioeconómicos y de conflicto armado. La ausencia de información en NBI, lengua y discapacidad limita la evaluación integral de sus condiciones de vida.",
+  "demografia": "La población total de 19 personas en Santa Marta de Curiche refleja una estructura demográfica dispersa y de baja densidad. Dada la escala reducida, no aplica un análisis de pirámide etaria convencional. La confiabilidad de los datos es alta (n=19), pero la representatividad estadística es limitada para generalizaciones demográficas.",
+  "prevalencia": "No se dispone de datos de prevalencia para este resguardo. Los campos correspondientes están marcados como _sin_datos, lo que impide analizar condiciones de salud o acceso a servicios. Esta limitación subraya la necesidad de fortalecer sistemas de información territorializados.",
+  "territorial": "Santa Marta de Curiche ocupa 10.101 hectáreas en el municipio de Juradó (Chocó), dentro de la macrorregión Occidente. Su ubicación geográfica en la cuenca del Pacífico lo sitúa en un área de alta biodiversidad pero también de exposición a dinámicas de conflicto y extracción ilegal. El territorio es continuo y de propiedad colectiva Wounaan.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del pueblo Wounaan en este territorio específico. Esta omisión refleja brechas en el registro cultural indígena a nivel local.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Santa Marta de Curiche. El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la falta de datos. Esta ausencia de información obstaculiza la identificación de prioridades sociales.",
+  "conflicto": "El resguardo reporta cero víctimas de conflicto armado con discapacidad entre 1985-2024. La confiabilidad de este dato es alta (n=0), pero su interpretación debe considerar la posible subnotificación en contextos de alta violencia estructural. No se registran hechos victimizantes recientes.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Santa Marta de Curiche es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Los componentes normalizados (nbi_norm, prev_norm, conflicto_norm) son cero, reflejando vacíos críticos en la medición de bienestar territorial.",
+  "recomendaciones": [
+    "Realizar un censo comunitario participativo para actualizar datos demográficos y socioeconómicos, dado que la población actual (19 habitantes) no permite análisis robustos.",
+    "Implementar un sistema de registro de lengua y cultura Wounaan en coordinación con ASOREWA para documentar la vitalidad lingüística en el territorio.",
+    "Priorizar la recolección de datos de NBI y salud mediante metodologías propias indígenas, considerando el promedio nacional del 67.6% como referencia crítica.",
+    "Fortalecer la sistematización de información sobre conflicto armado con enfoque diferencial, pese a los cero registros actuales, para prevenir subnotificación.",
+    "Diseñar planes de manejo territorial con enfoque de derechos colectivos, aprovechando el área de 10.101 hectáreas como base para la autonomía Wounaan."
+  ]
+}

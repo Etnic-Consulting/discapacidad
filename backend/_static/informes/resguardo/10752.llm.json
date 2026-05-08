@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo EGUA - GUARIACANA, territorio Sikuani en el Vichada, alberga 28 habitantes en 15.347 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. Esta limitación impide evaluar su bienestar relativo, aunque destaca la necesidad de registros locales para políticas diferenciadas.",
+  "demografia": "La población total es de 28 personas, según DANE-CNPV 2018. La pirámide etaria no puede analizarse al no contar con datos desagregados por edad. La confiabilidad es alta (n=28), pero la muestra mínima limita interpretaciones demográficas detalladas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo. El promedio indígena nacional (60.0%) no puede contrastarse localmente. Se requiere generar registros específicos para identificar necesidades prioritarias.",
+  "territorial": "El resguardo ocupa 15.347 hectáreas en Cumaribo, Vichada, con coordenadas que delimitan su territorio en la Orinoquía. La concentración geográfica es alta, pero la falta de datos sobre dispersión interna impide análisis de patrones de asentamiento.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el uso de la lengua Sikuani ni su vitalidad cultural en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en este resguardo. El promedio indígena nacional (67.6%) no puede compararse. La ausencia de datos refleja brechas en el monitoreo local de condiciones de vida.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (0 casos entre 1985-2024). La confiabilidad es alta (n=0), pero la falta de hechos violentos reportados no descarta subregistros en contextos de alta militarización.",
+  "icv": "El ICV es 0.0, derivado de componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia la ausencia de datos para calcular el índice real.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de NBI y prevalencia con enfoque diferencial Sikuani, citando la ausencia actual de datos (secciones NBI y prevalencia sin datos).",
+    "Realizar un censo demográfico detallado por grupos de edad para analizar la pirámide etaria, dado que la población total es de 28 habitantes (poblacion_total: 28).",
+    "Documentar casos de conflicto y discapacidad mediante metodologías participativas Sikuani, considerando que no hay víctimas registradas (victimas_total_disc: 0).",
+    "Establecer alianzas con la CRIVI para monitorear la vitalidad lingüística Sikuani, ante la falta de datos en lengua (lengua: sin datos).",
+    "Priorizar la titulación y protección del territorio de 15.347 hectáreas, garantizando el derecho a la tierra Sikuani en Cumaribo (area_hectareas: 15347.41)."
+  ]
+}

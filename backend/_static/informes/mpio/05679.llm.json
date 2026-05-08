@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Bárbara (Antioquia) concentra una población indígena de 6 personas según CNPV 2018, distribuida en 3 pueblos. El 50% de esta población pertenece al pueblo EMBERA-CHAMI, seguido por NUTABE y población sin información específica. La ausencia de resguardos y datos de lengua refleja vacíos en el reconocimiento territorial. La alta incidencia de desplazamiento forzado (75% de las víctimas registradas) evidencia la vulnerabilidad del municipio frente al conflicto armado.",
+  "demografia": "La población indígena de Santa Bárbara presenta una estructura demográfica equilibrada con 6 personas distribuidas en 3 pueblos. No se cuenta con datos de pirámide etaria a nivel municipal, lo que limita el análisis de dinámicas generacionales. La baja representatividad poblacional (n=6) impide inferencias sobre tendencias demográficas locales.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para Santa Bárbara. Los registros disponibles se limitan a víctimas de conflicto, donde el desplazamiento forzado predomina con 3 casos. La falta de información sobre morbilidad refleja brechas en el sistema de salud indígena a nivel municipal.",
+  "territorial": "Santa Bárbara no cuenta con resguardos indígenas registrados, a pesar de albergar a 3 pueblos distintos. La ausencia de territorios colectivos limita la autonomía y protección legal de estas comunidades. La dispersión geográfica de la población indígena se extiende en un área de 0.106 grados cuadrados, sin concentración territorial definida.",
+  "lengua": "Los datos sobre lenguas indígenas en Santa Bárbara no están disponibles. Esta omisión impide evaluar la vitalidad cultural y la transmisión intergeneracional de las lenguas originarias en el municipio.",
+  "vida": "No se registran datos de Necesidades Básicas Insatisfechas (NBI) para Santa Bárbara. El promedio indígena nacional de NBI es 67.6%, pero su comparación es imposible sin información local. La falta de datos refleja la exclusión de este municipio en políticas de desarrollo social indígena.",
+  "conflicto": "Santa Bárbara registra 4 víctimas de conflicto armado con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho principal con 3 casos (75%). El homicidio representa el 25% restante. Estos datos subrayan la persistencia de violencias estructurales contra la población indígena en el municipio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Santa Bárbara es 0.0, con componentes normalizados en cero excepto conflicto (0.001). Esta puntuación refleja la ausencia de datos en dimensiones clave como NBI y prevalencia. El ICV no es comparable con otros territorios debido a la falta de información completa.",
+  "recomendaciones": [
+    "Implementar un censo indígena municipal con enfoque diferencial para registrar lenguas, NBI y dinámicas poblacionales, dado que solo 6 personas están identificadas en CNPV 2018.",
+    "Priorizar la creación de resguardos para los pueblos EMBERA-CHAMI y NUTABE, garantizando su autonomía territorial y protección legal.",
+    "Fortalecer el sistema de salud indígena con registros de morbilidad y discapacidad, considerando que no hay datos disponibles en Santa Bárbara.",
+    "Diseñar un plan de atención a víctimas de desplazamiento forzado, que represente el 75% de los casos registrados en el municipio.",
+    "Incluir a Santa Bárbara en los programas de desarrollo social indígena, dado que no se cuenta con datos de NBI para comparar con el promedio nacional (67.6%)."
+  ]
+}

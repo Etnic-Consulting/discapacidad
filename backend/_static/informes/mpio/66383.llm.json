@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de La Celia (Risaralda) registra una población indígena de 23 personas según CNPV 2018, distribuidas en 4 pueblos. El 65.2% (15 personas) corresponde al pueblo Yanacona, principal grupo étnico en el territorio. La ausencia de resguardos y la concentración en un núcleo poblacional pequeño reflejan una presencia indígena dispersa y minoritaria en el contexto municipal.",
+  "demografia": "La población indígena de La Celia presenta una estructura demográfica concentrada en el pueblo Yanacona (15 personas), seguido por Emberá-Katío (4), Pijao (3) y Bara (1). No se dispone de datos de pirámide etaria a nivel municipal. La baja representatividad numérica (n=23) limita análisis detallados de dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud a nivel municipal. Los registros de discapacidad y salud indígena en este contexto territorial no están sistematizados. Se reconoce un sub-registro estructural en indicadores de salud para pueblos minoritarios en contextos municipales.",
+  "territorial": "La Celia carece de resguardos indígenas reconocidos oficialmente (n_resguardos=0). El territorio municipal presenta una dispersión geográfica mínima, con coordenadas que delimitan un área reducida (4.91°-5.05°N, -76.08°--75.95°W). La ausencia de territorios colectivos formalizados limita la autonomía y gestión territorial indígena.",
+  "lengua": "No se reportan datos sobre lenguas indígenas en La Celia. La falta de información refleja la invisibilización lingüística en contextos municipales con presencia indígena minoritaria. Se requiere investigación participativa para documentar prácticas lingüísticas en riesgo.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de La Celia. El promedio indígena nacional (67.6%) no puede compararse debido a la ausencia de registros locales. La brecha en condiciones de vida no puede cuantificarse en este nivel territorial.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado entre la población indígena de La Celia (1985-2024), representando el 100% de los hechos de violencia. Esta cifra, aunque mínima, evidencia la vulnerabilidad de los pueblos indígenas en contextos municipales sin protección territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para La Celia es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la ausencia de datos sistematizados en todos los componentes.",
+  "recomendaciones": [
+    "Realizar un censo participativo indígena en La Celia para actualizar datos demográficos y territoriales, priorizando la identificación de 23 personas y 4 pueblos registrados en CNPV 2018.",
+    "Gestionar ante el Ministerio del Interior el reconocimiento de territorios colectivos para el pueblo Yanacona en La Celia, dado su predominio poblacional (15/23 personas).",
+    "Implementar un sistema de alerta temprana para violencia contra pueblos indígenas en Risaralda, considerando el registro de 1 víctima de desplazamiento forzado.",
+    "Documentar prácticas lingüísticas y culturales de los pueblos Yanacona, Emberá-Katío, Pijao y Bara en La Celia, ante la ausencia de datos en lengua.",
+    "Establecer alianzas con la Gobernación de Risaralda para incluir a la población indígena municipal en programas de salud y educación, dado el sub-registro en NBI y prevalencia."
+  ]
+}

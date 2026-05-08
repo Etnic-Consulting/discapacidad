@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Bara · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Bara</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Bara registra una población total de 1004 personas en 2018, con 517 hombres y 487 mujeres. La lectura debe partir de su continuidad como pueblo indígena con base territorial amazónica y presencia principal en resguardos.</p><p></p><p>La cifra crítica aparece en las condiciones de vida: el NBI alcanza 57.72 y la miseria 36.08, con afectación fuerte en servicios, reportada en 43.72. Aunque el NBI está por debajo del promedio indígena nacional de 67.6, sigue marcando una brecha estructural.</p><p></p><p>En capacidades diversas, el dato no es interpretable como ausencia de discapacidad: aparece n=0 y confiabilidad NO_CONFIABLE. Para ONIC, esto exige revisar subregistro antes de diseñar respuestas.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">1.004</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">0</div><div class="sub">prevalencia —‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">0</div><div class="sub">7 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.231</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura etaria del pueblo Bara muestra una población joven: 393 personas están entre 0-14 años, frente a 577 en edades de 15-64 y 34 de 65 o más. Esta composición sostiene la vitalidad demográfica y cultural, pero también exige garantías para niñez, juventud y transmisión intergeneracional. La razón de masculinidad es 106.2, con 517 hombres y 487 mujeres, sin una diferencia extrema entre sexos. El índice de dependencia de 74.0 indica presión sobre la población en edad productiva, especialmente en territorios donde la economía propia, el cuidado comunitario y el acceso a servicios dependen de redes locales. El índice de envejecimiento de 8.7 confirma baja presencia relativa de mayores.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">192</td><td class="num">201</td><td class="num"><b>393</b></td><td class="num">39.1%</td></tr>
+      <tr><td>15-64 años</td><td class="num">310</td><td class="num">267</td><td class="num"><b>577</b></td><td class="num">57.5%</td></tr>
+      <tr><td>65+ años</td><td class="num">15</td><td class="num">19</td><td class="num"><b>34</b></td><td class="num">3.4%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>517</b></td><td class="num"><b>487</b></td><td class="num"><b>1.004</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">106,2</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">74,0</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">8,7</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>La sección de capacidades diversas no permite una afirmación sustantiva sobre prevalencia en el pueblo Bara. El registro reporta con_discapacidad en 0, población de referencia en 0 y prevalencia_x_1000 en null, pero el KPI está marcado como NO_CONFIABLE y con n=0. Por regla interpretativa, ese 0 no debe leerse como ausencia de personas con discapacidad ni como prevalencia real. Además, la lista de tipos_limitacion está vacía, por lo que no hay base para jerarquizar limitaciones visuales, auditivas, físicas, psicosociales u otras. Frente al promedio indígena nacional de 60.0, la prioridad es corregir subregistro mediante verificación comunitaria y enfoque diferencial Bara.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Bara</div>
+      <div class="num-big">—‰</div>
+      <div class="lbl">0 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: —‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>La información territorial disponible ubica presencia Bara en 7 resguardos, con concentración principal en Vaupés (1459), donde se registran 496 personas en Mitú, VAUPÉS. El segundo registro es Yaigoje-Rio Apaporis (1018), con 60 personas en La Pedrera, AMAZONAS. Luego aparecen núcleos menores: La Fuga (1309) con 17, La Asuncion (1300) con 6, Miriti Parana (1017) con 2, Huellas (1521) con 1 y Curare-Los Ingleses (1003) con 1. Esta distribución combina concentración territorial y dispersión, lo que obliga a respuestas diferenciadas: acciones fuertes en Vaupés y mecanismos flexibles para familias Bara en resguardos con baja población registrada.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">496</td></tr>
+      <tr><td>Yaigoje-Rio Apaporis</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">60</td></tr>
+      <tr><td>La Fuga</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">17</td></tr>
+      <tr><td>La Asuncion</td><td>GUAVIARE</td><td>EL RETORNO</td><td class="num">6</td></tr>
+      <tr><td>Miriti Parana</td><td>AMAZONAS</td><td>MIRITÍ - PARANÁ</td><td class="num">2</td></tr>
+      <tr><td>Huellas</td><td>CAUCA</td><td>CALOTO</td><td class="num">1</td></tr>
+      <tr><td>Curare-Los Ingleses</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>El módulo de lengua reporta n_total de 1004 personas, con pct_habla en 0.0, habla_total en 0, pct_entiende en 0.0 y entiende_total en 0. Estos datos deben tratarse con especial cuidado desde la perspectiva ONIC: no autorizan, por sí solos, una conclusión sobre pérdida cultural definitiva ni sobre inexistencia de hablantes, porque la medición censal puede no captar usos rituales, familiares, territoriales o multilingües. Sí señalan una alerta seria para el pueblo Bara y sus autoridades: se requiere validación comunitaria del dato, identificación de sabedores y revisión de condiciones de transmisión intergeneracional en los resguardos donde hay población registrada.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Bara muestran un NBI de 57.72 sobre 693 personas registradas en esta sección. Aunque el valor se ubica por debajo del promedio indígena nacional de 67.6, no debe interpretarse como situación resuelta: más de la mitad de la población medida enfrenta necesidades básicas insatisfechas. El componente más alto es servicios, con 43.72, seguido por vivienda con 37.23 y hacinamiento con 25.11. La miseria alcanza 36.08, un dato crítico para priorizar inversión pública con pertinencia territorial. Inasistencia aparece en 3.9 y dependencia en 8.8, por lo que el núcleo de intervención debe centrarse en vivienda, agua, saneamiento y servicios básicos.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Bara</div>
+      <div class="num-big">57,7%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 85.2%"></div></div><div class="num">37,2%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">43,7%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 57.4%"></div></div><div class="num">25,1%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 8.9%"></div></div><div class="num">3,9%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 20.1%"></div></div><div class="num">8,8%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>El RUV registra 2 víctimas Bara con discapacidad para el periodo 1985-2024. El hecho principal es desplazamiento forzado, también con total 2, equivalente a 100.0 de los hechos registrados en esta sección. Por el tamaño reducido del registro, la lectura debe ser prudente: no describe toda la afectación histórica del pueblo Bara, sino el universo específico de víctimas con discapacidad identificado en la fuente. Aun así, el patrón es territorialmente relevante, porque el desplazamiento rompe vínculos con resguardos, redes de cuidado, lengua, autoridades y prácticas propias. La respuesta institucional debe articular reparación, retorno o estabilización con enfoque indígena y no limitarse a atención individual.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">2</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">100,0% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">2</div></div>
+
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El ICV del pueblo Bara es 0.231, calculado con la fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm. La dimensión que domina el resultado es nbi_norm, con 0.577, mientras prevalencia_norm aparece en 0.0 y conflicto_norm en 0.0. Esta composición debe interpretarse con cautela, porque la prevalencia de capacidades diversas proviene de un KPI NO_CONFIABLE con n=0 y no debe reducir la prioridad del tema. En términos de posición relativa interna del índice, el mayor peso operativo está en condiciones materiales de vida. Para ONIC, el ICV orienta prioridades, pero requiere complementarse con verificación territorial y datos propios.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.577</td><td class="num">0.40</td><td class="num"><b>0.231</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.231</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Priorizar un plan de servicios básicos en los resguardos con población Bara, porque el componente NBI de servicios llega a 43.72 y el NBI total es 57.72 sobre 693 personas.</li>
+      <li>Realizar una verificación comunitaria de capacidades diversas antes de formular metas, ya que el registro reporta n=0, prevalencia_x_1000 en null y confiabilidad NO_CONFIABLE.</li>
+      <li>Concentrar acciones territoriales iniciales en Vaupés (1459), donde se registran 496 personas Bara, sin dejar por fuera los otros 6 resguardos con presencia menor.</li>
+      <li>Activar una ruta de protección lingüística con autoridades Bara, porque el módulo reporta 1004 personas y 0.0 tanto en habla como en entiende, dato que requiere validación comunitaria.</li>
+      <li>Integrar reparación y garantías de permanencia territorial para las 2 víctimas con discapacidad registradas, dado que el desplazamiento forzado concentra 2 casos y representa 100.0 de los hechos reportados.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/60/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Bara</b>');
+</script>
+</body>
+</html>

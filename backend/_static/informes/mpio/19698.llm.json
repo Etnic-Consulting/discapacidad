@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santander de Quilichao concentra el 98.6% de su población indígena en el pueblo Nasa (24.419 personas). La presencia de 20 pueblos refleja diversidad, pero con alta asimetría territorial. La violencia histórica se evidencia en 173 víctimas de conflicto armado, donde el desplazamiento forzado representa el 49.7% de los casos registrados entre 1985-2024.",
+  "demografia": "La población indígena total asciende a 24.760 personas según CNPV 2018. La pirámide etaria no está disponible en este nivel de desagregación. La concentración en el pueblo Nasa (98.6% del total) sugiere una dinámica demográfica dominada por este grupo, con posible impacto en la diversidad generacional.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades en este municipio. Los registros de discapacidad están marcados como _sin_datos, lo que limita el análisis de condiciones de salud. Se requiere cruzar con fuentes departamentales para evaluar subregistros en pueblos minoritarios.",
+  "territorial": "Existen 4 resguardos indígenas con una extensión total de 2.344,6 hectáreas. Todos están bajo dominio del pueblo Nasa, lo que refleja una alta concentración territorial en este grupo. La dispersión geográfica es limitada, concentrada en el casco municipal de Santander de Quilichao.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de lenguas propias en la población indígena local.",
+  "vida": "No hay datos de NBI disponibles para este municipio. El promedio indígena nacional (67.6%) no puede ser contrastado. Se recomienda priorizar la recolección de datos socioeconómicos para evaluar brechas con estándares nacionales.",
+  "conflicto": "Se registraron 173 víctimas de conflicto armado, siendo el desplazamiento forzado el hecho principal con 86 casos (49.7%). El 95.4% de los hechos están relacionados con violencia armada directa. La alta incidencia en desplazamiento refleja patrones de despojo territorial histórico.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.01, con componente de conflicto como dimensión dominante (0.035). La fórmula pondera el conflicto en un 30%, reflejando la gravedad de la violencia armada. El NBI normado y la prevalencia normada no aportan al cálculo por falta de datos.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación de los 4 resguardos existentes, especialmente en Canoas y La Concepción, que concentran el 75% del área total (1.797,756 ha).",
+    "Implementar un sistema de alerta temprana para prevenir desplazamientos forzados, dado que el 49.7% de las víctimas están vinculadas a este hecho.",
+    "Realizar un censo lingüístico para identificar la vitalidad del nasa yuwe, lengua dominante en el 98.6% de la población indígena.",
+    "Articular con la gobernación del Cauca para garantizar acceso a servicios básicos, ya que el NBI no está disponible y el ICV refleja alta vulnerabilidad por conflicto.",
+    "Fortalecer la Guardia Indígena Nasa en los resguardos para proteger territorios ante la persistencia de hechos violentos (11 actos terroristas registrados)."
+  ]
+}

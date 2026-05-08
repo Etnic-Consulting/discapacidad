@@ -1,0 +1,399 @@
+{
+  "tipo": "macro",
+  "id": "3",
+  "nombre": "CENTRO - ORIENTE",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 3994,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 3994,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 59563,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 67.1,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2395,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2) IN (%s,%s,%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2395,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1746
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 311
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 119
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 45
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 35
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 24
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 24
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 19
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 18
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 16
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1746
+      },
+      "pct_hecho_principal": 72.9
+    },
+    "demografia": {
+      "_nota": "agregación demográfica a nivel macro · ver sección territorial",
+      "n_dptos": 3,
+      "n_resguardos": 100
+    },
+    "territorial": {
+      "n_resguardos": 100,
+      "n_departamentos": 3,
+      "departamentos": [
+        {
+          "cod_dpto": "25",
+          "nom_dpto": "CUNDINAMARCA"
+        },
+        {
+          "cod_dpto": "54",
+          "nom_dpto": "NORTE DE SANTANDER"
+        },
+        {
+          "cod_dpto": "73",
+          "nom_dpto": "TOLIMA"
+        }
+      ],
+      "resguardos": [
+        {
+          "nombre": "MOTILÓN - BARÍ",
+          "dpto": "NORTE DE SANTANDER",
+          "dpto_ccdgo": "54",
+          "mpio": "CONVENCIÓN",
+          "pueblo_onic": "BARÍ",
+          "area_pg_ha": 106490.197
+        },
+        {
+          "nombre": "GABARRA - CATALAURA",
+          "dpto": "NORTE DE SANTANDER",
+          "dpto_ccdgo": "54",
+          "mpio": "TEORAMA",
+          "pueblo_onic": "BARÍ",
+          "area_pg_ha": 13297.737
+        },
+        {
+          "nombre": "PAEZ DE GAITANÍA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "PLANADAS",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 4903.435
+        },
+        {
+          "nombre": "TINAJAS",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 2448.309
+        },
+        {
+          "nombre": "GUADUALITO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1088.355
+        },
+        {
+          "nombre": "ANACARCO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1064.657
+        },
+        {
+          "nombre": "PASO ANCHO - CHICUAMBE",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 798.522
+        },
+        {
+          "nombre": "GUAIPA UNO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 709.047
+        },
+        {
+          "nombre": "EL TAMBO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 689.28
+        },
+        {
+          "nombre": "GUATAVITA TUA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 619.052
+        },
+        {
+          "nombre": "IMBA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 597.117
+        },
+        {
+          "nombre": "KUITUA",
+          "dpto": "NORTE DE SANTANDER",
+          "dpto_ccdgo": "54",
+          "mpio": "TOLEDO",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 554.448
+        },
+        {
+          "nombre": "POTRERITO DOYARÉ",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 554.438
+        },
+        {
+          "nombre": "CHAQUIRA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 550.227
+        },
+        {
+          "nombre": "POTRERITO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 521.311
+        },
+        {
+          "nombre": "CHENCHE AMAYARCO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 501.494
+        },
+        {
+          "nombre": "AICO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 499.548
+        },
+        {
+          "nombre": "LOMAS DE HILARCO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 478.283
+        },
+        {
+          "nombre": "TOTARCO PIEDRAS",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 476.299
+        },
+        {
+          "nombre": "CHICUAMBE LAS BRISAS",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 458.19
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 421.529
+        },
+        {
+          "nombre": "CASTILLA - ANGOSTURAS",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 413.825
+        },
+        {
+          "nombre": "NUEVA ESPERANZA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 412.623
+        },
+        {
+          "nombre": "LAS MERCEDES",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "RIOBLANCO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 412.074
+        },
+        {
+          "nombre": "RECINTO PALMAROSA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 380.276
+        },
+        {
+          "nombre": "LA TUTIRA BONANZA",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 375.026
+        },
+        {
+          "nombre": "NICOLÁS RAMÍREZ",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 372.713
+        },
+        {
+          "nombre": "MUISCA DE COTA",
+          "dpto": "CUNDINAMARCA",
+          "dpto_ccdgo": "25",
+          "mpio": "COTA",
+          "pueblo_onic": "MUISCA",
+          "area_pg_ha": 372.333
+        },
+        {
+          "nombre": "LOS ÁNGELES",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 371.313
+        },
+        {
+          "nombre": "ACO VIEJO PATIO BONITO",
+          "dpto": "TOLIMA",
+          "dpto_ccdgo": "73",
+          "mpio": "PRADO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 369.161
+        }
+      ],
+      "bbox": [
+        2.8710806995268316,
+        -76.1057413990535,
+        9.29084666948364,
+        -72.04760561540667
+      ]
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no agregable a nivel macro · ver informes por pueblo"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "icv": {
+      "score": 0.244,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.335,
+        "conflicto_norm": 0.479
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:32:35",
+  "periodo": "2018",
+  "_input_hash": "b359079263f0c3c2"
+}

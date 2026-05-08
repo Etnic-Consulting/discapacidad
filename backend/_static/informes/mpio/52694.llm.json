@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Pedro de Cartago (Nariño) registra una población indígena de 2 personas según CNPV 2018, concentrada en el pueblo PASTOS. La ausencia de resguardos y datos de lengua refleja una presencia territorial mínima o invisibilizada. La vulnerabilidad se evidencia en un ICV de 0.0, resultado de la falta de información en NBI y conflicto, lo que limita la lectura integral de su situación.",
+  "demografia": "La pirámide etaria no aplica por la reducida población (n=2). La concentración en un solo pueblo (PASTOS) sugiere una homogeneidad étnica extrema en el territorio. Datos de discapacidad no están disponibles a nivel municipal, impidiendo análisis de capacidades diversas.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este municipio. La limitación interpretativa es total, ya que no se cuenta con información sobre condiciones de salud o acceso a servicios. El sub-registro es evidente y debe priorizarse en futuras mediciones.",
+  "territorial": "No existen resguardos indígenas en San Pedro de Cartago (n=0). La bbox geográfica delimita un área sin presencia territorial colectiva reconocida. La dispersión es nula, pero la ausencia de territorios refleja una debilidad en la estructura organizativa indígena local.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de lenguas nativas ni su vitalidad cultural. Esta omisión subraya la necesidad de incluir indicadores lingüísticos en censos territoriales.",
+  "vida": "No hay datos de NBI disponibles para San Pedro de Cartago. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La falta de información impide evaluar condiciones de vida, vivienda o acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en el RUV entre 1985-2024 (n=0). La ausencia de hechos violentos reportados no descarta sub-registro. La confiabilidad de este dato es alta, pero su interpretación debe considerar posibles omisiones en el sistema.",
+  "icv": "El ICV de 0.0 en San Pedro de Cartago se explica por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada refleja una medición incompleta, no una realidad de bienestar. La posición relativa es indeterminada por falta de comparabilidad.",
+  "recomendaciones": [
+    "Realizar un censo territorial específico para San Pedro de Cartago que incluya indicadores de lengua y NBI, priorizando la identificación de población indígena no registrada (población actual: 2 personas)",
+    "Incluir el municipio en programas de fortalecimiento organizativo para pueblos sin resguardos, dado que n_resguardos=0 y la presencia del pueblo PASTOS requiere apoyo en visibilización territorial",
+    "Solicitar al DANE la desagregación de datos de discapacidad a nivel municipal para evaluar brechas en capacidades diversas, considerando el promedio indígena nacional de 60.0%",
+    "Implementar un sistema de alerta temprana para conflictos en territorios sin resguardos, dado que el RUV no registra víctimas (n=0) pero la confiabilidad no garantiza ausencia de violencia",
+    "Diseñar estrategias de revitalización cultural para el pueblo PASTOS en San Pedro de Cartago, ante la falta de datos de lengua y la necesidad de preservar su identidad en un contexto de invisibilización"
+  ]
+}

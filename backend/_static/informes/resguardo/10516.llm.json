@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo MORRITO, territorio del pueblo EPERARA SIA en Nariño, registra una población total de 8 habitantes según datos DANE-CNPV 2018. Con un área de 904.625 hectáreas, su territorio se ubica en El Charco, macrorregión OCCIDENTE. La ausencia de datos en capacidades diversas, NBI y lengua refleja vacíos críticos en el monitoreo de condiciones de vida, limitando la planificación con enfoque diferencial.",
+  "demografia": "La pirámide etaria no puede analizarse al contar con solo 8 habitantes en el resguardo. Los datos demográficos a este nivel no permiten inferir estructuras poblacionales ni dinámicas generacionales. Se requiere cruce con fuentes complementarias para superar la limitación de n=8.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en MORRITO. Los registros oficiales no capturan información a nivel de resguardo, lo que impide evaluar necesidades específicas. El sub-registro es total, ocultando posibles vulnerabilidades del pueblo EPERARA SIA.",
+  "territorial": "El resguardo MORRITO tiene un área de 904.625 hectáreas en El Charco, Nariño, con coordenadas que delimitan su territorio ancestral. Su ubicación en la macrorregión OCCIDENTE lo vincula a dinámicas territoriales compartidas con otros pueblos. La concentración geográfica es mínima dada la baja población registrada.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se cuenta con información sobre uso o vitalidad de la lengua del pueblo EPERARA SIA en su territorio ancestral.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para MORRITO. El promedio indígena nacional de 67.6% no puede contrastarse con la realidad local. Esta ausencia de información impide priorizar acciones en condiciones de vida.",
+  "conflicto": "No se registran víctimas con discapacidad en MORRITO entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja visibilidad o sub-registro en el RUV. Se requiere validación con fuentes comunitarias para confirmar esta condición.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de MORRITO es 0.0, con componentes normalizados en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos disponibles. Este resultado subraya la urgencia de generar información primaria.",
+  "recomendaciones": [
+    "Realizar censo comunitario en MORRITO para actualizar datos demográficos y superar la limitación de n=8, incorporando variables de lengua y cultura EPERARA SIA.",
+    "Implementar sistema de registro diferencial en el RUV para pueblos en aislamiento o baja población, garantizando que MORRITO no quede invisibilizado.",
+    "Priorizar acciones en salud con enfoque intercultural, incluyendo tamizajes de discapacidad y condiciones crónicas, dado el vacío en capacidades diversas.",
+    "Diseñar plan de revitalización lingüística para el pueblo EPERARA SIA, articulado con ACIESNA y ONIC, ante la ausencia de datos oficiales.",
+    "Solicitar a DANE la desagregación de NBI a nivel de resguardo para contrastar con el promedio nacional de 67.6% y orientar políticas públicas."
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "tipo": "macro",
+  "id": "1",
+  "nombre": "NORTE",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 19501,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 19501,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 664000,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 29.4,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 4460,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2) IN (%s,%s,%s,%s,%s,%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 4460,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 3632
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 299
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 182
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 62
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 60
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 58
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 48
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 33
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 26
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 18
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 3632
+      },
+      "pct_hecho_principal": 81.4
+    },
+    "demografia": {
+      "_nota": "agregación demográfica a nivel macro · ver sección territorial",
+      "n_dptos": 6,
+      "n_resguardos": 46
+    },
+    "territorial": {
+      "n_resguardos": 46,
+      "n_departamentos": 6,
+      "departamentos": [
+        {
+          "cod_dpto": "20",
+          "nom_dpto": "CESAR"
+        },
+        {
+          "cod_dpto": "23",
+          "nom_dpto": "CHOCÓ"
+        },
+        {
+          "cod_dpto": "23",
+          "nom_dpto": "CÓRDOBA"
+        },
+        {
+          "cod_dpto": "44",
+          "nom_dpto": "LA GUAJIRA"
+        },
+        {
+          "cod_dpto": "44",
+          "nom_dpto": "MAGDALENA"
+        },
+        {
+          "cod_dpto": "47",
+          "nom_dpto": "MAGDALENA"
+        }
+      ],
+      "resguardos": [
+        {
+          "nombre": "ALTA Y MEDIA GUAJIRA",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "URIBIA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1085157.71
+        },
+        {
+          "nombre": "KOGUI - MALAYO ARHUACO",
+          "dpto": "MAGDALENA",
+          "dpto_ccdgo": "44",
+          "mpio": "DIBULLA",
+          "pueblo_onic": "IJKU - ARHUACO",
+          "area_pg_ha": 407799.382
+        },
+        {
+          "nombre": "ARHUACO DE LA SIERRA NEVADA",
+          "dpto": "MAGDALENA",
+          "dpto_ccdgo": "47",
+          "mpio": "ARACATACA",
+          "pueblo_onic": "IJKU - ARHUACO",
+          "area_pg_ha": 202739.14
+        },
+        {
+          "nombre": "ALTO SINÚ, ESMERALDA CRUZ GRANDE E IWAGADÓ",
+          "dpto": "CÓRDOBA",
+          "dpto_ccdgo": "23",
+          "mpio": "TIERRALTA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 116491.04
+        },
+        {
+          "nombre": "SOCORPA",
+          "dpto": "CESAR",
+          "dpto_ccdgo": "20",
+          "mpio": "BECERRIL",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 31600.472
+        },
+        {
+          "nombre": "KANKUAMO",
+          "dpto": "CESAR",
+          "dpto_ccdgo": "20",
+          "mpio": "VALLEDUPAR",
+          "pueblo_onic": "KANKUAMO",
+          "area_pg_ha": 24302.18
+        },
+        {
+          "nombre": "SAN ANDRÉS DE SOTAVENTO",
+          "dpto": "CÓRDOBA",
+          "dpto_ccdgo": "23",
+          "mpio": "SAN ANDRÉS DE SOTAVENTO",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 9581.077
+        },
+        {
+          "nombre": "IROKA",
+          "dpto": "CESAR",
+          "dpto_ccdgo": "20",
+          "mpio": "AGUSTÍN CODAZZI",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 8711.202
+        },
+        {
+          "nombre": "QUEBRADA CAÑAVERAL",
+          "dpto": "CÓRDOBA",
+          "dpto_ccdgo": "23",
+          "mpio": "PUERTO LIBERTADOR",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 2630.072
+        },
+        {
+          "nombre": "LOMAMATO",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "HATONUEVO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 2274.053
+        },
+        {
+          "nombre": "TRUPIOGACHO Y LA MESETA",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 2212.532
+        },
+        {
+          "nombre": "CERRODEO",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1457.4
+        },
+        {
+          "nombre": "CHIMILAS O CACAHUEROS DE SAN ANGEL",
+          "dpto": "MAGDALENA",
+          "dpto_ccdgo": "47",
+          "mpio": "SABANAS DE SAN ÁNGEL",
+          "pueblo_onic": "CHIMILAS - ETTE ENEKA",
+          "area_pg_ha": 1445.627
+        },
+        {
+          "nombre": "MAYABANGLOMA",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "FONSECA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1444.017
+        },
+        {
+          "nombre": "EL ZAHINO GUAYABITO MURIAYTUY",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1149.492
+        },
+        {
+          "nombre": "ZENÚ ALTO SAN JORGE",
+          "dpto": "CÓRDOBA",
+          "dpto_ccdgo": "23",
+          "mpio": "MONTELÍBANO",
+          "pueblo_onic": "ZENÚ",
+          "area_pg_ha": 959.501
+        },
+        {
+          "nombre": "WOPUMUIN JUNAIN MAIKOU",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 809.673
+        },
+        {
+          "nombre": "MAÑATURE",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 648.776
+        },
+        {
+          "nombre": "EL SOLDADO PARATE BIEN",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 580.632
+        },
+        {
+          "nombre": "CUATRO DE NOVIEMBRE",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "ALBANIA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 555.533
+        },
+        {
+          "nombre": "CAICEMAPA",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "DISTRACCIÓN",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 516.283
+        },
+        {
+          "nombre": "PROVINCIAL",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 511.991
+        },
+        {
+          "nombre": "RESGUARDO DOCHAMA - ALTO URÉ",
+          "dpto": "CHOCÓ",
+          "dpto_ccdgo": "23",
+          "mpio": "SAN JOSÉ DE URÉ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 494.44
+        },
+        {
+          "nombre": "UNA APUCHON",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 453.065
+        },
+        {
+          "nombre": "NUEVO ESPINAL",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 421.745
+        },
+        {
+          "nombre": "MENKUE - MISAYA Y LA PISTA",
+          "dpto": "CESAR",
+          "dpto_ccdgo": "20",
+          "mpio": "AGUSTÍN CODAZZI",
+          "pueblo_onic": "YUKPA",
+          "area_pg_ha": 379.751
+        },
+        {
+          "nombre": "NUKAT MALEIWUA - NAPAJANAIN MALEIWA = BENDICION DE DIOS (PUIPUREN, YAWOLIA, GUANAPAIMANA, CHICHITUY, UJOLMANA, WARRALALAIN, JIRRUMANA)",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 375.277
+        },
+        {
+          "nombre": "OKOCHI",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 243.822
+        },
+        {
+          "nombre": "ALBERTO PUSHAINA",
+          "dpto": "LA GUAJIRA",
+          "dpto_ccdgo": "44",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 225.911
+        },
+        {
+          "nombre": "CAMPO ALEGRE",
+          "dpto": "CESAR",
+          "dpto_ccdgo": "20",
+          "mpio": "BECERRIL",
+          "pueblo_onic": "WIWA",
+          "area_pg_ha": 209.921
+        }
+      ],
+      "bbox": [
+        7.3470872686267015,
+        -76.51453012814494,
+        12.459443307577596,
+        -71.11295839529242
+      ]
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no agregable a nivel macro · ver informes por pueblo"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "icv": {
+      "score": 0.312,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.147,
+        "conflicto_norm": 0.892
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:30:49",
+  "periodo": "2018",
+  "_input_hash": "5016bacde24cd57a"
+}

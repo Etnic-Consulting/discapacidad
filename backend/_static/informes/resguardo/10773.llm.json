@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Santa Teresita del Tuparro, territorio Sikuani en el Vichada, alberga 3.165 personas en 205.282 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La ausencia de registros de víctimas de conflicto en el RUV (0 casos) contrasta con la vulnerabilidad estructural no cuantificada en este territorio.",
+  "demografia": "La población total del resguardo es de 3.165 habitantes según DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel de desagregación. Los datos demográficos se limitan a la población total, sin desglose por género o grupos etarios que permita analizar dinámicas generacionales o dependencia demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La falta de información impide analizar patrones epidemiológicos o subregistros. Se reconoce la limitación interpretativa por ausencia de registros confiables en este territorio específico.",
+  "territorial": "El resguardo ocupa 205.282 hectáreas en el municipio de Cumaribo, Vichada, con coordenadas que delimitan su extensión en la Orinoquia. Su área equivale al 20.5% del municipio, concentrando población Sikuani en un territorio de baja densidad demográfica. La dispersión geográfica y la extensión del territorio dificultan la provisión de servicios básicos.",
+  "lengua": "No se registran datos sobre lengua materna o uso de idiomas indígenas en este resguardo. La ausencia de información impide evaluar la vitalidad lingüística del pueblo Sikuani en este territorio específico.",
+  "vida": "No se dispone de datos sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero no hay información local que permita comparar brechas. Se reconoce la falta de registros oficiales para evaluar condiciones de vida en el territorio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el RUV para este resguardo (0 casos en 1985-2024). La ausencia de hechos victimizantes reportados contrasta con la vulnerabilidad histórica de la Orinoquia. Se advierte que el subregistro puede ocultar afectaciones no documentadas en sistemas oficiales.",
+  "icv": "El ICV del resguardo es 0.0, determinado por la ausencia de datos en todos sus componentes (NBI, prevalencia y conflicto). La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin registros confiables. Esta métrica refleja la falta de información territorializada para evaluar condiciones de vida.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de salud y NBI en el resguardo, priorizando 3.165 habitantes para superar la ausencia de datos oficiales.",
+    "Realizar un censo lingüístico Sikuani en el territorio para documentar vitalidad cultural, dado que no hay registros disponibles.",
+    "Fortalecer la articulación con CRIVI-ONIC para monitorear 205.282 hectáreas de territorio Sikuani con enfoque diferencial.",
+    "Diseñar un plan de contingencia para 0 casos reportados de víctimas, verificando posibles subregistros en el RUV.",
+    "Priorizar inversiones en infraestructura básica en un territorio donde el ICV no puede calcularse por falta de datos."
+  ]
+}

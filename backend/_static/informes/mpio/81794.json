@@ -1,0 +1,295 @@
+{
+  "tipo": "mpio",
+  "id": "81794",
+  "nombre": "TAME",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1553,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1553,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "401",
+          "pueblo": "MACAGUANE",
+          "poblacion": 802
+        },
+        {
+          "cod_pueblo": "690",
+          "pueblo": "U`WA",
+          "poblacion": 411
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 181
+        },
+        {
+          "cod_pueblo": "090",
+          "pueblo": "BETOYE",
+          "poblacion": 81
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 15
+        },
+        {
+          "cod_pueblo": "230",
+          "pueblo": "CUIBA",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "900",
+          "pueblo": "INDIGENAS-ECUADOR-",
+          "poblacion": 9
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 8
+        },
+        {
+          "cod_pueblo": "026",
+          "pueblo": "YARURO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 5
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "010",
+          "pueblo": "ACHAGUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "020",
+          "pueblo": "AMORUA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "280",
+          "pueblo": "EMBERA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "290",
+          "pueblo": "MISAK",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "340",
+          "pueblo": "INGA",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "401",
+        "pueblo": "MACAGUANE",
+        "poblacion": 802
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 12,
+      "resguardos": [
+        {
+          "nombre": "SABANAS DE CURIPAO",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 32737.887
+        },
+        {
+          "nombre": "LAGUNA TRANQUILA",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 15710.757
+        },
+        {
+          "nombre": "ANGOSTURAS",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 3270.313
+        },
+        {
+          "nombre": "CAÑO CLARO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 1634.247
+        },
+        {
+          "nombre": "LOS IGUANITOS",
+          "pueblo_onic": "CUIBA",
+          "area_pg_ha": 563.44
+        },
+        {
+          "nombre": "JULIEROS Y VELASQUEROS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 222.323
+        },
+        {
+          "nombre": "PARREROS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 205.917
+        },
+        {
+          "nombre": "LA ESPERANZA - LA FORTALEZA Y EL TOTUMO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 120.202
+        },
+        {
+          "nombre": "ROQUEROS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 102.727
+        },
+        {
+          "nombre": "CUILOTO II",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 81.303
+        },
+        {
+          "nombre": "PUYEROS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 32.538
+        },
+        {
+          "nombre": "MACARIEROS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 17.474
+        }
+      ],
+      "bbox": [
+        6.066610131393961,
+        -72.36662389466483,
+        6.703825605709547,
+        -71.21661896734241
+      ],
+      "nombre_mpio": "TAME",
+      "cod_dpto": "81"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 92,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 92,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 51
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 11
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 7
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 5
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 4
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 3
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 51
+      },
+      "pct_hecho_principal": 55.4
+    },
+    "icv": {
+      "score": 0.006,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.018
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:32:30",
+  "periodo": "2018",
+  "_input_hash": "666da0bfc9083dcd"
+}

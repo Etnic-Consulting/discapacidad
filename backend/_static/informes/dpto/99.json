@@ -1,0 +1,440 @@
+{
+  "tipo": "dpto",
+  "id": "99",
+  "nombre": "VICHADA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 950008,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 950008,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 49016,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 49016,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 950008,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 51.6,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "560",
+          "con_disc": 16939,
+          "total": 163682
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 4794,
+          "total": 376320
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 4160,
+          "total": 34825
+        },
+        {
+          "cod_pueblo": "210",
+          "con_disc": 3318,
+          "total": 44393
+        },
+        {
+          "cod_pueblo": "180",
+          "con_disc": 2233,
+          "total": 18102
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 2059,
+          "total": 21682
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 2041,
+          "total": 47678
+        },
+        {
+          "cod_pueblo": "820",
+          "con_disc": 1759,
+          "total": 37099
+        },
+        {
+          "cod_pueblo": "850",
+          "con_disc": 1421,
+          "total": 16954
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 1014,
+          "total": 11254
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 39,
+      "resguardos": [
+        {
+          "nombre": "SELVA DE MATAVÉN",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "KUBEO",
+          "area_pg_ha": 1858084.545
+        },
+        {
+          "nombre": "ALTO UNUMA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 674179.291
+        },
+        {
+          "nombre": "SANTA TERESITA DEL TUPARRO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 205282.524
+        },
+        {
+          "nombre": "SARACURE - CADÁ",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 184368.759
+        },
+        {
+          "nombre": "AWIA TUPARRO SIKUANI (MARIMBA)",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 146875.325
+        },
+        {
+          "nombre": "NACUAÑEDORRO TUPARRO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "MAPAYERRI",
+          "area_pg_ha": 95030.706
+        },
+        {
+          "nombre": "CONCORDIA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 90354.496
+        },
+        {
+          "nombre": "RÍOS MUCO Y GUARROJO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 85336.069
+        },
+        {
+          "nombre": "CAÑO MESETAS - DAGUA Y MURCIÉLAGO",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "AMORÚA",
+          "area_pg_ha": 82686.942
+        },
+        {
+          "nombre": "LA LLANURA",
+          "mpio": "LA PRIMAVERA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 66146.509
+        },
+        {
+          "nombre": "RÍOS TOMO Y WEBERI",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 61171.074
+        },
+        {
+          "nombre": "CALI - BARRANQUILLA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 56396.074
+        },
+        {
+          "nombre": "GUACO BAJO Y GUACO ALTO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 49532.929
+        },
+        {
+          "nombre": "RÍO SIARE",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 46615.019
+        },
+        {
+          "nombre": "CARPINTERO PALOMAS",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 42764.644
+        },
+        {
+          "nombre": "CHOCÓN",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 35132.363
+        },
+        {
+          "nombre": "GUAHIBO DE LOS RÍOS TOMO Y LOS CAÑOS URIMICA Y SAMARRO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 24649.41
+        },
+        {
+          "nombre": "FLORES SOMBRERO",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 20228.021
+        },
+        {
+          "nombre": "LA PASCUA",
+          "mpio": "LA PRIMAVERA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 18836.28
+        },
+        {
+          "nombre": "GUACAMAYAS MAMIYARE",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 18727.669
+        },
+        {
+          "nombre": "GUACAMAYAS MAIPORÉ",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 16684.592
+        },
+        {
+          "nombre": "PIAROA DE CACHICAMO",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "PIAROA",
+          "area_pg_ha": 16494.795
+        },
+        {
+          "nombre": "EGUA - GUARIACANA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 15347.41
+        },
+        {
+          "nombre": "MUCO MAYORAGUA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 10870.469
+        },
+        {
+          "nombre": "NUEVA ESPERANZA DEL TOMO",
+          "mpio": "SANTA ROSALÍA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 9896.632
+        },
+        {
+          "nombre": "KAWANERUBA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 8661.866
+        },
+        {
+          "nombre": "CAÑO GUARIPA",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 8137.42
+        },
+        {
+          "nombre": "CAMPO ALEGRE Y RIPIALITO",
+          "mpio": "LA PRIMAVERA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 6906.167
+        },
+        {
+          "nombre": "CHOLOLOBO MATATU",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 6365.821
+        },
+        {
+          "nombre": "CAÑO BACHACO",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 6303.095
+        },
+        {
+          "nombre": "SANTA ROSALÍA",
+          "mpio": "SANTA ROSALÍA",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 5363.64
+        },
+        {
+          "nombre": "CAÑO LA HORMIGA",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 4133.85
+        },
+        {
+          "nombre": "VALDIVIA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3897.204
+        },
+        {
+          "nombre": "MEREY, LA VERAITA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3121.842
+        },
+        {
+          "nombre": "PUNTA BANDERA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3058.984
+        },
+        {
+          "nombre": "SIKUANI DE IWIWI",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 2968.363
+        },
+        {
+          "nombre": "LA ESMERALDA",
+          "mpio": "CUMARIBO",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 2775.81
+        },
+        {
+          "nombre": "LA MAYERA",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1340.971
+        },
+        {
+          "nombre": "COMUNIDAD INDIGENA KANALITOJO PUERTO COLOMBIA",
+          "mpio": "PUERTO CARREÑO",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1300.009
+        }
+      ],
+      "bbox": [
+        2.737109025939978,
+        -71.07793104491958,
+        6.32431707971322,
+        -67.40980314658566
+      ],
+      "nombre_dpto": "VICHADA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 186,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 186,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 148
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 17
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 148
+      },
+      "pct_hecho_principal": 79.6
+    },
+    "icv": {
+      "score": 0.089,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.258,
+        "conflicto_norm": 0.037
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:02:32",
+  "periodo": "2018",
+  "_input_hash": "e4aa6d4bc611ff98"
+}

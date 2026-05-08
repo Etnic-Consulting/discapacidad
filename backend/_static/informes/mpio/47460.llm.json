@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Nueva Granada registra una población indígena de 6 personas según el CNPV 2018, concentrada en 3 pueblos, con el 66.7% (4 personas) pertenecientes al pueblo WAYUU. La ausencia de resguardos y datos de lengua refleja una debilidad en la institucionalidad territorial indígena. El 100% de las víctimas indígenas (3 casos) reportan desplazamiento forzado entre 1985-2024, señalando vulnerabilidad extrema en el contexto de conflicto armado.",
+  "demografia": "La población indígena en Nueva Granada suma 6 personas, con una pirámide etaria no aplicable por el reducido tamaño muestral (n=6). Los datos demográficos no permiten análisis etario confiable. El pueblo WAYUU representa el 66.7% de la población, seguido por el ARHUACO (16.7%) y población sin información (16.7%).",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Los registros de discapacidad no existen a nivel municipal según la fuente consultada. Se reconoce la limitación de no poder analizar subregistros en ausencia de información primaria.",
+  "territorial": "Nueva Granada carece de resguardos indígenas, lo que limita la protección territorial colectiva. La dispersión geográfica se limita a 6 personas sin concentración espacial identificable. El municipio abarca un área aproximada de 38.5 km² según su bbox, pero sin presencia de territorios indígenas legalmente reconocidos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en la población reportada.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Nueva Granada. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede contrastarse localmente por falta de registros. La ausencia de datos impide evaluar brechas en condiciones de vida.",
+  "conflicto": "Se registran 3 víctimas indígenas por desplazamiento forzado (1985-2024), representando el 100% de los casos de violencia contra este grupo. La concentración en un solo tipo de hecho victimizante sugiere patrones sistemáticos de desarraigo en el territorio. La confiabilidad de los datos es alta (n=3).",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Nueva Granada es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja condiciones críticas en todos los indicadores. La posición relativa es la más baja posible.",
+  "recomendaciones": [
+    "Priorizar la identificación y titulación de territorios colectivos para el pueblo WAYUU en Nueva Granada, dado que representan el 66.7% de la población indígena local.",
+    "Implementar un sistema de registro municipal de lengua y cultura indígena para superar la ausencia de datos en este municipio.",
+    "Diseñar programas de atención psicosocial para víctimas de desplazamiento forzado, que concentran el 100% de los casos registrados (3 personas).",
+    "Articular con la gobernación departamental acciones para incluir a Nueva Granada en estrategias de protección territorial indígena, ante la ausencia de resguardos.",
+    "Incluir a Nueva Granada en censos especializados que permitan superar el subregistro poblacional (n=6) y caracterizar necesidades básicas insatisfechas."
+  ]
+}

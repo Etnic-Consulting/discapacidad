@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cutí, territorio del pueblo GUANADULE - TULE - CUNA en el Chocó, alberga 79 habitantes en 244.009 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La falta de información sobre lengua y capacidades diversas limita el análisis integral de su realidad socioeconómica.",
+  "demografia": "La población total del resguardo Cutí es de 79 habitantes según datos DANE-CNPV 2018. Dada la escala reducida, no aplica un análisis de pirámide etaria. La concentración demográfica en un territorio de 244.009 hectáreas sugiere baja densidad poblacional, característica de comunidades indígenas en zonas rurales del Pacífico colombiano.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo Cutí. Esta ausencia impide evaluar el sub-registro de patologías en la población. Se requiere sistematización de información sanitaria local para identificar necesidades prioritarias en salud pública.",
+  "territorial": "El resguardo Cutí ocupa 244.009 hectáreas en el municipio de Unguía, Chocó, con coordenadas geográficas definidas. Su ubicación en la macrorregión Occidente refleja la conexión con territorios ancestrales del pueblo GUANADULE - TULE - CUNA. La delimitación precisa facilita la planificación de estrategias de protección territorial.",
+  "lengua": "No se reportan datos sobre lengua en el resguardo Cutí. Esta omisión dificulta evaluar la vitalidad cultural y la transmisión intergeneracional de la lengua propia del pueblo GUANADULE - TULE - CUNA. Se recomienda priorizar registros lingüísticos en futuros censos territoriales.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) en el resguardo Cutí. Comparado con el promedio indígena nacional (67.6%), la falta de datos impide medir brechas en acceso a servicios básicos. La ausencia de indicadores limita la formulación de políticas públicas diferenciadas.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo Cutí entre 1985-2024. La ausencia de hechos violentos reportados en el RUV sugiere baja exposición directa al conflicto armado en este territorio. Sin embargo, la falta de datos sistemáticos en zonas rurales exige cautela en la interpretación.",
+  "icv": "El ICV del resguardo Cutí es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta métrica refleja la necesidad de fortalecer sistemas de información locales. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin datos confiables.",
+  "recomendaciones": [
+    "Implementar un sistema de registro de lengua y cultura para el pueblo GUANADULE - TULE - CUNA, priorizando la documentación de la lengua propia en el resguardo Cutí.",
+    "Diseñar un protocolo de recolección de datos de NBI y salud en territorios indígenas pequeños como Cutí, con enfoque diferencial y participación comunitaria.",
+    "Fortalecer la articulación entre ASOREWA y entidades departamentales para garantizar el acceso a servicios básicos en el resguardo, considerando su población de 79 habitantes.",
+    "Realizar un mapeo de actores armados y rutas de desplazamiento en Unguía para prevenir riesgos en el territorio, pese a la ausencia actual de víctimas registradas.",
+    "Incluir al resguardo Cutí en los planes de acción de la macrorregión Occidente, priorizando su protección territorial y acceso a derechos fundamentales."
+  ]
+}

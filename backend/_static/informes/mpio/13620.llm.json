@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Cristóbal (Bolívar) registra una población indígena de solo 4 personas según CNPV 2018, distribuidas en 4 pueblos: Wiwa, Bari, Wayúu y Zenú. La ausencia de resguardos y datos de NBI o lengua refleja un vacío crítico en la presencia territorial organizada. La baja densidad poblacional indígena (n=4) limita la representatividad de cualquier indicador, requiriendo cautela en interpretaciones.",
+  "demografia": "La pirámide etaria no aplica para este municipio dado que la población indígena total es de 4 personas, distribuidas equitativamente entre cuatro pueblos. La dispersión poblacional impide análisis por grupos etarios o comparaciones con estructuras demográficas nacionales. Los datos reflejan una presencia indígena mínima y fragmentada.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en San Cristóbal. La sección de capacidades diversas carece de información a nivel municipal, mientras el promedio indígena nacional de 60.0% no puede contrastarse localmente. La falta de registros limita cualquier análisis de sub-registro o brechas.",
+  "territorial": "San Cristóbal no cuenta con resguardos indígenas registrados, pese a tener una extensión territorial definida por el bbox. La ausencia de territorios colectivos organizados contrasta con la presencia de 4 pueblos en el municipio. La dispersión geográfica de la población indígena (1 persona por pueblo) dificulta la consolidación territorial.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se reportan registros lingüísticos en las fuentes consultadas, lo que impide evaluar la vitalidad o pérdida de lenguas indígenas en el territorio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para San Cristóbal. El promedio indígena nacional de 67.6% no puede compararse localmente debido a la ausencia de datos. La falta de registros invisibiliza las condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "No se registran víctimas indígenas por conflicto en San Cristóbal entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja incidencia, aunque el tamaño muestral (n=4) limita la confiabilidad. La lectura territorial debe considerar esta fragilidad estadística.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en San Cristóbal es 0.0, determinado por la ausencia de datos en NBI, prevalencia y conflicto. Los componentes normalizados (nbi_norm, prev_norm, conflicto_norm) no aportan información al no existir registros. La fórmula aplicada refleja un vacío de datos, no una condición real.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para superar la limitación de n=4 y garantizar datos confiables para políticas públicas.",
+    "Incluir a San Cristóbal en programas de fortalecimiento territorial indígena, pese a la ausencia de resguardos, para prevenir la desaparición cultural de los pueblos presentes.",
+    "Solicitar a la CNPV 2028 desagregar datos indígenas a nivel municipal, evitando agregaciones que oculten realidades como la de este territorio.",
+    "Priorizar la recolección de datos sobre lengua y NBI en territorios con presencia indígena dispersa, como San Cristóbal, para diseñar intervenciones culturalmente pertinentes.",
+    "Articular con organizaciones Wiwa, Bari, Wayúu y Zenú para documentar su presencia y necesidades, compensando la falta de registros oficiales."
+  ]
+}

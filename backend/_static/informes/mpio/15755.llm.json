@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Socotá (Boyacá) reporta datos críticos en el Sistema de Monitoreo Territorial. La población indígena registrada es nula según CNPV 2018, con confiabilidad NO_CONFIABLE (n=0). Solo se documenta 1 víctima de desplazamiento forzado en el período 1985-2024, lo que refleja un patrón de afectación mínima pero no ausencia de riesgo. El ICV de 0.0 evidencia vacíos estructurales en indicadores básicos.",
+  "demografia": "Los datos demográficos indígenas en Socotá no están disponibles (n=0). La pirámide etaria no puede analizarse por falta de registros poblacionales. Se reconoce la limitación metodológica: la consulta CNPV 2018 no capturó población indígena en este municipio, lo que impide evaluar dinámicas generacionales o presión territorial.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en Socotá (datos no aplican al nivel municipal). La ausencia de registros limita cualquier análisis de sub-registro. Se destaca que los KPI de salud pública indígena suelen concentrarse en resguardos o pueblos específicos, excluyendo municipios sin población reconocida.",
+  "territorial": "Socotá cuenta con 0 resguardos indígenas según registros oficiales. La bbox geográfica del municipio (5.76°N a 6.12°N; -72.66°O a -72.42°O) no alberga territorios colectivos. Esta ausencia contrasta con la presencia de 15 resguardos en Boyacá, sugiriendo una desconexión entre delimitación municipal y reconocimiento territorial indígena.",
+  "lengua": "Los datos de lengua no están disponibles para Socotá. No se puede determinar la presencia de hablantes de lenguas nativas ni su vitalidad cultural. Esta omisión refleja la necesidad de incluir variables lingüísticas en censos municipales para pueblos con presencia histórica como los muiscas.",
+  "vida": "No hay información sobre NBI en Socotá (datos no disponibles). El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de datos impide evaluar brechas en condiciones de vida, vivienda o acceso a servicios básicos para eventuales comunidades indígenas no censadas.",
+  "conflicto": "Socotá registra 1 víctima de desplazamiento forzado entre 1985-2024 (n=1, confiable). El hecho principal (100%) corresponde a desplazamiento, confirmando un patrón de movilidad forzada puntual. La baja n sugiere sub-registro, típico en municipios sin población indígena formalmente reconocida.",
+  "icv": "El ICV de Socotá es 0.0, con componentes nulos (NBI, prevalencia y conflicto en 0.0). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la ausencia de datos normalizados. Este resultado subraya la urgencia de sistemas de información territorializados para municipios con población indígena no visible.",
+  "recomendaciones": [
+    "Implementar un censo municipal con enfoque étnico para validar presencia indígena, citando la omisión en CNPV 2018 (n=0).",
+    "Incluir a Socotá en el Plan de Acción de Boyacá para resguardos, dado que tiene 0 territorios colectivos pero bbox geográfica estratégica.",
+    "Priorizar registro de víctimas en RUV con enfoque municipal, usando el caso de desplazamiento forzado (1 víctima) como piloto.",
+    "Diseñar un sistema de alerta temprana para municipios sin datos indígenas, evitando vacíos como los de lengua y NBI.",
+    "Articular con la Gobernación de Boyacá para incluir a Socotá en políticas de salud intercultural, considerando la falta de datos de prevalencia."
+  ]
+}

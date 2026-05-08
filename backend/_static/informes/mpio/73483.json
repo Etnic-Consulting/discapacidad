@@ -1,0 +1,325 @@
+{
+  "tipo": "mpio",
+  "id": "73483",
+  "nombre": "NATAGAIMA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6803,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 6803,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 8,
+      "top": [
+        {
+          "cod_pueblo": "200",
+          "pueblo": "PIJAO",
+          "poblacion": 6789
+        },
+        {
+          "cod_pueblo": "040",
+          "pueblo": "ARHUACO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "170",
+          "pueblo": "COCAMA",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "490",
+          "pueblo": "OCAINA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "520",
+          "pueblo": "PIAROA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "200",
+        "pueblo": "PIJAO",
+        "poblacion": 6789
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 30,
+      "resguardos": [
+        {
+          "nombre": "TINAJAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 2448.309
+        },
+        {
+          "nombre": "ANACARCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1064.657
+        },
+        {
+          "nombre": "EL TAMBO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 689.28
+        },
+        {
+          "nombre": "IMBA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 597.117
+        },
+        {
+          "nombre": "CHAQUIRA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 550.227
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 421.529
+        },
+        {
+          "nombre": "LOS ÁNGELES",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 371.313
+        },
+        {
+          "nombre": "NATARROCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 288.289
+        },
+        {
+          "nombre": "OLIRCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 237.207
+        },
+        {
+          "nombre": "TAMIRCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 237.151
+        },
+        {
+          "nombre": "YACO MOLANA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.667
+        },
+        {
+          "nombre": "GUALERAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.41
+        },
+        {
+          "nombre": "BELTRÁN",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 227.54
+        },
+        {
+          "nombre": "DIAMANTE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 220.529
+        },
+        {
+          "nombre": "NATACOY PIJAO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 217.059
+        },
+        {
+          "nombre": "COCANA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 189.812
+        },
+        {
+          "nombre": "PALMA ALTA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 179.568
+        },
+        {
+          "nombre": "BATEAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 166.351
+        },
+        {
+          "nombre": "PUEBLO NUEVO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 152.403
+        },
+        {
+          "nombre": "RINCÓN DE ANCHIQUE",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 128.479
+        },
+        {
+          "nombre": "POCHARCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 123.916
+        },
+        {
+          "nombre": "PACANDÉ",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 98.585
+        },
+        {
+          "nombre": "QUEBRADITAS",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 95.305
+        },
+        {
+          "nombre": "NANURCO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 93.021
+        },
+        {
+          "nombre": "RINCÓN BODEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 88.853
+        },
+        {
+          "nombre": "BARZALOZA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 83.906
+        },
+        {
+          "nombre": "RINCÓN VELÚ",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 82.856
+        },
+        {
+          "nombre": "VELÚ CENTRO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 81.066
+        },
+        {
+          "nombre": "MERCADILLO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 71.423
+        },
+        {
+          "nombre": "GUASIMAL",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 68.991
+        }
+      ],
+      "bbox": [
+        3.3657054789342626,
+        -75.3024546329716,
+        3.6960811152672832,
+        -74.92996088323207
+      ],
+      "nombre_mpio": "NATAGAIMA",
+      "cod_dpto": "73"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 407,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 407,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 309
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 59
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 15
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 7
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 3
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 309
+      },
+      "pct_hecho_principal": 75.9
+    },
+    "icv": {
+      "score": 0.024,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.081
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:25:01",
+  "periodo": "2018",
+  "_input_hash": "49646e4dffbf3af2"
+}

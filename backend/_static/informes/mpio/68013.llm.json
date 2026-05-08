@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de AGUADA registra una población indígena de 4 personas según el CNPV 2018, concentrada en el pueblo TUKANO. No se identifican resguardos en su territorio, lo que limita la presencia estructural de pueblos indígenas. La ausencia de datos en categorías clave como NBI y lengua refleja vacíos en el monitoreo territorial para este nivel municipal.",
+  "demografia": "La pirámide etaria no aplica en este caso, dado que la población indígena total es de 4 personas. La concentración en un solo pueblo (TUKANO) sugiere una representación mínima y posiblemente dispersa. Los datos demográficos a este nivel no permiten análisis de estructura etaria o dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en AGUADA. La falta de información en secciones como conflicto y NBI impide evaluar patrones de afectación. Se requiere fortalecer el registro de indicadores a nivel municipal para superar el sub-registro actual.",
+  "territorial": "AGUADA no cuenta con resguardos indígenas en su territorio, a pesar de su ubicación en un departamento con presencia histórica de pueblos como los TUKANO. La ausencia de territorios colectivos limita la protección legal y cultural. La dispersión geográfica no es aplicable al no existir resguardos registrados.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística o la presencia de lenguas indígenas en el territorio. Se reconoce la limitación sin inferir datos no registrados.",
+  "vida": "No hay información sobre NBI para AGUADA, lo que impide comparar con el promedio indígena nacional del 67.6%. La falta de datos sobre condiciones de vida dificulta la identificación de brechas estructurales. Se requiere priorizar el registro de indicadores sociales a nivel municipal.",
+  "conflicto": "No se reportan víctimas indígenas con discapacidad en AGUADA entre 1985 y 2024. La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en el registro. La confiabilidad de estos datos es alta, pero no descarta sub-registro en contextos de baja visibilidad.",
+  "icv": "El ICV de AGUADA es 0.0, con componentes normalizados en cero para NBI, prevalencia y conflicto. Esta puntuación refleja la falta de datos disponibles más que una condición real. La fórmula del ICV no puede aplicarse sin información en dimensiones clave.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal específico para superar el sub-registro actual, dado que la población reportada (4 personas) es mínima y no refleja la realidad territorial.",
+    "Incluir AGUADA en programas de fortalecimiento de resguardos, considerando su ausencia actual y la presencia histórica del pueblo TUKANO en la región.",
+    "Priorizar el registro de indicadores sociales como NBI y lengua en el municipio, citando la falta de datos como barrera para la planificación.",
+    "Articular con el departamento de Santander (código 68) para integrar a AGUADA en estrategias regionales de protección indígena, dada su ubicación en un contexto con mayor presencia de pueblos originarios.",
+    "Implementar un sistema de alerta temprana para pueblos indígenas dispersos, citando la concentración en un solo pueblo (TUKANO) y la ausencia de territorios colectivos."
+  ]
+}

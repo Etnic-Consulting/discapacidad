@@ -1,0 +1,380 @@
+{
+  "tipo": "dpto",
+  "id": "44",
+  "nombre": "LA GUAJIRA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 389883,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 389883,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 5059,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 5059,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 389883,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 13.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "720",
+          "con_disc": 4312,
+          "total": 367111
+        },
+        {
+          "cod_pueblo": "050",
+          "con_disc": 408,
+          "total": 12618
+        },
+        {
+          "cod_pueblo": "370",
+          "con_disc": 150,
+          "total": 6025
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 80,
+          "total": 1306
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 69,
+          "total": 2030
+        },
+        {
+          "cod_pueblo": "850",
+          "con_disc": 14,
+          "total": 247
+        },
+        {
+          "cod_pueblo": "820",
+          "con_disc": 5,
+          "total": 11
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 3,
+          "total": 13
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 3,
+          "total": 88
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 2,
+          "total": 7
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 29,
+      "resguardos": [
+        {
+          "nombre": "ALTA Y MEDIA GUAJIRA",
+          "mpio": "URIBIA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1085157.71
+        },
+        {
+          "nombre": "KOGUI - MALAYO ARHUACO",
+          "mpio": "DIBULLA",
+          "pueblo_onic": "IJKU - ARHUACO",
+          "area_pg_ha": 407799.382
+        },
+        {
+          "nombre": "LOMAMATO",
+          "mpio": "HATONUEVO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 2274.053
+        },
+        {
+          "nombre": "TRUPIOGACHO Y LA MESETA",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 2212.532
+        },
+        {
+          "nombre": "CERRODEO",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1457.4
+        },
+        {
+          "nombre": "MAYABANGLOMA",
+          "mpio": "FONSECA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1444.017
+        },
+        {
+          "nombre": "EL ZAHINO GUAYABITO MURIAYTUY",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 1149.492
+        },
+        {
+          "nombre": "WOPUMUIN JUNAIN MAIKOU",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 809.673
+        },
+        {
+          "nombre": "MAÑATURE",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 648.776
+        },
+        {
+          "nombre": "EL SOLDADO PARATE BIEN",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 580.632
+        },
+        {
+          "nombre": "CUATRO DE NOVIEMBRE",
+          "mpio": "ALBANIA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 555.533
+        },
+        {
+          "nombre": "CAICEMAPA",
+          "mpio": "DISTRACCIÓN",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 516.283
+        },
+        {
+          "nombre": "PROVINCIAL",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 511.991
+        },
+        {
+          "nombre": "UNA APUCHON",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 453.065
+        },
+        {
+          "nombre": "NUEVO ESPINAL",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 421.745
+        },
+        {
+          "nombre": "NUKAT MALEIWUA - NAPAJANAIN MALEIWA = BENDICION DE DIOS (PUIPUREN, YAWOLIA, GUANAPAIMANA, CHICHITUY, UJOLMANA, WARRALALAIN, JIRRUMANA)",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 375.277
+        },
+        {
+          "nombre": "TAMAQUITO II",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 299.7
+        },
+        {
+          "nombre": "OKOCHI",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 243.822
+        },
+        {
+          "nombre": "ALBERTO PUSHAINA",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 225.911
+        },
+        {
+          "nombre": "LAS DELICIAS",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 189.991
+        },
+        {
+          "nombre": "CERRO DE HATONUEVO",
+          "mpio": "HATONUEVO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 183.901
+        },
+        {
+          "nombre": "NUMAIN MALEIWA (TIERRA DE DIOS)  (INTEGRADO POR KASISKA-ICHITU-PATAJATAMANA)",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 173.859
+        },
+        {
+          "nombre": "PERRATPU",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 120.516
+        },
+        {
+          "nombre": "RODEITO EL POZO",
+          "mpio": "HATONUEVO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 106.791
+        },
+        {
+          "nombre": "CAÑA BRAVA",
+          "mpio": "HATONUEVO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 91.747
+        },
+        {
+          "nombre": "SUMAIN WAYUÚ UULIANA",
+          "mpio": "MAICAO",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 84.619
+        },
+        {
+          "nombre": "POTRERITO",
+          "mpio": "DISTRACCIÓN",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 80.636
+        },
+        {
+          "nombre": "SAN FRANCISCO",
+          "mpio": "BARRANCAS",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 50.692
+        },
+        {
+          "nombre": "MONTE HARMON",
+          "mpio": "RIOHACHA",
+          "pueblo_onic": "WAYUÚ",
+          "area_pg_ha": 40.793
+        }
+      ],
+      "bbox": [
+        10.39675935221931,
+        -73.66494127508469,
+        12.459443307577596,
+        -71.11295839529242
+      ],
+      "nombre_dpto": "LA GUAJIRA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 1007,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 1007,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 824
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 56
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 53
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 20
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 13
+        },
+        {
+          "hecho": "Sin informacion",
+          "total": 13
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 12
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 6
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 4
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 3
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 824
+      },
+      "pct_hecho_principal": 81.8
+    },
+    "icv": {
+      "score": 0.08,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.065,
+        "conflicto_norm": 0.201
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:50:15",
+  "periodo": "2018",
+  "_input_hash": "d24ff22148a15a02"
+}

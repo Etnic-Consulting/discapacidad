@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Puerto Córdoba, territorio Yukuna en el municipio de La Pedrera (Amazonas), alberga 145 personas en 53.411 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando condiciones críticas en NBI, salud y conflicto. El 60% de las 5 víctimas registradas en el RUV desde 1985 corresponden a desplazamiento forzado, patrón que evidencia vulnerabilidad territorial.",
+  "demografia": "La población total es de 145 habitantes, según datos DANE-CNPV 2018. La pirámide etaria no puede analizarse con los datos disponibles. Se requiere desagregar por grupos etarios para evaluar dinámicas demográficas y planificar servicios básicos.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este resguardo. Los registros nacionales indican que el 60% de la población indígena presenta alguna discapacidad, pero esta cifra no aplica a nivel territorial. El sub-registro es evidente por falta de sistemas de monitoreo locales.",
+  "territorial": "El resguardo abarca 53.411 hectáreas en la Amazonía, con coordenadas que delimitan su territorio ancestral. No hay información sobre concentración de población o dispersión interna. La ausencia de datos sobre uso del suelo limita el análisis de patrones de ocupación y presión externa.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Se desconoce el estado de vitalidad del Yukuna u otras lenguas en uso, lo que impide evaluar la transmisión cultural y los riesgos de pérdida lingüística.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) para Puerto Córdoba. El promedio indígena nacional es 67.6%, pero este resguardo no cuenta con información para comparar brechas. La falta de registros impide priorizar intervenciones en vivienda, educación o salud.",
+  "conflicto": "Se registraron 5 víctimas en el RUV entre 1985-2024, con 3 casos de desplazamiento forzado (60%) y 2 amenazas. La concentración de hechos en este patrón refleja la presión territorial por actores armados y económicos en la Amazonía. La confiabilidad de los datos es alta, pero el bajo N sugiere sub-registro.",
+  "icv": "El ICV es 0.0, con componentes críticos: NBI (0.0), prevalencia (0.0) y conflicto (0.001). La fórmula pondera NBI en un 40%, lo que indica condiciones extremas de pobreza. La dimensión de conflicto, aunque mínima, refleja la violencia estructural que afecta la autonomía territorial.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de salud y discapacidad con enfoque diferencial, priorizando la atención en desplazamiento forzado dado que el 60% de las víctimas reportadas están en este hecho.",
+    "Realizar un censo etnográfico y lingüístico para documentar el uso del Yukuna y otras lenguas, dado que no hay datos disponibles sobre vitalidad cultural en el resguardo.",
+    "Diseñar un plan de protección territorial con enfoque en Amazonía, considerando las 53.411 hectáreas del resguardo y la presión por actores externos identificada en el conflicto.",
+    "Solicitar al DANE y al Ministerio de Salud la desagregación de datos de NBI y prevalencia para resguardos, dado que actualmente no hay información disponible para comparar con el promedio nacional del 67.6%.",
+    "Fortalecer la articulación con la organización regional AIPEA para incidir en políticas de salud intercultural, dado que el ICV de 0.0 refleja condiciones críticas en este resguardo."
+  ]
+}

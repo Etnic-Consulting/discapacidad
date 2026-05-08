@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo MATICURÚ, territorio del pueblo KOREGUAJE en Caquetá, alberga 353 habitantes en 450.92 hectáreas. Su población total refleja una comunidad de tamaño reducido, típica de territorios amazónicos con alta dispersión. La ausencia de datos sobre lengua y NBI limita el análisis integral, aunque el ICV de 0.0 evidencia carencias estructurales no cuantificables en este informe.",
+  "demografia": "La población de 353 habitantes presenta una pirámide etaria no calculable con los datos disponibles. El tamaño reducido del resguardo (450.92 ha) sugiere una comunidad con baja densidad poblacional, característica de territorios amazónicos. No se identifican grupos etarios críticos por falta de desagregación en la fuente.",
+  "prevalencia": "Los datos de prevalencia no están disponibles en este nivel. La ausencia de registros impide analizar morbilidad o condiciones de salud específicas del resguardo. Se reconoce un sub-registro potencial, dado que los sistemas de información suelen omitir territorios pequeños como MATICURÚ.",
+  "territorial": "El resguardo ocupa 450.92 hectáreas en el municipio de Milán, Caquetá, dentro de la macro región Amazonía. Su área reducida y ubicación en zona de transición andino-amazónica limitan la expansión territorial. La dispersión geográfica dificulta la provisión de servicios básicos y el control comunitario del territorio.",
+  "lengua": "Los datos sobre lengua no están disponibles para MATICURÚ. No se puede determinar el estado de vitalidad de la lengua koreguaje en este territorio específico. La ausencia de registros lingüísticos refleja brechas en la sistematización de información cultural a nivel local.",
+  "vida": "No hay datos disponibles sobre NBI para MATICURÚ. El promedio indígena nacional (67.6%) no puede compararse directamente. La falta de información impide evaluar condiciones de vida como hacinamiento, acceso a servicios o educación en este territorio.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en MATICURÚ (0 casos entre 1985-2024). La ausencia de hechos violentos reportados sugiere baja presencia de actores armados en el área. Sin embargo, la confiabilidad de este dato depende de la cobertura del RUV en territorios pequeños.",
+  "icv": "El ICV de MATICURÚ es 0.0, calculado como combinación de NBI (0.0), prevalencia (0.0) y conflicto (0.0). Este resultado refleja la falta de datos más que una condición real de bienestar. La fórmula aplicada subraya la necesidad de mejorar la recolección de información en territorios indígenas amazónicos.",
+  "recomendaciones": [
+    "Realizar un censo comunitario en MATICURÚ para actualizar datos demográficos y culturales, dado que la población actual (353 habitantes) requiere información precisa para planificación territorial.",
+    "Implementar un sistema de registro lingüístico para el pueblo koreguaje, ya que la ausencia de datos sobre lengua (sin_datos: true) impide evaluar vitalidad cultural.",
+    "Diseñar un plan de atención primaria en salud adaptado a territorios pequeños, considerando la falta de datos de prevalencia y el ICV de 0.0 como indicador de carencias estructurales.",
+    "Fortalecer la articulación con la CRIOMC para incluir a MATICURÚ en programas regionales de desarrollo, dado su área reducida (450.92 ha) y dispersión geográfica.",
+    "Promover estudios sobre condiciones de vida (NBI) en resguardos amazónicos, ya que el promedio indígena nacional (67.6%) no refleja la realidad de territorios como MATICURÚ."
+  ]
+}

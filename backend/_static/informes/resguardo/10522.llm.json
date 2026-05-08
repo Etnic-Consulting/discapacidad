@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo ILES, ubicado en Nariño con 65.853 hectáreas, registra una población total de 93 habitantes según datos DANE-CNPV 2018. Su pueblo dominante es el PASTO, organizado bajo AICO. La ausencia de datos en categorías clave como NBI y lengua refleja vacíos críticos en el monitoreo territorial. Este contexto subraya la necesidad de fortalecer la recolección de información para una gestión territorial informada.",
+  "demografia": "La pirámide etaria de ILES no puede analizarse con los datos disponibles, ya que el JSON no proporciona estructura por edades ni género. Solo se conoce la población total (93 habitantes), lo que impide evaluar dinámicas demográficas internas. Esta limitación refleja la falta de desagregación en fuentes oficiales para resguardos pequeños.",
+  "prevalencia": "No hay datos de prevalencia disponibles para ILES. Los indicadores de salud pública no están registrados en el sistema, lo que imposibilita evaluar condiciones de vida específicas. Esta ausencia de información limita la capacidad de diseñar intervenciones focalizadas en el resguardo.",
+  "territorial": "ILES ocupa 65.853 hectáreas en Nariño, con coordenadas que delimitan su territorio en la macrorregión OCCIDENTE. Su extensión contrasta con la baja densidad poblacional (93 habitantes), sugiriendo un patrón de ocupación dispersa. Este territorio colectivo enfrenta desafíos de visibilidad en políticas públicas.",
+  "lengua": "Los datos sobre lengua no están disponibles para ILES. No se registra información sobre uso de lenguas indígenas en el resguardo, lo que impide evaluar la vitalidad cultural del pueblo PASTO en este territorio específico.",
+  "vida": "No hay datos de NBI para ILES. El promedio indígena nacional (67.6%) no puede compararse, ya que el resguardo carece de registros oficiales. Esta omisión dificulta medir brechas de bienestar y priorizar recursos para el territorio.",
+  "conflicto": "ILES reporta 0 víctimas de conflicto con discapacidad entre 1985-2024. La ausencia de hechos violentos registrados sugiere baja visibilidad en el RUV, pero no necesariamente ausencia de vulneraciones. La confiabilidad de este dato (n=0) limita su interpretación como ausencia de conflicto.",
+  "icv": "El ICV de ILES es 0.0, derivado de componentes nulos en NBI, prevalencia y conflicto. Esta métrica refleja la falta de datos disponibles más que condiciones reales de vida. La fórmula del ICV no puede aplicarse sin información confiable, subrayando la urgencia de mejorar los sistemas de monitoreo.",
+  "recomendaciones": [
+    "Implementar un sistema de recolección de datos desagregados por edad, género y lengua en resguardos pequeños como ILES para superar las limitaciones actuales.",
+    "Priorizar la inclusión de ILES en programas de fortalecimiento cultural del pueblo PASTO, dado su territorio histórico de 65.853 hectáreas.",
+    "Solicitar a AICO y autoridades locales la actualización de registros de NBI y salud para este resguardo, con enfoque en pueblos minorizados.",
+    "Incluir a ILES en alertas tempranas de conflicto, pese a los 0 registros actuales, para prevenir posibles vulneraciones no documentadas.",
+    "Diseñar estrategias de visibilización territorial que integren datos cualitativos y cuantitativos, dada la dispersión poblacional del resguardo."
+  ]
+}

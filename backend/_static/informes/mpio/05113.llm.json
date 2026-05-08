@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Buriticá (Antioquia) reporta una población indígena de 0 habitantes según CNPV 2018, con datos no confiables (n=0) para este nivel municipal. El único indicador disponible registra 11 víctimas de desplazamiento forzado entre 1985-2024, concentrando el 90.9% de los hechos violentos. La ausencia de resguardos y datos demográficos limita el análisis territorial, destacando la necesidad de desagregar información a nivel pueblo para evitar vacíos estadísticos.",
+  "demografia": "Los datos demográficos indígenas a nivel municipal no están disponibles (n=0) según CNPV 2018. La consulta agregada para Buriticá no arrojó registros poblacionales, lo que impide analizar la pirámide etaria o estructura demográfica. Esta limitación refleja la necesidad de fortalecer la recolección de datos desglosados por pueblo en territorios municipales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Buriticá. La sección de capacidades diversas carece de información específica para este municipio, aunque se referencia un promedio indígena nacional del 60%. La falta de registros confiables (n=0) impide evaluar subregistros o patrones de afectación.",
+  "territorial": "Buriticá no cuenta con resguardos indígenas registrados (n=0), a pesar de tener una extensión territorial definida por coordenadas geográficas. La ausencia de territorios colectivos contrastan con la presencia de hechos violentos, sugiriendo una posible desconexión entre datos administrativos y dinámicas territoriales reales.",
+  "lengua": "Los datos sobre lenguas indígenas en Buriticá no están disponibles. Esta ausencia de información impide analizar la vitalidad lingüística o patrones de uso en el territorio, limitando la comprensión de la diversidad cultural local.",
+  "vida": "No se reportan datos de NBI para Buriticá, aunque el promedio indígena nacional es 67.6%. La falta de información municipal (n=0) impide calcular brechas o componentes específicos. Esta omisión subraya la necesidad de incluir indicadores socioeconómicos en registros territoriales.",
+  "conflicto": "Buriticá registra 11 víctimas de violencia, con desplazamiento forzado como hecho principal (10 casos, 90.9%). La base de datos RUV confirma la confiabilidad de estos registros (n=11). Este patrón evidencia una alta exposición a desplazamiento en un municipio sin resguardos, requiriendo atención prioritaria en rutas de protección.",
+  "icv": "El ICV de Buriticá es 0.001, con componentes en cero excepto conflicto (0.002). La fórmula pondera NBI, prevalencia y conflicto, pero los valores nulos reflejan datos ausentes. Este resultado subraya la urgencia de mejorar la recolección de indicadores para calcular índices territoriales robustos.",
+  "recomendaciones": [
+    "Priorizar la desagregación de datos por pueblo en Buriticá para superar el n=0 en demografía y territorial, usando metodologías participativas con comunidades.",
+    "Implementar un sistema de alerta temprana para desplazamiento forzado, dado que el 90.9% de los hechos violentos corresponden a este tipo (10 casos).",
+    "Incluir indicadores de NBI y lengua en registros municipales, alineados con el promedio indígena nacional (67.6% NBI, 60% discapacidad).",
+    "Validar la ausencia real de resguardos en Buriticá mediante trabajo de campo con autoridades indígenas, cruzando datos administrativos con cartografías comunitarias.",
+    "Diseñar un plan de fortalecimiento institucional para municipios sin datos, con apoyo de la ONIC y entidades estadísticas."
+  ]
+}

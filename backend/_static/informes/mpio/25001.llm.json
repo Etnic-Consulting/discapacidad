@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Agua de Dios (Cundinamarca) concentra 50 personas indígenas según CNPV 2018, con el 82% (41) pertenecientes al pueblo Muisca. No se registran resguardos ni territorios colectivos en el municipio. El ICV de 0.0 refleja ausencia de datos normalizados en NBI, prevalencia y conflicto, limitando la medición de condiciones de vida. La ausencia de información sobre lengua y capacidades diversas impide un análisis integral de la población indígena local.",
+  "demografia": "La población indígena de 50 personas presenta una estructura etaria concentrada en adultos mayores, con solo 6 menores de 18 años (12%). El pueblo Muisca representa el 82% de la población, seguido por Pijao, Nasa y Saliba con participaciones marginales. No hay datos de pirámide etaria detallada ni razones de esta distribución. La baja n (50) limita análisis demográficos robustos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. El sistema no reporta información para este KPI, lo que impide evaluar necesidades sanitarias específicas. Se requiere priorizar la recolección de datos epidemiológicos locales para identificar brechas en salud indígena.",
+  "territorial": "El municipio no cuenta con resguardos indígenas, a pesar de albergar población de pueblos como Muisca y Pijao. La ausencia de territorios colectivos contrasta con la presencia histórica de estos pueblos en la región. La bbox geográfica delimita un área de 0.0887° latitud y 0.1413° longitud, sin registros de afectación territorial indígena.",
+  "lengua": "Los datos sobre lengua materna o uso de idiomas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la transmisión intergeneracional de lenguas originarias en la población local.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Agua de Dios. El promedio indígena nacional de 67.6% no puede compararse debido a la falta de datos locales. Esta omisión invisibiliza las condiciones de pobreza y acceso a servicios básicos en el municipio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en el RUV entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja visibilidad o subregistro de violencia contra este grupo. Se requiere fortalecer mecanismos de denuncia y sistematización de datos de conflicto en contextos municipales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, determinado por la ausencia de datos normalizados en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada no refleja la realidad local debido a la falta de información. Se necesita integrar datos municipales para calcular un ICV representativo.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que la n=50 limita análisis robustos.",
+    "Implementar un sistema de registro de lengua materna y vitalidad cultural en Agua de Dios, donde los datos están ausentes.",
+    "Establecer un protocolo de recolección de datos de NBI y salud específica para población indígena, comparando con el promedio nacional de 67.6%.",
+    "Incluir a Agua de Dios en el Sistema de Información de Resguardos para identificar y proteger territorios indígenas potenciales.",
+    "Fortalecer la articulación con la ONIC para priorizar municipios sin resguardos, como Agua de Dios, en planes de salvaguarda cultural."
+  ]
+}

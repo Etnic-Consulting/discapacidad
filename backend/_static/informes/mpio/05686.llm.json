@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Rosa de Osos registra una población indígena de 12 personas según CNPV 2018, distribuidas en 7 pueblos con predominio del pueblo CUNA-TULE y MOKANA (3 personas cada uno). La ausencia de resguardos y la dispersión demográfica reflejan una presencia indígena marginal en el territorio municipal. La alta vulnerabilidad se evidencia en el ICV de 0.001, donde el componente de conflicto (0.002) es el único factor con incidencia relativa.",
+  "demografia": "La población indígena municipal suma 12 personas, con una pirámide etaria no disponible en este nivel de desagregación. La concentración en 7 pueblos —liderados por CUNA-TULE y MOKANA— sugiere una fragmentación territorial extrema. La n=12 limita análisis demográficos robustos, pero evidencia la marginalidad demográfica indígena en el municipio.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades en este nivel. La ausencia de registros específicos impide análisis de morbilidad o acceso a salud para la población indígena. Se requiere desagregación por pueblos para evaluar brechas con el promedio indígena nacional (67.6% NBI).",
+  "territorial": "No existen resguardos indígenas en Santa Rosa de Osos, lo que confirma la inexistencia de territorios colectivos reconocidos. La bbox municipal delimita un área sin presencia histórica de ocupación indígena. La dispersión geográfica de 7 pueblos sin base territorial refuerza su vulnerabilidad administrativa y legal.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la pérdida de lenguas originarias en la población indígena local.",
+  "vida": "No hay datos de NBI para Santa Rosa de Osos. La brecha con el promedio indígena nacional (67.6%) no puede calcularse. La falta de información impide evaluar condiciones de vida como educación, vivienda o servicios básicos para la población indígena.",
+  "conflicto": "Se registran 9 víctimas indígenas con discapacidad entre 1985-2024, donde el desplazamiento forzado (5 casos) y las amenazas (4 casos) son los hechos victimizantes principales. El 55.6% de las víctimas enfrentaron desplazamiento, señalando un patrón de violencia territorial contra la población indígena.",
+  "icv": "El ICV municipal es 0.001, con componentes normalizados en cero excepto conflicto (0.002). Esta métrica refleja una condición de extrema vulnerabilidad, donde el conflicto armado es el único factor con peso relativo. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm subraya la prioridad de abordar la violencia.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con desagregación por pueblos para superar la n=12 y validar datos demográficos",
+    "Gestionar el reconocimiento de resguardos para los 7 pueblos identificados, priorizando a CUNA-TULE y MOKANA con 3 personas cada uno",
+    "Implementar un sistema de alertas tempranas para prevenir desplazamiento forzado, dado que el 55.6% de las víctimas enfrentaron este hecho",
+    "Incluir a Santa Rosa de Osos en programas de salud intercultural con enfoque en discapacidad, considerando las 9 víctimas registradas",
+    "Documentar la situación lingüística de los pueblos presentes para diseñar estrategias de revitalización cultural"
+  ]
+}

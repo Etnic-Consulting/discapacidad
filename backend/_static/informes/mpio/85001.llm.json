@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Yopal alberga una población indígena de 526 personas según el CNPV 2018, distribuida en 20 pueblos sin resguardos reconocidos. La alta diversidad étnica (20 pueblos) contrasta con la ausencia de territorios colectivos, lo que limita la autonomía territorial. El desplazamiento forzado afecta al 75% de las 16 víctimas registradas entre 1985-2024, siendo el hecho principal de violencia.",
+  "demografia": "La población indígena en Yopal es diversa pero fragmentada, con 20 pueblos y ningún resguardo. El pueblo sin información específica concentra 71 personas, seguido por Nasa (66) y Achagua (65). La dispersión poblacional dificulta la cohesión territorial y cultural. No hay datos de pirámide etaria para este nivel.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide análisis de sub-registro o priorización sanitaria. Se requiere sistematización de registros locales para superar esta limitación.",
+  "territorial": "Yopal no cuenta con resguardos indígenas reconocidos, a pesar de albergar 526 personas de 20 pueblos distintos. La dispersión geográfica se refleja en la ausencia de territorios colectivos. La bbox abarca coordenadas que no corresponden a espacios tradicionales indígenas.",
+  "lengua": "Los datos sobre lenguas indígenas en Yopal no están disponibles. Esta ausencia impide evaluar la vitalidad lingüística o diseñar estrategias de revitalización cultural.",
+  "vida": "No hay datos de NBI para Yopal, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros territorios. Se requiere recolección de datos locales para identificar brechas.",
+  "conflicto": "16 víctimas de violencia registradas entre 1985-2024, con desplazamiento forzado como hecho principal (12 casos, 75%). La concentración de hechos violentos refleja riesgos territoriales para la población indígena. Los datos son confiables pero limitados en alcance temporal.",
+  "icv": "El ICV de Yopal es 0.001, con componentes en cero excepto conflicto (0.003). La fórmula pondera NBI, prevalencia y conflicto, pero la ausencia de datos en estos últimos sesga el indicador. La posición relativa es crítica y requiere intervención urgente.",
+  "recomendaciones": [
+    "Reconocer y delimitar resguardos para los 20 pueblos presentes, priorizando a los 3 más numerosos (71, 66 y 65 personas) según CNPV 2018.",
+    "Implementar un sistema de registro local de lenguas indígenas para documentar la vitalidad de los 20 pueblos identificados.",
+    "Diseñar rutas de atención psicosocial para las 16 víctimas de violencia, enfocadas en desplazamiento forzado (75% de los casos).",
+    "Incluir a Yopal en estrategias departamentales de prevención de violencia, considerando su ICV de 0.001 y la ausencia de datos de NBI.",
+    "Sistematizar datos de NBI y prevalencia en coordinación con autoridades municipales para superar la falta de información actual."
+  ]
+}

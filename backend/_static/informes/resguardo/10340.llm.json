@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Sabaltera San Onofre y El Tigre, ubicado en San José del Palmar (Chocó), alberga a 162 personas del pueblo Emberá Eyabida-Emberá Katío. Con un territorio de 2.089 hectáreas, este espacio colectivo enfrenta desafíos estructurales en la garantía de derechos fundamentales. La ausencia de datos sobre NBI y lengua refleja vacíos críticos en el monitoreo territorial, limitando la planificación intercultural.",
+  "demografia": "La población total del resguardo asciende a 162 habitantes, según datos DANE-CNPV 2018. La pirámide etaria no puede analizarse por falta de desagregación por edad y sexo en este nivel. La confiabilidad de los datos es alta (n=162), pero la ausencia de variables demográficas clave impide evaluar dinámicas generacionales o presión poblacional en el territorio.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud en este resguardo. La sección correspondiente está marcada sin datos (_sin_datos: true), lo que imposibilita analizar perfiles epidemiológicos o subregistros. Se requiere cruce con fuentes locales para identificar necesidades prioritarias.",
+  "territorial": "El resguardo ocupa 2.089 hectáreas en San José del Palmar (Chocó), con coordenadas que delimitan un área de alta biodiversidad en la región Occidente. La concentración geográfica es reducida, pero estratégica para la conectividad cultural emberá. La ausencia de datos sobre usos del suelo limita evaluar presiones externas sobre el territorio.",
+  "lengua": "No hay información disponible sobre lenguas habladas en el resguardo. La sección está marcada sin datos (_sin_datos: true), lo que impide evaluar la vitalidad lingüística del pueblo Emberá Eyabida-Emberá Katío en este territorio específico.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para este resguardo (_sin_datos: true). El promedio indígena nacional es 67.6%, pero sin cifras locales no es posible calcular brechas ni priorizar intervenciones en acceso a servicios básicos.",
+  "conflicto": "No se registran víctimas con discapacidad en el resguardo entre 1985-2024 (n=0). La sección de hechos victimizantes está vacía, lo que sugiere baja visibilización de violencias en este territorio. Sin embargo, la ausencia de datos no implica ausencia de conflicto, sino limitaciones en el registro.",
+  "icv": "El Índice de Condiciones Vitales (ICV) del resguardo es 0.0, derivado de la falta de datos en NBI, prevalencia y conflicto. Según la fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm), la ausencia de componentes clave impide una medición real, reflejando vacíos en el monitoreo territorial.",
+  "recomendaciones": [
+    "Implementar un sistema de registro intercultural con participación del pueblo Emberá Eyabida-Emberá Katío para documentar NBI y lengua, priorizando los 162 habitantes del resguardo.",
+    "Realizar un diagnóstico participativo de salud con enfoque diferencial, considerando la ausencia de datos de prevalencia en el territorio.",
+    "Fortalecer la protección territorial con enfoque en la delimitación de 2.089 hectáreas, articulando con ASOREWA para prevenir presiones externas.",
+    "Incluir al resguardo en el sistema de alertas tempranas de la ONIC, dada la falta de registros de víctimas en el RUV.",
+    "Diseñar un plan de revitalización lingüística con base en el pueblo dominante (Emberá Eyabida-Emberá Katío), ante la ausencia de datos sobre lenguas en el resguardo."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Puerto Berrío registra una población indígena de 59 personas según CNPV 2018, distribuida en 15 pueblos. El 35.6% de este grupo pertenece al pueblo EMBERA-CHAMI, principal actor en el territorio. La concentración en un solo resguardo (Karamandu) y la alta afectación por desplazamiento forzado (13 casos) marcan la vulnerabilidad de este municipio en el Magdalena Medio.",
+  "demografia": "La pirámide etaria muestra una población indígena envejecida con 21 EMBERA-CHAMI, 15 INGA y 6 sin información específica. La dispersión demográfica entre 15 pueblos refleja fragmentación territorial. Datos de capacidades diversas no están disponibles a nivel municipal, limitando el análisis de inclusión.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide evaluar sub-registros o necesidades sanitarias prioritarias. Se requiere sistematización de registros locales para identificar brechas en atención diferencial.",
+  "territorial": "Solo existe 1 resguardo (Karamandu) con 145.98 ha, ocupado mayormente por EMBERA. El área es mínima frente a la extensión municipal, evidenciando alta presión sobre territorios reducidos. La bbox delimita un espacio de 6.25 a 6.75 latitud y -74.36 a -74.76 longitud en el Magdalena Medio.",
+  "lengua": "Los datos de lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni planes de revitalización sin información primaria.",
+  "vida": "No hay datos de NBI disponibles a nivel municipal. El promedio indígena nacional (67.6%) no puede contrastarse, aunque la alta victimización sugiere condiciones precarias. Se requiere priorizar recolección de datos socioeconómicos locales.",
+  "conflicto": "22 víctimas de violencia política (1985-2024) con 59.1% por desplazamiento forzado (13 casos). El homicidio (6) y amenazas (2) completan el patrón de afectación. La concentración en hechos violentos refleja la debilidad institucional en protección territorial.",
+  "icv": "El ICV municipal es 0.001, con componente de conflicto como principal determinante (0.004). Los valores de NBI y prevalencia son nulos en la fórmula, lo que subestima la multidimensionalidad de la vulnerabilidad. La metodología requiere ajustes para capturar realidades locales.",
+  "recomendaciones": [
+    "Priorizar la titulación y ampliación del resguardo Karamandu (145.98 ha) para el pueblo EMBERA-CHAMI, citando la población de 21 personas y la concentración territorial.",
+    "Implementar un sistema de alertas tempranas para desplazamiento forzado, dado que el 59.1% de las víctimas (13 casos) ocurrieron en este municipio.",
+    "Generar registros locales de NBI y lengua para contrastar con el promedio indígena nacional (67.6%), superando la falta de datos actuales.",
+    "Diseñar rutas de atención psicosocial para las 22 víctimas de violencia política, incorporando enfoque diferencial por discapacidad.",
+    "Fortalecer alianzas con la ONIC para sistematizar datos de pueblos sin información (6 casos), garantizando representación en políticas públicas."
+  ]
+}

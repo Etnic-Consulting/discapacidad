@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cxayu Ce Fiw, territorio del pueblo Nasa en el Cauca, alberga 294 habitantes en 232.3 hectáreas. La población enfrenta una alta exposición a hechos victimizantes, con 59 víctimas registradas entre 1985-2024, donde el desplazamiento forzado representa el 61% de los casos. La concentración de afectaciones refleja patrones de violencia sistemática contra este territorio colectivo.",
+  "demografia": "La población total asciende a 294 habitantes según datos DANE-CNPV 2018. No se dispone de pirámide etaria específica para este resguardo, lo que limita el análisis de estructura poblacional. Los datos disponibles no permiten evaluar dinámicas generacionales o razones de dependencia en este territorio.",
+  "prevalencia": "Los datos de prevalencia de discapacidad no están disponibles para este resguardo (_sin_datos: true). Solo se cuenta con un promedio indígena nacional del 60.0%, lo que impide evaluar la situación específica de Cxayu Ce Fiw. Se requiere información local para identificar necesidades de salud y accesibilidad.",
+  "territorial": "El resguardo ocupa 232.3 hectáreas en el municipio de Cajibío, Cauca. Su ubicación geográfica está definida por coordenadas que delimitan un territorio pequeño y concentrado. La macro región Occidente agrupa este territorio bajo la jurisdicción del CRIC, organización que articula las demandas territoriales del pueblo Nasa.",
+  "lengua": "No se reportan datos sobre lengua en este resguardo (_sin_datos: true). La ausencia de información impide evaluar la vitalidad lingüística del pueblo Nasa en este territorio específico. Se recomienda priorizar registros etnográficos para documentar la transmisión cultural.",
+  "vida": "No hay datos disponibles sobre NBI para Cxayu Ce Fiw (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La falta de información específica oculta las condiciones de vida de este territorio. Se requiere cruzar datos locales para diseñar estrategias de mejora en acceso a servicios básicos.",
+  "conflicto": "Se registraron 59 víctimas de violencia entre 1985-2024, con desplazamiento forzado como principal hecho victimizante (61%). Los 36 casos de desplazamiento forzado destacan como patrón crítico en este territorio. La concentración de hechos refleja una afectación sistemática contra la autonomía del resguardo.",
+  "icv": "El Índice de Condiciones Vitales (ICV) alcanza 0.004, con conflicto como dimensión dominante (0.012). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.012), situando este territorio en una posición crítica. El bajo score evidencia condiciones de vida precarias vinculadas a la violencia.",
+  "recomendaciones": [
+    "Priorizar la atención psicosocial para las 59 víctimas registradas, especialmente las 36 desplazadas, con enfoque diferencial del CRIC.",
+    "Generar un censo lingüístico para documentar la vitalidad del Nasa Yuwe en Cxayu Ce Fiw, dado que los datos están sin registrar.",
+    "Diseñar un plan de protección territorial con la comunidad, considerando el ICV de 0.004 y la alta exposición a hechos victimizantes.",
+    "Articular con la Organización Nacional Indígena de Colombia (ONIC) para incidir en políticas que reduzcan el desplazamiento forzado en el Cauca.",
+    "Implementar un sistema de alerta temprana comunitario, dado que el 61% de las víctimas corresponden a desplazamiento forzado."
+  ]
+}

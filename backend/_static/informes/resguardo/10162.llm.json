@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo AGUA NEGRA, territorio del pueblo Nasa en el Cauca, registra una población de 1742 habitantes según datos DANE-CNPV 2018. Su extensión de 1256.66 hectáreas refleja una alta densidad poblacional en un área reducida, lo que evidencia presión territorial. La afectación por conflicto armado es crítica: 422 víctimas registradas entre 1985-2024, con el desplazamiento forzado como hecho principal (243 casos, 57.6%).",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que el JSON no incluye distribución por edad. Solo se cuenta con el total poblacional (1742 habitantes) y la nota metodológica que indica su origen en fuentes DANE-CNPV 2018. Se requiere desagregación por grupos etarios para evaluar dinámicas demográficas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo AGUA NEGRA. El campo correspondiente está marcado como _sin_datos: true, lo que impide cualquier análisis de sub-registro o patrones epidemiológicos. Esta limitación obstaculiza la planificación en salud pública.",
+  "territorial": "El resguardo ocupa 1256.66 hectáreas en el municipio de Morales (Cauca), con coordenadas que delimitan un área geográficamente compacta. La concentración territorial es alta, lo que intensifica la vulnerabilidad ante actores armados. No se reportan otros territorios asociados en este nivel de desagregación.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). Aunque el pueblo Nasa tiene una fuerte tradición lingüística, no hay información cuantitativa que permita evaluar la vitalidad del nasa yuwe en este territorio específico.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para AGUA NEGRA (_sin_datos: true). El promedio indígena nacional de NBI (67.6%) no puede compararse debido a la ausencia de datos locales. Esta brecha limita la identificación de prioridades sociales.",
+  "conflicto": "El resguardo enfrenta una crisis humanitaria con 422 víctimas de conflicto armado registradas. El desplazamiento forzado (243 casos) es el hecho más recurrente, seguido de amenazas (66) y actos terroristas (50). El 57.6% de las víctimas están asociadas a desplazamiento, lo que refleja una estrategia sistemática de despojo territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es de 0.025, con el componente de conflicto como dimensión dominante (0.084). La fórmula aplicada (ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) subraya que el conflicto armado es el principal determinante de las condiciones de vida en AGUA NEGRA.",
+  "recomendaciones": [
+    "Priorizar la protección territorial con enfoque diferencial, dado que el 57.6% de las víctimas están asociadas a desplazamiento forzado (243 casos) y el ICV refleja alta vulnerabilidad por conflicto (0.084).",
+    "Garantizar el acceso a información desagregada por edad y lengua para AGUA NEGRA, ya que los datos actuales no permiten análisis demográficos ni lingüísticos.",
+    "Implementar rutas de atención psicosocial para 422 víctimas registradas, con énfasis en prevención del desplazamiento forzado.",
+    "Fortalecer la articulación con el CRIC para incidir en políticas públicas que aborden la crisis humanitaria en el Cauca, donde el resguardo está ubicado.",
+    "Solicitar al DANE la desagregación de NBI y datos de discapacidad para resguardos, ya que actualmente no hay información disponible (_sin_datos: true)."
+  ]
+}

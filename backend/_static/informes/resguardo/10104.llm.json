@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo La Albania, territorio Emberá Chamí en Caldas-Risaralda, alberga 281 habitantes en 128.8 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando ausencia de datos normalizados en NBI, prevalencia y conflicto. La ausencia de registros de víctimas en el RUV (0 casos) sugiere sub-registro o baja incidencia, pero limita análisis comparativo.",
+  "demografia": "La población total es de 281 habitantes según DANE-CNPV 2018. No se disponen datos de pirámide etaria ni estructura por edades para este resguardo. La población es pequeña, lo que restringe análisis demográficos detallados y requiere fuentes complementarias para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos de prevalencia disponibles para este resguardo. La sección está marcada como _sin_datos, lo que impide evaluar condiciones de salud o acceso a servicios. Este vacío evidencia la necesidad de sistemas de monitoreo locales que capturen indicadores específicos de pueblos Emberá Chamí.",
+  "territorial": "El resguardo ocupa 128.8 hectáreas en la zona de influencia de la macro ONIC Occidente. Su área reducida y ubicación en Caldas-Risaralda limitan la expansión territorial y aumentan la vulnerabilidad frente a presiones externas. La delimitación geográfica precisa (bbox) permite identificar riesgos ambientales y sociales en el área.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del Emberá Chamí en el territorio. Este vacío subraya la urgencia de registros lingüísticos actualizados para diseñar estrategias de revitalización cultural.",
+  "vida": "No hay datos de NBI disponibles para La Albania. El promedio indígena nacional (67.6%) no puede compararse aquí. La falta de información impide evaluar brechas en condiciones de vida, acceso a educación o salud, clave para priorizar intervenciones en el resguardo.",
+  "conflicto": "No se registran víctimas con discapacidad en el RUV (0 casos) entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja incidencia, pero el sub-registro es probable dado el contexto de violencia estructural en la región Occidente. Se requieren fuentes locales para validar esta información.",
+  "icv": "El ICV es 0.0, resultado de la normalización de componentes sin datos (NBI, prevalencia, conflicto). Esta métrica no refleja la realidad del territorio, sino la falta de información sistematizada. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no aporta valor analítico en este caso.",
+  "recomendaciones": [
+    "Implementar un sistema de monitoreo comunitario para registrar datos de NBI, prevalencia y lengua en el resguardo La Albania, priorizando indicadores culturales y de salud con enfoque diferencial.",
+    "Realizar un censo lingüístico participativo para evaluar el estado del Emberá Chamí y diseñar planes de revitalización con la comunidad.",
+    "Solicitar a la CRIDEC y ONIC apoyo técnico para sistematizar datos de conflicto y discapacidad, cruzando fuentes locales y nacionales.",
+    "Promover alianzas con instituciones académicas para generar estudios de caso que complementen los vacíos de información en resguardos pequeños.",
+    "Incluir a La Albania en los planes regionales de Occidente para garantizar acceso a programas de titulación, salud intercultural y protección territorial."
+  ]
+}

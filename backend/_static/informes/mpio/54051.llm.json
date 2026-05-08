@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Arboledas (Norte de Santander) registra una población indígena mínima de 2 personas según CNPV 2018, distribuidas en dos pueblos: Bari y Pastos, cada uno con 1 habitante. La ausencia de resguardos y la dispersión territorial sin delimitación colectiva reflejan una presencia indígena marginal en el municipio. La concentración de víctimas en hechos de violencia sexual (100% del total) evidencia riesgos específicos para la población indígena local.",
+  "demografia": "La pirámide etaria no aplica a este nivel por datos insuficientes (n=2). La población indígena se reduce a dos individuos, imposibilitando análisis de estructura etaria o dinámicas generacionales. Se requiere desagregación a nivel pueblo para evaluar vitalidad demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Arboledas. La sección de capacidades diversas carece de información específica para el municipio, limitando el análisis de vulnerabilidades. Se recomienda priorizar recolección de datos sanitarios desagregados por pueblo.",
+  "territorial": "Arboledas no cuenta con resguardos indígenas registrados (n=0), lo que dificulta la protección territorial colectiva. La caja geográfica (bbox) delimita un área municipal sin presencia de territorios indígenas reconocidos. La dispersión sin base territorial colectiva agrava la vulnerabilidad de los pueblos Bari y Pastos.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de lenguas nativas como el barí o el pastos.",
+  "vida": "No hay información sobre NBI para Arboledas. El promedio indígena nacional de 67.6% no puede compararse por falta de datos locales. La ausencia de registros impide evaluar brechas en condiciones de vida para la población indígena en el municipio.",
+  "conflicto": "Arboledas registra 1 víctima indígena con discapacidad en el RUV (1985-2024), asociada a delitos contra la libertad sexual (100%). Este hecho único, pero representativo, señala patrones de violencia de género vinculados al conflicto armado en el territorio.",
+  "icv": "El ICV de Arboledas es 0.0, determinado por componentes nulos en NBI, prevalencia y conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una situación de extrema vulnerabilidad sin datos cuantificables. La metodología subraya la necesidad de mejorar la recolección de información.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para los pueblos Bari y Pastos en Arboledas, dado que no existen territorios colectivos registrados (n=0).",
+    "Implementar un sistema de alerta temprana para violencia sexual contra mujeres indígenas, considerando que el 100% de las víctimas registradas están en esta categoría.",
+    "Realizar un censo indígena municipal desagregado por pueblo para superar la limitación de n=2 y permitir análisis demográficos confiables.",
+    "Incluir indicadores de lengua y cultura en los registros municipales, ya que actualmente no hay datos disponibles sobre vitalidad lingüística.",
+    "Articular con la ONIC y el Ministerio del Interior para garantizar la inclusión de Arboledas en programas de protección territorial indígena, dada la ausencia de resguardos."
+  ]
+}

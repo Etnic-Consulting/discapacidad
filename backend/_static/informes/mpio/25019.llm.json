@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Albán (Cundinamarca) reporta datos críticos en 2018. La población indígena total registrada es de 0 habitantes, con n=0 y confiabilidad NO_CONFIABLE, lo que invalida análisis demográficos. Solo se registra 1 víctima de conflicto con discapacidad (1985-2024), vinculada a actos terroristas. El ICV de 0.0 refleja ausencia de indicadores normalizados en NBI, prevalencia y conflicto.",
+  "demografia": "Los datos demográficos indígenas para Albán no están disponibles (n=0, confiabilidad NO_CONFIABLE). La pirámide etaria no puede analizarse debido a la falta de registros poblacionales. Se reconoce la imposibilidad de evaluar estructura etaria o dinámicas generacionales con la información actual.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en Albán (_sin_datos: true). La limitación interpretativa es total. Se advierte que cualquier afirmación sobre salud pública en este municipio carece de sustento estadístico. El sub-registro es absoluto.",
+  "territorial": "Albán cuenta con 0 resguardos indígenas registrados, a pesar de tener una extensión geográfica definida por coordenadas (bbox). La ausencia de territorios colectivos contrasta con la presencia de un municipio con población mayoritaria no indígena. La dispersión territorial no aplica al no existir resguardos.",
+  "lengua": "Los datos sobre lengua indígena en Albán no están disponibles (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de lenguas originarias en el territorio. La ausencia de información impide cualquier análisis sobre diversidad cultural.",
+  "vida": "No hay datos de NBI para Albán (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La brecha con este indicador no puede calcularse. La falta de información impide evaluar condiciones de vida, pobreza o acceso a servicios básicos en la población indígena.",
+  "conflicto": "Albán registra 1 víctima de conflicto con discapacidad (1985-2024), correspondiente al 100% de los hechos violentos en el municipio. El hecho principal es un acto terrorista/atentado. La concentración de la violencia en un solo tipo de hecho refleja patrones de riesgo específicos en el territorio.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de Albán es 0.0, determinado por la ausencia de datos normalizados en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja un valor nulo. La posición relativa es inexistente.",
+  "recomendaciones": [
+    "Realizar un censo indígena específico en Albán para validar la presencia de población originaria, dado que los datos actuales (n=0) son NO_CONFIABLES y no reflejan la realidad territorial.",
+    "Implementar un sistema de registro de víctimas con enfoque diferencial en municipios con baja confiabilidad estadística, priorizando Albán por su único caso de violencia reportado.",
+    "Garantizar la creación de un resguardo indígena en Albán, considerando la ausencia de territorios colectivos y la necesidad de proteger derechos territoriales.",
+    "Incluir indicadores de lengua y cultura en los censos municipales para evaluar la vitalidad de las tradiciones en territorios sin datos como Albán.",
+    "Diseñar políticas de prevención de violencia en municipios con alta concentración de actos terroristas, como Albán, donde el 100% de los hechos corresponden a esta categoría."
+  ]
+}

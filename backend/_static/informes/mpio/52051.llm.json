@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de ARBOLEDA (Nariño) registra una población indígena de 3 personas según el CNPV 2018, concentrada exclusivamente en el pueblo PASTOS. La ausencia de resguardos y la nula disponibilidad de datos sobre lengua, NBI y capacidades diversas limitan el análisis integral. El ICV de 0.0 refleja la extrema vulnerabilidad estructural, agravada por 2 víctimas de desplazamiento forzado entre 1985-2024, constituyendo el 100% de los hechos victimizantes registrados.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal dado que la población indígena total es de 3 personas. Los datos demográficos a este nivel no permiten desagregaciones por grupos de edad o género. Se recomienda priorizar la recolección de datos desagregados en futuras rondas censales para identificar patrones generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información sobre discapacidades y condiciones de salud impide evaluar la carga de morbilidad en la población indígena. Se advierte que cualquier interpretación basada en promedios nacionales sería especulativa y metodológicamente inválida.",
+  "territorial": "ARBOLEDA no cuenta con resguardos indígenas registrados, lo que contrasta con su bbox geográfico en Nariño. La ausencia de territorios colectivos limita la autonomía y protección cultural. La dispersión territorial sin anclaje legal agrava la vulnerabilidad frente a actores armados y proyectos extractivos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "Los datos de NBI no están disponibles para ARBOLEDA. La comparación con el promedio indígena nacional (67.6%) no es posible sin información local. La falta de datos impide evaluar brechas en condiciones de vida como vivienda, educación o ingresos.",
+  "conflicto": "Se registraron 2 víctimas de desplazamiento forzado entre 1985-2024, todas con discapacidad. El desplazamiento forzado representa el 100% de los hechos victimizantes, evidenciando un patrón de violencia sistemática contra la población indígena. La concentración de hechos en este municipio subraya su alta exposición al conflicto armado.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con todos sus componentes (NBI, prevalencia y conflicto) en 0.0. Esta puntuación refleja la ausencia de condiciones mínimas de vida y la máxima exposición al conflicto. La fórmula ponderada (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) confirma una crisis multidimensional sin mitigación.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena en ARBOLEDA para garantizar el derecho al territorio colectivo, citando la ausencia actual de resguardos registrados.",
+    "Implementar un sistema de recolección de datos desagregados por pueblo, edad y género en el municipio, dado que la población indígena total es de solo 3 personas.",
+    "Diseñar un plan de atención psicosocial para las 2 víctimas de desplazamiento forzado con discapacidad, considerando el 100% de los hechos victimizantes registrados.",
+    "Incluir a ARBOLEDA en programas de protección cultural y lingüística, ante la falta de datos sobre lengua y la vulnerabilidad territorial.",
+    "Articular con la gobernación de Nariño para incluir al municipio en estrategias de prevención del desplazamiento forzado, dado su patrón de victimización."
+  ]
+}

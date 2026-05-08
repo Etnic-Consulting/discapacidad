@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Garagoa presenta una población indígena total de 3 personas según CNPV 2018, distribuidas en 2 pueblos: Nasa (2) y Murui (1). No se registran resguardos indígenas en el municipio, lo que limita la presencia territorial colectiva. La ausencia de datos en NBI, lengua y capacidades diversas restringe el análisis integral de condiciones de vida.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por falta de datos desagregados. La población total indígena (3) es insuficiente para análisis demográficos confiables. Se requiere desagregación por grupos etarios para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Garagoa. La limitación interpretativa es total al no existir registros confiables. Se recomienda priorizar sistemas de información locales para subsanar este vacío.",
+  "territorial": "Garagoa tiene 0 resguardos indígenas registrados, lo que refleja una ausencia de territorios colectivos reconocidos. La dispersión geográfica se limita a 3 personas en un área bbox definida. La falta de resguardos dificulta la protección cultural y territorial.",
+  "lengua": "Los datos sobre lengua no están disponibles para Garagoa. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en el municipio.",
+  "vida": "No hay datos sobre NBI en Garagoa. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de información impide evaluar brechas en condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Garagoa entre 1985-2024. La ausencia de hechos violentos no implica ausencia de conflicto, sino falta de registro. Se requiere fortalecer mecanismos de denuncia y documentación local.",
+  "icv": "El ICV de Garagoa es 0.0, determinado por la ausencia de datos en NBI, prevalencia y conflicto. Ningún componente aporta al cálculo. La fórmula refleja la falta de información disponible.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de población indígena con desagregación etaria y territorial para superar la limitación de n=3.",
+    "Priorizar la identificación y delimitación de territorios colectivos en Garagoa para garantizar derechos territoriales.",
+    "Establecer alianzas con pueblos Nasa y Murui para fortalecer sistemas de información cultural y lingüística.",
+    "Diseñar un plan de documentación de conflictos y violencias contra indígenas en Garagoa, dado el vacío en datos de víctimas.",
+    "Incluir a Garagoa en programas departamentales de salud intercultural para abordar la falta de datos de prevalencia."
+  ]
+}

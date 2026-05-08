@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Belén de Umbría alberga una población indígena de 531 personas según CNPV 2018, concentrada en un solo resguardo. El 76.1% de esta población pertenece al pueblo EMBERA-CHAMÍ, evidenciando una alta homogeneidad étnica. La presencia de 9 pueblos distintos, aunque con poblaciones mínimas, refleja diversidad cultural en un territorio reducido.",
+  "demografia": "La pirámide etaria muestra una población mayoritariamente adulta, con 404 EMBERA-CHAMÍ (76.1%) como grupo dominante. Los datos no permiten análisis detallado de estructura por edad o género. La concentración en un solo pueblo limita la diversidad demográfica interna del municipio.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para este municipio. La falta de información impide evaluar necesidades sanitarias específicas. Se requiere priorizar recolección de datos epidemiológicos para este territorio.",
+  "territorial": "El municipio cuenta con un único resguardo indígena, Flor del Monte, de 18.592 hectáreas. La baja cantidad de territorios (n=1) contrasta con la presencia de 9 pueblos distintos. La dispersión geográfica es nula, concentrando toda la población en un área específica.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la presencia de lenguas en riesgo. Se recomienda incluir este indicador en futuros relevamientos.",
+  "vida": "No hay datos disponibles sobre NBI para Belén de Umbría. El promedio indígena nacional es 67.6%, pero no se puede calcular la brecha local. La ausencia de información limita la formulación de políticas sociales específicas para este territorio.",
+  "conflicto": "Se registraron 6 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (83.3% de los casos). El homicidio representa el 16.7% restante. La baja cantidad de registros (n=6) sugiere subregistro o baja intensidad del conflicto en este territorio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%). Este resultado refleja la falta de datos disponibles para calcular el índice adecuadamente.",
+  "recomendaciones": [
+    "Realizar censo étnico local para actualizar datos demográficos y lingüísticos, priorizando el pueblo EMBERA-CHAMÍ que representa el 76.1% de la población.",
+    "Implementar sistema de vigilancia epidemiológica con enfoque diferencial para el resguardo Flor del Monte (18.592 ha).",
+    "Diseñar políticas de protección territorial ante desplazamiento forzado, principal hecho victimizante (83.3% de los casos).",
+    "Incluir indicadores de NBI en próximos relevamientos para calcular brechas frente al promedio indígena nacional (67.6%).",
+    "Fortalecer la articulación con autoridades tradicionales para garantizar recolección de datos con enfoque comunitario."
+  ]
+}

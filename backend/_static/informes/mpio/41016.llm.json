@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Aipe registra una población indígena de 7 personas según el CNPV 2018, concentrada en dos pueblos: el 85.7% (6) corresponde al Nasa y el 14.3% (1) al Yanacona. La ausencia de resguardos y la dispersión territorial sin delimitación colectiva limitan la viabilidad de los pueblos presentes. La alta incidencia de homicidios (60% de las víctimas registradas) refleja una vulnerabilidad crítica en seguridad humana.",
+  "demografia": "La pirámide etaria no puede analizarse al nivel municipal dado que la población total indígena es de solo 7 personas. La concentración en un grupo etario específico (adultos mayores) no es representativa ni estadísticamente válida. Los datos demográficos a este nivel no permiten inferencias sobre dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Aipe. La falta de información impide evaluar la carga de morbilidad o identificar prioridades sanitarias. El sub-registro es probable dado el tamaño poblacional y la dispersión geográfica.",
+  "territorial": "Aipe no cuenta con resguardos indígenas registrados, lo que evidencia una ausencia de reconocimiento territorial formal. La dispersión geográfica (bbox con coordenadas que abarcan 3.05° a 3.41° N y -75.58° a -75.17° O) sugiere una distribución fragmentada sin núcleos consolidados. La falta de delimitación limita la autonomía y protección cultural.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población indígena local.",
+  "vida": "No se dispone de datos sobre Necesidades Básicas Insatisfechas (NBI) para Aipe. El promedio indígena nacional (67.6%) no puede compararse debido a la ausencia de información local. La pobreza multidimensional en este territorio no puede evaluarse con los datos actuales.",
+  "conflicto": "Se registraron 5 víctimas de violencia en Aipe entre 1985-2024, con homicidio como hecho principal (60% del total). El desplazamiento forzado representa el 40% restante. La baja n (5) limita la confiabilidad estadística, pero evidencia una situación crítica en seguridad humana.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Aipe es 0.0, con todos los componentes en cero excepto conflicto (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), reflejando una situación de extrema vulnerabilidad estructural. La ausencia de datos en NBI y prevalencia sesga el indicador hacia la dimensión de conflicto.",
+  "recomendaciones": [
+    "Garantizar la delimitación y titulación de resguardos indígenas en Aipe para proteger el territorio del pueblo Nasa, principal grupo étnico del municipio con 6 personas.",
+    "Implementar un sistema de alerta temprana para homicidios y desplazamiento forzado en Aipe, dado que el 60% de las víctimas registradas corresponde a homicidios.",
+    "Realizar un censo étnico municipal con enfoque diferencial para superar la limitación estadística (n=7) y obtener datos confiables sobre lengua, NBI y prevalencia.",
+    "Priorizar proyectos de seguridad alimentaria y acceso a servicios básicos en Aipe, considerando la ausencia de datos sobre NBI y la alta vulnerabilidad social.",
+    "Fortalecer la participación de los pueblos Nasa y Yanacona en la toma de decisiones municipales, incorporando sus cosmovisiones en políticas públicas."
+  ]
+}

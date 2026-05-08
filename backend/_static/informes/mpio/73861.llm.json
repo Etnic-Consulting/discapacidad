@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "En Venadillo (Tolima), la población indígena registrada asciende a 13 personas según CNPV 2018, distribuidas en 5 pueblos. La concentración en los pueblos Pijao y Nasa (5 personas cada uno) refleja una diversidad étnica limitada pero con presencia histórica. La ausencia de resguardos y la alta dispersión geográfica (0 territorios colectivos) subrayan la vulnerabilidad territorial de estas comunidades.",
+  "demografia": "La pirámide etaria no aplica a este nivel municipal, dado que los datos solo reportan un total de 13 personas sin desagregación por edad. La cifra mínima impide análisis demográficos confiables. Se requiere desagregación por cohortes para evaluar dinámicas generacionales y planificar políticas diferenciales.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones específicas no están disponibles para este municipio. La falta de información impide evaluar necesidades sanitarias prioritarias. Se recomienda priorizar la recolección de datos epidemiológicos desagregados por pueblo indígena.",
+  "territorial": "Venadillo registra 0 resguardos indígenas, lo que indica una ausencia de territorios colectivos reconocidos. La dispersión geográfica (bbox de 4.608 a 4.811 latitud y -75.066 a -74.785 longitud) refleja una población indígena altamente fragmentada. Esta condición limita el ejercicio de autonomía y protección territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en este municipio no están disponibles. La ausencia de información impide evaluar la vitalidad lingüística de los pueblos presentes. Se requiere incluir indicadores de lengua en futuros censos para preservar la diversidad cultural.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Venadillo. El promedio indígena nacional (67.6%) no puede compararse sin información local. La falta de datos invisibiliza las condiciones de vida de la población indígena en el municipio.",
+  "conflicto": "Se registran 2 víctimas indígenas por desplazamiento forzado entre 1985-2024, representando el 100% de los hechos violentos. Este patrón refleja la exposición histórica a la violencia en la región. La cifra subraya la urgencia de garantizar protección y restitución territorial.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Venadillo es 0.0, determinado por componentes normalizados de NBI, prevalencia y conflicto en cero. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia condiciones extremas de vulnerabilidad. Este resultado exige intervenciones multisectoriales inmediatas.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento de al menos 1 resguardo indígena en Venadillo para proteger el territorio de los pueblos Pijao y Nasa, priorizando la titulación colectiva con enfoque diferencial.",
+    "Incluir en el próximo CNPV 2028 la desagregación por edad y lengua de la población indígena municipal para diseñar políticas educativas y culturales pertinentes.",
+    "Implementar un sistema de alertas tempranas para prevenir desplazamiento forzado, basado en los 2 casos históricos registrados y la alta exposición regional.",
+    "Diseñar un plan de salud intercultural con enfoque en pueblos Pijao y Nasa, priorizando la recolección de datos epidemiológicos locales.",
+    "Fortalecer la articulación entre la ONIC y la Alcaldía de Venadillo para incluir a las comunidades indígenas en el Plan de Desarrollo Municipal, asegurando presupuesto para proyectos territoriales."
+  ]
+}

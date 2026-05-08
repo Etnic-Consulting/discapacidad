@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Mosquera (Nariño) concentra su población indígena en el pueblo PASTOS, con solo 1 persona registrada según CNPV 2018. Su territorio alberga un resguardo (Sanquianguita) de 651.212 hectáreas, donde predomina el pueblo EPERARA SIA. La vulnerabilidad territorial se refleja en un ICV de 0.0, impulsado por la ausencia de datos en componentes clave como NBI y prevalencia.",
+  "demografia": "La pirámide etaria no puede analizarse al registrarse solo 1 persona indígena en el municipio. Los datos demográficos a este nivel no permiten evaluar estructura poblacional ni dinámicas generacionales. Se requiere desagregación por grupos de edad para identificar prioridades de atención.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Mosquera. Los sistemas de salud indígena no capturan información específica a nivel municipal, lo que limita la identificación de necesidades sanitarias prioritarias. El sub-registro es evidente en este vacío informativo.",
+  "territorial": "Mosquera alberga 1 resguardo (Sanquianguita) con 651.212 hectáreas, territorio colectivo del pueblo EPERARA SIA. La concentración geográfica es absoluta, sin dispersión de otros resguardos. La delimitación territorial (bbox) abarca 2.19°N a 2.66°N y -78.57°O a -78.30°O, confirmando su ubicación en la zona andina de Nariño.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Mosquera. No se registra información sobre uso, transmisión o vitalidad de lenguas originarias en este territorio, lo que impide evaluar la situación lingüística del pueblo PASTOS o EPERARA SIA.",
+  "vida": "No hay datos de NBI disponibles para Mosquera. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de información sobre necesidades básicas insatisfechas invisibiliza la pobreza estructural que enfrenta la población indígena en este municipio.",
+  "conflicto": "Se registraron 3 víctimas de conflicto armado en Mosquera entre 1985-2024, con hechos distribuidos en amenaza (33.3%), desplazamiento forzado y pérdida de bienes. La amenaza es el principal tipo de victimización, reflejando riesgos persistentes en el territorio resguardado de Sanquianguita.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Mosquera es 0.0, determinado por la ausencia de datos en NBI (0.0) y prevalencia (0.0), con un mínimo aporte del componente conflicto (0.001). Esta métrica subraya la urgencia de mejorar la recolección de datos para evaluar condiciones de vida reales.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal que desagregue datos indígenas por edad, género y pueblo, usando como base la población actual de 1 persona para priorizar acciones focalizadas.",
+    "Realizar un censo lingüístico en el resguardo Sanquianguita para documentar la vitalidad del EPERARA SIA, dado que no hay datos disponibles sobre lengua.",
+    "Diseñar un plan de atención en salud con enfoque diferencial para Mosquera, considerando la falta de datos de prevalencia y el contexto de amenaza reportado en 3 víctimas.",
+    "Fortalecer la protección territorial del resguardo Sanquianguita (651.212 ha) mediante acciones contra amenazas, dado que el 33.3% de los hechos de conflicto son de este tipo.",
+    "Establecer alianzas con el pueblo PASTOS para incorporar sus conocimientos tradicionales en la generación de datos, dado que son el pueblo indígena identificado en el municipio."
+  ]
+}

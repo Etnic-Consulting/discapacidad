@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Aguachica (Cesar) concentra 117 indígenas de 16 pueblos distintos según CNPV 2018, con predominio de población ecuatoriana (31 personas). La diversidad étnica contrasta con la ausencia de resguardos registrados, evidenciando vacíos en el reconocimiento territorial. El conflicto armado impacta fuertemente: 22 víctimas con discapacidad registradas entre 1985-2024, donde el desplazamiento forzado representa el 72.7% de los casos.",
+  "demografia": "La población indígena en Aguachica presenta una distribución dispersa entre 16 pueblos, sin un grupo mayoritario claro. El 26.5% corresponde a indígenas ecuatorianos (31 personas), seguido por Otavaleños (22) y Arhuacos/Ingas (13 cada uno). La fragmentación étnica dificulta la consolidación de estrategias comunitarias, al no existir un pueblo dominante en términos poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide analizar brechas sanitarias o patrones de morbilidad específica en la población indígena local.",
+  "territorial": "Aguachica carece de resguardos indígenas registrados, a pesar de contar con una población dispersa en 16 pueblos distintos. La ubicación geográfica (coordenadas bbox) sugiere presencia en zonas rurales, pero la ausencia de territorios colectivos formalizados limita el ejercicio de autonomía y protección cultural.",
+  "lengua": "Los datos sobre lenguas indígenas en Aguachica no están disponibles en este informe. No se puede determinar la vitalidad lingüística ni las lenguas en uso dentro de la población indígena del municipio.",
+  "vida": "No se reportan datos de NBI para Aguachica, aunque el promedio indígena nacional es 67.6%. La falta de información impide evaluar condiciones de vida como hacinamiento, acceso a servicios básicos o escolaridad en este territorio.",
+  "conflicto": "Se registraron 22 víctimas indígenas con discapacidad entre 1985-2024, donde el desplazamiento forzado (16 casos) es el hecho victimizante principal (72.7%). La concentración de violencia en este patrón refleja dinámicas de despojo territorial y movilidad forzada en la región.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Aguachica es de 0.001, con componentes normalizados en cero excepto conflicto (0.004). La dimensión de conflicto domina el indicador, evidenciando que el impacto del conflicto armado es el principal determinante de las condiciones de vida en este municipio.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos indígenas en Aguachica para garantizar protección territorial, dado que no existen territorios colectivos registrados pese a la presencia de 16 pueblos distintos.",
+    "Implementar un sistema de alerta temprana contra el desplazamiento forzado, principal hecho victimizante (16 casos, 72.7%), en coordinación con la ONIC y autoridades locales.",
+    "Realizar un censo étnico municipal que incluya datos de lengua y NBI para superar la falta de información en estas dimensiones críticas.",
+    "Diseñar estrategias de salud intercultural que atiendan las necesidades de la población indígena dispersa, especialmente en zonas rurales donde se concentra la presencia de pueblos como Arhuaco, Inga y Wayúu.",
+    "Fortalecer la articulación con pueblos fronterizos (ej. ecuatorianos) para abordar vulnerabilidades compartidas en contextos de movilidad y conflicto."
+  ]
+}

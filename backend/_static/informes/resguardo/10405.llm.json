@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Barrancón, territorio del pueblo Jiw-Guayabero en el Guaviare, alberga 851 habitantes en 2.751 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando carencias estructurales en NBI, prevalencia y conflicto. La ausencia de datos en lengua y NBI limita el diagnóstico integral, pero evidencia brechas críticas en capacidades diversas.",
+  "demografia": "La población total de 851 habitantes presenta una pirámide etaria no detallada en los datos. La confiabilidad de la fuente DANE-CNPV (n=851) permite validar la representatividad, pero la falta de desagregación por grupos de edad impide analizar dinámicas generacionales o presión demográfica en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en el resguardo. La constante nacional de 60.0% para discapacidad en pueblos indígenas subraya la urgencia de registros locales, sugiriendo sub-registro en Barrancón por ausencia de sistemas de monitoreo comunitario.",
+  "territorial": "Barrancón ocupa 2.751 hectáreas en San José del Guaviare, con coordenadas geográficas definidas. Su ubicación en la Amazonía y la macrorregión AMAZONIA lo sitúa en un contexto de alta dispersión indígena, pero la falta de datos sobre territorios vecinos limita el análisis de concentración o aislamiento geográfico.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Dada la pertenencia al pueblo Jiw-Guayabero, se infiere la presencia de la lengua jiw, pero la ausencia de registros oficiales impide evaluar vitalidad lingüística o procesos de revitalización en el territorio.",
+  "vida": "No se reportan datos de Necesidades Básicas Insatisfechas (NBI) para Barrancón. El promedio indígena nacional de 67.6% destaca la necesidad de medir brechas locales, especialmente en acceso a servicios básicos, vivienda y educación, clave para la autonomía del pueblo Jiw-Guayabero.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Barrancón (n=0). La ausencia de hechos victimizantes en el período 1985-2024 sugiere baja visibilidad en sistemas nacionales, pero no descarta dinámicas de violencia estructural no documentadas en territorios indígenas remotos.",
+  "icv": "El ICV de 0.0 en Barrancón indica condiciones vitales críticas, con componentes de NBI, prevalencia y conflicto en cero. Esta métrica, calculada como 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm, refleja la urgencia de intervenciones integrales en salud, territorio y protección.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de discapacidad y prevalencia de enfermedades, priorizando la lengua jiw para garantizar pertinencia cultural, citando la constante nacional de 60.0% como referencia de brecha.",
+    "Realizar un diagnóstico participativo de NBI con enfoque diferencial, comparando los resultados con el promedio indígena nacional de 67.6% para priorizar acciones en vivienda y servicios básicos.",
+    "Fortalecer la articulación con CRIGUA II y OPIAC para documentar conflictos no visibles en sistemas nacionales, dado que el resguardo reporta 0 víctimas en el RUV.",
+    "Diseñar un plan de revitalización lingüística para el pueblo Jiw-Guayabero, considerando la ausencia de datos oficiales sobre lengua en el resguardo.",
+    "Promover estudios de presión demográfica y dinámicas etarias en el territorio, utilizando la población total de 851 habitantes como base para planificar servicios públicos."
+  ]
+}

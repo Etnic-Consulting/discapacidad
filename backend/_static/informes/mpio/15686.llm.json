@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santaana registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo EMBERA-CHAMI. La ausencia de resguardos y datos de lengua refleja una territorialidad indígena casi inexistente en el municipio. El ICV de 0.0 y la falta de información en NBI y conflicto subrayan vacíos críticos en la caracterización socioeconómica y de derechos humanos.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la población total de 1 persona. La base de datos CNPV 2018 reporta solo 1 habitante indígena en Santana, lo que imposibilita análisis demográfico. La concentración en un solo pueblo (EMBERA-CHAMI) limita cualquier inferencia sobre dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de registros confiables impide evaluar sub-registros o patrones epidemiológicos. Se requiere fortalecer sistemas de información locales para generar evidencia precisa.",
+  "territorial": "Santaana no cuenta con resguardos indígenas, lo que evidencia una ausencia de reconocimiento territorial formal. La bbox geográfica delimita un área sin presencia de territorios colectivos. Esta situación contrasta con la media nacional donde los resguardos son pilares de autonomía indígena.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en la población reportada.",
+  "vida": "No hay información sobre NBI en Santana, aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar condiciones de vida. Esta omisión refleja debilidades en la recolección de indicadores socioeconómicos a nivel municipal.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Santana entre 1985-2024. La ausencia de hechos violentos reportados en el RUV sugiere baja incidencia, aunque el n=0 limita interpretaciones. Se recomienda verificar fuentes locales para confirmar esta tendencia.",
+  "icv": "El ICV de 0.0 en Santana refleja la suma de componentes nulos (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm arroja un valor mínimo, indicando condiciones de vida precarias o datos faltantes.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal para actualizar la población reportada (1 persona) y caracterizar necesidades específicas del pueblo EMBERA-CHAMI",
+    "Gestionar el reconocimiento de al menos un resguardo indígena en Santana para garantizar derechos territoriales",
+    "Implementar sistemas de registro de lengua y cultura en el municipio para documentar la vitalidad del EMBERA-CHAMI",
+    "Incluir indicadores de NBI y salud en sistemas de información municipal con enfoque diferencial indígena",
+    "Fortalecer la articulación con ONIC para priorizar a Santana en programas de fortalecimiento territorial y autonomía"
+  ]
+}

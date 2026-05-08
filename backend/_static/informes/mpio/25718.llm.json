@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Sasaima registra una población indígena de 35 personas según CNPV 2018, distribuidas en 6 pueblos. Los Panches concentran el 37.1% (13 personas), seguidos por los Arhuacos con 12 (34.3%). No existen resguardos en el municipio, lo que limita la protección territorial colectiva. La ausencia de datos en NBI y lengua refleja vacíos en el monitoreo local.",
+  "demografia": "La población indígena de Sasaima es minoritaria y dispersa, con 35 personas en total. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La distribución por pueblos muestra una predominancia de Panches (37.1%) y Arhuacos (34.3%), mientras otros grupos como Murui, Nasa y Wounaan tienen presencia marginal. La diversidad cultural existe pero en números reducidos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en la población indígena de Sasaima. La sección se encuentra sin información, lo que impide evaluar necesidades sanitarias específicas. Se requiere recolección de datos primarios para identificar brechas y priorizar intervenciones.",
+  "territorial": "Sasaima no cuenta con resguardos indígenas, lo que refleja una ausencia de reconocimiento territorial formal. La delimitación geográfica del municipio (bbox) no incluye territorios colectivos. La falta de resguardos limita la autonomía y protección de los pueblos presentes, especialmente en un contexto de presión por uso del suelo.",
+  "lengua": "Los datos sobre lenguas indígenas en Sasaima no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo. Este vacío impide diseñar estrategias de revitalización cultural y educación bilingüe ajustadas a la realidad local.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Sasaima. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de datos dificulta evaluar condiciones de vida y diseñar políticas públicas diferenciadas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Sasaima entre 1985-2024. El hecho principal y su porcentaje no aplican por ausencia de registros. Este dato sugiere baja visibilidad de la población indígena en sistemas de atención a víctimas, pero no descarta situaciones no documentadas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Sasaima es 0.0, derivado de la ausencia de datos en NBI, prevalencia y conflicto. Los componentes normalizados (nbi_norm, prev_norm, conflicto_norm) no aportan información. Este resultado refleja vacíos en el monitoreo territorial más que condiciones reales.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar datos demográficos y territoriales, dado que la población actual (35 personas) es mínima y dispersa.",
+    "Gestionar el reconocimiento de resguardos para los pueblos Panches y Arhuacos, principalitariamente, como mecanismo de protección territorial y autonomía.",
+    "Implementar un sistema de recolección de datos en salud, NBI y lengua para superar las actuales limitaciones y diseñar intervenciones basadas en evidencia.",
+    "Incluir a la población indígena de Sasaima en el Registro Único de Víctimas (RUV) para garantizar acceso a reparación y atención diferenciada.",
+    "Promover alianzas con instituciones educativas y culturales para revitalizar lenguas indígenas, considerando la diversidad de pueblos presentes (6 grupos)."
+  ]
+}

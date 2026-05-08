@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Tariano · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Tariano</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Tariano, con una población total de 210 personas según el censo de 2018, enfrenta una situación de alta vulnerabilidad estructural a pesar de una aparente baja afectación por el conflicto armado. Su principal asentamiento se encuentra en el departamento de Vichada, con 185 miembros, aunque exhiben un patrón de alta dispersión territorial que se extiende a 9 departamentos y 5 resguardos indígenas, lo que representa un desafío para su cohesión cultural y gobernanza.</p><p></p><p>La cifra más crítica es la pérdida total de su lengua, con 0 hablantes registrados, lo que sitúa al pueblo Tariano en un riesgo inminente de extinción cultural. Demográficamente, es una comunidad joven, con 81 personas menores de 15 años, y una alta tasa de dependencia económica (96.3), lo que indica una fuerte presión sobre la población en edad de trabajar. Las condiciones de vida son precarias, con un 49.19% de la población con Necesidades Básicas Insatisfechas (NBI).</p><p></p><p>La lectura clave de estos datos apunta a la urgencia de implementar acciones coordinadas para la revitalización cultural y el fortalecimiento de la gobernanza territorial. Aunque su NBI es inferior al promedio indígena nacional, la combinación de dispersión geográfica, pérdida lingüística y precariedad material, reflejada en un Índice de Vulnerabilidad Compuesta (ICV) de 0.294, exige una atención prioritaria centrada en la pervivencia física y cultural del pueblo Tariano.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">210</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">24</div><div class="sub">prevalencia 64,9‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">9</div><div class="sub">5 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.294</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Tariano se caracteriza por ser una comunidad pequeña y joven. La población total asciende a 210 personas, de las cuales 111 son hombres y 99 son mujeres, resultando en una razón de masculinidad de 112.1 hombres por cada 100 mujeres. La base de la pirámide poblacional es ancha, con 81 personas en el grupo de 0 a 14 años, lo que representa casi el 40% del total. Esto genera un alto índice de dependencia de 96.3, significando que por cada 100 personas en edad productiva (15-64 años), hay casi 96 personas dependientes (niños y mayores de 65 años), que suman 22 personas.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">43</td><td class="num">38</td><td class="num"><b>81</b></td><td class="num">38.6%</td></tr>
+      <tr><td>15-64 años</td><td class="num">59</td><td class="num">48</td><td class="num"><b>107</b></td><td class="num">51.0%</td></tr>
+      <tr><td>65+ años</td><td class="num">9</td><td class="num">13</td><td class="num"><b>22</b></td><td class="num">10.5%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>111</b></td><td class="num"><b>99</b></td><td class="num"><b>210</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">112,1</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">96,3</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">27,2</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Los datos sobre discapacidad en el pueblo Tariano estiman una prevalencia de 64.9 casos por cada 1.000 habitantes, una cifra ligeramente superior al promedio nacional indígena de 60.0. Sin embargo, este indicador debe ser interpretado con extrema cautela. La fuente de datos tiene una confiabilidad marcada como 'NO_CONFIABLE', ya que se basa en una muestra muy pequeña de solo 24 personas identificadas con alguna limitación. Este bajo número sugiere un posible subregistro significativo y no permite establecer conclusiones firmes sobre la situación real de la discapacidad. No se dispone de información detallada sobre los tipos de limitación (física, cognitiva, etc.), lo que impide un análisis más profundo.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Tariano</div>
+      <div class="num-big">64,9‰</div>
+      <div class="lbl">24 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: -4,9‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>Desde una perspectiva territorial, el pueblo Tariano presenta un patrón de alta dispersión a pesar de su reducido tamaño poblacional. Están presentes en 9 departamentos de Colombia, lo que evidencia una diáspora significativa. La concentración principal de su población se encuentra en el departamento de Vichada, donde residen 185 de sus 210 miembros. Además, su presencia se registra en 5 resguardos indígenas, siendo el resguardo 'Vaupés (1459)' el que alberga la comunidad más numerosa dentro de un territorio colectivo, con 78 personas. Esta fragmentación geográfica impone desafíos considerables para la articulación política, la transmisión cultural y el ejercicio del gobierno propio del pueblo Tariano.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">185</td><td class="num">12</td><td class="num">64,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VAUPES</td><td class="num">151</td><td class="num">7</td><td class="num">46,4‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>GUAVIARE</td><td class="num">24</td><td class="num">4</td><td class="num">166,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>META</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ARAUCA</td><td class="num">1</td><td class="num">1</td><td class="num">1.000,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>TOLIMA</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>NORTE DE SANTANDER</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">78</td></tr>
+      <tr><td>Bacati-Arara Carurú y Miraflores</td><td>VAUPÉS</td><td>CARURÚ</td><td class="num">23</td></tr>
+      <tr><td>Lagos del Dorado y Otros</td><td>GUAVIARE</td><td>MIRAFLORES</td><td class="num">2</td></tr>
+      <tr><td>La Fuga</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">1</td></tr>
+      <tr><td>Rio Chajerado</td><td>ANTIOQUIA</td><td>MURINDÓ</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>La situación lingüística del pueblo Tariano es crítica y representa una emergencia cultural. Según los datos disponibles, no se registran hablantes de la lengua propia entre los 210 miembros del pueblo. El porcentaje de personas que hablan o entienden el idioma es del 0.0%. Esta ausencia total de transmisión intergeneracional y de uso cotidiano sitúa a la lengua Tariana en un estado de extinción funcional inminente. La pérdida de su idioma constituye una amenaza directa a su identidad, memoria histórica y cosmovisión, y subraya la urgencia de desarrollar estrategias de revitalización lingüística que involucren a toda la comunidad, especialmente a los más jóvenes.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>El análisis de condiciones de vida, medido por las Necesidades Básicas Insatisfechas (NBI), revela que el 49.19% de la población Tariana vive en situación de pobreza estructural. Si bien esta cifra es alarmante, es inferior al promedio nacional para pueblos indígenas, que se ubica en el 67.6%. Las carencias más significativas se concentran en los componentes de vivienda inadecuada, que afecta al 27.57% de la población, y el difícil acceso a servicios básicos, con un 28.11%. Adicionalmente, un 25.41% de la población se encuentra en condiciones de miseria, lo que indica la acumulación de múltiples privaciones y una vulnerabilidad acentuada que requiere atención prioritaria.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Tariano</div>
+      <div class="num-big">49,2%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 98.1%"></div></div><div class="num">27,6%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">28,1%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 94.2%"></div></div><div class="num">26,5%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 7.7%"></div></div><div class="num">2,2%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 26.9%"></div></div><div class="num">7,6%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los datos del Registro Único de Víctimas (RUV), no se reportan casos de personas con discapacidad del pueblo Tariano que hayan sido víctimas directas del conflicto armado en Colombia. El conteo oficial es de 0 víctimas para este grupo específico. Si bien esta cifra podría sugerir un bajo impacto del conflicto en el pueblo, también puede ser un indicio de barreras de acceso a la justicia y a los mecanismos de declaración, especialmente considerando su dispersión geográfica y la ubicación de sus comunidades en zonas rurales apartadas. No se identifican hechos victimizantes principales que hayan afectado de manera masiva al pueblo Tariano en los registros oficiales.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El pueblo Tariano presenta un Índice de Vulnerabilidad Compuesta (ICV) de 0.294, lo cual lo ubica en un nivel de vulnerabilidad medio-bajo en comparación con el conjunto de los pueblos indígenas del país. El análisis de sus componentes muestra que el principal factor de presión es el de las Necesidades Básicas Insatisfechas (NBI), con un valor normalizado de 0.492. La prevalencia de discapacidad contribuye de forma moderada con un puntaje de 0.325, mientras que el impacto del conflicto armado es nulo (0.0) según la información disponible. Esto indica que la vulnerabilidad del pueblo está más ligada a condiciones de pobreza estructural que a afectaciones por violencia directa.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.492</td><td class="num">0.40</td><td class="num"><b>0.197</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.325</td><td class="num">0.30</td><td class="num"><b>0.098</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.294</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un plan de emergencia para la revitalización de la lengua Tariana, involucrando a las nuevas generaciones y aprovechando que la población de 0 a 14 años suma 81 personas, ante la inexistencia de hablantes (0%).</li>
+      <li>Formular una estrategia de fortalecimiento de la gobernanza y la unidad del pueblo Tariano, que articule a las comunidades dispersas en los 9 departamentos y 5 resguardos, comenzando por el núcleo principal de 185 personas en Vichada.</li>
+      <li>Priorizar la inversión pública en programas de mejoramiento de vivienda y acceso a servicios básicos, dado que estos componentes son los principales determinantes del 49.19% de NBI que afecta al pueblo.</li>
+      <li>Realizar un autodiagnóstico o censo comunitario sobre la situación de la discapacidad para superar las limitaciones de los registros actuales, que con una cifra de 24 personas marcada como 'NO_CONFIABLE', impiden la formulación de políticas pertinentes.</li>
+      <li>Establecer un programa de seguridad alimentaria y desarrollo económico enfocado en la población en edad productiva (107 personas) para aliviar el alto índice de dependencia económica de 96.3 que recae sobre ellos.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/630/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Tariano</b>');
+</script>
+</body>
+</html>

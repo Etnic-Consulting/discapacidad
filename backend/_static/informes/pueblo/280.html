@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Emberá · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Emberá</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Emberá, con una población de 56,504 personas, constituye una de las presencias demográficas indígenas más significativas del país. Su vitalidad se manifiesta en una estructura poblacional joven y una amplia diáspora territorial que se extiende por 30 departamentos, aunque su corazón cultural y demográfico permanece en el Chocó, donde residen 40,901 de sus miembros. Esta fortaleza demográfica y territorial, sin embargo, contrasta fuertemente con las condiciones materiales de vida que enfrentan.</p><p></p><p>La cifra más crítica que define la situación actual del pueblo es su índice de Necesidades Básicas Insatisfechas (NBI), que alcanza un alarmante 75.33%. Este indicador no solo supera con creces el promedio nacional indígena del 67.6%, sino que además revela que más de la mitad de su población (52.81%) vive en condiciones de miseria. Esta vulnerabilidad estructural es el principal desafío para la pervivencia y el bienestar del pueblo.</p><p></p><p>La lectura clave de estos datos es que la resiliencia del pueblo Emberá está siendo puesta a prueba por una profunda crisis socioeconómica. La falta de acceso a servicios básicos es el componente más determinante de esta situación. Las estrategias de fortalecimiento y protección deben, por tanto, priorizar la reducción de estas brechas estructurales, reconociendo la diversidad de sus asentamientos territoriales y las necesidades específicas que de ellos se derivan, especialmente en materia de salud y vivienda.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">56.504</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">3.374</div><div class="sub">prevalencia 59,9‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">30</div><div class="sub">184 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.391</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Emberá, con una población total de 56,504 personas, se caracteriza por ser marcadamente joven y expansiva. El grupo de edad de 0 a 14 años concentra a 24,840 personas, lo que representa una base poblacional muy amplia. Esto se refleja en un alto Índice de Dependencia de 90.1, indicando que una gran proporción de la población, compuesta por niños y jóvenes, depende económicamente del segmento en edad de trabajar (15-64 años), que suma 29,722 individuos. Por el contrario, el Índice de Envejecimiento es de apenas 7.8, lo que confirma la juventud de la estructura demográfica y la presión que esta ejerce sobre los recursos y servicios para la crianza, educación y salud.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">12.597</td><td class="num">12.243</td><td class="num"><b>24.840</b></td><td class="num">44.0%</td></tr>
+      <tr><td>15-64 años</td><td class="num">14.805</td><td class="num">14.917</td><td class="num"><b>29.722</b></td><td class="num">52.6%</td></tr>
+      <tr><td>65+ años</td><td class="num">956</td><td class="num">986</td><td class="num"><b>1.942</b></td><td class="num">3.4%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>28.358</b></td><td class="num"><b>28.146</b></td><td class="num"><b>56.504</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">100,8</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">90,1</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">7,8</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Se identifican 3,374 personas con algún tipo de limitación en el pueblo Emberá, lo que resulta en una tasa de prevalencia de 59.9 por cada 1,000 habitantes. Este indicador se encuentra prácticamente a la par con el promedio nacional indígena (60.0), sugiriendo que las condiciones de salud y discapacidad son similares a las de otros pueblos. El análisis detallado revela que las limitaciones más comunes son de carácter físico: 'Caminar' es la principal dificultad, afectando a 718 personas (36.0% del total de limitaciones), seguida de 'Ver', con 570 casos (28.6%). La baja incidencia reportada en limitaciones de tipo psicosocial podría indicar un subregistro o una diferente conceptualización cultural de estas condiciones, mas no su ausencia.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Emberá</div>
+      <div class="num-big">59,9‰</div>
+      <div class="lbl">3.374 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 0,1‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="bar"><div class="lbl">Caminar</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">718</div></div>
+<div class="bar"><div class="lbl">Ver</div><div class="track"><div class="fill" style="width: 79.4%"></div></div><div class="num">570</div></div>
+<div class="bar"><div class="lbl">Oir</div><div class="track"><div class="fill" style="width: 29.9%"></div></div><div class="num">215</div></div>
+<div class="bar"><div class="lbl">Relacionarse</div><div class="track"><div class="fill" style="width: 24.5%"></div></div><div class="num">176</div></div>
+<div class="bar"><div class="lbl">Hablar</div><div class="track"><div class="fill" style="width: 18.9%"></div></div><div class="num">136</div></div>
+
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Emberá demuestra una notable capacidad de adaptación y resiliencia territorial, con presencia documentada en 30 departamentos del país. A pesar de esta amplia dispersión, su principal núcleo poblacional se concentra en el departamento de Chocó, donde habitan 40,901 de sus miembros, lo que representa más del 72% del total. Esta población se organiza en al menos 184 resguardos, evidenciando una compleja estructura de gobernanza territorial. Es importante notar que, aunque Chocó es el epicentro, existen comunidades significativas en Risaralda (5,372 personas) y Caldas (4,742 personas), cuyas tasas de discapacidad (90.47 y 84.56 por 1000, respectivamente) son considerablemente más altas que en su departamento principal, lo que sugiere vulnerabilidades particulares en estos contextos.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>CHOCO</td><td class="num">40.901</td><td class="num">2.243</td><td class="num">54,8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>RISARALDA</td><td class="num">5.372</td><td class="num">486</td><td class="num">90,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>CALDAS</td><td class="num">4.742</td><td class="num">401</td><td class="num">84,6‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">1.811</td><td class="num">86</td><td class="num">47,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">1.725</td><td class="num">82</td><td class="num">47,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>PUTUMAYO</td><td class="num">473</td><td class="num">11</td><td class="num">23,3‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CORDOBA</td><td class="num">403</td><td class="num">14</td><td class="num">34,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">271</td><td class="num">8</td><td class="num">29,5‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CAQUETA</td><td class="num">137</td><td class="num">14</td><td class="num">102,2‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>QUINDIO</td><td class="num">126</td><td class="num">5</td><td class="num">39,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Rios Catru - Dubasa y Ancoso</td><td>CHOCÓ</td><td>BAJO BAUDÓ</td><td class="num">3.988</td></tr>
+      <tr><td>Mayor del Medio Atrato ACIA</td><td>—</td><td>—</td><td class="num">3.127</td></tr>
+      <tr><td>Puerto Alegre-La Divisa</td><td>CHOCÓ</td><td>ALTO BAUDÓ</td><td class="num">2.125</td></tr>
+      <tr><td>Rios Jurubida-Chori-Alto Baudo</td><td>CHOCÓ</td><td>ALTO BAUDÓ</td><td class="num">2.007</td></tr>
+      <tr><td>Río Baudó Acaba</td><td>—</td><td>—</td><td class="num">1.862</td></tr>
+      <tr><td>Rio Purricha</td><td>CHOCÓ</td><td>BAJO BAUDÓ</td><td class="num">1.686</td></tr>
+      <tr><td>Dominico-Londoño-Partado</td><td>CHOCÓ</td><td>ALTO BAUDÓ</td><td class="num">1.596</td></tr>
+      <tr><td>Rio Garrapatas</td><td>VALLE DEL CAUCA</td><td>SIPÍ</td><td class="num">1.070</td></tr>
+      <tr><td>Alto Rio Cuia</td><td>CHOCÓ</td><td>BOJAYÁ</td><td class="num">981</td></tr>
+      <tr><td>Jagual Rio Chintado</td><td>CHOCÓ</td><td>CARMEN DEL DARIÉN</td><td class="num">940</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos proporcionados por la fuente censal indican que 0 personas hablan o entienden la lengua emberá. Este resultado es estadísticamente inverosímil y contradictorio con la realidad de un pueblo con una población de 56,504 personas y una fuerte identidad cultural. Se debe interpretar esta cifra como una ausencia de datos fiables o un error en la recolección y procesamiento de la información lingüística para este pueblo en la fuente consultada. Por lo tanto, no es posible realizar un análisis sobre la vitalidad o el estado de la lengua emberá con base en la información disponible, y se reconoce explícitamente que los datos a este nivel no están disponibles o no son confiables.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Emberá son extremadamente precarias, como lo demuestra un Índice de Necesidades Básicas Insatisfechas (NBI) del 75.33%, una cifra que supera en casi 8 puntos porcentuales al ya elevado promedio nacional indígena de 67.6%. La situación es aún más grave si se considera que un 52.81% de la población se encuentra en estado de miseria. El componente que más contribuye a esta situación es la falta de acceso a 'servicios' básicos, que afecta al 62.22% de la población. Le sigue el 'hacinamiento crítico', con un 50.66%, lo que indica condiciones de vivienda inadecuadas que impactan directamente en la salud y el bienestar de las familias Emberá.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Emberá</div>
+      <div class="num-big">75,3%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 29.2%"></div></div><div class="num">18,2%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">62,2%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 81.4%"></div></div><div class="num">50,7%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 17.7%"></div></div><div class="num">11,0%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 32.5%"></div></div><div class="num">20,2%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los datos del Registro Único de Víctimas (RUV), se reportan 0 víctimas con discapacidad pertenecientes al pueblo Emberá. Esta cifra debe ser interpretada con extrema cautela. Dada la población total de 56,504 personas y la ubicación de su territorio ancestral principal en Chocó, una de las zonas más afectadas por el conflicto armado en Colombia, un registro de cero víctimas resulta altamente improbable. Esta inconsistencia sugiere un subregistro severo y una posible barrera de acceso a la justicia y a las medidas de reparación para los miembros del pueblo Emberá con discapacidad que han sido víctimas del conflicto. La ausencia de datos impide analizar los hechos victimizantes predominantes.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El pueblo Emberá presenta un Índice de Vulnerabilidad Compuesta (ICV) de 0.391. Este valor, en una escala de 0 a 1, indica un nivel de vulnerabilidad significativo. El análisis de sus componentes revela que la principal fuente de esta fragilidad es de carácter socioeconómico. El componente normalizado de Necesidades Básicas Insatisfechas (NBI) es el más alto, con un valor de 0.753, lo que confirma que las precarias condiciones de vida son el factor más crítico. El componente de prevalencia de discapacidad aporta 0.299 al índice, mientras que el de conflicto armado registra un 0.0, un dato que, como se ha señalado, probablemente refleja un subregistro severo y no una ausencia de afectación.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.753</td><td class="num">0.40</td><td class="num"><b>0.301</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.299</td><td class="num">0.30</td><td class="num"><b>0.090</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.391</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un plan de choque para mejorar las condiciones de vida, priorizando la inversión en saneamiento básico y acceso a servicios públicos, ya que este es el componente que impulsa el NBI hasta un 75.33%.</li>
+      <li>Establecer programas de atención diferencial en salud para las comunidades Emberá fuera del Chocó, especialmente en Risaralda, donde la tasa de prevalencia de discapacidad se dispara a 90.47 por cada 1,000 habitantes.</li>
+      <li>Crear brigadas de atención y dotación de ayudas técnicas (bastones, sillas de ruedas, lentes) enfocadas en las limitaciones para 'Caminar' y 'Ver', que en conjunto representan el 64.6% de las discapacidades reportadas (afectando a 718 y 570 personas, respectivamente).</li>
+      <li>Realizar una jornada de registro y caracterización de víctimas del conflicto armado en coordinación con las autoridades del pueblo Emberá, para corregir el evidente subregistro de 0 víctimas con discapacidad y garantizar el acceso a derechos.</li>
+      <li>Fortalecer la economía propia y la soberanía alimentaria en los 184 resguardos para mitigar el alto Índice de Dependencia económica (90.1) y reducir la presión sobre la población en edad productiva.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/280/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[3.16230624800005, -77.46035571799996], [8.002553918000046, -74.64913288399998]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[3.16230624800005, -77.46035571799996], [8.002553918000046, -74.64913288399998]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([5.582430083000048, -76.05474430099997]).addTo(map)
+    .bindPopup('<b>PUEBLO Emberá</b>');
+</script>
+</body>
+</html>

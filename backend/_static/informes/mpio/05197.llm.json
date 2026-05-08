@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Cocorná (Antioquia) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 en todos los indicadores demográficos. Sin embargo, se identifican 5 víctimas de desplazamiento forzado entre 1985-2024, todas con discapacidad, lo que representa el 100% de los hechos de conflicto. La ausencia de datos demográficos y territoriales limita la interpretación, pero el registro de víctimas exige atención prioritaria.",
+  "demografia": "Los datos demográficos para Cocorná indican n=0 en población indígena (CNPV 2018), lo que invalida cualquier análisis de pirámide etaria. La confiabilidad de estos datos es NO_CONFIABLE según la meta-información proporcionada. Esta ausencia refleja posibles subregistros en la identificación étnica a nivel municipal.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para Cocorná. La sección correspondiente está marcada como _sin_datos, lo que impide evaluar la carga de morbilidad en la población indígena del municipio. Se requiere fortalecer sistemas de registro específicos.",
+  "territorial": "Cocorná cuenta con 0 resguardos indígenas registrados, pese a tener una extensión territorial definida por su bbox. La ausencia de territorios colectivos reconocidos contrasta con la presencia de víctimas de desplazamiento forzado, sugiriendo procesos de despojo o falta de titulación. La dispersión geográfica no aplica en este caso.",
+  "lengua": "Los datos sobre lenguas indígenas en Cocorná no están disponibles (_sin_datos). No es posible analizar la vitalidad lingüística ni la presencia de lenguas propias en el territorio. Esta omisión dificulta la planificación de políticas de revitalización cultural.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) para Cocorná (_sin_datos). El promedio indígena nacional de NBI es 67.6%, pero no se puede calcular la brecha local. La falta de datos impide priorizar intervenciones en condiciones de vida.",
+  "conflicto": "Se registran 5 víctimas de desplazamiento forzado con discapacidad en Cocorná (1985-2024), siendo este el 100% de los hechos de conflicto. La concentración en un solo tipo de victimización refleja patrones de violencia estructural contra personas indígenas con discapacidad en el municipio.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para Cocorná es 0.0, con todos sus componentes en 0.0 excepto conflicto_norm (0.001). Este resultado refleja la ausencia de datos en NBI y prevalencia, lo que sesga el indicador. La fórmula del ICV no puede interpretarse con confiabilidad en este contexto.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal que identifique y cuantifique la población indígena, superando el subregistro actual con n=0 en CNPV 2018.",
+    "Priorizar la atención a víctimas de desplazamiento forzado con discapacidad en Cocorná, donde el 100% de los hechos registrados corresponden a este tipo de victimización.",
+    "Realizar un diagnóstico territorial participativo para identificar posibles resguardos no reconocidos o procesos de despojo en el municipio.",
+    "Diseñar estrategias de revitalización cultural que aborden la ausencia de datos sobre lenguas indígenas en Cocorná.",
+    "Solicitar al DANE la desagregación de indicadores sociales por pertenencia étnica a nivel municipal para superar la falta de datos en NBI y prevalencia."
+  ]
+}

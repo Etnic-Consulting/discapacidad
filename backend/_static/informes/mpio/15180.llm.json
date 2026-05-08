@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Chiscas (Boyacá) registra una población indígena de solo 4 personas según CNPV 2018, distribuidas en 3 pueblos. El 50% de las víctimas indígenas del municipio son por amenazas, con 1 caso de desplazamiento forzado. El ICV de 0.0 refleja condiciones críticas en NBI, prevalencia y conflicto, sin datos disponibles para análisis más detallados.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida muestra (n=4). Los datos demográficos se limitan a la población total indígena agregada por pueblo, sin desagregación por edad o género. La confiabilidad es alta (n=4), pero la representatividad es mínima para análisis poblacionales.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Chiscas a nivel municipal. Los registros de discapacidad y salud no están desagregados en este territorio. Se reconoce la limitación interpretativa por falta de información confiable a este nivel.",
+  "territorial": "Chiscas no cuenta con resguardos indígenas registrados (n=0). La georreferenciación del municipio abarca coordenadas entre 6.496 y 6.851 latitud, y -72.549 y -72.292 longitud, sin presencia territorial colectiva reconocida. La dispersión geográfica no aplica por ausencia de territorios.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede analizar la vitalidad lingüística ni la distribución de hablantes en Chiscas por falta de registros oficiales.",
+  "vida": "No hay datos de NBI disponibles para Chiscas. El promedio indígena nacional es 67.6%, pero no se puede calcular la brecha local. La falta de información impide evaluar condiciones de vida en el municipio.",
+  "conflicto": "Se registran 2 víctimas indígenas con discapacidad en Chiscas (1985-2024), con hechos principales de amenazas (50%) y desplazamiento forzado (50%). La confiabilidad es alta (n=2), pero la muestra es insuficiente para generalizaciones. La violencia afecta de manera equitativa ambos tipos de hechos.",
+  "icv": "El ICV de Chiscas es 0.0, con componentes normalizados en 0.0 para NBI, prevalencia y conflicto. La fórmula (0.4*NBI + 0.3*prev + 0.3*conflicto) refleja condiciones extremas en todos los indicadores. La posición relativa es crítica frente a otros territorios.",
+  "recomendaciones": [
+    "Priorizar la identificación y registro de pueblos indígenas en Chiscas, dado que solo 4 personas están reconocidas oficialmente (población_total: 4).",
+    "Implementar un sistema de monitoreo local de violencia contra indígenas, considerando que el 50% de los hechos son amenazas (hecho_principal: Amenaza).",
+    "Realizar un censo étnico municipal para superar el subregistro actual (n_pueblos: 3, pero con 1 pueblo sin información).",
+    "Diseñar estrategias de protección territorial en Chiscas, donde no existen resguardos registrados (n_resguardos: 0).",
+    "Articular con autoridades departamentales para generar datos de NBI y prevalencia, actualmente no disponibles (_sin_datos: true)."
+  ]
+}

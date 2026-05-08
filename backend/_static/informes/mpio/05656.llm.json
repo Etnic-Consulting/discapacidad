@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Jerónimo (Antioquia) concentra una población indígena de 9 personas según el CNPV 2018, donde el 66.7% corresponde al pueblo EMBERA-CHAMI. La ausencia de resguardos y datos de NBI o lengua refleja una invisibilización institucional de las comunidades en el territorio. La prioridad es reconocer la presencia indígena histórica y garantizar su inclusión en políticas públicas locales.",
+  "demografia": "La población indígena en San Jerónimo es mínima (9 personas) y está distribuida en 4 pueblos, con el EMBERA-CHAMI como grupo dominante (6 personas). La pirámide etaria no aplica por el bajo tamaño muestral (n=9), lo que limita cualquier análisis demográfico detallado. Se requiere desagregación por edad y género para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de registros impide analizar subregistros o brechas sanitarias. Se recomienda priorizar sistemas de información locales que capturen la salud indígena con enfoque diferencial.",
+  "territorial": "San Jerónimo no cuenta con resguardos indígenas registrados, pese a su ubicación en un área geográfica delimitada (bbox con coordenadas válidas). La ausencia de territorios colectivos formalizados contrasta con la presencia histórica de pueblos como los EMBERAS. Urge avanzar en la delimitación y protección de espacios ancestrales.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. Esta omisión invisibiliza la diversidad lingüística y dificulta la planificación educativa intercultural. Se debe incluir en censos y registros administrativos la variable lengua materna indígena.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para San Jerónimo. El promedio indígena nacional (67.6%) no puede contrastarse localmente por falta de datos. La invisibilización estadística impide medir brechas en acceso a servicios básicos para las 9 personas indígenas identificadas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en San Jerónimo entre 1985-2024 (n=0). La ausencia de hechos violentos reportados no descarta afectaciones no documentadas. Se debe fortalecer el Registro Único de Víctimas con enfoque étnico para captar violencias estructurales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en San Jerónimo es 0.0, derivado de la falta de datos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no refleja la realidad por ausencia de inputs. Se requiere recolección de datos primarios para calcular indicadores confiables.",
+  "recomendaciones": [
+    "Realizar un censo indígena local con enfoque diferencial para actualizar datos demográficos y territoriales, citando la población actual de 9 personas.",
+    "Iniciar un proceso de delimitación y constitución de resguardos para los pueblos EMBERA-CHAMI y otros presentes, considerando la ausencia actual de territorios reconocidos.",
+    "Implementar un sistema de información en salud que registre prevalencia de enfermedades en la población indígena, dado que no hay datos disponibles.",
+    "Incluir la variable lengua materna indígena en el Sisbén y otros registros administrativos para visibilizar la diversidad cultural en San Jerónimo.",
+    "Fortalecer el RUV con enfoque étnico en el municipio para documentar posibles afectaciones no reportadas, ante el registro actual de 0 víctimas."
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "tipo": "mpio",
+  "id": "50325",
+  "nombre": "MAPIRIPAN",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1668,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 1668,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 11,
+      "top": [
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 905
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 732
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 15
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 6
+        },
+        {
+          "cod_pueblo": "840",
+          "pueblo": "KICHWA",
+          "poblacion": 3
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 2
+        },
+        {
+          "cod_pueblo": "500",
+          "pueblo": "NASA",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "855",
+          "pueblo": "TAYRONAS",
+          "poblacion": 1
+        },
+        {
+          "cod_pueblo": "940",
+          "pueblo": "INDIGENAS-BRASIL",
+          "poblacion": 1
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "320",
+        "pueblo": "JIW",
+        "poblacion": 905
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 4,
+      "resguardos": [
+        {
+          "nombre": "CAÑO JABÓN",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 5688.214
+        },
+        {
+          "nombre": "CHARCO CAIMÁN",
+          "pueblo_onic": "GUANANO",
+          "area_pg_ha": 1923.637
+        },
+        {
+          "nombre": "NAEXAL LAJT DEL PUEBLO JIW",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 1731.304
+        },
+        {
+          "nombre": "CAÑO OVEJAS (BETANIA COROCITO)",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 1727.134
+        }
+      ],
+      "bbox": [
+        2.7254759208769914,
+        -72.9159558480954,
+        3.486410459812206,
+        -71.07752569599427
+      ],
+      "nombre_mpio": "MAPIRIPAN",
+      "cod_dpto": "50"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 75,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 75,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 55
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 5
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 4
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 55
+      },
+      "pct_hecho_principal": 73.3
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.015
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:45:19",
+  "periodo": "2018",
+  "_input_hash": "ea0b7666f334f9aa"
+}

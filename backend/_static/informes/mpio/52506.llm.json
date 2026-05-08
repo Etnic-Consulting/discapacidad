@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Ospina, Nariño, alberga una población indígena de 294 personas, correspondiente al pueblo PASTOS según CNPV 2018. No se registran resguardos en su territorio, lo que limita la protección legal colectiva. El Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia.",
+  "demografia": "La población indígena de Ospina es de 294 personas, concentrada en un solo pueblo (PASTOS). La pirámide etaria no puede analizarse al no disponerse de datos desagregados por edad. La falta de información sobre capacidades diversas impide evaluar vulnerabilidades específicas en el municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Ospina. El promedio indígena nacional de 60.0% en capacidades diversas no puede contrastarse localmente. Esto subraya la necesidad de sistemas de registro diferenciados para pueblos indígenas.",
+  "territorial": "Ospina no cuenta con resguardos indígenas, pese a ser territorio histórico del pueblo PASTOS. La dispersión geográfica se limita a la extensión municipal (bbox: 0.987 a 1.071 latitud, -77.59 a -77.49 longitud). La ausencia de territorios colectivos agrava riesgos de despojo y pérdida cultural.",
+  "lengua": "Los datos sobre lengua en Ospina no están disponibles. No se puede determinar el estado de vitalidad del idioma pastos ni su uso en contextos cotidianos o educativos.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Ospina. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de datos impide evaluar brechas en acceso a servicios básicos para el pueblo PASTOS.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Ospina entre 1985-2024. La ausencia de hechos victimizantes no descarta subregistros o afectaciones indirectas. La paz territorial requiere verificar estas cifras con fuentes comunitarias.",
+  "icv": "El ICV de Ospina es 0.0, derivado de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia vacíos críticos en indicadores sociales y de derechos humanos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por edad, género y discapacidad, priorizando al pueblo PASTOS, para superar la falta de datos críticos (población_total: 294).",
+    "Gestionar la constitución de resguardos territoriales en Ospina, articulando con la ONIC y el Ministerio del Interior, dado que no existen territorios colectivos registrados (n_resguardos: 0).",
+    "Implementar un sistema de alerta temprana para conflictos territoriales, pese a la ausencia actual de víctimas registradas, asegurando participación comunitaria en la recolección de datos.",
+    "Diseñar programas de revitalización lingüística para el pastos, en alianza con escuelas rurales y líderes tradicionales, ante la falta de datos sobre lengua (lengua: _sin_datos).",
+    "Exigir al DANE y al Ministerio de Salud la inclusión de variables indígenas en encuestas locales, para calcular NBI y prevalencia con metodologías culturalmente pertinentes."
+  ]
+}

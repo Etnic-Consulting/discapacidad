@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Mokana · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Mokana</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Mokana, con una población de 37,099 personas según datos de 2018, presenta un panorama de contrastes marcados que definen su situación actual. Desde una perspectiva socioeconómica, sus indicadores son notablemente favorables, con un índice de Necesidades Básicas Insatisfechas (NBI) de apenas 11.84%, muy por debajo del promedio indígena nacional del 67.6%. Esta aparente prosperidad material, sin embargo, coexiste con una vulnerabilidad cultural extrema, evidenciada en la pérdida total de su lengua ancestral, que ya no es hablada ni comprendida por ningún miembro de la comunidad (0.0% de hablantes).</p><p></p><p>Demográficamente, el pueblo muestra un perfil en transición, con una base juvenil importante pero también con un índice de envejecimiento de 37.6, lo que indica una creciente población mayor. Territorialmente, los Mokana se encuentran dispersos en 21 departamentos, aunque su núcleo poblacional principal, con 36,942 miembros, se asienta en el departamento del Atlántico. La prevalencia de discapacidad (47.4 por 1,000) es inferior al promedio nacional, lo que podría indicar un subregistro de casos.</p><p></p><p>La lectura clave de estos datos sugiere un profundo proceso de asimilación y desterritorialización. A pesar de que el conflicto armado ha tenido un impacto medible, con 31 víctimas con discapacidad registradas, la principal vulnerabilidad del pueblo Mokana no reside en la pobreza o la violencia, sino en la inminente desaparición de su patrimonio cultural inmaterial. Las políticas de fortalecimiento deben enfocarse con urgencia en la recuperación de la identidad y la lengua, como pilares para su pervivencia como pueblo.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">37.099</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">3.518</div><div class="sub">prevalencia 47,4‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">21</div><div class="sub">1 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.12</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Mokana, que cuenta con 37,099 personas, refleja una fase de transición. Con un índice de envejecimiento de 37.6 y una población de 3,195 personas mayores de 65 años, la pirámide poblacional se aleja del modelo expansivo tradicional. La razón de masculinidad es de 101.0, indicando un ligero equilibrio entre hombres (18,645) y mujeres (18,454). El índice de dependencia es de 46.0, lo que significa que por cada 100 personas en edad de trabajar, hay 46 personas dependientes (niños y ancianos), una carga relativamente moderada que facilita el desarrollo económico. La base poblacional más amplia se encuentra en los grupos de edad de 15 a 29 años, constituyendo una fuerza laboral joven.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">4.318</td><td class="num">4.182</td><td class="num"><b>8.500</b></td><td class="num">22.9%</td></tr>
+      <tr><td>15-64 años</td><td class="num">12.781</td><td class="num">12.623</td><td class="num"><b>25.404</b></td><td class="num">68.5%</td></tr>
+      <tr><td>65+ años</td><td class="num">1.546</td><td class="num">1.649</td><td class="num"><b>3.195</b></td><td class="num">8.6%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>18.645</b></td><td class="num"><b>18.454</b></td><td class="num"><b>37.099</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">101,0</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">46,0</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">37,6</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Se registra una prevalencia de discapacidad de 47.4 por cada 1,000 personas en el pueblo Mokana, identificando a un total de 3,518 miembros con alguna limitación. Esta tasa es inferior al promedio nacional indígena de 60.0 por 1,000, lo que podría sugerir un subregistro o barreras en el acceso a diagnósticos más que una menor incidencia real. La principal limitación reportada es la visual ('Ver'), que afecta al 42.0% de los casos (712 personas), seguida por las dificultades para caminar, con un 26.6% (451 personas). Las limitaciones de tipo cognitivo o de relacionamiento como 'Aprender' o 'Relacionarse' presentan porcentajes menores, 7.8% y 5.7% respectivamente. Es fundamental analizar si estas cifras reflejan la realidad o si se necesitan estrategias activas de búsqueda.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Mokana</div>
+      <div class="num-big">47,4‰</div>
+      <div class="lbl">3.518 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 12,6‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="bar"><div class="lbl">Ver</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">712</div></div>
+<div class="bar"><div class="lbl">Caminar</div><div class="track"><div class="fill" style="width: 63.3%"></div></div><div class="num">451</div></div>
+<div class="bar"><div class="lbl">Oir</div><div class="track"><div class="fill" style="width: 19.9%"></div></div><div class="num">142</div></div>
+<div class="bar"><div class="lbl">Aprender</div><div class="track"><div class="fill" style="width: 18.5%"></div></div><div class="num">132</div></div>
+<div class="bar"><div class="lbl">Relacionarse</div><div class="track"><div class="fill" style="width: 13.6%"></div></div><div class="num">97</div></div>
+
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Mokana evidencia un alto grado de dispersión y desterritorialización, con presencia en 21 departamentos del país. A pesar de esta diáspora, la gran mayoría de su población, 36,942 de sus 37,099 miembros, se concentra en el departamento del Atlántico, su territorio ancestral. Los datos presentan una inconsistencia al registrar la totalidad de la población (37,099) en el departamento de Vichada, lo que probablemente sea un artefacto de la consolidación de datos. La presencia del pueblo en territorios colectivos es mínima, con un solo resguardo identificado ('La Boquilla') que alberga a una sola persona, lo que refuerza la evidencia de un patrón de vida mayoritariamente urbano o en áreas no tituladas colectivamente.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">37.099</td><td class="num">1.759</td><td class="num">47,4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>ATLANTICO</td><td class="num">36.942</td><td class="num">1.747</td><td class="num">47,3‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">47</td><td class="num">3</td><td class="num">63,8‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOLIVAR</td><td class="num">24</td><td class="num">1</td><td class="num">41,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>LA GUAJIRA</td><td class="num">11</td><td class="num">5</td><td class="num">454,6‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">11</td><td class="num">1</td><td class="num">90,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CORDOBA</td><td class="num">11</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">9</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CESAR</td><td class="num">6</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>MAGDALENA</td><td class="num">6</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>La Boquilla</td><td>—</td><td>—</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>La situación de la lengua del pueblo Mokana es crítica y representa su mayor vulnerabilidad cultural. Según los datos disponibles, no se registra ni un solo hablante o persona que entienda la lengua ancestral, lo que se traduce en un porcentaje del 0.0% sobre una población total de 37,099 personas. Este indicador es una señal inequívoca de una ruptura en la transmisión intergeneracional del idioma, un pilar fundamental de la identidad y la cosmovisión del pueblo. La pérdida total de la lengua pone en riesgo inminente la continuidad histórica y cultural de los Mokana, haciendo de su revitalización una tarea de máxima urgencia para la pervivencia del pueblo.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>En términos de condiciones de vida, el pueblo Mokana presenta un panorama atípicamente favorable en comparación con otros pueblos indígenas. El porcentaje de población con Necesidades Básicas Insatisfechas (NBI) es de solo 11.84%, una cifra drásticamente inferior al promedio nacional indígena del 67.6%. De igual forma, la incidencia de miseria o pobreza extrema es baja, situándose en 1.57%. Los componentes que más aportan a las carencias existentes son la alta dependencia económica (4.08%) y el hacinamiento en las viviendas (3.82%). Estos indicadores sugieren un alto nivel de integración en la economía formal y acceso a servicios, aunque esto puede ser un factor que acelera la asimilación cultural.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Mokana</div>
+      <div class="num-big">11,8%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 65.7%"></div></div><div class="num">2,7%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 40.2%"></div></div><div class="num">1,6%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 93.6%"></div></div><div class="num">3,8%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 35.3%"></div></div><div class="num">1,4%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">4,1%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>El conflicto armado ha dejado una huella específica en la población con discapacidad del pueblo Mokana, con un registro de 31 víctimas en el RUV. El hecho victimizante predominante es el 'Desplazamiento forzado', que representa el 58.1% de los casos, afectando a 18 personas. Este dato subraya que la expulsión de sus territorios o lugares de residencia ha sido la principal forma de violencia ejercida contra este grupo vulnerable. Le siguen en frecuencia la 'Desaparición forzada' y la 'Amenaza', cada una con 4 víctimas registradas. Aunque el impacto cuantitativo en el índice de vulnerabilidad general es bajo, estas cifras revelan un sufrimiento concreto que requiere atención y reparación diferencial.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">31</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">58,1% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">18</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desaparición forzada</div><div class="track"><div class="fill" style="width: 22.2%"></div></div><div class="num">4</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 22.2%"></div></div><div class="num">4</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 11.1%"></div></div><div class="num">2</div></div>
+<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Delitos contra la libertad y la integridad sexual en desarro</div><div class="track"><div class="fill" style="width: 5.6%"></div></div><div class="num">1</div></div>
+
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Crítica (ICV) para el pueblo Mokana es de 0.12, un valor bajo que lo posiciona en una situación de menor riesgo en comparación con otros pueblos indígenas. Este resultado se explica principalmente por sus sólidos indicadores socioeconómicos, con un componente de NBI normalizado de 0.118, y un impacto muy bajo del conflicto armado, cuyo componente normalizado es de apenas 0.006. La dimensión que más aporta a la vulnerabilidad es la de salud, con un componente de prevalencia de discapacidad normalizado de 0.237. En conjunto, el ICV refleja que la criticidad para los Mokana no está en la pobreza material, sino en otras dimensiones no ponderadas por este índice, como la cultural.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.118</td><td class="num">0.40</td><td class="num"><b>0.047</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.237</td><td class="num">0.30</td><td class="num"><b>0.071</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.006</td><td class="num">0.30</td><td class="num"><b>0.002</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.12</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un plan de choque para la revitalización de la lengua y la cultura Mokana, ya que los datos censales reportan un 0.0% de hablantes, lo que sitúa al pueblo al borde de la extinción cultural.</li>
+      <li>Realizar una caracterización detallada de la población con discapacidad para verificar si la prevalencia registrada de 47.4 por 1,000, inferior al promedio nacional indígena (60.0), se debe a un subregistro que invisibiliza necesidades.</li>
+      <li>Fomentar programas de autonomía económica y mejora de vivienda para atender los principales componentes del NBI, que son la dependencia económica (4.08%) y el hacinamiento (3.82%).</li>
+      <li>Solicitar a las entidades correspondientes la depuración de los registros poblacionales para corregir inconsistencias territoriales, como la atribución de 37,099 personas a Vichada, y asegurar un censo preciso de la población en el Atlántico.</li>
+      <li>Establecer una ruta de atención y reparación integral para las 31 víctimas con discapacidad registradas, con énfasis en las 18 personas afectadas por desplazamiento forzado, garantizando su derecho a la no repetición.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/820/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Mokana</b>');
+</script>
+</body>
+</html>

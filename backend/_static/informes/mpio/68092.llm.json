@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Betulia (Santander) registra una población indígena de solo 7 personas según el CNPV 2018, concentrada en 6 pueblos distintos. El pueblo Guane domina con 2 personas, mientras los demás (Arhuaco, Wayúu, Yuruti, Zenú y sin información) tienen presencia testimonial. La ausencia de resguardos y datos de lengua refleja una fragilidad organizativa territorial en este municipio.",
+  "demografia": "La pirámide etaria no aplica por el tamaño poblacional (n=7). La dispersión entre 6 pueblos sin predominio claro evidencia fragmentación identitaria. La población total indígena es mínima comparada con el promedio departamental de 60.0% en capacidades diversas, lo que limita análisis demográficos robustos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en Betulia. La falta de información impide evaluar subregistros o patrones de afectación. Se requiere priorizar la recolección de datos epidemiológicos locales para identificar necesidades prioritarias.",
+  "territorial": "Betulia carece de resguardos indígenas, lo que contrasta con su bbox municipal que abarca 6.849 a 7.153 latitud y -73.540 a -73.217 longitud. La ausencia de territorios colectivos limita la autonomía y protección cultural, reduciendo la capacidad de resistencia frente a presiones externas.",
+  "lengua": "Los datos de lengua no están disponibles para Betulia. Esta omisión invisibiliza la diversidad lingüística local y obstaculiza la revitalización cultural. Se debe incluir este indicador en futuros censos para garantizar el derecho a la identidad cultural.",
+  "vida": "No hay datos de NBI disponibles para Betulia. El promedio indígena nacional es 67.6%, pero sin cifras locales no se puede medir la brecha. La falta de información impide diseñar estrategias de reducción de pobreza multidimensional en este territorio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Betulia entre 1985-2024 (n=0). La ausencia de hechos violentos reportados sugiere baja visibilidad o subregistro. Se debe fortalecer el sistema de alertas tempranas para garantizar la protección integral.",
+  "icv": "El ICV de Betulia es 0.0, con componentes en cero (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos desagregados y la invisibilización estadística. La fórmula del ICV no puede aplicarse sin información confiable, subrayando la urgencia de mejorar la recolección de datos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar el subregistro actual (n=7) y visibilizar la diversidad étnica en Betulia.",
+    "Crear un programa de fortalecimiento cultural que incluya la recuperación de la lengua ancestral, priorizando la inclusión de este indicador en futuras mediciones.",
+    "Establecer un resguardo indígena en Betulia para garantizar la protección territorial, dado que actualmente no existen territorios colectivos reconocidos.",
+    "Implementar un sistema de alertas tempranas para víctimas de violencia, considerando el riesgo de subregistro en contextos de baja densidad poblacional.",
+    "Diseñar estrategias de desarrollo local con enfoque diferencial, usando el promedio indígena nacional de NBI (67.6%) como referencia para priorizar intervenciones."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo BURUJÓN O LA UNIÓN - SAN BERNARDO, territorio Wounaan en Buenaventura (Valle del Cauca), alberga 945 habitantes según datos DANE-CNPV 2018. Con una extensión de 6349.97 hectáreas, este territorio enfrenta vacíos críticos en información sobre lengua, NBI y capacidades diversas. La ausencia de registros de víctimas en el RUV (0 casos) contrasta con la realidad de violencia estructural en la región, sugiriendo sub-registro o limitaciones metodológicas.",
+  "demografia": "La población total es de 945 habitantes, con datos confiables según DANE-CNPV 2018 (n=945). No se dispone de pirámide etaria ni estructura por edades en este nivel de desagregación. La falta de datos demográficos detallados impide analizar dinámicas generacionales o presión sobre recursos territoriales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. Los sistemas de información territorial no capturan este indicador a nivel de resguardo, lo que limita la identificación de necesidades sanitarias específicas del pueblo Wounaan en este territorio.",
+  "territorial": "El resguardo ocupa 6349.97 hectáreas en la zona rural de Buenaventura, con coordenadas que delimitan un área de alta biodiversidad en la macro región Occidente. Su ubicación estratégica en el Pacífico colombiano lo expone a presiones extractivas y conflictos por uso del suelo, pese a su reconocimiento legal.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión invisibiliza la vitalidad cultural del pueblo Wounaan, cuya lengua ancestral es un pilar de su identidad y cosmovisión.",
+  "vida": "No se registran datos de NBI para este resguardo. El promedio indígena nacional (67.6%) sugiere condiciones de pobreza multidimensional, pero la falta de información local impide dimensionar brechas específicas en acceso a servicios básicos, educación o vivienda.",
+  "conflicto": "No se reportan víctimas con discapacidad en el RUV para este resguardo (0 casos). La ausencia de registros no implica ausencia de violencia, sino fallas en la sistematización de datos territoriales. Buenaventura es zona de alta conflictividad, lo que exige revisar metodologías de recolección.",
+  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, derivado de la falta de datos en NBI, prevalencia y conflicto. La fórmula aplicada (ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin inputs confiables, reflejando la urgencia de fortalecer sistemas de información territorial.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de lengua Wounaan para documentar vitalidad cultural, citando la ausencia de datos en la sección `lengua` del JSON.",
+    "Diseñar un protocolo de recolección de NBI a nivel de resguardo, comparando con el promedio indígena nacional (67.6%) para priorizar intervenciones.",
+    "Revisar metodologías del RUV en Buenaventura para capturar casos de violencia en territorios Wounaan, dado que el JSON reporta 0 víctimas pese a contexto de conflicto.",
+    "Fortalecer la articulación con ACIVA-WOUNDEKO para generar datos propios del pueblo, superando vacíos en `capacidades_diversas` y `prevalencia`.",
+    "Promover estudios de presión territorial en los 6349.97 hectáreas del resguardo, vinculando uso del suelo con dinámicas extractivas que afectan al pueblo Wounaan."
+  ]
+}

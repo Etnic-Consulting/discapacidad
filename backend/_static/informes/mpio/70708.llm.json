@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Marcos (Sucre) concentra el 99% de su población indígena en el pueblo Zenú, con 12.080 personas, mientras los demás 12 pueblos suman solo 127. La ausencia de resguardos (n=0) refleja una debilidad territorial crítica para la autonomía. La violencia persiste: 22 víctimas de conflicto, donde el desplazamiento forzado representa el 68.2% de los hechos registrados entre 1985-2024.",
+  "demografia": "La pirámide etaria no aplica en este nivel municipal, pues los datos se agregan por pueblos. Sin embargo, el pueblo Zenú domina con 12.080 personas, mientras los 12 restantes suman 127, evidenciando una alta concentración étnica. La diversidad cultural se diluye en un municipio donde un solo pueblo ejerce hegemonía demográfica.",
+  "prevalencia": "Los datos de prevalencia de enfermedades no están disponibles a nivel municipal. Esta limitación impide analizar patrones de salud específicos para los pueblos indígenas en San Marcos. Se requiere desagregación por pueblo para identificar necesidades diferenciadas y evitar sub-registros en la atención.",
+  "territorial": "San Marcos carece de resguardos (n=0), lo que limita el acceso a tierras colectivas para los 13 pueblos registrados. La dispersión geográfica se extiende entre las coordenadas 8.39664 y 8.74063 de latitud, y -75.35961 a -74.98078 de longitud, sin territorios legalmente reconocidos.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. Esta ausencia impide evaluar la vitalidad lingüística de los pueblos presentes, especialmente del pueblo Zenú, mayoritario en la zona.",
+  "vida": "No hay datos disponibles sobre NBI a nivel municipal. El promedio indígena nacional (67.6%) no puede contrastarse aquí. Se requiere desagregación para identificar brechas en condiciones de vida entre los pueblos Zenú y los demás grupos minoritarios.",
+  "conflicto": "Se registraron 22 víctimas de conflicto en San Marcos, con desplazamiento forzado como hecho principal (68.2% del total). Los homicidios (13.6%) y actos terroristas (9.1%) completan el patrón de violencia. La concentración de hechos en desplazamiento refleja dinámicas de despojo territorial históricas.",
+  "icv": "El ICV de San Marcos es 0.001, con conflicto como dimensión dominante (0.004). La fórmula pondera NBI (0.4), prevalencia (0.3) y conflicto (0.3), pero la ausencia de datos en estas dos últimas áreas sesga el resultado. La posición relativa es crítica frente a otros municipios.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para los 13 pueblos indígenas en San Marcos, dado que actualmente no existen territorios colectivos reconocidos (n=0).",
+    "Implementar un sistema de monitoreo de salud desagregado por pueblo, ya que los datos de prevalencia no están disponibles a nivel municipal.",
+    "Diseñar políticas de protección diferencial para el pueblo Zenú, que concentra el 99% de la población indígena, evitando que su peso demográfico invisibilice a los otros 12 grupos.",
+    "Crear rutas de atención psicosocial para víctimas de desplazamiento forzado, que representan el 68.2% de los hechos de violencia registrados.",
+    "Incluir indicadores de NBI desagregados por pueblo en el próximo censo municipal, para comparar con el promedio indígena nacional (67.6%) y focalizar recursos."
+  ]
+}

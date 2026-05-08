@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Acevedo (Huila) concentra una población indígena de 238 personas según CNPV 2018, donde el pueblo Andakí representa el 55.9% (133 habitantes). La ausencia de resguardos indígenas en el territorio contrasta con la diversidad étnica registrada. El desplazamiento forzado emerge como el principal hecho victimizante, afectando al 69% de las 29 víctimas con discapacidad en el periodo 1985-2024.",
+  "demografia": "La población indígena de Acevedo presenta una estructura etaria concentrada en adultos (133 Andakíes), con presencia minoritaria de pueblos como Yanacona (74) y Pijao (5). Los datos no permiten analizar pirámides etarias detalladas. La alta proporción de población sin información étnica específica (11 casos) limita el análisis demográfico preciso.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La sección de capacidades diversas carece de información específica, impidiendo evaluar condiciones de discapacidad o salud. Se requiere desagregación a nivel pueblo para análisis confiable.",
+  "territorial": "Acevedo registra cero resguardos indígenas pese a albergar 10 pueblos distintos. La dispersión geográfica del territorio municipal (coordenadas bbox) no se traduce en reconocimiento legal de territorios colectivos. La ausencia de resguardos limita la autonomía territorial y el ejercicio de derechos indígenas.",
+  "lengua": "Los datos sobre lenguas indígenas en Acevedo no están disponibles en este informe. No se puede determinar la vitalidad lingüística ni la presencia de lenguas en riesgo en el territorio municipal.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Acevedo. El promedio indígena nacional de NBI (67.6%) no puede compararse localmente por falta de datos. La ausencia de indicadores socioeconómicos impide evaluar brechas de bienestar en el municipio.",
+  "conflicto": "Las 29 víctimas con discapacidad en Acevedo están afectadas principalmente por desplazamiento forzado (69%). Los hechos victimizantes incluyen amenazas (17.2%) y otros delitos menores. La concentración de violencia en desplazamiento refleja dinámicas de conflicto armado en la región andina del Huila.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Acevedo es 0.002, con componentes nulos en NBI y prevalencia, y 0.006 en conflicto. La fórmula pondera el conflicto como principal determinante, aunque con valores mínimos. La posición relativa del municipio en el contexto departamental o nacional no puede determinarse por falta de datos comparativos.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento y delimitación de resguardos para los 10 pueblos indígenas identificados, priorizando al pueblo Andakí (133 habitantes) según CNPV 2018.",
+    "Implementar un sistema de registro étnico municipal que desagregue datos de lengua, NBI y salud, superando la categoría 'INDIGENA-SIN-INFORMACION' (11 casos).",
+    "Diseñar rutas de atención integral para víctimas de desplazamiento forzado (20 casos, 69%) con enfoque diferencial y discapacidad.",
+    "Fortalecer la articulación entre autoridades municipales y pueblos indígenas para documentar y visibilizar la diversidad cultural en Acevedo.",
+    "Incluir a Acevedo en planes departamentales de salud intercultural, dado el vacío en datos de prevalencia y discapacidad."
+  ]
+}

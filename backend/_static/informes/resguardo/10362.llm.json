@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Paso del Río Salado, territorio Awá en el Chocó, registra una población total de 0 habitantes según datos DANE-CNPV 2018. Con un área de 6.530,84 hectáreas, este territorio enfrenta vacíos críticos en información básica como lengua y NBI. La ausencia de datos poblacionales y de bienestar limita la planificación territorial, pese a su reconocimiento legal como resguardo indígena.",
+  "demografia": "Los datos demográficos oficiales reportan una población total de 0 habitantes en el resguardo, lo que impide analizar la pirámide etaria. Esta ausencia de información refleja fallas en los sistemas de registro territorial. La confiabilidad de los datos es alta, pero su utilidad es nula para políticas públicas específicas.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud para este resguardo. Los sistemas de salud pública no capturan información a este nivel de desagregación territorial. Esto imposibilita evaluar necesidades sanitarias o diseñar intervenciones focalizadas para la población Awá.",
+  "territorial": "El resguardo abarca 6.530,84 hectáreas en el municipio de Quibdó, Chocó, con coordenadas geográficas definidas. Su ubicación en la macrorregión Occidente lo sitúa en un contexto de alta diversidad étnica pero también de vulnerabilidad socioambiental. La delimitación territorial está formalmente reconocida.",
+  "lengua": "No hay datos disponibles sobre lengua materna o uso de idiomas indígenas en este resguardo. La ausencia de información lingüística dificulta la implementación de políticas de revitalización cultural. Los pueblos Awá en la región enfrentan presiones por pérdida de lenguas ancestrales sin registros sistemáticos.",
+  "vida": "No se cuenta con datos de Necesidades Básicas Insatisfechas (NBI) para este territorio. El promedio indígena nacional de NBI es 67.6%, pero este resguardo no tiene información comparativa. La falta de registros impide evaluar brechas en acceso a servicios básicos como agua, educación o vivienda.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en este resguardo entre 1985-2024. La base de datos del RUV no captura eventos en este territorio específico. Esto no implica ausencia de violencia, sino limitaciones en los sistemas de monitoreo de derechos humanos.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, calculado con componentes normalizados de NBI, prevalencia y conflicto en cero. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos. Este resultado subraya la urgencia de sistemas de información territorializados.",
+  "recomendaciones": [
+    "Implementar un sistema de registro poblacional específico para resguardos con participación de las autoridades Awá, dado que los datos DANE-CNPV no capturan su realidad territorial.",
+    "Priorizar la recolección de datos lingüísticos y culturales en coordinación con ASOREWA para diseñar estrategias de revitalización de la lengua Awá.",
+    "Desarrollar un protocolo de monitoreo de NBI en territorios indígenas con metodologías propias, ante la ausencia de datos oficiales.",
+    "Fortalecer la articulación con el RUV para incluir códigos territoriales de resguardos en los registros de víctimas, mejorando la visibilidad de afectaciones en estos espacios.",
+    "Incluir al resguardo en planes de desarrollo departamental con enfoque diferencial, considerando su área de 6.530,84 hectáreas y contexto de alta vulnerabilidad socioambiental."
+  ]
+}

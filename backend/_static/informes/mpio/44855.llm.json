@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Urumita (La Guajira) concentra 152 personas indígenas según CNPV 2018, distribuidas en 9 pueblos con predominio arhuaco (44 personas). La ausencia de resguardos registrados refleja una debilidad en la protección territorial colectiva. El desplazamiento forzado afecta al 61.5% de las 13 víctimas de conflicto registradas entre 1985-2024, señalando riesgos persistentes para la seguridad física.",
+  "demografia": "La población indígena de Urumita suma 152 personas con n=152 (CNPV 2018), distribuidas en 9 pueblos. El 28.9% corresponde al pueblo arhuaco (44 personas), seguido por murui (39) y wayúu (35). La diversidad étnica contrasta con la baja representación de pueblos como desano y kogui (1 persona cada uno). La pirámide etaria no aplica por agregación municipal.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en Urumita. Los indicadores de salud pública a nivel municipal no están desagregados por condición étnica en las fuentes consultadas. Se requiere priorizar sistemas de registro diferenciados para identificar brechas en acceso a servicios.",
+  "territorial": "Urumita registra 0 resguardos indígenas en su jurisdicción, pese a albergar 9 pueblos distintos. La dispersión geográfica se evidencia en la bbox que abarca coordenadas entre 10.417 y 10.572 latitud norte. La ausencia de territorios colectivos formalizados limita la autonomía y protección ambiental de las comunidades.",
+  "lengua": "Los datos sobre lenguas indígenas en Urumita no están disponibles en las fuentes consultadas. La diversidad lingüística reportada (9 pueblos) sugiere la presencia de múltiples idiomas originarios, pero se carece de registros sistemáticos para su análisis.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Urumita. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede contrastarse localmente. La falta de registros impide evaluar condiciones de vida como vivienda, educación o servicios públicos.",
+  "conflicto": "Urumita registra 13 víctimas de conflicto con discapacidad entre 1985-2024, donde el desplazamiento forzado representa el 61.5% (8 casos). El homicidio (4 casos) y secuestro (1 caso) completan el perfil de violencia. La concentración en hechos violentos refleja riesgos estructurales para la movilidad y seguridad comunitaria.",
+  "icv": "Urumita presenta un ICV de 0.001, con componente de conflicto como dimensión dominante (0.003). Los valores normalizados de NBI (0.0) y prevalencia (0.0) indican subregistros en datos sociales. La posición relativa sugiere condiciones críticas en seguridad humana frente a otros territorios indígenas.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de lenguas indígenas para documentar la diversidad cultural de los 9 pueblos presentes en Urumita.",
+    "Priorizar la creación de al menos un resguardo indígena que agrupe a los pueblos arhuaco, murui y wayúu, dado su peso demográfico (118 personas).",
+    "Diseñar un protocolo de atención a víctimas de desplazamiento forzado, que atienda el 61.5% de los casos registrados en Urumita.",
+    "Establecer alianzas con la ONIC para incluir a Urumita en programas de fortalecimiento territorial, considerando la ausencia de resguardos.",
+    "Solicitar al DANE la desagregación de NBI por etnia en Urumita, para comparar con el promedio indígena nacional de 67.6%."
+  ]
+}

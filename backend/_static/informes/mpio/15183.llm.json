@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Chita (Boyacá) concentra su población indígena en el pueblo U`WA, con 67 personas registradas según el CNPV 2018. No existen resguardos en su territorio, lo que refleja la ausencia de reconocimiento legal de tierras colectivas. La presencia de 1 víctima de desplazamiento forzado en el periodo 1985-2024 evidencia riesgos persistentes en el contexto de conflicto armado.",
+  "demografia": "La población indígena de Chita asciende a 67 personas, todas pertenecientes al pueblo U`WA según datos del CNPV 2018. La pirámide etaria no puede analizarse al no contar con desagregación por edad en este nivel. La concentración en un solo pueblo limita la diversidad demográfica y cultural del territorio.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades o condiciones de salud en este municipio. Los registros de discapacidad y salud pública no están disponibles a nivel municipal en el sistema, lo que impide evaluar necesidades específicas. Se requiere fortalecer la recolección de datos locales para identificar brechas.",
+  "territorial": "Chita no cuenta con resguardos indígenas reconocidos, a pesar de ser territorio ancestral del pueblo U`WA. La delimitación geográfica (bbox) abarca coordenadas entre 5.89 y 6.31 de latitud, y -72.55 y -72.32 de longitud. La ausencia de territorios colectivos limita la autonomía y protección legal del pueblo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el uso de la lengua propia del pueblo U`WA en el territorio. La falta de registros lingüísticos dificulta la planificación de revitalización cultural.",
+  "vida": "No hay información disponible sobre Necesidades Básicas Insatisfechas (NBI) para Chita. El promedio indígena nacional es 67.6%, pero este dato no puede contrastarse localmente. La ausencia de registros impide evaluar condiciones de vida y brechas socioeconómicas.",
+  "conflicto": "Se registró 1 víctima de desplazamiento forzado en el periodo 1985-2024, representando el 100% de los hechos violentos documentados. Este caso único subraya la vulnerabilidad del pueblo U`WA ante dinámicas de conflicto, aunque la muestra es insuficiente para generalizar. Se requiere atención prioritaria a la seguridad territorial.",
+  "icv": "El Índice de Condiciones Vitales (ICV) de Chita es 0.0, derivado de la ausencia de datos normalizados en NBI, prevalencia y conflicto. Los componentes (nbi_norm, prev_norm, conflicto_norm) no pudieron calcularse por falta de información. Este resultado refleja la necesidad de mejorar la sistematización de datos locales.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento legal de resguardos para el pueblo U`WA en Chita, citando la ausencia actual de territorios colectivos según datos territoriales (n_resguardos: 0).",
+    "Implementar un sistema de recolección de datos de salud y discapacidad a nivel municipal, dado que los registros actuales no están disponibles (capacidades_diversas: _sin_datos).",
+    "Diseñar estrategias de prevención del desplazamiento forzado, considerando el caso documentado en el municipio (victimas_total_disc: 1).",
+    "Fortalecer la recolección de datos lingüísticos para evaluar el estado de la lengua U`WA, actualmente sin registros (lengua: _sin_datos).",
+    "Realizar un diagnóstico integral de condiciones de vida, incluyendo NBI, para contrastar con el promedio indígena nacional (promedio_indigena_nbi: 67.6)."
+  ]
+}

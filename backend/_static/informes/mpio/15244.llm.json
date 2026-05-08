@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de El Cocuy registra una población indígena de 2 personas, según el CNPV 2018. El pueblo U`WA concentra la totalidad de esta población, sin presencia de otros pueblos en el territorio. La ausencia de resguardos y datos de NBI o lengua limita el análisis integral de las condiciones de vida y derechos territoriales de este pueblo en el municipio.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida población indígena (2 personas). Los datos demográficos a nivel municipal no permiten desagregar grupos etarios ni comparar con la estructura poblacional general. La cifra de 2 habitantes refleja una presencia testimonial sin representatividad estadística.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en El Cocuy. El promedio indígena nacional (60.0%) no puede contrastarse con el municipio debido a la falta de información local. Se requiere fortalecer sistemas de registro municipal para identificar necesidades específicas.",
+  "territorial": "El Cocuy no cuenta con resguardos indígenas registrados, a pesar de ser un territorio históricamente habitado por el pueblo U`WA. La ausencia de territorios colectivos limita la protección legal y el ejercicio de derechos territoriales. La bbox geográfica del municipio no refleja presencia de áreas indígenas reconocidas.",
+  "lengua": "Los datos sobre lengua no están disponibles para El Cocuy. No es posible determinar la vitalidad lingüística del pueblo U`WA en este territorio a partir de la información proporcionada.",
+  "vida": "No hay datos de NBI disponibles para El Cocuy. El promedio indígena nacional (67.6%) no puede compararse con el municipio. La falta de información impide evaluar brechas en condiciones de vida como vivienda, educación o ingresos.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en El Cocuy entre 1985-2024. La cifra de 0 víctimas refleja la ausencia de datos sistemáticos más que una realidad de paz territorial. Se requiere mejorar la identificación de hechos victimizantes en contextos municipales.",
+  "icv": "El ICV de El Cocuy es 0.0, determinado por la ausencia de datos en NBI, prevalencia y conflicto. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con precisión. Este resultado subraya la necesidad de mejorar la recolección de datos territoriales.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal para actualizar la población y condiciones de vida, citando la cifra actual de 2 habitantes.",
+    "Promover la constitución de resguardos territoriales para el pueblo U`WA en El Cocuy, dado que no existen registros actuales.",
+    "Implementar un sistema de registro de víctimas indígenas a nivel municipal para mejorar la identificación de hechos victimizantes.",
+    "Articular con el DANE para incluir preguntas étnicas en encuestas municipales y superar la falta de datos de NBI y lengua.",
+    "Diseñar políticas de salvaguarda cultural para el pueblo U`WA en El Cocuy, considerando su presencia testimonial pero histórica."
+  ]
+}

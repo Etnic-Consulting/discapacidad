@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "En Cumaral (Meta), la población indígena registrada suma 22 personas según CNPV 2018, distribuidas en 11 pueblos sin resguardos reconocidos. El 22.7% de esta población (5 personas) carece de identificación étnica específica, evidenciando vacíos en la caracterización territorial. La afectación por conflicto se limita a un caso de desplazamiento forzado, sin patrones estructurales identificables en este nivel.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, pues solo se reporta un total de 22 personas sin desagregación por edad. La alta diversidad de pueblos (11) con poblaciones menores a 5 personas cada uno refleja dispersión demográfica extrema. La falta de datos etarios impide evaluar dinámicas generacionales o presión sobre recursos territoriales.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades en este nivel municipal. Los registros de discapacidad y salud indígena no están disponibles para municipios, según la nota técnica adjunta. Esta limitación impide identificar necesidades específicas de salud pública en la población indígena de Cumaral.",
+  "territorial": "Cumaral no cuenta con resguardos indígenas reconocidos, a pesar de albergar 11 pueblos distintos. La ausencia de territorios colectivos formalizados contrasta con la diversidad étnica registrada. La caja geográfica del municipio (4.15°N -73.57°O a 4.37°N -73.04°O) no alberga espacios de autonomía indígena reconocidos.",
+  "lengua": "Los datos sobre lenguas indígenas en Cumaral no están disponibles. No se registra información sobre uso o vitalidad de lenguas originarias en este municipio, lo que impide evaluar la transmisión cultural intergeneracional.",
+  "vida": "No hay datos de NBI para la población indígena de Cumaral. El promedio indígena nacional (67.6%) no puede compararse localmente. Esta ausencia de información oculta condiciones de pobreza multidimensional en un territorio con alta diversidad étnica no reconocida territorialmente.",
+  "conflicto": "Solo 1 víctima indígena por conflicto armado fue registrada en Cumaral (1985-2024), correspondiente a desplazamiento forzado. Este hecho representa el 100% de los casos, sin patrones adicionales identificables. La baja magnitud impide análisis de tendencias o priorización de riesgos territoriales.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en Cumaral es 0.0, determinado por la ausencia de datos en componentes clave (NBI, prevalencia y conflicto). Esta métrica refleja la falta de información sistematizada, no condiciones reales de vida. La fórmula aplicada (0.4*NBI + 0.3*prev + 0.3*conf) no pudo calcularse con valores válidos.",
+  "recomendaciones": [
+    "Realizar censo étnico municipal con enfoque diferencial para identificar al 22.7% de población sin pertenencia étnica registrada, priorizando pueblos con menos de 5 personas.",
+    "Solicitar al Ministerio del Interior la delimitación de territorios colectivos para los 11 pueblos identificados, dado que no existen resguardos reconocidos en Cumaral.",
+    "Incluir a Cumaral en el Sistema de Vigilancia en Salud Pública Indígena para generar datos de prevalencia y discapacidad a nivel municipal.",
+    "Diseñar un plan de caracterización lingüística que documente la vitalidad de lenguas originarias en la población indígena dispersa.",
+    "Establecer un protocolo de atención a víctimas de desplazamiento forzado con enfoque étnico, aunque el registro actual sea mínimo."
+  ]
+}

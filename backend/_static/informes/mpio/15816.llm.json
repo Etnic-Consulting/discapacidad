@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Togüí registra una población indígena de 1 persona según el CNPV 2018, siendo el pueblo WAYUU el único presente. La ausencia de resguardos y la concentración poblacional mínima reflejan una presencia indígena marginal en el territorio. Este escenario evidencia la necesidad de fortalecer estrategias de visibilización y protección cultural para pueblos minoritarios en contextos municipales.",
+  "demografia": "La pirámide etaria no aplica en este nivel dado que la población indígena total es de 1 persona. Los datos demográficos a escala municipal no permiten análisis etarios confiables. Se requiere desagregar a nivel de pueblo o resguardo para evaluar estructuras poblacionales significativas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en Togüí. Los registros de discapacidad y salud no se capturan a nivel municipal, limitando el análisis de necesidades. El promedio indígena nacional del 60.0% en capacidades diversas subraya la brecha en información territorial.",
+  "territorial": "Togüí no cuenta con resguardos indígenas, lo que indica una ausencia de reconocimiento territorial formal. La caja geográfica del municipio abarca 5.84 a 5.98° N y -73.54 a -73.43° O, pero sin presencia de territorios colectivos. Esto refleja desafíos en la implementación de derechos territoriales indígenas a escala local.",
+  "lengua": "Los datos sobre lengua no están disponibles para Togüí. No se puede determinar la vitalidad lingüística ni la presencia de hablantes en el territorio. La falta de registros específicos impide evaluar la transmisión cultural en el municipio.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Togüí. El promedio indígena nacional del 67.6% destaca la ausencia de datos locales para comparar condiciones de vida. La invisibilidad estadística dificulta la priorización de intervenciones sociales.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Togüí entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja incidencia directa, aunque los datos pueden subregistrar afectaciones por limitaciones metodológicas. Se recomienda validar esta información con fuentes comunitarias.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Togüí es 0.0, derivado de componentes normalizados en cero (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos desagregados más que condiciones reales. La fórmula aplicada subraya la necesidad de mejorar la recolección de información territorial.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar la población indígena en Togüí, dado que el dato actual (1 persona) es insuficiente para políticas públicas.",
+    "Solicitar a la DANE la desagregación de indicadores sociales (NBI, discapacidad) a nivel municipal para pueblos minoritarios.",
+    "Promover el reconocimiento de resguardos en Togüí mediante gestiones con la ANI y el Ministerio del Interior, considerando la ausencia actual de territorios colectivos.",
+    "Incluir a Togüí en programas de fortalecimiento cultural ONIC para pueblos con presencia mínima, garantizando visibilidad nacional.",
+    "Validar datos de conflicto con organizaciones Wayuu locales para contrastar el subregistro en el RUV y ajustar estrategias de protección."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Pedro (Valle del Cauca) concentra una población indígena de 40 personas según CNPV 2018, donde el 87.5% pertenece al pueblo EMBERA-CHAMI (35 personas). El municipio carece de resguardos indígenas y no registra víctimas de conflicto armónico en el RUV. La ausencia de datos en NBI y lengua limita el análisis integral de condiciones de vida. La dispersión territorial sin reconocimiento legal refleja una vulnerabilidad estructural.",
+  "demografia": "La población indígena de San Pedro presenta una pirámide etaria sesgada hacia adultos (35 personas en total). El 87.5% corresponde a EMBERA-CHAMI, mientras los demás pueblos (ANDOKE, PIJAO, NASA) suman 4 personas. La concentración en un solo pueblo contrasta con la diversidad nacional. No hay datos de pirámide etaria detallada, lo que impide analizar dinámicas generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La falta de información impide evaluar indicadores de salud específicos. Se reconoce sub-registro en contextos municipales donde la población indígena es minoritaria. La ausencia de datos limita la identificación de prioridades sanitarias locales.",
+  "territorial": "San Pedro tiene 0 resguardos indígenas registrados, pese a contar con población EMBERA-CHAMI. La bbox geográfica delimita un área sin reconocimiento territorial colectivo. La dispersión sin marco legal dificulta la protección de derechos territoriales. La ausencia de resguardos contrasta con la presencia de 5 pueblos indígenas en el municipio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas. La falta de información refleja vacíos en la caracterización cultural a nivel local.",
+  "vida": "No hay datos disponibles sobre NBI para San Pedro. El promedio indígena nacional (67.6%) no puede compararse localmente. La ausencia de información impide evaluar brechas en condiciones de vida. Se requiere sistematización de datos para diseñar políticas públicas diferenciadas.",
+  "conflicto": "San Pedro no registra víctimas de conflicto armónico en el RUV (0 casos). La ausencia de hechos violentos no implica seguridad territorial. La falta de datos sobre desplazamiento o amenazas limita el análisis de riesgos. Se recomienda fortalecer el monitoreo comunitario para detectar violencias estructurales.",
+  "icv": "El ICV de San Pedro es 0.0, con componentes normalizados en cero (NBI, prevalencia, conflicto). La fórmula del ICV refleja la ausencia de datos en todos los componentes. La posición relativa no puede determinarse sin información comparativa. La falta de datos impide priorizar intervenciones.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y culturales, citando la necesidad de registrar 40 personas en San Pedro.",
+    "Gestionar el reconocimiento de resguardos para el pueblo EMBERA-CHAMI, considerando que el 87.5% de la población indígena carece de territorio colectivo.",
+    "Implementar sistema de alerta temprana para violencia en territorios indígenas dispersos, dado que no hay registros en el RUV pero persisten riesgos estructurales.",
+    "Articular con el DANE para incluir preguntas sobre lengua y NBI en futuras encuestas municipales, superando la falta actual de datos.",
+    "Priorizar proyectos de fortalecimiento cultural para EMBERA-CHAMI, único pueblo con población significativa en el municipio."
+  ]
+}

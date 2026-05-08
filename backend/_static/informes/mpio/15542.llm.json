@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Pesca (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 y confiabilidad NO_CONFIABLE. Esta condición impide análisis demográficos o territoriales específicos. La falta de datos refleja vacíos en la representación indígena en fuentes oficiales, limitando la planificación con enfoque diferencial.",
+  "demografia": "Los datos demográficos para Pesca indican n=0 en población indígena (CNPV 2018), lo que invalida análisis de pirámide etaria o distribución por edad. La nota metodológica aclara que la agregación se realiza por pueblo, pero en este caso no hay registros. Se requiere cruce con otras fuentes como el RUV o censos comunitarios para validar esta ausencia.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Pesca (n=0). La sección de capacidades diversas carece de información municipal, aunque el promedio indígena nacional reporta 60.0%. Esta limitación impide evaluar brechas o necesidades específicas, subrayando la urgencia de sistemas de registro locales confiables.",
+  "territorial": "Pesca cuenta con 0 resguardos indígenas registrados, pese a tener una extensión territorial definida por el bbox [5.348, -73.147, 5.645, -72.995]. La ausencia de territorios colectivos contrastan con la presencia de población no indígena en el departamento de Boyacá (cod_dpto=15). Esto sugiere una posible invisibilización histórica o falta de titulación de tierras.",
+  "lengua": "Los datos sobre lenguas indígenas en Pesca no están disponibles (_sin_datos: true). No se puede determinar la vitalidad cultural ni la presencia de hablantes de lenguas nativas en el municipio. Esta omisión refleja la necesidad de incorporar metodologías interculturales en los censos oficiales.",
+  "vida": "No hay información sobre NBI en Pesca (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La falta de datos impide comparar condiciones de vida o identificar necesidades prioritarias. Se recomienda priorizar la recolección de datos con enfoque territorial y comunitario.",
+  "conflicto": "Pesca registra 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con n=0 y confiabilidad CONFIABLE. La ausencia de hechos victimizantes no implica paz, sino posibles subregistros o desplazamiento hacia otros territorios. Se requiere validar con fuentes comunitarias y sistemas de alerta temprana.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Pesca es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la falta de datos, no necesariamente condiciones óptimas. Esto limita su utilidad para priorizar intervenciones.",
+  "recomendaciones": [
+    "Realizar un censo comunitario participativo para validar la presencia indígena en Pesca, dado que el CNPV 2018 reporta n=0 con confiabilidad NO_CONFIABLE.",
+    "Implementar un sistema de registro municipal de lenguas indígenas y capacidades diversas, alineado con el promedio nacional de 60.0% en discapacidad.",
+    "Priorizar la titulación de resguardos en Pesca, considerando que no hay territorios colectivos registrados pese a su bbox definido.",
+    "Establecer alianzas con organizaciones indígenas boyacenses para cruzar datos del RUV y sistemas locales, evitando subregistros en víctimas (n=0 en 1985-2024).",
+    "Diseñar un plan de recolección de datos de NBI con enfoque diferencial, comparando con el promedio indígena nacional de 67.6%."
+  ]
+}

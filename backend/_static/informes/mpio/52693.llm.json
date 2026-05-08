@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Pablo (Nariño) registra una población indígena de 2 personas según CNPV 2018, distribuidas en dos pueblos: Arhuaco y Awa, cada uno con 1 individuo. La ausencia de resguardos y datos de NBI o lengua evidencia vacíos críticos para la planificación territorial. El ICV de 0.0 refleja condiciones de marginalidad extrema, donde el desplazamiento forzado (1 víctima) concentra el 100% de los hechos victimizantes registrados.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal por la reducida población indígena (n=2). Los datos demográficos a este nivel no permiten análisis etario ni comparativos. La confiabilidad de los datos es alta (n=2), pero su utilidad es limitada para políticas públicas. Se requiere desagregación por grupos de edad para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos de prevalencia disponibles a nivel municipal. Los KPI de salud pública no están registrados en este territorio. Se desconoce la incidencia de enfermedades o condiciones específicas en la población indígena local. La falta de información impide identificar prioridades sanitarias o subregistros.",
+  "territorial": "San Pablo no cuenta con resguardos indígenas según los registros oficiales. La dispersión geográfica se limita a un área de 0.04 grados de latitud y 0.17 de longitud, sin territorios colectivos identificados. La ausencia de resguardos contrasta con la presencia de pueblos como Arhuaco y Awa, sugiriendo debilidad en el reconocimiento territorial.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se cuenta con información sobre uso o vitalidad de lenguas indígenas en San Pablo. La falta de registros lingüísticos dificulta evaluar la transmisión cultural o riesgos de pérdida idiomática.",
+  "vida": "No hay datos de NBI disponibles para San Pablo. El promedio indígena nacional de NBI es 67.6%, pero este municipio no aporta información para comparaciones. La brecha con el promedio nacional no puede calcularse. Se requiere recolección de datos para evaluar condiciones de vida.",
+  "conflicto": "San Pablo registra 1 víctima indígena por desplazamiento forzado (1985-2024), representando el 100% de los hechos victimizantes. La confiabilidad de los datos es alta (n=1), pero la muestra es insuficiente para generalizaciones. El patrón de victimización refleja vulnerabilidad extrema en contextos de conflicto armado.",
+  "icv": "El ICV de 0.0 en San Pablo indica condiciones de vida críticas, con todos los componentes (NBI, prevalencia y conflicto) en 0.0. La fórmula ponderada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una situación de marginalidad absoluta. La posición relativa es la más baja posible, demandando intervención prioritaria.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con desagregación etaria y de pueblos para superar el subregistro actual (población total: 2 personas)",
+    "Identificar y reconocer resguardos indígenas en San Pablo, priorizando el pueblo Arhuaco como actor principal (población: 1 persona)",
+    "Implementar sistema de alerta temprana para desplazamiento forzado, dado que el 100% de las víctimas registradas corresponden a este hecho (1 víctima)",
+    "Incluir a San Pablo en programas de salud pública indígena, ante la ausencia de datos de prevalencia (sin datos disponibles)",
+    "Diseñar estrategias de revitalización cultural para pueblos sin resguardo, como el Awa (población: 1 persona), en coordinación con la ONIC"
+  ]
+}

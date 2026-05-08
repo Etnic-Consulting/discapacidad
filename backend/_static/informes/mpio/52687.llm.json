@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Lorenzo (Nariño) concentra una población indígena de 17 personas según CNPV 2018, donde el 64.7% (11) pertenece al pueblo PASTOS. La ausencia de resguardos registrados refleja una debilidad en la territorialización formal. El conflicto armado impacta con 6 víctimas, destacando el desplazamiento forzado como hecho principal (66.7%). La vulnerabilidad se agrava al no contar con datos de NBI ni lengua, limitando la planificación intercultural.",
+  "demografia": "La población indígena en San Lorenzo es mínima (17 personas) y envejecida, con el 64.7% (11) perteneciente al pueblo PASTOS. Los datos no permiten analizar pirámide etaria ni razones de estructura poblacional. La dispersión geográfica y la baja representatividad impiden inferencias demográficas robustas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información limita el análisis de subregistros y prioridades sanitarias. Se requiere fortalecer sistemas de información local para cerrar brechas de datos.",
+  "territorial": "San Lorenzo carece de resguardos indígenas registrados (0 territorios), pese a contar con una bbox definida. La ausencia de territorialidad colectiva contrasta con la presencia histórica del pueblo PASTOS. La concentración poblacional en un área reducida (1.44-1.67°N, -77.30 a -77.14°O) exige acciones para garantizar derechos territoriales.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. La invisibilización lingüística impide evaluar la vitalidad cultural de los pueblos PASTOS y QUILLACINGA. Se recomienda incluir variables lingüísticas en censos municipales.",
+  "vida": "No hay datos de NBI para San Lorenzo, lo que imposibilita comparar su vulnerabilidad con el promedio indígena nacional (67.6%). La falta de información sobre condiciones de vida invisibiliza las necesidades de la población. Urge implementar sistemas de monitoreo local.",
+  "conflicto": "Se registran 6 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (4 casos, 66.7%). El homicidio (1) y amenazas (1) completan el patrón de violencia. La baja n (6) exige cautela interpretativa, pero evidencia riesgos persistentes en la zona.",
+  "icv": "El ICV de San Lorenzo es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula refleja una vulnerabilidad extrema en NBI y prevalencia, agravada por el conflicto. La posición relativa es crítica, requiriendo intervenciones urgentes en desarrollo social y protección territorial.",
+  "recomendaciones": [
+    "Garantizar el registro de resguardos para el pueblo PASTOS, priorizando la titulación colectiva con base en la bbox identificada (1.44-1.67°N, -77.30 a -77.14°O).",
+    "Implementar un sistema de monitoreo local de NBI y lengua, alineado con el promedio indígena nacional (67.6%), para visibilizar necesidades específicas.",
+    "Diseñar rutas de atención psicosocial para las 6 víctimas de conflicto, enfocadas en prevención de desplazamiento forzado (4 casos reportados).",
+    "Incluir variables de discapacidad y lengua en el CNPV 2024 para San Lorenzo, cerrando brechas de datos identificadas.",
+    "Articular con la gobernación de Nariño acciones para reducir el ICV a 0.5 en 4 años, priorizando componentes de NBI y prevalencia."
+  ]
+}

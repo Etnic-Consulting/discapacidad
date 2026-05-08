@@ -1,0 +1,92 @@
+{
+  "tipo": "resguardo",
+  "id": "10901",
+  "nombre": "RESGUARDO INDÍGENA MHUYSQA CHUTA FA ABA \"LOS HIJOS DEL MAIZ\"",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "RESGUARDO INDÍGENA MHUYSQA CHUTA FA ABA \"LOS HIJOS DEL MAIZ\"",
+      "dpto": "CUNDINAMARCA",
+      "cod_dpto": "25",
+      "mpio": "SESQUILÉ",
+      "cod_mpio": "25736",
+      "macro": "CENTRO - ORIENTE",
+      "pueblo_onic": "MUISCA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "Por definir",
+      "area_hectareas": 207.098
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        5.027143825000053,
+        -73.79679997599999,
+        5.052551866000044,
+        -73.76146205899994
+      ],
+      "area_hectareas": 207.098,
+      "macro": "CENTRO - ORIENTE",
+      "dpto": "CUNDINAMARCA",
+      "mpio": "SESQUILÉ"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 0,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [],
+      "hecho_principal": null,
+      "pct_hecho_principal": null
+    },
+    "icv": {
+      "score": 0.0,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:32:24",
+  "periodo": "2018",
+  "_input_hash": "467f17449d1bdb3e"
+}

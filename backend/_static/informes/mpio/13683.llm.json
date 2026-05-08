@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Rosa (Bolívar) concentra una población indígena de 20 personas según CNPV 2018, donde el 80% pertenece al pueblo Zenu. La ausencia de resguardos y la dispersión geográfica limitan la protección territorial. El Índice de Condiciones Vitales (ICV) de 0.001 refleja una situación crítica, con el componente de conflicto como principal determinante.",
+  "demografia": "La pirámide etaria muestra una población indígena envejecida, con 16 personas mayores de 40 años y solo 4 menores de 20. Los datos no permiten analizar razones específicas. La concentración en el pueblo Zenu (80% de la población) sugiere una homogeneidad étnica sin diversificación generacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. Se reconoce la falta de información como limitante crítica para evaluar necesidades sanitarias. El sub-registro es probable dado el bajo n=20 y la ausencia de sistemas de monitoreo local.",
+  "territorial": "Santa Rosa no cuenta con resguardos indígenas, lo que implica una ausencia de reconocimiento territorial formal. La dispersión geográfica se refleja en la bounding box que abarca 0.14 grados de latitud y 0.15 grados de longitud. La falta de territorios colectivos agrava la vulnerabilidad frente a conflictos.",
+  "lengua": "Los datos sobre lenguas indígenas en este municipio no están disponibles. No se puede inferir la vitalidad lingüística ni la presencia de lenguas propias en la población indígena residente.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para este municipio. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La ausencia de información impide evaluar brechas en condiciones de vida.",
+  "conflicto": "Se registraron 17 víctimas de violencia en el municipio entre 1985-2024, con desplazamiento forzado como principal hecho (76.5% de los casos). La concentración en un solo tipo de victimización refleja patrones de violencia estructural. La cifra n=17, aunque confiable, limita análisis desagregados.",
+  "icv": "El ICV de 0.001 sitúa a Santa Rosa en la peor posición posible, con todos los componentes normalizados en cero excepto conflicto (0.003). La fórmula evidencia que el NBI y la prevalencia no aportan al cálculo, siendo el conflicto el único factor determinante. La posición relativa es crítica frente a otros municipios.",
+  "recomendaciones": [
+    "Priorizar la creación de un resguardo indígena para el pueblo Zenu, dado que el 80% de la población carece de territorio colectivo reconocido y enfrenta desplazamiento forzado (13 casos).",
+    "Implementar un sistema de monitoreo de salud con enfoque diferencial, considerando la ausencia de datos sobre prevalencia y el alto riesgo de sub-registro en una población dispersa.",
+    "Diseñar programas de protección territorial que aborden la vulnerabilidad derivada de la falta de resguardos, especialmente ante hechos de desplazamiento forzado (76.5% de las víctimas).",
+    "Realizar un censo étnico municipal con enfoque en lenguas y capacidades diversas, dado que los datos actuales no permiten evaluar la diversidad cultural ni las necesidades específicas.",
+    "Articular con la ONIC y el Ministerio del Interior para el reconocimiento de territorios ancestrales, considerando que la bounding box actual no incluye resguardos formales."
+  ]
+}

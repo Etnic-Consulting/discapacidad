@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Covarachia (Boyacá) presenta un vacío crítico en datos indígenas: la población total registrada es 0 según CNPV 2018, con confiabilidad NO_CONFIABLE (n=0). No existen resguardos ni pueblos indígenas identificados en el municipio. Solo se reporta 1 víctima de desplazamiento forzado entre 1985-2024, lo que limita el análisis de conflicto. El ICV de 0.0 refleja la ausencia de indicadores territoriales indígenas en los registros oficiales.",
+  "demografia": "Los datos demográficos indígenas para Covarachia no están disponibles (n=0). La consulta a nivel municipal no arrojó registros confiables en CNPV 2018. No es posible analizar pirámide etaria ni distribución poblacional sin información primaria. La nota técnica advierte que los datos se agregan solo a nivel pueblo o departamento.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud para población indígena en Covarachia. La sección no aplica al nivel municipal según la fuente. Se reconoce la limitación metodológica: los KPI de salud indígena requieren agregación por pueblo o departamento para ser confiables.",
+  "territorial": "Covarachia cuenta con 0 resguardos indígenas registrados en su jurisdicción. La caja geográfica (bbox) delimita un área municipal sin presencia territorial indígena reconocida. La ausencia de resguardos coincide con la falta de pueblos indígenas identificados en los datos oficiales.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Covarachia. No se registra información en las fuentes consultadas. Este vacío impide analizar la vitalidad lingüística o la presencia de lenguas nativas en el territorio.",
+  "vida": "No hay datos de NBI para población indígena en Covarachia. El promedio indígena nacional (67.6%) no puede compararse localmente. La sección reconoce explícitamente la falta de información municipal sobre condiciones de vida de comunidades indígenas.",
+  "conflicto": "Se reporta 1 víctima indígena con discapacidad por desplazamiento forzado (1985-2024), representando el 100% de los hechos registrados. Este dato único sugiere una afectación mínima pero focalizada. La limitación es clara: n=1 impide generalizaciones sobre patrones de violencia en el territorio.",
+  "icv": "El Índice de Condiciones Vitales (ICV) para Covarachia es 0.0, derivado de componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula del ICV no puede aplicarse con datos ausentes. Este resultado refleja la invisibilización estadística de la población indígena en el municipio.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con metodología diferencial para validar presencia de pueblos originarios, dado que los registros oficiales muestran 0 población (poblacion_total: 0).",
+    "Implementar sistema de alerta temprana para víctimas de desplazamiento en territorios con baja densidad indígena, considerando el 100% de los hechos registrados correspondieron a este tipo de violencia (hecho_principal: Desplazamiento forzado).",
+    "Articular con el departamento de Boyacá para desagregar datos indígenas a nivel municipal, ya que los KPI actuales solo son confiables a nivel pueblo o departamento (confiabilidad: NO_CONFIABLE).",
+    "Priorizar la identificación de resguardos en Covarachia, donde no existen territorios indígenas reconocidos pese a su bbox municipal (n_resguardos: 0).",
+    "Incluir preguntas étnicas en encuestas locales para superar el sub-registro, dado que _sin_datos aplica en demografía, lengua y NBI."
+  ]
+}

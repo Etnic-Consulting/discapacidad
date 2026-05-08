@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Topaipí (Cundinamarca) registra una población indígena de 1 persona según CNPV 2018, siendo el pueblo WAYUU el único presente. La ausencia de resguardos y datos territoriales detallados limita la visibilidad de su ocupación ancestral. La concentración de una víctima por desplazamiento forzado en el período 1985-2024 evidencia vulnerabilidad extrema en un contexto de alta dispersión geográfica.",
+  "demografia": "La pirámide etaria no aplica para este municipio debido a la población total de 1 habitante indígena. Los datos demográficos a nivel municipal no permiten análisis etarios ni comparativos. La concentración en un solo pueblo (WAYUU) refleja una homogeneidad cultural forzada por la falta de diversidad poblacional registrada.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La ausencia de información impide evaluar necesidades sanitarias o patrones de morbilidad. Se reconoce un sub-registro crítico que invisibiliza las condiciones reales de la población indígena local.",
+  "territorial": "Topaipí cuenta con 0 resguardos indígenas, lo que contrasta con su ubicación en Cundinamarca, departamento con alta presencia de territorios colectivos. La bbox geográfica delimita un área de 0.014 grados cuadrados, sugiriendo una ocupación mínima o nula de tierras ancestrales. La dispersión territorial es total, sin núcleos de concentración indígena.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en la población registrada.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Topaipí. El promedio indígena nacional de 67.6% no puede compararse debido a la falta de datos locales. La brecha con el promedio nacional no es calculable, ocultando posibles condiciones de pobreza extrema.",
+  "conflicto": "Se registra 1 víctima indígena por desplazamiento forzado entre 1985-2024, correspondiente al 100% de los hechos violentos documentados. Este dato único refleja una exposición extrema a la violencia, con el desplazamiento como patrón dominante. La confiabilidad del dato es alta, pero su representatividad es limitada por el bajo n=1.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Topaipí es 0.0, determinado por la normalización de componentes nulos (NBI, prevalencia y conflicto). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja un escenario de carencia absoluta en todas las dimensiones medidas.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para superar el sub-registro actual y visibilizar la población oculta, citando el n=1 poblacional actual.",
+    "Implementar rutas de atención prioritaria para víctimas de desplazamiento forzado, dado que el 100% de los hechos registrados corresponden a este tipo de violencia.",
+    "Establecer mesas de trabajo con la ONIC y el pueblo WAYUU para identificar territorios ancestrales no reconocidos en Topaipí, considerando la ausencia de resguardos.",
+    "Diseñar programas de salud intercultural con enfoque en pueblos minoritarios, ante la falta de datos de prevalencia que impide priorizar necesidades.",
+    "Incluir a Topaipí en el Plan de Salvaguarda Étnica de Cundinamarca para garantizar protección territorial y cultural, ante el ICV=0.0 que evidencia condiciones de vida críticas."
+  ]
+}

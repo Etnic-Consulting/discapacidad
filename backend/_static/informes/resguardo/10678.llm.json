@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo PUEBLO NUEVO, territorio del pueblo PIJAO en el Tolima, registra una población total de 0 según datos DANE-CNPV 2018. Su extensión es de 152.403 hectáreas, ubicadas en el municipio de Natagaima. La afectación por conflicto armado es crítica: 407 víctimas de desplazamiento forzado (75.9% del total de hechos violentos), lo que refleja una crisis humanitaria persistente en este territorio colectivo.",
+  "demografia": "Los datos de población total para este resguardo no están disponibles en la fuente DANE-CNPV 2018 (n=0). Esta ausencia de información limita el análisis demográfico y la planificación territorial. Se requiere cruce de fuentes alternativas para validar la presencia poblacional en el territorio.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para este resguardo. La falta de información impide evaluar el estado de salud de la población. Se recomienda priorizar registros en salud pública con enfoque diferencial indígena.",
+  "territorial": "El resguardo PUEBLO NUEVO tiene un área de 152.403 hectáreas en el municipio de Natagaima, Tolima. Su delimitación geográfica está definida por coordenadas BBOX específicas. La concentración territorial es baja, lo que puede dificultar la cohesión social y la implementación de proyectos productivos comunitarios.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del pueblo PIJAO en este territorio. Se requiere investigación etnográfica para documentar la transmisión intergeneracional de la lengua.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional es 67.6%, pero no se puede calcular la brecha local. La ausencia de datos invisibiliza las condiciones de vida de la población.",
+  "conflicto": "El resguardo registra 407 víctimas de conflicto armado, con desplazamiento forzado como hecho principal (309 casos, 75.9%). Otros hechos incluyen amenazas (59) y homicidios (15). La violencia sistemática ha generado un patrón de despojo y desplazamiento en este territorio PIJAO.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.024, con conflicto como dimensión dominante (0.081). Los componentes NBI y prevalencia tienen valores de 0.0, lo que refleja la invisibilización estadística de este territorio. Su posición relativa es crítica frente a otros resguardos.",
+  "recomendaciones": [
+    "Realizar censo poblacional diferenciado en el resguardo PUEBLO NUEVO para validar la presencia indígena y actualizar datos demográficos, citando la ausencia de información en DANE-CNPV 2018 (n=0).",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, priorizando los 309 casos registrados (75.9% del total de hechos), en coordinación con la CRIT y autoridades locales.",
+    "Diseñar un plan de recuperación territorial con enfoque PIJAO, considerando las 152.403 hectáreas del resguardo y su alta afectación por conflicto armado.",
+    "Documentar la vitalidad lingüística del pueblo PIJAO mediante estudios etnográficos, ante la falta de datos en la sección 'lengua'.",
+    "Incluir al resguardo PUEBLO NUEVO en estrategias de salud pública diferencial, ante la ausencia de datos de prevalencia y NBI en las fuentes oficiales."
+  ]
+}

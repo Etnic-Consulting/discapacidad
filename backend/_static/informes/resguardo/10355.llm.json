@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Trapiche del Río Pepé, ubicado en el municipio de Medio Baudó (Chocó), alberga a 200 personas del pueblo Emberá Eyabida-Ebera Katío en un territorio de 965.154 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando carencias críticas en dimensiones estructurales. La ausencia de datos en NBI y lengua evidencia vacíos en el monitoreo territorial que requieren atención prioritaria.",
+  "demografia": "La población total asciende a 200 habitantes, según datos DANE-CNPV 2018 con confiabilidad alta (n=200). La pirámide etaria no puede analizarse por falta de desagregación por edad/sexo en este nivel. Se recomienda priorizar levantamiento de datos demográficos desagregados para planificar servicios básicos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo (_sin_datos: true). La referencia nacional indígena de 60.0% en discapacidad no puede contrastarse localmente. La ausencia de registros limita la identificación de necesidades específicas en salud.",
+  "territorial": "El resguardo ocupa 965.154 hectáreas en la macro región Occidente, con coordenadas que delimitan su territorio en el Chocó. Su extensión contrasta con la alta dispersión de asentamientos embera en la zona. La concentración geográfica es baja, pero la falta de datos detallados impide evaluar patrones de uso del territorio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). No se puede determinar el estado de vitalidad de las lenguas embera eyabida o katío en el territorio. Se requiere investigación participativa para documentar prácticas lingüísticas y su transmisión intergeneracional.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en este resguardo (_sin_datos: true). El promedio indígena nacional de 67.6% no puede compararse. La carencia de datos impide evaluar brechas en acceso a servicios básicos como agua, educación o vivienda.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo (victimas_total_disc: 0) entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja visibilidad en sistemas oficiales. Sin embargo, la confiabilidad de estos datos debe contrastarse con fuentes comunitarias.",
+  "icv": "El ICV de 0.0 indica condiciones vitales críticas, derivadas de componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%). Este resultado refleja una situación de extrema vulnerabilidad estructural que demanda intervención urgente.",
+  "recomendaciones": [
+    "Realizar censo comunitario con enfoque diferencial para actualizar datos demográficos y de discapacidad, usando la cifra de 200 habitantes como base de planificación territorial.",
+    "Implementar sistema de monitoreo de lengua embera eyabida/katío con participación de sabedores tradicionales, ante la falta de datos disponibles.",
+    "Priorizar proyectos de infraestructura básica (agua potable, energía) en el resguardo, considerando su extensión de 965.154 hectáreas y la ausencia de datos de NBI.",
+    "Articular con la CRICH y organizaciones embera para validar información de conflicto y garantizar registros confiables en sistemas oficiales.",
+    "Diseñar estrategias de soberanía alimentaria adaptadas al territorio, dado el ICV de 0.0 que sugiere carencias multidimensionales."
+  ]
+}

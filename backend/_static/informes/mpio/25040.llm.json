@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Anolaima registra una población indígena de 26 personas según CNPV 2018, distribuida en 5 pueblos. El 46% corresponde al pueblo Muisca, principal grupo étnico en el municipio. La ausencia de resguardos y datos de NBI y lengua refleja vacíos en la caracterización territorial indígena. La baja representatividad numérica limita análisis comparativos con promedios nacionales.",
+  "demografia": "La pirámide etaria no aplica por la reducida muestra (n=26). La población se concentra en el pueblo Muisca con 12 personas, seguido de Cabiyarí y Nasa con 5 cada uno. La diversidad étnica se distribuye en 5 pueblos, pero sin datos de edades o géneros. La confiabilidad de los datos es alta, aunque la muestra pequeña impide generalizaciones demográficas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Anolaima. El promedio indígena nacional de 60% en capacidades diversas no puede contrastarse localmente. La falta de información impide evaluar subregistros o necesidades específicas, limitando la planificación de políticas públicas diferenciadas.",
+  "territorial": "Anolaima no cuenta con resguardos indígenas registrados, a pesar de su bbox geográfico. La ausencia de territorios colectivos contrasta con la presencia de 5 pueblos indígenas. La dispersión poblacional y la falta de delimitación territorial dificultan la identificación de patrones de asentamiento o concentración geográfica.",
+  "lengua": "Los datos sobre lengua no están disponibles para Anolaima. No se puede determinar la vitalidad lingüística ni la presencia de lenguas nativas entre la población indígena. Esta omisión impide evaluar la transmisión cultural o la implementación de programas de revitalización lingüística.",
+  "vida": "No hay datos de NBI para Anolaima, aunque el promedio indígena nacional es 67.6%. La falta de información sobre necesidades básicas insatisfechas impide comparar condiciones de vida con otros territorios. La ausencia de resguardos y datos socioeconómicos sugiere una invisibilización estadística de la población indígena local.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Anolaima entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino falta de sistematización. La confiabilidad de los datos es alta, pero la muestra reducida (n=26) limita conclusiones sobre patrones de violencia.",
+  "icv": "El ICV de Anolaima es 0.0, con componentes normalizados en cero. La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), pero la falta de datos invalida el cálculo. Este resultado refleja la ausencia de información territorial indígena, no necesariamente condiciones óptimas de vida.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para superar el subregistro actual (n=26) y caracterizar necesidades específicas.",
+    "Identificar y delimitar territorios ancestrales en Anolaima para garantizar derechos territoriales y culturales de los 5 pueblos registrados.",
+    "Incluir preguntas sobre lengua y discapacidad en futuras encuestas para evaluar vitalidad cultural y acceso a derechos.",
+    "Articular con la ONIC y el CNPV para desagregar datos a nivel municipal y evitar vacíos en la representación indígena.",
+    "Priorizar programas de fortalecimiento cultural y acceso a servicios básicos en Anolaima, dado el promedio indígena nacional de NBI (67.6%)."
+  ]
+}

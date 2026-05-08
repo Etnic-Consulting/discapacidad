@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Granada (Antioquia) concentra 117 personas indígenas según CNPV 2018, donde el 85.5% pertenece al pueblo EMBERA-KATIO (100 personas). La ausencia de resguardos registrados refleja una debilidad en el reconocimiento territorial. El ICV de 0.0 evidencia condiciones críticas en dimensiones socioeconómicas y de conflicto.",
+  "demografia": "La población indígena en Granada es predominantemente adulta joven, con 100 EMBERA-KATIO (85.5%) y 13 EMBERA-CHAMI (11.1%). Los datos no permiten análisis de pirámide etaria por falta de desagregación por edad. La concentración en un solo pueblo limita la diversidad demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de información impide análisis de sub-registro o priorización sanitaria. Se requiere fortalecer sistemas de información locales para superar esta brecha.",
+  "territorial": "Granada carece de resguardos indígenas registrados (n=0), pese a albergar a 117 personas indígenas. La bbox geográfica delimita un área de 6.018 a 6.231 latitud y -75.233 a -75.059 longitud, sin presencia territorial colectiva reconocida.",
+  "lengua": "Los datos sobre lenguas indígenas en Granada no están disponibles. No es posible determinar la vitalidad lingüística ni planes de revitalización. Esta omisión invisibiliza la diversidad cultural en el territorio.",
+  "vida": "No hay datos de NBI para Granada, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide comparar brechas socioeconómicas. Se requiere incluir indicadores de pobreza en sistemas de monitoreo municipal.",
+  "conflicto": "4 víctimas indígenas con discapacidad registradas entre 1985-2024, donde el 75% corresponde a desplazamiento forzado (3 casos). El hecho principal evidencia patrones de violencia estructural contra este pueblo. Los datos sugieren alta vulnerabilidad en movilidad humana.",
+  "icv": "El ICV de 0.0 en Granada refleja condiciones extremas en NBI (0.0), prevalencia (0.0) y conflicto (0.001). La fórmula ponderada (40% NBI, 30% prevalencia, 30% conflicto) ubica al municipio en el peor escenario posible. Urgen intervenciones integrales.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para el pueblo EMBERA-KATIO, que representa el 85.5% de la población indígena, mediante gestiones ante el Ministerio del Interior con base en los 100 habitantes registrados.",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, dado que el 75% de los casos de violencia contra indígenas en Granada corresponden a este hecho (3 de 4 víctimas).",
+    "Incluir indicadores de NBI y lengua en el SMT-ONIC municipal, replicando el promedio indígena nacional (67.6% NBI) para comparar brechas socioeconómicas.",
+    "Fortalecer la recolección de datos demográficos por edad y género para analizar la pirámide etaria, actualmente no disponible pese a los 117 habitantes registrados.",
+    "Diseñar programas de salud intercultural con enfoque en discapacidad, considerando que el 100% de las víctimas registradas (4) presentan esta condición."
+  ]
+}

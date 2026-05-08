@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo AGUA NEGRA, territorio del pueblo KOREGUAJE en Caquetá, concentra 541 habitantes en 1.996 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI, prevalencia y conflicto. La falta de información en secciones críticas como lengua y NBI limita una lectura integral, pero evidencia vacíos en el monitoreo territorial.",
+  "demografia": "La población total de 541 personas en AGUA NEGRA presenta una pirámide etaria no disponible en los datos. La fuente DANE-CNPV 2018, con confiabilidad CONFIABLE (n=541), no desagrega grupos etarios. Esto impide analizar dinámicas generacionales o envejecimiento, esenciales para planificar servicios comunitarios.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en AGUA NEGRA. La sección está marcada sin datos (_sin_datos: true), lo que imposibilita evaluar necesidades sanitarias. Este vacío subraya la urgencia de sistemas de registro locales robustos para el pueblo KOREGUAJE.",
+  "territorial": "AGUA NEGRA ocupa 1.996 hectáreas en el municipio de Milán, Caquetá, con coordenadas geográficas definidas. Su ubicación en la Amazonía colombiana lo sitúa en un contexto de alta biodiversidad y presión extractiva. El territorio, aunque delimitado, carece de análisis de conectividad ecológica o amenazas externas en los datos proporcionados.",
+  "lengua": "Los datos sobre lengua en AGUA NEGRA no están disponibles (_sin_datos: true). No se registra información sobre uso de lenguas indígenas, vital para la revitalización cultural del pueblo KOREGUAJE. Esta omisión refleja la necesidad de incluir indicadores lingüísticos en los sistemas de monitoreo territorial.",
+  "vida": "No hay datos sobre Necesidades Básicas Insatisfechas (NBI) en AGUA NEGRA (_sin_datos: true). El promedio indígena nacional de NBI es 67.6%, pero este resguardo no cuenta con mediciones locales. La brecha con el promedio nacional no puede calcularse, destacando la falta de seguimiento a condiciones de vida.",
+  "conflicto": "AGUA NEGRA reporta 0 víctimas con discapacidad por conflicto entre 1985-2024 (n=0, confiabilidad CONFIABLE). No hay hechos victimizantes registrados. Este dato, aunque positivo, debe interpretarse con cautela por la posible subnotificación en sistemas de registro rurales.",
+  "icv": "El ICV de AGUA NEGRA es 0.0, derivado de componentes no disponibles (NBI, prevalencia y conflicto en 0.0). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja la ausencia de datos, no una condición real. Esto limita su utilidad como indicador de bienestar.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de lengua y cultura para el pueblo KOREGUAJE, priorizando la documentación de la lengua koreguaje con al menos 541 hablantes potenciales según población total.",
+    "Diseñar un protocolo de recolección de datos de NBI y prevalencia en AGUA NEGRA, alineado con el promedio indígena nacional de 67.6% para contextualizar necesidades.",
+    "Incluir AGUA NEGRA en el monitoreo de conflictos territoriales de la CRIOMC, dado su contexto amazónico, con seguimiento trimestral a hechos victimizantes.",
+    "Fortalecer la capacidad institucional del resguardo para gestionar datos propios, reduciendo dependencia de fuentes externas no desagregadas.",
+    "Priorizar proyectos de soberanía alimentaria en AGUA NEGRA, considerando su área de 1.996 hectáreas y la necesidad de autonomía territorial."
+  ]
+}

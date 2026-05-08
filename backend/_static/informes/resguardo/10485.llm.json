@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Alto Cartagena, territorio Awá en Nariño, alberga 180 habitantes en 4.564,98 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando la ausencia de datos en componentes clave como NBI y prevalencia. La población total, según DANE-CNPV 2018, es confiable pero limitada para análisis demográficos profundos.",
+  "demografia": "La población total de 180 habitantes impide un análisis robusto de la pirámide etaria. Los datos disponibles no permiten identificar patrones de edad o crecimiento poblacional. Se requiere desagregación por grupos etarios para evaluar dinámicas demográficas y planificar servicios básicos.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este resguardo. Sin registros de morbilidad o condiciones de salud, no es posible analizar subregistros ni priorizar intervenciones sanitarias. La falta de información limita la toma de decisiones basada en evidencia.",
+  "territorial": "El resguardo ocupa 4.564,98 hectáreas en Ricaurte, Nariño, con límites geográficos definidos. Su ubicación en la macro región Occidente sugiere integración con territorios Awá circundantes. La delimitación territorial es clara, pero se requieren datos sobre conectividad y acceso a servicios.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en este resguardo. La ausencia de registros impide evaluar la vitalidad lingüística del pueblo Awá en el territorio. Se recomienda realizar un censo lingüístico para documentar la transmisión intergeneracional.",
+  "vida": "No se reportan datos de NBI para Alto Cartagena. El promedio indígena nacional (67.6%) no puede compararse aquí. La falta de información sobre necesidades básicas invisibiliza las condiciones de vida de la comunidad, obstaculizando la planificación de políticas públicas.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo (0 casos entre 1985-2024). La ausencia de hechos violentos no implica seguridad, sino posible subregistro. Se debe fortalecer el sistema de alertas tempranas para prevenir afectaciones futuras.",
+  "icv": "El ICV de 0.0 en Alto Cartagena es un alerta crítica, derivado de la falta de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede aplicarse sin información confiable.",
+  "recomendaciones": [
+    "Realizar un censo demográfico y lingüístico en el resguardo para actualizar datos de población y vitalidad cultural, citando la población total de 180 habitantes como base de planificación.",
+    "Implementar un sistema de recolección de datos de NBI y prevalencia en territorios Awá, usando el promedio indígena nacional (67.6%) como referencia para priorizar intervenciones.",
+    "Fortalecer el registro de víctimas de conflicto en territorios indígenas, especialmente en zonas de alta vulnerabilidad como Nariño, donde el subregistro puede ocultar violaciones a derechos humanos.",
+    "Diseñar un plan de conectividad territorial para el resguardo, considerando su área de 4.564,98 hectáreas y su ubicación en la macro región Occidente, para mejorar el acceso a servicios básicos.",
+    "Promover alianzas con organizaciones regionales como CAMAWARI para sistematizar datos de capacidades diversas, usando el promedio indígena nacional (60.0%) como línea base para comparaciones."
+  ]
+}

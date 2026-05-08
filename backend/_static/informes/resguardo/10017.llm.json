@@ -1,0 +1,15 @@
+{
+  "ejecutivo": "El resguardo San José del Río tiene una población total de 52 personas. La información disponible indica que el resguardo se encuentra en el departamento de Amazonas, municipio de Leticia, y pertenece a la macrorregión de Amazonia.",
+  "demografia": "La población total del resguardo es de 52 personas, según datos de 2018. No hay información disponible sobre la pirámide etaria o razones específicas para este nivel.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia para el resguardo San José del Río. La limitación interpretativa se debe a la falta de información.",
+  "territorial": "El resguardo San José del Río tiene un área de 536.348 hectáreas y se encuentra en el departamento de Amazonas, municipio de Leticia. La concentración geográfica de la población es específica de este resguardo.",
+  "lengua": "No hay datos disponibles sobre la lengua para el resguardo San José del Río.",
+  "vida": "No hay datos disponibles sobre el NBI para el resguardo San José del Río. El promedio indígena nacional es de 67.6%.",
+  "conflicto": "No hay víctimas registradas en el resguardo San José del Río. La confiabilidad de la información es alta, pero la falta de datos sobre conflictos es notable.",
+  "icv": "El score ICV es de 0.0, lo que indica una falta de información sobre los componentes que lo componen. La fórmula utilizada es ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm.",
+  "recomendaciones": [
+    "Se recomienda realizar un estudio detallado sobre la población del resguardo San José del Río, con el fin de obtener información más precisa sobre la demografía y las necesidades específicas de la comunidad, considerando su población total de 52 personas.",
+    "Es necesario desarrollar programas de apoyo a la lengua y la cultura del pueblo Cocama, que es el pueblo indígena que habita el resguardo, aunque no hay datos disponibles sobre la lengua en este nivel.",
+    "Se sugiere implementar iniciativas de monitoreo y registro de conflictos y violaciones a los derechos humanos en el resguardo, dado que no hay víctimas registradas pero es importante tener un sistema de alerta temprana, considerando el score ICV de 0.0."
+  ]
+}

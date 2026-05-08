@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Socha registra una población indígena de 9 personas según CNPV 2018, distribuidas en 3 pueblos. El 55.6% (5 personas) corresponde al pueblo WAYUU, seguido por un 33.3% (3) sin información específica y un 11.1% (1) U`WA. La ausencia de resguardos y datos de lengua refleja vacíos en el reconocimiento territorial y cultural. La baja población y la dispersión geográfica limitan la representatividad de los indicadores.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida población (n=9). Los datos muestran una distribución fragmentada: 5 WAYUU, 3 sin información y 1 U`WA. La falta de datos de capacidades diversas impide analizar vulnerabilidades específicas. La confiabilidad de los datos es alta, pero la representatividad estadística es crítica por el tamaño muestral.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud en Socha. Los indicadores de conflicto y NBI tampoco están registrados, lo que imposibilita evaluar riesgos o necesidades socioeconómicas. La ausencia de información subraya la necesidad de sistemas de monitoreo locales más robustos.",
+  "territorial": "Socha no cuenta con resguardos indígenas registrados, a pesar de albergar población de pueblos originarios. La bbox geográfica delimita un área de 5.866 a 6.062 latitud y -72.743 a -72.632 longitud, pero sin territorios colectivos reconocidos. La concentración indígena es mínima y dispersa, sin patrones geográficos claros.",
+  "lengua": "Los datos de lengua no están disponibles para Socha. No se puede determinar el uso de lenguas indígenas ni su vitalidad cultural en el municipio. Esta omisión refleja la falta de políticas públicas que integren la diversidad lingüística en los registros territoriales.",
+  "vida": "No hay datos de NBI para Socha, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide comparar brechas socioeconómicas. La falta de registros limita la identificación de necesidades básicas insatisfechas en la población indígena local.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Socha entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja visibilidad de conflictos, pero también posibles subregistros. La confiabilidad de los datos es alta, pero la falta de eventos dificulta análisis de patrones territoriales.",
+  "icv": "El ICV de Socha es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja la ausencia de datos en todas las dimensiones. Este resultado subraya la urgencia de mejorar los sistemas de información municipal.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal de población indígena con desagregación por pueblo y lengua, citando la falta actual de datos en Socha.",
+    "Promover el reconocimiento de resguardos indígenas en Socha, dado que no hay territorios colectivos registrados a pesar de la presencia de pueblos originarios.",
+    "Incluir indicadores de NBI y salud en los sistemas de información municipal, comparando con el promedio indígena nacional de 67.6%.",
+    "Realizar un censo local de capacidades diversas para identificar vulnerabilidades no registradas en la población indígena.",
+    "Fortalecer la recolección de datos de conflicto en Socha, donde no hay víctimas reportadas, pero podría haber subregistros."
+  ]
+}

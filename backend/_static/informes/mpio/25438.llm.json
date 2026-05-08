@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Medina (Cundinamarca) concentra 43 personas indígenas según CNPV 2018, distribuidas en 12 pueblos. El 60.5% pertenece a los pueblos Je’eruriwa (13) y Yukuna (11), evidenciando diversidad pero baja densidad poblacional. La ausencia de resguardos y un ICV de 0.0 reflejan vacíos en protección territorial y desarrollo humano, agravados por 2 víctimas de conflicto en 40 años.",
+  "demografia": "La población indígena de Medina suma 43 personas, con pirámide etaria concentrada en adultos (13 Je’eruriwa y 11 Yukuna). La dispersión entre 12 pueblos —sin predominio claro— sugiere migración o asimilación forzada. Los datos, aunque confiables (n=43), no permiten análisis etario detallado por bajo n.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades. La falta de información limita análisis de salud pública. Se requiere priorizar registros epidemiológicos locales para identificar necesidades específicas, especialmente en pueblos minoritarios como el Jiw (1 persona).",
+  "territorial": "Medina carece de resguardos indígenas, a pesar de albergar 12 pueblos. La bbox geográfica delimita un área de 4.4 km² sin reconocimiento legal de territorios colectivos. Esta ausencia contrasta con la presencia de pueblos como Sikuani y Tukano, cuyos territorios históricos no están protegidos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede inferir vitalidad lingüística ni pérdida cultural. Se recomienda incluir censos lingüísticos en futuras rondas para evaluar la situación del Je’eruriwa y Yukuna, únicos pueblos con población significativa.",
+  "vida": "No hay datos de NBI para Medina. El promedio indígena nacional (67.6%) sugiere brechas críticas no cuantificables aquí. La falta de información impide medir pobreza multidimensional, pero la alta diversidad poblacional exige políticas diferenciadas para pueblos como el Piapoco (2 personas).",
+  "conflicto": "Medina registra 2 víctimas de conflicto entre 1985-2024: 1 por amenaza y 1 por desplazamiento forzado. El 50% de los hechos corresponde a amenazas, señalando riesgos persistentes. La baja n (n=2) limita generalizaciones, pero exige atención prioritaria por la vulnerabilidad de pueblos minoritarios.",
+  "icv": "El ICV de 0.0 en Medina refleja la fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm), donde todos los componentes son 0.0. Este resultado subraya la ausencia de registros en NBI, prevalencia y conflicto, ocultando realidades territoriales críticas.",
+  "recomendaciones": [
+    "Registrar la población indígena en el CNPV 2024 con enfoque diferencial para pueblos minoritarios como el Jiw (1 persona) y evitar subregistros en municipios dispersos como Medina.",
+    "Priorizar la creación de resguardos para los 12 pueblos identificados, especialmente para Je’eruriwa (13 personas) y Yukuna (11), cuyos territorios históricos no están reconocidos.",
+    "Implementar un sistema de alerta temprana para amenazas contra líderes indígenas, dado que el 50% de los hechos de conflicto en el municipio corresponden a este tipo (1 de 2 casos).",
+    "Incluir en el Plan de Desarrollo Municipal indicadores de NBI y prevalencia para pueblos indígenas, usando el promedio nacional (67.6%) como línea base de referencia.",
+    "Fortalecer la recolección de datos lingüísticos en alianza con las autoridades tradicionales de Je’eruriwa y Yukuna, únicos pueblos con población significativa en el municipio."
+  ]
+}

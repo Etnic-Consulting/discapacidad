@@ -1,0 +1,197 @@
+{
+  "tipo": "dpto",
+  "id": "68",
+  "nombre": "SANTANDER",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1219,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1219,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 82,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 82,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 1219,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 67.3,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "810",
+          "con_disc": 19,
+          "total": 131
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 13,
+          "total": 321
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 11,
+          "total": 164
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 5,
+          "total": 113
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 4,
+          "total": 30
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 4,
+          "total": 123
+        },
+        {
+          "cod_pueblo": "690",
+          "con_disc": 3,
+          "total": 18
+        },
+        {
+          "cod_pueblo": "850",
+          "con_disc": 3,
+          "total": 24
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 3,
+          "total": 35
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 2,
+          "total": 37
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        5.707536031539032,
+        -74.52895432224261,
+        8.145010135948272,
+        -72.4770587071967
+      ],
+      "nombre_dpto": "SANTANDER"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 142,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 142,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 111
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 10
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 10
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 4
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 3
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 111
+      },
+      "pct_hecho_principal": 78.2
+    },
+    "icv": {
+      "score": 0.109,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.336,
+        "conflicto_norm": 0.028
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:54:53",
+  "periodo": "2018",
+  "_input_hash": "563966fb82074da2"
+}

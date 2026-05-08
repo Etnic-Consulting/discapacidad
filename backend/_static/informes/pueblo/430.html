@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Nukak · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Nukak</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El pueblo Nukak, con una población de apenas 744 personas, se encuentra en una situación de extrema vulnerabilidad demográfica y humanitaria. Su estructura poblacional es muy joven, con un alto índice de dependencia (107.2), lo que presiona a la generación productiva. Esta fragilidad se ve agravada por una diáspora forzada que ha dispersado a sus miembros en 12 departamentos del país, lejos de sus territorios ancestrales en Guaviare y Vichada, dificultando la cohesión cultural y social.</p><p></p><p>El indicador más alarmante es el de las condiciones de vida: un 82.81% de los Nukak presenta Necesidades Básicas Insatisfechas (NBI), una cifra muy superior al promedio indígena nacional (67.6%). Más grave aún, un 74.84% se encuentra en la miseria, principalmente debido a viviendas inadecuadas y falta de servicios básicos. Esta pobreza estructural es el principal factor de vulnerabilidad y amenaza directamente su pervivencia física y cultural.</p><p></p><p>Los datos oficiales reflejan una profunda invisibilidad estadística que enmascara la verdadera magnitud de las afectaciones. La tasa de prevalencia de discapacidad (33.5 por 1,000) es engañosamente baja, y los registros sobre lengua (0% hablantes) y víctimas del conflicto (0 registrados) son evidentemente erróneos. Este informe subraya la urgencia de acciones de protección territorial, atención humanitaria y una recolección de datos que refleje fielmente la realidad crítica del pueblo Nukak.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">744</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">32</div><div class="sub">prevalencia 33,5‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">12</div><div class="sub">5 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.381</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica del pueblo Nukak refleja una población extremadamente joven y en alto riesgo. Con un total de 744 miembros, casi la mitad (369 personas) son menores de 15 años, mientras que solo 16 personas superan los 65 años. Esto resulta en un altísimo índice de dependencia de 107.2, lo que significa que por cada 100 personas en edad de trabajar hay 107 en situación de dependencia, principalmente niños y jóvenes. El índice de envejecimiento es de apenas 4.3, confirmando la base piramidal ancha. Esta demografía, si bien puede sugerir un potencial de crecimiento, impone una carga económica y de cuidado enorme sobre los 359 individuos en edad productiva, exacerbando la vulnerabilidad general del pueblo.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">199</td><td class="num">170</td><td class="num"><b>369</b></td><td class="num">49.6%</td></tr>
+      <tr><td>15-64 años</td><td class="num">179</td><td class="num">180</td><td class="num"><b>359</b></td><td class="num">48.3%</td></tr>
+      <tr><td>65+ años</td><td class="num">8</td><td class="num">8</td><td class="num"><b>16</b></td><td class="num">2.2%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>386</b></td><td class="num"><b>358</b></td><td class="num"><b>744</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">107,8</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">107,2</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">4,3</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>Según los registros, 32 miembros del pueblo Nukak viven con algún tipo de limitación, lo que resulta en una tasa de prevalencia de 33.5 por cada 1,000 personas. Esta cifra es notablemente inferior al promedio nacional indígena de 60.0 por 1,000. Lejos de indicar una mejor condición de salud, esta baja prevalencia sugiere un posible sub-registro significativo de casos de discapacidad. Dadas las precarias condiciones de vida y las barreras de acceso a servicios, es muy probable que muchas personas con limitaciones no estén siendo identificadas por el sistema. Además, la falta de datos sobre los tipos de limitación específicos impide un análisis más profundo y la planificación de respuestas adecuadas a sus necesidades.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Nukak</div>
+      <div class="num-big">33,5‰</div>
+      <div class="lbl">32 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: 26,5‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>El pueblo Nukak enfrenta una grave fragmentación territorial, una clara evidencia de desplazamiento y despojo. Aunque su corazón territorial se encuentra entre Guaviare y Vichada, donde habitan 454 y 477 personas respectivamente, su población total de 744 miembros se encuentra dispersa en 12 departamentos distintos, a menudo con presencias mínimas de un solo individuo. Esta diáspora forzada debilita su cohesión social y cultural. Solamente una fracción de su gente, como las 140 personas en el resguardo Nukak-Maku en Guaviare, habita en territorios colectivos reconocidos. La mayoría vive por fuera, en condiciones de alta vulnerabilidad y sin la protección del territorio ancestral que es fundamental para su pervivencia como pueblo.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VICHADA</td><td class="num">477</td><td class="num">16</td><td class="num">33,5‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>GUAVIARE</td><td class="num">454</td><td class="num">13</td><td class="num">28,6‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>GUAINIA</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">3</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>CASANARE</td><td class="num">3</td><td class="num">1</td><td class="num">333,3‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>AMAZONAS</td><td class="num">2</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>META</td><td class="num">1</td><td class="num">1</td><td class="num">1.000,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>SANTANDER</td><td class="num">1</td><td class="num">1</td><td class="num">1.000,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+      <tr><td>NARINO</td><td class="num">1</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Nukak-Maku</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">140</td></tr>
+      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">128</td></tr>
+      <tr><td>Yaigoje-Rio Apaporis</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">8</td></tr>
+      <tr><td>Bacati-Arara Carurú y Miraflores</td><td>VAUPÉS</td><td>CARURÚ</td><td class="num">2</td></tr>
+      <tr><td>Barranco Ceiba-Laguna Araguato</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">1</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Los datos censales disponibles indican que un 0.0% de la población habla y un 0.0% entiende la lengua Nukak. Este dato es manifiestamente incorrecto y debe ser considerado una grave falla en la recolección de información diferencial por parte del Estado. Contradice el conocimiento profundo sobre la vitalidad cultural del pueblo Nukak, para quienes su idioma es un pilar fundamental de su identidad y cosmovisión, especialmente siendo un pueblo de contacto reciente. Este cero estadístico no debe interpretarse como la extinción de la lengua, sino como una prueba de la incapacidad de los instrumentos censales para capturar adecuadamente su realidad, invisibilizando una de sus mayores fortalezas culturales.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>Las condiciones de vida del pueblo Nukak son alarmantemente precarias. El 82.81% de sus miembros vive con Necesidades Básicas Insatisfechas (NBI), una cifra que supera en 15 puntos porcentuales al ya elevado promedio indígena nacional de 67.6%. La situación es aún más crítica al observar que un 74.84% se encuentra en la miseria o pobreza extrema. Los componentes más deficientes son el de vivienda inadecuada, que afecta al 76.31% de la población, y la falta de acceso a servicios públicos básicos, que impacta al 70.44%. Estas cifras no solo representan estadísticas, sino una crisis humanitaria que compromete la salud, la dignidad y la supervivencia del pueblo.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Nukak</div>
+      <div class="num-big">82,8%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">76,3%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 92.3%"></div></div><div class="num">70,4%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 59.3%"></div></div><div class="num">45,3%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 22.3%"></div></div><div class="num">17,0%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 49.7%"></div></div><div class="num">38,0%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Los registros oficiales del conflicto armado muestran una invisibilidad total de las afectaciones al pueblo Nukak. Según la base de datos del Registro Único de Víctimas (RUV), se reportan 0 víctimas con discapacidad pertenecientes a este pueblo, y no se listan hechos victimizantes principales. Esta ausencia de datos no significa que no hayan sido afectados; por el contrario, es bien sabido que los Nukak han sufrido de manera desproporcionada el desplazamiento forzado, el despojo territorial y la violencia. El cero en los registros es, en sí mismo, un hallazgo que evidencia un profundo sub-registro y la falta de acceso a las rutas de declaración, dejando al pueblo desprotegido y sin reconocimiento de los daños sufridos.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Compuesto (ICV) para el pueblo Nukak se sitúa en 0.381. Este valor, aunque abstracto, es un reflejo directo de su crítica situación socioeconómica. El componente que más peso tiene en este índice es el de Necesidades Básicas Insatisfechas (NBI), con un valor normalizado de 0.828, confirmando que la pobreza estructural es el principal motor de su vulnerabilidad. Por otro lado, los componentes de prevalencia de discapacidad (0.168) y de afectación por conflicto (0.0) aparecen bajos, pero esto se debe a las fallas de registro ya señaladas, que enmascaran la verdadera dimensión de estas problemáticas. Por tanto, el ICV subestima la fragilidad real del pueblo.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.828</td><td class="num">0.40</td><td class="num"><b>0.331</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.168</td><td class="num">0.30</td><td class="num"><b>0.050</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.381</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Implementar un plan de choque humanitario para mitigar las condiciones de pobreza, dado que el 82.81% de la población tiene Necesidades Básicas Insatisfechas y el 74.84% vive en la miseria, priorizando vivienda digna y acceso a servicios básicos.</li>
+      <li>Diseñar y ejecutar acciones urgentes de protección territorial y retorno seguro para el pueblo Nukak, cuya población de 744 personas se encuentra peligrosamente dispersa en 12 departamentos, atentando contra su unidad y supervivencia cultural.</li>
+      <li>Realizar una caracterización de salud y discapacidad culturalmente adecuada, pues la tasa de prevalencia registrada de 33.5 por 1,000 probablemente oculta un grave sub-registro que invisibiliza las necesidades reales del pueblo.</li>
+      <li>Establecer un programa de seguimiento demográfico y revitalización cultural ante la alta vulnerabilidad de una población de solo 744 personas, cuyo alto índice de dependencia de 107.2 amenaza la transmisión de su saber ancestral.</li>
+      <li>Exigir a las entidades estatales la rectificación de los datos censales que reportan un 0% de hablantes de la lengua propia, pues esta cifra atenta contra la dignidad del pueblo Nukak y perpetúa su invisibilidad estadística.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/430/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[2.151182175000031, -72.44277139499997], [2.923680194000042, -70.54146957799998]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[2.151182175000031, -72.44277139499997], [2.923680194000042, -70.54146957799998]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([2.5374311845000364, -71.49212048649997]).addTo(map)
+    .bindPopup('<b>PUEBLO Nukak</b>');
+</script>
+</body>
+</html>

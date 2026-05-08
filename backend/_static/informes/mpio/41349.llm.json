@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Hobo (Huila) registra una población indígena de 17 personas según el CNPV 2018, distribuida en 5 pueblos. El 64.7% (11 personas) corresponde al pueblo Coreguaje, principal grupo étnico presente. La ausencia de resguardos y la concentración poblacional en un territorio sin reconocimiento legal reflejan una vulnerabilidad territorial crítica para los pueblos indígenas en este municipio.",
+  "demografia": "La población indígena en Hobo es minoritaria y dispersa, con solo 17 personas registradas en 2018. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La concentración en el pueblo Coreguaje (64.7%) sugiere una presencia histórica, pero sin estructuras territoriales que garanticen su continuidad cultural.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Hobo. La falta de registros específicos impide evaluar brechas sanitarias o patrones epidemiológicos. Se requiere fortalecer sistemas de información locales para identificar necesidades prioritarias en salud indígena.",
+  "territorial": "Hobo cuenta con 0 resguardos indígenas reconocidos, pese a albergar 5 pueblos distintos. La ausencia de territorios colectivos limita el ejercicio de autonomía y protección cultural. La dispersión geográfica (coordenadas entre 2.45°N y 2.68°N) no se traduce en seguridad jurídica para los pueblos presentes.",
+  "lengua": "Los datos sobre lenguas indígenas en Hobo no están disponibles. No es posible determinar la vitalidad lingüística ni el uso de lenguas nativas entre la población registrada. Esta omisión dificulta la planificación de políticas de revitalización cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Hobo. El promedio indígena nacional (67.6%) no puede contrastarse localmente. La falta de datos impide medir brechas en acceso a servicios básicos como vivienda, educación o salud.",
+  "conflicto": "Se registra 1 víctima de desplazamiento forzado entre personas con discapacidad en Hobo (1985-2024). El 100% de los hechos violentos identificados corresponden a este tipo de victimización. La concentración en un solo evento subraya la fragilidad territorial y la falta de mecanismos de protección.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Hobo es 0.0, con todos sus componentes en cero (NBI, prevalencia y conflicto). Esta métrica refleja la ausencia de datos normalizados o la invisibilización estadística de la población indígena. La fórmula aplicada no captura la realidad local.",
+  "recomendaciones": [
+    "Registrar formalmente los territorios indígenas en Hobo para garantizar derechos territoriales, citando la ausencia de 0 resguardos.",
+    "Implementar un sistema de información municipal con enfoque étnico para superar la falta de datos en NBI, lengua y salud, citando el _sin_datos en 3 secciones.",
+    "Priorizar atención a víctimas de desplazamiento forzado, dado que el 100% de los hechos reportados corresponden a este tipo, con 1 caso identificado.",
+    "Fortalecer la participación del pueblo Coreguaje (64.7% de la población) en políticas públicas locales para preservar su identidad cultural.",
+    "Incluir a Hobo en planes departamentales de protección indígena, considerando su ubicación en el Huila (cod_dpto 41) y la dispersión geográfica registrada."
+  ]
+}

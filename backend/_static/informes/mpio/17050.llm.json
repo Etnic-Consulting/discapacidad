@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Aranzazu registra una población indígena de 2 personas según el CNPV 2018, concentrada en el pueblo Emberá-Chamí. No existen resguardos indígenas en el territorio, lo que limita la expresión de autonomía territorial. La ausencia de datos en secciones clave como NBI y lengua refleja vacíos en el monitoreo local, pese a la confiabilidad técnica de las fuentes.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal dado que la población indígena total es de 2 personas. La concentración en un solo pueblo (Emberá-Chamí) refleja una diversidad étnica mínima en el territorio. Los datos demográficos agregados a nivel municipal no permiten análisis etarios detallados ni comparaciones con estructuras poblacionales indígenas nacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones específicas en Aranzazu. La sección de capacidades diversas no registra información, lo que impide evaluar brechas en salud o discapacidad. El promedio indígena nacional de 60% en capacidades diversas no puede contrastarse localmente por falta de registros municipales.",
+  "territorial": "Aranzazu carece de resguardos indígenas, con 0 territorios colectivos registrados. La bbox geográfica delimita un área de 5.21°N a 5.35°N y -75.56°O a -75.37°O, pero sin presencia de territorios ancestrales. La ausencia de resguardos contrasta con la presencia histórica de pueblos indígenas en la región cafetera.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para Aranzazu. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en el territorio. Esta carencia obstaculiza la planificación de políticas de revitalización cultural.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en Aranzazu. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de datos impide evaluar condiciones de vida, acceso a servicios o brechas socioeconómicas en la población indígena municipal.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Aranzazu entre 1985-2024. El valor de 0 víctimas totales discapacitadas sugiere ausencia de registros o subreporte en el RUV. Este hallazgo debe interpretarse con cautela dado el posible subregistro en contextos municipales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Aranzazu es 0.0, con componentes normalizados en 0.0. La fórmula (0.4*NBI + 0.3*prev + 0.3*conflicto) refleja la ausencia de datos en todas las dimensiones. Esta métrica carece de utilidad interpretativa por vacíos metodológicos.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar el subregistro de 2 personas y validar la presencia de pueblos indígenas en Aranzazu.",
+    "Incluir a Aranzazu en los sistemas de información de resguardos para registrar territorios ancestrales no reconocidos oficialmente.",
+    "Implementar un protocolo de recolección de datos sobre NBI y lenguas indígenas en coordinación con el CNPV y el Ministerio del Interior.",
+    "Priorizar la creación de un resguardo indígena en Aranzazu para garantizar autonomía territorial y protección de derechos colectivos.",
+    "Articular con la ONIC y el pueblo Emberá-Chamí para diseñar estrategias de revitalización cultural y monitoreo de condiciones de vida."
+  ]
+}

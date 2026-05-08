@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Tinjaca registra una población indígena de 1 habitante según el CNPV 2018, concentrada en el pueblo Nasa. La ausencia de resguardos y datos de lengua refleja una pérdida territorial crítica. Este escenario exige priorizar la reconstrucción identitaria y el acceso a derechos básicos, dado que el ICV de 0.0 evidencia un colapso en indicadores socioeconómicos y de conflicto.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la población de 1 habitante. La concentración en un solo pueblo (Nasa) sin diversidad demográfica limita cualquier análisis de estructura poblacional. Los datos disponibles no permiten evaluar dinámicas generacionales o patrones migratorios.",
+  "prevalencia": "No hay datos de prevalencia disponibles para Tinjaca. La falta de información sobre morbilidad o condiciones de salud impide evaluar necesidades sanitarias. Este vacío subraya la urgencia de sistemas de registro locales confiables para pueblos con poblaciones mínimas.",
+  "territorial": "Tinjaca carece de resguardos indígenas, lo que contrasta con su bbox municipal. La ausencia de territorios colectivos (0 resguardos) sitúa a la población en riesgo de despojo y pérdida cultural. La dispersión geográfica sin anclaje territorial dificulta la implementación de políticas diferenciadas.",
+  "lengua": "Los datos de lengua no están disponibles para Tinjaca. Esta omisión impide evaluar la vitalidad lingüística del pueblo Nasa en el municipio. La revitalización cultural requiere información precisa sobre uso y transmisión de la lengua originaria.",
+  "vida": "No hay datos de NBI para Tinjaca. El promedio indígena nacional (67.6%) sirve como referencia, pero no refleja la realidad local. La ausencia de indicadores socioeconómicos oculta posibles vulnerabilidades extremas en una población de 1 habitante.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Tinjaca (0 casos entre 1985-2024). La falta de hechos violentos documentados no descarta subregistros. La confiabilidad de los datos (n=0) impide conclusiones sobre seguridad territorial.",
+  "icv": "El ICV de 0.0 en Tinjaca refleja la suma de componentes nulos (NBI, prevalencia y conflicto). Este resultado posiciona al municipio en el peor escenario posible, equivalente a una ausencia total de condiciones de vida digna. La fórmula del ICV (0.4*nbi + 0.3*prev + 0.3*conf) confirma la gravedad.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de un territorio colectivo para el pueblo Nasa en Tinjaca, dado que no existen resguardos registrados (0 resguardos).",
+    "Implementar un sistema de monitoreo local con enfoque diferencial para pueblos con poblaciones menores a 10 habitantes, garantizando registro en NBI y lengua.",
+    "Diseñar estrategias de revitalización cultural para el pueblo Nasa en Tinjaca, incluyendo documentación de lengua y prácticas tradicionales ante la ausencia de datos.",
+    "Solicitar a la CNPV 2024 un ajuste metodológico para incluir pueblos con 1 habitante en análisis demográficos, evitando su invisibilización.",
+    "Establecer un protocolo de atención prioritaria para Tinjaca en programas de salud y educación, considerando el ICV de 0.0 como alerta máxima."
+  ]
+}

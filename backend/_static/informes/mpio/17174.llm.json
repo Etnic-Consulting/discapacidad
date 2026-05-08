@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Chinchiná alberga una población indígena de 83 personas según el CNPV 2018, distribuida en 11 pueblos. El 22.9% de este grupo corresponde al pueblo EMBERA-CHAMI, el más numeroso. La ausencia de resguardos en el territorio contrasta con la diversidad étnica registrada. La alta dispersión poblacional y la falta de datos sobre capacidades diversas y NBI limitan el análisis integral de las condiciones de vida.",
+  "demografia": "La población indígena de Chinchiná presenta una estructura etaria concentrada en adultos jóvenes, con 19 EMBERA-CHAMI como grupo mayoritario. La mediana de edad no puede calcularse por falta de datos desagregados por grupos etarios. La presencia de 11 pueblos en un territorio sin resguardos refleja una dinámica migratoria reciente o procesos de autoidentificación dispersos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades en este municipio. La falta de información específica impide evaluar el sub-registro de condiciones de salud. Se requiere fortalecer los sistemas de información locales para garantizar el derecho a la salud de los pueblos indígenas en Chinchiná.",
+  "territorial": "Chinchiná no cuenta con resguardos indígenas registrados, a pesar de albergar 11 pueblos. La dispersión geográfica se evidencia en la ausencia de territorios colectivos. La caja delimitadora del municipio (4.926, -75.747 a 5.078, -75.572) no incluye áreas reconocidas como resguardos.",
+  "lengua": "Los datos sobre lenguas indígenas en Chinchiná no están disponibles. No se puede determinar la vitalidad lingüística de los pueblos presentes en el territorio. La ONIC debe priorizar la recolección de información lingüística en futuros censos territoriales.",
+  "vida": "No hay datos disponibles sobre NBI para Chinchiná. El promedio indígena nacional de 67.6% no puede compararse localmente. La falta de información impide evaluar brechas en condiciones de vida como vivienda, educación o ingresos.",
+  "conflicto": "Se registraron 4 víctimas indígenas con discapacidad entre 1985-2024, siendo el desplazamiento forzado el hecho principal (75% de los casos). El homicidio representa el 25% restante. La baja cantidad de registros sugiere sub-registro o invisibilización de la violencia contra pueblos indígenas en la zona.",
+  "icv": "El ICV de Chinchiná es 0.0, con componentes normalizados en cero excepto conflicto (0.001). La fórmula (0.4*NBI + 0.3*prevalencia + 0.3*conflicto) refleja la ausencia de datos sistemáticos. Esta métrica subraya la urgencia de mejorar los sistemas de información territorial.",
+  "recomendaciones": [
+    "Implementar un censo territorial indígena en Chinchiná para actualizar datos demográficos y de capacidades diversas, dado que solo se cuenta con información de 2018 y 83 personas registradas.",
+    "Promover la creación de resguardos para los pueblos EMBERA-CHAMI y EMBERA, que concentran el 43.4% de la población indígena, garantizando el derecho al territorio colectivo.",
+    "Fortalecer el registro de víctimas indígenas en el RUV, especialmente en hechos de desplazamiento forzado, que representan el 75% de los casos registrados en Chinchiná.",
+    "Diseñar programas de salud intercultural con enfoque en pueblos sin información previa, como KAMËNTSA o MUISCA, que tienen solo 2 personas cada uno.",
+    "Incluir Chinchiná en la estrategia de monitoreo lingüístico de la ONIC para documentar la vitalidad de las 11 lenguas presentes en el territorio."
+  ]
+}

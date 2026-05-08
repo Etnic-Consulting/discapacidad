@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Montería registra 3.059 personas indígenas según CNPV 2018, con una concentración extrema en el pueblo Zenú (2.507 habitantes, 82% del total). La ausencia de resguardos y datos de lengua refleja vacíos en el reconocimiento territorial. El conflicto armado impacta con 69 víctimas, donde el desplazamiento forzado representa el 73.9% de los casos, señalando una crisis humanitaria persistente.",
+  "demografia": "La población indígena en Montería es mayoritariamente adulta, con 2.507 Zenúes (82%) como grupo dominante. Los datos no permiten construir una pirámide etaria detallada, pero la concentración en un solo pueblo sugiere alta homogeneidad cultural y posible subregistro de otros grupos. La dispersión demográfica impide análisis etarios robustos.",
+  "prevalencia": "No hay datos disponibles de prevalencia de enfermedades o condiciones de salud específicos para Montería. Los indicadores de discapacidad y NBI no están desagregados a nivel municipal, limitando el análisis de vulnerabilidades. Se requiere desagregación por pueblos para identificar brechas críticas en salud.",
+  "territorial": "Montería no cuenta con resguardos indígenas registrados, a pesar de albergar 20 pueblos distintos. La bbox geográfica indica presencia dispersa en 8.269 km², sin territorios colectivos reconocidos. Esta ausencia de resguardos contrasta con la alta población Zenú, evidenciando debilidad en la titulación territorial.",
+  "lengua": "Los datos de lengua indígena no están disponibles para Montería. No es posible determinar la vitalidad lingüística ni la presencia de lenguas propias entre los pueblos asentados. Se requiere investigación etnográfica para documentar el uso de lenguas nativas en el territorio.",
+  "vida": "No hay datos de NBI desagregados para Montería, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con otros municipios. La alta concentración de población Zenú sugiere posibles brechas en acceso a servicios básicos, pero no hay evidencia cuantitativa.",
+  "conflicto": "Montería registra 69 víctimas de conflicto armado entre indígenas, con desplazamiento forzado como hecho principal (51 casos, 73.9%). Los homicidios (5) y el despojo de tierras (4) completan los patrones de violencia. La concentración de hechos en un municipio sin resguardos agrava la exposición a riesgos territoriales.",
+  "icv": "Montería presenta un ICV de 0.004, donde el componente de conflicto (0.014) es el único con aporte positivo. Los valores nulos en NBI y prevalencia reflejan falta de datos, no ausencia de vulnerabilidades. La fórmula del ICV subraya que el conflicto armado es el principal determinante de la vulnerabilidad en este territorio.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para el pueblo Zenú, que concentra el 82% de la población indígena, con base en los 2.507 habitantes registrados.",
+    "Implementar un sistema de monitoreo de víctimas de conflicto armado con enfoque étnico en Montería, dado que el 73.9% de los casos corresponden a desplazamiento forzado.",
+    "Realizar un censo lingüístico para documentar el uso de lenguas indígenas en Montería, ante la ausencia de datos en esta sección.",
+    "Diseñar políticas de salud intercultural con desagregación por pueblos, considerando la alta diversidad étnica (20 pueblos) sin datos de prevalencia.",
+    "Fortalecer la articulación entre autoridades indígenas Zenú y el municipio para garantizar el derecho a la consulta previa en proyectos de desarrollo."
+  ]
+}

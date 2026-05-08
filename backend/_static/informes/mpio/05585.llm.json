@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Puerto Nare registra una población indígena de 20 personas según CNPV 2018, distribuida en 7 pueblos. El 60% corresponde al pueblo Pijao, único con presencia significativa. La ausencia de resguardos y datos de lengua refleja un contexto de invisibilización territorial. La alta prevalencia de desplazamiento forzado (85.7% de las víctimas) evidencia la vulnerabilidad histórica de este municipio antioqueño.",
+  "demografia": "La población indígena en Puerto Nare suma 20 personas, con una pirámide etaria concentrada en adultos mayores dado que el 60% (12) pertenece al pueblo Pijao. Los datos no permiten análisis generacional detallado. La dispersión poblacional entre 7 pueblos refleja una fragmentación identitaria sin arraigo territorial colectivo.",
+  "prevalencia": "Los datos de prevalencia de enfermedades o condiciones de salud no están disponibles para este municipio. Se reconoce un sub-registro crítico en indicadores sanitarios, lo que impide evaluar la situación epidemiológica de la población indígena local. La falta de información limita cualquier análisis de salud pública.",
+  "territorial": "Puerto Nare no cuenta con resguardos indígenas registrados, a pesar de albergar 7 pueblos distintos. La ausencia de territorios colectivos coincide con la dispersión poblacional (solo 20 personas). La bbox geográfica no refleja presencia indígena organizada, destacando la desarticulación territorial en el departamento de Antioquia.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad de las lenguas originarias ni su uso en contextos cotidianos o educativos. La falta de información refuerza la necesidad de registros lingüísticos específicos.",
+  "vida": "No hay datos disponibles sobre NBI para Puerto Nare. El promedio indígena nacional (67.6%) sirve como referencia, pero no permite calcular brechas locales. La ausencia de información impide evaluar condiciones de vida como vivienda, educación o acceso a servicios básicos.",
+  "conflicto": "Se registran 7 víctimas indígenas de conflicto armado en Puerto Nare (1985-2024), con desplazamiento forzado como hecho principal (85.7%). La concentración en un solo municipio de Antioquia subraya la exposición a violencia estructural. Los datos reflejan patrones de victimización histórica sin respuestas institucionales efectivas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Puerto Nare es 0.0, con componentes nulos en NBI y prevalencia. El conflicto aporta 0.001, indicando una crisis multidimensional. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) revela una situación de extrema vulnerabilidad sin atenuantes.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios colectivos para los 7 pueblos presentes, citando la ausencia actual de resguardos (n_resguardos: 0).",
+    "Implementar un sistema de registro lingüístico para documentar la vitalidad de las lenguas originarias, dado que lengua no tiene datos (_sin_datos: true).",
+    "Diseñar un plan de atención psicosocial para víctimas de desplazamiento forzado, considerando que el 85.7% de las víctimas registradas (6 de 7) enfrentan este hecho (hecho_principal: Desplazamiento forzado).",
+    "Realizar un censo indígena municipal con enfoque diferencial para superar el sub-registro poblacional (poblacion_total: 20).",
+    "Incluir a Puerto Nare en programas de restitución territorial de la ONIC, dada su alta exposición a conflicto armado (victimas_total_disc: 7)."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo COROZAL TAPAOJO, territorio del pueblo PIAPOCO en el Meta, alberga 848 habitantes en 8.160 hectáreas. Su Índice de Condiciones de Vida (ICV) es 0.0, reflejando ausencia de datos normalizados en NBI, prevalencia y conflicto. La ausencia de registros en lengua y NBI limita el análisis integral, aunque su población total es confiable según DANE-CNPV 2018.",
+  "demografia": "La población total es de 848 habitantes, con datos confiables (n=848) según DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel territorial. Los datos demográficos básicos están completos, pero requieren desagregación para análisis de dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este resguardo. Los registros solo existen a nivel pueblo o departamento, lo que imposibilita evaluar subregistros o necesidades específicas. Se recomienda priorizar recolección de datos locales para diagnóstico preciso.",
+  "territorial": "El resguardo ocupa 8.160 hectáreas en Puerto Gaitán, Meta, con límites geográficos definidos (bbox: 4.723948925000059, -71.12500764599997 a 4.885490101000073, -71.07766848099993). Su ubicación en la Orinoquía lo sitúa en zona de transición entre ecosistemas, con potencial para estrategias de conservación y autonomía alimentaria.",
+  "lengua": "No hay datos disponibles sobre lengua materna o uso de idiomas indígenas en este resguardo. Esta ausencia impide evaluar vitalidad cultural y estrategias de revitalización lingüística, clave para la pervivencia del pueblo PIAPOCO.",
+  "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero su comparación es imposible sin registros locales. Se requiere sistematización de indicadores sociales para planificación territorial.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (n=0, período 1985-2024). La ausencia de hechos violentos reportados no descarta afectaciones no documentadas. Se sugiere fortalecer mecanismos de denuncia y protección comunitaria.",
+  "icv": "El ICV es 0.0 debido a la falta de datos normalizados en sus componentes (NBI, prevalencia y conflicto). Esta métrica no refleja la realidad del territorio, pero evidencia la necesidad de generar información local para calcular indicadores propios con enfoque diferencial.",
+  "recomendaciones": [
+    "Implementar sistema de recolección de datos locales en lengua, NBI y prevalencia para calcular ICV propio, usando metodologías indígenas participativas.",
+    "Priorizar registro de víctimas de conflicto en el RUV a nivel de resguardo, con enfoque en discapacidad y pueblos PIAPOCO.",
+    "Diseñar estrategias de revitalización lingüística con participación de sabedores tradicionales, dado el vacío de datos en lengua.",
+    "Fortalecer alianzas con UNUMA para sistematizar información territorial y articular acciones con organizaciones regionales.",
+    "Incluir el resguardo en planes de desarrollo departamental con enfoque de autonomía alimentaria y conservación de 8.160 hectáreas."
+  ]
+}

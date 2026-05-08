@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Río de Oro (Cesar) registra una población indígena de solo 3 personas según el CNPV 2018, distribuidas en tres pueblos: Pijao, Wayúu y Zenú. La dispersión poblacional y la ausencia de resguardos contrastan con la presencia de hechos victimizantes como desplazamiento forzado (5 casos) y homicidios (2). El ICV de 0.0 refleja condiciones críticas en NBI, prevalencia y conflicto, sin datos confiables para análisis detallado.",
+  "demografia": "La pirámide etaria no aplica para este municipio, dado que la población indígena total es de 3 personas. Los datos demográficos a este nivel no permiten análisis de estructura etaria ni razones de crecimiento o decrecimiento. Se requiere desagregación a nivel de pueblo o resguardo para evaluar dinámicas poblacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio (_sin_datos: true). No es posible analizar condiciones de salud ni sub-registros. Se recomienda priorizar la generación de indicadores locales en salud intercultural para este territorio.",
+  "territorial": "Río de Oro cuenta con 0 resguardos indígenas, pese a albergar población de tres pueblos distintos. La bbox geográfica delimita un área sin presencia territorial colectiva reconocida. La ausencia de resguardos limita el ejercicio de autonomía y protección cultural en este municipio.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para Río de Oro (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en este territorio.",
+  "vida": "No hay datos de NBI disponibles para Río de Oro (_sin_datos: true). El promedio indígena nacional de NBI es 67.6%, pero no es posible calcular brechas locales. Se requiere incluir indicadores de pobreza multidimensional para este municipio.",
+  "conflicto": "Se registraron 7 víctimas indígenas con discapacidad entre 1985-2024, donde el 71.4% corresponde a desplazamiento forzado (5 casos). El homicidio representa el 28.6% restante. Estos hechos reflejan patrones de violencia estructural en el territorio, con afectación directa a la población indígena.",
+  "icv": "El ICV de Río de Oro es 0.0, con componentes nulos en NBI y prevalencia, y un valor mínimo en conflicto (0.001). La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) evidencia condiciones extremas de vulnerabilidad sin datos confiables para análisis comparativo.",
+  "recomendaciones": [
+    "Priorizar la identificación y delimitación de territorios indígenas en Río de Oro, dado que no existen resguardos reconocidos pese a la presencia de tres pueblos distintos.",
+    "Generar indicadores locales de salud intercultural y lengua, ya que los datos de prevalencia y lengua están marcados como no disponibles.",
+    "Implementar un sistema de alerta temprana para prevenir desplazamiento forzado, principal hecho victimizante con 5 casos registrados (71.4%).",
+    "Incluir a Río de Oro en programas de fortalecimiento territorial ONIC, considerando su población indígena dispersa y la ausencia de resguardos.",
+    "Realizar un censo indígena municipal para actualizar datos demográficos, dado que la población total registrada es de solo 3 personas."
+  ]
+}

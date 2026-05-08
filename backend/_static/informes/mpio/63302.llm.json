@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Genova registra una población indígena de solo 3 personas según CNPV 2018, distribuidas en 3 pueblos (NASA, PASTOS, CALIMA). La ausencia de resguardos y datos de NBI o lengua refleja una presencia indígena marginal en el municipio. La única víctima de conflicto registrada corresponde a 'Lesiones Personales Psicológicas', lo que limita el análisis de vulnerabilidad territorial.",
+  "demografia": "La pirámide etaria no aplica por el reducido tamaño muestral (n=3). La población indígena en Genova se distribuye equitativamente entre tres pueblos sin predominio claro. Los datos demográficos a este nivel no permiten inferencias sobre estructura etaria o dinámicas generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio (_sin_datos: true). No es posible analizar condiciones de salud o discapacidad con la información existente. Se recomienda priorizar recolección de datos desagregados por pueblos para evitar sub-registros.",
+  "territorial": "Genova carece de resguardos indígenas (n_resguardos: 0), lo que sugiere ausencia de reconocimiento territorial formal. La bbox delimita un área municipal sin presencia de territorios colectivos. La dispersión geográfica de la población indígena es nula al no existir asentamientos reconocidos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio (_sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en el territorio.",
+  "vida": "Los datos de NBI no están disponibles (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La brecha con este indicador no puede calcularse. La falta de información impide evaluar condiciones de vida de la población indígena en Genova.",
+  "conflicto": "Se registra 1 víctima de conflicto con discapacidad (1985-2024), correspondiente al 100% de los casos al hecho 'Lesiones Personales Psicológicas'. La baja n (n=1) limita la confiabilidad del patrón de victimización. El conflicto en el municipio se focaliza en violencias psicológicas.",
+  "icv": "El ICV de Genova es 0.0, con todos sus componentes en 0.0 (NBI, prevalencia y conflicto). Esto refleja la ausencia de datos normalizados para calcular el índice. La fórmula aplicada no genera variación al no existir valores base para los componentes.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para superar el sub-registro actual (n=3)",
+    "Identificar y reconocer territorios indígenas potenciales en la bbox municipal para garantizar derechos territoriales",
+    "Incluir en el SIVe el registro de pueblos indígenas en Genova para mejorar la representatividad estadística",
+    "Priorizar atención psicosocial a víctimas de conflicto con enfoque étnico, dado el 100% de casos en 'Lesiones Personales Psicológicas'",
+    "Articular con el resguardo más cercano (NARIÑO) para fortalecer la presencia indígena en Genova"
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "tipo": "dpto",
+  "id": "11",
+  "nombre": "BOGOTA D.C.",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 18560,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 18560,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1524,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1524,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 18560,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 82.1,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "200",
+          "con_disc": 486,
+          "total": 4385
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 417,
+          "total": 4379
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 109,
+          "total": 1003
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 52,
+          "total": 865
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 51,
+          "total": 941
+        },
+        {
+          "cod_pueblo": "560",
+          "con_disc": 43,
+          "total": 495
+        },
+        {
+          "cod_pueblo": "730",
+          "con_disc": 38,
+          "total": 438
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 36,
+          "total": 454
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 29,
+          "total": 356
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 27,
+          "total": 550
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 0,
+      "resguardos": [],
+      "bbox": [
+        3.7306330992697463,
+        -74.45085037057333,
+        4.8369719574870915,
+        -73.9861257930711
+      ],
+      "nombre_dpto": "BOGOTA D.C."
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 91,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 91,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Amenaza",
+          "total": 42
+        },
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 29
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 13
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Amenaza",
+        "total": 42
+      },
+      "pct_hecho_principal": 46.2
+    },
+    "icv": {
+      "score": 0.129,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.41,
+        "conflicto_norm": 0.018
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:43:24",
+  "periodo": "2018",
+  "_input_hash": "ffd0c7ce88a1dc12"
+}

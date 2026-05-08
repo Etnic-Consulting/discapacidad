@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo PICKWE IKH, territorio Nasa en La Argentina (Huila), alberga 374 habitantes según el DANE-CNPV 2018. Con una extensión de 374.369 hectáreas, su área es mínima pero estratégica en la macro ONIC Occidente. La ausencia de datos en NBI y lengua refleja vacíos críticos en el monitoreo de condiciones de vida y diversidad cultural en territorios pequeños.",
+  "demografia": "La población total de 374 habitantes presenta una estructura etaria no reportada en los datos disponibles. Dada la escala reducida del resguardo, la pirámide etaria carece de representatividad estadística (n=374). Se requiere desagregación por cohortes para análisis de vitalidad generacional, actualmente no disponible en fuentes oficiales.",
+  "prevalencia": "No se cuenta con datos de prevalencia de enfermedades o condiciones de salud en PICKWE IKH. Los sistemas de información no capturan este KPI a nivel de resguardo, lo que impide evaluar necesidades sanitarias específicas. El sub-registro es total, sin posibilidad de estimación confiable.",
+  "territorial": "PICKWE IKH ocupa 374.369 hectáreas en La Argentina (Huila), con coordenadas geográficas delimitadas. Su extensión reducida contrasta con la dispersión de otros territorios Nasa en la macro Occidente. La concentración geográfica es alta, pero la representatividad territorial es limitada por el tamaño del resguardo.",
+  "lengua": "Los datos sobre lengua materna o uso de idioma Nasa no están disponibles para este resguardo. La ONIC reconoce la importancia de esta información para la revitalización cultural, pero el sistema no la registra a este nivel de desagregación territorial.",
+  "vida": "No hay datos de Necesidades Básicas Insatisfechas (NBI) para PICKWE IKH. El promedio indígena nacional (67.6%) no puede compararse debido a la ausencia de registros locales. Esta omisión dificulta la priorización de intervenciones en condiciones de vida.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en PICKWE IKH entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino limitaciones en la captura de datos a escala micro-territorial. Se requieren sistemas de alerta temprana locales.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de PICKWE IKH es 0.0, derivado de la falta de datos en sus componentes (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados útiles por vacíos de información.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de NBI y lengua materna en resguardos pequeños como PICKWE IKH, priorizando indicadores de vivienda, educación y salud cultural.",
+    "Diseñar protocolos de recolección de datos de conflicto armado adaptados a territorios indígenas de menos de 500 habitantes para superar el sub-registro actual.",
+    "Incluir a PICKWE IKH en planes de monitoreo diferencial de la macro Occidente, considerando su extensión reducida pero su relevancia estratégica en la conectividad territorial Nasa.",
+    "Fortalecer la articulación entre el DANE y las organizaciones indígenas para desagregar datos de discapacidad y condiciones de vida a nivel de resguardo.",
+    "Priorizar inversiones en infraestructura básica (agua, saneamiento) en PICKWE IKH, dado que su población de 374 habitantes enfrenta brechas no cuantificadas pero probables en acceso a servicios."
+  ]
+}

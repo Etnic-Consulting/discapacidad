@@ -1,0 +1,120 @@
+{
+  "tipo": "resguardo",
+  "id": "10738",
+  "nombre": "YU YIC KWE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 288,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 288,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "YU YIC KWE",
+      "dpto": "VALLE DEL CAUCA",
+      "cod_dpto": "76",
+      "mpio": "DAGUA",
+      "cod_mpio": "76233",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "ONIC",
+      "organizacion_regional": "ACIVA",
+      "area_hectareas": 2410.733
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        3.6956377460000454,
+        -76.82200848499997,
+        3.747792615000037,
+        -76.75897289799997
+      ],
+      "area_hectareas": 2410.733,
+      "macro": "OCCIDENTE",
+      "dpto": "VALLE DEL CAUCA",
+      "mpio": "DAGUA"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 70,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 70,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 53
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 7
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 6
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 53
+      },
+      "pct_hecho_principal": 75.7
+    },
+    "icv": {
+      "score": 0.004,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.014
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T17:23:40",
+  "periodo": "2018",
+  "_input_hash": "3919627367f7bcb5"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Ponedera (Atlántico) registra una población indígena de 2 personas según CNPV 2018, distribuida en dos pueblos: Arhuaco y Wiwa, cada uno con 1 individuo. La ausencia de resguardos y datos de NBI o lengua refleja una presencia indígena mínima y dispersa en el municipio. El ICV de 0.0 y una víctima por desplazamiento forzado en 40 años evidencian vulnerabilidades estructurales sin correlato territorial indígena.",
+  "demografia": "La pirámide etaria no aplica por el tamaño muestral (n=2). Los datos demográficos para Ponedera son insuficientes para análisis etario o comparativos. Se requiere desagregación a nivel de pueblo o departamento para evaluar dinámicas poblacionales indígenas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Ponedera. La falta de registros específicos limita el análisis de sub-registros o necesidades sanitarias prioritarias para la población indígena existente.",
+  "territorial": "Ponedera no cuenta con resguardos indígenas, lo que refleja una ausencia de reconocimiento territorial formal. La bbox geográfica del municipio no alberga territorios colectivos, concentrando la presencia indígena en contextos urbanos o dispersos sin base territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en Ponedera no están disponibles. No es posible determinar la vitalidad lingüística ni la presencia de hablantes de lenguas originarias en el municipio con la información actual.",
+  "vida": "No se reportan datos de NBI para Ponedera, aunque el promedio indígena nacional es 67.6%. La ausencia de información impide evaluar brechas en condiciones de vida, acceso a servicios o pobreza multidimensional para la población indígena local.",
+  "conflicto": "Ponedera registra 1 víctima indígena por desplazamiento forzado entre 1985-2024, correspondiendo al 100% de los hechos de conflicto reportados. Este dato, aunque mínimo en número, subraya la exposición a violencia estructural sin mecanismos de protección territorial.",
+  "icv": "El ICV de Ponedera es 0.0, con componentes normalizados en cero (NBI, prevalencia y conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja una condición de extrema vulnerabilidad sin datos cuantificables en los indicadores clave.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para identificar necesidades específicas, dado que los datos actuales (n=2) son insuficientes para políticas públicas.",
+    "Documentar la presencia indígena en Ponedera mediante registros locales y alianzas con organizaciones como la ONIC para visibilizar su situación.",
+    "Incluir a Ponedera en planes de protección territorial indígena, pese a la ausencia de resguardos, para prevenir desplazamientos forzados como el registrado (1 caso en 40 años).",
+    "Solicitar al DANE la desagregación de datos de NBI y lengua para municipios con población indígena mínima, como Ponedera.",
+    "Priorizar acciones de memoria histórica y reparación simbólica para la víctima de desplazamiento forzado, garantizando su no repetición."
+  ]
+}

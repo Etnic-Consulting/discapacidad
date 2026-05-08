@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Pensilvania registra una población indígena de 105 personas según CNPV 2018, concentrada en 10 pueblos. El 70.5% pertenece al pueblo WAYUU (74 personas), seguido por EMBERA (13) y ZENÚ (7). La ausencia de resguardos en el municipio limita la protección territorial colectiva. La violencia histórica se expresa en 9 víctimas de conflicto, con desplazamiento forzado como hecho principal (77.8%).",
+  "demografia": "La pirámide etaria muestra una población envejecida con 74 adultos mayores (70.5% del total). Los jóvenes (0-17 años) representan solo el 12.4% (13 personas), reflejando migración o baja natalidad. No hay datos de discapacidades para validar vulnerabilidades específicas. La concentración en un solo pueblo (WAYUU) sugiere pérdida de diversidad cultural local.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La falta de registros impide evaluar subregistros o necesidades prioritarias. Se requiere sistematización de información sanitaria para identificar brechas en atención primaria.",
+  "territorial": "El municipio carece de resguardos indígenas, a pesar de albergar 10 pueblos distintos. La dispersión geográfica (bbox con coordenadas amplias) no se traduce en territorios colectivos legalmente reconocidos. La ausencia de resguardos limita el acceso a derechos territoriales y autonomía administrativa.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni planes de revitalización cultural. Se recomienda priorizar registros etnográficos para preservar lenguas en riesgo.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Pensilvania. El promedio indígena nacional (67.6%) no puede compararse sin datos locales. La falta de registros invisibiliza condiciones de pobreza y acceso a servicios básicos.",
+  "conflicto": "Se registran 9 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como principal violación (7 casos). El 77.8% de los hechos violentos corresponden a este patrón. La concentración en un solo tipo de victimización refleja patrones de violencia estructural contra pueblos indígenas.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.001, con conflicto como dimensión dominante (0.002). La fórmula pondera NBI (0.0), prevalencia (0.0) y conflicto (0.002), ubicando al municipio en situación crítica. La casi nulidad en NBI y prevalencia sugiere subregistros o falta de datos.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento de al menos un resguardo indígena en Pensilvania para proteger los 10 pueblos registrados, citando la ausencia actual de territorios colectivos (n_resguardos: 0).",
+    "Implementar un sistema de registro de lenguas indígenas y planes de revitalización para los 10 pueblos, dado que lengua no tiene datos disponibles (_sin_datos: true).",
+    "Priorizar atención psicosocial para 9 víctimas de conflicto, enfocándose en desplazamiento forzado (7 casos) y homicidios (1 caso), según hechos_top.",
+    "Realizar un censo indígena municipal actualizado para superar la limitación de n=105 en población total (n=105, confiabilidad: CONFIABLE).",
+    "Incluir Pensilvania en programas de reparación colectiva por violencia histórica, considerando el ICV de 0.001 y la dimensión de conflicto como prioritaria."
+  ]
+}

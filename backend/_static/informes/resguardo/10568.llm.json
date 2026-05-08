@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cecilia Cocha, territorio del pueblo Inga en Putumayo, alberga 193 habitantes en 6.474 hectáreas. Su población total refleja una comunidad pequeña pero con presencia histórica en la Amazonía. La ausencia de datos sobre discapacidad y NBI limita el análisis integral, aunque su ICV de 0.0 evidencia condiciones críticas en dimensiones no registradas.",
+  "demografia": "La población total de 193 habitantes se concentra en un territorio de 6.474 hectáreas, con una densidad de 0.03 personas por hectárea. Los datos demográficos no incluyen pirámide etaria ni razones de crecimiento, lo que impide evaluar dinámicas generacionales. La falta de desglose por edad y género restringe la interpretación de la estructura poblacional.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el resguardo. La sección se marca sin información, lo que imposibilita analizar subregistros o patrones epidemiológicos. La ausencia de cifras limita la identificación de prioridades sanitarias para la comunidad Inga.",
+  "territorial": "El resguardo Cecilia Cocha ocupa 6.474 hectáreas en Puerto Leguízamo, Putumayo, con coordenadas que delimitan su territorio en la Amazonía. Su área es reducida en comparación con otros resguardos de la región, lo que sugiere presión sobre el uso del suelo. La concentración geográfica es alta, pero sin datos comparativos con otros territorios Inga.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el uso de la lengua Inga ni su vitalidad cultural en el territorio. La ausencia de información impide evaluar la transmisión intergeneracional de la lengua.",
+  "vida": "No hay datos sobre NBI para el resguardo, aunque el promedio indígena nacional es 67.6%. La falta de información específica limita el análisis de brechas en condiciones de vida. La comparación con el promedio nacional no es posible sin cifras locales.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo (0 casos entre 1985-2024). La ausencia de hechos victimizantes sugiere baja exposición directa, pero los datos no reflejan posibles impactos indirectos. La confiabilidad es alta, pero el período largo no garantiza exhaustividad.",
+  "icv": "El ICV del resguardo es 0.0, con componentes normalizados en 0.0 para NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja condiciones extremas en todas las dimensiones. La falta de datos desagregados limita la interpretación de las causas.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de lengua, dado que la población de 193 habitantes requiere seguimiento detallado.",
+    "Implementar un sistema de registro de salud local para documentar prevalencia de enfermedades y condiciones, superando la ausencia de datos.",
+    "Priorizar la titulación y protección del territorio de 6.474 hectáreas ante presiones extractivas en Putumayo.",
+    "Diseñar programas de revitalización cultural Inga con enfoque en lengua y tradiciones, ante la falta de registros.",
+    "Establecer un observatorio de derechos humanos para monitorear posibles impactos del conflicto, aunque los datos actuales muestren 0 víctimas."
+  ]
+}

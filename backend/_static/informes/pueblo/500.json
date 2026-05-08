@@ -1,0 +1,1644 @@
+{
+  "tipo": "pueblo",
+  "id": "500",
+  "nombre": "Nasa",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 243176,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": 243176,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hombres": {
+        "value": 122890,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "mujeres": {
+        "value": 120286,
+        "_meta": {
+          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
+          "table": "visor_dane.piramide_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "razon_masculinidad": {
+        "value": 102.2,
+        "_meta": {
+          "query": "calc h/m*100",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_dependencia": {
+        "value": 60.1,
+        "_meta": {
+          "query": "calc dep",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "indice_envejecimiento": {
+        "value": 17.9,
+        "_meta": {
+          "query": "calc env",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "grupos_edad": {
+        "0-14": {
+          "h": 39654,
+          "m": 37776,
+          "total": 77430
+        },
+        "15-64": {
+          "h": 76367,
+          "m": 75495,
+          "total": 151862
+        },
+        "65+": {
+          "h": 6869,
+          "m": 7015,
+          "total": 13884
+        }
+      },
+      "piramide": [
+        {
+          "grupo_edad": "0-4",
+          "sexo": "HOMBRE",
+          "valor": 13379
+        },
+        {
+          "grupo_edad": "0-4",
+          "sexo": "MUJER",
+          "valor": 12716
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "HOMBRE",
+          "valor": 13087
+        },
+        {
+          "grupo_edad": "10-14",
+          "sexo": "MUJER",
+          "valor": 12556
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "HOMBRE",
+          "valor": 13206
+        },
+        {
+          "grupo_edad": "15-19",
+          "sexo": "MUJER",
+          "valor": 13050
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "HOMBRE",
+          "valor": 12493
+        },
+        {
+          "grupo_edad": "20-24",
+          "sexo": "MUJER",
+          "valor": 12248
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "HOMBRE",
+          "valor": 10597
+        },
+        {
+          "grupo_edad": "25-29",
+          "sexo": "MUJER",
+          "valor": 10512
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "HOMBRE",
+          "valor": 9041
+        },
+        {
+          "grupo_edad": "30-34",
+          "sexo": "MUJER",
+          "valor": 9021
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "HOMBRE",
+          "valor": 8153
+        },
+        {
+          "grupo_edad": "35-39",
+          "sexo": "MUJER",
+          "valor": 8031
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "HOMBRE",
+          "valor": 6364
+        },
+        {
+          "grupo_edad": "40-44",
+          "sexo": "MUJER",
+          "valor": 6240
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "HOMBRE",
+          "valor": 5175
+        },
+        {
+          "grupo_edad": "45-49",
+          "sexo": "MUJER",
+          "valor": 5296
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "HOMBRE",
+          "valor": 4449
+        },
+        {
+          "grupo_edad": "50-54",
+          "sexo": "MUJER",
+          "valor": 4421
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "HOMBRE",
+          "valor": 3744
+        },
+        {
+          "grupo_edad": "55-59",
+          "sexo": "MUJER",
+          "valor": 3779
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "HOMBRE",
+          "valor": 13188
+        },
+        {
+          "grupo_edad": "5-9",
+          "sexo": "MUJER",
+          "valor": 12504
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "HOMBRE",
+          "valor": 3145
+        },
+        {
+          "grupo_edad": "60-64",
+          "sexo": "MUJER",
+          "valor": 2897
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "HOMBRE",
+          "valor": 2386
+        },
+        {
+          "grupo_edad": "65-69",
+          "sexo": "MUJER",
+          "valor": 2362
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "HOMBRE",
+          "valor": 1951
+        },
+        {
+          "grupo_edad": "70-74",
+          "sexo": "MUJER",
+          "valor": 1795
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "HOMBRE",
+          "valor": 1288
+        },
+        {
+          "grupo_edad": "75-79",
+          "sexo": "MUJER",
+          "valor": 1346
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "HOMBRE",
+          "valor": 717
+        },
+        {
+          "grupo_edad": "80-84",
+          "sexo": "MUJER",
+          "valor": 836
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "HOMBRE",
+          "valor": 527
+        },
+        {
+          "grupo_edad": "85-121",
+          "sexo": "MUJER",
+          "valor": 676
+        }
+      ]
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 20574,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 20574,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 242108,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 85.0,
+        "_meta": {
+          "query": "calc x1000",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "tipos_limitacion": [
+        {
+          "tipo_limitacion": "Ver",
+          "total": 8290,
+          "pct": 40.3
+        },
+        {
+          "tipo_limitacion": "Caminar",
+          "total": 4686,
+          "pct": 22.8
+        },
+        {
+          "tipo_limitacion": "Oir",
+          "total": 3353,
+          "pct": 16.3
+        },
+        {
+          "tipo_limitacion": "Relacionarse",
+          "total": 1242,
+          "pct": 6.0
+        },
+        {
+          "tipo_limitacion": "Agarrar",
+          "total": 960,
+          "pct": 4.7
+        },
+        {
+          "tipo_limitacion": "Aprender",
+          "total": 889,
+          "pct": 4.3
+        },
+        {
+          "tipo_limitacion": "Hablar",
+          "total": 887,
+          "pct": 4.3
+        },
+        {
+          "tipo_limitacion": "Autocuidado",
+          "total": 146,
+          "pct": 0.7
+        },
+        {
+          "tipo_limitacion": "Actividades diarias",
+          "total": 118,
+          "pct": 0.6
+        }
+      ]
+    },
+    "territorial": {
+      "departamentos": [
+        {
+          "cod_dpto": "19",
+          "nom_dpto": "CAUCA",
+          "total": 214828,
+          "con_discapacidad": 18753,
+          "tasa_x_1000": "87.29",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "76",
+          "nom_dpto": "VALLE DEL CAUCA",
+          "total": 10244,
+          "con_discapacidad": 802,
+          "tasa_x_1000": "78.29",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "41",
+          "nom_dpto": "HUILA",
+          "total": 5655,
+          "con_discapacidad": 313,
+          "tasa_x_1000": "55.35",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "86",
+          "nom_dpto": "PUTUMAYO",
+          "total": 4380,
+          "con_discapacidad": 317,
+          "tasa_x_1000": "72.37",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "73",
+          "nom_dpto": "TOLIMA",
+          "total": 2460,
+          "con_discapacidad": 64,
+          "tasa_x_1000": "26.02",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "18",
+          "nom_dpto": "CAQUETA",
+          "total": 1420,
+          "con_discapacidad": 129,
+          "tasa_x_1000": "90.85",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "50",
+          "nom_dpto": "META",
+          "total": 1047,
+          "con_discapacidad": 71,
+          "tasa_x_1000": "67.81",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "11",
+          "nom_dpto": "BOGOTA D.C.",
+          "total": 941,
+          "con_discapacidad": 51,
+          "tasa_x_1000": "54.20",
+          "confiabilidad": "CONFIABLE"
+        },
+        {
+          "cod_dpto": "25",
+          "nom_dpto": "CUNDINAMARCA",
+          "total": 290,
+          "con_discapacidad": 17,
+          "tasa_x_1000": "58.62",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "52",
+          "nom_dpto": "NARINO",
+          "total": 197,
+          "con_discapacidad": 14,
+          "tasa_x_1000": "71.07",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "17",
+          "nom_dpto": "CALDAS",
+          "total": 189,
+          "con_discapacidad": 14,
+          "tasa_x_1000": "74.07",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "05",
+          "nom_dpto": "ANTIOQUIA",
+          "total": 93,
+          "con_discapacidad": 9,
+          "tasa_x_1000": "96.77",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "85",
+          "nom_dpto": "CASANARE",
+          "total": 72,
+          "con_discapacidad": 5,
+          "tasa_x_1000": "69.44",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "63",
+          "nom_dpto": "QUINDIO",
+          "total": 68,
+          "con_discapacidad": 5,
+          "tasa_x_1000": "73.53",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "66",
+          "nom_dpto": "RISARALDA",
+          "total": 57,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "35.09",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "23",
+          "nom_dpto": "CORDOBA",
+          "total": 26,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "15",
+          "nom_dpto": "BOYACA",
+          "total": 24,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "83.33",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "13",
+          "nom_dpto": "BOLIVAR",
+          "total": 19,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "95",
+          "nom_dpto": "GUAVIARE",
+          "total": 17,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "68",
+          "nom_dpto": "SANTANDER",
+          "total": 15,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "44",
+          "nom_dpto": "LA GUAJIRA",
+          "total": 11,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "54",
+          "nom_dpto": "NORTE DE SANTANDER",
+          "total": 9,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "20",
+          "nom_dpto": "CESAR",
+          "total": 9,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "222.22",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "91",
+          "nom_dpto": "AMAZONAS",
+          "total": 8,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "47",
+          "nom_dpto": "MAGDALENA",
+          "total": 8,
+          "con_discapacidad": 2,
+          "tasa_x_1000": "250.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "70",
+          "nom_dpto": "SUCRE",
+          "total": 6,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "166.67",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "81",
+          "nom_dpto": "ARAUCA",
+          "total": 3,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "08",
+          "nom_dpto": "ATLANTICO",
+          "total": 3,
+          "con_discapacidad": 1,
+          "tasa_x_1000": "333.33",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "97",
+          "nom_dpto": "VAUPES",
+          "total": 3,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "94",
+          "nom_dpto": "GUAINIA",
+          "total": 3,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "99",
+          "nom_dpto": "VICHADA",
+          "total": 2,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        },
+        {
+          "cod_dpto": "88",
+          "nom_dpto": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+          "total": 1,
+          "con_discapacidad": 0,
+          "tasa_x_1000": "0.00",
+          "confiabilidad": "NO_CONFIABLE"
+        }
+      ],
+      "n_departamentos": 32,
+      "departamento_principal": {
+        "cod_dpto": "19",
+        "nom_dpto": "CAUCA",
+        "total": 214828,
+        "con_discapacidad": 18753,
+        "tasa_x_1000": "87.29",
+        "confiabilidad": "CONFIABLE"
+      },
+      "resguardos": [
+        {
+          "nombre": "Jambalo (1131)",
+          "poblacion": 14165,
+          "dpto": "CAUCA",
+          "mpio": "JAMBALÓ"
+        },
+        {
+          "nombre": "Tacueyo (1177)",
+          "poblacion": 13439,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "San Lorenzo de Caldono  (1124)",
+          "poblacion": 10649,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Canoas (1162)",
+          "poblacion": 7717,
+          "dpto": "CAUCA",
+          "mpio": "SANTANDER DE QUILICHAO"
+        },
+        {
+          "nombre": "San Francisco (1176)",
+          "poblacion": 7531,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Honduras (1074)",
+          "poblacion": 6703,
+          "dpto": "CAQUETÁ",
+          "mpio": "FLORENCIA"
+        },
+        {
+          "nombre": "Huellas (1521)",
+          "poblacion": 6186,
+          "dpto": "CAUCA",
+          "mpio": "CALOTO"
+        },
+        {
+          "nombre": "Toribio (1178)",
+          "poblacion": 6001,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Pitayo (1168)",
+          "poblacion": 5782,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Cohetando (1597)",
+          "poblacion": 4598,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Tigres y Munchique (1165)",
+          "poblacion": 4505,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Pueblo Nuevo (1123)",
+          "poblacion": 4078,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Paniquita (1181)",
+          "poblacion": 3458,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Togoima (1148)",
+          "poblacion": 3457,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Quichaya (1169)",
+          "poblacion": 3358,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "Huila (1141)",
+          "poblacion": 3268,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Vitonco (1149)",
+          "poblacion": 3126,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Avirama (1138)",
+          "poblacion": 3052,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "LA CILIA o LA CALERA (1696)",
+          "poblacion": 2921,
+          "dpto": "CAUCA",
+          "mpio": "MIRANDA"
+        },
+        {
+          "nombre": "Yaquiva (1130)",
+          "poblacion": 2912,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "San Andres de Pisimbala (1127)",
+          "poblacion": 2842,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Las Delicias (1119)",
+          "poblacion": 2747,
+          "dpto": "CAUCA",
+          "mpio": "BUENOS AIRES"
+        },
+        {
+          "nombre": "Paez de Corinto (1125)",
+          "poblacion": 2653,
+          "dpto": "CAUCA",
+          "mpio": "CALOTO"
+        },
+        {
+          "nombre": "Pioya (1122)",
+          "poblacion": 2465,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Talaga (1146)",
+          "poblacion": 2227,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Belalcazar (1139)",
+          "poblacion": 2187,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Concepcion (1164)",
+          "poblacion": 2127,
+          "dpto": "CAUCA",
+          "mpio": "SANTANDER DE QUILICHAO"
+        },
+        {
+          "nombre": "La Aguada-San Antonio (1120)",
+          "poblacion": 1907,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Laguna Siberia (1121)",
+          "poblacion": 1906,
+          "dpto": "CAUCA",
+          "mpio": "CALDONO"
+        },
+        {
+          "nombre": "La Gaitana (1539)",
+          "poblacion": 1795,
+          "dpto": "CAUCA",
+          "mpio": "INZÁ"
+        },
+        {
+          "nombre": "Ricaurte (1596)",
+          "poblacion": 1749,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Agua Negra (1135)",
+          "poblacion": 1737,
+          "dpto": "CAUCA",
+          "mpio": "MORALES"
+        },
+        {
+          "nombre": "Novirao  (1180)",
+          "poblacion": 1719,
+          "dpto": "CAUCA",
+          "mpio": "TOTORÓ"
+        },
+        {
+          "nombre": "Chimborazo (1136)",
+          "poblacion": 1528,
+          "dpto": "CAUCA",
+          "mpio": "MORALES"
+        },
+        {
+          "nombre": "El Triunfo-Cristal  Paez (1454)",
+          "poblacion": 1501,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "FLORIDA"
+        },
+        {
+          "nombre": "Guadualito (1163)",
+          "poblacion": 1493,
+          "dpto": "CAUCA",
+          "mpio": "SANTANDER DE QUILICHAO"
+        },
+        {
+          "nombre": "Mosoco (1143)",
+          "poblacion": 1375,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Gaitania (1443)",
+          "poblacion": 1365,
+          "dpto": "TOLIMA",
+          "mpio": "PLANADAS"
+        },
+        {
+          "nombre": "Nasa Kiwe Tekh Ksxaw (1785)",
+          "poblacion": 1296,
+          "dpto": "CAUCA",
+          "mpio": "SANTANDER DE QUILICHAO"
+        },
+        {
+          "nombre": "Calderas (1616)",
+          "poblacion": 1190,
+          "dpto": "CAUCA",
+          "mpio": "INZÁ"
+        },
+        {
+          "nombre": "Jebala (1179)",
+          "poblacion": 1102,
+          "dpto": "CAUCA",
+          "mpio": "TOTORÓ"
+        },
+        {
+          "nombre": "Santa Rosa de Capicisco (1128)",
+          "poblacion": 1061,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Las Mercedes (1695)",
+          "poblacion": 1042,
+          "dpto": "CAUCA",
+          "mpio": "CALDONO"
+        },
+        {
+          "nombre": "La Paila-Naya (1118)",
+          "poblacion": 910,
+          "dpto": "CAUCA",
+          "mpio": "BUENOS AIRES"
+        },
+        {
+          "nombre": "Kwe'S Kiwe Nasa (La Cristalina) (1604)",
+          "poblacion": 879,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "JAMUNDÍ"
+        },
+        {
+          "nombre": "Tumbichucue (1129)",
+          "poblacion": 855,
+          "dpto": "CAUCA",
+          "mpio": "INZÁ"
+        },
+        {
+          "nombre": "Juan Tama (1702)",
+          "poblacion": 793,
+          "dpto": "CAUCA",
+          "mpio": "PURACÉ"
+        },
+        {
+          "nombre": "Paez de Toez (1666)",
+          "poblacion": 781,
+          "dpto": "CAUCA",
+          "mpio": "CALOTO"
+        },
+        {
+          "nombre": "Lame (1142)",
+          "poblacion": 770,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Chinas (1140)",
+          "poblacion": 731,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Tumburao (1171)",
+          "poblacion": 702,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "Nasa de Kitet Kiwe (1825)",
+          "poblacion": 605,
+          "dpto": "CAUCA",
+          "mpio": "TIMBÍO"
+        },
+        {
+          "nombre": "San Jose (1144)",
+          "poblacion": 581,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Musse Ukwe (1738)",
+          "poblacion": 504,
+          "dpto": "CAUCA",
+          "mpio": "MORALES"
+        },
+        {
+          "nombre": "Pueblo Nuevo Ceral (1821)",
+          "poblacion": 496,
+          "dpto": "CAUCA",
+          "mpio": "BUENOS AIRES"
+        },
+        {
+          "nombre": "Paez y Guambiano de la Gaitana (1311)",
+          "poblacion": 495,
+          "dpto": "HUILA",
+          "mpio": "LA PLATA"
+        },
+        {
+          "nombre": "Pic-Kwe-Tha-Fiw (1704)",
+          "poblacion": 488,
+          "dpto": "CAUCA",
+          "mpio": "PÁEZ"
+        },
+        {
+          "nombre": "Jerusalén, San Luis Alto Picudito (1753)",
+          "poblacion": 483,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO CAICEDO"
+        },
+        {
+          "nombre": "Potrerito  (1703)",
+          "poblacion": 447,
+          "dpto": "HUILA",
+          "mpio": "LA PLATA"
+        },
+        {
+          "nombre": "Llano Buco (1720)",
+          "poblacion": 446,
+          "dpto": "HUILA",
+          "mpio": "NÁTAGA"
+        },
+        {
+          "nombre": "Cxhab Wala Luucx (1816)",
+          "poblacion": 421,
+          "dpto": "CAUCA",
+          "mpio": "PÁEZ"
+        },
+        {
+          "nombre": "Nasa Tha (1580)",
+          "poblacion": 383,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "FLORIDA"
+        },
+        {
+          "nombre": "La Delfina (1749)",
+          "poblacion": 380,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "DAGUA"
+        },
+        {
+          "nombre": "Pic ´Kue Ikh (1701)",
+          "poblacion": 372,
+          "dpto": "HUILA",
+          "mpio": "LA ARGENTINA"
+        },
+        {
+          "nombre": "Toez (1147)",
+          "poblacion": 333,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Pat Yu (1665)",
+          "poblacion": 327,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Estacion-Talaga (1680)",
+          "poblacion": 321,
+          "dpto": "HUILA",
+          "mpio": "LA PLATA"
+        },
+        {
+          "nombre": "Cxayuce Fiw (1746)",
+          "poblacion": 284,
+          "dpto": "CAUCA",
+          "mpio": "CAJIBÍO"
+        },
+        {
+          "nombre": "Paez de Quintana (1155)",
+          "poblacion": 276,
+          "dpto": "CAUCA",
+          "mpio": "POPAYÁN"
+        },
+        {
+          "nombre": "Guambia (1167)",
+          "poblacion": 256,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "Nasa Kwe'S Kiwe (1569)",
+          "poblacion": 254,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "FLORIDA"
+        },
+        {
+          "nombre": "Yu Yik Kwe (1743)",
+          "poblacion": 250,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "DAGUA"
+        },
+        {
+          "nombre": "Suin (1145)",
+          "poblacion": 240,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "El peñon (1783)",
+          "poblacion": 230,
+          "dpto": "CAUCA",
+          "mpio": "SOTARÁ - PAISPAMBA"
+        },
+        {
+          "nombre": "La Nueva Esperanza (1813)",
+          "poblacion": 230,
+          "dpto": "HUILA",
+          "mpio": "LA PLATA"
+        },
+        {
+          "nombre": "La Aguadita (1391)",
+          "poblacion": 215,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO GUZMÁN"
+        },
+        {
+          "nombre": "El Descanso (1397)",
+          "poblacion": 188,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO GUZMÁN"
+        },
+        {
+          "nombre": "Ondas del Cafre (1541)",
+          "poblacion": 184,
+          "dpto": "META",
+          "mpio": "MESETAS"
+        },
+        {
+          "nombre": "Polindara (1182)",
+          "poblacion": 159,
+          "dpto": "CAUCA",
+          "mpio": "TOTORÓ"
+        },
+        {
+          "nombre": "Santa Rosa de Juanambu (1730)",
+          "poblacion": 154,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO CAICEDO"
+        },
+        {
+          "nombre": "Altamira (1088)",
+          "poblacion": 144,
+          "dpto": "CAQUETÁ",
+          "mpio": "SAN VICENTE DEL CAGUÁN"
+        },
+        {
+          "nombre": "Kwet Wala (Piedra Grande) (1455)",
+          "poblacion": 134,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "PRADERA"
+        },
+        {
+          "nombre": "Nasa Chamb (1776)",
+          "poblacion": 125,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO ASÍS"
+        },
+        {
+          "nombre": "Nasa Kiwe (1574)",
+          "poblacion": 111,
+          "dpto": "CAQUETÁ",
+          "mpio": "PUERTO RICO"
+        },
+        {
+          "nombre": "Los Planes (1542)",
+          "poblacion": 84,
+          "dpto": "META",
+          "mpio": "URIBE"
+        },
+        {
+          "nombre": "Banderas del recaibo (1794)",
+          "poblacion": 74,
+          "dpto": "CAQUETÁ",
+          "mpio": "SAN VICENTE DEL CAGUÁN"
+        },
+        {
+          "nombre": "Paez de Bache (1313)",
+          "poblacion": 64,
+          "dpto": "HUILA",
+          "mpio": "PALERMO"
+        },
+        {
+          "nombre": "Paez de Villa Lucia (1332)",
+          "poblacion": 61,
+          "dpto": "META",
+          "mpio": "MESETAS"
+        },
+        {
+          "nombre": "La Reforma (1635)",
+          "poblacion": 54,
+          "dpto": "HUILA",
+          "mpio": "LA PLATA"
+        },
+        {
+          "nombre": "El Porvenir La Barrialosa (1717)",
+          "poblacion": 52,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO GUZMÁN"
+        },
+        {
+          "nombre": "Ipiales   (1357)",
+          "poblacion": 52,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Bonanza (1733)",
+          "poblacion": 48,
+          "dpto": "CAUCA",
+          "mpio": "MORALES"
+        },
+        {
+          "nombre": "Tama-Paez-La Gabriela (1312)",
+          "poblacion": 45,
+          "dpto": "HUILA",
+          "mpio": "NEIVA"
+        },
+        {
+          "nombre": "Kizgó (1170)",
+          "poblacion": 40,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "Rumiyaco (1651)",
+          "poblacion": 39,
+          "dpto": "HUILA",
+          "mpio": "PITALITO"
+        },
+        {
+          "nombre": "Inga de Wasipanga (1697)",
+          "poblacion": 39,
+          "dpto": "CAUCA",
+          "mpio": "PUERTO GUZMÁN"
+        },
+        {
+          "nombre": "La Esperanza (1073)",
+          "poblacion": 37,
+          "dpto": "CAQUETÁ",
+          "mpio": "BELÉN DE LOS ANDAQUÍES"
+        },
+        {
+          "nombre": "San Antonio (1786)",
+          "poblacion": 35,
+          "dpto": "CAUCA",
+          "mpio": "PIENDAMÓ - TUNÍA"
+        },
+        {
+          "nombre": "Consara-Mecaya (1401)",
+          "poblacion": 32,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO LEGUÍZAMO"
+        },
+        {
+          "nombre": "Tamas del Caguan (1314)",
+          "poblacion": 31,
+          "dpto": "HUILA",
+          "mpio": "RIVERA"
+        },
+        {
+          "nombre": "Alto Lorenzo (1710)",
+          "poblacion": 30,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO ASÍS"
+        },
+        {
+          "nombre": "Nuevo Horizonte (1691)",
+          "poblacion": 27,
+          "dpto": "PUTUMAYO",
+          "mpio": "VALLE DEL GUAMUEZ"
+        },
+        {
+          "nombre": "Yaguara II-Llanos del Yari (1089)",
+          "poblacion": 24,
+          "dpto": "GUAVIARE",
+          "mpio": "CALAMAR"
+        },
+        {
+          "nombre": "Nasa uh (1780)",
+          "poblacion": 22,
+          "dpto": "NARIÑO",
+          "mpio": "POTOSÍ"
+        },
+        {
+          "nombre": "La Florida (1716)",
+          "poblacion": 16,
+          "dpto": "PUTUMAYO",
+          "mpio": "SAN FRANCISCO"
+        },
+        {
+          "nombre": "Ambalo (1166)",
+          "poblacion": 16,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "Del Portal (1085)",
+          "poblacion": 16,
+          "dpto": "CAQUETÁ",
+          "mpio": "SAN JOSÉ DEL FRAGUA"
+        },
+        {
+          "nombre": "Totoro (1183)",
+          "poblacion": 15,
+          "dpto": "CAUCA",
+          "mpio": "SILVIA"
+        },
+        {
+          "nombre": "La Maria (1503)",
+          "poblacion": 14,
+          "dpto": "ANTIOQUIA",
+          "mpio": "VALPARAÍSO"
+        },
+        {
+          "nombre": "Buenavista (1225)",
+          "poblacion": 11,
+          "dpto": "CHOCÓ",
+          "mpio": "EL LITORAL DEL SAN JUAN"
+        },
+        {
+          "nombre": "Santa Marta (1584)",
+          "poblacion": 8,
+          "dpto": "CAUCA",
+          "mpio": "SANTA ROSA"
+        },
+        {
+          "nombre": "Witac´kwe (1769)",
+          "poblacion": 8,
+          "dpto": "CAQUETÁ",
+          "mpio": "PUERTO RICO"
+        },
+        {
+          "nombre": "Alto del Rey (1126)",
+          "poblacion": 7,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Zit-Sek del Quecal (1615)",
+          "poblacion": 6,
+          "dpto": "CAQUETÁ",
+          "mpio": "PUERTO RICO"
+        },
+        {
+          "nombre": "Rio Blanco (1172)",
+          "poblacion": 6,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "La Asuncion (1300)",
+          "poblacion": 5,
+          "dpto": "GUAVIARE",
+          "mpio": "EL RETORNO"
+        },
+        {
+          "nombre": "Guayaberos de Barrancón (1306)",
+          "poblacion": 5,
+          "dpto": "GUAVIARE",
+          "mpio": "SAN JOSÉ DEL GUAVIARE"
+        },
+        {
+          "nombre": "Chonara Huena (1692)",
+          "poblacion": 4,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "BUENAVENTURA"
+        },
+        {
+          "nombre": "Dachi Agore Drua (1765)",
+          "poblacion": 4,
+          "dpto": "QUINDÍO",
+          "mpio": "CALARCÁ"
+        },
+        {
+          "nombre": "Mallama (1360)",
+          "poblacion": 4,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Siberia  (1084)",
+          "poblacion": 4,
+          "dpto": "CAQUETÁ",
+          "mpio": "PUERTO RICO"
+        },
+        {
+          "nombre": "Chaluayaco (1592)",
+          "poblacion": 4,
+          "dpto": "PUTUMAYO",
+          "mpio": "VILLAGARZÓN"
+        },
+        {
+          "nombre": "Uitiboc (1764)",
+          "poblacion": 4,
+          "dpto": "AMAZONAS",
+          "mpio": "LETICIA"
+        },
+        {
+          "nombre": "Coconuco (1157)",
+          "poblacion": 4,
+          "dpto": "CAUCA",
+          "mpio": "PURACÉ"
+        },
+        {
+          "nombre": "Paez de El Libano (1694)",
+          "poblacion": 3,
+          "dpto": "CAQUETÁ",
+          "mpio": "SOLANO"
+        },
+        {
+          "nombre": "Yarinal-San Marcelino (1509)",
+          "poblacion": 3,
+          "dpto": "PUTUMAYO",
+          "mpio": "SAN MIGUEL"
+        },
+        {
+          "nombre": "Santa Rosa de Sucumbios y El Diviso (1511)",
+          "poblacion": 3,
+          "dpto": "NARIÑO",
+          "mpio": "IPIALES"
+        },
+        {
+          "nombre": "Mayor La Cuenca Media y Alta del Río Dagua (2149)",
+          "poblacion": 3,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Alto Rio Dagua Pacifico Cimarrones de Cisneros (2176)",
+          "poblacion": 2,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Bocana de Luzon (1758)",
+          "poblacion": 2,
+          "dpto": "PUTUMAYO",
+          "mpio": "ORITO"
+        },
+        {
+          "nombre": "Wasipungo (1543)",
+          "poblacion": 2,
+          "dpto": "PUTUMAYO",
+          "mpio": "MOCOA"
+        },
+        {
+          "nombre": "Lomas de Guaguarco (1779)",
+          "poblacion": 2,
+          "dpto": "TOLIMA",
+          "mpio": "COYAIMA"
+        },
+        {
+          "nombre": "Villa Catalina de Puerto Rosario (1593)",
+          "poblacion": 2,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO GUZMÁN"
+        },
+        {
+          "nombre": "Los Niasa (1456)",
+          "poblacion": 2,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "RESTREPO"
+        },
+        {
+          "nombre": "Bellavista (1722)",
+          "poblacion": 2,
+          "dpto": "PUTUMAYO",
+          "mpio": "ORITO"
+        },
+        {
+          "nombre": "Bazan - La Bocana (2132)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Maticuru (1082)",
+          "poblacion": 1,
+          "dpto": "CAQUETÁ",
+          "mpio": "MILÁN"
+        },
+        {
+          "nombre": "Aguanegra (1076)",
+          "poblacion": 1,
+          "dpto": "CAQUETÁ",
+          "mpio": "MILÁN"
+        },
+        {
+          "nombre": "Pocara (1548)",
+          "poblacion": 1,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Palermo (1630)",
+          "poblacion": 1,
+          "dpto": "TOLIMA",
+          "mpio": "ORTEGA"
+        },
+        {
+          "nombre": "Unificado Chami Rio San Juan (1410)",
+          "poblacion": 1,
+          "dpto": "RISARALDA",
+          "mpio": "MISTRATÓ"
+        },
+        {
+          "nombre": "Wasiruma  (1457)",
+          "poblacion": 1,
+          "dpto": "VALLE DEL CAUCA",
+          "mpio": "VIJES"
+        },
+        {
+          "nombre": "Paletara (1158)",
+          "poblacion": 1,
+          "dpto": "CAUCA",
+          "mpio": "PURACÉ"
+        },
+        {
+          "nombre": "La Italia (1708)",
+          "poblacion": 1,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO ASÍS"
+        },
+        {
+          "nombre": "San Andres-Las Vegas-Villaunion (1726)",
+          "poblacion": 1,
+          "dpto": "PUTUMAYO",
+          "mpio": "PUERTO CAICEDO"
+        },
+        {
+          "nombre": "El Unuma (1338)",
+          "poblacion": 1,
+          "dpto": "VICHADA",
+          "mpio": "CUMARIBO"
+        },
+        {
+          "nombre": "San Lorenzo (1583)",
+          "poblacion": 1,
+          "dpto": "CALDAS",
+          "mpio": "RIOSUCIO"
+        },
+        {
+          "nombre": "Yanacona de San Agustin (1634)",
+          "poblacion": 1,
+          "dpto": "HUILA",
+          "mpio": "SAN AGUSTÍN"
+        },
+        {
+          "nombre": "Citronela Río Dagua (2113)",
+          "poblacion": 1,
+          "dpto": null,
+          "mpio": null
+        },
+        {
+          "nombre": "Nuevo Amanecer La Meseta (1679)",
+          "poblacion": 1,
+          "dpto": "HUILA",
+          "mpio": "LA ARGENTINA"
+        }
+      ],
+      "n_resguardos": 150,
+      "bbox": [
+        0.28741611800006694,
+        -77.34583991599999,
+        3.747792615000037,
+        -74.13514327299998
+      ]
+    },
+    "lengua": {
+      "pct_habla": 0.0,
+      "pct_entiende": 0.0,
+      "n_total": 243176,
+      "habla_total": 0,
+      "entiende_total": 0
+    },
+    "nbi": {
+      "pct_nbi": {
+        "value": 25.2,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pct_miseria": {
+        "value": 5.08,
+        "_meta": {
+          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
+          "table": "visor_dane.nbi_pueblo",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "componentes": {
+        "vivienda": 9.26,
+        "servicios": 6.73,
+        "hacinamiento": 5.78,
+        "inasistencia": 1.79,
+        "dependencia": 7.78
+      },
+      "n_personas": 242108,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 7617,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 7617,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 4718
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 727
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 695
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 546
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 457
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 155
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 112
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 60
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 38
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 33
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 4718
+      },
+      "pct_hecho_principal": 61.9
+    },
+    "icv": {
+      "score": 0.528,
+      "componentes": {
+        "nbi_norm": 0.252,
+        "prevalencia_norm": 0.425,
+        "conflicto_norm": 1.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T16:10:19",
+  "periodo": "2018",
+  "_input_hash": "04088f7c96728f85"
+}

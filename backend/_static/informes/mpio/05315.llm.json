@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Guadalupe (Antioquia) registra una población indígena de 5 personas según el CNPV 2018, distribuidas en 2 pueblos: el 80% (4) son Zenú y el 20% (1) Emberá-Chamí. No se identifican resguardos en el territorio, lo que limita la presencia estructural de pueblos indígenas. La ausencia de datos en NBI y lengua refleja vacíos en la caracterización socioeconómica local.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos disponibles, que solo reportan 5 personas indígenas sin desagregación por edad. La población total indígena es mínima (n=5) y no permite análisis demográfico confiable. Se requiere desagregación por cohortes para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el municipio (sin_datos: true). La falta de registros impide evaluar sub-registros o necesidades sanitarias. Se recomienda priorizar sistemas de información locales para pueblos minoritarios.",
+  "territorial": "Guadalupe no cuenta con resguardos indígenas, lo que evidencia una dispersión extrema de la población (n_resguardos=0). La bbox geográfica no refleja concentración territorial. La ausencia de territorios colectivos dificulta la protección cultural y la gestión ambiental comunitaria.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio (sin_datos: true). No se puede determinar la vitalidad lingüística ni la presencia de lenguas nativas en la población indígena local.",
+  "vida": "No hay información sobre NBI para Guadalupe (sin_datos: true), aunque el promedio indígena nacional es 67.6%. La brecha no puede calcularse. La falta de datos oculta posibles condiciones de pobreza extrema en una población ya minoritaria.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Guadalupe entre 1985-2024 (victimas_total_disc: 0). La ausencia de hechos victimizantes no descarta riesgos latentes. Se requiere monitoreo continuo dado el contexto regional de Antioquia.",
+  "icv": "El ICV de Guadalupe es 0.0, con componentes en cero (NBI, prevalencia y conflicto). La fórmula ponderada refleja la falta de datos disponibles. Este resultado subraya la urgencia de generar información básica para pueblos indígenas en contextos municipales.",
+  "recomendaciones": [
+    "Implementar un sistema de registro municipal desagregado por pueblo indígena para superar la n=5 actual y permitir análisis demográficos confiables.",
+    "Priorizar la identificación y constitución de resguardos en Guadalupe, dado que n_resguardos=0 limita la autonomía territorial.",
+    "Incluir a Guadalupe en programas de salud intercultural con enfoque en pueblos minoritarios, ante la ausencia de datos de prevalencia.",
+    "Articular con el DANE para incluir preguntas específicas sobre pueblos indígenas en censos municipales, dado que los datos actuales son insuficientes.",
+    "Diseñar un protocolo de alerta temprana para monitorear posibles hechos victimizantes, pese a que víctimas_total_disc=0 en el período."
+  ]
+}

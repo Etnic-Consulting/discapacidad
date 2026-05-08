@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Santa Bárbara (Santander) presenta un vacío crítico en datos indígenas: la población total registrada es 0 según CNPV 2018, lo que impide análisis demográfico confiable. El municipio carece de resguardos indígenas (n=0) y no reporta víctimas de conflicto con discapacidad (n=0). La ausencia de información sobre pueblos, lengua o NBI refleja una exclusión sistemática de la población indígena en los registros oficiales.",
+  "demografia": "Los datos demográficos indígenas están ausentes en Santa Bárbara (n=0). La nota técnica aclara que la población indígena se agrega por pueblo a nivel municipal, pero en este caso no se registró ninguna. Esta omisión impide analizar la pirámide etaria o su estructura poblacional. La confiabilidad es NO_CONFIABLE según la consulta directa a la tabla pueblo_municipio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en Santa Bárbara (n=0). La sección de capacidades diversas está marcada sin datos, aunque se referencia un promedio indígena nacional del 60.0%. La falta de registros específicos limita cualquier análisis de sub-registro o patrones locales.",
+  "territorial": "Santa Bárbara no cuenta con resguardos indígenas registrados (n=0). La bbox geográfica del municipio existe, pero no hay territorios colectivos delimitados. Esta ausencia contrasta con la presencia de límites municipales definidos, sugiriendo una desconexión entre la jurisdicción administrativa y los derechos territoriales indígenas.",
+  "lengua": "Los datos sobre lengua indígena en Santa Bárbara no están disponibles (_sin_datos: true). No se registra información sobre lenguas habladas por la población indígena en el municipio, lo que impide evaluar la vitalidad cultural o procesos de revitalización lingüística.",
+  "vida": "Santa Bárbara no reporta datos de NBI para población indígena (_sin_datos: true). El promedio indígena nacional de NBI es 67.6%, pero no hay cifras locales para comparar. Esta omisión dificulta medir brechas socioeconómicas o priorizar intervenciones en condiciones de vida.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Santa Bárbara (n=0) entre 1985-2024. El hecho principal y su porcentaje no aplican. La confiabilidad es CONFIABLE, pero la ausencia de registros no implica ausencia de violencia, sino falta de sistematización de datos en el RUV.",
+  "icv": "El ICV de Santa Bárbara es 0.0, derivado de componentes nulos (NBI=0.0, prevalencia=0.0, conflicto=0.0). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm arroja un valor mínimo. Esta métrica refleja la falta de datos más que condiciones reales de vida.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para documentar población y territorios, citando la omisión en CNPV 2018 (n=0).",
+    "Implementar un sistema de registro de víctimas de conflicto con enfoque étnico en Santa Bárbara, dado que el RUV no reporta casos (n=0).",
+    "Priorizar la identificación de pueblos indígenas presentes en el municipio mediante consultas comunitarias, ante la ausencia de datos oficiales.",
+    "Diseñar un plan de revitalización lingüística con participación de autoridades tradicionales, considerando la falta de registros sobre lengua (_sin_datos: true).",
+    "Incluir indicadores indígenas en el Sisbén municipal para medir NBI y comparar con el promedio nacional (67.6%), actualmente no disponible."
+  ]
+}

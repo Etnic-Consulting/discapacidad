@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>SMT-ONIC · PUEBLO Indigena Sin Información · 2026-05-07</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
+    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
+    --bg-card: #ffffff; --border: #e0ddd6;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
+         background: var(--bg); color: var(--ink); line-height: 1.55; }
+  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
+            border-top: 6px solid var(--primary); }
+  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
+  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
+              letter-spacing: 1px; font-weight: 700; }
+  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
+  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
+  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
+  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
+       padding-bottom: 6px; margin: 36px 0 16px;
+       font-size: 1.35rem; font-weight: 700; }
+  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
+  p { text-align: justify; margin: 0 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
+  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
+         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
+  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
+  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
+  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
+  th { background: var(--primary); color: #fff; font-weight: 600;
+       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
+  tr:nth-child(even) { background: #f9f8f4; }
+  td.num { text-align: right; font-family: sans-serif; }
+  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
+  .bar .lbl { flex: 0 0 130px; }
+  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
+  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
+  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
+  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
+  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
+  .recomendaciones ol { margin: 0; padding-left: 22px; }
+  .recomendaciones li { margin-bottom: 12px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
+  .badge.warn { background: #fdf3d3; color: #8a6914; }
+  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
+  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
+  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
+  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
+  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
+                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
+  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
+               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
+  .contraportada h2 { text-align: center; border: none; color: var(--primary);
+                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
+  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
+                              margin-bottom: 36px; letter-spacing: 0.5px; }
+  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
+                                    text-transform: uppercase; letter-spacing: 2px;
+                                    margin: 28px 0 14px; padding-bottom: 6px;
+                                    border-bottom: 1px solid var(--border); }
+  .contraportada .coord { text-align: center; margin: 0 0 32px; }
+  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
+  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
+  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
+                              border-left: 3px solid var(--gold); background: #fbf9f2; }
+  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
+                                      letter-spacing: 0.8px; font-weight: 600; }
+  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
+  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
+                               border-top: 2px solid var(--primary);
+                               font-size: 0.75rem; color: var(--ink-muted); }
+  @media print {
+    body { background: white; }
+    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
+    #mapa { height: 280px; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="pagina cover">
+  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
+  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
+    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
+  </div>
+  <h1>PUEBLO Indigena Sin Información</h1>
+  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
+  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+</div>
+
+<div class="pagina contraportada">
+  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
+  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
+  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
+  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
+  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
+  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
+  <div class="seccion-titulo">Coordinación Técnica</div>
+  <div class="coord">
+    <div class="nombre">Wilson Fernando Herrera Baltán</div>
+    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
+    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
+    <div class="cargo">Coordinador Social</div>
+  </div>
+  <div class="pie-cierre">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
+  </div>
+</div>
+
+<div class="pagina">
+  <h2>§ 2. Resumen ejecutivo</h2>
+  <p>El grupo autodenominado 'Indígena Sin Información', compuesto por 22,298 personas, presenta un perfil paradójico. Por un lado, exhiben condiciones de vida material significativamente mejores que el promedio indígena nacional, con un índice de Necesidades Básicas Insatisfechas (NBI) de solo 32.48% frente al 67.6% nacional. Por otro lado, enfrentan una carga desproporcionada de discapacidad, con una tasa de prevalencia de 99.7 por cada 1,000 habitantes, muy superior a la media indígena de 60.0.</p><p></p><p>Esta población se caracteriza por una dispersión extrema, con presencia en los 33 departamentos del país, y una concentración principal en el Valle del Cauca (5,882 personas). Demográficamente, es una población joven, con un índice de dependencia de 51.2, lo que indica una carga considerable sobre la población en edad de trabajar. La ausencia total de hablantes de lenguas nativas (0.0%) sugiere una desconexión profunda de las estructuras culturales y lingüísticas de pueblos específicos, probablemente asociada a procesos de migración, urbanización y mestizaje inter-étnico.</p><p></p><p>La principal vulnerabilidad de este grupo no radica en la pobreza material o el conflicto —donde registran 0 víctimas—, sino en la salud. El Índice de Vulnerabilidad Compuesto (ICV) de 0.279, aunque bajo, es impulsado casi en su totalidad por el componente de discapacidad. Este perfil único demanda políticas públicas diferenciadas, que vayan más allá de los enfoques tradicionales de pobreza y se centren en la inclusión, la salud pública específica y la comprensión de su particular configuración identitaria en el contexto nacional.</p>
+  
+  <div class="kpis">
+    <div class="kpi"><div class="label">Población indígena</div><div class="val">22.298</div><div class="sub">CNPV 2018</div></div>
+    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">2.199</div><div class="sub">prevalencia 99,7‰</div></div>
+    <div class="kpi"><div class="label">Departamentos</div><div class="val">33</div><div class="sub">86 resguardos</div></div>
+    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.279</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
+  </div>
+
+  <h2>§ 3. Demografía</h2>
+  <p>La estructura demográfica de los 22,298 individuos que componen este grupo es joven y expansiva, con una base ancha en la pirámide poblacional. El 27% de la población total (6,030 personas) es menor de 15 años, lo que asegura un relevo generacional pero también impone una fuerte presión sobre los sistemas de educación y cuidado. El índice de dependencia demográfica es de 51.2, lo que significa que cada 100 personas en edad productiva sostienen a aproximadamente 51 personas dependientes (niños y mayores). La relación de masculinidad es equilibrada, con 100.5 hombres por cada 100 mujeres. El índice de envejecimiento es bajo (25.2), confirmando la juventud de la estructura poblacional.</p>
+  
+  <table>
+    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
+    <tbody>
+      <tr><td>0-14 años</td><td class="num">3.108</td><td class="num">2.922</td><td class="num"><b>6.030</b></td><td class="num">27.0%</td></tr>
+      <tr><td>15-64 años</td><td class="num">7.301</td><td class="num">7.446</td><td class="num"><b>14.747</b></td><td class="num">66.1%</td></tr>
+      <tr><td>65+ años</td><td class="num">769</td><td class="num">752</td><td class="num"><b>1.521</b></td><td class="num">6.8%</td></tr>
+      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>11.178</b></td><td class="num"><b>11.120</b></td><td class="num"><b>22.298</b></td><td class="num">100,0%</td></tr>
+    </tbody>
+  </table>
+  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
+    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">100,5</div><div class="sub">H por 100 M</div></div>
+    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">51,2</div><div class="sub">por 100 productivos</div></div>
+    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">25,2</div><div class="sub">65+ / 0-14 × 100</div></div>
+  </div>
+  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 4. Capacidades diversas</h2>
+  <p>La situación de discapacidad en esta población es un punto crítico de atención. Se registra una tasa de prevalencia de 99.7 por cada 1,000 personas, una cifra que excede en más de un 65% al promedio nacional indígena de 60.0. En total, 2,199 individuos viven con alguna limitación funcional permanente. La principal dificultad reportada es la de 'Ver', que concentra el 44.9% de los casos, seguida de lejos por las limitaciones para 'Caminar' (24.2%). Estas cifras, especialmente la alta prevalencia visual, podrían indicar tanto una mayor exposición a factores de riesgo específicos como un posible subregistro en otros pueblos, lo que amerita una investigación epidemiológica para esclarecer las causas subyacentes.</p>
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">Prevalencia Indigena Sin Información</div>
+      <div class="num-big">99,7‰</div>
+      <div class="lbl">2.199 personas registradas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">60,0‰</div>
+      <div class="lbl">Brecha: -39,7‰</div>
+    </div>
+  </div>
+  <h3>Tipos de limitación</h3>
+  <div class="bar"><div class="lbl">Ver</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">946</div></div>
+<div class="bar"><div class="lbl">Caminar</div><div class="track"><div class="fill" style="width: 54.0%"></div></div><div class="num">511</div></div>
+<div class="bar"><div class="lbl">Oir</div><div class="track"><div class="fill" style="width: 22.1%"></div></div><div class="num">209</div></div>
+<div class="bar"><div class="lbl">Relacionarse</div><div class="track"><div class="fill" style="width: 15.6%"></div></div><div class="num">148</div></div>
+<div class="bar"><div class="lbl">Agarrar</div><div class="track"><div class="fill" style="width: 11.5%"></div></div><div class="num">109</div></div>
+
+  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 5. Distribución territorial</h2>
+  <p>A diferencia de la mayoría de pueblos indígenas que se concentran en territorios ancestrales, esta población se caracteriza por una dispersión geográfica extrema, con presencia en los 33 departamentos del país. El núcleo poblacional más grande se encuentra en el Valle del Cauca, que alberga a 5,882 personas. A pesar de esta dispersión, se registra su presencia en 86 resguardos indígenas, aunque a menudo de forma minoritaria. El resguardo 'Puerto Nariño' en Amazonas es la excepción, con una comunidad significativa de 1,582 personas. Este patrón sugiere un fenómeno de individuos y familias que, manteniendo su autoidentificación indígena, residen fuera de sus territorios de origen o en contextos de alta interculturalidad.</p>
+  <h3>Mapa de presencia</h3>
+  <div id="mapa"></div>
+  
+  <h3>Departamentos con mayor presencia</h3>
+  <table>
+    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+    <tbody>
+      <tr><td>VALLE DEL CAUCA</td><td class="num">5.882</td><td class="num">963</td><td class="num">163,7‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>AMAZONAS</td><td class="num">5.847</td><td class="num">271</td><td class="num">46,4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>NARINO</td><td class="num">1.397</td><td class="num">164</td><td class="num">117,4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>BOGOTA D.C.</td><td class="num">1.003</td><td class="num">109</td><td class="num">108,7‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>MAGDALENA</td><td class="num">899</td><td class="num">80</td><td class="num">89,0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>CAUCA</td><td class="num">813</td><td class="num">86</td><td class="num">105,8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>PUTUMAYO</td><td class="num">747</td><td class="num">71</td><td class="num">95,0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>CASANARE</td><td class="num">496</td><td class="num">30</td><td class="num">60,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>ANTIOQUIA</td><td class="num">422</td><td class="num">37</td><td class="num">87,7‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+      <tr><td>ATLANTICO</td><td class="num">391</td><td class="num">23</td><td class="num">58,8‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    </tbody></table>
+  
+  <h3>Resguardos asociados</h3>
+  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
+      <tr><td>Puerto Nariño</td><td>AMAZONAS</td><td>PUERTO NARIÑO</td><td class="num">1.582</td></tr>
+      <tr><td>Predio Putumayo</td><td>AMAZONAS</td><td>LA CHORRERA</td><td class="num">927</td></tr>
+      <tr><td>Morichuito Caño Mochuelo</td><td>CASANARE</td><td>PAZ DE ARIPORO</td><td class="num">296</td></tr>
+      <tr><td>Macedonia</td><td>—</td><td>—</td><td class="num">138</td></tr>
+      <tr><td>Puerto Triunfo</td><td>AMAZONAS</td><td>LETICIA</td><td class="num">109</td></tr>
+      <tr><td>Santa Sofia y El Progreso</td><td>AMAZONAS</td><td>LETICIA</td><td class="num">99</td></tr>
+      <tr><td>Mocagua</td><td>AMAZONAS</td><td>LETICIA</td><td class="num">95</td></tr>
+      <tr><td>Pedeguita y Mancilla</td><td>—</td><td>—</td><td class="num">94</td></tr>
+      <tr><td>Río Yurumanguí</td><td>—</td><td>—</td><td class="num">82</td></tr>
+      <tr><td>Río Calima</td><td>—</td><td>—</td><td class="num">69</td></tr>
+    </tbody></table>
+  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 6. Lengua y cultura</h2>
+  <p>Un rasgo definitorio de este grupo poblacional es la ausencia total de vitalidad lingüística nativa. Según los datos censales, el 0.0% de sus 22,298 miembros habla o entiende alguna lengua indígena. Esta interrupción completa en la transmisión intergeneracional del idioma es un indicador clave de una profunda desvinculación de un pueblo o cultura específica. Sugiere un perfil poblacional compuesto por individuos que, si bien reclaman su identidad indígena, lo hacen desde un marco que ya no incluye el componente lingüístico, posiblemente debido a largos procesos de migración, desplazamiento o por ser descendientes de uniones inter-étnicas en contextos mayoritariamente no indígenas.</p>
+  
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
+  </div>
+
+  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
+  <h2>§ 7. Condiciones de vida (NBI)</h2>
+  <p>En términos de condiciones de vida, este grupo presenta una situación notablemente más favorable que el promedio indígena. Su índice de Necesidades Básicas Insatisfechas (NBI) es del 32.48%, menos de la mitad del promedio nacional indígena que asciende al 67.6%. Esto indica un mayor acceso a vivienda, servicios y educación. Sin embargo, persisten carencias importantes: el principal componente del NBI es la privación en 'servicios públicos adecuados', que afecta al 17.29% de la población, seguido por el 'hacinamiento crítico' con un 11.5%. A pesar de su mejor posición relativa, estas cifras demuestran que una parte importante de esta población aún enfrenta barreras estructurales para alcanzar un bienestar completo.</p>
+  
+  <div class="comp">
+    <div class="box pueblo">
+      <div class="lbl">NBI Indigena Sin Información</div>
+      <div class="num-big">32,5%</div>
+      <div class="lbl">Necesidades básicas insatisfechas</div>
+    </div>
+    <div class="box benchmark">
+      <div class="lbl">Promedio indígena nacional</div>
+      <div class="num-big">67,6%</div>
+      <div class="lbl">Brecha</div>
+    </div>
+  </div>
+  <h3>Componentes del NBI (% personas afectadas)</h3>
+  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 59.6%"></div></div><div class="num">10,3%</div></div>
+  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">17,3%</div></div>
+  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 66.5%"></div></div><div class="num">11,5%</div></div>
+  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 24.9%"></div></div><div class="num">4,3%</div></div>
+  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 52.3%"></div></div><div class="num">9,0%</div></div>
+
+  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
+</div>
+
+<div class="pagina">
+  <h2>§ 8. Conflicto armado</h2>
+  <p>Según los registros oficiales de la Unidad para las Víctimas (RUV) consolidados hasta 2024, no existe ninguna víctima del conflicto armado auto-reconocida como 'Indígena Sin Información'. El número de víctimas registradas para este grupo es de 0. Esta ausencia total de registros es atípica y puede deberse a múltiples factores: una posible baja exposición al conflicto debido a su distribución geográfica particular, principalmente en centros urbanos o zonas no directamente afectadas, o un subregistro donde las víctimas de este grupo fueron censadas bajo otra categoría étnica o sin ninguna. Esta falta de datos constituye un vacío de información que impide conocer el impacto real del conflicto en este segmento de la población indígena.</p>
+  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
+    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
+    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
+  </div>
+  <h3>Top 5 hechos victimizantes</h3>
+  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
+  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
+  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
+  <p>El Índice de Vulnerabilidad Compuesto (ICV) para este grupo es de 0.279, un valor relativamente bajo que lo sitúa en una mejor posición que a muchos otros pueblos indígenas del país. Este bajo puntaje se explica principalmente por el nulo impacto del conflicto armado (componente de 0.0) y un nivel de pobreza multidimensional (NBI del 32.48%) muy inferior al promedio. Sin embargo, el análisis de componentes revela una tensión clave: la principal y casi única fuente de su vulnerabilidad es la altísima prevalencia de discapacidad, cuyo componente normalizado alcanza un valor de 0.498. Esto demuestra que su desafío fundamental no es material, sino de bienestar y salud.</p>
+  
+  <table>
+    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
+    <tbody>
+      <tr><td>NBI</td><td class="num">0.325</td><td class="num">0.40</td><td class="num"><b>0.130</b></td></tr>
+      <tr><td>Prevalencia disc.</td><td class="num">0.498</td><td class="num">0.30</td><td class="num"><b>0.149</b></td></tr>
+      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
+      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.279</b></td></tr>
+    </tbody>
+  </table>
+  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
+
+</div>
+
+<div class="pagina">
+  <h2>§ 10. Recomendaciones de política pública</h2>
+  <div class="recomendaciones"><ol>
+      <li>Diseñar e implementar un programa de salud pública con enfoque diferencial para abordar la alta prevalencia de discapacidad (99.7 por 1,000), priorizando la salud visual, que constituye el 44.9% de las limitaciones, para identificar causas y garantizar acceso a diagnóstico y tratamiento.</li>
+      <li>Realizar una caracterización cualitativa y socioeconómica de los 22,298 individuos de este grupo para comprender sus trayectorias de vida, procesos de construcción de identidad y necesidades específicas, dada su dispersión en 33 departamentos y la ausencia de un anclaje lingüístico-cultural.</li>
+      <li>Focalizar la inversión en infraestructura social para cerrar las brechas de NBI persistentes, priorizando el acceso a servicios públicos (17.29% de carencia) y programas de mejoramiento de vivienda para reducir el hacinamiento (11.5%).</li>
+      <li>Iniciar una búsqueda activa e investigación de subregistro en el RUV para determinar si la cifra de 0 víctimas del conflicto corresponde a una ausencia real de afectación o a un problema de clasificación al momento del registro.</li>
+  </ol></div>
+  <h2>§ 11. Metodología</h2>
+  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
+  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
+  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
+  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/999/data</code>.</p>
+  <div class="pie-footer">
+    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
+    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
+  </div>
+</div>
+
+<script>
+  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors © CARTO',
+    maxZoom: 19
+  }).addTo(map);
+  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
+    color: '#014a30', weight: 2, fillOpacity: 0.08
+  }).addTo(map);
+  L.marker([4.5, -73.0]).addTo(map)
+    .bindPopup('<b>PUEBLO Indigena Sin Información</b>');
+</script>
+</body>
+</html>

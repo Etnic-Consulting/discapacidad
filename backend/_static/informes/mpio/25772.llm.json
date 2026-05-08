@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Suesca registra una población indígena de 7 personas según CNPV 2018, distribuidas en 4 pueblos, siendo el Nasa el mayoritario con 3 habitantes. No se identifican resguardos en el municipio, lo que limita la expresión territorial colectiva. La ausencia de datos en NBI, lengua y capacidades diversas restringe el análisis integral de condiciones de vida.",
+  "demografia": "La población indígena en Suesca es mínima (7 personas) y está distribuida en 4 pueblos. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La concentración en el pueblo Nasa (42.9% del total) refleja una diversidad limitada pero con presencia histórica. Los datos provienen de CNPV 2018 con confiabilidad CONFIABLE.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Suesca. La sección de conflicto reporta 0 víctimas con discapacidad entre 1985-2024, cifra que carece de contexto comparativo. Se requiere mayor desagregación para evaluar subregistros o patrones de afectación.",
+  "territorial": "Suesca no cuenta con resguardos indígenas registrados, a pesar de tener un área geográfica definida (bbox). La ausencia de territorios colectivos contrasta con la presencia de 4 pueblos. La dispersión geográfica es nula al no existir resguardos, lo que limita la autonomía territorial. Los datos son oficiales pero incompletos.",
+  "lengua": "Los datos sobre lengua indígena en Suesca no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de lenguas propias. Esta carencia impide evaluar la transmisión cultural y la identidad étnica en el municipio.",
+  "vida": "No hay información sobre NBI en Suesca. El promedio indígena nacional (67.6%) no puede compararse localmente. La falta de datos impide medir brechas en condiciones de vida. Se requiere recolección específica para este municipio.",
+  "conflicto": "Suesca reporta 0 víctimas indígenas con discapacidad en el RUV entre 1985-2024. La ausencia de hechos violentos registrados sugiere baja visibilidad o subregistro. Esta cifra no permite análisis de patrones de conflicto en el territorio.",
+  "icv": "El ICV de Suesca es 0.0, derivado de componentes nulos en NBI, prevalencia y conflicto. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) refleja condiciones extremas de vulnerabilidad no cuantificables. La posición relativa es inexistente por falta de datos.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal desagregado por edad, género y pueblo para superar la limitación de n=7 personas y mejorar la planificación territorial.",
+    "Incluir a Suesca en programas de fortalecimiento de pueblos minoritarios, priorizando al pueblo Nasa (3 habitantes) para evitar su invisibilización.",
+    "Solicitar al IGAC y ONIC actualizar el registro de resguardos en Suesca, dado que la ausencia de territorios colectivos afecta derechos territoriales.",
+    "Generar línea base de NBI y lengua en Suesca, comparando con el promedio indígena nacional (67.6% NBI) para diseñar intervenciones específicas.",
+    "Articular con la Defensoría del Pueblo para investigar el subregistro de víctimas en Suesca (0 casos en 40 años), garantizando la visibilidad de posibles afectaciones."
+  ]
+}

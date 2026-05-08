@@ -1,0 +1,248 @@
+{
+  "tipo": "dpto",
+  "id": "66",
+  "nombre": "RISARALDA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 29637,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 29637,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1536,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1536,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 29637,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 51.8,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "282",
+          "con_disc": 937,
+          "total": 20597
+        },
+        {
+          "cod_pueblo": "280",
+          "con_disc": 486,
+          "total": 5372
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 34,
+          "total": 295
+        },
+        {
+          "cod_pueblo": "281",
+          "con_disc": 21,
+          "total": 2787
+        },
+        {
+          "cod_pueblo": "330",
+          "con_disc": 21,
+          "total": 139
+        },
+        {
+          "cod_pueblo": "200",
+          "con_disc": 16,
+          "total": 81
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 4,
+          "total": 25
+        },
+        {
+          "cod_pueblo": "284",
+          "con_disc": 2,
+          "total": 15
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 2,
+          "total": 22
+        },
+        {
+          "cod_pueblo": "730",
+          "con_disc": 2,
+          "total": 6
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 7,
+      "resguardos": [
+        {
+          "nombre": "UNIFICADO CHAMÍ DEL RÍO SAN JUAN",
+          "mpio": "MISTRATÓ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 26225.631
+        },
+        {
+          "nombre": "GITÓ DOCABÚ",
+          "mpio": "PUEBLO RICO",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 2452.877
+        },
+        {
+          "nombre": "LOMA DE CITABARA",
+          "mpio": "MISTRATÓ",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 276.305
+        },
+        {
+          "nombre": "SURATENA",
+          "mpio": "MARSELLA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 136.285
+        },
+        {
+          "nombre": "ALTOMIRA",
+          "mpio": "MARSELLA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 33.306
+        },
+        {
+          "nombre": "FLOR DEL MONTE",
+          "mpio": "BELÉN DE UMBRÍA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 18.592
+        },
+        {
+          "nombre": "RESGUARDO INDIGENA KURMADÓ-MARSELLA",
+          "mpio": "MARSELLA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_pg_ha": 7.746
+        }
+      ],
+      "bbox": [
+        4.66317253225074,
+        -76.2114265678565,
+        5.567753971012453,
+        -75.37549907040102
+      ],
+      "nombre_dpto": "RISARALDA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 723,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 723,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 540
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 83
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 42
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 27
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 11
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 11
+        },
+        {
+          "hecho": "Tortura",
+          "total": 4
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 540
+      },
+      "pct_hecho_principal": 74.7
+    },
+    "icv": {
+      "score": 0.121,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.259,
+        "conflicto_norm": 0.145
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:54:11",
+  "periodo": "2018",
+  "_input_hash": "f8033ce03cef13df"
+}

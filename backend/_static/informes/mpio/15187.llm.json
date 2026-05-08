@@ -1,0 +1,16 @@
+{
+  "ejecutivo": "El municipio de Chivatá (Boyacá) reporta ausencia de datos sobre población indígena en el CNPV 2018, lo que impide evaluar su presencia territorial. La caja geográfica registrada (0.11 grados de extensión) no alberga resguardos indígenas según registros oficiales. El ICV municipal es 0.0, reflejando la falta de información en NBI, prevalencia y conflicto, lo que limita cualquier análisis comparativo.",
+  "demografia": "Los datos de población indígena en Chivatá no están disponibles (n=0, confiabilidad NO_CONFIABLE). No es posible analizar la pirámide etaria ni su composición por grupos de edad. Esta ausencia de información refleja vacíos en la recolección de datos oficiales para pueblos indígenas a nivel municipal.",
+  "prevalencia": "No hay registros de prevalencia de enfermedades o condiciones de salud en la población indígena de Chivatá. La falta de datos (n=0) impide cualquier análisis de sub-registro o brechas sanitarias. Se requiere priorizar la recolección de información desagregada por etnia en el municipio.",
+  "territorial": "Chivatá cuenta con 0 resguardos indígenas registrados en su jurisdicción. La caja geográfica delimitada (5.523°N a 5.636°N; -73.308°O a -73.213°O) no incluye territorios colectivos reconocidos. Esta ausencia contrasta con la presencia histórica de pueblos en la región andina.",
+  "lengua": "Los datos sobre lenguas indígenas en Chivatá no están disponibles. No es posible identificar presencia de lenguas nativas ni su vitalidad cultural. Esta omisión refleja la necesidad de incluir variables lingüísticas en censos municipales.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para la población indígena de Chivatá. El promedio indígena nacional (67.6%) no puede compararse debido a la ausencia de datos locales. Se evidencia una brecha crítica en el monitoreo de condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Chivatá entre 1985-2024 (n=0). La ausencia de hechos victimizantes documentados sugiere sub-registro o falta de seguimiento territorial. Este vacío impide evaluar riesgos de violencia contra pueblos indígenas en la zona.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Chivatá es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no arroja resultados válidos por falta de insumos.",
+  "recomendaciones": [
+    "Incluir en el CNPV 2024 una pregunta étnica municipal para identificar población indígena en Chivatá, dado que los datos actuales son NO_CONFIABLES (n=0).",
+    "Sistematizar registros de resguardos y territorios colectivos en Boyacá mediante cruce con IGAC y ONIC, ya que actualmente no hay resguardos registrados (n=0).",
+    "Priorizar la recolección de datos de NBI y prevalencia en municipios con población indígena no cuantificada, como Chivatá, para comparar con el promedio nacional (67.6%).",
+    "Implementar un sistema de alerta temprana para violencia contra pueblos indígenas en Boyacá, ante la ausencia de víctimas registradas (n=0) en el RUV."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de LA PALMA registra una población indígena de 2 personas según CNPV 2018, distribuidas en dos pueblos: BARA y MUISCA, cada uno con 1 habitante. La ausencia de resguardos y la dispersión geográfica en un área de 0.02 grados cuadrados reflejan una presencia indígena mínima y fragmentada. La vulnerabilidad se evidencia en un ICV de 0.0, donde todos los componentes (NBI, prevalencia y conflicto) aportan cero, indicando condiciones críticas de exclusión.",
+  "demografia": "La pirámide etaria no aplica para este nivel de agregación municipal. Los datos demográficos se limitan a 2 individuos, imposibilitando análisis etarios o comparativos. La población indígena en LA PALMA es residual y no permite inferencias sobre estructura poblacional o dinámicas generacionales.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no contiene información sobre condiciones de salud o discapacidad, lo que impide evaluar cargas de enfermedad o acceso a servicios. Se reconoce la falta de registros específicos a nivel municipal.",
+  "territorial": "LA PALMA cuenta con 0 resguardos indígenas, confirmando la ausencia de territorios colectivos reconocidos. La dispersión geográfica en un área reducida (0.02°) sugiere una presencia indígena no organizada territorialmente. La concentración en dos pueblos sin base territorial refleja una pérdida histórica de autonomía.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se registra información sobre uso de lenguas indígenas en LA PALMA, lo que impide evaluar vitalidad cultural o procesos de revitalización lingüística.",
+  "vida": "El NBI no está disponible para LA PALMA, aunque el promedio indígena nacional es 67.6%. La falta de datos impide calcular brechas o identificar necesidades socioeconómicas. La vulnerabilidad estructural se infiere del ICV de 0.0, pero requiere datos desagregados para priorizar intervenciones.",
+  "conflicto": "Se registran 2 víctimas de desplazamiento forzado entre 1985-2024, representando el 100% de los hechos violentos documentados. El desplazamiento forzado es el principal hecho victimizante, evidenciando la exposición a violencia histórica en el territorio. La cifra subraya la urgencia de garantizar seguridad y retorno.",
+  "icv": "El ICV de LA PALMA es 0.0, con todos sus componentes (NBI, prevalencia y conflicto) en cero. Esta puntuación refleja la máxima exclusión posible, donde las dimensiones de pobreza, salud y conflicto convergen en un escenario de desprotección total. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) confirma la gravedad.",
+  "recomendaciones": [
+    "Priorizar la identificación y titulación de territorios colectivos para los pueblos BARA y MUISCA, dado que no existen resguardos reconocidos y la población es mínima pero simbólica.",
+    "Implementar un sistema de alerta temprana para prevenir desplazamientos forzados, considerando que el 100% de las víctimas registradas (2 casos) corresponden a este hecho.",
+    "Realizar un censo indígena municipal actualizado para superar la limitación de datos (n=2), incorporando variables de lengua, NBI y salud.",
+    "Diseñar programas de revitalización cultural para BARA y MUISCA, incluyendo documentación de lenguas y prácticas tradicionales, ante la ausencia de registros.",
+    "Articular con la ONIC y el Ministerio del Interior para incluir a LA PALMA en planes de protección territorial, dada su vulnerabilidad extrema reflejada en el ICV de 0.0."
+  ]
+}

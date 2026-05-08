@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo LAS MERCEDES, territorio Nasa en el Tolima, registra una población total de 0 según datos DANE-CNPV 2018, lo que refleja una posible subestimación en la fuente o limitaciones metodológicas. Su extensión es de 412.074 hectáreas, ubicada en el municipio de Rioblanco. El conflicto armado impacta fuertemente: 53 víctimas con discapacidad reportadas entre 1985-2024, donde el desplazamiento forzado representa el 83% de los casos (44 eventos).",
+  "demografia": "Los datos de población total para este resguardo no están disponibles en la fuente DANE-CNPV 2018 (n=0). Esta ausencia impide analizar la pirámide etaria o dinámicas demográficas. Se requiere cruce con otras fuentes o metodologías participativas para subsanar esta brecha.",
+  "prevalencia": "No se cuenta con datos de prevalencia de discapacidad o salud para este resguardo (_sin_datos: true). La comparación con el promedio indígena nacional (60.0%) no es posible aquí. Se destaca la necesidad de registros locales con enfoque diferencial.",
+  "territorial": "El resguardo LAS MERCEDES tiene una extensión de 412.074 hectáreas, delimitado por coordenadas geográficas precisas en el Tolima. Su ubicación en la macrorregión CENTRO-ORIENTE y municipio de Rioblanco lo sitúa en un contexto de alta presión territorial. Es un territorio colectivo con presencia histórica Nasa.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo (_sin_datos: true). No se puede determinar la vitalidad lingüística del pueblo Nasa en este territorio específico con la información actual.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para LAS MERCEDES (_sin_datos: true). La comparación con el promedio indígena nacional (67.6%) no aplica en este caso. Se requiere generar indicadores propios con participación comunitaria.",
+  "conflicto": "Se registran 53 víctimas con discapacidad en el resguardo entre 1985-2024, con desplazamiento forzado como hecho principal (83% de los casos). El homicidio y amenazas completan los patrones de violencia. Estos datos evidencian una afectación sistemática al territorio y su población.",
+  "icv": "El Índice de Condiciones de Vida (ICV) para LAS MERCEDES es 0.003, con componente de conflicto como dimensión dominante (0.011). Los otros componentes (NBI y prevalencia) registran 0.0, lo que sugiere subregistros. Su posición relativa es crítica frente a estándares nacionales.",
+  "recomendaciones": [
+    "Realizar un censo participativo con enfoque diferencial para actualizar datos demográficos y de discapacidad, dado que la fuente DANE no registra población en este resguardo (n=0).",
+    "Implementar un sistema de alerta temprana para el desplazamiento forzado, que concentra el 83% de las víctimas (44 casos) en el resguardo.",
+    "Diseñar estrategias de recuperación territorial con enfoque Nasa, priorizando la protección de las 412.074 hectáreas ante presiones externas.",
+    "Generar registros propios de NBI y lengua con participación comunitaria, ante la ausencia de datos oficiales (_sin_datos: true).",
+    "Articular con organizaciones regionales para incidir en políticas de reparación integral, considerando el ICV de 0.003 y su componente de conflicto como principal limitante."
+  ]
+}

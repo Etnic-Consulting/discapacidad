@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cañón Claro, territorio Sikuani en Arauca, concentra solo 4 habitantes en 1.634 hectáreas, reflejando una densidad poblacional crítica. Su Índice de Condiciones de Vida (ICV) es 0.0, resultado de la ausencia de datos en componentes clave como NBI, prevalencia y conflicto. Esta situación evidencia la invisibilización estadística de pequeños territorios indígenas, donde la falta de información impide diseñar intervenciones precisas.",
+  "demografia": "La población total del resguardo Cañón Claro asciende a 4 personas, según datos DANE-CNPV 2018. Esta cifra, aunque confiable por su n=4, revela una estructura demográfica extremadamente reducida. No se cuenta con datos de pirámide etaria ni razones de crecimiento poblacional en este nivel territorial.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Cañón Claro. La ausencia de información en este resguardo impide analizar patrones de morbilidad o acceso a servicios médicos. El sub-registro es total, lo que limita cualquier lectura sobre salud comunitaria en este territorio.",
+  "territorial": "Cañón Claro ocupa 1.634 hectáreas en el municipio de Tame, Arauca, con coordenadas que delimitan un área reducida en la Orinoquía. Su territorio, aunque formalmente reconocido, muestra una concentración mínima de población Sikuani. La dispersión geográfica no aplica en este caso por la escala reducida del resguardo.",
+  "lengua": "No se registran datos sobre lengua en este resguardo. La información sobre uso de lenguas indígenas no está disponible para Cañón Claro, lo que impide evaluar la vitalidad cultural del pueblo Sikuani en este territorio específico.",
+  "vida": "No hay datos de Necesidades Básicas Insatisfechas (NBI) para Cañón Claro. El promedio indígena nacional de NBI es 67.6%, pero este resguardo no cuenta con información para comparar. La brecha con el promedio nacional no puede calcularse por ausencia de datos locales.",
+  "conflicto": "No se reportan víctimas con discapacidad en Cañón Claro según el RUV (1985-2024). El valor es 0 con n=0 y confiabilidad CONFIABLE, lo que sugiere ausencia de registros, pero no necesariamente ausencia de hechos. El hecho principal no aplica en este contexto.",
+  "icv": "El ICV de Cañón Claro es 0.0, derivado de la normalización de componentes nulos (NBI, prevalencia y conflicto). Esta puntuación refleja la falta de datos disponibles más que una condición real de vida. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede aplicarse con información ausente.",
+  "recomendaciones": [
+    "Realizar censo comunitario específico para Cañón Claro para actualizar datos demográficos y de salud, dado que la población actual (4 habitantes) no permite análisis representativos.",
+    "Incluir al resguardo en sistemas de información de salud pública con enfoque diferencial, considerando su ubicación en zona de Orinoquía y población Sikuani.",
+    "Priorizar la recolección de datos sobre lengua y cultura en territorios pequeños como Cañón Claro, donde la invisibilización estadística es mayor.",
+    "Diseñar estrategias de protección territorial para resguardos con menos de 10 habitantes, como Cañón Claro, ante riesgos de despojo o abandono institucional.",
+    "Articular con ASCATIDAR y ONIC para incorporar datos de resguardos pequeños en informes regionales, evitando su exclusión por falta de representatividad estadística."
+  ]
+}

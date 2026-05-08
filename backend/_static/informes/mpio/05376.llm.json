@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de LA CEJA registra una población indígena de 17 personas según el CNPV 2018, distribuidas en 8 pueblos. El 47% de esta población corresponde al pueblo EMBERA-KATIO, principal grupo presente en el territorio. La ausencia de resguardos y la concentración poblacional en contextos urbanos reflejan una dinámica de dispersión territorial sin reconocimiento legal de espacios colectivos.",
+  "demografia": "La pirámide etaria no aplica al nivel municipal según los datos disponibles. La población indígena de LA CEJA suma 17 personas, con una distribución heterogénea entre 8 pueblos. El EMBERA-KATIO concentra el 47% de la población, mientras los restantes 7 pueblos suman 9 personas. Esta fragmentación dificulta análisis demográficos agregados.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no reporta información sobre condiciones de salud o acceso a servicios. Se reconoce la limitación interpretativa por ausencia de registros específicos a nivel municipal.",
+  "territorial": "LA CEJA no cuenta con resguardos indígenas registrados, lo que evidencia la falta de reconocimiento territorial. La bounding box del municipio abarca coordenadas que no incluyen territorios colectivos. La ausencia de resguardos contrasta con la presencia de 8 pueblos indígenas en el territorio.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se registra información sobre uso o pérdida de lenguas indígenas en el territorio. Se reconoce la limitación interpretativa por falta de datos específicos.",
+  "vida": "Los datos de NBI no están disponibles para LA CEJA. El promedio indígena nacional de NBI es 67.6%, pero no se puede comparar debido a la ausencia de registros locales. Se requiere información actualizada para evaluar condiciones de vida.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en LA CEJA entre 1985-2024. El valor de 0 víctimas sugiere ausencia de registros o sub-registro en el RUV. Esta limitación impide análisis sobre afectaciones por conflicto armado en el territorio.",
+  "icv": "El ICV de LA CEJA es 0.0, resultado de la ausencia de datos en componentes clave como NBI, prevalencia y conflicto. La fórmula del ICV (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con valores nulos. Se requiere información adicional para evaluar condiciones de vida.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal actualizado para superar la limitación de n=17 personas y 8 pueblos dispersos, citando la cifra de 17 en el CNPV 2018.",
+    "Gestionar el reconocimiento de al menos un resguardo indígena en LA CEJA, considerando la ausencia de 0 resguardos registrados según los datos territoriales.",
+    "Incluir a LA CEJA en sistemas de información de discapacidad y conflicto para superar la limitación de 0 víctimas registradas en el RUV entre 1985-2024.",
+    "Implementar programas de revitalización cultural para los 8 pueblos indígenas presentes, especialmente para el EMBERA-KATIO que concentra el 47% de la población, citando la cifra de 8 personas.",
+    "Articular con el departamento de Antioquia (cod_dpto: 05) para integrar datos municipales en políticas regionales de pueblos indígenas, dado que los datos locales son insuficientes."
+  ]
+}

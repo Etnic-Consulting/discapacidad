@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de EL COLEGIO registra una población indígena de 3 personas según el CNPV 2018, distribuidas en 3 pueblos sin predominio claro. La ausencia de resguardos y datos de NBI o lengua limita el análisis de condiciones de vida. La baja población y la dispersión territorial restringen la representatividad de indicadores clave.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida población indígena (n=3). La distribución por pueblos muestra igualdad numérica entre Muisca, Tikuna y Murui, sin concentración etaria relevante. Los datos reflejan una fragmentación extrema que impide análisis demográficos significativos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en EL COLEGIO. La falta de información impide evaluar subregistros o patrones epidemiológicos. Se requiere desagregación municipal para análisis confiables, actualmente inexistentes en las fuentes consultadas.",
+  "territorial": "EL COLEGIO cuenta con 0 resguardos indígenas, lo que evidencia la ausencia de territorios colectivos reconocidos. La caja geográfica delimitada (4.496314419000728, -74.49753375732212 a 4.625919683040867, -74.36372687530951) no alberga espacios de autonomía indígena formal.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas indígenas en EL COLEGIO. La ausencia de información refleja vacíos en el registro territorial.",
+  "vida": "No hay datos de NBI para EL COLEGIO, lo que impide comparar condiciones de vida con el promedio indígena nacional (67.6%). La falta de información sobre necesidades básicas insatisfechas limita la priorización de políticas sociales en el territorio.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en EL COLEGIO entre 1985-2024 (n=0). La ausencia de hechos victimizantes no permite identificar patrones de violencia. Los datos sugieren baja incidencia, pero la muestra reducida (n=3) limita conclusiones.",
+  "icv": "El ICV de EL COLEGIO es 0.0, determinado por la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con información disponible. La puntuación refleja vacíos estructurales.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal desagregado para superar la limitación de n=3 y garantizar representatividad en indicadores demográficos y sociales.",
+    "Incluir a EL COLEGIO en programas de fortalecimiento territorial indígena, pese a la ausencia de resguardos, para prevenir la pérdida de identidad cultural.",
+    "Solicitar al DANE la inclusión de variables de lengua y NBI en el CNPV municipal para el próximo ciclo de recolección de datos.",
+    "Priorizar la identificación y reconocimiento de territorios indígenas en EL COLEGIO, dado que actualmente no existen resguardos formalizados.",
+    "Establecer un sistema de alerta temprana para monitorear condiciones de vida, aprovechando la baja incidencia de conflicto registrada (0 víctimas)."
+  ]
+}

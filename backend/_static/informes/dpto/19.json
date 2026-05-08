@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "19",
+  "nombre": "CAUCA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 307692,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 307692,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 28527,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 28527,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 307692,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 92.7,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "500",
+          "con_disc": 18753,
+          "total": 214828
+        },
+        {
+          "cod_pueblo": "750",
+          "con_disc": 3577,
+          "total": 28738
+        },
+        {
+          "cod_pueblo": "180",
+          "con_disc": 2203,
+          "total": 17782
+        },
+        {
+          "cod_pueblo": "290",
+          "con_disc": 1860,
+          "total": 19523
+        },
+        {
+          "cod_pueblo": "650",
+          "con_disc": 546,
+          "total": 8799
+        },
+        {
+          "cod_pueblo": "292",
+          "con_disc": 479,
+          "total": 3913
+        },
+        {
+          "cod_pueblo": "291",
+          "con_disc": 343,
+          "total": 3206
+        },
+        {
+          "cod_pueblo": "501",
+          "con_disc": 243,
+          "total": 2432
+        },
+        {
+          "cod_pueblo": "340",
+          "con_disc": 201,
+          "total": 2031
+        },
+        {
+          "cod_pueblo": "283",
+          "con_disc": 129,
+          "total": 4464
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 78,
+      "resguardos": [
+        {
+          "nombre": "RÍO GUANGÜI",
+          "mpio": "TIMBIQUÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22525.404
+        },
+        {
+          "nombre": "CALLE SANTA ROSA RÍO SAIJA",
+          "mpio": "TIMBIQUÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 22282.325
+        },
+        {
+          "nombre": "INGA DE APONTE",
+          "mpio": "SANTA ROSA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 21833.179
+        },
+        {
+          "nombre": "GUAMBÍA",
+          "mpio": "SILVIA",
+          "pueblo_onic": "MISAK",
+          "area_pg_ha": 19460.368
+        },
+        {
+          "nombre": "MANDIYACO",
+          "mpio": "SANTA ROSA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 16416.479
+        },
+        {
+          "nombre": "LA IGUANA",
+          "mpio": "LÓPEZ DE MICAY",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 10921.302
+        },
+        {
+          "nombre": "KOKONUCO",
+          "mpio": "PURACÉ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 8990.64
+        },
+        {
+          "nombre": "PALETARÁ",
+          "mpio": "PURACÉ",
+          "pueblo_onic": "KOKONUKO - YANACONA",
+          "area_pg_ha": 5807.34
+        },
+        {
+          "nombre": "JAMBALÓ",
+          "mpio": "JAMBALÓ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 5666.795
+        },
+        {
+          "nombre": "HUELLAS",
+          "mpio": "CALOTO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 5506.532
+        },
+        {
+          "nombre": "ALMORZADERO, SAN ISIDRO Y LA NUEVA UNIÓN",
+          "mpio": "TIMBIQUÍ",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 4953.601
+        },
+        {
+          "nombre": "TUMBICHUCUE",
+          "mpio": "INZÁ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 4591.884
+        },
+        {
+          "nombre": "PLAYA BENDITA",
+          "mpio": "LÓPEZ DE MICAY",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 4343.849
+        },
+        {
+          "nombre": "KIZGÓ",
+          "mpio": "SILVIA",
+          "pueblo_onic": "MISAK Y NASA",
+          "area_pg_ha": 4282.201
+        },
+        {
+          "nombre": "QUICHAYA",
+          "mpio": "SILVIA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 4027.73
+        },
+        {
+          "nombre": "INFI",
+          "mpio": "TIMBIQUÍ",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_pg_ha": 3303.207
+        },
+        {
+          "nombre": "PLAYITA SAN FRANCISCO",
+          "mpio": "LÓPEZ DE MICAY",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 3227.805
+        },
+        {
+          "nombre": "CORINTO LÓPEZ ADENTRO",
+          "mpio": "CALOTO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2803.077
+        },
+        {
+          "nombre": "SAN JOSÉ",
+          "mpio": "SANTA ROSA",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2747.424
+        },
+        {
+          "nombre": "AMBALÓ",
+          "mpio": "SILVIA",
+          "pueblo_onic": "MISAK Y NASA",
+          "area_pg_ha": 2745.781
+        },
+        {
+          "nombre": "POBLAZÓN",
+          "mpio": "POPAYÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2440.974
+        },
+        {
+          "nombre": "POLINDARA",
+          "mpio": "TOTORÓ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2168.34
+        },
+        {
+          "nombre": "CHIMBORAZO",
+          "mpio": "MORALES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2135.953
+        },
+        {
+          "nombre": "PURACÉ",
+          "mpio": "PURACÉ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 2044.391
+        },
+        {
+          "nombre": "GUAYUYACO",
+          "mpio": "PIAMONTE",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 2008.699
+        },
+        {
+          "nombre": "LAS DELICIAS (DE BUENOS AIRES)",
+          "mpio": "BUENOS AIRES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1676.268
+        },
+        {
+          "nombre": "ISLA DEL MONO",
+          "mpio": "LÓPEZ DE MICAY",
+          "pueblo_onic": "EPERARA SIA",
+          "area_pg_ha": 1580.501
+        },
+        {
+          "nombre": "GUACHICONO",
+          "mpio": "LA VEGA",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 1470.693
+        },
+        {
+          "nombre": "SAN ANTONIO DEL FRAGUA",
+          "mpio": "PIAMONTE",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 1341.553
+        },
+        {
+          "nombre": "CALDERAS",
+          "mpio": "INZÁ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1275.042
+        },
+        {
+          "nombre": "TOTORÓ",
+          "mpio": "SILVIA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1262.04
+        },
+        {
+          "nombre": "AGUA NEGRA",
+          "mpio": "MORALES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 1256.662
+        },
+        {
+          "nombre": "RESGUARDO INDÍGENA RUMIÑAWI",
+          "mpio": "PIAMONTE",
+          "pueblo_onic": "INGA",
+          "area_pg_ha": 1222.172
+        },
+        {
+          "nombre": "NOVIRAO",
+          "mpio": "TOTORÓ",
+          "pueblo_onic": "MISAK",
+          "area_pg_ha": 1047.837
+        },
+        {
+          "nombre": "CANOAS",
+          "mpio": "SANTANDER DE QUILICHAO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 969.268
+        },
+        {
+          "nombre": "JUAN TAMA",
+          "mpio": "PURACÉ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 925.316
+        },
+        {
+          "nombre": "LA CONCEPCIÓN",
+          "mpio": "SANTANDER DE QUILICHAO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 828.488
+        },
+        {
+          "nombre": "TUMBURAO",
+          "mpio": "SILVIA",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 727.935
+        },
+        {
+          "nombre": "SANTA MARTA",
+          "mpio": "SANTA ROSA",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 653.642
+        },
+        {
+          "nombre": "QUINTANA",
+          "mpio": "POPAYÁN",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 648.071
+        },
+        {
+          "nombre": "PAEZ DE TOEZ",
+          "mpio": "CALOTO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 580.117
+        },
+        {
+          "nombre": "PICKWE THA FIW",
+          "mpio": "PÁEZ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 523.701
+        },
+        {
+          "nombre": "GUADUALITO",
+          "mpio": "SANTANDER DE QUILICHAO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 479.325
+        },
+        {
+          "nombre": "CXHAB WALA LUUCX",
+          "mpio": "PÁEZ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 443.322
+        },
+        {
+          "nombre": "LA LAGUNA - SIBERIA",
+          "mpio": "CALDONO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 369.654
+        },
+        {
+          "nombre": "CERRO TIJERAS",
+          "mpio": "SUÁREZ",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 362.334
+        },
+        {
+          "nombre": "LA PAILA - NAYA",
+          "mpio": "BUENOS AIRES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 362.333
+        },
+        {
+          "nombre": "MUSSE UKWE",
+          "mpio": "MORALES",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 355.343
+        },
+        {
+          "nombre": "CXAYU CE FIW",
+          "mpio": "CAJIBÍO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 232.315
+        },
+        {
+          "nombre": "SAN JUAN",
+          "mpio": "BOLÍVAR",
+          "pueblo_onic": "YANAKONA - YANAKUNA",
+          "area_pg_ha": 225.258
+        }
+      ],
+      "bbox": [
+        0.9580284659404139,
+        -77.92833815403748,
+        3.3289411591180174,
+        -75.74782424305829
+      ],
+      "nombre_dpto": "CAUCA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 7779,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 7779,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 4774
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 798
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 767
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 574
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 430
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 140
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 76
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 46
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 40
+        },
+        {
+          "hecho": "Lesiones Personales Psicologicas",
+          "total": 32
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 4774
+      },
+      "pct_hecho_principal": 61.4
+    },
+    "icv": {
+      "score": 0.439,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.464,
+        "conflicto_norm": 1.0
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:46:34",
+  "periodo": "2018",
+  "_input_hash": "f7cc925a94cb2d92"
+}

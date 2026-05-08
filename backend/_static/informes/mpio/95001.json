@@ -1,0 +1,286 @@
+{
+  "tipo": "mpio",
+  "id": "95001",
+  "nombre": "SAN JOSE DEL GUAVIARE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 3823,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
+          "table": "pueblo.pueblo_municipio",
+          "period": "2018",
+          "n": 3823,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
+    },
+    "pueblos_indigenas": {
+      "n_pueblos": 20,
+      "top": [
+        {
+          "cod_pueblo": "320",
+          "pueblo": "JIW",
+          "poblacion": 1327
+        },
+        {
+          "cod_pueblo": "430",
+          "pueblo": "NUKAK-MAKU",
+          "poblacion": 498
+        },
+        {
+          "cod_pueblo": "220",
+          "pueblo": "CUBEO",
+          "poblacion": 317
+        },
+        {
+          "cod_pueblo": "260",
+          "pueblo": "DESANO",
+          "poblacion": 281
+        },
+        {
+          "cod_pueblo": "680",
+          "pueblo": "TUKANO",
+          "poblacion": 219
+        },
+        {
+          "cod_pueblo": "999",
+          "pueblo": "INDIGENA-SIN-INFORMACION",
+          "poblacion": 193
+        },
+        {
+          "cod_pueblo": "250",
+          "pueblo": "CURRIPACO",
+          "poblacion": 185
+        },
+        {
+          "cod_pueblo": "580",
+          "pueblo": "SIKUANI",
+          "poblacion": 148
+        },
+        {
+          "cod_pueblo": "310",
+          "pueblo": "GUANANO",
+          "poblacion": 112
+        },
+        {
+          "cod_pueblo": "530",
+          "pueblo": "PIRATAPUYO",
+          "poblacion": 106
+        },
+        {
+          "cod_pueblo": "550",
+          "pueblo": "PUINAVE",
+          "poblacion": 105
+        },
+        {
+          "cod_pueblo": "600",
+          "pueblo": "SIRIANO",
+          "poblacion": 46
+        },
+        {
+          "cod_pueblo": "790",
+          "pueblo": "YURUTI",
+          "poblacion": 32
+        },
+        {
+          "cod_pueblo": "140",
+          "pueblo": "CARIJONA",
+          "poblacion": 26
+        },
+        {
+          "cod_pueblo": "130",
+          "pueblo": "CARAPANA",
+          "poblacion": 24
+        },
+        {
+          "cod_pueblo": "060",
+          "pueblo": "BARA",
+          "poblacion": 20
+        },
+        {
+          "cod_pueblo": "070",
+          "pueblo": "BARASANO",
+          "poblacion": 18
+        },
+        {
+          "cod_pueblo": "510",
+          "pueblo": "PIAPOCO",
+          "poblacion": 14
+        },
+        {
+          "cod_pueblo": "630",
+          "pueblo": "TARIANO",
+          "poblacion": 12
+        },
+        {
+          "cod_pueblo": "050",
+          "pueblo": "WIWA",
+          "poblacion": 12
+        }
+      ],
+      "principal": {
+        "cod_pueblo": "320",
+        "pueblo": "JIW",
+        "poblacion": 1327
+      }
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "n_resguardos": 11,
+      "resguardos": [
+        {
+          "nombre": "NUKAK - MAKÚ",
+          "pueblo_onic": "JUDPA - JUJUPDA",
+          "area_pg_ha": 957379.917
+        },
+        {
+          "nombre": "COROCORO",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 36464.39
+        },
+        {
+          "nombre": "BARRANCO CEIBA Y LAGUNA ARAGUATO",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 26885.833
+        },
+        {
+          "nombre": "BARRANCO COLORADO",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 9478.08
+        },
+        {
+          "nombre": "LA FUGA",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 3625.955
+        },
+        {
+          "nombre": "BARRANCÓN",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 2751.782
+        },
+        {
+          "nombre": "CAÑO NEGRO",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 1700.888
+        },
+        {
+          "nombre": "GUAYABERO DE LA MARÍA",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 495.388
+        },
+        {
+          "nombre": "CACHIVERA DE NARE",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 316.945
+        },
+        {
+          "nombre": "PANURE (VENEZUELA)",
+          "pueblo_onic": "JIW - GUAYABERO",
+          "area_pg_ha": 277.42
+        },
+        {
+          "nombre": "EL REFUGIO",
+          "pueblo_onic": "DESANO",
+          "area_pg_ha": 268.741
+        }
+      ],
+      "bbox": [
+        2.012214474867306,
+        -73.65693153030224,
+        2.9249867131022667,
+        -70.50115263343338
+      ],
+      "nombre_mpio": "SAN JOSE DEL GUAVIARE",
+      "cod_dpto": "95"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 160,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 160,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 114
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 12
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 11
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 11
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 3
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 114
+      },
+      "pct_hecho_principal": 71.2
+    },
+    "icv": {
+      "score": 0.01,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.032
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T18:40:34",
+  "periodo": "2018",
+  "_input_hash": "c3ea85d142cf56ea"
+}

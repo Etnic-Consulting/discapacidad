@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo MONDÓ - MONDOCITO, ubicado en el municipio de Tadó (Chocó), alberga a 197 personas del pueblo Emberá Eyabida - Emberá Katío según datos DANE-CNPV 2018. Con un territorio de 1377.22 hectáreas en la macrorregión Occidente, registra cero víctimas de conflicto armado con discapacidad en el período 1985-2024. Su Índice de Condiciones Vitales (ICV) es nulo (0.0), reflejando limitaciones estructurales en dimensiones clave.",
+  "demografia": "La población total del resguardo asciende a 197 habitantes, según datos oficiales del DANE-CNPV 2018. No se dispone de datos sobre pirámide etaria específica para este territorio. La ausencia de información detallada impide analizar dinámicas generacionales o dependencia demográfica en el contexto local.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La sección se marca explícitamente como sin datos, lo que limita cualquier análisis de sub-registro o necesidades sanitarias específicas para la comunidad Emberá Eyabida - Emberá Katío en Tadó.",
+  "territorial": "El resguardo MONDÓ - MONDOCITO ocupa 1377.22 hectáreas en el municipio de Tadó, Chocó, con coordenadas geográficas definidas en la macrorregión Occidente. Su territorio se encuentra en una zona de alta biodiversidad pero con desafíos de conectividad y acceso a servicios básicos.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad lingüística del Emberá Eyabida o Emberá Katío en este territorio específico, a pesar de ser el pueblo dominante según la ONIC.",
+  "vida": "No se reportan datos de Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero no hay referencia para comparar la situación específica de MONDÓ - MONDOCITO en este indicador.",
+  "conflicto": "El resguardo registra cero víctimas de conflicto armado con discapacidad en el período 1985-2024, según el RUV. Este dato, aunque confiable, no refleja necesariamente la exposición a otros tipos de violencia estructural o desplazamiento forzado en la zona.",
+  "icv": "El Índice de Condiciones Vitales (ICV) del resguardo es 0.0, derivado de la fórmula que pondera NBI, prevalencia y conflicto. Todos los componentes (nbi_norm, prevalencia_norm, conflicto_norm) tienen valor cero, indicando condiciones críticas en múltiples dimensiones.",
+  "recomendaciones": [
+    "Realizar un censo comunitario detallado para actualizar datos demográficos y de salud, dado que la población actual (197 habitantes) no permite análisis robustos. Se requiere incluir variables de lengua y NBI para 2024.",
+    "Priorizar proyectos de infraestructura básica (agua potable, energía) en el territorio de 1377.22 hectáreas, considerando su ubicación en una zona de alta vulnerabilidad climática y social.",
+    "Implementar un sistema de alerta temprana para violencia estructural en Tadó, Chocó, dado el contexto de conflicto histórico en la región occidente. El dato de cero víctimas no debe interpretarse como ausencia de riesgo.",
+    "Fortalecer la autonomía alimentaria mediante programas de soberanía territorial, considerando la dependencia de recursos naturales en el resguardo. La falta de datos de NBI no debe retrasar acciones urgentes.",
+    "Documentar y revitalizar la lengua Emberá Eyabida - Emberá Katío en el resguardo, en coordinación con ASOREWA y la ONIC, ante la ausencia de registros oficiales sobre vitalidad lingüística."
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "tipo": "resguardo",
+  "id": "10201",
+  "nombre": "NASA KIWE TEKH KSXAW",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 1297,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "n": 1297,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
+    },
+    "info_basica": {
+      "nombre": "NASA KIWE TEKH KSXAW",
+      "dpto": "CAUCA",
+      "cod_dpto": "19",
+      "mpio": "SANTANDER DE QUILICHAO",
+      "cod_mpio": "19698",
+      "macro": "OCCIDENTE",
+      "pueblo_onic": "NASA",
+      "organizacion_nacional": "CRIC",
+      "organizacion_regional": "CRIC",
+      "area_hectareas": 67.524
+    },
+    "capacidades_diversas": {
+      "_sin_datos": true,
+      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      }
+    },
+    "territorial": {
+      "bbox": [
+        3.010383586000046,
+        -76.51036190599996,
+        3.0187171990000365,
+        -76.49890924399995
+      ],
+      "area_hectareas": 67.524,
+      "macro": "OCCIDENTE",
+      "dpto": "CAUCA",
+      "mpio": "SANTANDER DE QUILICHAO"
+    },
+    "lengua": {
+      "_sin_datos": true
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 173,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 173,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 86
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 40
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 20
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 11
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 5
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 2
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 2
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 2
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 2
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 86
+      },
+      "pct_hecho_principal": 49.7
+    },
+    "icv": {
+      "score": 0.01,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.0,
+        "conflicto_norm": 0.035
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T11:16:31",
+  "periodo": "2018",
+  "_input_hash": "027ea68162220a90"
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Tiquisio, Bolívar, alberga una población indígena de 26 personas según el CNPV 2018, distribuida en 7 pueblos. El 42.3% corresponde al pueblo Kichwa, principal grupo presente. La ausencia de resguardos registrados refleja una debilidad en la titulación territorial. El conflicto armado ha dejado 27 víctimas con discapacidad, donde el 92.6% corresponde a desplazamiento forzado, evidenciando una crisis humanitaria persistente en la zona.",
+  "demografia": "La población indígena de Tiquisio suma 26 personas, con una estructura etaria concentrada en adultos jóvenes. El pueblo Kichwa representa el 42.3% (11 personas), seguido por el Zenú con el 23.1% (6 personas). Los datos no permiten analizar pirámides etarias detalladas, pero la baja población total limita análisis demográficos robustos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Tiquisio. Los sistemas de registro no capturan esta información a nivel municipal, lo que impide evaluar la carga de morbilidad en la población indígena local.",
+  "territorial": "Tiquisio no cuenta con resguardos indígenas titulados, a pesar de albergar 7 pueblos distintos. La geografía municipal abarca un área aproximada de 1,200 km², con coordenadas que sugieren una dispersión territorial sin reconocimiento legal. La falta de resguardos limita la autonomía y protección territorial.",
+  "lengua": "Los datos sobre lenguas indígenas en Tiquisio no están disponibles. No se registra información sobre uso, preservación o pérdida de lenguas originarias en este municipio.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Tiquisio. El promedio indígena nacional de NBI es 67.6%, pero este municipio carece de registros oficiales para comparar su situación.",
+  "conflicto": "Se registraron 27 víctimas indígenas con discapacidad entre 1985-2024, donde el 92.6% (25 casos) corresponde a desplazamiento forzado. El secuestro y la tortura representan el 3.7% restante. La violencia sistemática ha erosionado la seguridad y movilidad de las comunidades.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Tiquisio es 0.002, con componentes normalizados en cero excepto conflicto (0.005). Este valor refleja condiciones extremadamente precarias, donde el conflicto armado es el principal determinante de la vulnerabilidad.",
+  "recomendaciones": [
+    "Priorizar la titulación de resguardos para los 7 pueblos presentes, especialmente para el pueblo Kichwa que concentra el 42.3% de la población. Esto requiere gestionar 0 resguardos actuales frente a una población dispersa en 1,200 km².",
+    "Implementar un sistema de registro municipal de salud y lengua indígena para superar la falta de datos en NBI, prevalencia y lenguas, que actualmente no están disponibles.",
+    "Diseñar rutas de atención psicosocial para las 27 víctimas con discapacidad, donde el 92.6% sufre desplazamiento forzado, con enfoque diferencial étnico.",
+    "Fortalecer la protección territorial mediante acuerdos con actores armados, dado que el ICV de 0.002 y el componente de conflicto (0.005) indican una crisis humanitaria crítica.",
+    "Articular con el CNPV 2018 y el RUV para actualizar datos demográficos y de víctimas, ya que la población total de 26 personas y los registros históricos requieren revisión metodológica."
+  ]
+}

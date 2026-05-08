@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Vélez (Santander) registra una población indígena de 5 personas según CNPV 2018, distribuidas en 4 pueblos. El MURUI es el grupo dominante con 2 habitantes, seguido por ARHUACO, WAYUU y un caso sin información. No se identifican resguardos en el municipio, lo que limita la protección territorial colectiva. La ausencia de datos en NBI y lengua refleja vacíos críticos para diseñar políticas diferenciadas.",
+  "demografia": "La pirámide etaria no aplica en este nivel por el reducido tamaño muestral (n=5). La dispersión poblacional entre 4 pueblos sin concentración significativa impide análisis demográficos robustos. La nota metodológica advierte que los datos provienen de agregación por pueblo, lo que puede subestimar la presencia indígena en contextos urbanos o dispersos.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para este municipio. La sección no reporta indicadores de salud o educación, lo que imposibilita evaluar brechas frente a estándares nacionales. Se requiere cruzar fuentes locales o comunitarias para superar el sub-registro inherente a muestras pequeñas.",
+  "territorial": "Vélez no cuenta con resguardos indígenas registrados, a pesar de su ubicación en una zona de transición andino-amazónica. La bbox geográfica delimita un área de 6.554 km² sin presencia territorial colectiva reconocida. Esta ausencia contrasta con la diversidad étnica identificada en el municipio.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. No se puede determinar la vitalidad de idiomas indígenas en un contexto donde la población total es mínima y dispersa. La falta de registros lingüísticos refleja la necesidad de estrategias comunitarias para documentar lenguas minorizadas.",
+  "vida": "Los datos de NBI no están disponibles para Vélez. El promedio indígena nacional (67.6%) no puede contrastarse localmente. Esta omisión limita la priorización de intervenciones en pobreza multidimensional, especialmente en un municipio con población indígena en contextos rurales dispersos.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Vélez entre 1985-2024 (n=0). La ausencia de hechos victimizantes no descarta dinámicas de violencia estructural no documentadas. La confiabilidad de los datos (n=0) impide lecturas concluyentes sobre seguridad territorial.",
+  "icv": "El ICV de Vélez es 0.0, determinado por la ausencia de datos en NBI, prevalencia y conflicto. Los componentes normalizados (nbi_norm=0.0, prev_norm=0.0, conflicto_norm=0.0) reflejan vacíos de información críticos. Este resultado subraya la urgencia de sistemas de monitoreo locales con enfoque diferencial.",
+  "recomendaciones": [
+    "Realizar censo comunitario para actualizar la población indígena en Vélez, dado que la muestra CNPV 2018 (n=5) es insuficiente para políticas públicas.",
+    "Documentar lenguas indígenas en riesgo en el municipio mediante metodologías participativas, ante la ausencia de datos oficiales.",
+    "Establecer mesas de trabajo con pueblos MURUI, ARHUACO y WAYUU para identificar territorios ancestrales no reconocidos como resguardos.",
+    "Diseñar un sistema de alerta temprana para violencia estructural en zonas rurales dispersas, ante la falta de registros en el RUV.",
+    "Priorizar proyectos productivos con enfoque territorial que fortalezcan la identidad cultural, considerando la diversidad étnica identificada."
+  ]
+}

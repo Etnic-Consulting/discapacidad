@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Gamarra registra una población indígena de solo 5 personas según el CNPV 2018, distribuidas en 4 pueblos, siendo el BARI el mayoritario con 2 habitantes. La ausencia de resguardos y la falta de datos en NBI y lengua reflejan una presencia indígena marginal en el territorio. La vulnerabilidad se agrava al no contar con información confiable sobre capacidades diversas o condiciones de vida.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida muestra (n=5). La población indígena en Gamarra es mínima y dispersa, con solo 4 pueblos representados. El pueblo BARI concentra el 40% de la población, seguido por PIJAO, NASA y WAYUU con 1 persona cada uno. La falta de datos desagregados impide análisis demográficos robustos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este municipio. La nota técnica indica que estos indicadores solo existen a nivel pueblo o departamento. La ausencia de información limita cualquier lectura sobre sub-registro o necesidades específicas de la población indígena en Gamarra.",
+  "territorial": "Gamarra no cuenta con resguardos indígenas registrados, lo que evidencia una ausencia de reconocimiento territorial formal. La caja geográfica del municipio (8.15°-8.49°N, -73.78°--73.61°W) no alberga territorios colectivos. La dispersión geográfica de la población indígena (4 pueblos) contrasta con la falta de estructuras territoriales propias.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. La sección correspondiente en el JSON está marcada como _sin_datos, sin que se pueda inferir información sobre uso o pérdida de lenguas originarias en el territorio.",
+  "vida": "No se dispone de datos sobre NBI para Gamarra, aunque el promedio indígena nacional es 67.6%. La sección está marcada como _sin_datos, lo que impide evaluar condiciones de vida como hacinamiento, acceso a servicios o educación. La falta de información refleja una debilidad en el monitoreo territorial local.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Gamarra entre 1985-2024 (n=0). La ausencia de hechos victimizantes reportados sugiere baja visibilidad del conflicto en este territorio. Sin embargo, el dato debe interpretarse con cautela por la reducida población indígena y posibles subregistros en el RUV.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Gamarra es 0.0, determinado por la falta de datos en NBI, prevalencia y conflicto. Los componentes normalizados (nbi_norm, prev_norm, conflicto_norm) no aportan información al no existir registros. Este resultado refleja la invisibilidad estadística de la población indígena en el municipio.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar datos demográficos y territoriales, dado que el CNPV 2018 solo registra 5 personas (n=5).",
+    "Solicitar al DANE la desagregación de indicadores sociales (NBI, discapacidad) para municipios con población indígena minoritaria, como Gamarra.",
+    "Promover el reconocimiento de resguardos o territorios colectivos para los pueblos BARI, PIJAO, NASA y WAYUU en Gamarra, considerando su presencia histórica.",
+    "Incluir a Gamarra en programas de monitoreo territorial ONIC para fortalecer la recolección de datos sobre lengua, salud y conflicto.",
+    "Articular con la Gobernación de Cesar acciones de visibilización de la población indígena en Gamarra, dada su baja representación en registros oficiales."
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "tipo": "dpto",
+  "id": "94",
+  "nombre": "GUAINIA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 27780,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 27780,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1194,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 1194,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 27780,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 43.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "250",
+          "con_disc": 448,
+          "total": 7940
+        },
+        {
+          "cod_pueblo": "550",
+          "con_disc": 304,
+          "total": 6913
+        },
+        {
+          "cod_pueblo": "510",
+          "con_disc": 171,
+          "total": 5828
+        },
+        {
+          "cod_pueblo": "580",
+          "con_disc": 134,
+          "total": 4398
+        },
+        {
+          "cod_pueblo": "220",
+          "con_disc": 36,
+          "total": 689
+        },
+        {
+          "cod_pueblo": "941",
+          "con_disc": 32,
+          "total": 522
+        },
+        {
+          "cod_pueblo": "680",
+          "con_disc": 17,
+          "total": 324
+        },
+        {
+          "cod_pueblo": "260",
+          "con_disc": 10,
+          "total": 100
+        },
+        {
+          "cod_pueblo": "570",
+          "con_disc": 7,
+          "total": 34
+        },
+        {
+          "cod_pueblo": "530",
+          "con_disc": 6,
+          "total": 72
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 23,
+      "resguardos": [
+        {
+          "nombre": "CUENCA MEDIA Y ALTA DEL RÍO INIRÍDA",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 2245012.375
+        },
+        {
+          "nombre": "TONINA, SEJAL, SAN JOSÉ Y OTRAS",
+          "mpio": "PUERTO COLOMBIA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 923145.445
+        },
+        {
+          "nombre": "RÍOS CUIARI E ISANA",
+          "mpio": "PANA PANA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 918882.099
+        },
+        {
+          "nombre": "BAJO RÍO GUAINÍA Y RÍO NEGRO",
+          "mpio": "SAN FELIPE",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 756690.006
+        },
+        {
+          "nombre": "RÍO ATABAPO E INÍRIDA",
+          "mpio": "CACAHUAL",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 522435.093
+        },
+        {
+          "nombre": "PARTE ALTA DEL RÍO GUAINÍA",
+          "mpio": "PANA PANA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 427800.932
+        },
+        {
+          "nombre": "LAGUNA NIÑAL, COCUY, LOMA BAJA Y LOMA ALTA DEL CAÑO GUARIBEN",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 142376.872
+        },
+        {
+          "nombre": "BACHACO BUENAVISTA",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 83489.459
+        },
+        {
+          "nombre": "REMANSO - CHORRO BOCÓN",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 76086.631
+        },
+        {
+          "nombre": "PAUJIL",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 54376.749
+        },
+        {
+          "nombre": "PUEBLO NUEVO - LAGUNA COLORADA",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 46039.441
+        },
+        {
+          "nombre": "CARANACOA YURI - LAGUNA MOROCOTO",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 45003.755
+        },
+        {
+          "nombre": "MINITAS - MIRALINDO",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 35407.63
+        },
+        {
+          "nombre": "EL VENADO",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 34213.385
+        },
+        {
+          "nombre": "ALMIDÓN LA CEIBA",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 32235.496
+        },
+        {
+          "nombre": "CUMARAL - GUAMUCO",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 29026.063
+        },
+        {
+          "nombre": "CHIGÜIRO",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 15947.437
+        },
+        {
+          "nombre": "COAYARE EL COCO",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "PUINAVE",
+          "area_pg_ha": 11341.837
+        },
+        {
+          "nombre": "CARRIZAL",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 9801.804
+        },
+        {
+          "nombre": "MURCIÉLAGO ALTAMIRA",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "PIAPOCO",
+          "area_pg_ha": 7246.612
+        },
+        {
+          "nombre": "ARRECIFAL",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 4372.949
+        },
+        {
+          "nombre": "LAGUNA - CURVINA SAPUARA",
+          "mpio": "BARRANCOMINAS",
+          "pueblo_onic": "SIKUANI",
+          "area_pg_ha": 3312.002
+        },
+        {
+          "nombre": "TIERRA ALTA",
+          "mpio": "INÍRIDA",
+          "pueblo_onic": "CURRIPAKO",
+          "area_pg_ha": 265.947
+        }
+      ],
+      "bbox": [
+        1.1656333332606355,
+        -70.94249237997775,
+        4.045025830855876,
+        -66.8472154266633
+      ],
+      "nombre_dpto": "GUAINIA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 148,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 148,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 115
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 22
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 4
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 2
+        },
+        {
+          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
+          "total": 2
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 115
+      },
+      "pct_hecho_principal": 77.7
+    },
+    "icv": {
+      "score": 0.073,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.215,
+        "conflicto_norm": 0.03
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T09:00:37",
+  "periodo": "2018",
+  "_input_hash": "66094df3f773b2e8"
+}

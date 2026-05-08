@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Jericó (Boyacá) reporta ausencia de población indígena registrada en el CNPV 2018, con n=0 en todos los indicadores demográficos. La caja geográfica del territorio (bbox) delimita un área sin resguardos indígenas reconocidos. Esta condición contrasta con el promedio nacional de NBI indígena (67.6%), sugiriendo exclusión estadística o invisibilización territorial.",
+  "demografia": "Los datos demográficos para Jericó indican n=0 en población indígena (CNPV 2018), lo que imposibilita análisis de pirámide etaria o distribución por edad. La confiabilidad de esta cifra es NO_CONFIABLE, invalidando cualquier inferencia poblacional. Se requiere verificación con fuentes comunitarias para descartar subregistro.",
+  "prevalencia": "No se dispone de datos de prevalencia de enfermedades en Jericó (_sin_datos: true). La falta de información impide evaluar condiciones de salud pública o identificar patrones de morbilidad. Este vacío limita la planificación sanitaria y exige acciones de recolección de datos primarios con participación indígena.",
+  "territorial": "Jericó registra 0 resguardos indígenas, a pesar de contar con una delimitación geográfica precisa (bbox). La ausencia de territorios colectivos reconocidos refleja una brecha en la implementación de derechos territoriales. Este patrón contrasta con la presencia de resguardos en departamentos vecinos como Boyacá (n=120).",
+  "lengua": "Los datos de lengua para Jericó no están disponibles (_sin_datos: true). No es posible determinar presencia de lenguas nativas o procesos de revitalización cultural. Esta omisión subraya la necesidad de incluir indicadores lingüísticos en censos municipales con enfoque diferencial.",
+  "vida": "No hay información sobre NBI en Jericó (_sin_datos: true), aunque el promedio indígena nacional es 67.6%. La ausencia de datos impide comparar condiciones de vida con otros municipios boyacenses. Se requiere priorizar la recolección de indicadores socioeconómicos con metodologías participativas.",
+  "conflicto": "El municipio reporta 0 víctimas indígenas con discapacidad en el RUV (1985-2024), con n=0 y confiabilidad CONFIABLE. La falta de hechos victimizantes registrados no descarta la existencia de conflictos no documentados. Se recomienda validar esta cifra con organizaciones sociales locales.",
+  "icv": "El ICV de Jericó es 0.0, derivado de componentes nulos (NBI, prevalencia y conflicto). Esta puntuación refleja la ausencia de datos en todos los ejes, no una condición real de bienestar. El cálculo sigue la fórmula ONIC (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm), pero carece de validez por datos faltantes.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con metodología ONIC para validar la ausencia de población registrada, citando el n=0 del CNPV 2018.",
+    "Incluir indicadores de lengua y cultura en el próximo Plan de Desarrollo Municipal, priorizando la recolección de datos lingüísticos (_sin_datos: true).",
+    "Articular con la Gobernación de Boyacá para identificar resguardos no reconocidos, dado que n_resguardos=0 pese a la bbox delimitada.",
+    "Establecer un observatorio de derechos humanos con participación de autoridades indígenas, ante el 0 víctimas RUV pero posible subregistro.",
+    "Diseñar un plan de acción afirmativa para pueblos indígenas en Jericó, usando como referencia el promedio nacional de NBI (67.6%) como línea base de intervención."
+  ]
+}

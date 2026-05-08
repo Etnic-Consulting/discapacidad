@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Lomas de Guaguarcó, territorio pijao en el Tolima, alberga 391 habitantes en 148.44 hectáreas. La afectación por conflicto armado es crítica: 563 víctimas registradas entre 1985-2024, con desplazamiento forzado como principal hecho victimizante (73.4% del total). La vulnerabilidad territorial se agrava por la ausencia de datos sobre capacidades diversas y NBI, limitando la planificación diferenciada.",
+  "demografia": "La población total asciende a 391 habitantes según DANE-CNPV 2018. No se dispone de pirámide etaria ni datos de género para este resguardo. La ausencia de desagregación etaria impide analizar dinámicas generacionales o presión demográfica en este territorio de 148.44 hectáreas.",
+  "prevalencia": "Los datos de prevalencia de discapacidad no están disponibles para este resguardo (_sin_datos: true). La referencia nacional indígena (60.0%) no puede contrastarse localmente. Esta limitación subraya la necesidad de sistemas de registro diferenciados por territorio para medir brechas reales.",
+  "territorial": "El resguardo ocupa 148.44 hectáreas en el municipio de Coyaimá, Tolima, con coordenadas que delimitan una zona de alta presión extractiva. La concentración geográfica en un área reducida (1.48 km²) intensifica los riesgos de despojo y fragmentación territorial para el pueblo Pijao.",
+  "lengua": "No se registran datos sobre lengua materna o vitalidad cultural para este resguardo (_sin_datos: true). La ausencia de información lingüística dificulta evaluar la transmisión intergeneracional de la identidad pijao en este territorio.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Lomas de Guaguarcó (_sin_datos: true). Comparativamente, el promedio indígena nacional es 67.6%, pero esta brecha no puede cuantificarse sin información local. La invisibilización estadística agrava la vulnerabilidad.",
+  "conflicto": "Se registran 563 víctimas de conflicto armado en el resguardo, con desplazamiento forzado como hecho principal (413 casos, 73.4%). Los homicidios (26) y amenazas (87) completan el patrón victimizante. La concentración de hechos en desplazamiento refleja estrategias de despojo territorial contra el pueblo Pijao.",
+  "icv": "El Índice de Condiciones de Vida (ICV) es 0.034, con conflicto como dimensión dominante (0.113). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm prioriza el componente de violencia. Este score refleja un territorio en emergencia humanitaria, donde el conflicto supera otras dimensiones de bienestar.",
+  "recomendaciones": [
+    "Priorizar la creación de un sistema de registro territorial de discapacidad y NBI para Lomas de Guaguarcó, con enfoque diferencial pijao, citando la ausencia de datos (_sin_datos: true) en capacidades_diversas y nbi.",
+    "Diseñar un plan de retorno y protección territorial para las 413 víctimas de desplazamiento forzado, usando el dato de hecho_principal (73.4%) como base de intervención.",
+    "Implementar un protocolo de alerta temprana contra despojo en territorios pijao, considerando la presión en 148.44 hectáreas y el patrón de hechos victimizantes.",
+    "Restablecer la recolección de datos lingüísticos en el resguardo, incorporando indicadores de vitalidad cultural en el SMT-ONIC, ante la falta de información en lengua.",
+    "Incluir al resguardo en la agenda de la CRIT-ONIC para incidir en políticas departamentales de Tolima, dado su ICV crítico (0.034) y la dimensión conflicto como principal limitante."
+  ]
+}

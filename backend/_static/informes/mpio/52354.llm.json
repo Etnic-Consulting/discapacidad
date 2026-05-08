@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Imués (Nariño) concentra una población indígena de 541 personas según CNPV 2018. El 98% pertenece al pueblo Pastos, evidenciando una homogeneidad étnica marcada. La ausencia de resguardos y datos de NBI limita el análisis integral, pero el desplazamiento forzado como principal hecho victimizante (66.7%) revela vulnerabilidades territoriales urgentes.",
+  "demografia": "La pirámide etaria no se aplica a este nivel municipal, ya que los datos demográficos están agregados por pueblo. La población total indígena de 541 personas se distribuye en 5 pueblos, con el 98% correspondiendo a Pastos (530 personas). La dispersión entre pueblos menores (Awa, Quillacinga, Nasa) sugiere asimetrías en representación territorial.",
+  "prevalencia": "Los datos de prevalencia no están disponibles a nivel municipal. La falta de información sobre discapacidades y otros indicadores de salud impide evaluar la situación de grupos vulnerables. Se requiere desagregación por pueblo para identificar brechas específicas en salud y bienestar.",
+  "territorial": "Imués no registra resguardos indígenas, a pesar de ser un municipio con población Pastos. La caja geográfica delimitada (1.02°-1.12°N, -77.57°--77.45°O) sugiere un territorio reducido sin reconocimiento legal colectivo. La ausencia de resguardos contrasta con la presencia histórica del pueblo Pastos en la región.",
+  "lengua": "Los datos sobre lengua no están disponibles para este municipio. No se puede determinar el estado de vitalidad lingüística ni la proporción de hablantes de quechua o español en la población indígena. Se requiere un estudio específico de lengua para evaluar la transmisión cultural.",
+  "vida": "No hay datos de NBI disponibles a nivel municipal. El promedio indígena nacional (67.6%) no puede contrastarse con la realidad local. La falta de información impide medir brechas en condiciones de vida, acceso a servicios básicos o pobreza multidimensional en la población indígena de Imués.",
+  "conflicto": "Se registran 3 víctimas de hechos victimizantes entre 1985-2024, con desplazamiento forzado como principal hecho (66.7%). Las amenazas representan el 33.3% restante. La baja cifra total (n=3) limita el análisis estadístico, pero el patrón sugiere riesgos persistentes de violencia estructural contra la población indígena.",
+  "icv": "El ICV de Imués es 0.0, con todos sus componentes en cero excepto conflicto (0.001). La fórmula pondera NBI (40%), prevalencia (30%) y conflicto (30%), reflejando una situación crítica en condiciones de vida y salud. La posición relativa es la más baja posible, indicando exclusión multidimensional.",
+  "recomendaciones": [
+    "Gestionar el reconocimiento de al menos un resguardo para el pueblo Pastos en Imués, priorizando la titulación colectiva de tierras (n_resguardos=0).",
+    "Realizar un censo lingüístico para evaluar la vitalidad del quechua y diseñar estrategias de revitalización cultural (lengua sin datos).",
+    "Implementar un sistema de alerta temprana para prevenir desplazamiento forzado, dado que el 66.7% de las víctimas registradas enfrentan este hecho (victimas_total_disc=3).",
+    "Incluir a Imués en programas de reducción de NBI con enfoque diferencial, considerando el promedio indígena nacional del 67.6% (nbi sin datos).",
+    "Fortalecer la base de datos municipal con desagregación por pueblo para identificar brechas específicas en salud y discapacidad (capacidades_diversas sin datos)."
+  ]
+}

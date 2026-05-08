@@ -1,0 +1,506 @@
+{
+  "tipo": "dpto",
+  "id": "73",
+  "nombre": "TOLIMA",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 45156,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 45156,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 2940,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 2940,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 45156,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 65.1,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "200",
+          "con_disc": 2824,
+          "total": 41997
+        },
+        {
+          "cod_pueblo": "500",
+          "con_disc": 64,
+          "total": 2460
+        },
+        {
+          "cod_pueblo": "740",
+          "con_disc": 5,
+          "total": 39
+        },
+        {
+          "cod_pueblo": "900",
+          "con_disc": 5,
+          "total": 32
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 5,
+          "total": 55
+        },
+        {
+          "cod_pueblo": "800",
+          "con_disc": 5,
+          "total": 28
+        },
+        {
+          "cod_pueblo": "282",
+          "con_disc": 4,
+          "total": 48
+        },
+        {
+          "cod_pueblo": "040",
+          "con_disc": 4,
+          "total": 37
+        },
+        {
+          "cod_pueblo": "470",
+          "con_disc": 3,
+          "total": 23
+        },
+        {
+          "cod_pueblo": "720",
+          "con_disc": 2,
+          "total": 52
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 94,
+      "resguardos": [
+        {
+          "nombre": "PAEZ DE GAITANÍA",
+          "mpio": "PLANADAS",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 4903.435
+        },
+        {
+          "nombre": "TINAJAS",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 2448.309
+        },
+        {
+          "nombre": "GUADUALITO",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1088.355
+        },
+        {
+          "nombre": "ANACARCO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 1064.657
+        },
+        {
+          "nombre": "PASO ANCHO - CHICUAMBE",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 798.522
+        },
+        {
+          "nombre": "GUAIPA UNO",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 709.047
+        },
+        {
+          "nombre": "EL TAMBO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 689.28
+        },
+        {
+          "nombre": "GUATAVITA TUA",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 619.052
+        },
+        {
+          "nombre": "IMBA",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 597.117
+        },
+        {
+          "nombre": "POTRERITO DOYARÉ",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 554.438
+        },
+        {
+          "nombre": "CHAQUIRA",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 550.227
+        },
+        {
+          "nombre": "POTRERITO",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 521.311
+        },
+        {
+          "nombre": "CHENCHE AMAYARCO",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 501.494
+        },
+        {
+          "nombre": "AICO",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 499.548
+        },
+        {
+          "nombre": "LOMAS DE HILARCO",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 478.283
+        },
+        {
+          "nombre": "TOTARCO PIEDRAS",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 476.299
+        },
+        {
+          "nombre": "CHICUAMBE LAS BRISAS",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 458.19
+        },
+        {
+          "nombre": "SAN MIGUEL",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 421.529
+        },
+        {
+          "nombre": "CASTILLA - ANGOSTURAS",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 413.825
+        },
+        {
+          "nombre": "NUEVA ESPERANZA",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 412.623
+        },
+        {
+          "nombre": "LAS MERCEDES",
+          "mpio": "RIOBLANCO",
+          "pueblo_onic": "NASA",
+          "area_pg_ha": 412.074
+        },
+        {
+          "nombre": "RECINTO PALMAROSA",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 380.276
+        },
+        {
+          "nombre": "LA TUTIRA BONANZA",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 375.026
+        },
+        {
+          "nombre": "NICOLÁS RAMÍREZ",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 372.713
+        },
+        {
+          "nombre": "LOS ÁNGELES",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 371.313
+        },
+        {
+          "nombre": "ACO VIEJO PATIO BONITO",
+          "mpio": "PRADO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 369.161
+        },
+        {
+          "nombre": "CHENCHE - SOCORRO - LOS GUAYABOS",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 360.477
+        },
+        {
+          "nombre": "MESA DE ORTEGA",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 339.15
+        },
+        {
+          "nombre": "BALSILLAS LIMÓN",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 320.077
+        },
+        {
+          "nombre": "SAN ANTONIO DE CALARMA",
+          "mpio": "SAN ANTONIO",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 289.503
+        },
+        {
+          "nombre": "NATARROCO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 288.289
+        },
+        {
+          "nombre": "TOTARCO NIPLE",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 247.803
+        },
+        {
+          "nombre": "POCARÁ",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 246.135
+        },
+        {
+          "nombre": "ZANJA HONDA",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 238.565
+        },
+        {
+          "nombre": "OLIRCO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 237.207
+        },
+        {
+          "nombre": "TAMIRCO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 237.151
+        },
+        {
+          "nombre": "LA FLECHA ALTOZANO",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 236.275
+        },
+        {
+          "nombre": "CHENCHE BUENOS AIRES TRADICIONAL",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.766
+        },
+        {
+          "nombre": "YACO MOLANA",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.667
+        },
+        {
+          "nombre": "GUALERAS",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 228.41
+        },
+        {
+          "nombre": "BELTRÁN",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 227.54
+        },
+        {
+          "nombre": "DIAMANTE",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 220.529
+        },
+        {
+          "nombre": "NATACOY PIJAO",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 217.059
+        },
+        {
+          "nombre": "CHENCHE MEDIA LUNA",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 202.747
+        },
+        {
+          "nombre": "CHENCHE BUENOS AIRES INDEPENDIENTE",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 198.742
+        },
+        {
+          "nombre": "TOTARCO TAMARINDO",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 196.958
+        },
+        {
+          "nombre": "COCANA",
+          "mpio": "NATAGAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 189.812
+        },
+        {
+          "nombre": "CHENCHE BUENAVISTA",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 187.813
+        },
+        {
+          "nombre": "LA SORTIJA",
+          "mpio": "ORTEGA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 184.859
+        },
+        {
+          "nombre": "TOTARCO DINDE - INDEPENDIENTE",
+          "mpio": "COYAIMA",
+          "pueblo_onic": "PIJAO",
+          "area_pg_ha": 184.359
+        }
+      ],
+      "bbox": [
+        2.8710806995268316,
+        -76.1057413990535,
+        5.319341614477116,
+        -74.47482490286603
+      ],
+      "nombre_dpto": "TOLIMA"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 2026,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 2026,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 1483
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 283
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 87
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 38
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 29
+        },
+        {
+          "hecho": "Abandono o Despojo Forzado de Tierras",
+          "total": 24
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 19
+        },
+        {
+          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
+          "total": 14
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 14
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 12
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 1483
+      },
+      "pct_hecho_principal": 73.2
+    },
+    "icv": {
+      "score": 0.219,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.325,
+        "conflicto_norm": 0.405
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:56:14",
+  "periodo": "2018",
+  "_input_hash": "2c3add1a79e11cc8"
+}

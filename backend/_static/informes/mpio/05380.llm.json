@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de La Estrella (Antioquia) registra una población indígena de apenas 13 personas según el CNPV 2018, distribuidas en 8 pueblos distintos. La ausencia de resguardos y la dispersión poblacional limitan la capacidad de acción colectiva. La vulnerabilidad territorial se agrava al no contar con datos de NBI ni lengua, lo que invisibiliza necesidades estructurales.",
+  "demografia": "La pirámide etaria no aplica en este nivel por la reducida muestra (n=13). La población indígena en La Estrella es minoritaria y fragmentada, con 8 pueblos representados pero ninguno con presencia significativa. La falta de datos desagregados impide análisis demográficos robustos.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud o discapacidad en este municipio. Los registros nacionales indican un promedio indígena del 60.0%, pero la ausencia de información local (n=0) imposibilita comparaciones o diagnósticos. Se requiere fortalecer sistemas de monitoreo comunitario.",
+  "territorial": "La Estrella no cuenta con resguardos indígenas, lo que refleja una ausencia de reconocimiento territorial formal. La dispersión geográfica (8 pueblos en 13 personas) y la falta de datos de lengua o NBI subrayan la debilidad en la gestión territorial indígena. La caja delimitadora (bbox) no aporta información útil sin resguardos.",
+  "lengua": "Los datos de lengua no están disponibles para este municipio. Esta omisión dificulta evaluar la vitalidad cultural y la transmisión intergeneracional de saberes. Sin registros, no es posible diseñar estrategias de revitalización lingüística adaptadas al contexto local.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en La Estrella. El promedio indígena nacional es del 67.6%, pero la falta de datos locales impide medir brechas. La invisibilidad estadística agrava la exclusión de este municipio en políticas públicas.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en La Estrella entre 1985-2024 (n=0). La ausencia de hechos violentos reportados no implica ausencia de conflicto, sino debilidad en los sistemas de registro. La ONIC debe priorizar mecanismos de denuncia comunitaria.",
+  "icv": "El Índice de Condiciones Vitales (ICV) en La Estrella es 0.0, derivado de la falta de datos en NBI, prevalencia y conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin información. Esto refleja la urgencia de sistemas de información territorializados.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario para pueblos indígenas en municipios sin resguardos, priorizando La Estrella con una meta de 50 registros en 12 meses, citando la población dispersa (n=13).",
+    "Diseñar un plan de revitalización lingüística para los 8 pueblos identificados, usando como base la ausencia de datos de lengua y la necesidad de preservar diversidad cultural.",
+    "Incluir a La Estrella en el Plan de Acción Departamental de Antioquia para pueblos sin territorio, con un enfoque en acceso a servicios básicos, dado el promedio nacional de NBI del 67.6%.",
+    "Fortalecer la articulación entre la ONIC y el municipio para crear un comité de seguimiento a derechos indígenas, aprovechando la ausencia de víctimas reportadas (n=0) como oportunidad para prevención.",
+    "Priorizar estudios cualitativos en La Estrella para documentar necesidades no cuantificadas, como acceso a salud y educación, ante la falta de datos de prevalencia y NBI."
+  ]
+}

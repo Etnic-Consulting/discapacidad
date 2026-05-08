@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Maceo (Antioquia) registra una población indígena de 8 personas según el CNPV 2018, distribuidas en 3 pueblos, siendo el Zenu el dominante con 5 habitantes. La ausencia de resguardos y la dispersión poblacional limitan la presencia territorial indígena organizada. La única víctima de conflicto registrada corresponde a desplazamiento forzado, lo que refleja una vulnerabilidad extrema en un contexto de casi nula infraestructura de protección.",
+  "demografia": "La pirámide etaria no puede analizarse con los datos disponibles, ya que solo se cuenta con un total agregado de 8 personas sin desagregación por edad ni género. La población indígena en Maceo es mínima y no permite inferencias sobre estructura demográfica. Se requiere desagregación por cohortes para evaluar dinámicas generacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. La falta de registros específicos impide identificar patrones de morbilidad. El sub-registro es evidente, dado que el único dato de conflicto (1 víctima) sugiere una omisión sistemática en la documentación de afectaciones.",
+  "territorial": "Maceo no cuenta con resguardos indígenas, lo que indica una ausencia de reconocimiento territorial formal. La caja geográfica del municipio abarca coordenadas que no concentran población indígena organizada. La dispersión poblacional (1 persona por pueblo en promedio) refleja una fragmentación extrema sin base territorial colectiva.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No es posible determinar la vitalidad de lenguas originarias ni su uso en contextos cotidianos o rituales. La ausencia de registros lingüísticos limita la planificación en educación intercultural.",
+  "vida": "No se dispone de datos sobre Necesidades Básicas Insatisfechas (NBI) para Maceo. La comparación con el promedio indígena nacional (67.6%) no es aplicable debido a la falta de información local. La invisibilidad estadística impide evaluar brechas en acceso a servicios básicos.",
+  "conflicto": "Se registra 1 víctima de conflicto (100% desplazamiento forzado) entre 1985-2024, lo que evidencia una afectación crítica con n=1 (CONFIABLE pero limitado). La concentración de este hecho sugiere una vulnerabilidad extrema en un contexto de casi nula presencia institucional. La falta de seguimiento sistemático agrava el sub-registro.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Maceo es 0.0, determinado por componentes normalizados de NBI, prevalencia y conflicto en cero. Esta puntuación refleja la ausencia de indicadores positivos en las tres dimensiones. La fórmula aplicada (0.4*NBI + 0.3*prev + 0.3*conflicto) subraya la precariedad absoluta en condiciones de vida.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por edad, género y pueblo para superar el sub-registro actual (población total: 8 personas)",
+    "Documentar sistemáticamente casos de conflicto y desplazamiento en coordinación con organizaciones indígenas locales (1 víctima registrada)",
+    "Promover el reconocimiento de resguardos territoriales en Maceo para garantizar derechos colectivos (0 resguardos existentes)",
+    "Implementar un sistema de alerta temprana para pueblos indígenas dispersos en Antioquia (3 pueblos identificados)",
+    "Incluir a Maceo en programas de salud intercultural con enfoque diferencial (datos de prevalencia no disponibles)"
+  ]
+}

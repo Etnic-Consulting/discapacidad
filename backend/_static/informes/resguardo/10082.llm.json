@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Cuiloto II, territorio Sikuani en Arauca, alberga 131 habitantes en 81.303 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando ausencia de datos en NBI, prevalencia y conflicto, lo que limita su análisis integral. La ausencia de información en lenguas y capacidades diversas invisibiliza vulnerabilidades específicas de este pueblo en la Orinoquía.",
+  "demografia": "La población total del resguardo Cuiloto II asciende a 131 habitantes según datos DANE-CNPV 2018. No se dispone de pirámide etaria ni estructura por edades en este nivel territorial. La base poblacional reducida (n=131) impide análisis demográficos detallados sin riesgo de sesgo estadístico.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de condiciones de salud en Cuiloto II. La sección se encuentra marcada como _sin_datos, lo que imposibilita evaluar cargas epidemiológicas o sub-registros en este territorio. Se requiere fortalecer sistemas de información locales para generar evidencia confiable.",
+  "territorial": "Cuiloto II ocupa 81.303 hectáreas en el municipio de Tame, Arauca, con coordenadas geográficas delimitadas. Su ubicación en la macro región Orinoquía lo sitúa en un contexto de alta dispersión territorial indígena. El resguardo representa un territorio colectivo Sikuani con baja densidad poblacional.",
+  "lengua": "Los datos sobre lengua en Cuiloto II no están disponibles en el sistema. No se puede determinar la vitalidad del sikuani ni la presencia de hablantes en este territorio específico. La ausencia de información lingüística limita el diseño de estrategias de revitalización cultural.",
+  "vida": "No se reportan datos de Necesidades Básicas Insatisfechas (NBI) para Cuiloto II. El promedio indígena nacional de NBI es 67.6%, pero este resguardo carece de mediciones locales. La falta de información impide comparar condiciones de vida con otros territorios Sikuani o el promedio nacional.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Cuiloto II entre 1985-2024 (n=0). La sección de hechos victimizantes está vacía, lo que sugiere ausencia de eventos reportados en este territorio. Sin embargo, la confiabilidad de estos datos depende de la cobertura del Registro Único de Víctimas.",
+  "icv": "El ICV de Cuiloto II es 0.0, calculado como combinación ponderada de NBI (0.0), prevalencia (0.0) y conflicto (0.0). Esta puntuación refleja la ausencia de datos en todas las dimensiones, no una condición real de bienestar. La fórmula del ICV no puede aplicarse válidamente sin información confiable.",
+  "recomendaciones": [
+    "Implementar un sistema de registro comunitario de datos demográficos y de salud en Cuiloto II para superar la ausencia de información (n=131 habitantes).",
+    "Realizar un diagnóstico participativo de necesidades básicas insatisfechas que incluya indicadores culturales específicos del pueblo Sikuani.",
+    "Fortalecer la recolección de datos sobre lengua y revitalización cultural en coordinación con ASCATIDAR y organizaciones locales.",
+    "Priorizar la inclusión de Cuiloto II en programas de protección territorial ante la ausencia de registros de conflicto (n=0 víctimas reportadas).",
+    "Diseñar estrategias de monitoreo ambiental y territorial que integren los 81.303 hectáreas del resguardo para garantizar su sostenibilidad ecológica y cultural."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Ubaque registra una población indígena de 1 persona según CNPV 2018, concentrada en el pueblo PIJAO. La ausencia de resguardos y datos de lengua refleja una debilidad institucional en el reconocimiento territorial. El ICV de 0.0 evidencia condiciones de extrema vulnerabilidad, donde ningún componente aporta valor al indicador compuesto.",
+  "demografia": "La pirámide etaria no aplica para este municipio: solo se reporta 1 habitante indígena sin desagregación por edad. La falta de datos demográficos detallados impide analizar dinámicas poblacionales. La confiabilidad del dato (n=1) limita su uso para políticas públicas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud. El sub-registro es evidente al no existir registros en el RUV ni fuentes complementarias. La ausencia de información impide evaluar necesidades sanitarias prioritarias.",
+  "territorial": "Ubaque carece de resguardos indígenas, con 0 territorios reconocidos. La bbox geográfica delimita un área municipal sin presencia indígena organizada. La dispersión territorial es nula, concentrando la población en un solo núcleo sin base territorial colectiva.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. No se puede determinar la vitalidad lingüística ni patrones de uso del idioma PIJAO.",
+  "vida": "No hay información sobre NBI para Ubaque. El promedio indígena nacional (67.6%) no puede compararse por falta de datos locales. La brecha con el estándar nacional no puede calcularse.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Ubaque entre 1985-2024. El hecho principal es inexistente, reflejando ausencia de violencia sistemática documentada. La confiabilidad del dato (n=0) sugiere sub-registro o baja incidencia.",
+  "icv": "El ICV de 0.0 coloca a Ubaque en el peor escenario posible. Ninguno de los tres componentes (NBI, prevalencia, conflicto) aporta valor al indicador. La fórmula ponderada confirma condiciones de extrema precariedad estructural.",
+  "recomendaciones": [
+    "Priorizar el reconocimiento de resguardos para el pueblo PIJAO en Ubaque, dado que no existen territorios colectivos registrados (n_resguardos=0).",
+    "Realizar un censo indígena municipal con enfoque diferencial para superar el sub-registro actual (n=1 en CNPV 2018).",
+    "Implementar un sistema de alerta temprana para violencia contra indígenas, considerando la ausencia de víctimas registradas (victimas_total_disc=0) pero la extrema vulnerabilidad evidenciada en el ICV.",
+    "Diseñar políticas de revitalización cultural para el pueblo PIJAO, incluyendo recolección de datos lingüísticos y educativos, ante la falta de información disponible.",
+    "Incluir a Ubaque en programas de desarrollo con enfoque territorial indígena, dado su ICV de 0.0 que refleja condiciones críticas no cubiertas por indicadores estándar."
+  ]
+}

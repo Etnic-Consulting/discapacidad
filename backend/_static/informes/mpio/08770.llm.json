@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El municipio de Suán (Atlántico) alberga una población indígena de 23 personas según el CNPV 2018, distribuida en 5 pueblos. Los pueblos Wiwa y Mokana concentran el 60.8% de esta población con 7 personas cada uno. La ausencia de resguardos y la dispersión geográfica limitan la consolidación territorial. La falta de datos en NBI y lengua invisibiliza las condiciones de vida y cultural de estos pueblos.",
+  "demografia": "La población indígena de Suán es minoritaria y diversa, con 5 pueblos registrados. El Wiwa y Mokana son los mayoritarios, cada uno con 7 personas, seguidos por el Masiguare con 5. La población total indígena (23) representa una fracción mínima del municipio, reflejando su marginalización demográfica. No se cuenta con datos de pirámide etaria para este nivel.",
+  "prevalencia": "No se dispone de datos de prevalencia de condiciones de salud o discapacidad para Suán a nivel municipal. El promedio indígena nacional (60.0%) no puede contrastarse localmente por ausencia de registros. Esto impide evaluar brechas en salud y discapacidad, subrayando la necesidad de sistemas de información desagregados.",
+  "territorial": "Suán no cuenta con resguardos indígenas, a pesar de albergar 5 pueblos distintos. La dispersión geográfica se evidencia en la ausencia de territorios colectivos, lo que dificulta la protección cultural y ambiental. La bbox del municipio (10.25°-10.35°N, -74.94°--74.87°W) delimita un área sin presencia de resguardos.",
+  "lengua": "Los datos sobre lenguas indígenas en Suán no están disponibles. Esta omisión impide analizar la vitalidad lingüística de los pueblos Wiwa, Mokana y Masiguare, clave para su identidad cultural. La falta de registros lingüísticos refleja una brecha en la preservación de saberes ancestrales.",
+  "vida": "No hay datos de NBI para la población indígena de Suán. El promedio indígena nacional (67.6%) no puede compararse localmente, ocultando posibles vulnerabilidades socioeconómicas. La ausencia de información limita la priorización de políticas públicas para este grupo.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en Suán entre 1985-2024 (0 casos). La ausencia de hechos victimizantes no implica ausencia de riesgo, sino falta de sistematización. Esta limitación impide evaluar el impacto del conflicto armado en la población indígena local.",
+  "icv": "El ICV de Suán es 0.0, derivado de la ausencia de datos en NBI (0.0), prevalencia (0.0) y conflicto (0.0). La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse con precisión. Esto refleja la necesidad de mejorar la recolección de datos territoriales.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal desagregado por pueblo y lengua para identificar necesidades específicas, citando la diversidad de 5 pueblos en Suán.",
+    "Establecer un sistema de monitoreo de NBI y salud indígena en Suán, dado que el promedio nacional (67.6%) no puede contrastarse localmente.",
+    "Promover la creación de resguardos o figuras de protección territorial para los pueblos Wiwa, Mokana y Masiguare, ante la ausencia actual de territorios colectivos.",
+    "Incluir a Suán en programas de prevención de violencia y registro de víctimas indígenas, ante la falta de datos en el RUV (0 casos reportados).",
+    "Diseñar políticas de revitalización lingüística para los pueblos Wiwa, Mokana y Masiguare, ante la ausencia de datos sobre lenguas en el municipio."
+  ]
+}

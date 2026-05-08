@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Guacamayas Mamiyaire, territorio Sikuani en Vichada, alberga 340 habitantes según DANE-CNPV 2018. Con 18.727 hectáreas en la Orinoquía, su población es reducida pero con presencia histórica en Cumaribo. La ausencia de datos en secciones clave como NBI y lengua limita un diagnóstico integral, aunque el ICV en 0.0 refleja vacíos estructurales en indicadores sociales.",
+  "demografia": "La población total del resguardo es de 340 habitantes. No se dispone de datos de pirámide etaria ni estructura por edades en este nivel territorial. La fuente DANE-CNPV 2018 solo reporta el total poblacional sin desagregación, lo que impide analizar dinámicas demográficas internas o comparar con patrones nacionales indígenas.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este resguardo. La sección se encuentra sin información, lo que imposibilita evaluar cargas de morbilidad o acceso a servicios. Se requiere cruce con registros locales o sistemas de salud para subsanar este vacío crítico.",
+  "territorial": "El resguardo ocupa 18.727 hectáreas en Cumaribo, Vichada, con coordenadas que delimitan su territorio en la Orinoquía. Su extensión contrasta con la baja densidad poblacional (18 habitantes/km²), evidenciando un patrón de ocupación dispersa y baja presión demográfica sobre el suelo colectivo.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el uso de la lengua Sikuani ni su vitalidad cultural en el territorio. Esta omisión dificulta evaluar la transmisión intergeneracional y el riesgo de pérdida lingüística.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en este resguardo. El promedio indígena nacional de 67.6% no puede contrastarse con datos locales, lo que impide medir brechas en acceso a servicios básicos o condiciones de vida en Guacamayas Mamiyaire.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo entre 1985-2024. El indicador de 0 víctimas, aunque confiable, no refleja necesariamente ausencia de violencia, sino posibles limitaciones en el registro o subnotificación en territorios rurales remotos.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, con componentes en cero por falta de datos. La fórmula aplicada (40% NBI, 30% prevalencia, 30% conflicto) no pudo calcularse, lo que invalida comparaciones con otros territorios. Se requiere información básica para su estimación.",
+  "recomendaciones": [
+    "Priorizar levantamiento de datos de NBI y lengua Sikuani en alianza con CRIVI y DANE para cubrir vacíos críticos en el resguardo.",
+    "Implementar sistemas de registro de víctimas en territorios indígenas de Vichada, con enfoque diferencial para pueblos como el Sikuani.",
+    "Fortalecer la recolección de estadísticas demográficas desagregadas por edad y género en resguardos pequeños como Guacamayas Mamiyaire.",
+    "Diseñar programas de salud pública con enfoque intercultural que aborden las necesidades no registradas en prevalencia de enfermedades.",
+    "Garantizar recursos para la protección territorial y cultural del resguardo, considerando su baja densidad poblacional y alta vulnerabilidad por aislamiento geográfico."
+  ]
+}

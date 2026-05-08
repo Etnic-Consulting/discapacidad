@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Zetaquira registra una población indígena de 1 persona según el CNPV 2018, concentrada en el pueblo Quillacinga. La ausencia de resguardos y la dispersión territorial limitan la identificación de patrones de ocupación indígena. La cifra de una víctima por desplazamiento forzado (1985-2024) refleja vulnerabilidad extrema en un contexto de alta exposición al conflicto armado.",
+  "demografia": "La pirámide etaria no aplica para este municipio al reportar solo 1 habitante indígena. La falta de datos desagregados impide analizar estructuras por edad o género. La confiabilidad de la cifra (n=1) no permite inferencias sobre dinámicas poblacionales.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Zetaquira. La ausencia de registros específicos para municipios dificulta evaluar necesidades sanitarias. Se requiere sistematización de información local para identificar brechas.",
+  "territorial": "Zetaquira cuenta con 0 resguardos indígenas, lo que evidencia la inexistencia de territorios colectivos reconocidos. La bbox geográfica delimita un área de 5.18 a 5.37 latitud y -73.29 a -73.04 longitud, sin presencia de espacios protegidos. La concentración territorial es nula.",
+  "lengua": "Los datos sobre lengua indígena no están disponibles para este municipio. La ONIC debe priorizar la recolección de información lingüística en contextos municipales para preservar diversidad cultural.",
+  "vida": "No se reportan datos de NBI para Zetaquira, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida. Se requiere incluir indicadores locales en censos oficiales.",
+  "conflicto": "Zetaquira registra 1 víctima de desplazamiento forzado (1985-2024), representando el 100% de los hechos violentos. La cifra refleja la extrema vulnerabilidad de la población indígena en este municipio. La confiabilidad (n=1) limita análisis comparativos.",
+  "icv": "El ICV de Zetaquira es 0.0, con componentes normalizados en 0.0 (NBI, prevalencia y conflicto). La fórmula pondera 40% NBI, 30% prevalencia y 30% conflicto, reflejando condiciones críticas. La ausencia de resguardos y datos agrava la vulnerabilidad territorial.",
+  "recomendaciones": [
+    "Realizar censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, dado que el CNPV 2018 solo registra 1 habitante indígena en Zetaquira.",
+    "Sistematizar información sobre lengua y cultura en municipios sin datos, priorizando pueblos como el Quillacinga para evitar pérdida de patrimonio inmaterial.",
+    "Incluir indicadores de NBI y salud en registros locales, comparando con el promedio indígena nacional (67.6%) para diseñar políticas públicas diferenciadas.",
+    "Fortalecer mecanismos de protección territorial ante desplazamiento forzado, considerando que el 100% de las víctimas en Zetaquira corresponden a este hecho violento.",
+    "Promover acuerdos con autoridades locales para reconocer resguardos indígenas, dado que actualmente existen 0 territorios colectivos en el municipio."
+  ]
+}

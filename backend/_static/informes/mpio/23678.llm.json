@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "San Carlos (Córdoba) registra una población indígena de 27 personas según CNPV 2018, concentrada en dos pueblos: Zenú (22) y Emberá-Katío (5). No existen resguardos en el municipio, lo que limita la protección territorial colectiva. El Índice de Condiciones Vitales (ICV) es 0.0, reflejando condiciones críticas en NBI, prevalencia y conflicto, sin datos disponibles para análisis detallado.",
+  "demografia": "La población indígena de San Carlos es reducida (27 personas) y envejecida, con 22 Zenú y 5 Emberá-Katío. La pirámide etaria no puede analizarse por falta de datos desagregados por edad. La concentración en dos pueblos evidencia alta homogeneidad cultural pero riesgo de pérdida identitaria por su baja representatividad demográfica.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Esta limitación impide evaluar el sub-registro de patologías crónicas o agudas. La ausencia de información sistemática dificulta priorizar intervenciones sanitarias para la población indígena local.",
+  "territorial": "San Carlos no cuenta con resguardos indígenas, a pesar de albergar población de pueblos con territorios ancestrales en otras regiones. La dispersión geográfica sin reconocimiento legal restringe el acceso a derechos territoriales. La bbox del municipio no incluye áreas con presencia histórica indígena documentada.",
+  "lengua": "Los datos sobre lenguas indígenas en San Carlos no están disponibles. No es posible determinar la vitalidad de las lenguas Zenú o Emberá-Katío en el territorio. Esta omisión limita la planificación de políticas de revitalización lingüística y educativa para los pueblos presentes.",
+  "vida": "No hay datos de NBI para San Carlos. El promedio indígena nacional es 67.6%, pero no se puede comparar. La falta de información impide medir brechas en acceso a servicios básicos como educación, salud o vivienda para la población indígena local.",
+  "conflicto": "Se registran 2 víctimas indígenas por desplazamiento forzado entre 1985-2024, correspondientes al 100% de los hechos de violencia. Este patrón refleja la vulnerabilidad extrema de la población indígena en el municipio, sin mecanismos de protección efectivos. La cifra subestima la realidad por posibles subregistros.",
+  "icv": "El ICV de 0.0 en San Carlos indica condiciones de vida críticas, derivadas de un NBI normalizado de 0.0, prevalencia normalizada de 0.0 y conflicto normalizado de 0.0. La fórmula pondera estos componentes, pero la ausencia de datos específicos limita la interpretación de las dimensiones dominantes.",
+  "recomendaciones": [
+    "Realizar un censo indígena municipal con enfoque diferencial para actualizar datos demográficos y territoriales, citando la cifra de 27 personas registradas en 2018.",
+    "Diseñar un plan de reconocimiento de resguardos para los pueblos Zenú y Emberá-Katío en San Carlos, considerando la ausencia actual de territorios colectivos.",
+    "Implementar un sistema de monitoreo de violencia contra pueblos indígenas en Córdoba, priorizando el registro de desplazamiento forzado con 2 víctimas reportadas.",
+    "Establecer alianzas con instituciones de salud para generar datos de prevalencia y NBI en la población indígena local, superando la falta de información actual.",
+    "Promover programas de revitalización cultural y lingüística para los pueblos Zenú y Emberá-Katío, ante la ausencia de datos sobre lengua y la alta concentración en 22 y 5 personas respectivamente."
+  ]
+}

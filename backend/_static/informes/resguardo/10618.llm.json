@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Alto Mira, territorio Emberá Chamí en Risaralda, alberga 379 habitantes en 33.306 hectáreas. Su configuración territorial en Marsella evidencia una alta concentración poblacional en un área reducida. La ausencia de datos en capacidades diversas y NBI limita el análisis integral, aunque su ICV nulo refleja condiciones críticas no cuantificables con la información disponible.",
+  "demografia": "La población total de 379 habitantes presenta una pirámide etaria no disponible en los datos. La concentración en un territorio pequeño (33.306 ha) sugiere alta densidad demográfica para un pueblo Emberá Chamí. La falta de desagregación por grupos de edad impide evaluar dinámicas generacionales o presión territorial.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el resguardo. La ausencia de información específica obliga a reconocer un vacío crítico para diseñar estrategias sanitarias. El sub-registro es evidente al no existir registros confiables en el sistema de salud indígena para este territorio.",
+  "territorial": "El resguardo Alto Mira ocupa 33.306 hectáreas en Marsella, Risaralda, con coordenadas que delimitan un área compacta. Su ubicación en la macro región Occidente refleja una estrategia de concentración territorial típica de los pueblos Emberá. La dispersión geográfica es mínima, concentrando la población en un solo núcleo habitado.",
+  "lengua": "No se reportan datos sobre lengua materna o uso de idiomas indígenas en el resguardo. La ausencia de información impide evaluar la vitalidad lingüística del pueblo Emberá Chamí en este territorio. Se requiere investigación específica para documentar la transmisión intergeneracional de la lengua.",
+  "vida": "No hay datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para Alto Mira. El promedio indígena nacional (67.6%) no puede compararse al carecer de cifras locales. La falta de información impide medir brechas en acceso a servicios básicos o condiciones de vida en el territorio.",
+  "conflicto": "No se registran víctimas de conflicto armado con discapacidad en Alto Mira entre 1985-2024. La ausencia de hechos violentos reportados sugiere baja incidencia directa, aunque no descarta afectaciones indirectas no documentadas. La confiabilidad de los datos (n=0) limita su interpretación como ausencia total de conflicto.",
+  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, con componentes nulos en NBI, prevalencia y conflicto. Esta puntuación refleja la falta de datos cuantificables más que condiciones reales. La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no puede calcularse sin valores válidos.",
+  "recomendaciones": [
+    "Realizar un censo comunitario para actualizar datos demográficos y de capacidades diversas, priorizando la identificación de grupos vulnerables (n=379).",
+    "Implementar un sistema de registro de salud indígena que documente prevalencia de enfermedades y condiciones crónicas en el territorio.",
+    "Diseñar un plan de revitalización lingüística con participación de sabedores Emberá Chamí, ante la ausencia de datos sobre lengua materna.",
+    "Establecer un observatorio de conflicto territorial con enfoque diferencial, pese a la ausencia actual de víctimas registradas.",
+    "Solicitar a las autoridades nacionales y departamentales la inclusión de Alto Mira en programas de infraestructura básica, dado el vacío en datos de NBI."
+  ]
+}

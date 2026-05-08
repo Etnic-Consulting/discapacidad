@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El resguardo Karabijua, territorio Emberá Chamí en Calarcá (Quindío), alberga 101 habitantes en 14.709 hectáreas. Su Índice de Condiciones Vitales (ICV) es 0.0, reflejando la ausencia de datos normalizados en NBI, prevalencia y conflicto. Este vacío estadístico limita la planificación territorial, pese a su reconocimiento como resguardo indígena.",
+  "demografia": "La población total del resguardo Karabijua es de 101 habitantes, según datos DANE-CNPV 2018. La pirámide etaria no puede analizarse por falta de desagregación por edad y sexo en este nivel. Los datos disponibles no permiten evaluar dinámicas demográficas internas ni comparaciones con otros resguardos Emberá Chamí.",
+  "prevalencia": "No hay datos de prevalencia de enfermedades o condiciones de salud en el resguardo Karabijua. La sección se marca como sin información disponible. Este vacío impide evaluar necesidades sanitarias específicas del territorio, subrayando la urgencia de registros locales confiables.",
+  "territorial": "El resguardo ocupa 14.709 hectáreas en Calarcá (Quindío), con coordenadas geográficas definidas. Su área es reducida comparada con otros resguardos Emberá Chamí, lo que limita la autonomía territorial. La concentración en un municipio evidencia vulnerabilidad ante presiones urbanas y agroindustriales.",
+  "lengua": "Los datos sobre lengua no están disponibles para este resguardo. No se puede determinar el estado de vitalidad del emberá chamí en el territorio. Esta omisión dificulta la planificación de estrategias de revitalización cultural y educativa desde la comunidad.",
+  "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) para Karabijua. El promedio indígena nacional (67.6%) no puede contrastarse. La falta de datos impide medir brechas en acceso a servicios básicos y condiciones de vida en este territorio específico.",
+  "conflicto": "No se registran víctimas de conflicto con discapacidad en Karabijua entre 1985-2024. El valor es 0, pero la confiabilidad depende de la cobertura de registros. La ausencia de hechos violentos reportados no descarta afectaciones no documentadas en este pequeño resguardo.",
+  "icv": "El ICV de Karabijua es 0.0, resultado de la normalización de componentes ausentes (NBI, prevalencia, conflicto). La fórmula aplicada (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) no refleja la realidad territorial. Este indicador carece de utilidad para priorizar acciones en el resguardo.",
+  "recomendaciones": [
+    "Implementar un sistema de registro local de salud y NBI para Karabijua, priorizando 101 habitantes como población objetivo. Los datos deben desagregarse por edad, sexo y condición étnica para evitar subregistros.",
+    "Diseñar un plan de protección territorial que considere los 14.709 hectáreas como área mínima vital para la autonomía Emberá Chamí, en articulación con la ONIC y autoridades locales.",
+    "Realizar un censo lingüístico del emberá chamí en el resguardo para evaluar vitalidad cultural y diseñar estrategias educativas con enfoque comunitario.",
+    "Incluir a Karabijua en programas de salud intercultural, garantizando al menos 101 atenciones anuales con enfoque diferencial, dado el vacío en datos de prevalencia.",
+    "Solicitar a la Gobernación del Quindío y al Ministerio del Interior la delimitación clara de los linderos del resguardo para prevenir invasiones y conflictos por uso de suelo."
+  ]
+}

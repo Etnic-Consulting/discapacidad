@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Yavarate, municipio del Vaupés, concentra una población indígena de 670 personas según CNPV 2018. Los pueblos Desano (188) y Tukano (158) dominan la composición étnica, representando el 51.6% del total. La ausencia de resguardos registrados y un ICV de 0.0 reflejan debilidades estructurales en acceso a derechos territoriales y condiciones de vida.",
+  "demografia": "La población indígena de Yavarate presenta una estructura etaria concentrada en adultos (188 Desano y 158 Tukano). La dispersión de 16 pueblos —con minorías como Nukak-Maku (35) y pueblos en riesgo como Carapana (1)— evidencia fragmentación territorial. No hay datos de pirámide etaria específica para este municipio, limitando análisis generacional.",
+  "prevalencia": "No se reportan datos de prevalencia de enfermedades o condiciones de salud para Yavarate. La falta de registros específicos impide evaluar subregistros o prioridades sanitarias. Se requiere fortalecer sistemas de información locales para capturar necesidades diferenciadas por pueblo.",
+  "territorial": "Yavarate carece de resguardos indígenas registrados, pese a su ubicación en el Vaupés, departamento con alta presencia indígena. La bbox geográfica delimita un área de 0.57° latitud y 1.03° longitud, pero la ausencia de territorios colectivos formalizados limita la protección legal y el manejo ambiental comunitario.",
+  "lengua": "Los datos sobre lenguas indígenas en Yavarate no están disponibles. Esta omisión invisibiliza la diversidad lingüística —con pueblos como Desano, Tukano y Piratapuyo— y obstaculiza políticas de educación propia y revitalización cultural.",
+  "vida": "No hay información sobre NBI para Yavarate. El promedio indígena nacional (67.6%) sugiere brechas críticas no cuantificadas aquí. La falta de datos impide comparar condiciones de vida entre pueblos, como Desano (188) o Tukano (158), con estándares nacionales.",
+  "conflicto": "Yavarate registra 3 víctimas de conflicto con discapacidad entre 1985-2024, donde el desplazamiento forzado (2 casos, 66.7%) es el hecho principal. Estos datos, aunque limitados en número, confirman la vulnerabilidad de comunidades indígenas frente a dinámicas violentas en la Amazonía.",
+  "icv": "El Índice de Condiciones de Vida (ICV) de Yavarate es 0.0, con componentes normalizados en cero excepto conflicto (0.001). Esta métrica refleja carencias extremas en NBI, prevalencia y conflicto, alineadas con la ausencia de resguardos y datos territoriales.",
+  "recomendaciones": [
+    "Formalizar al menos 3 resguardos indígenas en Yavarate para garantizar autonomía territorial, priorizando pueblos Desano (188) y Tukano (158) con mayor población.",
+    "Implementar un sistema de alerta temprana para violencia contra pueblos como Nukak-Maku (35) y Carapana (1), dado el desplazamiento forzado como principal hecho de conflicto.",
+    "Diseñar un plan de revitalización lingüística para los 16 pueblos registrados, incorporando datos de lengua ausentes en el informe.",
+    "Realizar un censo indígena municipal con enfoque diferencial para superar la falta de datos de NBI y condiciones de vida.",
+    "Incluir a Yavarate en el Plan de Salvaguarda del Vaupés, vinculando su ICV de 0.0 con estrategias de desarrollo con identidad."
+  ]
+}

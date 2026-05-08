@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "La Macarena (Meta) concentra una población indígena de 924 personas según CNPV 2018, con 20 pueblos representados. El pueblo Pijao lidera con 333 habitantes (36% del total), seguido por Nasa (242) y Tinigua (134). La ausencia de resguardos registrados refleja vacíos en el reconocimiento territorial. La vulnerabilidad se evidencia en 38 víctimas de conflicto armado, donde el desplazamiento forzado predomina con 26 casos (68.4%).",
+  "demografia": "La pirámide etaria muestra una población joven con predominio de grupos entre 20-39 años, sin datos detallados por sexo. La concentración en el pueblo Pijao (333 personas) sugiere una estructura demográfica centrada en este grupo, aunque la falta de desagregación por edades limita un análisis más preciso.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en este municipio. La ausencia de información impide evaluar la carga de morbilidad o identificar prioridades sanitarias para la población indígena local.",
+  "territorial": "La Macarena carece de resguardos indígenas registrados (n=0), pese a su ubicación en un área de alta biodiversidad. La dispersión geográfica de los pueblos —con 20 grupos distintos— contrasta con la ausencia de territorios colectivos formalizados, lo que dificulta la protección de sus derechos territoriales.",
+  "lengua": "Los datos sobre lenguas indígenas no están disponibles para este municipio. La diversidad lingüística reportada (20 pueblos) sugiere una riqueza cultural potencialmente no documentada en términos de uso y vitalidad de las lenguas.",
+  "vida": "No se registran datos de NBI para La Macarena, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar las condiciones de vida de la población indígena local con el estándar nacional o departamental.",
+  "conflicto": "Se registraron 38 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como hecho principal (26 casos, 68.4%). La presencia de otros hechos como amenazas (4) y homicidios (2) indica un patrón de violencia sistemática que afecta la seguridad territorial y la movilidad de las comunidades.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en La Macarena es 0.002, con componentes normalizados en cero excepto conflicto (0.008). Este valor refleja condiciones extremadamente precarias, donde el conflicto armado es el principal determinante de la vulnerabilidad, superando las limitaciones en NBI y prevalencia.",
+  "recomendaciones": [
+    "Garantizar el reconocimiento y titulación de resguardos para los 20 pueblos indígenas identificados, priorizando al pueblo Pijao (333 personas) que concentra el 36% de la población, según datos CNPV 2018.",
+    "Implementar un sistema de alerta temprana para prevenir el desplazamiento forzado, dado que el 68.4% de las víctimas de conflicto (26 casos) corresponden a este hecho, según registros RUV 1985-2024.",
+    "Realizar un censo lingüístico para documentar la vitalidad de las 20 lenguas indígenas reportadas, ante la ausencia de datos en el municipio.",
+    "Incluir a La Macarena en programas de salud intercultural, considerando la falta de datos de prevalencia y el ICV de 0.002 que evidencia condiciones críticas.",
+    "Fortalecer la protección territorial con enfoque diferencial, dado que la ausencia de resguardos registrados (n=0) limita el acceso a derechos colectivos."
+  ]
+}

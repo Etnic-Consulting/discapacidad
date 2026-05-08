@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Firavitoba registra una población indígena de 3 personas según CNPV 2018, concentrada en dos pueblos: Misak (2) y Muisca (1). No existen resguardos en el municipio, lo que limita la protección territorial colectiva. La ausencia de datos en NBI y lengua refleja vacíos en la caracterización local, priorizando la generación de información desagregada.",
+  "demografia": "La población indígena en Firavitoba es mínima (3 personas) y se distribuye en dos pueblos. La pirámide etaria no aplica por el bajo n=3, pero destaca la presencia de dos pueblos en un territorio sin resguardos. La dispersión demográfica impide análisis etarios confiables. La concentración en dos pueblos refleja una diversidad cultural limitada en el territorio.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en Firavitoba. La falta de información impide evaluar el sub-registro o la carga de morbilidad. Se requiere fortalecer sistemas de información locales para identificar necesidades prioritarias en salud pública indígena.",
+  "territorial": "Firavitoba no cuenta con resguardos indígenas, a pesar de albergar dos pueblos. La ausencia de territorios colectivos limita la autonomía y protección legal. La bbox geográfica delimita un área sin presencia de resguardos formales. La dispersión de la población indígena en un municipio sin estructuras territoriales colectivas es un patrón crítico.",
+  "lengua": "Los datos sobre lengua en Firavitoba no están disponibles. No se puede determinar la vitalidad de las lenguas Misak o Muisca en el territorio. La falta de información lingüística impide diseñar estrategias de revitalización cultural adaptadas al contexto local.",
+  "vida": "No hay datos de NBI para Firavitoba, lo que imposibilita comparar condiciones de vida con el promedio indígena nacional (67.6%). La ausencia de información refleja debilidades en la recolección de datos socioeconómicos. Se requiere priorizar la generación de indicadores locales para orientar políticas públicas diferenciadas.",
+  "conflicto": "Firavitoba reporta cero víctimas indígenas con discapacidad por conflicto entre 1985-2024. La ausencia de hechos violentos registrados no descarta afectaciones no documentadas. La falta de datos detallados limita la comprensión de dinámicas de violencia en el territorio. Se recomienda fortalecer el Registro Único de Víctimas con enfoque étnico.",
+  "icv": "El ICV de Firavitoba es 0.0, resultado de la ausencia de datos en NBI, prevalencia y conflicto. La fórmula del ICV no puede calcularse adecuadamente sin información desagregada. La posición relativa del municipio es indeterminada por la falta de datos. Se requiere mejorar la disponibilidad y calidad de los indicadores para una evaluación real.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar datos demográficos y territoriales, citando la necesidad de superar el n=3 actual.",
+    "Diseñar un plan de caracterización lingüística para registrar la vitalidad de las lenguas Misak y Muisca en Firavitoba, ante la ausencia de datos.",
+    "Promover la constitución de resguardos indígenas en el municipio, dado que no existen territorios colectivos formales.",
+    "Fortalecer el sistema de información en salud para documentar prevalencia de enfermedades y condiciones de vida en la población indígena.",
+    "Incluir a Firavitoba en programas de protección territorial ONIC, considerando su ubicación en Boyacá y la ausencia de resguardos."
+  ]
+}

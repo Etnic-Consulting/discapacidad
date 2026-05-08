@@ -1,0 +1,250 @@
+{
+  "tipo": "dpto",
+  "id": "85",
+  "nombre": "CASANARE",
+  "secciones": {
+    "demografia": {
+      "poblacion_total": {
+        "value": 6429,
+        "_meta": {
+          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 6429,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
+    },
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 334,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": 334,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 6429,
+        "_meta": {
+          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "table": "pueblo.disc_dpto",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 52.0,
+        "_meta": {
+          "query": "calc",
+          "table": "—",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "promedio_indigena_nacional": {
+        "value": 60.0,
+        "_meta": {
+          "query": "doctrina",
+          "table": "constante",
+          "period": "2018",
+          "n": null,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "pueblos_top": [
+        {
+          "cod_pueblo": "570",
+          "con_disc": 131,
+          "total": 2613
+        },
+        {
+          "cod_pueblo": "440",
+          "con_disc": 31,
+          "total": 464
+        },
+        {
+          "cod_pueblo": "999",
+          "con_disc": 30,
+          "total": 496
+        },
+        {
+          "cod_pueblo": "580",
+          "con_disc": 27,
+          "total": 445
+        },
+        {
+          "cod_pueblo": "230",
+          "con_disc": 27,
+          "total": 672
+        },
+        {
+          "cod_pueblo": "020",
+          "con_disc": 21,
+          "total": 224
+        },
+        {
+          "cod_pueblo": "690",
+          "con_disc": 12,
+          "total": 631
+        },
+        {
+          "cod_pueblo": "010",
+          "con_disc": 12,
+          "total": 101
+        },
+        {
+          "cod_pueblo": "510",
+          "con_disc": 7,
+          "total": 51
+        },
+        {
+          "cod_pueblo": "026",
+          "con_disc": 5,
+          "total": 74
+        }
+      ]
+    },
+    "territorial": {
+      "n_resguardos": 8,
+      "resguardos": [
+        {
+          "nombre": "CAÑO MOCHUELO",
+          "mpio": "PAZ DE ARIPORO",
+          "pueblo_onic": "CUIBA",
+          "area_pg_ha": 93397.028
+        },
+        {
+          "nombre": "SAN JUANITO, EL DUYA Y PARAVARE",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 21263.877
+        },
+        {
+          "nombre": "CHAPARRAL Y BARRONEGRO",
+          "mpio": "HATO COROZAL",
+          "pueblo_onic": "U´WA",
+          "area_pg_ha": 16501.301
+        },
+        {
+          "nombre": "MACUCUANA",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 6659.504
+        },
+        {
+          "nombre": "EL CONSEJO",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 4181.195
+        },
+        {
+          "nombre": "EL SUSPIRO EL RINCÓN DEL SOCORRO",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1982.019
+        },
+        {
+          "nombre": "EL MEDANO",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1963.616
+        },
+        {
+          "nombre": "EL SALADILLO",
+          "mpio": "OROCUÉ",
+          "pueblo_onic": "SÁLIBA",
+          "area_pg_ha": 1530.547
+        }
+      ],
+      "bbox": [
+        4.287475985945877,
+        -73.07776852282439,
+        6.34611086637183,
+        -69.83590992178137
+      ],
+      "nombre_dpto": "CASANARE"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no hay tabla de lengua agregada por departamento"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "promedio_indigena_nbi": 67.6,
+      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+    },
+    "conflicto": {
+      "victimas_total_disc": {
+        "value": 98,
+        "_meta": {
+          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
+          "table": "victimas.universo",
+          "period": "1985-2024",
+          "n": 98,
+          "confiabilidad": "CONFIABLE"
+        }
+      },
+      "hechos_top": [
+        {
+          "hecho": "Desplazamiento forzado",
+          "total": 62
+        },
+        {
+          "hecho": "Homicidio",
+          "total": 18
+        },
+        {
+          "hecho": "Amenaza",
+          "total": 6
+        },
+        {
+          "hecho": "Perdida de Bienes Muebles o Inmuebles",
+          "total": 5
+        },
+        {
+          "hecho": "Desaparición forzada",
+          "total": 3
+        },
+        {
+          "hecho": "Secuestro",
+          "total": 1
+        },
+        {
+          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
+          "total": 1
+        },
+        {
+          "hecho": "Lesiones Personales Fisicas",
+          "total": 1
+        },
+        {
+          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
+          "total": 1
+        }
+      ],
+      "hecho_principal": {
+        "hecho": "Desplazamiento forzado",
+        "total": 62
+      },
+      "pct_hecho_principal": 63.3
+    },
+    "icv": {
+      "score": 0.084,
+      "componentes": {
+        "nbi_norm": 0.0,
+        "prevalencia_norm": 0.26,
+        "conflicto_norm": 0.02
+      },
+      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+    }
+  },
+  "fecha_generacion": "2026-05-07T08:58:05",
+  "periodo": "2018",
+  "_input_hash": "40518dad63e06e59"
+}

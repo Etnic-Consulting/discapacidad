@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "Villanueva (Córdoba) registra una población indígena de 4 personas según CNPV 2018, concentrada en el pueblo Zenú. No existen resguardos en el municipio, lo que limita la protección territorial colectiva. El ICV de 0.0 refleja condiciones críticas en NBI, prevalencia y conflicto, con desplazamiento forzado como principal hecho victimizante (66.7% de los casos).",
+  "demografia": "La población indígena en Villanueva es mínima (4 personas), con el 100% perteneciente al pueblo Zenú. La pirámide etaria no puede analizarse al no contar con datos desagregados por edad. La concentración en un solo pueblo refleja una pérdida de diversidad étnica en el territorio. Los datos provienen de CNPV 2018 con confiabilidad CONFIABLE.",
+  "prevalencia": "No hay datos disponibles sobre prevalencia de enfermedades o condiciones de salud en el municipio. Se reconoce la ausencia de información como limitación crítica para evaluar necesidades sanitarias. El sub-registro es probable dado la baja población indígena reportada (n=4).",
+  "territorial": "Villanueva carece de resguardos indígenas, lo que evidencia una ausencia de reconocimiento territorial colectivo. El municipio se ubica en un área geográfica delimitada (bbox) sin presencia de territorios indígenas formales. La dispersión geográfica no aplica al no existir unidades territoriales protegidas.",
+  "lengua": "Los datos sobre lenguas indígenas en Villanueva no están disponibles. No se puede determinar la vitalidad lingüística ni la presencia de hablantes de lenguas nativas en el territorio.",
+  "vida": "No hay datos sobre NBI en Villanueva, lo que impide evaluar condiciones de vida. El promedio indígena nacional de NBI (67.6%) no puede compararse localmente. La falta de información refleja brechas en el monitoreo de derechos básicos en el municipio.",
+  "conflicto": "Se registran 3 víctimas de conflicto con discapacidad en Villanueva (1985-2024), siendo el desplazamiento forzado el hecho principal (66.7%). La pérdida de bienes muebles o inmuebles representa el 33.3% restante. Los datos provienen de RUV con confiabilidad CONFIABLE.",
+  "icv": "El Índice de Condiciones de Vida (ICV) en Villanueva es 0.0, con componentes en cero excepto conflicto (0.001). La fórmula refleja condiciones críticas en NBI, prevalencia y conflicto. Villanueva ocupa una posición de extrema vulnerabilidad en comparación con otros territorios indígenas.",
+  "recomendaciones": [
+    "Realizar un censo indígena local para actualizar la población y condiciones de vida, dado que los datos de CNPV 2018 son insuficientes (n=4).",
+    "Solicitar al Ministerio del Interior el reconocimiento de resguardos para el pueblo Zenú en Villanueva, garantizando protección territorial colectiva.",
+    "Implementar un sistema de alerta temprana para víctimas de desplazamiento forzado, principal hecho victimizante (66.7% de los casos).",
+    "Incluir a Villanueva en programas de salud intercultural, considerando la ausencia de datos de prevalencia y el ICV de 0.0.",
+    "Fortalecer la articulación con la ONIC para priorizar acciones en municipios sin resguardos, como Villanueva, donde la población indígena es invisibilizada."
+  ]
+}

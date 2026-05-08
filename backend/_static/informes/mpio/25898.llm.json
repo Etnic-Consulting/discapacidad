@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "ZIPACÓN registra una población indígena de solo 3 personas según CNPV 2018, concentrada en dos pueblos: el 66.7% sin identificación específica y el 33.3% Muisca. La ausencia de resguardos y datos de lengua refleja una debilidad organizativa territorial. El ICV de 0.0 evidencia condiciones críticas en NBI, prevalencia y conflicto, sin víctimas registradas en el RUV.",
+  "demografia": "La pirámide etaria no aplica por n=3, insuficiente para análisis. Solo 2 pueblos identificados: INDÍGENA-SIN-INFORMACIÓN (2 personas) y MUISCA (1 persona). La dispersión demográfica impide inferencias sobre estructura etaria o dinámicas generacionales en este municipio.",
+  "prevalencia": "Los datos de prevalencia no están disponibles para ZIPACÓN. La falta de información sobre discapacidades o condiciones de salud limita cualquier análisis de sub-registro. Se requiere desagregación municipal para evaluar necesidades específicas.",
+  "territorial": "ZIPACÓN no cuenta con resguardos indígenas, lo que indica ausencia de reconocimiento territorial formal. La bbox delimita un área de 4.702 a 4.804 latitud y -74.438 a -74.342 longitud, pero sin territorios colectivos. La concentración geográfica es nula.",
+  "lengua": "No hay datos disponibles sobre lenguas indígenas en ZIPACÓN. La ausencia de información impide evaluar vitalidad lingüística o pérdida cultural en el municipio.",
+  "vida": "El NBI no está disponible para ZIPACÓN, pero el promedio indígena nacional es 67.6%. La falta de datos locales impide calcular brechas específicas. Se requiere información desagregada para priorizar intervenciones sociales.",
+  "conflicto": "No se registran víctimas indígenas con discapacidad en ZIPACÓN entre 1985-2024 (n=0). La ausencia de hechos victimizantes no implica seguridad, sino posible sub-registro. Se recomienda fortalecer el RUV municipal para visibilizar afectaciones.",
+  "icv": "El ICV de 0.0 en ZIPACÓN refleja condiciones críticas en sus tres componentes: NBI, prevalencia y conflicto. La fórmula (0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm) arroja un valor mínimo, urgente de atender.",
+  "recomendaciones": [
+    "Priorizar censo étnico municipal para identificar población indígena oculta, dado que el 66.7% aparece como 'INDÍGENA-SIN-INFORMACIÓN' con solo 2 personas registradas.",
+    "Diseñar un plan de reconocimiento territorial que incluya la creación de resguardos en ZIPACÓN, donde actualmente no existen territorios colectivos.",
+    "Implementar un sistema de alerta temprana para violencia contra pueblos indígenas, considerando la ausencia de víctimas registradas (n=0) pero el ICV crítico.",
+    "Articular con la gobernación de Cundinamarca para desagregar datos de NBI y prevalencia a nivel municipal, usando el promedio indígena nacional (67.6%) como referencia.",
+    "Fortalecer la base de datos de lengua indígena en ZIPACÓN, donde no hay información disponible, para proteger la diversidad cultural."
+  ]
+}

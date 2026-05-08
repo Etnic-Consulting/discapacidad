@@ -1,0 +1,17 @@
+{
+  "ejecutivo": "El Resguardo Caimán Nuevo en Antioquia cuenta con una población total de 1467 habitantes. La organización nacional es la ONIC y la regional es la OIA. El área del resguardo es de 9066.202 hectáreas. Es importante destacar que los datos sobre capacidades diversas y lengua no están disponibles para este resguardo.",
+  "demografia": "La población total del Resguardo Caimán Nuevo es de 1467 habitantes. Desafortunadamente, no se cuentan con datos más detallados sobre la estructura etaria de la población en este nivel. El análisis demográfico se ve limitado por la falta de información específica sobre la pirámide etaria.",
+  "prevalencia": "No se disponen de datos sobre prevalencia para el Resguardo Caimán Nuevo. Esto limita el análisis sobre la situación de salud en este territorio colectivo. La prevalencia es un indicador importante para entender las necesidades de salud de la población.",
+  "territorial": "El Resguardo Caimán Nuevo se encuentra en el departamento de Antioquia, municipio de Turbo, y pertenece a la macrorregión Occidente. Su área es de 9066.202 hectáreas. La concentración geográfica de la población y la dispersión en este resguardo pueden verse afectadas por factores como la accesibilidad y la calidad de los servicios básicos.",
+  "lengua": "No hay datos disponibles sobre la lengua en el Resguardo Caimán Nuevo.",
+  "vida": "Desafortunadamente, no hay datos sobre el NBI (Necesidades Básicas Insatisfechas) para el Resguardo Caimán Nuevo. El promedio indígena nacional de NBI es del 67.6%. La falta de estos datos limita la comprensión de las condiciones de vida en este resguardo.",
+  "conflicto": "Se registran 0 víctimas en el Resguardo Caimán Nuevo. La confiabilidad de estos datos es CONFIABLE. La ausencia de víctimas reportadas puede indicar una situación de relativa paz en el territorio, aunque también es importante considerar la posibilidad de subregistro.",
+  "icv": "El score de ICV (Índice de Calidad de Vida) para el Resguardo Caimán Nuevo es 0.0. Esto se debe a que los componentes como NBI, prevalencia y conflicto no tienen valores asignados. La fórmula para calcular el ICV es ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm.",
+  "recomendaciones": [
+    "Es importante trabajar en la recopilación y análisis de datos sobre capacidades diversas y lengua para mejorar la comprensión de las necesidades del Resguardo Caimán Nuevo, considerando que el promedio indígena nacional de capacidades diversas es del 60.0%.",
+    "Es necesario realizar esfuerzos para obtener y analizar datos sobre prevalencia y NBI en el resguardo para entender mejor las necesidades de salud y las condiciones de vida, teniendo en cuenta el promedio indígena nacional de NBI del 67.6%.",
+    "Se deben implementar programas para mejorar la calidad de vida en el resguardo, considerando la situación de conflicto y la disponibilidad de servicios básicos, con un enfoque en la reducción de las Necesidades Básicas Insatisfechas.",
+    "Es fundamental fortalecer la organización regional, la OIA, y la nacional, la ONIC, para apoyar las necesidades específicas del Resguardo Caimán Nuevo y sus habitantes, considerando el área del resguardo de 9066.202 hectáreas.",
+    "Se debe buscar la forma de reducir el subregistro de víctimas en el conflicto y mejorar la confiabilidad de los datos para tener una visión más clara de la situación en el territorio, considerando que se registran 0 víctimas."
+  ]
+}
