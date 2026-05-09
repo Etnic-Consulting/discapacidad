@@ -84,10 +84,14 @@ chmod +x infra/deploy_servidor_onic.sh
 ./infra/deploy_servidor_onic.sh
 ```
 
+> **Nota v1.0.2 · migraciones de integridad de datos**
+>
+> Como parte del despliegue, el equipo debe conocer que existen dos migraciones SQL adicionales (`010_fix_seed_99773_agregado_nacional.sql` y `011_fix_dpto_99_agregados_nacionales.sql`) necesarias para corregir un error en el seed CNPV 2018, donde los datos nacionales indígenas fueron asignados incorrectamente al `cod_mpio=99773` (Cumaribo) y al `cod_dpto=99` (Vichada). Estas migraciones son idempotentes, incluyen validación con `DO` block y deben ejecutarse en orden numérico ascendente para garantizar la integridad de las cifras agregadas. El script `init_db.sh` ya las aplica en orden; si se ejecuta manualmente, hacerlo después de los seeds 003-009.
+
 El script `deploy_servidor_onic.sh`:
 1. Valida pre-requisitos (docker, jq, curl, env vars).
 2. Levanta DB (PostGIS).
-3. Corre `infra/init_db.sh` (descarga corpus · checksum · seeds · `load_all.py` · validación de counts).
+3. Corre `infra/init_db.sh` (descarga corpus · checksum · seeds 001-011 en orden · `load_all.py` · validación de counts).
 4. Levanta API.
 5. Construye frontend estático (`npm run build` → `frontend/dist/`).
 6. Corre `infra/smoke_tests.sh` (7 tests del §5).

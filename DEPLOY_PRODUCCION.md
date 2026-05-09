@@ -54,16 +54,30 @@ docker compose ps   # verificar smt-onic-db en estado healthy (5-15s)
 docker exec smt-onic-db psql -U smt_admin -d smt_onic -c "\dn"
 # Debe listar: cnpv, ext, geo, indicadores, pueblo, smt, smt_geo, victimas, visor_dane, public
 
-# 3.5 · Aplicar seeds nuevos (S1)
-docker exec -i smt-onic-db psql -U smt_admin -d smt_onic < backend/sql/003_seed_proyecciones_fac.sql
-docker exec -i smt-onic-db psql -U smt_admin -d smt_onic < backend/sql/004_seed_proyecciones_escenarios.sql
-docker exec -i smt-onic-db psql -U smt_admin -d smt_onic < backend/sql/005_seed_indicadores_definiciones.sql
+# 3.5 · Aplicar seeds en orden numérico ascendente (incluye fixes 010 y 011)
+for f in 002_auth_formulario.sql 003_macro_dptos.sql 003_seed_proyecciones_fac.sql \
+         004_seed_proyecciones_escenarios.sql 005_seed_indicadores_definiciones.sql \
+         006_seed_indicadores_icv.sql 007_seed_triangulacion.sql \
+         008_seed_prev_estandarizada_stub.sql 009_fix_pueblos_e2e.sql \
+         010_fix_seed_99773_agregado_nacional.sql \
+         011_fix_dpto_99_agregados_nacionales.sql; do
+  docker exec -i smt-onic-db psql -U smt_admin -d smt_onic < backend/sql/$f
+done
+
+# Las migraciones 010 y 011 son idempotentes con DO block de validación: corrigen
+# un bug del seed CNPV donde el agregado nacional indígena fue mal asignado al
+# cod_mpio=99773 (Cumaribo) y al cod_dpto=99 (Vichada). Sin estas, las cifras
+# agregadas para Vichada o consultas departamentales mostrarán ~1.9M indígenas
+# concentrados erróneamente en un solo territorio.
 
 # Verificar inserción:
 docker exec smt-onic-db psql -U smt_admin -d smt_onic -c "
   SELECT COUNT(*) AS fac FROM proyecciones.fac;                 -- esperar 8
   SELECT COUNT(*) AS escenarios FROM proyecciones.escenarios;   -- esperar 832
-  SELECT COUNT(*) AS indicadores FROM indicadores.definiciones; -- esperar 12
+  SELECT COUNT(*) AS indicadores FROM indicadores.definiciones; -- esperar >=12
+  SELECT SUM(pob_total) AS total_indigenas
+  FROM cnpv.prevalencia_etnia_dpto
+  WHERE grupo_etnico='Indigena' AND periodo='2018';             -- esperar ~1.83M (NO 3.7M · si da 3.7M faltan 010/011)
 "
 
 # 3.6 · Cargar datos CNPV completos
