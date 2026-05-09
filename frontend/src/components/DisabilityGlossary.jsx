@@ -71,9 +71,9 @@ const TERMS = [
   {
     code: 'rlcpd',
     title: 'RLCPD · Registro Localización y Caracterización Personas Discapacidad',
-    short: 'Registro oficial de MinSalud · 39.374 indígenas · vs 225.174 en CNPV.',
-    full: 'Registro administrativo voluntario. Solo 17.5% de los indígenas con CD del CNPV están en RLCPD. La diferencia (185.800 personas) es la "deuda institucional": el Estado oficialmente no las "ve". Esta brecha es prioridad de política pública.',
-    citation: 'Resolución 1239/2022 MinSalud · T_BD03',
+    short: 'Registro oficial de MinSalud · cifra menor a la del CNPV por barreras de acceso.',
+    full: 'Registro administrativo voluntario. Solo una minoría de los indígenas con capacidades diversas del CNPV están en RLCPD. La diferencia es la "deuda institucional": el Estado oficialmente no las "ve". Esta brecha es prioridad de política pública. Las cifras exactas vivas se calculan en el endpoint /api/v1/dashboard/brecha.',
+    citation: 'Resolución 1239/2022 MinSalud',
   },
   {
     code: 'sispro',

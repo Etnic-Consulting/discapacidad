@@ -1,23 +1,25 @@
-/* Static dataset from CNPV 2018 + SMT-ONIC
- * USAGE NOTE (T16 · Sprint S1.C v1):
- *   Estas constantes se MANTIENEN como fallback API-down. Las páginas modernas
- *   (PanoramaPage, etc.) consumen hooks (`usePanoramaKpis`, `useResumenNacional`)
- *   y solo caen aquí en error 5xx. TODO S1.C-Phase2: convertir a `null` + UI
- *   "Sin datos" en lugar de fallback silencioso.
+/* Reference data SMT-ONIC
+ * Cifras DINÁMICAS (totales, prevalencias, conteos) → SIEMPRE vienen del backend
+ * vía hooks (usePanoramaKpis, useResumenNacional, useBrecha, etc.).
+ * Si la API no responde, la UI muestra "—" o "Sin datos" en lugar de fallback
+ * con cifras estáticas que se desactualizan.
  *
- *   D1 (CLAUDE.md · cifra canónica): pueblos = 115 (DANE CNPV 2018).
- *   Antes era 121 · corregido en T16 (Sprint S1.C v1).
- *   Ver: proyectos/discapacidad/outputs/DECISION_PUEBLOS_CANONICOS.md
+ * Solo permanecen aquí:
+ *  - Decisión metodológica D1: 115 pueblos canónicos (DANE CNPV 2018)
+ *  - Catálogo de pueblos canónicos (PUEBLOS array · referencia para mapeos)
+ *  - Tasas de prevalencia nacionales por grupo étnico (constantes epidemiológicas)
+ *
+ * Ver: docs/DECISION_PUEBLOS_CANONICOS.md
  */
 
 export const KPI_NACIONAL = {
-  totalPersonas: 225174,
-  pueblos: 115, /* D1 · era 121 · DANE CNPV 2018 */
-  prevalencia: 60.0,
-  coberturaRegistro: 32.4,
-  brechaCertificacion: 71.3,
-  victimasConflicto: 37797,
-  poblacionIndigenaTotal: 1905617,
+  totalPersonas: null,            // dinámico · viene de /dashboard/panorama-kpis
+  pueblos: 115,                   // D1 canónico · DANE CNPV 2018
+  prevalencia: null,              // dinámico
+  coberturaRegistro: null,        // dinámico
+  brechaCertificacion: null,      // dinámico
+  victimasConflicto: null,        // dinámico
+  poblacionIndigenaTotal: null,   // dinámico
 };
 
 export const PREVALENCIA_ETNICA = [
@@ -70,15 +72,17 @@ export const PIRAMIDE = [
   { grupo: '75+',   h: 10720, m: 9444  },
 ];
 
+/* FUNNEL_STEPS es solo PLANTILLA estructural · sin cifras hardcoded.
+ * Los valores reales vienen del endpoint /dashboard/brecha mapeado por
+ * `mapBrechaToSteps()` en CertificationFunnel.jsx. Si no hay datos, el
+ * componente renderiza un placeholder honesto.
+ */
 export const FUNNEL_STEPS = [
-  { label: 'Población indígena total',             value: 1905617, color: '#02AB44', source: 'CNPV 2018',           width: 100 },
-  { label: 'Con capacidades diversas (CNPV 2018)', value: 225174,  color: '#C4920A', source: 'CNPV 2018',           width: 85  },
-  { label: 'Registrados en RLCPD',                 value: 39374,   color: '#E8862A', source: 'MinSalud RLCPD',      width: 40,
-    gap: '185.800 personas no están registradas en el RLCPD' },
-  { label: 'Caracterizados por SMT-ONIC',          value: 1044,    color: '#E8262A', source: 'SMT-ONIC 2026',       width: 15,
-    gap: '~38.330 personas registradas en RLCPD no caracterizadas por el SMT' },
-  { label: 'Con certificado oficial',              value: 428,     color: '#8B1A1A', source: 'SMT-ONIC 2026 (calc.)', width: 5,
-    gap: '616 personas caracterizadas aún no tienen certificado' },
+  { label: 'Población indígena total',             value: null, color: '#02AB44', source: 'CNPV 2018 (DANE)',  width: 100 },
+  { label: 'Con capacidades diversas (CNPV 2018)', value: null, color: '#C4920A', source: 'CNPV 2018 (DANE)',  width: 85  },
+  { label: 'Registrados en RLCPD',                 value: null, color: '#E8862A', source: 'MinSalud RLCPD',    width: 40  },
+  { label: 'Caracterizados por SMT-ONIC',          value: null, color: '#E8262A', source: 'SMT-ONIC',          width: 15  },
+  { label: 'Con certificado oficial',              value: null, color: '#8B1A1A', source: 'SMT-ONIC (calc.)',  width: 5   },
 ];
 
 export const PUEBLOS = [
@@ -148,14 +152,18 @@ export const HECHOS_CONFLICTO = [
   { hecho: 'Otros',                  pct: 1.0  },
 ];
 
+/* PROYECCIONES · plantilla de años · valores DEBEN venir del endpoint
+ * /dashboard/proyecciones (832 escenarios reales). Esta lista solo se usa
+ * para renderizar ejes/labels si la API no responde, sin cifras inventadas.
+ */
 export const PROYECCIONES = [
-  { anio: 2005, poblacion: 1392623, conCapDiv: 82473,  prev: 59.2 },
-  { anio: 2010, poblacion: 1580000, conCapDiv: 102700, prev: 65.0 },
-  { anio: 2015, poblacion: 1750000, conCapDiv: 128620, prev: 73.5 },
-  { anio: 2018, poblacion: 1905617, conCapDiv: 225174, prev: 118.2 },
-  { anio: 2020, poblacion: 1980000, conCapDiv: 142400, prev: 71.9 },
-  { anio: 2023, poblacion: 2080000, conCapDiv: 156500, prev: 75.2 },
-  { anio: 2026, poblacion: 2180000, conCapDiv: 170200, prev: 78.0 },
+  { anio: 2005, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2010, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2015, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2018, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2020, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2023, poblacion: null, conCapDiv: null, prev: null },
+  { anio: 2026, poblacion: null, conCapDiv: null, prev: null },
 ];
 
 export const INDICADORES = [

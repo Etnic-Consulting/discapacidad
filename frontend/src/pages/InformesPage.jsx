@@ -27,14 +27,14 @@ const REPORT_TYPES = [
   { id: 'resguardo', label: 'Por resguardo' },
 ];
 
-/* National reference values (indigenous average, not general population)
- * D1 · pueblos = 115 (DANE CNPV 2018) · era 121 antes de T16 Sprint S1.C v1
- * Ver: proyectos/discapacidad/outputs/DECISION_PUEBLOS_CANONICOS.md
+/* Referencia nacional · solo D1 (pueblos canónicos) permanece como constante.
+ * Cifras dinámicas (totalPersonas, prevalencia) deben venir del endpoint
+ * /dashboard/panorama-kpis. Si la API no responde, mostrar "—" en la UI.
  */
 const NACIONAL = {
-  prevalencia: 60.0,
-  totalPersonas: 225174,
-  pueblos: 115,
+  prevalencia: null,
+  totalPersonas: null,
+  pueblos: 115,                 // D1 canónico · DANE CNPV 2018
 };
 
 const fechaHoy = () => new Date().toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' });

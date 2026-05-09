@@ -5,50 +5,24 @@
    ============================================ */
 
 function formatNumber(n) {
+  if (n == null || Number.isNaN(n)) return '—';
   return new Intl.NumberFormat('es-CO').format(n);
 }
 
 function pct(value, base) {
-  if (!base || base === 0) return 0;
+  if (value == null || base == null || base === 0) return null;
   return ((value / base) * 100).toFixed(1);
 }
 
-const DEFAULT_STEPS = [
-  {
-    label: 'Poblacion indigena total',
-    value: 1905617,
-    color: '#02AB44',
-    gapText: null,
-    source: '(Fuente: CNPV 2018)',
-  },
-  {
-    label: 'Con capacidades diversas (CNPV 2018)',
-    value: 225174,
-    color: '#C4920A',
-    gapText: null,
-    source: '(Fuente: CNPV 2018)',
-  },
-  {
-    label: 'Registrados RLCPD',
-    value: 39374,
-    color: '#E8862A',
-    gapText: '185.800 personas no estan registradas en el RLCPD',
-    source: '(Fuente: MinSalud RLCPD)',
-  },
-  {
-    label: 'Caracterizados SMT-ONIC',
-    value: 1044,
-    color: '#E8262A',
-    gapText: '~38.330 personas registradas en RLCPD no han sido caracterizadas por el SMT',
-    source: '(Fuente: SMT-ONIC 2026)',
-  },
-  {
-    label: 'Con certificado oficial',
-    value: 428,
-    color: '#8B1A1A',
-    gapText: '616 personas caracterizadas aun no tienen certificado oficial',
-    source: '(Fuente: SMT-ONIC 2026, calculado)',
-  },
+/* Plantilla estructural · sin cifras hardcoded. Si el backend no responde,
+ * el componente renderiza un placeholder honesto (Sin datos).
+ */
+const PLACEHOLDER_STEPS = [
+  { label: 'Poblacion indigena total',             value: null, color: '#02AB44', gapText: null, source: '(Fuente: CNPV 2018)' },
+  { label: 'Con capacidades diversas (CNPV 2018)', value: null, color: '#C4920A', gapText: null, source: '(Fuente: CNPV 2018)' },
+  { label: 'Registrados RLCPD',                    value: null, color: '#E8862A', gapText: null, source: '(Fuente: MinSalud RLCPD)' },
+  { label: 'Caracterizados SMT-ONIC',              value: null, color: '#E8262A', gapText: null, source: '(Fuente: SMT-ONIC)' },
+  { label: 'Con certificado oficial',              value: null, color: '#8B1A1A', gapText: null, source: '(Fuente: SMT-ONIC, calculado)' },
 ];
 
 const styles = {
@@ -151,8 +125,9 @@ function generateGapText(pasos, index) {
 
 export default function CertificationFunnel({ data, brecha }) {
   const brechaSteps = brecha ? mapBrechaToSteps(brecha) : null;
-  const steps = brechaSteps || (data && data.length > 0 ? data : DEFAULT_STEPS);
-  const totalBase = steps[0]?.value || 1;
+  const steps = brechaSteps || (data && data.length > 0 ? data : PLACEHOLDER_STEPS);
+  const totalBase = steps[0]?.value || null;
+  const sinDatos = !totalBase;
 
   // Width percentages: first is 100%, rest scale proportionally but with a visual minimum
   const widthMap = [100, 85, 40, 15, 5];
@@ -208,26 +183,49 @@ export default function CertificationFunnel({ data, brecha }) {
         );
       })}
 
-      {/* Summary text */}
-      <div style={{
-        marginTop: '20px',
-        padding: '16px 24px',
-        background: '#fde8e8',
-        borderRadius: 'var(--radius-sm)',
-        borderLeft: '4px solid var(--color-red)',
-        fontSize: '0.88rem',
-        color: '#6B1A1A',
-        lineHeight: 1.6,
-        maxWidth: '90%',
-        textAlign: 'center',
-      }}>
-        <strong>Brecha critica:</strong> De las {formatNumber(steps[1]?.value || 225174)} personas
-        indigenas con capacidades diversas identificadas en el CNPV 2018, solo{' '}
-        {formatNumber(steps[steps.length - 1]?.value || 428)} ({pct(steps[steps.length - 1]?.value || 428, steps[1]?.value || 225174)}%)
-        cuentan con certificado oficial. Esto significa que el{' '}
-        {(100 - parseFloat(pct(steps[steps.length - 1]?.value || 428, steps[1]?.value || 225174))).toFixed(1)}%
-        no puede acceder a los programas y derechos que requieren certificacion.
-      </div>
+      {/* Summary text · solo se renderiza si hay datos reales */}
+      {!sinDatos && steps[1]?.value != null && steps[steps.length - 1]?.value != null && (() => {
+        const conCD = steps[1].value;
+        const conCert = steps[steps.length - 1].value;
+        const pctCert = pct(conCert, conCD);
+        const pctSin = pctCert != null ? (100 - parseFloat(pctCert)).toFixed(1) : null;
+        return (
+          <div style={{
+            marginTop: '20px',
+            padding: '16px 24px',
+            background: '#fde8e8',
+            borderRadius: 'var(--radius-sm)',
+            borderLeft: '4px solid var(--color-red)',
+            fontSize: '0.88rem',
+            color: '#6B1A1A',
+            lineHeight: 1.6,
+            maxWidth: '90%',
+            textAlign: 'center',
+          }}>
+            <strong>Brecha critica:</strong> De las {formatNumber(conCD)} personas
+            indigenas con capacidades diversas identificadas en el CNPV 2018, solo{' '}
+            {formatNumber(conCert)} ({pctCert}%) cuentan con certificado oficial.
+            Esto significa que el {pctSin}% no puede acceder a los programas y
+            derechos que requieren certificacion.
+          </div>
+        );
+      })()}
+      {sinDatos && (
+        <div style={{
+          marginTop: '20px',
+          padding: '16px 24px',
+          background: 'var(--color-gray-100)',
+          borderRadius: 'var(--radius-sm)',
+          borderLeft: '4px solid var(--color-gray-500)',
+          fontSize: '0.88rem',
+          color: 'var(--color-gray-500)',
+          fontStyle: 'italic',
+          textAlign: 'center',
+          maxWidth: '90%',
+        }}>
+          Embudo en construcción · esperando datos del backend.
+        </div>
+      )}
     </div>
   );
 }

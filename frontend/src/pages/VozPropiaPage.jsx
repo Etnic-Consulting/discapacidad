@@ -15,34 +15,13 @@ function fmt(n) {
   return new Intl.NumberFormat('es-CO').format(n);
 }
 
-/* ---- Fallback data (used when API is unavailable) ---- */
-const FALLBACK_REGION = [
-  { categoria: 'Occidente', valor: 669, pct: 64.1 },
-  { categoria: 'Amazonia', valor: 141, pct: 13.5 },
-  { categoria: 'Norte', valor: 98, pct: 9.4 },
-  { categoria: 'Centro Oriente', valor: 85, pct: 8.1 },
-  { categoria: 'Orinoquia', valor: 51, pct: 4.9 },
-];
-
-const FALLBACK_TIPO = [
-  { categoria: 'Fisica', valor: 275, pct: 26.3 },
-  { categoria: 'Visual', valor: 190, pct: 18.2 },
-  { categoria: 'Mental / Psicosocial', valor: 132, pct: 12.6 },
-  { categoria: 'Multiple', valor: 96, pct: 9.2 },
-  { categoria: 'Auditiva', valor: 70, pct: 6.7 },
-  { categoria: 'Desarmonia espiritual', valor: 10, pct: 1.0 },
-];
-
-const FALLBACK_CALIDAD = [
-  { categoria: 'Tipo de capacidad diversa', valor: 62, pct: 62 },
-  { categoria: 'Causa / origen', valor: 35, pct: 35 },
-  { categoria: 'Servicios de salud', valor: 28, pct: 28 },
-  { categoria: 'Ayudas tecnicas', valor: 22, pct: 22 },
-  { categoria: 'Pueblo indigena especifico', valor: 89, pct: 89 },
-  { categoria: 'Ubicacion geografica', valor: 91, pct: 91 },
-  { categoria: 'Sexo / genero', valor: 95, pct: 95 },
-  { categoria: 'Edad', valor: 93, pct: 93 },
-];
+/* Fallback vacío · cifras vivas vienen del endpoint /api/v1/dashboard/smt-resumen
+ * (y se llenan a medida que dinamizadores capturan en territorio). Mientras la
+ * tabla smt.respuestas_formulario esté vacía, la UI muestra "Sin datos".
+ */
+const FALLBACK_REGION = [];
+const FALLBACK_TIPO = [];
+const FALLBACK_CALIDAD = [];
 
 const REGION_COLORS = ['#02432D', '#02AB44', '#C4920A', '#E8262A', '#6B6B6B'];
 const TIPO_COLORS = ['#02432D', '#02AB44', '#C4920A', '#E8262A', '#6B6B6B', '#8B5CF6'];
@@ -106,7 +85,7 @@ export default function VozPropiaPage() {
     if (regionData.length > 0 && regionData[0].personas != null) {
       return regionData.reduce((sum, r) => sum + (r.personas || 0), 0);
     }
-    return 1044;
+    return null;  // sin datos · la UI debe mostrar "—"
   }, [regionData]);
 
   const numMacrorregiones = regionData.length || 5;

@@ -18,10 +18,18 @@ La cifra **115 es la única que mantiene coherencia con el universo censal compl
 
 ## Implicación operativa
 
-- **Toda visualización agregada usa 115 como denominador.**
+- **Toda visualización agregada usa 115 como denominador canónico.**
 - **Los catálogos del frontend muestran 115 entradas.**
-- **Las consultas a `pueblo.disc_nacional` retornan 115 filas como máximo.**
-- **Los informes territoriales de tipo `pueblo` se generan para los 115 pueblos del CNPV 2018.**
+- **Los informes territoriales de tipo `pueblo` se generan para los pueblos del CNPV 2018.**
+
+## Gap pendiente (v1.1)
+
+La tabla `pueblo.disc_nacional` actualmente contiene **120 pueblos**, no 115. La diferencia (5 pueblos) son códigos huérfanos identificados en auditoría 2026-05-09:
+
+- `cod_pueblo` 433, 855, 860, 940 aparecen en `pueblo.pueblo_municipio` con población residual (~186 personas total) pero **no están en la lista canónica** de 115 pueblos del DANE CNPV 2018.
+- Origen probable: códigos descatalogados o errores de carga en el seed REDATAM.
+
+**Decisión v1.1:** investigar si esos 5 códigos son válidos (sub-grupos no reconocidos en CNPV pero sí en SMT) o basura del seed. Mientras tanto, los reportes públicos usan **115** como cifra oficial.
 
 ## Decisiones derivadas
 

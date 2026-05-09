@@ -262,7 +262,7 @@ export default function NationalPyramids() {
 
       <SimplePyramid
         title="2. Poblacion con capacidades diversas"
-        subtitle={`Personas con limitacion identificada por grupo de edad y sexo. n=${fmt(p2.data?.total)} de ${fmt(225174)} reportados por CNPV (la diferencia corresponde a registros sin clasificacion pueblo-especifica).`}
+        subtitle={`Personas con limitacion identificada por grupo de edad y sexo. n=${fmt(p2.data?.total)}. La diferencia respecto al total nacional CNPV corresponde a registros sin clasificacion pueblo-especifica.`}
         data={p2.data}
         loading={p2.isLoading}
         isError={p2.isError}

@@ -11,17 +11,11 @@ import KPICard from '../components/KPICard';
 import { useIntercensal, useProyecciones } from '../hooks/useApi';
 import { useFilters } from '../context/FilterContext';
 
-/* ---- Fallback data (used when API is unavailable) ---- */
-const FALLBACK_INTERCENSAL = [
-  { grupo_etnico: 'Indigena', periodo: '2005', pob_total: 1392623, pob_disc: 82435, prevalencia_pct: 5.92, tasa_x_1000: 59.2 },
-  { grupo_etnico: 'Indigena', periodo: '2018', pob_total: 1905617, pob_disc: 114337, prevalencia_pct: 6.00, tasa_x_1000: 60.0 },
-  { grupo_etnico: 'Afrodescendiente', periodo: '2005', pob_total: 4311757, pob_disc: 279282, prevalencia_pct: 6.48, tasa_x_1000: 64.8 },
-  { grupo_etnico: 'Afrodescendiente', periodo: '2018', pob_total: 4671160, pob_disc: 310085, prevalencia_pct: 6.64, tasa_x_1000: 66.4 },
-  { grupo_etnico: 'Sin pertenencia etnica', periodo: '2005', pob_total: 34898170, pob_disc: 2708359, prevalencia_pct: 7.76, tasa_x_1000: 77.6 },
-  { grupo_etnico: 'Sin pertenencia etnica', periodo: '2018', pob_total: 33265994, pob_disc: 2378459, prevalencia_pct: 7.15, tasa_x_1000: 71.5 },
-  { grupo_etnico: 'Nacional total', periodo: '2005', pob_total: 41174853, pob_disc: 3137524, prevalencia_pct: 7.62, tasa_x_1000: 76.2 },
-  { grupo_etnico: 'Nacional total', periodo: '2018', pob_total: 44164417, pob_disc: 3105136, prevalencia_pct: 7.03, tasa_x_1000: 70.3 },
-];
+/* Fallback vacío · si la API no responde, la UI muestra "Sin datos" en lugar
+ * de cifras hardcoded que se desactualizan. Datos vivos vienen de
+ * /api/v1/dashboard/intercensal y /api/v1/dashboard/proyecciones.
+ */
+const FALLBACK_INTERCENSAL = [];
 
 /* ---- Helper: extract rate for a grupo_etnico + periodo from data ---- */
 function getRate(data, grupo, periodo) {

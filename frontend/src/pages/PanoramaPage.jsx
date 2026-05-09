@@ -35,13 +35,17 @@ import { sortAndMergeAgeGroups } from '../lib/ageGroups';
    TODO S1.C-Phase2: convertir fallbacks en `null` + UI explícita
    "Sin datos · reintentar" en lugar de mostrar cifras silenciosas.
    ============================================ */
+/* Plantilla de KPI · sin cifras hardcoded. Si el backend no responde, la UI
+ * muestra "—" para cada cifra dinámica en lugar de inventar. La única cifra
+ * permanente es 115 pueblos (decisión D1 metodológica · DANE CNPV 2018).
+ */
 const MOCK_KPI = {
-  totalPersonas: 225174,
-  pueblos: 115, /* D1 · era 121 antes de T16 · DANE CNPV 2018 */
-  prevalencia: '60.0',
-  coberturaRegistro: '32.4',
-  brechaCertificacion: '71.3',
-  victimasConflicto: 37797,
+  totalPersonas: null,
+  pueblos: 115,                 // D1 canónico
+  prevalencia: null,
+  coberturaRegistro: null,
+  brechaCertificacion: null,
+  victimasConflicto: null,
 };
 
 /* TODO S1.C-Phase2 · Reemplazar con: useIntercensal({ aplicar_fac: true })

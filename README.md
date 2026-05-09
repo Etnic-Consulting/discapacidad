@@ -1,6 +1,6 @@
 # Dashboard SMT-ONIC — Capacidades Diversas en Pueblos Indígenas
 
-Sistema de Monitoreo Territorial (SMT) de la **Organización Nacional Indígena de Colombia (ONIC)** para el seguimiento de personas con **capacidades diversas** en los 121 pueblos indígenas del país.
+Sistema de Monitoreo Territorial (SMT) de la **Organización Nacional Indígena de Colombia (ONIC)** para el seguimiento de personas con **capacidades diversas** en los 115 pueblos indígenas reportados por el Censo Nacional de Población y Vivienda (CNPV 2018) del DANE (decisión metodológica D1).
 
 > **Nota terminológica**: La ONIC utiliza el término *capacidades diversas* en lugar de *discapacidad*, reconociendo la diversidad funcional como parte de la riqueza cultural de los pueblos originarios.
 

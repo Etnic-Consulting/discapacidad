@@ -35,11 +35,19 @@ export default function Funnel({ steps = FUNNEL_STEPS }) {
       <div className="funnel-summary">
         <div className="funnel-summary-label">Lectura crítica</div>
         <div className="funnel-summary-text">
-          De <b>{fmt2(steps[1]?.value ?? 225174)}</b> personas indígenas con capacidades diversas
-          identificadas en el CNPV 2018, solo{' '}
-          <b>{fmt2(steps[steps.length - 1]?.value ?? 428)}</b> cuentan con certificado oficial. El{' '}
-          <b>{(100 - ((steps[steps.length - 1]?.value ?? 428) / (steps[1]?.value ?? 225174) * 100)).toFixed(1)}%</b>{' '}
-          enfrenta barreras para acceder a programas y derechos que requieren certificación.
+          {steps[1]?.value != null && steps[steps.length - 1]?.value != null ? (
+            <>
+              De <b>{fmt2(steps[1].value)}</b> personas indígenas con capacidades diversas
+              identificadas en el CNPV 2018, solo{' '}
+              <b>{fmt2(steps[steps.length - 1].value)}</b> cuentan con certificado oficial. El{' '}
+              <b>{(100 - (steps[steps.length - 1].value / steps[1].value * 100)).toFixed(1)}%</b>{' '}
+              enfrenta barreras para acceder a programas y derechos que requieren certificación.
+            </>
+          ) : (
+            <em style={{ color: 'var(--color-gray-500)' }}>
+              Lectura crítica disponible cuando el backend retorne las cifras del embudo.
+            </em>
+          )}
         </div>
       </div>
     </div>
