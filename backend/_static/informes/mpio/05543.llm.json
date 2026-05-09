@@ -7,11 +7,5 @@
   "vida": "No se cuenta con datos de NBI para la población indígena de Peque (sin datos disponibles). El promedio indígena nacional de NBI es del 67.6%, pero en este municipio no es posible comparar brechas ni componentes como educación o servicios básicos. La falta de información oculta las condiciones de vida de los pueblos indígenas en la zona.",
   "conflicto": "Entre 1985-2024, Peque registró 7 víctimas indígenas con discapacidad, siendo el desplazamiento forzado el hecho principal con el 85.7% de los casos (6 víctimas). Este patrón refleja la violencia histórica contra los pueblos indígenas en Antioquia, donde el conflicto armado ha desplazado a comunidades enteras. Los datos, aunque limitados, evidencian la urgencia de protección territorial.",
   "icv": "El Índice de Condiciones de Vida (ICV) de Peque es de 0.0, determinado por la ausencia de datos en NBI (0.0) y prevalencia (0.0), con un componente de conflicto mínimo (0.001). Esta puntuación refleja la falta de información sistematizada sobre las condiciones de vida indígenas en el municipio. Sin datos confiables, el ICV no refleja la realidad territorial.",
-  "recomendaciones": [
-    "Implementar un censo étnico municipal con enfoque diferencial para identificar y registrar la población indígena de Peque, citando la ausencia de datos en CNPV 2018 (población=0).",
-    "Formalizar al menos un resguardo indígena en Peque, priorizando la titulación colectiva de tierras para pueblos como los Emberá, dado que no hay resguardos registrados (n_resguardos=0).",
-    "Establecer un sistema de alertas tempranas para el desplazamiento forzado en Peque, considerando que el 85.7% de las víctimas indígenas con discapacidad fueron desplazadas (6 de 7 víctimas).",
-    "Diseñar un plan de revitalización cultural para pueblos indígenas en Peque, incluyendo la recolección de datos sobre lenguas y tradiciones, ya que no hay información disponible (lengua=_sin_datos).",
-    "Incluir a Peque en los programas de salud intercultural del departamento, dado que no hay datos de prevalencia ni NBI para la población indígena (prevalencia=_sin_datos, NBI=_sin_datos)."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para PEQUE se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

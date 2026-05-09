@@ -6,12 +6,6 @@
   "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión limita la comprensión de la vitalidad cultural y la transmisión intergeneracional de las lenguas Emberá Eyabida y Emberá Katío. La ONIC debe priorizar la documentación lingüística en territorios pequeños para preservar el patrimonio inmaterial de estos pueblos.",
   "vida": "No hay información sobre Necesidades Básicas Insatisfechas (NBI) en el resguardo. El promedio indígena nacional de NBI es 67.6%, pero este dato no puede compararse debido a la falta de registros locales. La ausencia de datos impide medir brechas en acceso a educación, salud o vivienda, esenciales para el bienestar de la comunidad.",
   "conflicto": "No se registran víctimas de conflicto con discapacidad en el resguardo entre 1985 y 2024. Aunque esta cifra (0) sugiere baja exposición directa a la violencia, no refleja necesariamente la situación real, dado que los datos pueden estar subregistrados. La ausencia de hechos violentos reportados no descarta riesgos territoriales, especialmente en regiones como el Chocó.",
-  "icv": "El Índice de Condiciones de Vida (ICV) del resguardo es 0.0, calculado con componentes normalizados de NBI, prevalencia y conflicto. Esta métrica refleja la falta de datos disponibles para los indicadores clave. Sin información confiable, el ICV no puede interpretarse como una medida real de bienestar, subrayando la urgencia de mejorar los sistemas de monitoreo territorial.",
-  "recomendaciones": [
-    "Implementar un sistema de recolección de datos básicos (población, salud, educación) en resguardos pequeños como BOCHOROMÁ - BOCHOROMACITO, citando la necesidad de datos confiables para el diseño de políticas.",
-    "Priorizar la documentación lingüística de las lenguas Emberá Eyabida y Emberá Katío en el resguardo, dado que los datos actuales son inexistentes.",
-    "Realizar un diagnóstico territorial participativo para identificar necesidades en acceso a servicios básicos, considerando la extensión del resguardo (519.946 ha) y su baja densidad poblacional (39 habitantes).",
-    "Fortalecer la articulación con la Organización Regional CRICH para garantizar que las estrategias de protección territorial incluyan a resguardos pequeños como este.",
-    "Solicitar al DANE y a la ONIC la inclusión de resguardos en encuestas oficiales, evitando que datos críticos como NBI o conflicto permanezcan sin registro."
-  ]
+  "icv": "El Índice de Calidad de Vida de BOCHOROMÁ - BOCHOROMACITO se construye con NBI, prevalencia y conflicto · su metodología detallada está en la ficha técnica del módulo ICV del visor.",
+  "recomendaciones": "Las recomendaciones específicas para BOCHOROMÁ - BOCHOROMACITO se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

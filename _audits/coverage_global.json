@@ -1,0 +1,81 @@
+{
+  "tests_total_passed": 175,
+  "tests_total_failed": 0,
+  "cobertura_total_stmts": 881,
+  "cobertura_cubiertos": 823,
+  "cobertura_pct_ponderado": 93,
+  "umbral": 50,
+  "pasa_umbral": true,
+  "por_test": [
+    {
+      "test_file": "test_pueblos",
+      "cov_target": "app.routers.pueblos",
+      "exit": 0,
+      "passed": 20,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_geo",
+      "cov_target": "app.routers.geo",
+      "exit": 0,
+      "passed": 24,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_indicadores",
+      "cov_target": "app.routers.indicadores",
+      "exit": 0,
+      "passed": 21,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_dashboard",
+      "cov_target": "app.routers.dashboard",
+      "exit": 0,
+      "passed": 45,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_informes",
+      "cov_target": "app.routers.informes",
+      "exit": 0,
+      "passed": 36,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_conflicto",
+      "cov_target": "app.routers.conflicto",
+      "exit": 0,
+      "passed": 26,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    },
+    {
+      "test_file": "test_formulario_e2e",
+      "cov_target": null,
+      "exit": 0,
+      "passed": 3,
+      "failed": 0,
+      "cov_pct": null,
+      "cov_stmts": null,
+      "cov_miss": null
+    }
+  ]
+}

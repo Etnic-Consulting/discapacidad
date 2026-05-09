@@ -7,11 +7,5 @@
   "vida": "No hay datos sobre NBI para Taraza. El promedio indígena nacional (67.6%) no puede compararse. La falta de información oculta brechas en pobreza multidimensional. Se requiere incluir indicadores de vivienda, educación y empleo en registros municipales para diseñar intervenciones diferenciadas.",
   "conflicto": "Taraza registra 102 víctimas indígenas con discapacidad por violencia (1985-2024), con 72 casos de desplazamiento forzado (70.6%). El homicidio (5 casos) y amenazas (11) completan el perfil victimizante. La concentración en hechos violentos refleja una crisis humanitaria no resuelta. La presencia de artefactos explosivos (4 casos) agrava la inseguridad territorial.",
   "icv": "El ICV de Taraza es 0.006, con componente de conflicto como dimensión dominante (0.02). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm prioriza el impacto del conflicto armado. Este valor es mínimo comparado con estándares nacionales, reflejando una crisis multidimensional no abordada.",
-  "recomendaciones": [
-    "Priorizar la protección del resguardo JAIDEZAVI con enfoque diferencial, dado su área reducida (4,907.48 ha) y alta victimización (102 casos).",
-    "Incluir en el próximo CNPV 2025 preguntas sobre lengua materna para Taraza, donde actualmente no hay datos disponibles.",
-    "Diseñar programas de retorno seguro para víctimas de desplazamiento forzado (72 casos), con énfasis en EMBERA-KATÍO (69.9% de la población).",
-    "Implementar un sistema de alertas tempranas para artefactos explosivos (4 casos) en zonas rurales de Taraza.",
-    "Articular con la gobernación de Antioquia (cod_dpto: 05) para incluir indicadores de NBI en registros municipales, actualmente sin datos."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para TARAZA se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

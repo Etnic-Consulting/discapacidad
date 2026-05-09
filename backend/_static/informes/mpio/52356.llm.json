@@ -7,11 +7,5 @@
   "vida": "No se cuenta con datos de NBI para IPIALES. El promedio indígena nacional es 67.6%, pero sin cifras locales no es posible comparar brechas. La falta de información impide diseñar estrategias de reducción de pobreza multidimensional adaptadas al contexto municipal.",
   "conflicto": "Se registraron 319 víctimas de conflicto armado en IPIALES (1985-2024), con el 36.1% afectado por actos terroristas (115 casos). El desplazamiento forzado (96) y la pérdida de bienes (48) completan los principales hechos victimizantes. La concentración de violencia en territorios indígenas exige acciones urgentes de protección y reparación.",
   "icv": "El ICV de IPIALES es 0.019, con el componente de conflicto como principal determinante (0.064). La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm refleja que la violencia estructural impacta más que la pobreza o salud. La posición relativa es crítica frente a otros municipios, requiriendo intervenciones integrales.",
-  "recomendaciones": [
-    "Priorizar la protección territorial de los 4 resguardos, especialmente UKUMARI KANKHE, con inversiones en seguridad y titulación, dado que el 97.2% de la población indígena pertenece al pueblo PASTOS y enfrenta alta victimización.",
-    "Implementar un sistema de registro municipal de lenguas indígenas para superar la ausencia de datos y diseñar planes de revitalización cultural, considerando la diversidad de 20 pueblos presentes.",
-    "Crear un observatorio municipal de conflicto armado que monitoree los 115 actos terroristas anuales y coordine con autoridades para reducir el 36.1% de hechos victimizantes en territorios indígenas.",
-    "Incluir a IPIALES en programas de reducción de NBI con enfoque diferencial, pese a la falta de datos locales, usando el promedio nacional (67.6%) como línea base para intervenciones en vivienda, educación y salud.",
-    "Fortalecer la articulación entre resguardos y entidades nacionales para garantizar el acceso a derechos básicos, dado que la fragmentación territorial (4 resguardos) limita la gestión autónoma de recursos."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para IPIALES se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

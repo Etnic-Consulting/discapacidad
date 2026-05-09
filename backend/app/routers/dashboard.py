@@ -672,13 +672,36 @@ async def comparacion_intercensal(
 
 @router.get("/smt-resumen")
 async def smt_resumen(
-    dimension: str = Query(None),
+    dimension: str = Query(None, description="Filtrar por dimension (macro, tipo_discapacidad, etc.)"),
+    periodo: str = Query(None, description="YYYY-MM. Default: periodo más reciente con datos."),
     db: AsyncSession = Depends(get_db),
 ):
-    """Resumen de datos propios SMT-ONIC."""
+    """Resumen agregado de respuestas SMT-ONIC (formulario propio).
+
+    Lee `smt.resumen` poblada por trigger ON INSERT/UPDATE/DELETE en
+    `smt.respuestas_formulario`. Auto-selecciona el periodo más reciente
+    con datos si no se especifica. Estructura agrupada por dimension.
+
+    Retorno:
+        {
+            "periodo": <YYYY-MM>,
+            "total_dimensiones": <n>,
+            "total_categorias": <m>,
+            "dimensiones": ["macro", "tipo_discapacidad", ...],
+            "data": [{dimension, categoria, valor, pct}, ...],
+            "agrupado": {dimension: [{categoria, valor, pct}, ...]}
+        }
+    """
     try:
+        # Auto-seleccionar periodo más reciente con datos si no viene
+        if not periodo:
+            r_p = (await db.execute(
+                text("SELECT periodo FROM smt.resumen GROUP BY periodo ORDER BY MAX(created_at) DESC LIMIT 1")
+            )).first()
+            periodo = r_p._mapping["periodo"] if r_p else "2026-F1"
+
         filtro = ""
-        params = {"periodo": "2026-F1"}
+        params = {"periodo": periodo}
         if dimension:
             filtro = "AND dimension = :dimension"
             params["dimension"] = dimension
@@ -692,7 +715,27 @@ async def smt_resumen(
             params,
         )
         rows = [dict(r._mapping) for r in result]
-        return {"periodo": "2026-F1", "total": len(rows), "data": rows}
+        # Convertir Decimal a float para JSON
+        for r in rows:
+            for k in ("valor", "pct"):
+                if r.get(k) is not None:
+                    r[k] = float(r[k])
+
+        # Agrupar por dimension
+        agrupado: dict[str, list] = {}
+        for r in rows:
+            agrupado.setdefault(r["dimension"], []).append(
+                {"categoria": r["categoria"], "valor": r["valor"], "pct": r["pct"]}
+            )
+
+        return {
+            "periodo": periodo,
+            "total_dimensiones": len(agrupado),
+            "total_categorias": len(rows),
+            "dimensiones": sorted(agrupado.keys()),
+            "data": rows,
+            "agrupado": agrupado,
+        }
     except Exception as e:
         logger.error("Error en smt_resumen: %s", e, exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))

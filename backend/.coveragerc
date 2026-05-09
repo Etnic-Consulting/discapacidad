@@ -1,0 +1,10 @@
+[run]
+source =
+    app
+# When pytest runs from repo root, modules are imported as `app.xxx`
+# but the files live under backend/app/. This path mapping resolves that.
+
+[paths]
+source =
+    app
+    backend/app

@@ -7,11 +7,5 @@
   "vida": "No hay datos disponibles sobre NBI para Villanueva (promedio indígena nacional: 67.6%). La falta de información impide comparar brechas socioeconómicas. Se requiere priorizar la recolección de datos NBI a nivel municipal para diseñar estrategias de superación de pobreza con enfoque diferencial.",
   "conflicto": "Las 25 víctimas de violencia registradas en Villanueva entre 1985-2024 tienen como hecho principal el desplazamiento forzado (76%, n=19). Le siguen homicidios (8%) y amenazas (4%). La concentración en desplazamiento refleja dinámicas de despojo territorial en la región Caribe. La cifra subraya la urgencia de garantizar derechos territoriales y protección a comunidades indígenas.",
   "icv": "El ICV de Villanueva es 0.002, con conflicto como dimensión dominante (0.005). Los componentes NBI y prevalencia aportan 0.0, indicando ausencia de datos normalizados. La posición relativa es crítica frente a estándares nacionales. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm evidencia la prioridad de abordar violencia sobre otros indicadores.",
-  "recomendaciones": [
-    "Garantizar el registro y titulación de al menos 2 resguardos indígenas en Villanueva, priorizando territorios WAYUU y WIWA, dado que el 85.5% de la población pertenece a estos pueblos (390/456).",
-    "Implementar un sistema de alerta temprana contra desplazamiento forzado en coordinación con la Defensoría del Pueblo, considerando que el 76% de las víctimas registradas (19/25) corresponden a este hecho victimizante.",
-    "Diseñar un plan de revitalización lingüística para el pueblo WAYUU, que incluya educación propia en escuelas rurales, ante la ausencia de datos sobre lengua en el municipio.",
-    "Realizar un censo municipal de Necesidades Básicas Insatisfechas (NBI) con enfoque étnico, dado que no hay datos disponibles pese al promedio indígena nacional de 67.6%.",
-    "Fortalecer la participación de los 11 pueblos indígenas de Villanueva en la Mesa Municipal de Concertación Indígena, asegurando representación proporcional a su población (ej. 68% WAYUU, 17% WIWA)."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para VILLANUEVA se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

@@ -7,11 +7,5 @@
   "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para Natagaima. El promedio indígena nacional de NBI es 67.6%, pero su comparación directa no es posible sin información local. Esta brecha en datos limita la priorización de políticas públicas. Se requiere generar indicadores específicos para municipios con alta población indígena.",
   "conflicto": "Natagaima registra 407 víctimas de violencia sociopolítica entre 1985-2024, con el desplazamiento forzado como hecho principal (75.9% del total). Este patrón refleja la histórica afectación del Tolima por dinámicas de conflicto armado. La concentración de hechos en desplazamiento subraya la urgencia de garantizar derechos territoriales y protección a comunidades indígenas.",
   "icv": "El Índice de Condiciones de Vida (ICV) de Natagaima es 0.024, con el componente de conflicto como principal determinante (0.081). Este valor posiciona al municipio en una situación crítica respecto a condiciones de vida, donde la violencia estructural impacta más que indicadores socioeconómicos. La fórmula del ICV (0.4*NBI + 0.3*prev + 0.3*conflicto) revela la multidimensionalidad de la vulnerabilidad.",
-  "recomendaciones": [
-    "Priorizar la titulación y ampliación de resguardos Pijao en Natagaima, especialmente para los 5 territorios más grandes que concentran el 45% del área, garantizando el 100% de los 30 resguardos existentes con planes de vida comunitarios.",
-    "Implementar un sistema de alertas tempranas para prevenir desplazamiento forzado, dado que el 75.9% de las 407 víctimas registradas en 1985-2024 corresponden a este hecho.",
-    "Incluir indicadores de lengua indígena en el próximo Censo Nacional, considerando que Natagaima alberga 30 resguardos Pijao pero carece de datos sobre vitalidad lingüística.",
-    "Diseñar programas de salud intercultural con enfoque en pueblos minoritarios (Arhuaco, Cocama), que representan solo 0.2% de la población (14 personas), para evitar su exclusión en políticas públicas.",
-    "Fortalecer la base de datos municipal con desagregación étnica en NBI y prevalencia, usando el promedio indígena nacional de 67.6% como línea base para priorizar intervenciones en el territorio."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para NATAGAIMA se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

@@ -7,11 +7,5 @@
   "vida": "Los datos de Necesidades Básicas Insatisfechas (NBI) no están disponibles para este resguardo. Sin embargo, el promedio indígena nacional (67.6%) sugiere que las condiciones de vida en NATACOY PIJAO podrían estar por debajo de este umbral. La falta de información impide calcular brechas específicas.",
   "conflicto": "Se registraron 407 víctimas de conflicto armado entre 1985-2024, con desplazamiento forzado como principal afectación (309 casos, 75.9%). Este patrón refleja la violencia estructural que ha despojado al pueblo Pijao de su territorio. La concentración de hechos violentos en este resguardo exige medidas urgentes de protección integral.",
   "icv": "El Índice de Condiciones de Vida (ICV) para NATACOY PIJAO es 0.024, con conflicto como dimensión dominante (0.081). Este valor, cercano a cero, indica condiciones de vida críticas. La fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm revela que el conflicto armado es el principal determinante de la vulnerabilidad en este territorio.",
-  "recomendaciones": [
-    "Implementar un sistema de monitoreo territorial participativo con metodologías propias del pueblo Pijao para superar el sub-registro demográfico y de NBI, citando la ausencia de datos en el JSON.",
-    "Priorizar acciones de protección territorial con enfoque diferencial, dado que el 75.9% de las víctimas registradas corresponden a desplazamiento forzado, según el hecho principal reportado.",
-    "Diseñar estrategias de salud intercultural que aborden las brechas en prevalencia, considerando la falta de datos en este resguardo.",
-    "Fortalecer la titulación colectiva de 217.059 hectáreas como medida de reparación histórica y protección frente a la violencia estructural.",
-    "Promover censos lingüísticos con participación comunitaria para documentar la vitalidad cultural del pueblo Pijao, ante la ausencia de datos en la sección 'lengua'."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para NATACOY PIJAO se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

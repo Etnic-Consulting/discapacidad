@@ -1,0 +1,18 @@
+V07 · cobertura backend consolidada
+==================================================
+Tests pasados: 175
+Tests fallados: 0
+Statements totales: 881
+Statements cubiertos: 823
+Cobertura ponderada: 93%
+Umbral objetivo: 50%
+Estado: PASS
+
+Por modulo:
+  app.routers.pueblos            passed= 20 failed=  0 cov=None% stmts=None
+  app.routers.geo                passed= 24 failed=  0 cov=None% stmts=None
+  app.routers.indicadores        passed= 21 failed=  0 cov=None% stmts=None
+  app.routers.dashboard          passed= 45 failed=  0 cov=None% stmts=None
+  app.routers.informes           passed= 36 failed=  0 cov=None% stmts=None
+  app.routers.conflicto          passed= 26 failed=  0 cov=None% stmts=None
+  test_formulario_e2e            passed=  3 failed=  0 cov=None% stmts=None

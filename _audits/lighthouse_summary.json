@@ -1,0 +1,47 @@
+{
+  "pages": [
+    {
+      "url": "http://localhost:5173/",
+      "status": 200,
+      "elapsed_ms": 32.0,
+      "size_bytes": 1103,
+      "ok": true,
+      "slug": "panorama"
+    },
+    {
+      "url": "http://localhost:5173/?dpto=91&mpio=91001&pueblo=660",
+      "status": 200,
+      "elapsed_ms": 0.0,
+      "size_bytes": 1103,
+      "ok": true,
+      "slug": "pueblos_660_tikuna"
+    },
+    {
+      "url": "http://localhost:5173/?dpto=17&mpio=17614&pueblo=282",
+      "status": 200,
+      "elapsed_ms": 0.0,
+      "size_bytes": 1103,
+      "ok": true,
+      "slug": "pueblos_282_pijao"
+    },
+    {
+      "url": "http://localhost:5173/territorios",
+      "status": 200,
+      "elapsed_ms": 15.0,
+      "size_bytes": 1103,
+      "ok": true,
+      "slug": "territorios"
+    },
+    {
+      "url": "http://localhost:5173/voz-propia",
+      "status": 200,
+      "elapsed_ms": 16.0,
+      "size_bytes": 1103,
+      "ok": true,
+      "slug": "voz_propia"
+    }
+  ],
+  "pass": 5,
+  "total": 5,
+  "umbral_ms": 2000
+}

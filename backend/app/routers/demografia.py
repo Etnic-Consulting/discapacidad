@@ -1172,10 +1172,20 @@ async def piramide_capacidades_diversas(
 @router.get("/piramide-disc-tipo/{cod_pueblo}")
 async def piramide_disc_por_tipo(
     cod_pueblo: str,
+    fallback: bool = True,
     db: AsyncSession = Depends(get_db),
 ):
-    """Piramide de cap. diversas desglosada por TIPO de limitacion, sexo y edad."""
+    """Piramide de cap. diversas desglosada por TIPO de limitacion, sexo y edad.
+
+    fallback=True (default): si pueblo no tiene datos suficientes (k<200), agrega
+    en cascada por dpto y luego macro (regla soberanía datos / k-anonimato).
+    Respuesta incluye campo `granularidad: "pueblo" | "dpto" | "macro" | "sin_datos"`
+    + `entidad_origen` con id+nombre del nivel agregado.
+
+    fallback=False: comportamiento legacy · 404 si pueblo no tiene datos.
+    """
     try:
+        # 1) Intentar a nivel pueblo
         result = await db.execute(
             text("""
                 SELECT tipo_limitacion, grupo_edad, sexo, valor
@@ -1186,8 +1196,106 @@ async def piramide_disc_por_tipo(
             {"cod": cod_pueblo},
         )
         rows = [dict(r._mapping) for r in result]
-        if not rows:
+        granularidad = "pueblo"
+        entidad_origen = {"tipo": "pueblo", "id": cod_pueblo, "nombre": None}
+
+        # k>=200 enforced en la fuente (filtro extraccion). Si rows vacio, fallback.
+        if not rows and not fallback:
             raise HTTPException(status_code=404, detail=f"No hay datos por tipo para pueblo {cod_pueblo}")
+
+        if not rows and fallback:
+            # 2) Fallback nivel dpto · derivar cod_dpto desde pueblo_municipio
+            res_d = await db.execute(
+                text("""
+                    SELECT LEFT(pm.cod_mpio, 2) AS cod_dpto
+                    FROM pueblo.pueblo_municipio pm
+                    WHERE pm.cod_pueblo = :cod
+                    GROUP BY LEFT(pm.cod_mpio, 2)
+                    ORDER BY SUM(pm.poblacion) DESC
+                    LIMIT 1
+                """),
+                {"cod": cod_pueblo},
+            )
+            r_dpto = res_d.first()
+            if r_dpto:
+                cod_dpto = r_dpto._mapping["cod_dpto"]
+                # Agregacion: sumar piramide_disc_tipo de todos los pueblos del dpto
+                result_dpto = await db.execute(
+                    text("""
+                        SELECT pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo,
+                               SUM(pdt.valor)::int AS valor
+                        FROM pueblo.piramide_disc_tipo pdt
+                        JOIN (
+                            SELECT DISTINCT cod_pueblo
+                            FROM pueblo.pueblo_municipio
+                            WHERE LEFT(cod_mpio, 2) = :cd
+                        ) pm ON pm.cod_pueblo = pdt.cod_pueblo
+                        WHERE pdt.periodo = '2018'
+                        GROUP BY pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo
+                        HAVING SUM(pdt.valor) >= 30
+                        ORDER BY pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo
+                    """),
+                    {"cd": cod_dpto},
+                )
+                rows = [dict(r._mapping) for r in result_dpto]
+                if rows:
+                    granularidad = "dpto"
+                    entidad_origen = {"tipo": "dpto", "id": cod_dpto, "nombre": None}
+
+        if not rows and fallback:
+            # 3) Fallback nivel macro · lookup en geo.macro_dptos
+            res_m = await db.execute(
+                text("""
+                    SELECT md.macro
+                    FROM geo.macro_dptos md
+                    JOIN (
+                        SELECT LEFT(cod_mpio, 2) AS cod_dpto
+                        FROM pueblo.pueblo_municipio
+                        WHERE cod_pueblo = :cod
+                        LIMIT 1
+                    ) p ON p.cod_dpto = md.cod_dpto
+                    LIMIT 1
+                """),
+                {"cod": cod_pueblo},
+            )
+            r_macro = res_m.first()
+            if r_macro:
+                macro = r_macro._mapping["macro"]
+                result_macro = await db.execute(
+                    text("""
+                        SELECT pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo,
+                               SUM(pdt.valor)::int AS valor
+                        FROM pueblo.piramide_disc_tipo pdt
+                        JOIN (
+                            SELECT DISTINCT pm.cod_pueblo
+                            FROM pueblo.pueblo_municipio pm
+                            JOIN geo.macro_dptos md ON md.cod_dpto = LEFT(pm.cod_mpio, 2)
+                            WHERE UPPER(TRIM(md.macro)) = UPPER(TRIM(:m))
+                        ) sub ON sub.cod_pueblo = pdt.cod_pueblo
+                        WHERE pdt.periodo = '2018'
+                        GROUP BY pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo
+                        HAVING SUM(pdt.valor) >= 30
+                        ORDER BY pdt.tipo_limitacion, pdt.grupo_edad, pdt.sexo
+                    """),
+                    {"m": macro},
+                )
+                rows = [dict(r._mapping) for r in result_macro]
+                if rows:
+                    granularidad = "macro"
+                    entidad_origen = {"tipo": "macro", "id": None, "nombre": macro}
+
+        if not rows:
+            # 4) sin_datos · 200 honesto
+            return {
+                "cod_pueblo": cod_pueblo,
+                "granularidad": "sin_datos",
+                "entidad_origen": entidad_origen,
+                "total": 0,
+                "tipos": [],
+                "resumen_tipos": [],
+                "piramide": [],
+                "mensaje": "Sin datos disponibles con desagregación segura (k>=30 enforced).",
+            }
 
         age_groups = ['00-04','05-09','10-14','15-19','20-24','25-29','30-34','35-39',
                       '40-44','45-49','50-54','55-59','60-64','65-69','70-74','75-79','80-84','85+']
@@ -1233,6 +1341,8 @@ async def piramide_disc_por_tipo(
 
         return {
             'cod_pueblo': cod_pueblo,
+            'granularidad': granularidad,
+            'entidad_origen': entidad_origen,
             'total': grand_total,
             'tipos': tipos,
             'resumen_tipos': resumen_tipos,

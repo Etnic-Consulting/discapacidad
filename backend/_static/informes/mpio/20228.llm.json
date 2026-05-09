@@ -7,11 +7,5 @@
   "vida": "No hay datos de NBI para CURUMANI, aunque el promedio indígena nacional es 67.6%. La falta de información impide comparar condiciones de vida con el estándar nacional. La ausencia de resguardos y la alta victimización (25 casos) sugieren condiciones precarias, pero no pueden cuantificarse. Se requiere recolección de datos locales para evaluar brechas en acceso a servicios básicos.",
   "conflicto": "CURUMANI registra 25 víctimas de conflicto armado entre 1985-2024, con el desplazamiento forzado como hecho principal (64% de los casos). Los homicidios (8%) y delitos sexuales (4%) completan el perfil victimizante. La concentración en hechos violentos refleja la exposición a dinámicas de conflicto en la región. La falta de resguardos agrava la indefensión territorial de los pueblos indígenas.",
   "icv": "El Índice de Condiciones Vitales (ICV) de CURUMANI es 0.002, con componentes normalizados: NBI (0.0), prevalencia (0.0) y conflicto (0.005). El bajo score refleja la ausencia de datos en NBI y prevalencia, así como la alta incidencia de conflicto. La fórmula del ICV (0.4*NBI + 0.3*prev + 0.3*conflicto) subraya la urgencia de abordar la violencia como dimensión crítica en el municipio.",
-  "recomendaciones": [
-    "Priorizar la creación de resguardos para los 11 pueblos indígenas en CURUMANI, dado que no existen territorios colectivos reconocidos (n=0), lo que agrava su vulnerabilidad territorial.",
-    "Documentar lenguas indígenas en CURUMANI para diseñar estrategias de revitalización, ya que no hay datos disponibles sobre este aspecto.",
-    "Implementar un sistema de alerta temprana para prevenir desplazamientos forzados, que representan el 64% de las 25 víctimas registradas en el municipio.",
-    "Realizar un censo indígena local para superar la falta de datos en NBI y condiciones de vida, comparando con el promedio nacional de 67.6%.",
-    "Incluir a CURUMANI en programas de salud intercultural, considerando la ausencia de datos de prevalencia y la necesidad de abordar impactos del conflicto en la salud mental."
-  ]
+  "recomendaciones": "Las recomendaciones específicas para CURUMANI se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

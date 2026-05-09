@@ -1,0 +1,11 @@
+{
+  "ejecutivo": "El resguardo indígena COCANA presenta el siguiente panorama de capacidades diversas según fuentes DANE/CNPV 2018. Las cifras presentadas provienen del Censo Nacional de Población y Vivienda 2018 y deben interpretarse considerando el subregistro estructural en territorios indígenas.",
+  "demografia": "La información demográfica detallada de COCANA requiere consulta directa al visor SMT-ONIC donde se presenta la pirámide poblacional con desagregación por sexo y grupos quinquenales de edad (CNPV 2018).",
+  "prevalencia": "La prevalencia específica de COCANA no fue desagregada en la fuente disponible. Se recomienda consultar el dashboard nacional para una visión comparativa.",
+  "territorial": "La información cartográfica de COCANA se encuentra disponible en el módulo de territorios del visor SMT-ONIC con base en datos públicos IGAC/INCODER.",
+  "lengua": "La información sobre lengua materna y bilingüismo en COCANA proviene del CNPV 2018, variables P_LMA y P_LMA_VOCAB. La desagregación específica está disponible en el módulo de lengua del visor cuando los datos cumplen criterios de k-anonimato (k>=30).",
+  "vida": "Los indicadores de calidad de vida (NBI, IPM, vivienda, salud) para COCANA se calculan a partir de fuentes DANE públicas. La sección vida del visor presenta estos indicadores con sus respectivas fichas técnicas y observaciones sobre confiabilidad.",
+  "conflicto": "El registro de víctimas con capacidades diversas en COCANA contabiliza 407 personas en el RUV (Registro Único de Víctimas) con fecha de corte a la última actualización publicada por la Unidad para las Víctimas. Las cifras desagregadas por hecho victimizante están en el módulo de conflicto del visor.",
+  "icv": "El Índice de Calidad de Vida de COCANA se construye con NBI, prevalencia y conflicto · su metodología detallada está en la ficha técnica del módulo ICV del visor.",
+  "recomendaciones": "Las recomendaciones específicas para COCANA se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
+}

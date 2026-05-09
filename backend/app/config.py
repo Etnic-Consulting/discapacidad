@@ -1,7 +1,10 @@
 from pydantic_settings import BaseSettings
+from pydantic import ConfigDict
 
 
 class Settings(BaseSettings):
+    model_config = ConfigDict(env_file=".env", extra="ignore")
+
     database_url: str = "postgresql+asyncpg://smt_admin:smt_onic_2026@localhost:5450/smt_onic"
     database_url_sync: str = "postgresql://smt_admin:smt_onic_2026@localhost:5450/smt_onic"
     cors_origins: list[str] = [
@@ -14,9 +17,6 @@ class Settings(BaseSettings):
         "http://127.0.0.1:5174",
         "http://127.0.0.1:5175",
     ]
-
-    class Config:
-        env_file = ".env"
 
 
 settings = Settings()

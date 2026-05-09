@@ -318,7 +318,7 @@ export function fetchPiramideCapDiversas(codPueblo) {
 }
 
 export function fetchPiramideTipoDisc(codPueblo) {
-  return request(`/api/v1/demografia/piramide-disc-tipo/${codPueblo}`);
+  return request(`/api/v1/demografia/piramide-disc-tipo/${codPueblo}`, { fallback: 'true' });
 }
 
 // ---- Piramides nacionales (agregadas o filtradas por dpto/mpio/pueblo) ----

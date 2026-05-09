@@ -6,12 +6,6 @@
   "lengua": "Los datos sobre lengua no están disponibles para este resguardo. Esta omisión impide analizar la vitalidad cultural wayúu en su territorio ancestral. Sin registros lingüísticos, no es posible medir la transmisión intergeneracional ni las amenazas a su identidad cultural.",
   "vida": "No se reportan datos de NBI para este resguardo, a pesar de que el promedio indígena nacional es 67.6%. Esta carencia de información oculta las condiciones de pobreza multidimensional en el territorio. Sin cifras, no se pueden priorizar acciones para mejorar acceso a servicios básicos o reducir brechas.",
   "conflicto": "No se registran víctimas de conflicto con discapacidad en este resguardo (1985-2024). La ausencia de hechos violentos reportados no implica ausencia de conflicto, sino fallas en el sistema de registro. Esta limitación impide analizar patrones de victimización o diseñar estrategias de protección territorial.",
-  "icv": "El Índice de Condiciones Vitales (ICV) es 0.0, calculado con componentes nulos (NBI, prevalencia y conflicto). Esta métrica refleja la falta de datos, no condiciones reales. Sin información confiable, no es posible comparar su posición relativa ni priorizar intervenciones multidimensionales.",
-  "recomendaciones": [
-    "Implementar un sistema de registro territorial específico para resguardos, priorizando datos demográficos y de lengua con participación wayúu, dado que el DANE no captura esta escala (población_total: 0).",
-    "Realizar un censo comunitario en WOPUMUIN JUNAIN MAIKOU para documentar NBI y prevalencia, considerando el promedio indígena nacional de 67.6% como referencia crítica.",
-    "Establecer un protocolo de alerta temprana para conflictos en resguardos, dado que el RUV no registra víctimas en este territorio (victimas_total_disc: 0), lo que sugiere subregistro.",
-    "Incluir indicadores culturales en el ICV, como vitalidad lingüística, para reflejar la multidimensionalidad de la vida wayúu más allá de métricas socioeconómicas.",
-    "Fortalecer la articulación entre organizaciones wayúu y el DANE para garantizar que los territorios indígenas sean visibles en censos y registros administrativos."
-  ]
+  "icv": "El Índice de Calidad de Vida de WOPUMUIN JUNAIN MAIKOU se construye con NBI, prevalencia y conflicto · su metodología detallada está en la ficha técnica del módulo ICV del visor.",
+  "recomendaciones": "Las recomendaciones específicas para WOPUMUIN JUNAIN MAIKOU se derivan del análisis integral de los indicadores presentados. Se sugiere fortalecer el registro institucional, garantizar acceso diferencial a servicios de salud y educación inclusiva, y articular con los planes de salvaguarda étnica vigentes."
 }

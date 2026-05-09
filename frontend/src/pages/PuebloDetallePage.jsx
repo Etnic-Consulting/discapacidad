@@ -6,11 +6,14 @@
 import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ReferenceLine,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   PieChart, Pie, Cell, ResponsiveContainer,
 } from 'recharts';
 import KPICard from '../components/KPICard';
+import PiramidePoblacional from '../components/PiramidePoblacional';
+import RangoEdadDiscBar from '../components/RangoEdadDiscBar';
+import RangoEdadTipoDisc from '../components/RangoEdadTipoDisc';
 import { usePerfilPueblo, useTerritoriosPueblo, useVictimasPueblo, usePerfilDemografico, usePiramideDemografica, usePiramideCapDiversas, usePiramideTipoDisc, useResguardosPorPueblo } from '../hooks/useApi';
 
 const NACIONAL_PREVALENCIA = 60.0;
@@ -86,285 +89,15 @@ function ErrorTab({ message }) {
   );
 }
 
-/* ---- Reusable: Population Pyramid — DANE Visor style (percentages) ---- */
-function PopulationPyramid({ piramideData, nombrePueblo, compact = false }) {
-  if (!piramideData || !piramideData.piramide || piramideData.piramide.length === 0) {
-    return <ErrorTab message="No hay datos de piramide poblacional disponibles." />;
-  }
-
-  const { piramide, total, total_hombres, total_mujeres, razon_masculinidad, indice_dependencia, indice_envejecimiento, pueblo } = piramideData;
-  const displayName = nombrePueblo || pueblo || '';
-  const pctH = total > 0 ? ((total_hombres / total) * 100).toFixed(1) : '0.0';
-  const pctM = total > 0 ? ((total_mujeres / total) * 100).toFixed(1) : '0.0';
-
-  // Build data using absolute counts (Recharts v3 domain calc works better this way)
-  // REVERSE: Recharts layout=vertical pinta [0] arriba. 85+ debe estar arriba, 0-4 abajo.
-  const pctData = piramide.map((row) => {
-    const hAbs = row.hombres_abs || Math.abs(row.hombres || 0);
-    const mAbs = row.mujeres_abs || Math.abs(row.mujeres || 0);
-    const pctH = row.pct_hombres || (total > 0 ? (hAbs / total) * 100 : 0);
-    const pctM = row.pct_mujeres || (total > 0 ? (mAbs / total) * 100 : 0);
-    return {
-      grupo_edad: row.grupo_edad,
-      hombres_pct: -hAbs,
-      mujeres_pct: mAbs,
-      hombres_abs: hAbs,
-      mujeres_abs: mAbs,
-      pct_hombres_raw: pctH,
-      pct_mujeres_raw: pctM,
-    };
-  }).slice().reverse();
-
-  // Symmetric axis based on max absolute value
-  const maxAbs = Math.max(
-    ...pctData.map((r) => Math.max(Math.abs(r.hombres_pct), Math.abs(r.mujeres_pct)))
-  );
-  // Round up to a nice number
-  const magnitude = Math.pow(10, Math.floor(Math.log10(maxAbs)));
-  const axisBound = Math.ceil(maxAbs / magnitude) * magnitude;
-
-  // Grandes grupos de edad
-  const gruposInfantil = ['0-4', '5-9', '10-14'];
-  const gruposAdulto = ['15-19', '20-24', '25-29', '30-34', '35-39', '40-44', '45-49', '50-54', '55-59', '60-64'];
-  const gruposMayor = ['65-69', '70-74', '75-79', '80-84', '85 y mas', '85+'];
-
-  const sumGrupo = (gruposEdad) => {
-    let h = 0, m = 0;
-    piramide.forEach((row) => {
-      if (gruposEdad.includes(row.grupo_edad)) {
-        h += row.hombres_abs || Math.abs(row.hombres || 0);
-        m += row.mujeres_abs || Math.abs(row.mujeres || 0);
-      }
-    });
-    return { h, m };
-  };
-
-  const gInfantil = sumGrupo(gruposInfantil);
-  const gAdulto = sumGrupo(gruposAdulto);
-  const gMayor = sumGrupo(gruposMayor);
-
-  const pctOfGroup = (val, groupTotal) => groupTotal > 0 ? ((val / groupTotal) * 100).toFixed(1) : '0.0';
-
-  const pyramidHeight = compact ? 450 : 550;
-
-  const tblCell = {
-    padding: '6px 12px',
-    fontSize: '0.82rem',
-    borderBottom: '1px solid var(--color-gray-200)',
-  };
-  const tblHead = {
-    ...tblCell,
-    fontWeight: 600,
-    fontSize: '0.75rem',
-    textTransform: 'uppercase',
-    color: 'var(--color-gray-500)',
-    background: 'var(--color-gray-100)',
-    borderBottom: '2px solid var(--color-gray-200)',
-  };
-
-  return (
-    <div>
-      {/* Title */}
-      <div style={{
-        textAlign: 'center',
-        marginBottom: '8px',
-        fontSize: '1rem',
-        fontWeight: 700,
-        color: 'var(--color-primary)',
-        fontFamily: 'var(--font-heading)',
-      }}>
-        {compact ? '' : `Piramide poblacional ${displayName}`}
-        {!compact && <span style={{ fontWeight: 400, fontSize: '0.82rem', color: 'var(--color-gray-500)' }}> -- CNPV 2018</span>}
-      </div>
-
-      {/* Chart */}
-      <ResponsiveContainer width="100%" height={pyramidHeight}>
-        <BarChart
-          layout="vertical"
-          data={pctData}
-          margin={{ top: 5, right: 30, bottom: 20, left: 10 }}
-          barCategoryGap="6%"
-          barGap={0}
-          barSize={20}
-        >
-          <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#ddd" />
-          <XAxis
-            type="number"
-            domain={[-axisBound, axisBound]}
-            tickFormatter={(v) => {
-              const abs = Math.abs(v);
-              if (abs >= 1000) return (abs/1000).toFixed(abs >= 10000 ? 0 : 1) + 'K';
-              return abs.toString();
-            }}
-            tick={{ fontSize: 11 }}
-            axisLine={{ stroke: '#999' }}
-          />
-          <YAxis
-            type="category"
-            dataKey="grupo_edad"
-            width={65}
-            tick={{ fontSize: 11, fontWeight: 600 }}
-            axisLine={false}
-            tickLine={false}
-          />
-          <ReferenceLine x={0} stroke="#333" strokeWidth={2} />
-          <Tooltip
-            content={({ active, payload, label }) => {
-              if (!active || !payload || payload.length === 0) return null;
-              const row = payload[0]?.payload;
-              if (!row) return null;
-              return (
-                <div style={{
-                  background: '#fff',
-                  border: '1px solid #e5e7eb',
-                  borderRadius: '6px',
-                  padding: '10px 14px',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-                  fontSize: '0.82rem',
-                  lineHeight: 1.6,
-                }}>
-                  <div style={{ fontWeight: 700, marginBottom: '4px', color: '#374151' }}>Grupo: {label}</div>
-                  <div>
-                    <span style={{ color: '#4A90D9', fontWeight: 600 }}>Hombres:</span>{' '}
-                    {fmt(row.hombres_abs)} ({row.pct_hombres_raw.toFixed(2)}%)
-                  </div>
-                  <div>
-                    <span style={{ color: '#E74C3C', fontWeight: 600 }}>Mujeres:</span>{' '}
-                    {fmt(row.mujeres_abs)} ({row.pct_mujeres_raw.toFixed(2)}%)
-                  </div>
-                </div>
-              );
-            }}
-          />
-          <Legend
-            formatter={(value) => {
-              if (value === 'hombres_pct') return 'Hombres';
-              if (value === 'mujeres_pct') return 'Mujeres';
-              return value;
-            }}
-          />
-          <Bar dataKey="hombres_pct" name="Hombres" fill="#4A90D9" />
-          <Bar dataKey="mujeres_pct" name="Mujeres" fill="#E74C3C" />
-        </BarChart>
-      </ResponsiveContainer>
-
-      {/* Summary text — DANE style */}
-      <div style={{
-        textAlign: 'center',
-        marginTop: '16px',
-        padding: '12px 20px',
-        background: '#f9fafb',
-        borderRadius: 'var(--radius-sm)',
-        fontSize: '0.88rem',
-        color: 'var(--color-gray-600)',
-        lineHeight: 1.7,
-      }}>
-        La poblacion del pueblo <strong>{displayName}</strong> se distribuye asi:{' '}
-        <span style={{ color: '#4A90D9', fontWeight: 700 }}>{fmt(total_hombres)}</span> son hombres ({pctH}%) y{' '}
-        <span style={{ color: '#E74C3C', fontWeight: 700 }}>{fmt(total_mujeres)}</span> son mujeres ({pctM}%).
-        {' '}Total: <strong>{fmt(total)}</strong> personas.
-      </div>
-
-      {/* Grandes grupos de edad — DANE style table */}
-      {!compact && (
-        <div style={{ marginTop: '16px' }}>
-          <div style={{
-            fontSize: '0.82rem',
-            fontWeight: 600,
-            textTransform: 'uppercase',
-            letterSpacing: '0.4px',
-            color: 'var(--color-gray-500)',
-            marginBottom: '8px',
-          }}>
-            Grandes grupos de edad
-          </div>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <thead>
-              <tr>
-                <th style={tblHead}>Grupo</th>
-                <th style={{ ...tblHead, textAlign: 'right' }}>Hombres</th>
-                <th style={{ ...tblHead, textAlign: 'right' }}>Mujeres</th>
-                <th style={{ ...tblHead, textAlign: 'right' }}>% Hombres</th>
-                <th style={{ ...tblHead, textAlign: 'right' }}>% Mujeres</th>
-                <th style={{ ...tblHead, textAlign: 'right' }}>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { label: '0-14 anos', data: gInfantil },
-                { label: '15-64 anos', data: gAdulto },
-                { label: '65+ anos', data: gMayor },
-              ].map((g, i) => {
-                const groupTotal = g.data.h + g.data.m;
-                return (
-                  <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : '#f9fafb' }}>
-                    <td style={{ ...tblCell, fontWeight: 600 }}>{g.label}</td>
-                    <td style={{ ...tblCell, textAlign: 'right', color: '#4A90D9', fontWeight: 600 }}>{fmt(g.data.h)}</td>
-                    <td style={{ ...tblCell, textAlign: 'right', color: '#E74C3C', fontWeight: 600 }}>{fmt(g.data.m)}</td>
-                    <td style={{ ...tblCell, textAlign: 'right' }}>{pctOfGroup(g.data.h, groupTotal)}%</td>
-                    <td style={{ ...tblCell, textAlign: 'right' }}>{pctOfGroup(g.data.m, groupTotal)}%</td>
-                    <td style={{ ...tblCell, textAlign: 'right', fontWeight: 600 }}>{fmt(groupTotal)}</td>
-                  </tr>
-                );
-              })}
-              <tr style={{ background: '#f0f9ff', fontWeight: 700 }}>
-                <td style={tblCell}>Total</td>
-                <td style={{ ...tblCell, textAlign: 'right', color: '#4A90D9' }}>{fmt(total_hombres)}</td>
-                <td style={{ ...tblCell, textAlign: 'right', color: '#E74C3C' }}>{fmt(total_mujeres)}</td>
-                <td style={{ ...tblCell, textAlign: 'right' }}>{pctH}%</td>
-                <td style={{ ...tblCell, textAlign: 'right' }}>{pctM}%</td>
-                <td style={{ ...tblCell, textAlign: 'right' }}>{fmt(total)}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      )}
-
-      {/* Demographic indices — DANE style */}
-      {!compact && (
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '32px',
-          flexWrap: 'wrap',
-          marginTop: '16px',
-          padding: '12px 20px',
-          background: '#f0f9ff',
-          borderRadius: 'var(--radius-sm)',
-          fontSize: '0.82rem',
-          color: 'var(--color-gray-600)',
-        }}>
-          <span>
-            <strong>Razon de masculinidad:</strong>{' '}
-            <span style={{ fontWeight: 700, color: 'var(--color-primary)' }}>
-              {razon_masculinidad != null ? razon_masculinidad.toFixed(1) : 'N/D'}
-            </span>
-          </span>
-          <span>
-            <strong>Indice de dependencia:</strong>{' '}
-            <span style={{ fontWeight: 700, color: 'var(--color-gold)' }}>
-              {indice_dependencia != null ? indice_dependencia.toFixed(1) : 'N/D'}
-            </span>
-          </span>
-          <span>
-            <strong>Indice de envejecimiento:</strong>{' '}
-            <span style={{ fontWeight: 700, color: '#991b1b' }}>
-              {indice_envejecimiento != null ? indice_envejecimiento.toFixed(1) : 'N/D'}
-            </span>
-          </span>
-        </div>
-      )}
-    </div>
-  );
-}
-
 /* ---- Tab: Perfil ---- */
 function TabPerfil({ perfil, codPueblo, nombrePueblo }) {
   const { data: piramideData, isLoading: pirLoading } = usePiramideDemografica(codPueblo);
   const { data: piramideDiscData, isLoading: pirDiscLoading } = usePiramideCapDiversas(codPueblo);
   const hasPyramidDisc = !pirDiscLoading && piramideDiscData && piramideDiscData.piramide && piramideDiscData.piramide.length > 0;
   const { data: piramideTipoData, isLoading: pirTipoLoading } = usePiramideTipoDisc(codPueblo);
-  const hasPyramidTipo = !pirTipoLoading && piramideTipoData && piramideTipoData.piramide && piramideTipoData.piramide.length > 0;
+  // hasPyramidTipo: true cuando el endpoint respondió (cualquier granularidad, incluso sin_datos).
+  // RangoEdadTipoDisc maneja internamente los casos sin gráfico.
+  const hasPyramidTipo = !pirTipoLoading && !!piramideTipoData;
 
   const dificultades = perfil.limitaciones
     ? perfil.limitaciones.map((l) => ({ dificultad: l.limitacion, value: l.valor }))
@@ -444,7 +177,7 @@ function TabPerfil({ perfil, codPueblo, nombrePueblo }) {
             <span>Cargando piramide poblacional...</span>
           </div>
         ) : hasPyramid ? (
-          <PopulationPyramid piramideData={piramideData} nombrePueblo={nombrePueblo} />
+          <PiramidePoblacional piramideData={piramideData} nombrePueblo={nombrePueblo} />
         ) : (
           <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--color-gray-400)' }}>
             No se encontraron datos de piramide poblacional para este pueblo.
@@ -464,7 +197,7 @@ function TabPerfil({ perfil, codPueblo, nombrePueblo }) {
             <span>Cargando piramide de capacidades diversas...</span>
           </div>
         ) : hasPyramidDisc ? (
-          <PopulationPyramid piramideData={piramideDiscData} nombrePueblo={`${nombrePueblo} (cap. diversas)`} />
+          <RangoEdadDiscBar piramideData={piramideDiscData} nombrePueblo={`${nombrePueblo} (cap. diversas)`} />
         ) : (
           <div style={{ textAlign: 'center', padding: '30px 20px', color: 'var(--color-gray-400)', fontSize: '0.85rem' }}>
             Sin pirámide de capacidades diversas disponible para este pueblo. Si acabas de cargar el dashboard, recargá la página (Ctrl+F5) para forzar la consulta.
@@ -484,184 +217,12 @@ function TabPerfil({ perfil, codPueblo, nombrePueblo }) {
             <span>Cargando datos por tipo de limitacion...</span>
           </div>
         ) : hasPyramidTipo ? (
-          <StackedTypePyramid data={piramideTipoData} nombrePueblo={nombrePueblo} />
+          <RangoEdadTipoDisc data={piramideTipoData} nombrePueblo={nombrePueblo} />
         ) : (
           <div style={{ textAlign: 'center', padding: '30px 20px', color: 'var(--color-gray-400)', fontSize: '0.85rem' }}>
-            Datos por tipo de limitacion disponibles para los 30 pueblos mas grandes.
+            Datos por tipo de limitacion no disponibles para este pueblo.
           </div>
         )}
-      </div>
-    </div>
-  );
-}
-
-/* ---- Stacked Type Pyramid Component ---- */
-/* Colorblind-safe qualitative palette (ColorBrewer) */
-const TIPO_COLORS = {
-  'Ver': '#e41a1c',
-  'Caminar': '#377eb8',
-  'Oir': '#4daf4a',
-  'Aprender': '#984ea3',
-  'Hablar': '#ff7f00',
-  'Actividades diarias': '#a65628',
-  'Autocuidado': '#f781bf',
-  'Agarrar': '#999999',
-  'Relacionarse': '#dede00',
-};
-
-function StackedTypePyramid({ data, nombrePueblo }) {
-  const { resumen_tipos, piramide, total } = data;
-
-  // Sort tipos by total descending (most frequent first) - ALWAYS same order
-  const tiposOrdenados = [...resumen_tipos].sort((a, b) => b.total - a.total).map(t => t.tipo);
-
-  // Build chart data using absolute counts (Recharts v3 handles absolutes better than %)
-  const chartData = [...piramide].reverse().map(row => {
-    const entry = { grupo_edad: row.grupo_edad };
-    tiposOrdenados.forEach(tipo => {
-      const hAbs = Math.abs(row[`h_${tipo}`] || 0);
-      const mAbs = row[`m_${tipo}`] || row[`abs_m_${tipo}`] || 0;
-      entry[`h_${tipo}`] = -hAbs;
-      entry[`m_${tipo}`] = mAbs;
-      entry[`abs_h_${tipo}`] = hAbs;
-      entry[`abs_m_${tipo}`] = mAbs;
-    });
-    entry['total_h'] = Math.abs(row.total_h || 0);
-    entry['total_m'] = row.total_m || 0;
-    return entry;
-  });
-
-  // Find max total (summed over tipos) per side for symmetric axis
-  const maxAbs = Math.max(
-    ...chartData.map(r => tiposOrdenados.reduce((s, t) => s + Math.abs(r[`h_${t}`] || 0), 0)),
-    ...chartData.map(r => tiposOrdenados.reduce((s, t) => s + (r[`m_${t}`] || 0), 0)),
-  );
-  const magnitude = Math.pow(10, Math.floor(Math.log10(Math.max(maxAbs, 1))));
-  const axisBound = Math.ceil(maxAbs / magnitude) * magnitude;
-
-  return (
-    <div>
-      {/* Legend: ordered by frequency (most frequent first) */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center', marginBottom: '16px' }}>
-        {tiposOrdenados.map(tipo => {
-          const t = resumen_tipos.find(r => r.tipo === tipo);
-          return (
-            <div key={tipo} style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.78rem' }}>
-              <div style={{ width: '14px', height: '14px', borderRadius: '2px', background: TIPO_COLORS[tipo] || '#999' }} />
-              <span style={{ fontWeight: 600 }}>{tipo}</span>
-              <span style={{ color: 'var(--color-gray-500)' }}>({t?.pct || 0}%)</span>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Header: same style as other pyramids */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '4px', marginBottom: '8px' }}>
-        <span style={{ color: '#4A90D9', fontWeight: 700, fontSize: '0.85rem' }}>Hombres</span>
-        <span style={{ color: 'var(--color-gray-400)' }}>|</span>
-        <span style={{ color: '#E74C3C', fontWeight: 700, fontSize: '0.85rem' }}>Mujeres</span>
-      </div>
-
-      <ResponsiveContainer width="100%" height={600}>
-        <BarChart
-          layout="vertical"
-          data={chartData}
-          margin={{ top: 5, right: 30, bottom: 20, left: 10 }}
-          stackOffset="sign"
-          barCategoryGap="6%"
-          barGap={0}
-          barSize={20}
-        >
-          <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#ddd" />
-          <XAxis
-            type="number"
-            domain={[-axisBound, axisBound]}
-            tickFormatter={(v) => {
-              const abs = Math.abs(v);
-              if (abs >= 1000) return (abs/1000).toFixed(abs >= 10000 ? 0 : 1) + 'K';
-              return abs.toString();
-            }}
-            tick={{ fontSize: 11 }}
-            axisLine={{ stroke: '#999' }}
-          />
-          <YAxis type="category" dataKey="grupo_edad" width={50} tick={{ fontSize: 11, fontWeight: 600 }} axisLine={false} tickLine={false} />
-          <ReferenceLine x={0} stroke="#333" strokeWidth={2} />
-          <Tooltip
-            content={({ active, payload, label }) => {
-              if (!active || !payload || !payload.length) return null;
-              const row = chartData.find(r => r.grupo_edad === label) || {};
-              // Build tooltip items sorted by total (h+m) descending
-              const items = tiposOrdenados.map(tipo => ({
-                tipo,
-                h: row[`abs_h_${tipo}`] || 0,
-                m: row[`abs_m_${tipo}`] || 0,
-                total: (row[`abs_h_${tipo}`] || 0) + (row[`abs_m_${tipo}`] || 0),
-              })).filter(x => x.total > 0).sort((a, b) => b.total - a.total);
-
-              return (
-                <div style={{ background: '#fff', border: '1px solid #ddd', borderRadius: '6px', padding: '10px 14px', fontSize: '0.8rem', maxWidth: '320px', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
-                  <div style={{ fontWeight: 700, marginBottom: '6px', borderBottom: '1px solid #eee', paddingBottom: '4px' }}>{label} anos</div>
-                  {items.map(({ tipo, h, m, total: t }) => (
-                    <div key={tipo} style={{ display: 'flex', gap: '8px', alignItems: 'center', marginBottom: '3px' }}>
-                      <div style={{ width: '10px', height: '10px', borderRadius: '2px', background: TIPO_COLORS[tipo] || '#999', flexShrink: 0 }} />
-                      <span style={{ flex: 1, fontWeight: 500 }}>{tipo}</span>
-                      <span style={{ color: '#4A90D9' }}>H:{h.toLocaleString()}</span>
-                      <span style={{ color: '#E74C3C' }}>M:{m.toLocaleString()}</span>
-                      <span style={{ fontWeight: 700 }}>{t.toLocaleString()}</span>
-                    </div>
-                  ))}
-                  <div style={{ borderTop: '1px solid #eee', marginTop: '4px', paddingTop: '4px', fontWeight: 600, display: 'flex', justifyContent: 'space-between' }}>
-                    <span>Total:</span>
-                    <span style={{ color: '#4A90D9' }}>H:{(row.total_h||0).toLocaleString()}</span>
-                    <span style={{ color: '#E74C3C' }}>M:{(row.total_m||0).toLocaleString()}</span>
-                    <span>{((row.total_h||0)+(row.total_m||0)).toLocaleString()}</span>
-                  </div>
-                </div>
-              );
-            }}
-          />
-          {/* Stacked bars: hombres (negative/left) - ordered by frequency */}
-          {tiposOrdenados.map(tipo => (
-            <Bar key={`h_${tipo}`} dataKey={`h_${tipo}`} name={`H-${tipo}`} fill={TIPO_COLORS[tipo] || '#999'} stackId="hombres" />
-          ))}
-          {/* Stacked bars: mujeres (positive/right) - same order */}
-          {tiposOrdenados.map(tipo => (
-            <Bar key={`m_${tipo}`} dataKey={`m_${tipo}`} name={`M-${tipo}`} fill={TIPO_COLORS[tipo] || '#999'} stackId="mujeres" />
-          ))}
-        </BarChart>
-      </ResponsiveContainer>
-
-      {/* Summary table */}
-      <div style={{ marginTop: '16px' }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.82rem' }}>
-          <thead>
-            <tr style={{ background: 'var(--color-gray-100)' }}>
-              <th style={{ padding: '6px 10px', textAlign: 'left', borderBottom: '2px solid var(--color-gray-200)' }}>Tipo de limitacion</th>
-              <th style={{ padding: '6px 10px', textAlign: 'right', borderBottom: '2px solid var(--color-gray-200)' }}>Hombres</th>
-              <th style={{ padding: '6px 10px', textAlign: 'right', borderBottom: '2px solid var(--color-gray-200)' }}>Mujeres</th>
-              <th style={{ padding: '6px 10px', textAlign: 'right', borderBottom: '2px solid var(--color-gray-200)' }}>Total</th>
-              <th style={{ padding: '6px 10px', textAlign: 'right', borderBottom: '2px solid var(--color-gray-200)' }}>%</th>
-            </tr>
-          </thead>
-          <tbody>
-            {resumen_tipos.map(t => (
-              <tr key={t.tipo} style={{ borderBottom: '1px solid var(--color-gray-200)' }}>
-                <td style={{ padding: '5px 10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                  <div style={{ width: '12px', height: '12px', borderRadius: '2px', background: TIPO_COLORS[t.tipo] || '#999' }} />
-                  {t.tipo}
-                </td>
-                <td style={{ padding: '5px 10px', textAlign: 'right' }}>{t.hombres.toLocaleString()}</td>
-                <td style={{ padding: '5px 10px', textAlign: 'right' }}>{t.mujeres.toLocaleString()}</td>
-                <td style={{ padding: '5px 10px', textAlign: 'right', fontWeight: 600 }}>{t.total.toLocaleString()}</td>
-                <td style={{ padding: '5px 10px', textAlign: 'right', fontWeight: 600 }}>{t.pct}%</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div style={{ textAlign: 'center', marginTop: '12px', fontSize: '0.78rem', color: 'var(--color-gray-500)' }}>
-        Total personas con capacidades diversas: {total.toLocaleString()} | Fuente: CNPV 2018 via REDATAM
       </div>
     </div>
   );
@@ -1283,7 +844,7 @@ function TabDemografia({ codPueblo, nombrePueblo }) {
             <span>Cargando piramide poblacional...</span>
           </div>
         ) : hasPyramid ? (
-          <PopulationPyramid piramideData={piramideData} nombrePueblo={nombrePueblo} />
+          <PiramidePoblacional piramideData={piramideData} nombrePueblo={nombrePueblo} />
         ) : (
           <div style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--color-gray-400)' }}>
             No se encontraron datos de piramide poblacional para este pueblo.
