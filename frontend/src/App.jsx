@@ -51,8 +51,8 @@ export default function App() {
             <Route path="/proyecciones" element={<ProyeccionesPage />} />
             <Route path="/voz-propia" element={<VozPropiaPage />} />
             <Route path="/indicadores" element={<IndicadoresPage />} />
-            <Route path="/informes" element={<InformesPage />} />
-            <Route path="/informes-v2" element={<InformesPageV2 />} />
+            <Route path="/informes" element={<InformesPageV2 />} />
+            <Route path="/informes-legacy" element={<InformesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/formulario" element={<RequireAuth><FormularioPage /></RequireAuth>} />
             <Route path="*" element={

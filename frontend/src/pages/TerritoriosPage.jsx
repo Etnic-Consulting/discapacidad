@@ -857,19 +857,6 @@ export default function TerritoriosPage() {
                 </div>
               ))}
 
-              {/* ---- INDICATOR SELECTOR (future) ---- */}
-              <div style={S.divider} />
-              <div style={S.sectionTitle}>Indicador</div>
-              <select style={S.select} defaultValue="prevalencia_general">
-                <option value="prevalencia_general">Prevalencia general</option>
-                <option disabled value="por_tipo" style={{ color: 'var(--color-gray-400)' }}>
-                  Por tipo de capacidad (pronto)
-                </option>
-                <option disabled value="conflicto" style={{ color: 'var(--color-gray-400)' }}>
-                  Conflicto armado (pronto)
-                </option>
-              </select>
-
               {/* ---- DEPARTMENT FILTER (synced with global context) ---- */}
               <div style={S.divider} />
               <div style={S.sectionTitle}>Filtrar por departamento</div>

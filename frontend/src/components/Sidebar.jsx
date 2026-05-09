@@ -20,14 +20,13 @@ const NAV_GROUPS = [
     label: 'Monitoreo',
     items: [
       { id: 'voz-propia',   to: '/voz-propia',   label: 'Voz Propia — SMT',     initial: 'VP', num: '06' },
-      { id: 'indicadores',  to: '/indicadores',  label: 'Indicadores',           initial: 'IN', num: '07' },
     ],
   },
   {
     label: 'Producción',
     items: [
-      { id: 'informes',     to: '/informes',     label: 'Informes',              initial: 'IF', num: '08' },
-      { id: 'formulario',   to: '/formulario',   label: 'Formulario',            initial: 'FR', num: '09' },
+      { id: 'informes',     to: '/informes',     label: 'Informes',              initial: 'IF', num: '07' },
+      { id: 'formulario',   to: '/formulario',   label: 'Formulario',            initial: 'FR', num: '08' },
     ],
   },
 ];

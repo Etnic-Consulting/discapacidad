@@ -49,7 +49,50 @@ async def list_informes():
                           "size_kb": round(html.stat().st_size / 1024, 1)})
             n += 1
         por_tipo[tipo_dir.name] = n
-    return {"total": len(items), "por_tipo": por_tipo, "items": items[:500]}
+    return {"total": len(items), "por_tipo": por_tipo, "items": items}
+
+
+_CATALOG_CACHE: dict | None = None
+
+
+@router.get("/_catalog")
+async def get_catalog():
+    """Catálogo estructurado para selector cascada · cacheado en memoria.
+
+    Devuelve por cada nivel los informes con id+nombre+jerarquía. El frontend
+    puede armar selects encadenados sin pegarle a /geo/* (que devuelve GeoJSON
+    pesado). Construido al primer request leyendo el JSON canónico de cada
+    informe pre-renderizado en _static/informes/.
+    """
+    global _CATALOG_CACHE
+    if _CATALOG_CACHE is not None:
+        return _CATALOG_CACHE
+    if not INFORMES_DIR.exists():
+        return {"macro": [], "dpto": [], "mpio": [], "pueblo": [], "resguardo": []}
+    catalog: dict[str, list[dict]] = {n: [] for n in NIVELES_VALIDOS}
+    for tipo in NIVELES_VALIDOS:
+        tipo_dir = INFORMES_DIR / tipo
+        if not tipo_dir.exists():
+            continue
+        for json_path in sorted(tipo_dir.glob("*.json")):
+            if json_path.name.endswith(".llm.json"):
+                continue
+            try:
+                data = json.loads(json_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, OSError):
+                continue
+            entry: dict = {"id": json_path.stem, "nombre": data.get("nombre") or json_path.stem}
+            ib = (data.get("secciones") or {}).get("info_basica") or {}
+            for k in ("cod_dpto", "cod_mpio", "macro", "dpto", "mpio", "pueblo_onic"):
+                if k in ib and ib[k] is not None:
+                    entry[k] = ib[k]
+            # Para mpio sin info_basica, derivar cod_dpto del código DANE (primeros 2 chars)
+            if tipo == "mpio" and "cod_dpto" not in entry and len(entry["id"]) >= 5:
+                entry["cod_dpto"] = entry["id"][:2]
+            catalog[tipo].append(entry)
+        catalog[tipo].sort(key=lambda e: (e.get("nombre") or "").lower())
+    _CATALOG_CACHE = catalog
+    return catalog
 
 
 @router.get("/{tipo}/{id_}/data")

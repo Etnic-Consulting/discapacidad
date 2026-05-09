@@ -826,6 +826,26 @@ export default function PanoramaPage() {
         Registro de Localizacion y Caracterizacion de Personas con Capacidades Diversas (<Term term="RLCPD">RLCPD</Term>),
         Sistema de Monitoreo Territorial ONIC (<Term term="SMT">SMT-ONIC</Term>)
       </div>
+
+      {/* Link a indicadores nacionales detallados (degradado de top-nav) */}
+      <div style={{
+        textAlign: 'center',
+        marginTop: '8px',
+        padding: '8px',
+        fontSize: '0.85rem',
+      }}>
+        <Link
+          to="/indicadores"
+          style={{
+            color: 'var(--color-gray-500)',
+            textDecoration: 'none',
+            borderBottom: '1px dashed var(--color-gray-400)',
+            paddingBottom: '2px',
+          }}
+        >
+          Ver indicadores nacionales detallados →
+        </Link>
+      </div>
     </div>
   );
 }

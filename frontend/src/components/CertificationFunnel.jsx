@@ -134,11 +134,17 @@ export default function CertificationFunnel({ data, brecha }) {
 
   return (
     <div style={styles.container}>
-      {steps.map((step, i) => {
+      {!sinDatos && steps.map((step, i) => {
         const prevValue = i > 0 ? steps[i - 1].value : null;
         const pctOfPrev = prevValue ? pct(step.value, prevValue) : null;
         const pctOfTotal = pct(step.value, totalBase);
         const barWidth = widthMap[i] ?? Math.max(5, (step.value / totalBase) * 100);
+        // Paso pendiente · sistema en pre-operación: la captura territorial vía
+        // formulario propio aún no ha comenzado. Renderizar muted en lugar de "0".
+        const esPasoPendienteCaptura =
+          step.value === 0 &&
+          typeof step.source === 'string' &&
+          step.source.includes('SMT-ONIC');
 
         return (
           <div key={i} style={styles.stepWrapper}>
@@ -156,7 +162,12 @@ export default function CertificationFunnel({ data, brecha }) {
             )}
 
             {/* Funnel bar */}
-            <div style={styles.bar(barWidth, step.color)}>
+            <div
+              style={{
+                ...styles.bar(barWidth, step.color),
+                ...(esPasoPendienteCaptura ? { opacity: 0.55, background: 'var(--color-gray-400)' } : {}),
+              }}
+            >
               <div style={styles.label}>
                 {step.label}
                 {step.source && (
@@ -166,16 +177,24 @@ export default function CertificationFunnel({ data, brecha }) {
                 )}
               </div>
               <div style={styles.stats}>
-                <span style={styles.mainValue}>{formatNumber(step.value)}</span>
-                {pctOfPrev !== null && (
-                  <span style={styles.pctBadge}>
-                    {pctOfPrev}% del anterior
+                {esPasoPendienteCaptura ? (
+                  <span style={{ ...styles.mainValue, fontSize: '0.95rem', fontStyle: 'italic', fontWeight: 600 }}>
+                    Pendiente · captura territorial
                   </span>
-                )}
-                {i > 0 && (
-                  <span style={styles.pctBadge}>
-                    {pctOfTotal}% del total
-                  </span>
+                ) : (
+                  <>
+                    <span style={styles.mainValue}>{formatNumber(step.value)}</span>
+                    {pctOfPrev !== null && (
+                      <span style={styles.pctBadge}>
+                        {pctOfPrev}% del anterior
+                      </span>
+                    )}
+                    {i > 0 && (
+                      <span style={styles.pctBadge}>
+                        {pctOfTotal}% del total
+                      </span>
+                    )}
+                  </>
                 )}
               </div>
             </div>
@@ -183,8 +202,8 @@ export default function CertificationFunnel({ data, brecha }) {
         );
       })}
 
-      {/* Summary text · solo se renderiza si hay datos reales */}
-      {!sinDatos && steps[1]?.value != null && steps[steps.length - 1]?.value != null && (() => {
+      {/* Summary text · solo se renderiza si hay datos reales (incluido el cierre RLCPD/SMT) */}
+      {!sinDatos && steps[1]?.value != null && steps[steps.length - 1]?.value != null && steps[steps.length - 1].value > 0 && (() => {
         const conCD = steps[1].value;
         const conCert = steps[steps.length - 1].value;
         const pctCert = pct(conCert, conCD);

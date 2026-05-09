@@ -438,8 +438,9 @@ export function usePiramideCapDiversas(codPueblo) {
     queryKey: ['piramide-cap-diversas', codPueblo],
     queryFn: () => fetchPiramideCapDiversas(codPueblo),
     enabled: !!codPueblo,
-    staleTime: 5 * 60 * 1000,
-    retry: 1,
+    staleTime: 60 * 1000,
+    retry: 3,
+    retryDelay: (attempt) => Math.min(500 * 2 ** attempt, 4000),
   });
 }
 
@@ -448,8 +449,9 @@ export function usePiramideTipoDisc(codPueblo) {
     queryKey: ['piramide-tipo-disc', codPueblo],
     queryFn: () => fetchPiramideTipoDisc(codPueblo),
     enabled: !!codPueblo,
-    staleTime: 5 * 60 * 1000,
-    retry: 1,
+    staleTime: 60 * 1000,
+    retry: 3,
+    retryDelay: (attempt) => Math.min(500 * 2 ** attempt, 4000),
   });
 }
 

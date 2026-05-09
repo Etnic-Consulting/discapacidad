@@ -343,15 +343,34 @@ export default function ConflictoPage() {
             <div style={spinnerSmall}>Sin datos disponibles</div>
           ) : (
             <div role="img" aria-label="Grafico de barras: hechos victimizantes para victimas con capacidades diversas">
-              <ResponsiveContainer width="100%" height={380}>
+              <ResponsiveContainer width="100%" height={Math.max(520, hechosChart.length * 32)}>
                 <BarChart
                   data={hechosChart}
                   layout="vertical"
-                  margin={{ top: 10, right: 30, bottom: 5, left: 160 }}
+                  margin={{ top: 10, right: 30, bottom: 5, left: 280 }}
                 >
                   <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
                   <XAxis type="number" tick={{ fontSize: 11 }} />
-                  <YAxis type="category" dataKey="hecho" tick={{ fontSize: 11 }} width={150} />
+                  <YAxis
+                    type="category"
+                    dataKey="hecho"
+                    width={270}
+                    interval={0}
+                    tick={(props) => {
+                      const { x, y, payload } = props;
+                      const raw = payload.value || '';
+                      const max = 38;
+                      const display = raw.length > max ? raw.slice(0, max - 1) + '…' : raw;
+                      return (
+                        <g transform={`translate(${x},${y})`}>
+                          <text x={-6} y={0} dy={4} textAnchor="end" fontSize={11} fill="#333">
+                            <title>{raw}</title>
+                            {display}
+                          </text>
+                        </g>
+                      );
+                    }}
+                  />
                   <Tooltip formatter={(v) => [fmt(v), 'Victimas']} />
                   <Bar dataKey="cantidad" fill="#02432D" radius={[0, 4, 4, 0]} />
                 </BarChart>

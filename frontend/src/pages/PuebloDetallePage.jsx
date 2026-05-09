@@ -467,7 +467,7 @@ function TabPerfil({ perfil, codPueblo, nombrePueblo }) {
           <PopulationPyramid piramideData={piramideDiscData} nombrePueblo={`${nombrePueblo} (cap. diversas)`} />
         ) : (
           <div style={{ textAlign: 'center', padding: '30px 20px', color: 'var(--color-gray-400)', fontSize: '0.85rem' }}>
-            Datos de piramide de capacidades diversas en proceso de extraccion desde REDATAM.
+            Sin pirámide de capacidades diversas disponible para este pueblo. Si acabas de cargar el dashboard, recargá la página (Ctrl+F5) para forzar la consulta.
           </div>
         )}
       </div>
