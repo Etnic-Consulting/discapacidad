@@ -284,19 +284,198 @@ def render_macro(cod_id: int | str, output_root: Path, dry_run: bool = False) ->
 
 
 # ---------------------------------------------------------------------------
-# NIVEL DPTO (T02 · pendiente · Antigravity Codex GPT-5)
+# NIVEL DPTO (T02 · gemini-2.5-pro · 33 informes · S9 2026-05-09)
 # ---------------------------------------------------------------------------
+
+
+HTML_TEMPLATE_DPTO = """<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe departamental · {nombre}</title>
+<style>
+body{{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}}
+h1{{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}}
+h2{{color:#02432D;margin-top:2rem}}
+table{{width:100%;border-collapse:collapse;margin:1rem 0}}
+th{{background:#02432D;color:#fff;padding:.5rem;text-align:left}}
+td{{padding:.5rem;border-bottom:1px solid #eee}}
+td.num{{text-align:right;font-variant-numeric:tabular-nums}}
+.badge{{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}}
+.badge.warn{{background:#fef3c7;color:#92400e}}
+.badge.ok{{background:#d1fae5;color:#065f46}}
+.fuente{{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}}
+.kpi{{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}}
+.kpi b{{color:#02432D;font-size:1.2rem}}
+</style></head>
+<body>
+<h1>Informe departamental · {nombre}</h1>
+<p><span class="kpi">Población indígena · <b>{total_dpto:,}</b></span>
+<span class="kpi">Con cap. diversas · <b>{con_disc_dpto:,}</b></span>
+<span class="kpi">Prevalencia · <b>{prev_dpto:.1f}‰</b></span>
+<span class="kpi">Pueblos · <b>{n_pueblos}</b></span></p>
+
+<h2>Pueblos del departamento</h2>
+<table>
+<thead><tr><th>Pueblo</th><th>Población indígena</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+<tbody>
+{filas_pueblos}
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_dpto`. Generado
+el {fecha_iso}. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>
+"""
+
+
+def _fila_pueblo_html(p: dict) -> str:
+    nom = p["nom_pueblo"]
+    if p["con_disc"] >= 30:
+        total = f'{p["total"]:,}'.replace(",", ".")
+        con = f'{p["con_disc"]:,}'.replace(",", ".")
+        prev = f'{p["prevalencia_x_1000"]:.1f}'
+        return (
+            f'<tr><td>{nom}</td>'
+            f'<td class="num">{total}</td>'
+            f'<td class="num">{con}</td>'
+            f'<td class="num">{prev}‰</td>'
+            f'<td><span class="badge ok">CONFIABLE</span></td></tr>'
+        )
+    return (
+        f'<tr><td>{nom}</td>'
+        f'<td class="num">—</td>'
+        f'<td class="num">—</td>'
+        f'<td class="num">—‰</td>'
+        f'<td><span class="badge warn">n&lt;30</span></td></tr>'
+    )
 
 
 def render_dpto(cod_id: str, output_root: Path, dry_run: bool = False) -> dict:
     """Renderiza informe dpto · 33 departamentos (cod_dane 2 chars).
 
-    Pendiente T02 · Antigravity Codex GPT-5.
-    Query principal: pueblo.disc_dpto filtrado por cod_dpto, agregando por pueblo.
-    Plantilla: KPIs (total indígena, con CD, prevalencia) + tabla pueblos del dpto
-    con badge CONFIABLE/n<30 honesto.
+    Generado T02 · gemini-2.5-pro vía dispatch_envuelto.py · S9 2026-05-09.
+    Query principal: pueblo.disc_dpto JOIN pueblo.disc_nacional para nom_pueblo.
     """
-    raise NotImplementedError("render_dpto pendiente T02 · ver pizarra S9_render_multinivel")
+    cod_dpto_id = cod_id
+    conn = _conn()
+    try:
+        with conn.cursor() as cur:
+            cur.execute(
+                "SELECT nom_dpto, macro FROM geo.macro_dptos WHERE cod_dpto = %s LIMIT 1",
+                (cod_dpto_id,),
+            )
+            r = cur.fetchone()
+            if not r:
+                raise ValueError(f"Departamento cod_dpto={cod_dpto_id} no existe")
+            nom_dpto, macro_nombre = r[0].strip(), r[1].strip()
+
+            cur.execute(
+                """
+                SELECT
+                    cod_pueblo,
+                    COALESCE(pueblo, 'Pueblo ' || cod_pueblo::text) AS nom_pueblo,
+                    COALESCE(con_discapacidad, 0)::int AS con_disc,
+                    COALESCE(total, 0)::int AS total
+                FROM pueblo.disc_dpto
+                WHERE cod_dpto = %s AND periodo = '2018'
+                ORDER BY con_discapacidad DESC NULLS LAST
+                """,
+                (cod_dpto_id,),
+            )
+            pueblos_rows = cur.fetchall()
+
+            pueblos_info = []
+            for row in pueblos_rows:
+                cod_pueblo, nom_pueblo, con_disc, total = row
+                prev = round(con_disc * 1000.0 / total, 2) if total > 0 else 0.0
+                pueblos_info.append({
+                    "cod_pueblo": int(cod_pueblo),
+                    "nom_pueblo": nom_pueblo,
+                    "con_disc": int(con_disc),
+                    "total": int(total),
+                    "prevalencia_x_1000": prev,
+                    "k_anonimato_aplicado": int(con_disc) < 30,
+                })
+
+            total_con_disc = sum(p["con_disc"] for p in pueblos_info)
+            total_total = sum(p["total"] for p in pueblos_info)
+            prev_dpto = round(total_con_disc * 1000.0 / total_total, 2) if total_total > 0 else 0.0
+
+            fecha_iso = datetime.now(tz=timezone.utc).isoformat()
+            input_hash = _input_hash(cod_dpto_id, nom_dpto, total_con_disc, total_total)
+
+            canonical = {
+                "tipo": "dpto",
+                "id": str(cod_dpto_id),
+                "nombre": nom_dpto,
+                "secciones": {
+                    "capacidades_diversas": {
+                        "con_discapacidad": {
+                            "value": total_con_disc,
+                            "_meta": {
+                                "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
+                                "table": "pueblo.disc_dpto",
+                                "period": "2018",
+                                "confiabilidad": _confiabilidad_badge(total_con_disc),
+                            },
+                        },
+                        "poblacion_referencia": {
+                            "value": total_total,
+                            "_meta": {"table": "pueblo.disc_dpto", "period": "2018"},
+                        },
+                        "prevalencia_x_1000": {
+                            "value": prev_dpto,
+                            "_meta": {"formula": "con_disc/total*1000"},
+                        },
+                    },
+                    "territorial": {
+                        "macro": macro_nombre,
+                        "n_pueblos": len(pueblos_info),
+                        "pueblos": pueblos_info,
+                        "_meta": {
+                            "fuente": "pueblo.disc_dpto",
+                            "period": "2018",
+                        },
+                    },
+                    "demografia": {"_sin_datos": True, "_nota": "ver informe por pueblo"},
+                    "lengua": {"_sin_datos": True, "_nota": "ver informe por pueblo"},
+                    "nbi": {"_sin_datos": True, "_nota": "ver informe por pueblo"},
+                    "conflicto": {"_sin_datos": True, "_nota": "ver informe nacional o por pueblo"},
+                    "icv": {"_sin_datos": True, "_nota": "ver informe por pueblo"},
+                },
+                "fecha_generacion": fecha_iso,
+                "periodo": "2018",
+                "_input_hash": input_hash,
+                "_generador": "render_informes.py",
+            }
+
+            json_path = output_root / "dpto" / f"{cod_dpto_id}.json"
+            html_path = output_root / "dpto" / f"{cod_dpto_id}.html"
+            _write_canonical(json_path, canonical, dry_run=dry_run)
+
+            filas_pueblos = "\n".join("    " + _fila_pueblo_html(p) for p in pueblos_info)
+            html = HTML_TEMPLATE_DPTO.format(
+                nombre=nom_dpto,
+                total_dpto=total_total,
+                con_disc_dpto=total_con_disc,
+                prev_dpto=prev_dpto,
+                n_pueblos=len(pueblos_info),
+                filas_pueblos=filas_pueblos,
+                fecha_iso=fecha_iso,
+            )
+            _write_html(html_path, html, dry_run=dry_run)
+
+            return {
+                "id": cod_dpto_id,
+                "nombre": nom_dpto,
+                "n_pueblos": len(pueblos_info),
+                "total_con_disc": total_con_disc,
+                "total_total": total_total,
+                "prev_dpto": prev_dpto,
+                "json_path": str(json_path),
+                "html_path": str(html_path),
+            }
+    finally:
+        conn.close()
 
 
 # ---------------------------------------------------------------------------
