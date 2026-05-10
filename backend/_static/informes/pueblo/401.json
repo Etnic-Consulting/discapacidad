@@ -4,6 +4,8 @@
   "nombre": "MACAGUANE",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 36,
         "_meta": {
@@ -94,7 +96,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:09.069934+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.544786+00:00",
   "periodo": "2018",
   "_input_hash": "ddd7fa8be218d48a",
   "_generador": "render_informes.py"

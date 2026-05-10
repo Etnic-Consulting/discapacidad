@@ -4,6 +4,8 @@
   "nombre": "YUKPA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 107,
         "_meta": {
@@ -129,7 +131,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.369936+00:00",
+  "fecha_generacion": "2026-05-10T22:03:07.781801+00:00",
   "periodo": "2018",
   "_input_hash": "ec6c212000c7a79d",
   "_generador": "render_informes.py"

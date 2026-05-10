@@ -4,6 +4,8 @@
   "nombre": "MISAK",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 2059,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.708376+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.234946+00:00",
   "periodo": "2018",
   "_input_hash": "63210785644262fe",
   "_generador": "render_informes.py"

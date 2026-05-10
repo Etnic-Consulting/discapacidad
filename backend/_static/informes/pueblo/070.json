@@ -4,6 +4,8 @@
   "nombre": "BARASANO",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 36,
         "_meta": {
@@ -94,7 +96,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:07.964074+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.576096+00:00",
   "periodo": "2018",
   "_input_hash": "3527d01063cf41a6",
   "_generador": "render_informes.py"

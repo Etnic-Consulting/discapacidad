@@ -4,6 +4,8 @@
   "nombre": "YAGUA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 46,
         "_meta": {
@@ -114,7 +116,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.242688+00:00",
+  "fecha_generacion": "2026-05-10T22:03:07.691013+00:00",
   "periodo": "2018",
   "_input_hash": "2b8a3c705e16254e",
   "_generador": "render_informes.py"

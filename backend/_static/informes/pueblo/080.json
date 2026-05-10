@@ -4,6 +4,8 @@
   "nombre": "BARI",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 236,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:07.995878+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.599761+00:00",
   "periodo": "2018",
   "_input_hash": "cde27e04124d0cf1",
   "_generador": "render_informes.py"

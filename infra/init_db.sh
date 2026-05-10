@@ -79,10 +79,15 @@ else
   ok "Descompresión completa · $(ls "$DISCAPACIDAD_DIR/bd_consolidada/" | wc -l) archivos"
 fi
 
-# 5 · Aplicar seeds (idempotentes)
-step "5/8 · Aplicando seeds 002-009..."
+# 5 · Aplicar seeds (idempotentes · 002-013)
+# T10 (2026-05-10) · Bug crítico fix: anteriormente solo se aplicaban 002-009.
+# Sin 010-011, el agregado nacional indígena queda mal asignado a Cumaribo (99773)
+# y Vichada (cod_dpto=99) · suma ~3.7M en lugar de ~1.83M esperado CNPV 2018.
+# Sin 012-013, /voz-propia y /panorama muestran agregados SMT vacíos o desactualizados.
+step "5/8 · Aplicando seeds 002-013..."
 SEEDS=(
   002_auth_formulario.sql
+  003_macro_dptos.sql
   003_seed_proyecciones_fac.sql
   004_seed_proyecciones_escenarios.sql
   005_seed_indicadores_definiciones.sql
@@ -90,6 +95,10 @@ SEEDS=(
   007_seed_triangulacion.sql
   008_seed_prev_estandarizada_stub.sql
   009_fix_pueblos_e2e.sql
+  010_fix_seed_99773_agregado_nacional.sql
+  011_fix_dpto_99_agregados_nacionales.sql
+  012_smt_resumen.sql
+  013_fix_trigger_dim_dptos.sql
 )
 for seed in "${SEEDS[@]}"; do
   if [[ -f "backend/sql/$seed" ]]; then
@@ -143,6 +152,21 @@ IND_COUNT=$(echo "$COUNTS" | grep "^indicadores:" | cut -d':' -f2)
 [[ "$ESC_COUNT" == "832" ]] || fail "proyecciones.escenarios=$ESC_COUNT (esperado 832)"
 [[ "$IND_COUNT" == "12" ]]  || fail "indicadores.definiciones=$IND_COUNT (esperado 12)"
 ok "Counts validados"
+
+# 7b · Sanity check universo poblacional indigena (T10 · post seeds 010-011)
+step "7b/8 · Sanity check universo indígena nacional (debe ser ~1.83M post seeds 010-011)..."
+TOTAL_IND=$(docker exec "$DB_CONTAINER" psql -U "$DB_USER" -d "$DB_NAME" -t -A -c "
+  SELECT SUM(pob_total)::int FROM cnpv.prevalencia_etnia_dpto
+  WHERE grupo_etnico='Indigena' AND periodo='2018';
+")
+echo "    Total indígenas nacional: $TOTAL_IND (esperado ~1.83M)"
+if [[ -n "$TOTAL_IND" && "$TOTAL_IND" -gt 3000000 ]]; then
+  fail "Universo indígena = $TOTAL_IND > 3M · seeds 010-011 NO se aplicaron correctamente (bug Cumaribo/Vichada vigente)"
+elif [[ -n "$TOTAL_IND" && "$TOTAL_IND" -lt 1700000 ]]; then
+  fail "Universo indígena = $TOTAL_IND < 1.7M · datos CNPV pueden estar incompletos"
+else
+  ok "Sanity check OK · $TOTAL_IND indígenas (rango esperado 1.7M-2.0M)"
+fi
 
 # 8 · Smoke test final
 step "8/8 · Ejecutando smoke tests..."

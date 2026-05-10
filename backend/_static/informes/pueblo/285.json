@@ -4,6 +4,8 @@
   "nombre": "NUTABE",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 11,
         "_meta": {
@@ -58,7 +60,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.675828+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.204998+00:00",
   "periodo": "2018",
   "_input_hash": "5f8e92c861d463f1",
   "_generador": "render_informes.py"

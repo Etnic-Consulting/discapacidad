@@ -4,6 +4,61 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · SemVer.
 
 ---
 
+## [1.4.1] · 2026-05-10 · Completitud render + handoff ingeniería ONIC
+
+Sprint `S9_render_multinivel` continuación (T08-T20) · branch `restore/v2-styling`.
+
+### Added
+
+- Documentación handoff completa en `_docs/`:
+  - `ARCHITECTURE.md` (3 capas Docker · 8 schemas DB · flujo datos REDATAM → render → API → Vite)
+  - `MATRIZ_AUTH_v1.md` (endpoints públicos vs auth vs admin · rationale doctrinal)
+  - `RUNBOOK_INCIDENTES.md` (10 incidentes con diagnóstico y acción)
+  - `CHECKLIST_GO_LIVE.md` (40 items binarios pre-go-live)
+
+### Fixed
+
+- **Completitud render multinivel** (`backend/scripts/render_informes.py:_ids_para_nivel`): mpio ahora itera sobre `geo.municipios` (1.122 ids) en vez de `cnpv.disc_indigena_mpio` (967). Los 155 mpios sin datos CNPV indígena usan fallback `pob_indigena=0, _sin_datos:true` honesto (NO inventan cifras).
+- **4 pueblos huérfanos cubiertos**: 433 JUHUP · 855 TAYRONAS · 860 CHITARERO · 940 INDIGENAS-BRASIL · ahora generan informe con `_sin_datos:true` vía UNION con `pueblo.pueblo_municipio`.
+- **Bug crítico `infra/init_db.sh`**: ahora aplica seeds 010-013 además de 002-009. Sin esto, el deploy producía nacional indígena ~3.7M en lugar de ~1.83M esperado CNPV 2018 (Cumaribo/Vichada bug). Agregado sanity check 7b validando rango 1.7M-2.0M.
+
+### Notes
+
+- **Total post-T09**: 2.127 informes regenerados (5 macro + 33 dpto + 1.122 mpio + 137 pueblo + 830 resguardo).
+- **Audit cells_dash_pct promedio 0.93%** (mejoró vs 1.01% pre-T08 · criterio plan <5% cumplido).
+- **Deuda heredada activa**: drift universo poblacional +46% en `pueblo.disc_dpto` (afros/sin-pertenencia leak) · NO filtrable runtime · diferido a sprint S10 dedicado · ver `_doctrina/LECCIONES.md` Caso 11 y `_docs/RUNBOOK_INCIDENTES.md` Incidente 10.
+
+---
+
+## [1.4.0] · 2026-05-09 · Re-render multinivel honesto · Sprint S9
+
+Sprint `S9_render_multinivel` (T01-T07) · branch `restore/v2-styling`.
+
+### Added
+
+- **Lógica W12-honesta extendida a 4 niveles**: dpto/mpio/pueblo/resguardo (antes solo macro).
+- **JSON canonical con trazabilidad**: campo `_meta` por cifra (query SQL, table origen, period, confiabilidad CONFIABLE/BAJA), `_input_hash` SHA256[:16] para integridad.
+- **HTML templates con k-anonimato VISUAL HONESTO**: badge `CONFIABLE` (verde) si `con_disc >= 30`, badge `n<30` (amarillo) con celdas `—` si menor. Reemplaza al generador histórico que usaba `n<30` falso.
+- **Pirámide CD edad×sexo en informes pueblo** (`HTML_TEMPLATE_PUEBLO` con SVG/CSS · barras horizontales H verde-azul / M morado).
+- **Tabla "Resguardos asociados" en informes mpio** (cruce `smt_geo.resguardos` × `mpio_cdpmp` · reusa lógica v1.3.0 sin copy-paste).
+
+### Changed
+
+- **Refactor `render_informes_macro.py` → `render_informes.py`** paramétrico con CLI `--nivel macro|dpto|mpio|pueblo|resguardo|todos` · `--ids` subset · `--dry-run` · `--output-root`.
+- **Helpers compartidos extraídos**: `_conn` · `_confiabilidad_badge` · `_input_hash` · `_write_canonical` · `_write_html`. Renderers ahora son 5 funciones aisladas con misma estructura.
+
+### Fixed
+
+- **Audit cells_dash_pct promedio 1.01%** post-rerender (criterio plan <5% cumplido). 33 dpto con dash>5% son legítimos (pueblos n<30 honestos).
+
+### Notes
+
+- **Total regenerado**: 1.955/2.114 informes (5+33+967+120+830 · 92.5%). Los 159 huérfanos cubiertos en v1.4.1.
+- **Modelos usados**: T01 Claude Opus 4.7 (arquitectura) · T02 gemini-2.5-pro (rechazo qwen-coder-7b previo) · T03/T04/T05 Claude Opus 4.7 (escalada regla #7 post fallo gemini-pro) · T06/T07 Claude Opus 4.7 (auditoría + manifest).
+- **Deuda heredada documentada**: drift universo poblacional `pueblo.disc_dpto` +46% (afros/sin-pertenencia leak · NO filtrable con WHERE porque la tabla no tiene `grupo_etnico`/`tipo_etnia`). NO es bug del render · es leak upstream. Sprint S10 dedicado para fix REDATAM re-extracción. Ver `_doctrina/LECCIONES.md` Caso 11.
+
+---
+
 ## [1.3.0] · 2026-05-09 · hotfix tabla resguardos en mpios
 
 Sprint `S7_render_dptos` (1 tarea) · branch `restore/v2-styling`.

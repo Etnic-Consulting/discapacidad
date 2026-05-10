@@ -4,6 +4,8 @@
   "nombre": "BORA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 61,
         "_meta": {
@@ -114,7 +116,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.056018+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.661830+00:00",
   "periodo": "2018",
   "_input_hash": "4b16cf3ec11a1a7a",
   "_generador": "render_informes.py"

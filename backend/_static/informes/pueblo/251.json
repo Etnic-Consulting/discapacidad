@@ -4,6 +4,8 @@
   "nombre": "BANIBA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 7,
         "_meta": {
@@ -58,7 +60,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.443611+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.997311+00:00",
   "periodo": "2018",
   "_input_hash": "de03d1d46a03e69c",
   "_generador": "render_informes.py"

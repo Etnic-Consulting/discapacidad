@@ -4,6 +4,8 @@
   "nombre": "AMORUA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 53,
         "_meta": {
@@ -109,7 +111,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:07.745061+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.397327+00:00",
   "periodo": "2018",
   "_input_hash": "f9c33e00efcb2747",
   "_generador": "render_informes.py"

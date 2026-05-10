@@ -4,6 +4,8 @@
   "nombre": "YERAL",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 35,
         "_meta": {
@@ -89,7 +91,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.786313+00:00",
+  "fecha_generacion": "2026-05-10T22:03:08.191143+00:00",
   "periodo": "2018",
   "_input_hash": "f1ef0c1f074cda8e",
   "_generador": "render_informes.py"

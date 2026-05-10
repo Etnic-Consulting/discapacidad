@@ -4,6 +4,8 @@
   "nombre": "SALIBA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 228,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:09.726331+00:00",
+  "fecha_generacion": "2026-05-10T22:03:07.132292+00:00",
   "periodo": "2018",
   "_input_hash": "92b138f5b09b04b8",
   "_generador": "render_informes.py"

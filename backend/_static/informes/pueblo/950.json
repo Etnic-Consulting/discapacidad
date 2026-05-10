@@ -4,6 +4,8 @@
   "nombre": "INDIGENAS-PANAMA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 2,
         "_meta": {
@@ -58,7 +60,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.806321+00:00",
+  "fecha_generacion": "2026-05-10T22:03:08.201080+00:00",
   "periodo": "2018",
   "_input_hash": "48d4295257a4e9af",
   "_generador": "render_informes.py"

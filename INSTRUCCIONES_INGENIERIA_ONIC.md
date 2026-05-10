@@ -84,9 +84,15 @@ chmod +x infra/deploy_servidor_onic.sh
 ./infra/deploy_servidor_onic.sh
 ```
 
-> **Nota v1.0.2 · migraciones de integridad de datos**
+> **Nota v1.4.1 · migraciones de integridad de datos (seeds 010-013)**
 >
-> Como parte del despliegue, el equipo debe conocer que existen dos migraciones SQL adicionales (`010_fix_seed_99773_agregado_nacional.sql` y `011_fix_dpto_99_agregados_nacionales.sql`) necesarias para corregir un error en el seed CNPV 2018, donde los datos nacionales indígenas fueron asignados incorrectamente al `cod_mpio=99773` (Cumaribo) y al `cod_dpto=99` (Vichada). Estas migraciones son idempotentes, incluyen validación con `DO` block y deben ejecutarse en orden numérico ascendente para garantizar la integridad de las cifras agregadas. El script `init_db.sh` ya las aplica en orden; si se ejecuta manualmente, hacerlo después de los seeds 003-009.
+> El despliegue aplica 13 seeds SQL idempotentes en `backend/sql/` (002-013). Los 4 fixes críticos son:
+>
+> - `010_fix_seed_99773_agregado_nacional.sql` y `011_fix_dpto_99_agregados_nacionales.sql` corrigen un error en el seed CNPV 2018 donde los datos nacionales indígenas fueron asignados incorrectamente al `cod_mpio=99773` (Cumaribo) y al `cod_dpto=99` (Vichada). Sin estos, el total nacional indígena suma ~3.7M en vez de ~1.83M esperado.
+> - `012_smt_resumen.sql` crea vista materializada para dashboard SMT (`/voz-propia` y `/panorama`).
+> - `013_fix_trigger_dim_dptos.sql` arregla trigger que refresca FK al insertar dptos.
+>
+> El script `infra/init_db.sh` los aplica en orden automáticamente (T10 · 2026-05-10 · fix bug donde solo aplicaba 002-009). Incluye sanity check 7b validando que el agregado nacional indígena esté en rango 1.7M-2.0M. Si la suma da >3M, las migraciones 010-011 no se aplicaron · re-correr `init_db.sh` es idempotente.
 
 El script `deploy_servidor_onic.sh`:
 1. Valida pre-requisitos (docker, jq, curl, env vars).
@@ -153,6 +159,12 @@ Valida en orden:
 6. `/pueblos/` sin token retorna **401** (auth correctamente cerrada).
 7. `/pueblos/` con token retorna 200 con N pueblos.
 
+**Smoke informes v1.4.1** (nuevos · validar tras re-render multinivel):
+
+8. `/api/v1/informes/mpio/_catalog` retorna **1.122** entries.
+9. `/api/v1/informes/pueblo/660` retorna JSON canonical con `tipo:"pueblo"`, `nombre:"TIKUNA"`, `con_disc:397`.
+10. `/api/v1/informes/MANIFEST.json` retorna **2.127** informes totales (5 macro + 33 dpto + 1.122 mpio + 137 pueblo + 830 resguardo).
+
 Exit 0 = go-live OK · Exit 1 = abortar y rollback (ver `DEPLOY_PRODUCCION.md §7`).
 
 ---
@@ -199,13 +211,19 @@ Más detalle en `DEPLOY_PRODUCCION.md §7-§9` y `_docs/RUNBOOK_INCIDENTES.md`.
 
 ## §9 · Documentación complementaria en el repo
 
-- `DEPLOY_PRODUCCION.md` — guía detallada (10 secciones · referencia profunda).
-- `_docs/MATRIZ_AUTH_v1.md` — qué endpoints son públicos vs cerrados y por qué.
-- `_docs/RUNBOOK_INCIDENTES.md` — procedimientos de incidentes comunes.
-- `_docs/CHECKLIST_GO_LIVE.md` — checklist completo pre-go-live.
-- `_docs/METODO_FAC_v1.md` — metodología FAC (responde "¿de dónde sale el 0.939?").
-- `_docs/METODO_PROYECCIONES_v1.md` — metodología Lee-Carter aproximada (responde "¿de dónde salen las bandas IC ±15%?").
-- `_docs/DECISION_PUEBLOS_CANONICOS.md` — D1 = 115 pueblos (responde "¿por qué no 121 ni 102?").
+**Disponibles en `_docs/` (v1.4.1)**:
+
+- `DEPLOY_PRODUCCION.md` (raíz) — guía detallada de deploy (10 secciones · referencia profunda).
+- `_docs/ARCHITECTURE.md` — topología 3 capas + schemas DB + flujo datos + auth flow JWT.
+- `_docs/MATRIZ_AUTH_v1.md` — endpoints públicos vs auth vs admin con rationale doctrinal.
+- `_docs/RUNBOOK_INCIDENTES.md` — 10 incidentes típicos con diagnóstico + acción + escalation.
+- `_docs/CHECKLIST_GO_LIVE.md` — 40 items binarios pre-go-live.
+
+**Diferidos** (notas metodológicas internas · Wilson entrega aparte si ingeniería los necesita):
+
+- `_docs/METODO_FAC_v1.md` — metodología FAC (responde "¿de dónde sale el 0.939?") · pendiente extraer de notas internas.
+- `_docs/METODO_PROYECCIONES_v1.md` — Lee-Carter aproximada (bandas IC ±15%) · pendiente.
+- `_docs/DECISION_PUEBLOS_CANONICOS.md` — D1 = 115 pueblos (vs 121 vs 102) · pendiente.
 
 ---
 
@@ -224,4 +242,6 @@ Plantilla de minuta en `docs/MINUTA_HANDOFF_TEMPLATE.md`.
 
 **Contacto Director:** Wilson Herrera · `poblacion@onic.org.co`
 **Repo:** https://github.com/Etnic-Consulting/discapacidad
-**Estado al cierre:** rama `restore/v2-styling` · 11 commits prod-ready · Sprint S1 100% · Sprint S2 ~80% (resta solo deploy.yml habilitar tras D1 + minuta de handoff).
+**Estado al cierre:** rama `restore/v2-styling` · tag estable **v1.4.1** (2026-05-10) · Sprint S9_render_multinivel cerrado (7+13 tareas ENTREGADO) · **2.127 informes pre-renderizados** con lógica W12-honesta (k-anonimato real · JSON canonical con `_meta` trazable · 4 huérfanos cubiertos con `_sin_datos:true`). `init_db.sh` aplica seeds 002-013 (los 4 fixes 010-013 son CRÍTICOS · sin ellos nacional indígena queda mal asignado). 4 docs nuevos en `_docs/` (ARCHITECTURE, MATRIZ_AUTH_v1, RUNBOOK_INCIDENTES, CHECKLIST_GO_LIVE).
+
+**Deuda conocida heredada (no bloqueante go-live)**: drift universo poblacional `pueblo.disc_dpto` +46% (afros/sin-pertenencia leak) · NO filtrable runtime (tabla sin `grupo_etnico`) · documentado en `_doctrina/LECCIONES.md` Caso 11 (motor Visual_Agentes) + `_docs/RUNBOOK_INCIDENTES.md` Incidente 10. Sprint S10 dedicado para fix REDATAM re-extracción.

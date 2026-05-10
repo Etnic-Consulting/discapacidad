@@ -4,6 +4,8 @@
   "nombre": "AWA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 3318,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.320052+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.895702+00:00",
   "periodo": "2018",
   "_input_hash": "da4459b0bab315d5",
   "_generador": "render_informes.py"

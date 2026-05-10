@@ -4,6 +4,8 @@
   "nombre": "EMBERA-CHAMI",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 6713,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.630142+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.141550+00:00",
   "periodo": "2018",
   "_input_hash": "3ebecdc4452b5ae6",
   "_generador": "render_informes.py"

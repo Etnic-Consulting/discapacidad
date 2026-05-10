@@ -780,12 +780,24 @@ def render_pueblo(cod_id: int | str, output_root: Path, dry_run: bool = False) -
                 (cod_pueblo_id,),
             )
             r = cur.fetchone()
-            if not r:
-                raise ValueError(f"Pueblo cod_pueblo={cod_pueblo_id} no existe en pueblo.disc_nacional")
-            nom_pueblo, con_disc, total, tasa, confiabilidad_db = (
-                r[0].strip(), int(r[1]), int(r[2]), float(r[3]), r[4].strip()
-            )
-            confiabilidad = _confiabilidad_badge(con_disc) if confiabilidad_db == "" else confiabilidad_db
+            if r:
+                nom_pueblo, con_disc, total, tasa, confiabilidad_db = (
+                    r[0].strip(), int(r[1]), int(r[2]), float(r[3]), r[4].strip()
+                )
+                confiabilidad = _confiabilidad_badge(con_disc) if confiabilidad_db == "" else confiabilidad_db
+                sin_datos_disc = False
+            else:
+                # T08 fallback huérfanos · pueblo en pueblo.pueblo_municipio sin entrada disc_nacional
+                # (433 JUHUP · 855 TAYRONAS · 860 CHITARERO · 940 INDIGENAS-BRASIL).
+                cur.execute(
+                    "SELECT DISTINCT pueblo FROM pueblo.pueblo_municipio WHERE cod_pueblo = %s LIMIT 1",
+                    (cod_pueblo_id,),
+                )
+                rr = cur.fetchone()
+                nom_pueblo = (rr[0] or f"Pueblo {cod_pueblo_id}").strip() if rr else f"Pueblo {cod_pueblo_id}"
+                con_disc, total, tasa = 0, 0, 0.0
+                confiabilidad = "BAJA"
+                sin_datos_disc = True
 
             cur.execute(
                 """
@@ -815,6 +827,11 @@ def render_pueblo(cod_id: int | str, output_root: Path, dry_run: bool = False) -
                 "nombre": nom_pueblo,
                 "secciones": {
                     "capacidades_diversas": {
+                        "_sin_datos": sin_datos_disc,
+                        "_nota": (
+                            "pueblo huérfano sin entrada en pueblo.disc_nacional · "
+                            "ver informe nacional o por dpto"
+                        ) if sin_datos_disc else None,
                         "con_discapacidad": {
                             "value": con_disc,
                             "_meta": {
@@ -1088,12 +1105,26 @@ RENDERERS: dict[str, Callable[..., dict]] = {
 
 
 def _ids_para_nivel(nivel: str, conn) -> list:
-    """Devuelve lista de IDs disponibles en DB para el nivel · falla rápido si tabla no existe."""
+    """Devuelve lista de IDs disponibles en DB para el nivel · falla rápido si tabla no existe.
+
+    T08 (2026-05-10): mpio ahora itera sobre `geo.municipios` (catálogo geo completo
+    1.122 mpios) en vez de `cnpv.disc_indigena_mpio` (967 con datos disc). Los mpios
+    sin datos disc usan fallback `pob_indigena=0, _sin_datos:true` en render_mpio.
+    pueblo agrega UNION con `pueblo.pueblo_municipio` para cubrir 4 huérfanos sin
+    entrada en `disc_nacional` (433 JUHUP · 855 TAYRONAS · 860 CHITARERO · 940
+    INDIGENAS-BRASIL).
+    """
     queries = {
         "macro": "SELECT id FROM smt_geo.macrorregiones ORDER BY id",
         "dpto": "SELECT DISTINCT cod_dpto FROM geo.macro_dptos ORDER BY cod_dpto",
-        "mpio": "SELECT cod_mpio FROM cnpv.disc_indigena_mpio WHERE periodo = '2018' ORDER BY cod_mpio",
-        "pueblo": "SELECT cod_pueblo FROM pueblo.disc_nacional WHERE periodo = '2018' ORDER BY cod_pueblo",
+        "mpio": "SELECT cod_mpio FROM geo.municipios ORDER BY cod_mpio",
+        "pueblo": (
+            "SELECT cod_pueblo FROM pueblo.disc_nacional WHERE periodo = '2018' "
+            "UNION "
+            "SELECT DISTINCT cod_pueblo FROM pueblo.pueblo_municipio "
+            "WHERE cod_pueblo NOT IN (SELECT cod_pueblo FROM pueblo.disc_nacional WHERE periodo = '2018') "
+            "ORDER BY cod_pueblo"
+        ),
         "resguardo": "SELECT id_resguar FROM smt_geo.resguardos WHERE id_resguar IS NOT NULL ORDER BY id_resguar",
     }
     sql = queries.get(nivel)

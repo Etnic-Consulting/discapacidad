@@ -4,6 +4,8 @@
   "nombre": "KAKUA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 6,
         "_meta": {
@@ -69,7 +71,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:09.145604+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.608119+00:00",
   "periodo": "2018",
   "_input_hash": "15bfa2733420b113",
   "_generador": "render_informes.py"

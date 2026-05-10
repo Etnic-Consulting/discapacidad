@@ -4,6 +4,8 @@
   "nombre": "TOTORO",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 559,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:09.944651+00:00",
+  "fecha_generacion": "2026-05-10T22:03:07.379168+00:00",
   "periodo": "2018",
   "_input_hash": "e0c17c4218b58834",
   "_generador": "render_informes.py"

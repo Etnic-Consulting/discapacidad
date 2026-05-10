@@ -4,6 +4,8 @@
   "nombre": "TUYUKA",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 73,
         "_meta": {
@@ -124,7 +126,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.072025+00:00",
+  "fecha_generacion": "2026-05-10T22:03:07.535277+00:00",
   "periodo": "2018",
   "_input_hash": "aaed23eb2498f894",
   "_generador": "render_informes.py"

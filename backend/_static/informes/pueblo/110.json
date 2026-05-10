@@ -4,6 +4,8 @@
   "nombre": "CABIYARI",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 50,
         "_meta": {
@@ -104,7 +106,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.086501+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.693607+00:00",
   "periodo": "2018",
   "_input_hash": "1f2226a207c52afa",
   "_generador": "render_informes.py"

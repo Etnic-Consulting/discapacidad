@@ -4,6 +4,8 @@
   "nombre": "KOGUI",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 917,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:08.942685+00:00",
+  "fecha_generacion": "2026-05-10T22:03:06.469450+00:00",
   "periodo": "2018",
   "_input_hash": "ebad2871153616df",
   "_generador": "render_informes.py"

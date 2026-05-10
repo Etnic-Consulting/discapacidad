@@ -54,13 +54,15 @@ docker compose ps   # verificar smt-onic-db en estado healthy (5-15s)
 docker exec smt-onic-db psql -U smt_admin -d smt_onic -c "\dn"
 # Debe listar: cnpv, ext, geo, indicadores, pueblo, smt, smt_geo, victimas, visor_dane, public
 
-# 3.5 · Aplicar seeds en orden numérico ascendente (incluye fixes 010 y 011)
+# 3.5 · Aplicar seeds en orden numérico ascendente (incluye fixes 010-013)
 for f in 002_auth_formulario.sql 003_macro_dptos.sql 003_seed_proyecciones_fac.sql \
          004_seed_proyecciones_escenarios.sql 005_seed_indicadores_definiciones.sql \
          006_seed_indicadores_icv.sql 007_seed_triangulacion.sql \
          008_seed_prev_estandarizada_stub.sql 009_fix_pueblos_e2e.sql \
          010_fix_seed_99773_agregado_nacional.sql \
-         011_fix_dpto_99_agregados_nacionales.sql; do
+         011_fix_dpto_99_agregados_nacionales.sql \
+         012_smt_resumen.sql \
+         013_fix_trigger_dim_dptos.sql; do
   docker exec -i smt-onic-db psql -U smt_admin -d smt_onic < backend/sql/$f
 done
 

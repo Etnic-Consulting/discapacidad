@@ -4,6 +4,8 @@
   "nombre": "ARHUACO",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 1172,
         "_meta": {
@@ -149,7 +151,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:07.870272+00:00",
+  "fecha_generacion": "2026-05-10T22:03:05.521412+00:00",
   "periodo": "2018",
   "_input_hash": "4c634b80a2f50780",
   "_generador": "render_informes.py"

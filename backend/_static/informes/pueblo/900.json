@@ -4,6 +4,8 @@
   "nombre": "INDIGENAS-ECUADOR-",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 63,
         "_meta": {
@@ -119,7 +121,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.699108+00:00",
+  "fecha_generacion": "2026-05-10T22:03:08.058656+00:00",
   "periodo": "2018",
   "_input_hash": "e83b4f002b813a37",
   "_generador": "render_informes.py"

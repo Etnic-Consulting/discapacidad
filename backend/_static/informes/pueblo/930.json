@@ -4,6 +4,8 @@
   "nombre": "INDIGENAS-MEXICO",
   "secciones": {
     "capacidades_diversas": {
+      "_sin_datos": false,
+      "_nota": null,
       "con_discapacidad": {
         "value": 5,
         "_meta": {
@@ -58,7 +60,7 @@
       "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-10T04:16:10.774803+00:00",
+  "fecha_generacion": "2026-05-10T22:03:08.148635+00:00",
   "periodo": "2018",
   "_input_hash": "670a1d597144059b",
   "_generador": "render_informes.py"
