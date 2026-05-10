@@ -216,7 +216,7 @@ function PuebloPreview({ codPueblo, puebloNombre }) {
           </div>
           {edades.length > 0 && (
             <div style={{ flex: 1, minWidth: '300px' }}>
-              <div style={{ ...chartTitle, fontSize: '0.78rem' }}>Piramide de edad</div>
+              <div style={{ ...chartTitle, fontSize: '0.78rem' }}>Distribución por grupo de edad</div>
               <ResponsiveContainer width="100%" height={160}>
                 <BarChart data={edades} margin={{ top: 5, right: 10, bottom: 5, left: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e8e8e8" />
