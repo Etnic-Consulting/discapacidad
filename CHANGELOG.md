@@ -4,6 +4,25 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · SemVer.
 
 ---
 
+## [1.3.0] · 2026-05-09 · hotfix tabla resguardos en mpios
+
+Sprint `S7_render_dptos` (1 tarea) · branch `restore/v2-styling`.
+
+### Fixed
+
+- **Tabla "Resguardos asociados" en informes mpio** (W17 · `backend/scripts/fix_mpio_resguardos_table.py`). 44 HTMLs mpio tenían las columnas Dpto/Municipio vacías (`—`). Fix quirúrgico con regex que mapea cada resguardo a su dpto/mpio real desde `smt_geo.resguardos`. Idempotente · 360 filas arregladas · audit `flagged_informes.csv` cae de 50 → 6 (88% reducción · los 6 restantes son truncados borderline esperados).
+
+### Hallazgo
+
+El plan original v1.3 era extender `render_informes_macro.py` a los 33 dptos. La auditoría reveló que los **32 dptos ya tenían cifras correctas** (solo cod_dpto=88 San Andrés está truncado por falta de datos indígenas significativos · esperado). El bug real estaba en los **44 mpios** con la tabla "Resguardos asociados" rota. Plan ajustado al diagnóstico real.
+
+### Diferido a v1.4
+
+- Re-render de 1.121 mpios + 125 pueblos + 830 resguardos completo (este v1.3 solo arregló filas problemáticas · no regeneró desde cero)
+- Bug dispatcher cp1252 + telemetría task_id
+
+---
+
 ## [1.2.0] · 2026-05-09
 
 Sprint `S6_observatorio` · branch `restore/v2-styling` · 11 tareas drenadas.
