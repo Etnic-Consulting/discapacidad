@@ -5,439 +5,115 @@
   "secciones": {
     "capacidades_diversas": {
       "con_discapacidad": {
-        "value": 59304,
+        "value": 10767,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto IN (...) AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 59304,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
-        "value": 666124,
+        "value": 152193,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 89.0,
+        "value": 70.75,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
       }
     },
-    "conflicto": {
-      "victimas_total_disc": {
-        "value": 19048,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2) IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 19048,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 12106
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1793
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1421
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1297
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1011
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 314
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 279
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 226
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 140
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 104
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 12106
-      },
-      "pct_hecho_principal": 63.6
-    },
-    "demografia": {
-      "_nota": "agregación demográfica a nivel macro · ver sección territorial",
-      "n_dptos": 14,
-      "n_resguardos": 172
-    },
     "territorial": {
-      "n_resguardos": 172,
-      "n_departamentos": 14,
+      "n_departamentos": 6,
+      "n_pueblos_total": 371,
       "departamentos": [
         {
-          "cod_dpto": "18",
-          "nom_dpto": "AMAZONAS"
-        },
-        {
-          "cod_dpto": "18",
-          "nom_dpto": "CAQUETÁ"
-        },
-        {
-          "cod_dpto": "18",
-          "nom_dpto": "NARIÑO"
-        },
-        {
-          "cod_dpto": "19",
-          "nom_dpto": "CAQUETÁ"
-        },
-        {
-          "cod_dpto": "19",
-          "nom_dpto": "CAUCA"
-        },
-        {
-          "cod_dpto": "19",
-          "nom_dpto": "NARIÑO"
-        },
-        {
-          "cod_dpto": "52",
-          "nom_dpto": "PUTUMAYO"
-        },
-        {
           "cod_dpto": "86",
-          "nom_dpto": "NARIÑO"
-        },
-        {
-          "cod_dpto": "86",
-          "nom_dpto": "PUTUMAYO"
+          "nom_dpto": "PUTUMAYO",
+          "con_disc": 5314,
+          "total": 50013,
+          "prevalencia_x_1000": 106.25,
+          "n_pueblos": 82,
+          "k_anonimato_aplicado": false
         },
         {
           "cod_dpto": "91",
-          "nom_dpto": "AMAZONAS"
-        },
-        {
-          "cod_dpto": "91",
-          "nom_dpto": "CAQUETÁ"
-        },
-        {
-          "cod_dpto": "94",
-          "nom_dpto": "GUAINÍA"
-        },
-        {
-          "cod_dpto": "95",
-          "nom_dpto": "GUAVIARE"
+          "nom_dpto": "AMAZONAS",
+          "con_disc": 1702,
+          "total": 35627,
+          "prevalencia_x_1000": 47.77,
+          "n_pueblos": 65,
+          "k_anonimato_aplicado": false
         },
         {
           "cod_dpto": "97",
-          "nom_dpto": "VAUPÉS"
+          "nom_dpto": "VAUPÉS",
+          "con_disc": 1613,
+          "total": 24102,
+          "prevalencia_x_1000": 66.92,
+          "n_pueblos": 51,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_dpto": "94",
+          "nom_dpto": "GUAINÍA",
+          "con_disc": 1194,
+          "total": 27780,
+          "prevalencia_x_1000": 42.98,
+          "n_pueblos": 44,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_dpto": "18",
+          "nom_dpto": "CAQUETÁ",
+          "con_disc": 518,
+          "total": 8402,
+          "prevalencia_x_1000": 61.65,
+          "n_pueblos": 64,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_dpto": "95",
+          "nom_dpto": "GUAVIARE",
+          "con_disc": 426,
+          "total": 6269,
+          "prevalencia_x_1000": 67.95,
+          "n_pueblos": 65,
+          "k_anonimato_aplicado": false
         }
       ],
-      "resguardos": [
-        {
-          "nombre": "PREDIO PUTUMAYO",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA CHORRERA",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 5829227.495
-        },
-        {
-          "nombre": "VAUPÉS",
-          "dpto": "VAUPÉS",
-          "dpto_ccdgo": "97",
-          "mpio": "MITÚ",
-          "pueblo_onic": "KUBEO",
-          "area_pg_ha": 3895776.278
-        },
-        {
-          "nombre": "CUENCA MEDIA Y ALTA DEL RÍO INIRÍDA",
-          "dpto": "GUAINÍA",
-          "dpto_ccdgo": "94",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 2245012.375
-        },
-        {
-          "nombre": "MIRITÍ - PARANÁ",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "MIRITÍ - PARANÁ",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 1603174.4
-        },
-        {
-          "nombre": "YAIGOJÉ - RÍO APAPORIS",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA PEDRERA",
-          "pueblo_onic": "TANIMUCA",
-          "area_pg_ha": 1037974.374
-        },
-        {
-          "nombre": "MORICHAL VIEJO, SANTA ROSA, CERRO CUCUY, SANTA CRUZ, CAÑO DANTA - OTROS",
-          "dpto": "GUAVIARE",
-          "dpto_ccdgo": "95",
-          "mpio": "EL RETORNO",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 668455.761
-        },
-        {
-          "nombre": "PUERTO SÁBALO - LOS MONOS",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 624487.793
-        },
-        {
-          "nombre": "MONOCHOA",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 414846.874
-        },
-        {
-          "nombre": "ARARA, BACATI, CARURÚ Y MIRAFLORES",
-          "dpto": "VAUPÉS",
-          "dpto_ccdgo": "97",
-          "mpio": "CARURÚ",
-          "pueblo_onic": "TUKANO",
-          "area_pg_ha": 289762.373
-        },
-        {
-          "nombre": "NUNUYA DE VILLAZUL",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "MIRITÍ - PARANÁ",
-          "pueblo_onic": "MUINA MURUI",
-          "area_pg_ha": 265265.445
-        },
-        {
-          "nombre": "RÍOS COTUHÉ Y PUTUMAYO",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "TARAPACÁ",
-          "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 252396.391
-        },
-        {
-          "nombre": "CURARE LOS INGLESES",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA PEDRERA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 249880.288
-        },
-        {
-          "nombre": "ADUCHE",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "91",
-          "mpio": "PUERTO SANTANDER",
-          "pueblo_onic": "ANDOQUE",
-          "area_pg_ha": 188401.739
-        },
-        {
-          "nombre": "LLANOS DEL YARÍ - YAGUARÁ II",
-          "dpto": "GUAVIARE",
-          "dpto_ccdgo": "95",
-          "mpio": "CALAMAR",
-          "pueblo_onic": "PIJAO",
-          "area_pg_ha": 146488.678
-        },
-        {
-          "nombre": "PUERTO NARIÑO",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "PUERTO NARIÑO",
-          "pueblo_onic": "MAGUTA, COCAMA",
-          "area_pg_ha": 140606.07
-        },
-        {
-          "nombre": "WITORA O HUITORA",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 131560.431
-        },
-        {
-          "nombre": "UITIBOC",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LETICIA",
-          "pueblo_onic": "COCAMA",
-          "area_pg_ha": 95486.92
-        },
-        {
-          "nombre": "VILLA CATALINA DE PUERTO ROSARIO",
-          "dpto": "PUTUMAYO",
-          "dpto_ccdgo": "86",
-          "mpio": "PUERTO GUZMÁN",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 68176.494
-        },
-        {
-          "nombre": "RESGUARDO INDÍGENA LA VICTORIA",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "Por definir",
-          "area_pg_ha": 61105.192
-        },
-        {
-          "nombre": "PUERTO CÓRDOBA",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA PEDRERA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 53411.834
-        },
-        {
-          "nombre": "KAMÉNTSÁ BIYA DE SIBUNDOY",
-          "dpto": "PUTUMAYO",
-          "dpto_ccdgo": "86",
-          "mpio": "MOCOA",
-          "pueblo_onic": "KAMËNTSA",
-          "area_pg_ha": 42630.2
-        },
-        {
-          "nombre": "LAGOS DEL DORADO, LAGOS DEL PASO Y EL REMANSO",
-          "dpto": "GUAVIARE",
-          "dpto_ccdgo": "95",
-          "mpio": "MIRAFLORES",
-          "pueblo_onic": "TUKANO",
-          "area_pg_ha": 41125.808
-        },
-        {
-          "nombre": "VUELTA DEL ALIVIO",
-          "dpto": "GUAVIARE",
-          "dpto_ccdgo": "95",
-          "mpio": "MIRAFLORES",
-          "pueblo_onic": "GUANANO",
-          "area_pg_ha": 40803.127
-        },
-        {
-          "nombre": "JERICÓ - CONSAYA",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 32717.501
-        },
-        {
-          "nombre": "YAVILLA II",
-          "dpto": "GUAVIARE",
-          "dpto_ccdgo": "95",
-          "mpio": "MIRAFLORES",
-          "pueblo_onic": "KUBEO",
-          "area_pg_ha": 31084.268
-        },
-        {
-          "nombre": "NUKANCHIPA ALPA AMUKUNAPA WASI",
-          "dpto": "PUTUMAYO",
-          "dpto_ccdgo": "86",
-          "mpio": "VILLAGARZÓN",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 30803.067
-        },
-        {
-          "nombre": "COMEYAFU",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA PEDRERA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 30702.062
-        },
-        {
-          "nombre": "CAMARITAGUA",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LA PEDRERA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 30634.67
-        },
-        {
-          "nombre": "COROPOYA",
-          "dpto": "CAQUETÁ",
-          "dpto_ccdgo": "18",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 28512.063
-        },
-        {
-          "nombre": "K 6 Y 11 CARRETERA LETICIA TARAPACA",
-          "dpto": "AMAZONAS",
-          "dpto_ccdgo": "91",
-          "mpio": "LETICIA",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 27244.1
-        }
-      ],
-      "bbox": [
-        -4.229406466198782,
-        -79.01021097538194,
-        4.045025830855876,
-        -66.8472154266633
-      ]
+      "_meta": {
+        "fuente": "pueblo.disc_dpto + geo.macro_dptos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no agregable a nivel macro · ver informes por pueblo"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver informe por pueblo"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.433,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.445,
-        "conflicto_norm": 1.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:40:55",
+  "fecha_generacion": "2026-05-10T00:50:45.251701+00:00",
   "periodo": "2018",
-  "_input_hash": "f7ebffaf76b60b1c"
+  "_input_hash": "47e582a1aa05647e",
+  "_generador": "render_informes_macro.py"
 }

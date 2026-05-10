@@ -43,6 +43,26 @@ async function request(path, params = {}) {
   return res.json();
 }
 
+// ---- Observatorio (formulario SMT) ----
+export function fetchObservatorioKpis() {
+  return request(`${BASE}/observatorio/kpis`);
+}
+export function fetchObservatorioTerritorial() {
+  return request(`${BASE}/observatorio/distribucion-territorial`);
+}
+export function fetchObservatorioTipos() {
+  return request(`${BASE}/observatorio/tipos-dificultad`);
+}
+export function fetchObservatorioAyudas() {
+  return request(`${BASE}/observatorio/ayudas-tecnicas`);
+}
+export function fetchObservatorioTimeline(bucket = 'week') {
+  return request(`${BASE}/observatorio/timeline`, { bucket });
+}
+export function fetchObservatorioUltimas(limit = 20) {
+  return request(`${BASE}/observatorio/ultimas-respuestas`, { limit });
+}
+
 // ---- Dashboard ----
 export function fetchResumenNacional() {
   return request(`${BASE}/dashboard/`);

@@ -5,451 +5,142 @@
   "secciones": {
     "capacidades_diversas": {
       "con_discapacidad": {
-        "value": 76135,
+        "value": 65762,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto IN (...) AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 76135,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
-        "value": 1190493,
+        "value": 750597,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 64.0,
+        "value": 87.61,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
       }
     },
-    "conflicto": {
-      "victimas_total_disc": {
-        "value": 25167,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2) IN (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 25167,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 16515
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 2198
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1609
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1450
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1102
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 678
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 380
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 315
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 268
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 196
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 16515
-      },
-      "pct_hecho_principal": 65.6
-    },
-    "demografia": {
-      "_nota": "agregación demográfica a nivel macro · ver sección territorial",
-      "n_dptos": 17,
-      "n_resguardos": 393
-    },
     "territorial": {
-      "n_resguardos": 393,
-      "n_departamentos": 17,
+      "n_departamentos": 9,
+      "n_pueblos_total": 635,
       "departamentos": [
         {
-          "cod_dpto": "05",
-          "nom_dpto": "ANTIOQUIA"
-        },
-        {
-          "cod_dpto": "17",
-          "nom_dpto": "CALDAS"
-        },
-        {
           "cod_dpto": "19",
-          "nom_dpto": "CAQUETÁ"
-        },
-        {
-          "cod_dpto": "19",
-          "nom_dpto": "CAUCA"
-        },
-        {
-          "cod_dpto": "27",
-          "nom_dpto": "CHOCÓ"
-        },
-        {
-          "cod_dpto": "27",
-          "nom_dpto": "VALLE DEL CAUCA"
-        },
-        {
-          "cod_dpto": "41",
-          "nom_dpto": "ANTIOQUIA"
-        },
-        {
-          "cod_dpto": "41",
-          "nom_dpto": "HUILA"
-        },
-        {
-          "cod_dpto": "44",
-          "nom_dpto": "LA GUAJIRA"
+          "nom_dpto": "CAUCA",
+          "con_disc": 28527,
+          "total": 307692,
+          "prevalencia_x_1000": 92.71,
+          "n_pueblos": 89,
+          "k_anonimato_aplicado": false
         },
         {
           "cod_dpto": "52",
-          "nom_dpto": "NARIÑO"
+          "nom_dpto": "NARIÑO",
+          "con_disc": 20010,
+          "total": 206239,
+          "prevalencia_x_1000": 97.02,
+          "n_pueblos": 68,
+          "k_anonimato_aplicado": false
         },
         {
-          "cod_dpto": "63",
-          "nom_dpto": "QUINDÍO"
+          "cod_dpto": "17",
+          "nom_dpto": "CALDAS",
+          "con_disc": 5905,
+          "total": 55632,
+          "prevalencia_x_1000": 106.14,
+          "n_pueblos": 78,
+          "k_anonimato_aplicado": false
         },
         {
-          "cod_dpto": "63",
-          "nom_dpto": "TOLIMA"
+          "cod_dpto": "27",
+          "nom_dpto": "CHOCÓ",
+          "con_disc": 4198,
+          "total": 68366,
+          "prevalencia_x_1000": 61.4,
+          "n_pueblos": 21,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_dpto": "76",
+          "nom_dpto": "VALLE DEL CAUCA",
+          "con_disc": 2826,
+          "total": 30659,
+          "prevalencia_x_1000": 92.18,
+          "n_pueblos": 105,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_dpto": "05",
+          "nom_dpto": "ANTIOQUIA",
+          "con_disc": 1610,
+          "total": 37398,
+          "prevalencia_x_1000": 43.05,
+          "n_pueblos": 93,
+          "k_anonimato_aplicado": false
         },
         {
           "cod_dpto": "66",
-          "nom_dpto": "RISARALDA"
+          "nom_dpto": "RISARALDA",
+          "con_disc": 1536,
+          "total": 29637,
+          "prevalencia_x_1000": 51.83,
+          "n_pueblos": 66,
+          "k_anonimato_aplicado": false
         },
         {
-          "cod_dpto": "76",
-          "nom_dpto": "CHOCÓ"
+          "cod_dpto": "41",
+          "nom_dpto": "HUILA",
+          "con_disc": 1023,
+          "total": 12120,
+          "prevalencia_x_1000": 84.41,
+          "n_pueblos": 62,
+          "k_anonimato_aplicado": false
         },
         {
-          "cod_dpto": "76",
-          "nom_dpto": "VALLE DEL CAUCA"
-        },
-        {
-          "cod_dpto": "86",
-          "nom_dpto": "CAUCA"
-        },
-        {
-          "cod_dpto": "86",
-          "nom_dpto": "PUTUMAYO"
+          "cod_dpto": "63",
+          "nom_dpto": "QUINDIO",
+          "con_disc": 127,
+          "total": 2854,
+          "prevalencia_x_1000": 44.5,
+          "n_pueblos": 53,
+          "k_anonimato_aplicado": false
         }
       ],
-      "resguardos": [
-        {
-          "nombre": "SALAQUÍ Y PAVARANDÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "RIOSUCIO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 105555.505
-        },
-        {
-          "nombre": "RÍOS JURUBIDA - CHORÍ Y ALTO BAUDÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "ALTO BAUDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 79915.729
-        },
-        {
-          "nombre": "PEÑA BLANCA - RÍO TRUANDÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "RIOSUCIO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 57755.44
-        },
-        {
-          "nombre": "RÍOS CATRÚ - DUBASA Y ANCOSO",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BAJO BAUDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 56734.223
-        },
-        {
-          "nombre": "ANDÁGUEDA",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BAGADÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 56337.365
-        },
-        {
-          "nombre": "RÍOS UVA Y POGUE - QUEBRADA TAPARAL",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BOJAYÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 50191.49
-        },
-        {
-          "nombre": "ALTO RÍO BOJAYÁ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BOJAYÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 49285.319
-        },
-        {
-          "nombre": "EL GRAN SÁBALO",
-          "dpto": "NARIÑO",
-          "dpto_ccdgo": "52",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 42482.522
-        },
-        {
-          "nombre": "RÍO CHAJERADÓ",
-          "dpto": "ANTIOQUIA",
-          "dpto_ccdgo": "05",
-          "mpio": "MURINDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 41757.339
-        },
-        {
-          "nombre": "JAGUAL RÍO CHINTADÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "CARMEN DEL DARIÉN",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 40656.386
-        },
-        {
-          "nombre": "NULPE MEDIO - ALTO Y RÍO SAN JUAN",
-          "dpto": "NARIÑO",
-          "dpto_ccdgo": "52",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 37887.346
-        },
-        {
-          "nombre": "RÍO BEBARÁ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "MEDIO ATRATO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 37140.654
-        },
-        {
-          "nombre": "JAIKERAZAVI",
-          "dpto": "ANTIOQUIA",
-          "dpto_ccdgo": "05",
-          "mpio": "MUTATÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 35318.238
-        },
-        {
-          "nombre": "MURRÍ - PANTANOS",
-          "dpto": "ANTIOQUIA",
-          "dpto_ccdgo": "05",
-          "mpio": "FRONTINO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 31727.254
-        },
-        {
-          "nombre": "OPOGADÓ - DOGUADÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BOJAYÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 29392.625
-        },
-        {
-          "nombre": "BELLAVISTA - UNIÓN PITALITO",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BAJO BAUDÓ",
-          "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 29196.749
-        },
-        {
-          "nombre": "LA TURBIA",
-          "dpto": "NARIÑO",
-          "dpto_ccdgo": "52",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 28627.987
-        },
-        {
-          "nombre": "YUNGILLO",
-          "dpto": "PUTUMAYO",
-          "dpto_ccdgo": "86",
-          "mpio": "MOCOA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 26663.539
-        },
-        {
-          "nombre": "UNIFICADO CHAMÍ DEL RÍO SAN JUAN",
-          "dpto": "RISARALDA",
-          "dpto_ccdgo": "66",
-          "mpio": "MISTRATÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 26225.631
-        },
-        {
-          "nombre": "RÍO DOMINGODÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "CARMEN DEL DARIÉN",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 24260.025
-        },
-        {
-          "nombre": "ALTO RÍO CUIA",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BOJAYÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 23089.662
-        },
-        {
-          "nombre": "RÍOS VALLE Y BOROBORO",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BAHÍA SOLANO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22993.76
-        },
-        {
-          "nombre": "CHAGPIEN TORDÓ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "EL LITORAL DEL SAN JUAN",
-          "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 22843.481
-        },
-        {
-          "nombre": "RÍO GUANGÜI",
-          "dpto": "CAUCA",
-          "dpto_ccdgo": "19",
-          "mpio": "TIMBIQUÍ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22525.404
-        },
-        {
-          "nombre": "CALLE SANTA ROSA RÍO SAIJA",
-          "dpto": "CAUCA",
-          "dpto_ccdgo": "19",
-          "mpio": "TIMBIQUÍ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22282.325
-        },
-        {
-          "nombre": "TORTUGAÑA, TELEMBÍ, PUNDE, PITADERO, BRAVO, TRONQUERÍA Y ZABALETA",
-          "dpto": "NARIÑO",
-          "dpto_ccdgo": "52",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 22118.439
-        },
-        {
-          "nombre": "PAVARANDÓ Y AMPARRADÓ MEDIO",
-          "dpto": "ANTIOQUIA",
-          "dpto_ccdgo": "05",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22061.907
-        },
-        {
-          "nombre": "NAPIPÍ",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BOJAYÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 21910.283
-        },
-        {
-          "nombre": "RÍO ORPÚA",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "BAJO BAUDÓ",
-          "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 21738.473
-        },
-        {
-          "nombre": "PUERTO ALEGRE Y LA DIVISA",
-          "dpto": "CHOCÓ",
-          "dpto_ccdgo": "27",
-          "mpio": "ALTO BAUDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 21729.353
-        }
-      ],
-      "bbox": [
-        -0.5622775888021904,
-        -79.01021097538194,
-        12.459443307577596,
-        -71.11295839529242
-      ]
+      "_meta": {
+        "fuente": "pueblo.disc_dpto + geo.macro_dptos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no agregable a nivel macro · ver informes por pueblo"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver informe por pueblo"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.396,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.32,
-        "conflicto_norm": 1.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T09:31:33",
+  "fecha_generacion": "2026-05-10T00:50:45.184973+00:00",
   "periodo": "2018",
-  "_input_hash": "c0d82f642654237c"
+  "_input_hash": "682ed43d74e8ca15",
+  "_generador": "render_informes_macro.py"
 }

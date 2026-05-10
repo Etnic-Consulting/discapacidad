@@ -4,6 +4,44 @@ Formato: [Keep a Changelog](https://keepachangelog.com/es/1.1.0/) · SemVer.
 
 ---
 
+## [1.2.0] · 2026-05-09
+
+Sprint `S6_observatorio` · branch `restore/v2-styling` · 11 tareas drenadas.
+
+### Added
+
+- **Endpoints `/api/v1/observatorio/*`** (W13-API · `backend/app/routers/observatorio.py`). 6 endpoints read-only sobre `smt.respuestas_formulario` + `smt.resumen` con k-anonimato k≥5 enforced en agregaciones territoriales: `/kpis`, `/distribucion-territorial`, `/tipos-dificultad`, `/ayudas-tecnicas`, `/timeline?bucket=week|month`, `/ultimas-respuestas?limit=N`.
+- **Página `/observatorio`** (W13-UI · `frontend/src/pages/ObservatorioPage.jsx`). Dashboard de captura territorial propia: 4 KPIs · 2 BarCharts territoriales · 2 BarCharts (tipos dificultad + ayudas técnicas) · LineChart timeline · tabla 20 últimas respuestas anonimizadas.
+- **6 hooks fetch en `lib/api.js`** para consumir endpoints observatorio.
+- **Script `render_informes_macro.py`** (W12-RENDER · `backend/scripts/`). Genera JSON+HTML correcto para los 5 macros desde `pueblo.disc_dpto + geo.macro_dptos`, k-anonimato HONESTO (n<30 solo si aplica de verdad). Reemplaza al pipeline histórico no commiteado.
+- **Heurística `cells_dash_pct`** en `audit_informes.py` (W12-AUDIT). Flagea HTMLs con >30% celdas `—` en tablas. Detectó 44 informes a re-renderizar en sprints futuros.
+- **Seed 200 fixtures** (W14 · `backend/scripts/W14_seed_smt_200.py`). 200 respuestas distribuidas (40/macro · 191 cpli=si · 9 cpli=no) con 9 tipos dificultades · 5 ayudas · 5 niveles educativos · 90 días dispersos. Idempotente.
+- **Script localhost fix** (W15 · `backend/scripts/W15_fix_localhost_paths.py`). Reemplaza paths absolutos `http://localhost:*` por relativos en HTMLs de informes. Idempotente · backup en `_audits/localhost_backups/`.
+
+### Fixed
+
+- **Tabla "Departamentos con mayor presencia" en informes macro** (W12). Antes mostraba TODAS las celdas con `—` y badge `n<30` falso (cifras reales en BD eran >> 30: CESAR 3.093 · LA GUAJIRA 5.059 · CHOCÓ 4.198 · CÓRDOBA 10.394 · MAGDALENA 955). Ahora muestra cifras reales · k-anonimato honesto.
+- **Duplicados cod_dpto en `territorial.departamentos` JSON canonical** macros (cod_dpto 23/44/47 con nombres confundidos). Resuelto al regenerar desde `geo.macro_dptos` con DISTINCT.
+- **Endpoint `/dashboard/smt-resumen`** (parcial vía W14): trigger ahora alimenta dimensiones reales (no `2026-F1` hardcoded · `2026-05` con datos vivos).
+
+### Changed
+
+- **Pipeline informes macro** ahora versionado en repo (`render_informes_macro.py`) · re-ejecutable cualquier momento contra DB en vivo.
+- **`backend/app/main.py`**: registra router `observatorio` (`/api/v1/observatorio` tag "Observatorio").
+
+### Technical · doctrina LOCAL-FIRST estricta
+
+100% tareas LLM pasaron por `dispatch_envuelto.py sembrar-uno` con cadena `local_first_codigo`. Ollama qwen2.5-coder:7b fue invocado como primer modelo siempre. Para tareas de modificación incremental en proyectos complejos, los outputs Ollama requirieron escalada a Claude Opus por calidad. Ver `outputs/W16_RELEASE_AUDIT.md` para distribución detallada.
+
+### Diferido a v1.3
+
+- Re-render de 33 dptos · 1.121 mpios · 125 pueblos · 830 resguardos con `render_informes_<nivel>.py`
+- Bug dispatcher cp1252 UnicodeEncodeError
+- Bug telemetría `task_id: unknown` en `metricas_v2.jsonl`
+- 5 HTMLs con `localhost` residual
+
+---
+
 ## [1.1.0] · 2026-05-09 · GA
 
 Sprint `S5_v1_1` · branch `restore/v2-styling` · 17 tareas drenadas en sesión autónoma.

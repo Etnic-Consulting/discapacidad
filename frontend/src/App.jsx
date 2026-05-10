@@ -18,6 +18,7 @@ import IndicadoresPage from './pages/IndicadoresPage';
 import InformesPage from './pages/InformesPage';
 import InformesPageV2 from './pages/InformesPageV2';
 import FormularioPage from './pages/FormularioPage';
+import ObservatorioPage from './pages/ObservatorioPage';
 import LoginPage from './pages/LoginPage';
 
 export default function App() {
@@ -55,6 +56,7 @@ export default function App() {
             <Route path="/informes-legacy" element={<InformesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/formulario" element={<RequireAuth><FormularioPage /></RequireAuth>} />
+            <Route path="/observatorio" element={<ObservatorioPage />} />
             <Route path="*" element={
               <div className="page-inner" style={{ textAlign: 'center', paddingTop: 80 }}>
                 <div style={{ fontFamily: 'var(--serif)', fontSize: '4rem', fontWeight: 300, color: 'var(--ink-faint)', marginBottom: 16 }}>404</div>

@@ -42,6 +42,23 @@ LLM_BLOQUEADO_PATRONES = (
 CITAS_REQUERIDAS = ("DANE", "CNPV")
 
 
+def _cells_dash_pct_html(html_path: Path) -> int:
+    """% de celdas <td> con `—` o `—‰` en HTML hermano · 0 si no existe."""
+    if not html_path.exists():
+        return 0
+    try:
+        text = html_path.read_text(encoding="utf-8", errors="ignore")
+    except OSError:
+        return 0
+    import re as _re
+    cells = _re.findall(r"<td[^>]*>(.*?)</td>", text, _re.DOTALL)
+    if not cells:
+        return 0
+    dash_set = {"—", "—‰", "&mdash;", "—‰", "-", "--"}
+    dash_count = sum(1 for c in cells if c.strip() in dash_set)
+    return int(dash_count * 100 / len(cells))
+
+
 def heuristicas(path: Path, tipo: str) -> dict:
     flags = {
         "tipo": tipo,
@@ -52,6 +69,7 @@ def heuristicas(path: Path, tipo: str) -> dict:
         "llm_bloqueado": 0,
         "sin_citas": 0,
         "todos_cero": 0,
+        "cells_dash_pct": 0,
     }
     try:
         size = path.stat().st_size
@@ -98,11 +116,16 @@ def heuristicas(path: Path, tipo: str) -> dict:
 
     _walk(data)
     flags["todos_cero"] = int(bool(valores) and all(v == 0 for v in valores))
+
+    # cells_dash_pct: % celdas con `—` en HTML hermano
+    html_path = Path(str(path).replace(".json", ".html"))
+    flags["cells_dash_pct"] = _cells_dash_pct_html(html_path)
     return flags
 
 
 def is_flagged(flags: dict) -> bool:
-    return any(int(flags[k]) for k in ("truncado", "falta_seccion", "llm_bloqueado", "sin_citas", "todos_cero"))
+    binarios = any(int(flags[k]) for k in ("truncado", "falta_seccion", "llm_bloqueado", "sin_citas", "todos_cero"))
+    return binarios or flags.get("cells_dash_pct", 0) > 30
 
 
 def main() -> int:
@@ -115,7 +138,7 @@ def main() -> int:
     out_dir.mkdir(parents=True, exist_ok=True)
     out_csv = out_dir / "flagged_informes.csv"
 
-    cols = ["tipo", "id", "size_kb", "truncado", "falta_seccion", "llm_bloqueado", "sin_citas", "todos_cero"]
+    cols = ["tipo", "id", "size_kb", "truncado", "falta_seccion", "llm_bloqueado", "sin_citas", "todos_cero", "cells_dash_pct"]
     rows_flagged: list[dict] = []
     total = 0
 
