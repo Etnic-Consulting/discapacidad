@@ -6,6 +6,32 @@ Sistema de Monitoreo Territorial (SMT) de la **Organización Nacional Indígena 
 
 ---
 
+## 🚀 Deploy a producción · ingeniería ONIC
+
+**Versión estable**: `v1.4.1` (2026-05-10) · rama `restore/v2-styling`.
+
+Si llegaste aquí para subir el sistema al servidor de producción, **leé en este orden**:
+
+1. **[INSTRUCCIONES_INGENIERIA_ONIC.md](INSTRUCCIONES_INGENIERIA_ONIC.md)** — guía de handoff (TL;DR + decisiones D1/D2/D3 + script único).
+2. **[DEPLOY_PRODUCCION.md](DEPLOY_PRODUCCION.md)** — referencia profunda (10 secciones).
+3. **[_docs/CHECKLIST_GO_LIVE.md](_docs/CHECKLIST_GO_LIVE.md)** — 40 items binarios pre-go-live.
+4. **[_docs/ARCHITECTURE.md](_docs/ARCHITECTURE.md)** — topología 3 capas + flujo datos.
+5. **[_docs/MATRIZ_AUTH_v1.md](_docs/MATRIZ_AUTH_v1.md)** — endpoints públicos vs auth.
+6. **[_docs/RUNBOOK_INCIDENTES.md](_docs/RUNBOOK_INCIDENTES.md)** — 10 incidentes típicos.
+7. **[_docs/CHECKPOINT_HANDOFF.md](_docs/CHECKPOINT_HANDOFF.md)** — estado final pre-handoff (smoke tests + builds + métricas).
+8. **[CHANGELOG.md](CHANGELOG.md)** — historial completo.
+
+Deploy en 1 comando (con `.env.prod` configurado):
+
+```bash
+git clone -b restore/v2-styling https://github.com/Etnic-Consulting/discapacidad.git smt-onic
+cd smt-onic && cp .env.prod.example .env.prod && $EDITOR .env.prod
+./infra/deploy_servidor_onic.sh
+./infra/smoke_tests.sh https://smt-onic.com   # esperar 7/7 PASS
+```
+
+---
+
 ## Objetivo
 
 Construir una herramienta de análisis y visualización que integre fuentes oficiales (CNPV 2018, CG 2005, RUV, DANE ArcGIS) con datos territoriales de la ONIC (830 resguardos, 13.868 comunidades, 268.274 viviendas) para:
