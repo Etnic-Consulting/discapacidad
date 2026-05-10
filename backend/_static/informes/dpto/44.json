@@ -3,378 +3,671 @@
   "id": "44",
   "nombre": "LA GUAJIRA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 389883,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 389883,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 5059,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 5059,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 389883,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 13.0,
+        "value": 12.98,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "720",
-          "con_disc": 4312,
-          "total": 367111
-        },
-        {
-          "cod_pueblo": "050",
-          "con_disc": 408,
-          "total": 12618
-        },
-        {
-          "cod_pueblo": "370",
-          "con_disc": 150,
-          "total": 6025
-        },
-        {
-          "cod_pueblo": "800",
-          "con_disc": 80,
-          "total": 1306
-        },
-        {
-          "cod_pueblo": "040",
-          "con_disc": 69,
-          "total": 2030
-        },
-        {
-          "cod_pueblo": "850",
-          "con_disc": 14,
-          "total": 247
-        },
-        {
-          "cod_pueblo": "820",
-          "con_disc": 5,
-          "total": 11
-        },
-        {
-          "cod_pueblo": "200",
-          "con_disc": 3,
-          "total": 13
-        },
-        {
-          "cod_pueblo": "999",
-          "con_disc": 3,
-          "total": 88
-        },
-        {
-          "cod_pueblo": "470",
-          "con_disc": 2,
-          "total": 7
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 29,
-      "resguardos": [
+      "macro": "NORTE",
+      "n_pueblos": 76,
+      "pueblos": [
         {
-          "nombre": "ALTA Y MEDIA GUAJIRA",
-          "mpio": "URIBIA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1085157.71
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 4312,
+          "total": 367111,
+          "prevalencia_x_1000": 11.75,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "KOGUI - MALAYO ARHUACO",
-          "mpio": "DIBULLA",
-          "pueblo_onic": "IJKU - ARHUACO",
-          "area_pg_ha": 407799.382
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 408,
+          "total": 12618,
+          "prevalencia_x_1000": 32.33,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "LOMAMATO",
-          "mpio": "HATONUEVO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 2274.053
+          "cod_pueblo": 370,
+          "nom_pueblo": "KOGUI",
+          "con_disc": 150,
+          "total": 6025,
+          "prevalencia_x_1000": 24.9,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "TRUPIOGACHO Y LA MESETA",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 2212.532
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 80,
+          "total": 1306,
+          "prevalencia_x_1000": 61.26,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "CERRODEO",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1457.4
+          "cod_pueblo": 40,
+          "nom_pueblo": "ARHUACO",
+          "con_disc": 69,
+          "total": 2030,
+          "prevalencia_x_1000": 33.99,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "MAYABANGLOMA",
-          "mpio": "FONSECA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1444.017
+          "cod_pueblo": 850,
+          "nom_pueblo": "KANKUAMO",
+          "con_disc": 14,
+          "total": 247,
+          "prevalencia_x_1000": 56.68,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL ZAHINO GUAYABITO MURIAYTUY",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1149.492
+          "cod_pueblo": 820,
+          "nom_pueblo": "MOKANA",
+          "con_disc": 5,
+          "total": 11,
+          "prevalencia_x_1000": 454.55,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "WOPUMUIN JUNAIN MAIKOU",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 809.673
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 3,
+          "total": 88,
+          "prevalencia_x_1000": 34.09,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MAÑATURE",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 648.776
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 3,
+          "total": 13,
+          "prevalencia_x_1000": 230.77,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL SOLDADO PARATE BIEN",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 580.632
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 2,
+          "total": 7,
+          "prevalencia_x_1000": 285.71,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUATRO DE NOVIEMBRE",
-          "mpio": "ALBANIA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 555.533
+          "cod_pueblo": 330,
+          "nom_pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "con_disc": 1,
+          "total": 12,
+          "prevalencia_x_1000": 83.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CAICEMAPA",
-          "mpio": "DISTRACCIÓN",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 516.283
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 1,
+          "total": 43,
+          "prevalencia_x_1000": 23.26,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PROVINCIAL",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 511.991
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 1,
+          "total": 5,
+          "prevalencia_x_1000": 200.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "UNA APUCHON",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 453.065
+          "cod_pueblo": 870,
+          "nom_pueblo": "QUIMBAYA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NUEVO ESPINAL",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 421.745
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 1,
+          "total": 5,
+          "prevalencia_x_1000": 200.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NUKAT MALEIWUA - NAPAJANAIN MALEIWA = BENDICION DE DIOS (PUIPUREN, YAWOLIA, GUANAPAIMANA, CHICHITUY, UJOLMANA, WARRALALAIN, JIRRUMANA)",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 375.277
+          "cod_pueblo": 350,
+          "nom_pueblo": "KAMËNTSA",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "TAMAQUITO II",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 299.7
+          "cod_pueblo": 434,
+          "nom_pueblo": "JUDPA",
+          "con_disc": 1,
+          "total": 9,
+          "prevalencia_x_1000": 111.11,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "OKOCHI",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 243.822
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 1,
+          "total": 5,
+          "prevalencia_x_1000": 200.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ALBERTO PUSHAINA",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 225.911
+          "cod_pueblo": 281,
+          "nom_pueblo": "EMBERA-KATIO",
+          "con_disc": 1,
+          "total": 37,
+          "prevalencia_x_1000": 27.03,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LAS DELICIAS",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 189.991
+          "cod_pueblo": 590,
+          "nom_pueblo": "SIONA",
+          "con_disc": 1,
+          "total": 8,
+          "prevalencia_x_1000": 125.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CERRO DE HATONUEVO",
-          "mpio": "HATONUEVO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 183.901
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NUMAIN MALEIWA (TIERRA DE DIOS)  (INTEGRADO POR KASISKA-ICHITU-PATAJATAMANA)",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 173.859
+          "cod_pueblo": 780,
+          "nom_pueblo": "YUKPA",
+          "con_disc": 1,
+          "total": 12,
+          "prevalencia_x_1000": 83.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PERRATPU",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 120.516
+          "cod_pueblo": 310,
+          "nom_pueblo": "GUANANO",
+          "con_disc": 1,
+          "total": 9,
+          "prevalencia_x_1000": 111.11,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RODEITO EL POZO",
-          "mpio": "HATONUEVO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 106.791
+          "cod_pueblo": 285,
+          "nom_pueblo": "NUTABE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CAÑA BRAVA",
-          "mpio": "HATONUEVO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 91.747
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 0,
+          "total": 30,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SUMAIN WAYUÚ UULIANA",
-          "mpio": "MAICAO",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 84.619
+          "cod_pueblo": 390,
+          "nom_pueblo": "MAKAGUAJE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "POTRERITO",
-          "mpio": "DISTRACCIÓN",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 80.636
+          "cod_pueblo": 400,
+          "nom_pueblo": "HITNU",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SAN FRANCISCO",
-          "mpio": "BARRANCAS",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 50.692
+          "cod_pueblo": 431,
+          "nom_pueblo": "KAKUA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MONTE HARMON",
-          "mpio": "RIOHACHA",
-          "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 40.793
+          "cod_pueblo": 433,
+          "nom_pueblo": "JUHUP",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 450,
+          "nom_pueblo": "MATAPI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 455,
+          "nom_pueblo": "JE´ERURIWA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 501,
+          "nom_pueblo": "POLINDARA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 520,
+          "nom_pueblo": "PIAROA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 20,
+          "nom_pueblo": "AMORUA",
+          "con_disc": 0,
+          "total": 17,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 550,
+          "nom_pueblo": "PUINAVE",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 610,
+          "nom_pueblo": "TAIWANO",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 620,
+          "nom_pueblo": "TANIMUKA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 621,
+          "nom_pueblo": "TINIGUA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 670,
+          "nom_pueblo": "TSIRIPU",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 680,
+          "nom_pueblo": "TUKANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 710,
+          "nom_pueblo": "WOUNAN",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 750,
+          "nom_pueblo": "YANACONA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 790,
+          "nom_pueblo": "YURUTI",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 890,
+          "nom_pueblo": "PANCHES",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 900,
+          "nom_pueblo": "INDIGENAS-ECUADOR-",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 910,
+          "nom_pueblo": "INDIGENAS-PERU",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 920,
+          "nom_pueblo": "INDIGENAS-VENEZUELA",
+          "con_disc": 0,
+          "total": 33,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 941,
+          "nom_pueblo": "YERAL",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 950,
+          "nom_pueblo": "INDIGENAS-PANAMA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 970,
+          "nom_pueblo": "MAYA-",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 530,
+          "nom_pueblo": "PIRATAPUYO",
+          "con_disc": 0,
+          "total": 10,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 21,
+          "nom_pueblo": "WIPIWI",
+          "con_disc": 0,
+          "total": 34,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 26,
+          "nom_pueblo": "YARURO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 0,
+          "total": 10,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 70,
+          "nom_pueblo": "BARASANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 80,
+          "nom_pueblo": "BARI",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 90,
+          "nom_pueblo": "BETOYE",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 110,
+          "nom_pueblo": "CABIYARI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 140,
+          "nom_pueblo": "CARIJONA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 150,
+          "nom_pueblo": "ETTE-E'NEKA",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 170,
+          "nom_pueblo": "COCAMA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 180,
+          "nom_pueblo": "COCONUCO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 190,
+          "nom_pueblo": "COREGUAJE",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 210,
+          "nom_pueblo": "AWA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 230,
+          "nom_pueblo": "CUIBA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 240,
+          "nom_pueblo": "CUNA-TULE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 270,
+          "nom_pueblo": "DUJOS",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 280,
+          "nom_pueblo": "EMBERA",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 282,
+          "nom_pueblo": "EMBERA-CHAMI",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 283,
+          "nom_pueblo": "EPERARA-SIAPIDARA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 284,
+          "nom_pueblo": "EMBERA-DOBIDA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        10.39675935221931,
-        -73.66494127508469,
-        12.459443307577596,
-        -71.11295839529242
-      ],
-      "nombre_dpto": "LA GUAJIRA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 1007,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 1007,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 824
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 56
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 53
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 20
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 13
-        },
-        {
-          "hecho": "Sin informacion",
-          "total": 13
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 12
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 6
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 4
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 824
-      },
-      "pct_hecho_principal": 81.8
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.08,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.065,
-        "conflicto_norm": 0.201
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:50:15",
+  "fecha_generacion": "2026-05-10T04:15:41.781046+00:00",
   "periodo": "2018",
-  "_input_hash": "d24ff22148a15a02"
+  "_input_hash": "d394bebd31aeb0cf",
+  "_generador": "render_informes.py"
 }

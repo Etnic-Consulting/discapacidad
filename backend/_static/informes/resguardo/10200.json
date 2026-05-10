@@ -3,19 +3,6 @@
   "id": "10200",
   "nombre": "CORINTO LÓPEZ ADENTRO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2654,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 2654,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "CORINTO LÓPEZ ADENTRO",
       "dpto": "CAUCA",
@@ -24,113 +11,48 @@
       "cod_mpio": "19142",
       "macro": "OCCIDENTE",
       "pueblo_onic": "NASA",
-      "organizacion_nacional": "CRIC",
       "organizacion_regional": "CRIC",
       "area_hectareas": 2803.077
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        3.0689496360000703,
-        -76.36606220899995,
-        3.199873035000053,
-        -76.17796367999995
-      ],
-      "area_hectareas": 2803.077,
-      "macro": "OCCIDENTE",
-      "dpto": "CAUCA",
-      "mpio": "CALOTO"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 394,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 394,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 206
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 73
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 31
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 28
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 28
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 17
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 5
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 206
-      },
-      "pct_hecho_principal": 52.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.024,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.079
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T11:16:22",
+  "fecha_generacion": "2026-05-10T04:16:16.046774+00:00",
   "periodo": "2018",
-  "_input_hash": "886c21851302cbee"
+  "_input_hash": "b8132fe42d0c04ff",
+  "_generador": "render_informes.py"
 }

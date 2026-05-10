@@ -3,171 +3,63 @@
   "id": "76895",
   "nombre": "ZARZAL",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 96,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 13,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 96,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 15,
-      "top": [
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 47
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 19
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "070",
-          "pueblo": "BARASANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "501",
-          "pueblo": "POLINDARA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "999",
-        "pueblo": "INDIGENA-SIN-INFORMACION",
-        "poblacion": 47
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 96,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 135.42,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "76",
+      "nom_dpto": "VALLE DEL CAUCA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        4.243862950759975,
-        -76.17135096992303,
-        4.466954687105039,
-        -75.877766359433
-      ],
-      "nombre_mpio": "ZARZAL",
-      "cod_dpto": "76"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 3,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 3,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3
-      },
-      "pct_hecho_principal": 100.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T19:20:55",
+  "fecha_generacion": "2026-05-10T04:16:05.912881+00:00",
   "periodo": "2018",
-  "_input_hash": "0ae734568c9817ff"
+  "_input_hash": "7fab1ce7ea62e7ab",
+  "_generador": "render_informes.py"
 }

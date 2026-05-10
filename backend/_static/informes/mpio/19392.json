@@ -3,171 +3,84 @@
   "id": "19392",
   "nombre": "LA SIERRA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1825,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 384,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1825,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 6,
-      "top": [
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1819
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "150",
-          "pueblo": "ETTE-E'NEKA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "790",
-          "pueblo": "YURUTI",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "750",
-        "pueblo": "YANACONA",
-        "poblacion": 1819
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1825,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 210.41,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 4,
       "resguardos": [
         {
-          "nombre": "EL MORAL",
+          "nombre_resguardo": "EL MORAL",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 42.051
+          "area_ha": 42.051
         },
         {
-          "nombre": "FRONTINO",
+          "nombre_resguardo": "EL OSO",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 38.682
+          "area_ha": 27.61
         },
         {
-          "nombre": "EL OSO",
+          "nombre_resguardo": "FRONTINO",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 27.61
+          "area_ha": 38.682
         },
         {
-          "nombre": "PUERTA DEL MACIZO",
+          "nombre_resguardo": "PUERTA DEL MACIZO",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 9.302
+          "area_ha": 9.302
         }
       ],
-      "bbox": [
-        2.133590631646327,
-        -76.93533352022405,
-        2.265707472237905,
-        -76.64019039884772
-      ],
-      "nombre_mpio": "LA SIERRA",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 61,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 61,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 43
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 9
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 4
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 43
-      },
-      "pct_hecho_principal": 70.5
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.004,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.012
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:46:49",
+  "fecha_generacion": "2026-05-10T04:15:50.255479+00:00",
   "periodo": "2018",
-  "_input_hash": "7fda106f48472e71"
+  "_input_hash": "fd339aaef1bb80f4",
+  "_generador": "render_informes.py"
 }

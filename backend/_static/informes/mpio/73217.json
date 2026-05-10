@@ -3,368 +3,234 @@
   "id": "73217",
   "nombre": "COYAIMA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 9302,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 141,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 9302,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 13,
-      "top": [
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 9284
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "435",
-          "pueblo": "MAKU",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "610",
-          "pueblo": "TAIWANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "790",
-          "pueblo": "YURUTI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "880",
-          "pueblo": "CALIMA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "200",
-        "pueblo": "PIJAO",
-        "poblacion": 9284
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 9302,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 15.16,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "73",
+      "nom_dpto": "TOLIMA",
       "n_resguardos": 34,
       "resguardos": [
         {
-          "nombre": "GUADUALITO",
+          "nombre_resguardo": "CASTILLA - ANGOSTURAS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 1088.355
+          "area_ha": 413.825
         },
         {
-          "nombre": "POTRERITO DOYARÉ",
+          "nombre_resguardo": "Chenche Agua Fria",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 554.438
+          "area_ha": 47.054
         },
         {
-          "nombre": "POTRERITO",
+          "nombre_resguardo": "CHENCHE AMAYARCO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 521.311
+          "area_ha": 501.494
         },
         {
-          "nombre": "CHENCHE AMAYARCO",
+          "nombre_resguardo": "CHENCHE ANGOSTURA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 501.494
+          "area_ha": 41.038
         },
         {
-          "nombre": "LOMAS DE HILARCO",
+          "nombre_resguardo": "CHENCHE BALSILLAS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 478.283
+          "area_ha": 42.266
         },
         {
-          "nombre": "TOTARCO PIEDRAS",
+          "nombre_resguardo": "CHENCHE BUENAVISTA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 476.299
+          "area_ha": 187.813
         },
         {
-          "nombre": "CASTILLA - ANGOSTURAS",
+          "nombre_resguardo": "CHENCHE BUENOS AIRES INDEPENDIENTE",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 413.825
+          "area_ha": 198.742
         },
         {
-          "nombre": "NUEVA ESPERANZA",
+          "nombre_resguardo": "CHENCHE BUENOS AIRES TRADICIONAL",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 412.623
+          "area_ha": 228.766
         },
         {
-          "nombre": "LA TUTIRA BONANZA",
+          "nombre_resguardo": "CHENCHE MEDIA LUNA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 375.026
+          "area_ha": 202.747
         },
         {
-          "nombre": "CHENCHE - SOCORRO - LOS GUAYABOS",
+          "nombre_resguardo": "CHENCHE - SOCORRO - LOS GUAYABOS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 360.477
+          "area_ha": 360.477
         },
         {
-          "nombre": "TOTARCO NIPLE",
+          "nombre_resguardo": "CHENCHE ZARAGOZA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 247.803
+          "area_ha": 65.776
         },
         {
-          "nombre": "ZANJA HONDA",
+          "nombre_resguardo": "FLORAL TRADICIONAL",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 238.565
+          "area_ha": 110.708
         },
         {
-          "nombre": "CHENCHE BUENOS AIRES TRADICIONAL",
+          "nombre_resguardo": "GUADUALITO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 228.766
+          "area_ha": 1088.355
         },
         {
-          "nombre": "CHENCHE MEDIA LUNA",
+          "nombre_resguardo": "HILARQUITO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 202.747
+          "area_ha": 116.0
         },
         {
-          "nombre": "CHENCHE BUENOS AIRES INDEPENDIENTE",
+          "nombre_resguardo": "LAS PALMAS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 198.742
+          "area_ha": 112.71
         },
         {
-          "nombre": "TOTARCO TAMARINDO",
+          "nombre_resguardo": "LA TUTIRA BONANZA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 196.958
+          "area_ha": 375.026
         },
         {
-          "nombre": "CHENCHE BUENAVISTA",
+          "nombre_resguardo": "LOMAS DE GUAGUARCO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 187.813
+          "area_ha": 148.442
         },
         {
-          "nombre": "TOTARCO DINDE - INDEPENDIENTE",
+          "nombre_resguardo": "LOMAS DE HILARCO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 184.359
+          "area_ha": 478.283
         },
         {
-          "nombre": "SAN MIGUEL",
+          "nombre_resguardo": "MENCHE SAN CAYETANO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 183.115
+          "area_ha": 126.006
         },
         {
-          "nombre": "SANTA MARTA DIAMANTE",
+          "nombre_resguardo": "MESAS DE SAN JUAN",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 175.906
+          "area_ha": 50.269
         },
         {
-          "nombre": "LOMAS DE GUAGUARCO",
+          "nombre_resguardo": "NUEVA ESPERANZA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 148.442
+          "area_ha": 412.623
         },
         {
-          "nombre": "MENCHE SAN CAYETANO",
+          "nombre_resguardo": "POTRERITO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 126.006
+          "area_ha": 521.311
         },
         {
-          "nombre": "HILARQUITO",
+          "nombre_resguardo": "POTRERITO DOYARÉ",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 116.0
+          "area_ha": 554.438
         },
         {
-          "nombre": "LAS PALMAS",
+          "nombre_resguardo": "SAN MIGUEL",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 112.71
+          "area_ha": 183.115
         },
         {
-          "nombre": "FLORAL TRADICIONAL",
+          "nombre_resguardo": "SANTA MARTA DIAMANTE",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 110.708
+          "area_ha": 175.906
         },
         {
-          "nombre": "SANTA MARTA PALMAR",
+          "nombre_resguardo": "SANTA MARTA PALMAR",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 102.359
+          "area_ha": 102.359
         },
         {
-          "nombre": "TRES ESQUINAS",
+          "nombre_resguardo": "TOTARCO DINDE - INDEPENDIENTE",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 100.592
+          "area_ha": 184.359
         },
         {
-          "nombre": "ZARAGOZA TAMARINDO",
+          "nombre_resguardo": "TOTARCO DINDE TRADICIONAL",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 98.087
+          "area_ha": 44.106
         },
         {
-          "nombre": "CHENCHE ZARAGOZA",
+          "nombre_resguardo": "TOTARCO NIPLE",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 65.776
+          "area_ha": 247.803
         },
         {
-          "nombre": "MESAS DE SAN JUAN",
+          "nombre_resguardo": "TOTARCO PIEDRAS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 50.269
+          "area_ha": 476.299
         },
         {
-          "nombre": "Chenche Agua Fria",
+          "nombre_resguardo": "TOTARCO TAMARINDO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 47.054
+          "area_ha": 196.958
         },
         {
-          "nombre": "TOTARCO DINDE TRADICIONAL",
+          "nombre_resguardo": "TRES ESQUINAS",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 44.106
+          "area_ha": 100.592
         },
         {
-          "nombre": "CHENCHE BALSILLAS",
+          "nombre_resguardo": "ZANJA HONDA",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 42.266
+          "area_ha": 238.565
         },
         {
-          "nombre": "CHENCHE ANGOSTURA",
+          "nombre_resguardo": "ZARAGOZA TAMARINDO",
           "pueblo_onic": "PIJAO",
-          "area_pg_ha": 41.038
+          "area_ha": 98.087
         }
       ],
-      "bbox": [
-        3.591487703140201,
-        -75.33118377308745,
-        3.9093888572716575,
-        -74.96322048785424
-      ],
-      "nombre_mpio": "COYAIMA",
-      "cod_dpto": "73"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 563,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 563,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 413
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 87
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 26
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 8
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 8
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 7
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 6
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 4
-        },
-        {
-          "hecho": "Tortura",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 413
-      },
-      "pct_hecho_principal": 73.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.034,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.113
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:22:53",
+  "fecha_generacion": "2026-05-10T04:16:04.057540+00:00",
   "periodo": "2018",
-  "_input_hash": "dbacf8dc2c36bd4c"
+  "_input_hash": "282f650e2d083294",
+  "_generador": "render_informes.py"
 }

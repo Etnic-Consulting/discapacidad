@@ -3,152 +3,63 @@
   "id": "13894",
   "nombre": "ZAMBRANO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 51,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 2,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 51,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 4,
-      "top": [
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 43
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "800",
-        "pueblo": "ZENU",
-        "poblacion": 43
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 51,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 39.22,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "13",
+      "nom_dpto": "BOLÍVAR",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        9.651602802268545,
-        -74.96633344205202,
-        9.872347454501798,
-        -74.78752760831713
-      ],
-      "nombre_mpio": "ZAMBRANO",
-      "cod_dpto": "13"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 168,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 168,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 135
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 9
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 6
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 4
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 3
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 135
-      },
-      "pct_hecho_principal": 80.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.01,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.034
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:22:41",
+  "fecha_generacion": "2026-05-10T04:15:46.904840+00:00",
   "periodo": "2018",
-  "_input_hash": "047d11b99ad4102d"
+  "_input_hash": "72314968596f352f",
+  "_generador": "render_informes.py"
 }

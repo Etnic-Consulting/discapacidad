@@ -3,163 +3,74 @@
   "id": "99624",
   "nombre": "SANTA ROSALIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1070,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 27,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1070,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 8,
-      "top": [
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 610
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 419
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 24
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "292",
-          "pueblo": "QUIZGO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "570",
-        "pueblo": "SALIBA",
-        "poblacion": 610
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 831,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 32.49,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "99",
+      "nom_dpto": "VICHADA",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "NUEVA ESPERANZA DEL TOMO",
+          "nombre_resguardo": "NUEVA ESPERANZA DEL TOMO",
           "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 9896.632
+          "area_ha": 9896.632
         },
         {
-          "nombre": "SANTA ROSALÍA",
+          "nombre_resguardo": "SANTA ROSALÍA",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 5363.64
+          "area_ha": 5363.64
         }
       ],
-      "bbox": [
-        4.708999780730848,
-        -71.07793104491958,
-        5.374274458936176,
-        -70.19700370461237
-      ],
-      "nombre_mpio": "SANTA ROSALIA",
-      "cod_dpto": "99"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 9,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 9,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 5
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Tortura",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 5
-      },
-      "pct_hecho_principal": 55.6
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.002
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:42:20",
+  "fecha_generacion": "2026-05-10T04:16:07.651678+00:00",
   "periodo": "2018",
-  "_input_hash": "f47174e9622b0106"
+  "_input_hash": "ff8e75514a961907",
+  "_generador": "render_informes.py"
 }

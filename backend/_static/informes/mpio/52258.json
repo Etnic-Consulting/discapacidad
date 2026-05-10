@@ -3,178 +3,69 @@
   "id": "52258",
   "nombre": "EL TABLON DE GOMEZ",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1911,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 474,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1911,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 8,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 1879
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 22
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 1879
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1911,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 248.04,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "INGA DE SAN PEDRO",
+          "nombre_resguardo": "INGA DE SAN PEDRO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 2648.238
+          "area_ha": 2648.238
         }
       ],
-      "bbox": [
-        1.28539526918834,
-        -77.1046888603313,
-        1.517864858633896,
-        -76.9041522460247
-      ],
-      "nombre_mpio": "EL TABLON DE GOMEZ",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 130,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 130,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 86
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 9
-        },
-        {
-          "hecho": "Tortura",
-          "total": 8
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 7
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 7
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 5
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 2
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 86
-      },
-      "pct_hecho_principal": 66.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.008,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.026
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:49:54",
+  "fecha_generacion": "2026-05-10T04:15:59.426896+00:00",
   "periodo": "2018",
-  "_input_hash": "3bfa18e018e67a62"
+  "_input_hash": "37b27e60a46f638c",
+  "_generador": "render_informes.py"
 }

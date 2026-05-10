@@ -3,171 +3,63 @@
   "id": "19532",
   "nombre": "PATIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 40,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 5,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 40,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 11,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "431",
-          "pueblo": "KAKUA",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "291",
-          "pueblo": "AMBALO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "450",
-          "pueblo": "MATAPI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 13
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 40,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 125.0,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        1.9352881840355312,
-        -77.20141662205731,
-        2.3297733050256277,
-        -76.89173577527333
-      ],
-      "nombre_mpio": "PATIA",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 48,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 48,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 35
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 7
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 35
-      },
-      "pct_hecho_principal": 72.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.003,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.01
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:47:56",
+  "fecha_generacion": "2026-05-10T04:15:50.442681+00:00",
   "periodo": "2018",
-  "_input_hash": "0e816b3c39628705"
+  "_input_hash": "7576c609a4429c51",
+  "_generador": "render_informes.py"
 }

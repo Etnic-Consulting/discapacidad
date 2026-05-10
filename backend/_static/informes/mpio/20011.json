@@ -3,196 +3,63 @@
   "id": "20011",
   "nombre": "AGUACHICA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 117,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 15,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 117,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 16,
-      "top": [
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 31
-        },
-        {
-          "cod_pueblo": "830",
-          "pueblo": "OTAVALEÑO",
-          "poblacion": 22
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "900",
-        "pueblo": "INDIGENAS-ECUADOR-",
-        "poblacion": 31
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 117,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 128.21,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "20",
+      "nom_dpto": "CESAR",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        7.99063987094349,
-        -73.7914225140849,
-        8.505870512914864,
-        -73.45656585475069
-      ],
-      "nombre_mpio": "AGUACHICA",
-      "cod_dpto": "20"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 22,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 22,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 16
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 16
-      },
-      "pct_hecho_principal": 72.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.004
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:50:38",
+  "fecha_generacion": "2026-05-10T04:15:50.890583+00:00",
   "periodo": "2018",
-  "_input_hash": "84d6b4f9a7e9ccc2"
+  "_input_hash": "f43d37d76972358a",
+  "_generador": "render_informes.py"
 }

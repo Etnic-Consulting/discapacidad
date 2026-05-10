@@ -3,200 +3,63 @@
   "id": "68001",
   "nombre": "BUCARAMANGA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 249,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 24,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 249,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 61
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 46
-        },
-        {
-          "cod_pueblo": "810",
-          "pueblo": "GUANE",
-          "poblacion": 28
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "690",
-          "pueblo": "U`WA",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "830",
-          "pueblo": "OTAVALEÑO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "021",
-          "pueblo": "WIPIWI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "026",
-          "pueblo": "YARURO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "720",
-        "pueblo": "WAYUU",
-        "poblacion": 61
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 236,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 101.69,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "68",
+      "nom_dpto": "SANTANDER",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        7.065436419692748,
-        -73.17219655606459,
-        7.266615673987884,
-        -73.04661147441095
-      ],
-      "nombre_mpio": "BUCARAMANGA",
-      "cod_dpto": "68"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 7,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 7,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 6
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 6
-      },
-      "pct_hecho_principal": 85.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:04:05",
+  "fecha_generacion": "2026-05-10T04:16:01.861641+00:00",
   "periodo": "2018",
-  "_input_hash": "fb3bd8962fdf0ee9"
+  "_input_hash": "b2bdf64e09abab66",
+  "_generador": "render_informes.py"
 }

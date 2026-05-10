@@ -3,286 +3,129 @@
   "id": "91001",
   "nombre": "LETICIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 18212,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 627,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 18212,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 9496
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 2588
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2148
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1799
-        },
-        {
-          "cod_pueblo": "740",
-          "pueblo": "YAGUA",
-          "poblacion": 615
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 379
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 265
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 208
-        },
-        {
-          "cod_pueblo": "490",
-          "pueblo": "OCAINA",
-          "poblacion": 158
-        },
-        {
-          "cod_pueblo": "450",
-          "pueblo": "MATAPI",
-          "poblacion": 81
-        },
-        {
-          "cod_pueblo": "480",
-          "pueblo": "NONUYA",
-          "poblacion": 55
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 50
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 48
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 46
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 45
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 42
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 38
-        },
-        {
-          "cod_pueblo": "410",
-          "pueblo": "MAKUNA",
-          "poblacion": 25
-        },
-        {
-          "cod_pueblo": "060",
-          "pueblo": "BARA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "731",
-          "pueblo": "MUINANE",
-          "poblacion": 11
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "660",
-        "pueblo": "TIKUNA",
-        "poblacion": 9496
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 17548,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 35.73,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "91",
+      "nom_dpto": "AMAZONAS",
       "n_resguardos": 13,
       "resguardos": [
         {
-          "nombre": "UITIBOC",
-          "pueblo_onic": "COCAMA",
-          "area_pg_ha": 95486.92
+          "nombre_resguardo": "ARARA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_ha": 12193.541
         },
         {
-          "nombre": "K 6 Y 11 CARRETERA LETICIA TARAPACA",
+          "nombre_resguardo": "ISLA DE RONDA",
+          "pueblo_onic": "COCAMA",
+          "area_ha": 52.137
+        },
+        {
+          "nombre_resguardo": "K 6 Y 11 CARRETERA LETICIA TARAPACA",
           "pueblo_onic": "UITOTO",
-          "area_pg_ha": 27244.1
+          "area_ha": 27244.1
         },
         {
-          "nombre": "MOCAGUA, MACEDONIA, EL VERGEL Y ZARAGOZA",
+          "nombre_resguardo": "LA PLAYA",
+          "pueblo_onic": "MAGUTA, COCAMA",
+          "area_ha": 49.608
+        },
+        {
+          "nombre_resguardo": "MOCAGUA, MACEDONIA, EL VERGEL Y ZARAGOZA",
           "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 18064.356
+          "area_ha": 18064.356
         },
         {
-          "nombre": "ARARA",
+          "nombre_resguardo": "NAZARETH",
           "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 12193.541
+          "area_ha": 1293.147
         },
         {
-          "nombre": "SANTA SOFÍA",
+          "nombre_resguardo": "PUERTO TRIUNFO",
+          "pueblo_onic": "MAGUTA, COCAMA",
+          "area_ha": 1129.338
+        },
+        {
+          "nombre_resguardo": "SAN ANTONIO DE LOS LAGOS Y SAN SEBASTIÁN",
           "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 3033.238
+          "area_ha": 187.462
         },
         {
-          "nombre": "TIITANHO NIJAAMU - LA LIBERTAD",
+          "nombre_resguardo": "SAN JOSÉ DEL RÍO",
+          "pueblo_onic": "COCAMA",
+          "area_ha": 536.348
+        },
+        {
+          "nombre_resguardo": "SAN JUAN DE LOS PARENTES",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_ha": 39.132
+        },
+        {
+          "nombre_resguardo": "SANTA SOFÍA",
+          "pueblo_onic": "MAGÜTA - PÖGUTA",
+          "area_ha": 3033.238
+        },
+        {
+          "nombre_resguardo": "TIITANHO NIJAAMU - LA LIBERTAD",
           "pueblo_onic": "Por definir",
-          "area_pg_ha": 2760.113
+          "area_ha": 2760.113
         },
         {
-          "nombre": "NAZARETH",
-          "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 1293.147
-        },
-        {
-          "nombre": "PUERTO TRIUNFO",
-          "pueblo_onic": "MAGUTA, COCAMA",
-          "area_pg_ha": 1129.338
-        },
-        {
-          "nombre": "SAN JOSÉ DEL RÍO",
+          "nombre_resguardo": "UITIBOC",
           "pueblo_onic": "COCAMA",
-          "area_pg_ha": 536.348
-        },
-        {
-          "nombre": "SAN ANTONIO DE LOS LAGOS Y SAN SEBASTIÁN",
-          "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 187.462
-        },
-        {
-          "nombre": "ISLA DE RONDA",
-          "pueblo_onic": "COCAMA",
-          "area_pg_ha": 52.137
-        },
-        {
-          "nombre": "LA PLAYA",
-          "pueblo_onic": "MAGUTA, COCAMA",
-          "area_pg_ha": 49.608
-        },
-        {
-          "nombre": "SAN JUAN DE LOS PARENTES",
-          "pueblo_onic": "MAGÜTA - PÖGUTA",
-          "area_pg_ha": 39.132
+          "area_ha": 95486.92
         }
       ],
-      "bbox": [
-        -4.229406466198782,
-        -70.36550151406266,
-        -3.0025206265149325,
-        -69.71422353066941
-      ],
-      "nombre_mpio": "LETICIA",
-      "cod_dpto": "91"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 61,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 61,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 38
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 14
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Tortura",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 38
-      },
-      "pct_hecho_principal": 62.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.004,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.012
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:37:40",
+  "fecha_generacion": "2026-05-10T04:16:06.780871+00:00",
   "periodo": "2018",
-  "_input_hash": "f1cc5f74135ad93d"
+  "_input_hash": "2b9edaf796d500e5",
+  "_generador": "render_informes.py"
 }

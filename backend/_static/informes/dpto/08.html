@@ -1,269 +1,100 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · DEPARTAMENTO ATLANTICO · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe departamental · ATLÁNTICO</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+</style></head>
 <body>
+<h1>Informe departamental · ATLÁNTICO</h1>
+<p><span class="kpi">Población indígena · <b>39,045</b></span>
+<span class="kpi">Con cap. diversas · <b>1,873</b></span>
+<span class="kpi">Prevalencia · <b>48.0‰</b></span>
+<span class="kpi">Pueblos · <b>65</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>DEPARTAMENTO ATLANTICO</h1>
-  <div class="subtitle">Informe territorial · Capacidades Diversas y población indígena</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>Atlántico se presenta como un departamento con 39045 personas indígenas registradas en el periodo 2018, dentro de un contexto territorial altamente urbano y sin resguardos reportados en la sección territorial. La lectura ONIC debe partir de esa condición: presencia indígena real, pero con baja visibilidad institucional del territorio colectivo.</p><p></p><p>La cifra crítica es la de 1873 personas indígenas con discapacidad, equivalente a una prevalencia de 48.0 por cada 1000 personas, por debajo del promedio indígena nacional de 60.0. Esta diferencia no debe leerse de forma automática como menor afectación, sino como posible señal de subregistro o barreras de identificación.</p><p></p><p>En conflicto armado, el RUV reporta 49 víctimas con discapacidad en Atlántico entre 1985-2024. El hecho principal es desplazamiento forzado, con 31 casos y 63.3 del total, lo que orienta la prioridad hacia memoria, reparación y acceso diferencial en contextos de recepción territorial.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">39.045</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">1.873</div><div class="sub">prevalencia 48,0‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">0 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.075</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>Para Atlántico, el dato demográfico disponible es una población indígena total de 39045 personas en 2018. Sin embargo, la pirámide etaria indígena por departamento no está disponible en el JSON, por lo que no es posible analizar con rigor la estructura por edades, razones de dependencia, envejecimiento o peso relativo de niñez y mayores.
-
-Esta limitación es importante para la planeación territorial: sin edad y sexo no se pueden jerarquizar con precisión necesidades de cuidado, educación propia, salud intercultural o apoyos para personas mayores. La lectura departamental debe reconocer la magnitud poblacional indígena registrada, pero también la insuficiencia de desagregación para orientar medidas diferenciales finas.</p>
-  <div class="sin-datos">demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>En Atlántico se registran 1873 personas indígenas con discapacidad sobre una población de referencia de 39045, con una prevalencia de 48.0 por cada 1000 personas. El valor está por debajo del promedio indígena nacional de 60.0, pero esta distancia no debe interpretarse como ausencia de afectación; en territorios con baja visibilidad estadística puede reflejar subregistro, autodeclaración limitada o barreras de acceso al registro.
-
-El JSON no trae desagregación por tipos de limitación, de modo que no es posible afirmar cuáles dimensiones funcionales predominan. El pueblo codificado como 820 concentra 1747 casos sobre 36942 personas, por lo que debe ser priorizado sin invisibilizar a pueblos con conteos pequeños.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia ATLANTICO</div>
-      <div class="num-big">48,0‰</div>
-      <div class="lbl">1.873 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: 12,0‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>La sección territorial registra 0 resguardos para Atlántico y no lista territorios colectivos asociados. Esto no significa ausencia de pueblos indígenas en el departamento, pues la población indígena total reportada es de 39045 personas, sino ausencia de resguardos en el registro usado para este nivel de análisis.
-
-El encuadre geográfico disponible se expresa en una caja territorial entre 10.253286072621107 y 11.105370386978723 de latitud, y entre -75.27122768659024 y -74.71833013998742 de longitud. Para la ONIC, la lectura central es que la acción departamental debe reconocer una presencia indígena significativa en un escenario sin anclaje de resguardo reportado, lo cual exige estrategias de identificación comunitaria, no solo cartografía formal.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos a este nivel no están disponibles: el JSON indica _sin_datos: true y precisa que no hay tabla de lengua agregada por departamento. Por tanto, no es posible afirmar cuántas personas hablan lengua propia, qué pueblos mantienen mayor vitalidad lingüística ni cómo se distribuye la transmisión intergeneracional en Atlántico.
-
-Esta ausencia es sustantiva para un informe ONIC, porque la lengua es un indicador de continuidad cultural y de garantía de derechos colectivos. La recomendación interpretativa es no sustituir este vacío con inferencias por pueblo o por territorio, sino dejarlo explícito como una brecha de información departamental.</p>
-  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>Los datos de NBI agregado por departamento no están disponibles en el JSON: la sección nbi viene marcada con _sin_datos: true y señala que la ponderación poblacional requerida no está disponible. Por ello no se puede calcular la brecha departamental de Atlántico frente al promedio indígena nacional de NBI de 67.6.
-
-La lectura debe ser prudente. Aunque el informe exige considerar condiciones de vida, en este caso no hay base estadística para afirmar si Atlántico está por encima o por debajo de 67.6, ni para identificar componentes específicos de NBI. La ausencia de este dato limita la priorización social y debe tratarse como una necesidad de fortalecimiento del sistema de información.</p>
-  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El RUV registra 49 víctimas indígenas con discapacidad en Atlántico para el periodo 1985-2024. El hecho principal es desplazamiento forzado, con 31 casos, equivalente a 63.3 del total reportado. Esta concentración muestra que la afectación territorial no se reduce a hechos letales, sino que involucra desarraigo, ruptura de redes comunitarias y presión sobre la permanencia cultural.
-
-Después del desplazamiento aparecen amenaza con 5 casos y desaparición forzada con 5 casos. Homicidio registra 3 casos, mientras otros hechos aparecen con 1 caso cada uno. La lectura ONIC debe priorizar reparación colectiva, acompañamiento diferencial y reconstrucción de condiciones para el ejercicio de derechos en contextos de recepción y asentamiento.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">49</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">63,3% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">31</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 16.1%"></div></div><div class="num">5</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desaparición forzada</div><div class="track"><div class="fill" style="width: 16.1%"></div></div><div class="num">5</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 9.7%"></div></div><div class="num">3</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Acto terrorista / Atentados / Combates / Enfrentamientos / H</div><div class="track"><div class="fill" style="width: 3.2%"></div></div><div class="num">1</div></div>
-
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El ICV reportado para Atlántico es 0.075, construido con la fórmula ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm. Sus componentes son nbi_norm 0.0, prevalencia_norm 0.24 y conflicto_norm 0.01, lo que muestra que el peso observable del índice proviene sobre todo de la prevalencia registrada, no del componente NBI ni del conflicto normalizado.
-
-Esta lectura debe manejarse con cautela porque la sección NBI departamental viene sin datos y el componente nbi_norm aparece en 0.0. En términos relativos, el índice ubica una señal cuantitativa baja, pero no debe confundirse con ausencia de vulneración, especialmente cuando hay 1873 personas con discapacidad y 49 víctimas registradas.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.24</td><td class="num">0.30</td><td class="num"><b>0.072</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.01</td><td class="num">0.30</td><td class="num"><b>0.003</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.075</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Fortalecer el registro departamental con enfoque indígena y de discapacidad, priorizando la identificación comunitaria de las 1873 personas indígenas con discapacidad reportadas sobre una población de 39045.</li>
-      <li>Implementar una estrategia de búsqueda activa y validación comunitaria en los pueblos con mayor concentración registrada, en especial el pueblo codificado como 820, que reporta 1747 personas con discapacidad sobre 36942 personas.</li>
-      <li>Diseñar una ruta departamental de atención y reparación diferencial para víctimas indígenas con discapacidad, enfocada en los 49 casos RUV y en el desplazamiento forzado, que concentra 31 casos y 63.3 del total.</li>
-      <li>Cerrar brechas de información territorial y social: Atlántico registra 0 resguardos y no tiene NBI agregado disponible, por lo que se requiere levantamiento propio que permita comparar con el promedio indígena nacional de 67.6.</li>
-      <li>Incluir un módulo departamental de lengua y vitalidad cultural, ya que el JSON marca lengua con _sin_datos: true y la ausencia de esta información impide orientar medidas de protección cultural proporcionales a la población indígena de 39045.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/dpto/08/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[10.253286072621107, -75.27122768659024], [11.105370386978723, -74.71833013998742]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[10.253286072621107, -75.27122768659024], [11.105370386978723, -74.71833013998742]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([10.679328229799914, -74.99477891328883]).addTo(map)
-    .bindPopup('<b>DEPARTAMENTO ATLANTICO</b>');
-</script>
-</body>
-</html>
+<h2>Pueblos del departamento</h2>
+<table>
+<thead><tr><th>Pueblo</th><th>Población indígena</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+<tbody>
+    <tr><td>MOKANA</td><td class="num">36.942</td><td class="num">1.747</td><td class="num">47.3‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>WAYUU</td><td class="num">820</td><td class="num">32</td><td class="num">39.0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>ZENU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENA-SIN-INFORMACION</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KANKUAMO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ARHUACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIJAO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YANACONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WIWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUNA-TULE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KOGUI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>QUIMBAYA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>NASA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TUYUKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PUINAVE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MISAK</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-KATIO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JUDPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PISAMIRA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIRATAPUYO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TANIMUKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>QUILLACINGA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-VENEZUELA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MUISCA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INGA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ETTE-E'NEKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MURUI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YUKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YUKPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YAMALERO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TAYRONAS</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-MEXICO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-BOLIVIA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>GUANE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ANDOKE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BETOYE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CABIYARI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CARIJONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCAMA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCONUCO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>AWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUBEO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>DESANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-CHAMI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EPERARA-SIAPIDARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>NUTABE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>AMBALO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>GUANANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JIW</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KAMËNTSA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAKAGUAJE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MASIGUARE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JE´ERURIWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>POLINDARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PASTOS</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIKUANI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TATUYO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TOTORO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TIKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>U`WA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_dpto`. Generado
+el 2026-05-10T04:15:41.461378+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

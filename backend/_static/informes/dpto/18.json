@@ -1,476 +1,577 @@
 {
   "tipo": "dpto",
   "id": "18",
-  "nombre": "CAQUETA",
+  "nombre": "CAQUETÁ",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 8402,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 8402,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 518,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 518,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 8402,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 61.7,
+        "value": 61.65,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "500",
-          "con_disc": 129,
-          "total": 1420
-        },
-        {
-          "cod_pueblo": "730",
-          "con_disc": 83,
-          "total": 1081
-        },
-        {
-          "cod_pueblo": "200",
-          "con_disc": 78,
-          "total": 909
-        },
-        {
-          "cod_pueblo": "999",
-          "con_disc": 49,
-          "total": 340
-        },
-        {
-          "cod_pueblo": "190",
-          "con_disc": 33,
-          "total": 2494
-        },
-        {
-          "cod_pueblo": "340",
-          "con_disc": 32,
-          "total": 577
-        },
-        {
-          "cod_pueblo": "030",
-          "con_disc": 32,
-          "total": 410
-        },
-        {
-          "cod_pueblo": "282",
-          "con_disc": 21,
-          "total": 298
-        },
-        {
-          "cod_pueblo": "281",
-          "con_disc": 15,
-          "total": 167
-        },
-        {
-          "cod_pueblo": "280",
-          "con_disc": 14,
-          "total": 137
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 45,
-      "resguardos": [
+      "macro": "AMAZONIA",
+      "n_pueblos": 64,
+      "pueblos": [
         {
-          "nombre": "PUERTO SÁBALO - LOS MONOS",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 624487.793
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 129,
+          "total": 1420,
+          "prevalencia_x_1000": 90.85,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "MONOCHOA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 414846.874
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 83,
+          "total": 1081,
+          "prevalencia_x_1000": 76.78,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "WITORA O HUITORA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 131560.431
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 78,
+          "total": 909,
+          "prevalencia_x_1000": 85.81,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "RESGUARDO INDÍGENA LA VICTORIA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "Por definir",
-          "area_pg_ha": 61105.192
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 49,
+          "total": 340,
+          "prevalencia_x_1000": 144.12,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "JERICÓ - CONSAYA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 32717.501
+          "cod_pueblo": 190,
+          "nom_pueblo": "COREGUAJE",
+          "con_disc": 33,
+          "total": 2494,
+          "prevalencia_x_1000": 13.23,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "COROPOYA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 28512.063
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 32,
+          "total": 577,
+          "prevalencia_x_1000": 55.46,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "AGUAS NEGRAS",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 18423.017
+          "cod_pueblo": 30,
+          "nom_pueblo": "ANDOKE",
+          "con_disc": 32,
+          "total": 410,
+          "prevalencia_x_1000": 78.05,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "FUNES",
-          "mpio": "CARTAGENA DEL CHAIRÁ",
-          "pueblo_onic": "PASTO",
-          "area_pg_ha": 12273.456
+          "cod_pueblo": 282,
+          "nom_pueblo": "EMBERA-CHAMI",
+          "con_disc": 21,
+          "total": 298,
+          "prevalencia_x_1000": 70.47,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ALTAMIRA",
-          "mpio": "SAN VICENTE DEL CAGUÁN",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 10711.827
+          "cod_pueblo": 281,
+          "nom_pueblo": "EMBERA-KATIO",
+          "con_disc": 15,
+          "total": 167,
+          "prevalencia_x_1000": 89.82,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MESAI",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 7082.013
+          "cod_pueblo": 280,
+          "nom_pueblo": "EMBERA",
+          "con_disc": 14,
+          "total": 137,
+          "prevalencia_x_1000": 102.19,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NIÑERAS",
-          "mpio": "SOLANO",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 3392.647
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 9,
+          "total": 94,
+          "prevalencia_x_1000": 95.74,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PUERTO NARANJO, PEÑAS ROJAS, CUERAZO Y EL DIAMANTE",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 2219.692
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 5,
+          "total": 217,
+          "prevalencia_x_1000": 23.04,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "AGUA NEGRA",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 1996.245
+          "cod_pueblo": 505,
+          "nom_pueblo": "ANDAKIES",
+          "con_disc": 4,
+          "total": 14,
+          "prevalencia_x_1000": 285.71,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INGA DE SAN MIGUEL",
-          "mpio": "SAN JOSÉ DEL FRAGUA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 1836.974
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 3,
+          "total": 10,
+          "prevalencia_x_1000": 300.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA LIBERTAD 2",
-          "mpio": "SAN VICENTE DEL CAGUÁN",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 1776.857
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 2,
+          "total": 6,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA TEÓFILA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 1676.6
+          "cod_pueblo": 731,
+          "nom_pueblo": "MUINANE",
+          "con_disc": 2,
+          "total": 22,
+          "prevalencia_x_1000": 90.91,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "HERICHA",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 1453.344
+          "cod_pueblo": 390,
+          "nom_pueblo": "MAKAGUAJE",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL QUINCE",
-          "mpio": "SOLANO",
-          "pueblo_onic": "UITOTO",
-          "area_pg_ha": 1272.566
+          "cod_pueblo": 590,
+          "nom_pueblo": "SIONA",
+          "con_disc": 1,
+          "total": 4,
+          "prevalencia_x_1000": 250.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "HONDURAS",
-          "mpio": "FLORENCIA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 1010.793
+          "cod_pueblo": 435,
+          "nom_pueblo": "MAKU",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "JÁCOME",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 899.656
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 1,
+          "total": 6,
+          "prevalencia_x_1000": 166.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA ESPERANZA",
-          "mpio": "BELÉN DE LOS ANDAQUÍES",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 862.728
+          "cod_pueblo": 830,
+          "nom_pueblo": "OTAVALEÑO",
+          "con_disc": 1,
+          "total": 12,
+          "prevalencia_x_1000": 83.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ZIT-SET DEL QUECAL",
-          "mpio": "PUERTO RICO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 790.125
+          "cod_pueblo": 80,
+          "nom_pueblo": "BARI",
+          "con_disc": 1,
+          "total": 6,
+          "prevalencia_x_1000": 166.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "YURAYACO",
-          "mpio": "SAN JOSÉ DEL FRAGUA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 719.462
+          "cod_pueblo": 680,
+          "nom_pueblo": "TUKANO",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL GUAYABAL",
-          "mpio": "SOLANO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 607.223
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SAN PABLO EL PARÁ",
-          "mpio": "FLORENCIA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 604.126
+          "cod_pueblo": 490,
+          "nom_pueblo": "OCAINA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA SIBERIA",
-          "mpio": "PUERTO RICO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 575.791
+          "cod_pueblo": 530,
+          "nom_pueblo": "PIRATAPUYO",
+          "con_disc": 0,
+          "total": 10,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL PORVENIR KANANGUCHAL",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 530.336
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 0,
+          "total": 25,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "BANDERAS DEL RECAIBO",
-          "mpio": "SAN VICENTE DEL CAGUÁN",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 520.193
+          "cod_pueblo": 565,
+          "nom_pueblo": "QUILLACINGA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MATICURÚ",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 450.92
+          "cod_pueblo": 610,
+          "nom_pueblo": "TAIWANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PAEZ DE EL LÍBANO",
-          "mpio": "SOLANO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 446.886
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GORGONIA",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 426.717
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 0,
+          "total": 22,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CABILDO EL ÁGUILA",
-          "mpio": "BELÉN DE LOS ANDAQUÍES",
-          "pueblo_onic": "MISAK",
-          "area_pg_ha": 407.523
+          "cod_pueblo": 740,
+          "nom_pueblo": "YAGUA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NASA KIWE",
-          "mpio": "PUERTO RICO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 348.277
+          "cod_pueblo": 750,
+          "nom_pueblo": "YANACONA",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUSUMBE - AGUA BLANCA",
-          "mpio": "SOLITA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 332.192
+          "cod_pueblo": 770,
+          "nom_pueblo": "YUKUNA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SAN LUIS",
-          "mpio": "MILÁN",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 328.749
+          "cod_pueblo": 10,
+          "nom_pueblo": "ACHAGUA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL PORTAL",
-          "mpio": "SAN JOSÉ DEL FRAGUA",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 223.245
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL TRIUNFO",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 194.139
+          "cod_pueblo": 810,
+          "nom_pueblo": "GUANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SAN MIGUEL",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 173.008
+          "cod_pueblo": 840,
+          "nom_pueblo": "KICHWA",
+          "con_disc": 0,
+          "total": 12,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "WE SX KIWE LA GAITANA",
-          "mpio": "FLORENCIA",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 145.189
+          "cod_pueblo": 870,
+          "nom_pueblo": "QUIMBAYA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GETUCHÁ",
-          "mpio": "MILÁN",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 129.434
+          "cod_pueblo": 900,
+          "nom_pueblo": "INDIGENAS-ECUADOR-",
+          "con_disc": 0,
+          "total": 13,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL CEDRITO",
-          "mpio": "LA MONTAÑITA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 123.478
+          "cod_pueblo": 970,
+          "nom_pueblo": "MAYA-",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LOS PIJAOS",
-          "mpio": "ALBANIA",
-          "pueblo_onic": "PIJAO",
-          "area_pg_ha": 117.815
+          "cod_pueblo": 780,
+          "nom_pueblo": "YUKPA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA ESPERANZA",
-          "mpio": "SOLANO",
-          "pueblo_onic": "KOREGUAJE",
-          "area_pg_ha": 114.486
+          "cod_pueblo": 26,
+          "nom_pueblo": "YARURO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "WITACK KIWE",
-          "mpio": "PUERTO RICO",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 76.654
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA CERINDA",
-          "mpio": "BELÉN DE LOS ANDAQUÍES",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 54.467
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 150,
+          "nom_pueblo": "ETTE-E'NEKA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 170,
+          "nom_pueblo": "COCAMA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 180,
+          "nom_pueblo": "COCONUCO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 210,
+          "nom_pueblo": "AWA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 240,
+          "nom_pueblo": "CUNA-TULE",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 283,
+          "nom_pueblo": "EPERARA-SIAPIDARA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 284,
+          "nom_pueblo": "EMBERA-DOBIDA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 291,
+          "nom_pueblo": "AMBALO",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 292,
+          "nom_pueblo": "QUIZGO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 300,
+          "nom_pueblo": "GUANACO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 330,
+          "nom_pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 350,
+          "nom_pueblo": "KAMËNTSA",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 360,
+          "nom_pueblo": "COFAN",
+          "con_disc": 0,
+          "total": 10,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 431,
+          "nom_pueblo": "KAKUA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 433,
+          "nom_pueblo": "JUHUP",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 450,
+          "nom_pueblo": "MATAPI",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 460,
+          "nom_pueblo": "MIRAÑA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        -0.7058400442294057,
-        -76.30622126224677,
-        2.9383335158354504,
-        -71.25384590373017
-      ],
-      "nombre_dpto": "CAQUETA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 1172,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 1172,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 796
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 136
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 101
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 30
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 20
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 20
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 18
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 18
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 11
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 7
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 796
-      },
-      "pct_hecho_principal": 67.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.163,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.308,
-        "conflicto_norm": 0.234
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:45:58",
+  "fecha_generacion": "2026-05-10T04:15:41.581221+00:00",
   "periodo": "2018",
-  "_input_hash": "e8c27749efd988cb"
+  "_input_hash": "9b32e1d56257fb26",
+  "_generador": "render_informes.py"
 }

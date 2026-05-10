@@ -1,327 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · PUEBLO Kawiyarí · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe del pueblo · CABIYARI</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.piramide-bar-h{display:inline-block;background:#02432D;height:1rem;vertical-align:middle}
+.piramide-bar-m{display:inline-block;background:#a78bfa;height:1rem;vertical-align:middle}
+.piramide td{font-size:.85rem}
+.piramide td.lbl{text-align:center;font-variant-numeric:tabular-nums}
+.piramide td.h{text-align:right}
+.piramide td.m{text-align:left}
+</style></head>
 <body>
+<h1>Informe del pueblo · CABIYARI</h1>
+<p><span class="kpi">Población total · <b>740</b></span>
+<span class="kpi">Con cap. diversas · <b>50</b></span>
+<span class="kpi">Prevalencia · <b>67.6‰</b></span>
+<span class="kpi">Confiabilidad · <b>ALTA</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>PUEBLO Kawiyarí</h1>
-  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El pueblo Kawiyarí registra una población censal de 809 personas en 2018, con 433 hombres y 376 mujeres. La lectura ONIC debe partir de su continuidad como pueblo indígena y de la necesidad de sostener la vida colectiva en sus territorios históricos.</p><p></p><p>La cifra crítica es la prevalencia de capacidades diversas: 100 personas con discapacidad sobre una población de referencia de 1480, equivalente a 67.6 por cada 1000. Este valor está por encima del promedio indígena nacional reportado de 60.0.</p><p></p><p>La situación social combina una NBI de 61.62% y una miseria de 39.86%. Aunque el RUV registra 0 víctimas con discapacidad para 1985-2024, esto no agota la lectura territorial ni descarta subregistro.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">809</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">100</div><div class="sub">prevalencia 67,6‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">24</div><div class="sub">5 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.348</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La estructura demográfica del pueblo Kawiyarí muestra una base joven importante: 316 personas están entre 0-14 años, frente a 453 en edades de 15-64 y 40 de 65 años o más. Esta composición confirma un pueblo con alta presencia de niñez y juventud, lo que exige fortalecer cuidado comunitario, educación propia y transmisión cultural.
-
-La razón de masculinidad es 115.2, con 433 hombres y 376 mujeres. El índice de dependencia de 78.6 indica una carga significativa sobre la población en edad productiva, mientras el índice de envejecimiento de 12.7 muestra que los mayores aún son un grupo reducido, pero clave para la memoria y la orientación cultural.</p>
-  
-  <table>
-    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
-    <tbody>
-      <tr><td>0-14 años</td><td class="num">165</td><td class="num">151</td><td class="num"><b>316</b></td><td class="num">39.1%</td></tr>
-      <tr><td>15-64 años</td><td class="num">246</td><td class="num">207</td><td class="num"><b>453</b></td><td class="num">56.0%</td></tr>
-      <tr><td>65+ años</td><td class="num">22</td><td class="num">18</td><td class="num"><b>40</b></td><td class="num">4.9%</td></tr>
-      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>433</b></td><td class="num"><b>376</b></td><td class="num"><b>809</b></td><td class="num">100,0%</td></tr>
-    </tbody>
-  </table>
-  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
-    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">115,2</div><div class="sub">H por 100 M</div></div>
-    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">78,6</div><div class="sub">por 100 productivos</div></div>
-    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">12,7</div><div class="sub">65+ / 0-14 × 100</div></div>
-  </div>
-  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>En capacidades diversas, el registro muestra 100 personas con discapacidad y una población de referencia de 1480, para una prevalencia de 67.6 por cada 1000. La cifra es confiable y supera el promedio indígena nacional de 60.0, por lo que debe leerse como una alerta para garantizar accesibilidad, cuidado comunitario y participación plena dentro del pueblo Kawiyarí.
-
-El JSON no reporta tipos de limitación, porque el arreglo de tipos_limitacion está vacío. Por ello, no es posible afirmar si predominan limitaciones visuales, auditivas, físicas, cognitivas u otras. Esta ausencia limita la planeación específica y sugiere riesgo de subregistro cualitativo.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia Kawiyarí</div>
-      <div class="num-big">67,6‰</div>
-      <div class="lbl">100 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: -7,6‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>La distribución territorial del pueblo Kawiyarí aparece en 24 departamentos, pero la concentración principal está en Vichada, con 740 personas, 50 con discapacidad y una tasa de 67.57 por cada 1000, con dato confiable. Vaupés registra 339 personas, 35 con discapacidad y una tasa de 103.24, también confiable.
-
-La presencia en 5 resguardos muestra un anclaje territorial concreto: Puerto Nariño reporta 162 personas, Vaupés 91, Miriti Parana 22, Yaigoje-Rio Apaporis 15 y Nunuya de Villa Azul 7. Varios departamentos tienen confiabilidad NO_CONFIABLE, por lo que no deben orientar conclusiones principales.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  <h3>Departamentos con mayor presencia</h3>
-  <table>
-    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
-    <tbody>
-      <tr><td>VICHADA</td><td class="num">740</td><td class="num">50</td><td class="num">67,6‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>VAUPES</td><td class="num">339</td><td class="num">35</td><td class="num">103,2‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>AMAZONAS</td><td class="num">257</td><td class="num">5</td><td class="num">19,5‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>VALLE DEL CAUCA</td><td class="num">32</td><td class="num">4</td><td class="num">125,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>BOGOTA D.C.</td><td class="num">16</td><td class="num">2</td><td class="num">125,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CORDOBA</td><td class="num">14</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CUNDINAMARCA</td><td class="num">13</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>GUAVIARE</td><td class="num">10</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>PUTUMAYO</td><td class="num">9</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>TOLIMA</td><td class="num">7</td><td class="num">1</td><td class="num">142,9‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-    </tbody></table>
-  
-  <h3>Resguardos asociados</h3>
-  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
-      <tr><td>Puerto Nariño</td><td>AMAZONAS</td><td>PUERTO NARIÑO</td><td class="num">162</td></tr>
-      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">91</td></tr>
-      <tr><td>Miriti Parana</td><td>AMAZONAS</td><td>MIRITÍ - PARANÁ</td><td class="num">22</td></tr>
-      <tr><td>Yaigoje-Rio Apaporis</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">15</td></tr>
-      <tr><td>Nunuya de Villa Azul</td><td>AMAZONAS</td><td>MIRITÍ - PARANÁ</td><td class="num">7</td></tr>
-    </tbody></table>
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Para lengua, el dato disponible indica n_total de 809 personas, con habla_total de 0 y entiende_total de 0; los porcentajes reportados son pct_habla 0.0 y pct_entiende 0.0. En una lectura ONIC, este resultado debe tratarse con cautela: el JSON no permite distinguir si refleja pérdida lingüística, ausencia de captura adecuada o problemas de registro censal.
-
-No se deben inventar hablantes ni niveles de comprensión no reportados. La recomendación interpretativa es reconocer que, con estos datos, la vitalidad lingüística no puede caracterizarse más allá de lo consignado: los registros disponibles no identifican hablantes ni personas que entiendan la lengua.</p>
-  
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-  </div>
-
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>La situación de vida del pueblo Kawiyarí muestra una NBI de 61.62% sobre 740 personas, con 39.86% en miseria. Aunque la NBI está por debajo del promedio indígena nacional de 67.6%, sigue siendo una afectación alta y expresa brechas estructurales que deben abordarse desde derechos territoriales, vivienda digna y servicios adecuados culturalmente.
-
-Los componentes más críticos son servicios con 40.14 y vivienda con 34.32, seguidos por hacinamiento con 26.08, dependencia con 22.57 e inasistencia con 9.05. Esta combinación indica que la garantía material del territorio y la infraestructura básica son prioridades para sostener la vida comunitaria.</p>
-  
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">NBI Kawiyarí</div>
-      <div class="num-big">61,6%</div>
-      <div class="lbl">Necesidades básicas insatisfechas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">67,6%</div>
-      <div class="lbl">Brecha</div>
-    </div>
-  </div>
-  <h3>Componentes del NBI (% personas afectadas)</h3>
-  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 85.5%"></div></div><div class="num">34,3%</div></div>
-  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">40,1%</div></div>
-  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 65.0%"></div></div><div class="num">26,1%</div></div>
-  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 22.5%"></div></div><div class="num">9,1%</div></div>
-  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 56.2%"></div></div><div class="num">22,6%</div></div>
-
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El módulo de conflicto registra 0 víctimas con discapacidad para el pueblo Kawiyarí en el universo RUV entre 1985-2024. También aparecen hechos_top vacío, hecho_principal null y pct_hecho_principal null. Con estos datos, no es posible identificar un hecho victimizante principal ni establecer una composición de afectaciones por conflicto para personas con discapacidad.
-
-La lectura territorial debe ser prudente: el valor 0 no debe confundirse con ausencia histórica de impactos sobre el pueblo, sino con ausencia de registros en esta variable específica. Para ONIC, el dato sirve como alerta de verificación, especialmente en territorios con dispersión departamental y posibles barreras de declaración.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El ICV del pueblo Kawiyarí es 0.348, construido con nbi_norm 0.616, prevalencia_norm 0.338 y conflicto_norm 0.0. La dimensión dominante es NBI, porque su componente normalizado es el más alto dentro de la fórmula reportada. Esto confirma que la vulnerabilidad principal, según el índice, se concentra en condiciones materiales de vida.
-
-La prevalencia de capacidades diversas también pesa en el resultado, con 0.338, mientras conflicto_norm aparece en 0.0 por el registro de 0 víctimas con discapacidad. La posición relativa debe leerse con cautela: el índice sintetiza datos disponibles, pero no reemplaza el análisis territorial propio del pueblo Kawiyarí.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.616</td><td class="num">0.40</td><td class="num"><b>0.246</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.338</td><td class="num">0.30</td><td class="num"><b>0.101</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.348</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Priorizar un plan de mejoramiento de servicios y vivienda en los territorios Kawiyarí, porque la NBI es 61.62%, el componente de servicios llega a 40.14 y vivienda a 34.32.</li>
-      <li>Diseñar una ruta propia de atención y accesibilidad para las 100 personas con discapacidad registradas, considerando que la prevalencia es 67.6 por cada 1000 frente al promedio indígena nacional de 60.0.</li>
-      <li>Concentrar acciones iniciales en Vichada y Vaupés, donde los datos son confiables: Vichada registra 740 personas y 50 con discapacidad, mientras Vaupés registra 339 personas y 35 con discapacidad.</li>
-      <li>Realizar verificación comunitaria de lengua y cultura, porque el registro reporta n_total 809, habla_total 0, entiende_total 0, pct_habla 0.0 y pct_entiende 0.0.</li>
-      <li>Fortalecer el registro diferencial de víctimas con discapacidad, ya que el RUV reporta 0 casos para 1985-2024 y no identifica hecho_principal, lo que limita la lectura de afectaciones territoriales.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/110/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([4.5, -73.0]).addTo(map)
-    .bindPopup('<b>PUEBLO Kawiyarí</b>');
-</script>
-</body>
-</html>
+<h2>Pirámide de capacidades diversas (edad × sexo)</h2>
+<table class="piramide">
+<thead><tr><th style="text-align:right">Hombres</th><th>Grupo edad</th><th>Mujeres</th></tr></thead>
+<tbody>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:33%"></span></td><td class="lbl">30-34</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">35-39</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">6 <span class="piramide-bar-h" style="width:100%"></span></td><td class="lbl">40-44</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:33%"></span></td><td class="lbl">45-49</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">50-54</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">60-64</td><td class="m"><span class="piramide-bar-m" style="width:66%"></span> 4</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">65-69</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">70-74</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">75-79</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_nacional` × `pueblo.piramide_disc`. Generado
+el 2026-05-10T04:16:08.086501+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

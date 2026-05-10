@@ -3,203 +3,129 @@
   "id": "27077",
   "nombre": "BAJO BAUDO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 7509,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 50,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 7509,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 5,
-      "top": [
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 4612
-        },
-        {
-          "cod_pueblo": "710",
-          "pueblo": "WOUNAN",
-          "poblacion": 2884
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "280",
-        "pueblo": "EMBERA",
-        "poblacion": 4612
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 7509,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 6.66,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "27",
+      "nom_dpto": "CHOCÓ",
       "n_resguardos": 13,
       "resguardos": [
         {
-          "nombre": "RÍOS CATRÚ - DUBASA Y ANCOSO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 56734.223
+          "nombre_resguardo": "BAJO GRANDE",
+          "pueblo_onic": "EMBERA",
+          "area_ha": 2418.37
         },
         {
-          "nombre": "BELLAVISTA - UNIÓN PITALITO",
+          "nombre_resguardo": "BELLAVISTA - UNIÓN PITALITO",
           "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 29196.749
+          "area_ha": 29196.749
         },
         {
-          "nombre": "RÍO ORPÚA",
+          "nombre_resguardo": "DO IMAMA TUMA Y BELLA LUZ",
+          "pueblo_onic": "EMBERA",
+          "area_ha": 3017.924
+        },
+        {
+          "nombre_resguardo": "EL PIÑAL",
+          "pueblo_onic": "EMBERA",
+          "area_ha": 2897.937
+        },
+        {
+          "nombre_resguardo": "LA JAGUA - GUACHAL - PITALITO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 1247.602
+        },
+        {
+          "nombre_resguardo": "ORDÓ SIVIRÚ AGUACLARA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 2502.861
+        },
+        {
+          "nombre_resguardo": "PUERTO CHICHILIANO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 307.093
+        },
+        {
+          "nombre_resguardo": "RÍO ORPÚA",
           "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 21738.473
+          "area_ha": 21738.473
         },
         {
-          "nombre": "RÍO PURRICHA",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 17700.336
-        },
-        {
-          "nombre": "RÍO PAVASA Y QUEBRADA JELLA",
+          "nombre_resguardo": "RÍO PAVASA Y QUEBRADA JELLA",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 13712.269
+          "area_ha": 13712.269
         },
         {
-          "nombre": "SANTA ROSA DE IJUÁ",
+          "nombre_resguardo": "RÍO PURRICHA",
+          "pueblo_onic": "EMBERA",
+          "area_ha": 17700.336
+        },
+        {
+          "nombre_resguardo": "RÍOS CATRÚ - DUBASA Y ANCOSO",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 56734.223
+        },
+        {
+          "nombre_resguardo": "RÍOS TORREIDÓ Y CHIMANI",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 6319.472
+        },
+        {
+          "nombre_resguardo": "SANTA ROSA DE IJUÁ",
           "pueblo_onic": "WOUNAAN",
-          "area_pg_ha": 7749.164
-        },
-        {
-          "nombre": "RÍOS TORREIDÓ Y CHIMANI",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 6319.472
-        },
-        {
-          "nombre": "DO IMAMA TUMA Y BELLA LUZ",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 3017.924
-        },
-        {
-          "nombre": "EL PIÑAL",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 2897.937
-        },
-        {
-          "nombre": "ORDÓ SIVIRÚ AGUACLARA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 2502.861
-        },
-        {
-          "nombre": "BAJO GRANDE",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 2418.37
-        },
-        {
-          "nombre": "LA JAGUA - GUACHAL - PITALITO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 1247.602
-        },
-        {
-          "nombre": "PUERTO CHICHILIANO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 307.093
+          "area_ha": 7749.164
         }
       ],
-      "bbox": [
-        4.439554568681131,
-        -77.53947364532934,
-        5.5652054125879165,
-        -76.93038379457244
-      ],
-      "nombre_mpio": "BAJO BAUDO",
-      "cod_dpto": "27"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 101,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 101,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 61
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 31
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 7
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 1
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 61
-      },
-      "pct_hecho_principal": 60.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.006,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.02
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:29:28",
+  "fecha_generacion": "2026-05-10T04:15:55.312936+00:00",
   "periodo": "2018",
-  "_input_hash": "f05ed1f27da0bc1a"
+  "_input_hash": "eea32f97c2707151",
+  "_generador": "render_informes.py"
 }

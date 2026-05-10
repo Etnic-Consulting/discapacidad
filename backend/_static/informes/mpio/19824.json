@@ -3,218 +3,79 @@
   "id": "19824",
   "nombre": "TOTORO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 17295,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1010,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 17295,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 18,
-      "top": [
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 7831
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 7176
-        },
-        {
-          "cod_pueblo": "501",
-          "pueblo": "POLINDARA",
-          "poblacion": 1993
-        },
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 226
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 39
-        },
-        {
-          "cod_pueblo": "291",
-          "pueblo": "AMBALO",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "090",
-          "pueblo": "BETOYE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "292",
-          "pueblo": "QUIZGO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "855",
-          "pueblo": "TAYRONAS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "650",
-        "pueblo": "TOTORO",
-        "poblacion": 7831
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 17295,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 58.4,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "POLINDARA",
+          "nombre_resguardo": "JEBALÁ",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 2168.34
+          "area_ha": 179.875
         },
         {
-          "nombre": "NOVIRAO",
+          "nombre_resguardo": "NOVIRAO",
           "pueblo_onic": "MISAK",
-          "area_pg_ha": 1047.837
+          "area_ha": 1047.837
         },
         {
-          "nombre": "JEBALÁ",
+          "nombre_resguardo": "POLINDARA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 179.875
+          "area_ha": 2168.34
         }
       ],
-      "bbox": [
-        2.3872800961159717,
-        -76.58805831143525,
-        2.6057423169376235,
-        -76.20546042909194
-      ],
-      "nombre_mpio": "TOTORO",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 77,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 77,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 38
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 24
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 8
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 4
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 38
-      },
-      "pct_hecho_principal": 49.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.005,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.015
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:50:13",
+  "fecha_generacion": "2026-05-10T04:15:50.814409+00:00",
   "periodo": "2018",
-  "_input_hash": "2b7f91bb8e02e348"
+  "_input_hash": "d29b8214792d54a3",
+  "_generador": "render_informes.py"
 }

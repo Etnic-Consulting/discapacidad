@@ -3,180 +3,94 @@
   "id": "85230",
   "nombre": "OROCUE",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2277,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 112,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 2277,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 2193
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 46
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 16
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "830",
-          "pueblo": "OTAVALEÑO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "570",
-        "pueblo": "SALIBA",
-        "poblacion": 2193
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 2222,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 50.41,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "85",
+      "nom_dpto": "CASANARE",
       "n_resguardos": 6,
       "resguardos": [
         {
-          "nombre": "SAN JUANITO, EL DUYA Y PARAVARE",
+          "nombre_resguardo": "EL CONSEJO",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 21263.877
+          "area_ha": 4181.195
         },
         {
-          "nombre": "MACUCUANA",
+          "nombre_resguardo": "EL MEDANO",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 6659.504
+          "area_ha": 1963.616
         },
         {
-          "nombre": "EL CONSEJO",
+          "nombre_resguardo": "EL SALADILLO",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 4181.195
+          "area_ha": 1530.547
         },
         {
-          "nombre": "EL SUSPIRO EL RINCÓN DEL SOCORRO",
+          "nombre_resguardo": "EL SUSPIRO EL RINCÓN DEL SOCORRO",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 1982.019
+          "area_ha": 1982.019
         },
         {
-          "nombre": "EL MEDANO",
+          "nombre_resguardo": "MACUCUANA",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 1963.616
+          "area_ha": 6659.504
         },
         {
-          "nombre": "EL SALADILLO",
+          "nombre_resguardo": "SAN JUANITO, EL DUYA Y PARAVARE",
           "pueblo_onic": "SÁLIBA",
-          "area_pg_ha": 1530.547
+          "area_ha": 21263.877
         }
       ],
-      "bbox": [
-        4.597446219829298,
-        -72.15589952980628,
-        5.224517501139221,
-        -70.96718592978675
-      ],
-      "nombre_mpio": "OROCUE",
-      "cod_dpto": "85"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 22,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 22,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Homicidio",
-          "total": 13
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 7
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 2
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Homicidio",
-        "total": 13
-      },
-      "pct_hecho_principal": 59.1
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.004
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:33:52",
+  "fecha_generacion": "2026-05-10T04:16:06.300856+00:00",
   "periodo": "2018",
-  "_input_hash": "8f793bfebb76f1fd"
+  "_input_hash": "13fffb610bb9b5d2",
+  "_generador": "render_informes.py"
 }

@@ -3,214 +3,69 @@
   "id": "76834",
   "nombre": "TULUA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 499,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 26,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 499,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 197
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 55
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 40
-        },
-        {
-          "cod_pueblo": "710",
-          "pueblo": "WOUNAN",
-          "poblacion": 37
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 35
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 19
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 16
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "291",
-          "pueblo": "AMBALO",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "501",
-          "pueblo": "POLINDARA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "330",
-          "pueblo": "CAÑAMOMO-LOMAPRIETA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "431",
-          "pueblo": "KAKUA",
-          "poblacion": 3
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "282",
-        "pueblo": "EMBERA-CHAMI",
-        "poblacion": 197
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 488,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 53.28,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "76",
+      "nom_dpto": "VALLE DEL CAUCA",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "DACHI DRUA CHAMÍ",
+          "nombre_resguardo": "DACHI DRUA CHAMÍ",
           "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 55.347
+          "area_ha": 55.347
         }
       ],
-      "bbox": [
-        3.889219856558807,
-        -76.31388867856452,
-        4.185505590961689,
-        -75.81897464498212
-      ],
-      "nombre_mpio": "TULUA",
-      "cod_dpto": "76"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 32,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 32,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 27
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 2
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 27
-      },
-      "pct_hecho_principal": 84.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.002,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.006
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T19:20:25",
+  "fecha_generacion": "2026-05-10T04:16:05.755550+00:00",
   "periodo": "2018",
-  "_input_hash": "18ad861eb1423850"
+  "_input_hash": "4f704b0126a43636",
+  "_generador": "render_informes.py"
 }

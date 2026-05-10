@@ -3,164 +3,74 @@
   "id": "44098",
   "nombre": "DISTRACCION",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2395,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 42,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 2395,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 2352
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "021",
-          "pueblo": "WIPIWI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "330",
-          "pueblo": "CAÑAMOMO-LOMAPRIETA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "550",
-          "pueblo": "PUINAVE",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "720",
-        "pueblo": "WAYUU",
-        "poblacion": 2352
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 2390,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 17.57,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "44",
+      "nom_dpto": "LA GUAJIRA",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "CAICEMAPA",
+          "nombre_resguardo": "CAICEMAPA",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 516.283
+          "area_ha": 516.283
         },
         {
-          "nombre": "POTRERITO",
+          "nombre_resguardo": "POTRERITO",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 80.636
+          "area_ha": 80.636
         }
       ],
-      "bbox": [
-        10.790206423258171,
-        -73.01979515358829,
-        11.031897442039796,
-        -72.87177205885428
-      ],
-      "nombre_mpio": "DISTRACCION",
-      "cod_dpto": "44"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 21,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 21,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 9
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 6
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 3
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 9
-      },
-      "pct_hecho_principal": 42.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.004
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:38:11",
+  "fecha_generacion": "2026-05-10T04:15:56.962892+00:00",
   "periodo": "2018",
-  "_input_hash": "1ef0d65fc10061dd"
+  "_input_hash": "4717d8259c053f22",
+  "_generador": "render_informes.py"
 }

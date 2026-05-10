@@ -3,169 +3,69 @@
   "id": "52227",
   "nombre": "CUMBAL",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 31531,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 2605,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 31531,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 7,
-      "top": [
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 31462
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 56
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "560",
-        "pueblo": "PASTOS",
-        "poblacion": 31462
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 31531,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 82.62,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "CUMBAL",
+          "nombre_resguardo": "CUMBAL",
           "pueblo_onic": "PASTO",
-          "area_pg_ha": 313.942
+          "area_ha": 313.942
         }
       ],
-      "bbox": [
-        0.8013657146735869,
-        -78.20895521014785,
-        1.0784058660074984,
-        -77.75307677699772
-      ],
-      "nombre_mpio": "CUMBAL",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 306,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 306,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 163
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 38
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 30
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 26
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 21
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 11
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 8
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 6
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 163
-      },
-      "pct_hecho_principal": 53.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.018,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.061
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:48:57",
+  "fecha_generacion": "2026-05-10T04:15:59.269704+00:00",
   "periodo": "2018",
-  "_input_hash": "28127474518c5f8b"
+  "_input_hash": "6a8d6c65d2a083cc",
+  "_generador": "render_informes.py"
 }

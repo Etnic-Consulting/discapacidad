@@ -3,161 +3,63 @@
   "id": "76318",
   "nombre": "GUACARI",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 60,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 0,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 60,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 13,
-      "top": [
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 24
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "370",
-          "pueblo": "KOGUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "860",
-          "pueblo": "CHITARERO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "560",
-        "pueblo": "PASTOS",
-        "poblacion": 24
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 60,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 0.0,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "76",
+      "nom_dpto": "VALLE DEL CAUCA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        3.707404844791428,
-        -76.40090687771846,
-        3.851523084734603,
-        -76.1780104559258
-      ],
-      "nombre_mpio": "GUACARI",
-      "cod_dpto": "76"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 3,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 3,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3
-      },
-      "pct_hecho_principal": 100.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:30:18",
+  "fecha_generacion": "2026-05-10T04:16:05.351170+00:00",
   "periodo": "2018",
-  "_input_hash": "40cca0951d12b78c"
+  "_input_hash": "080c70b30aee2c76",
+  "_generador": "render_informes.py"
 }

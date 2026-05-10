@@ -3,193 +3,84 @@
   "id": "18592",
   "nombre": "PUERTO RICO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 559,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 54,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 559,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 8,
-      "top": [
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 491
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 55
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "190",
-          "pueblo": "COREGUAJE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "500",
-        "pueblo": "NASA",
-        "poblacion": 491
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 549,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 98.36,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "18",
+      "nom_dpto": "CAQUETÁ",
       "n_resguardos": 4,
       "resguardos": [
         {
-          "nombre": "ZIT-SET DEL QUECAL",
+          "nombre_resguardo": "LA SIBERIA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 790.125
+          "area_ha": 575.791
         },
         {
-          "nombre": "LA SIBERIA",
+          "nombre_resguardo": "NASA KIWE",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 575.791
+          "area_ha": 348.277
         },
         {
-          "nombre": "NASA KIWE",
+          "nombre_resguardo": "WITACK KIWE",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 348.277
+          "area_ha": 76.654
         },
         {
-          "nombre": "WITACK KIWE",
+          "nombre_resguardo": "ZIT-SET DEL QUECAL",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 76.654
+          "area_ha": 790.125
         }
       ],
-      "bbox": [
-        1.3874596576705696,
-        -75.34871047071175,
-        2.6287263749911145,
-        -74.78218503829896
-      ],
-      "nombre_mpio": "PUERTO RICO",
-      "cod_dpto": "18"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 80,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 80,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 52
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 9
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 8
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 2
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 52
-      },
-      "pct_hecho_principal": 65.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.005,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.016
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:43:59",
+  "fecha_generacion": "2026-05-10T04:15:49.649576+00:00",
   "periodo": "2018",
-  "_input_hash": "22274b8565859557"
+  "_input_hash": "590510783863431e",
+  "_generador": "render_informes.py"
 }

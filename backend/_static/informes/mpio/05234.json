@@ -3,235 +3,119 @@
   "id": "05234",
   "nombre": "DABEIBA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 4747,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 86,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 4747,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 11,
-      "top": [
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 4652
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 37
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 27
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "240",
-          "pueblo": "CUNA-TULE",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "285",
-          "pueblo": "NUTABE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "281",
-        "pueblo": "EMBERA-KATIO",
-        "poblacion": 4652
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 4742,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 18.14,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 11,
       "resguardos": [
         {
-          "nombre": "PAVARANDÓ Y AMPARRADÓ MEDIO",
+          "nombre_resguardo": "AMPARRADO ALTO Y MEDIO Y QUEBRADA CHONTADURO",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22061.907
+          "area_ha": 17784.434
         },
         {
-          "nombre": "AMPARRADO ALTO Y MEDIO Y QUEBRADA CHONTADURO",
+          "nombre_resguardo": "CAÑAVERALES - ANTADÓ",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 17784.434
+          "area_ha": 4988.81
         },
         {
-          "nombre": "CHIMURRO Y NENDÓ",
+          "nombre_resguardo": "CHIMURRO Y NENDÓ",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 13335.311
+          "area_ha": 13335.311
         },
         {
-          "nombre": "SEVER",
+          "nombre_resguardo": "CHOROMANDÓ ALTO Y MEDIO",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 10201.743
+          "area_ha": 3053.972
         },
         {
-          "nombre": "CAÑAVERALES - ANTADÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 4988.81
-        },
-        {
-          "nombre": "CHUSCAL Y TUGURIDOCITO",
+          "nombre_resguardo": "CHUSCAL Y TUGURIDOCITO",
           "pueblo_onic": "EMBERA",
-          "area_pg_ha": 4748.518
+          "area_ha": 4748.518
         },
         {
-          "nombre": "CHOROMANDÓ ALTO Y MEDIO",
+          "nombre_resguardo": "EMBERA DRUA",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 3053.972
+          "area_ha": 17.087
         },
         {
-          "nombre": "JENATURADÓ",
+          "nombre_resguardo": "JENATURADÓ",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 595.389
+          "area_ha": 595.389
         },
         {
-          "nombre": "NARIKIZAVI",
+          "nombre_resguardo": "MONZHOMANDO",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 275.776
+          "area_ha": 187.046
         },
         {
-          "nombre": "MONZHOMANDO",
+          "nombre_resguardo": "NARIKIZAVI",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 187.046
+          "area_ha": 275.776
         },
         {
-          "nombre": "EMBERA DRUA",
+          "nombre_resguardo": "PAVARANDÓ Y AMPARRADÓ MEDIO",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 17.087
+          "area_ha": 22061.907
+        },
+        {
+          "nombre_resguardo": "SEVER",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 10201.743
         }
       ],
-      "bbox": [
-        6.694807443725223,
-        -76.61874853197298,
-        7.19125255450573,
-        -75.96357390979182
-      ],
-      "nombre_mpio": "DABEIBA",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 83,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 83,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 59
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 8
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 6
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 4
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 2
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 59
-      },
-      "pct_hecho_principal": 71.1
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.005,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.017
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:02:02",
+  "fecha_generacion": "2026-05-10T04:15:43.125178+00:00",
   "periodo": "2018",
-  "_input_hash": "c3f40fa555c3c9b6"
+  "_input_hash": "325f187823df4466",
+  "_generador": "render_informes.py"
 }

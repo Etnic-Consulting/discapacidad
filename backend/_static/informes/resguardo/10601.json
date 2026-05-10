@@ -3,19 +3,6 @@
   "id": "10601",
   "nombre": "SAN MIGUEL DE LA CASTELLANA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 82,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 82,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "SAN MIGUEL DE LA CASTELLANA",
       "dpto": "PUTUMAYO",
@@ -24,113 +11,48 @@
       "cod_mpio": "86885",
       "macro": "AMAZONIA",
       "pueblo_onic": "INGA",
-      "organizacion_nacional": "GOBIERNO MAYOR",
       "organizacion_regional": "OZIP",
       "area_hectareas": 488.476
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        0.8708027900000275,
-        -76.69036140099996,
-        1.031628792000049,
-        -76.58007667799995
-      ],
-      "area_hectareas": 488.476,
-      "macro": "AMAZONIA",
-      "dpto": "PUTUMAYO",
-      "mpio": "VILLAGARZÓN"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 263,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 263,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 189
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 32
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 16
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 14
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 4
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 189
-      },
-      "pct_hecho_principal": 71.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.016,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.053
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:56:10",
+  "fecha_generacion": "2026-05-10T04:16:26.055179+00:00",
   "periodo": "2018",
-  "_input_hash": "69cd5fb98ce13b33"
+  "_input_hash": "71612ed958f0f3e5",
+  "_generador": "render_informes.py"
 }

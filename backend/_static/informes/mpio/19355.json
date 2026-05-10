@@ -3,228 +3,79 @@
   "id": "19355",
   "nombre": "INZA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 13541,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1957,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 13541,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 16,
-      "top": [
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 13350
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 98
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 66
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "501",
-          "pueblo": "POLINDARA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "291",
-          "pueblo": "AMBALO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "500",
-        "pueblo": "NASA",
-        "poblacion": 13350
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 13490,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 145.07,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "TUMBICHUCUE",
+          "nombre_resguardo": "CALDERAS",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 4591.884
+          "area_ha": 1275.042
         },
         {
-          "nombre": "CALDERAS",
+          "nombre_resguardo": "LA GAITANA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 1275.042
+          "area_ha": 112.378
         },
         {
-          "nombre": "LA GAITANA",
+          "nombre_resguardo": "TUMBICHUCUE",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 112.378
+          "area_ha": 4591.884
         }
       ],
-      "bbox": [
-        2.3191180807090723,
-        -76.32847003338367,
-        2.678620064644296,
-        -75.95604686612887
-      ],
-      "nombre_mpio": "INZA",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 142,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 142,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 68
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 27
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 24
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 9
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 4
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 68
-      },
-      "pct_hecho_principal": 47.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.009,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.028
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:52:12",
+  "fecha_generacion": "2026-05-10T04:15:50.193834+00:00",
   "periodo": "2018",
-  "_input_hash": "1a1090e4ec473cde"
+  "_input_hash": "90b2221060b975ac",
+  "_generador": "render_informes.py"
 }

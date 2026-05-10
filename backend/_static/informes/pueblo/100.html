@@ -1,318 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · PUEBLO Bora · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe del pueblo · BORA</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.piramide-bar-h{display:inline-block;background:#02432D;height:1rem;vertical-align:middle}
+.piramide-bar-m{display:inline-block;background:#a78bfa;height:1rem;vertical-align:middle}
+.piramide td{font-size:.85rem}
+.piramide td.lbl{text-align:center;font-variant-numeric:tabular-nums}
+.piramide td.h{text-align:right}
+.piramide td.m{text-align:left}
+</style></head>
 <body>
+<h1>Informe del pueblo · BORA</h1>
+<p><span class="kpi">Población total · <b>938</b></span>
+<span class="kpi">Con cap. diversas · <b>61</b></span>
+<span class="kpi">Prevalencia · <b>65.0‰</b></span>
+<span class="kpi">Confiabilidad · <b>ALTA</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>PUEBLO Bora</h1>
-  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El pueblo Bora registra una población de 1047 personas en 2018, con 517 hombres y 530 mujeres. La lectura territorial debe partir de su vitalidad como pueblo indígena y de una presencia distribuida entre territorios amazónicos y otros asentamientos.</p><p></p><p>La cifra crítica en capacidades diversas es 122 personas con discapacidad, sobre una población de referencia de 1876, con una prevalencia de 65.0 por 1000. Este valor está por encima del promedio indígena nacional de 60.0.</p><p></p><p>El dato exige una respuesta propia y culturalmente pertinente: fortalecer identificación, cuidado comunitario, accesibilidad territorial y coordinación organizativa, sin reducir la situación Bora a una lectura clínica.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">1.047</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">122</div><div class="sub">prevalencia 65,0‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">21</div><div class="sub">11 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.286</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La estructura demográfica del pueblo Bora muestra una base joven relevante: 351 personas están entre 0-14 años, mientras 648 se ubican entre 15-64 y 48 tienen 65+ años. La razón de masculinidad de 97.5 indica una composición casi equilibrada, con ligera mayoría de mujeres: 530 frente a 517 hombres. El índice de dependencia de 61.6 señala una carga importante para los hogares y redes comunitarias, especialmente por la presencia de niñas, niños y personas mayores. El índice de envejecimiento de 13.7 no sugiere una población envejecida, pero sí demanda transmisión intergeneracional, cuidado de mayores y continuidad cultural en los ciclos de crianza.</p>
-  
-  <table>
-    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
-    <tbody>
-      <tr><td>0-14 años</td><td class="num">179</td><td class="num">172</td><td class="num"><b>351</b></td><td class="num">33.5%</td></tr>
-      <tr><td>15-64 años</td><td class="num">318</td><td class="num">330</td><td class="num"><b>648</b></td><td class="num">61.9%</td></tr>
-      <tr><td>65+ años</td><td class="num">20</td><td class="num">28</td><td class="num"><b>48</b></td><td class="num">4.6%</td></tr>
-      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>517</b></td><td class="num"><b>530</b></td><td class="num"><b>1.047</b></td><td class="num">100,0%</td></tr>
-    </tbody>
-  </table>
-  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
-    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">97,5</div><div class="sub">H por 100 M</div></div>
-    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">61,6</div><div class="sub">por 100 productivos</div></div>
-    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">13,7</div><div class="sub">65+ / 0-14 × 100</div></div>
-  </div>
-  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>En capacidades diversas, el registro reporta 122 personas Bora con discapacidad y una prevalencia de 65.0 por 1000, calculada sobre una población de referencia de 1876. La cifra es confiable y supera el promedio indígena nacional de 60.0, por lo que debe leerse como una prioridad de atención diferencial. Sin embargo, la sección de tipos de limitación aparece sin desagregación: el arreglo de tipos_limitacion está vacío. Esto limita la interpretación sobre barreras específicas de movilidad, comunicación, aprendizaje o cuidado. Desde la perspectiva ONIC, el dato sugiere revisar subregistro y calidad de caracterización, no asumir que todas las necesidades son homogéneas.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia Bora</div>
-      <div class="num-big">65,0‰</div>
-      <div class="lbl">122 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: -5,0‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>La presencia Bora se registra en 21 departamentos, pero la concentración confiable está principalmente en VICHADA, con 938 personas, 61 con discapacidad y una tasa de 65.03 por 1000. AMAZONAS también aparece como territorio clave, con 746 personas, 47 con discapacidad y tasa de 63.00 por 1000. El listado identifica 11 resguardos, entre ellos Uitiboc (1764) con 179 personas y Predio Putumayo (1001) con 77. Los demás departamentos presentan valores muy pequeños y varios están marcados como NO_CONFIABLE, por lo que no deben orientar conclusiones principales. La prioridad territorial debe concentrarse donde el registro tiene volumen y confiabilidad.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  <h3>Departamentos con mayor presencia</h3>
-  <table>
-    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
-    <tbody>
-      <tr><td>VICHADA</td><td class="num">938</td><td class="num">61</td><td class="num">65,0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>AMAZONAS</td><td class="num">746</td><td class="num">47</td><td class="num">63,0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>META</td><td class="num">82</td><td class="num">5</td><td class="num">61,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>BOGOTA D.C.</td><td class="num">40</td><td class="num">6</td><td class="num">150,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>PUTUMAYO</td><td class="num">16</td><td class="num">1</td><td class="num">62,5‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CAUCA</td><td class="num">8</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CUNDINAMARCA</td><td class="num">7</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>ANTIOQUIA</td><td class="num">6</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>VALLE DEL CAUCA</td><td class="num">6</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>SUCRE</td><td class="num">5</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-    </tbody></table>
-  
-  <h3>Resguardos asociados</h3>
-  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
-      <tr><td>Uitiboc</td><td>AMAZONAS</td><td>LETICIA</td><td class="num">179</td></tr>
-      <tr><td>Predio Putumayo</td><td>AMAZONAS</td><td>LA CHORRERA</td><td class="num">77</td></tr>
-      <tr><td>Miriti Parana</td><td>AMAZONAS</td><td>MIRITÍ - PARANÁ</td><td class="num">37</td></tr>
-      <tr><td>Curare-Los Ingleses</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">29</td></tr>
-      <tr><td>Cothue-Putumayo</td><td>AMAZONAS</td><td>TARAPACÁ</td><td class="num">10</td></tr>
-      <tr><td>Puerto Triunfo</td><td>AMAZONAS</td><td>LETICIA</td><td class="num">5</td></tr>
-      <tr><td>Comeyafu</td><td>AMAZONAS</td><td>LA PEDRERA</td><td class="num">3</td></tr>
-      <tr><td>Vaupés</td><td>VAUPÉS</td><td>MITÚ</td><td class="num">2</td></tr>
-      <tr><td>Guambia</td><td>CAUCA</td><td>SILVIA</td><td class="num">1</td></tr>
-      <tr><td>Jambalo</td><td>CAUCA</td><td>JAMBALÓ</td><td class="num">1</td></tr>
-    </tbody></table>
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos disponibles de lengua para el pueblo Bora reportan n_total de 1047 personas, con habla_total de 0 y entiende_total de 0; los porcentajes pct_habla y pct_entiende figuran como 0.0. Esta lectura debe manejarse con cautela política y cultural: el registro no permite afirmar por sí solo pérdida lingüística total, sino que muestra ausencia de hablantes y entendientes en esta fuente específica. Para ONIC, el resultado exige verificación comunitaria directa, porque la lengua no es solo una variable censal sino un eje de memoria, gobierno propio y transmisión territorial. No se deben inventar datos complementarios fuera del JSON.</p>
-  
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-  </div>
-
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>Las condiciones de vida muestran que el 47.01 de las personas registradas presentan NBI, con 17.16 en miseria, sobre n_personas de 938. Frente al promedio indígena nacional de NBI de 67.6, el indicador Bora aparece por debajo, pero sigue expresando privaciones concretas que afectan la vida comunitaria. El componente más alto es servicios con 29.0, seguido de hacinamiento con 16.74; vivienda y dependencia registran 11.19 cada uno, e inasistencia 5.12. La lectura no debe ser complaciente: el déficit en servicios toca condiciones básicas de permanencia territorial, salud comunitaria, cuidado y dignidad cotidiana.</p>
-  
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">NBI Bora</div>
-      <div class="num-big">47,0%</div>
-      <div class="lbl">Necesidades básicas insatisfechas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">67,6%</div>
-      <div class="lbl">Brecha</div>
-    </div>
-  </div>
-  <h3>Componentes del NBI (% personas afectadas)</h3>
-  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 38.6%"></div></div><div class="num">11,2%</div></div>
-  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">29,0%</div></div>
-  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 57.7%"></div></div><div class="num">16,7%</div></div>
-  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 17.7%"></div></div><div class="num">5,1%</div></div>
-  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 38.6%"></div></div><div class="num">11,2%</div></div>
-
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>En el registro RUV consultado para 1985-2024, las víctimas Bora con discapacidad aparecen con valor 0, y la lista de hechos_top está vacía. Aunque el dato está marcado como CONFIABLE, su n es 0 y por tanto debe interpretarse como ausencia de registro en esta consulta, no como prueba de ausencia de afectaciones históricas o territoriales. Tampoco hay hecho_principal ni pct_hecho_principal disponibles. Para un pueblo con presencia en VICHADA y AMAZONAS, la lectura ONIC debe evitar conclusiones cerradas y promover contraste con autoridades, organizaciones locales y memoria comunitaria, especialmente cuando las bases administrativas pueden subregistrar pertenencia étnica y discapacidad.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Condición de Vulnerabilidad registra un score de 0.286 para el pueblo Bora. La fórmula reportada combina nbi_norm, prevalencia_norm y conflicto_norm; en los componentes, nbi_norm pesa 0.47, prevalencia_norm 0.325 y conflicto_norm 0.0. La dimensión dominante es la asociada a condiciones de vida, coherente con el NBI de 47.01 y el componente de servicios de 29.0. La prevalencia de discapacidad de 65.0 por 1000 también contribuye de manera relevante. La posición relativa no viene comparada con otros pueblos en el JSON, por lo que no debe afirmarse ranking; sí puede señalarse una vulnerabilidad moderada según el valor disponible.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.47</td><td class="num">0.40</td><td class="num"><b>0.188</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.325</td><td class="num">0.30</td><td class="num"><b>0.098</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.286</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Priorizar caracterización comunitaria Bora en VICHADA y AMAZONAS, donde los datos confiables registran 938 y 746 personas respectivamente, para mejorar identificación de necesidades y rutas propias de atención.</li>
-      <li>Actualizar la desagregación de tipos de limitación, porque existen 122 personas con discapacidad y una prevalencia de 65.0 por 1000, pero tipos_limitacion aparece vacío.</li>
-      <li>Fortalecer acciones de servicios básicos en los territorios Bora, dado que el NBI es 47.01 y el componente servicios alcanza 29.0, el valor más alto entre los componentes reportados.</li>
-      <li>Impulsar verificación lingüística con autoridades Bora, porque el registro muestra n_total de 1047, habla_total de 0 y entiende_total de 0, cifras que requieren contraste cultural directo.</li>
-      <li>No usar tasas de departamentos marcados como NO_CONFIABLE para decidir prioridades; concentrar la planeación inicial en los 11 resguardos y en los territorios con mayor volumen registrado.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/100/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[-4.2, -78.0], [12.5, -67.0]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[-4.2, -78.0], [12.5, -67.0]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([4.5, -73.0]).addTo(map)
-    .bindPopup('<b>PUEBLO Bora</b>');
-</script>
-</body>
-</html>
+<h2>Pirámide de capacidades diversas (edad × sexo)</h2>
+<table class="piramide">
+<thead><tr><th style="text-align:right">Hombres</th><th>Grupo edad</th><th>Mujeres</th></tr></thead>
+<tbody>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">00-04</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">05-09</td><td class="m"><span class="piramide-bar-m" style="width:50%"></span> 3</td></tr>
+    <tr><td class="h">4 <span class="piramide-bar-h" style="width:66%"></span></td><td class="lbl">10-14</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:33%"></span></td><td class="lbl">40-44</td><td class="m"><span class="piramide-bar-m" style="width:100%"></span> 6</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:33%"></span></td><td class="lbl">45-49</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:33%"></span></td><td class="lbl">50-54</td><td class="m"><span class="piramide-bar-m" style="width:50%"></span> 3</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">55-59</td><td class="m"><span class="piramide-bar-m" style="width:66%"></span> 4</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">60-64</td><td class="m"><span class="piramide-bar-m" style="width:33%"></span> 2</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">65-69</td><td class="m"><span class="piramide-bar-m" style="width:66%"></span> 4</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:16%"></span></td><td class="lbl">70-74</td><td class="m"><span class="piramide-bar-m" style="width:50%"></span> 3</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">75-79</td><td class="m"><span class="piramide-bar-m" style="width:16%"></span> 1</td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_nacional` × `pueblo.piramide_disc`. Generado
+el 2026-05-10T04:16:08.056018+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

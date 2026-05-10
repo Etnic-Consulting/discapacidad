@@ -3,504 +3,807 @@
   "id": "05",
   "nombre": "ANTIOQUIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 37398,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 37398,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 1610,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 1610,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 37398,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 43.1,
+        "value": 43.05,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "800",
-          "con_disc": 561,
-          "total": 8891
-        },
-        {
-          "cod_pueblo": "281",
-          "con_disc": 404,
-          "total": 17493
-        },
-        {
-          "cod_pueblo": "282",
-          "con_disc": 382,
-          "total": 4413
-        },
-        {
-          "cod_pueblo": "280",
-          "con_disc": 82,
-          "total": 1725
-        },
-        {
-          "cod_pueblo": "999",
-          "con_disc": 37,
-          "total": 422
-        },
-        {
-          "cod_pueblo": "284",
-          "con_disc": 27,
-          "total": 1059
-        },
-        {
-          "cod_pueblo": "200",
-          "con_disc": 18,
-          "total": 113
-        },
-        {
-          "cod_pueblo": "720",
-          "con_disc": 13,
-          "total": 264
-        },
-        {
-          "cod_pueblo": "240",
-          "con_disc": 11,
-          "total": 1697
-        },
-        {
-          "cod_pueblo": "285",
-          "con_disc": 10,
-          "total": 168
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 63,
-      "resguardos": [
+      "macro": "OCCIDENTE",
+      "n_pueblos": 93,
+      "pueblos": [
         {
-          "nombre": "RÍO CHAJERADÓ",
-          "mpio": "MURINDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 41757.339
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 561,
+          "total": 8891,
+          "prevalencia_x_1000": 63.1,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "JAIKERAZAVI",
-          "mpio": "MUTATÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 35318.238
+          "cod_pueblo": 281,
+          "nom_pueblo": "EMBERA-KATIO",
+          "con_disc": 404,
+          "total": 17493,
+          "prevalencia_x_1000": 23.09,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "MURRÍ - PANTANOS",
-          "mpio": "FRONTINO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 31727.254
+          "cod_pueblo": 282,
+          "nom_pueblo": "EMBERA-CHAMI",
+          "con_disc": 382,
+          "total": 4413,
+          "prevalencia_x_1000": 86.56,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "PAVARANDÓ Y AMPARRADÓ MEDIO",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 22061.907
+          "cod_pueblo": 280,
+          "nom_pueblo": "EMBERA",
+          "con_disc": 82,
+          "total": 1725,
+          "prevalencia_x_1000": 47.54,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "RÍO MURINDÓ",
-          "mpio": "MURINDÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 18428.487
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 37,
+          "total": 422,
+          "prevalencia_x_1000": 87.68,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "AMPARRADO ALTO Y MEDIO Y QUEBRADA CHONTADURO",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 17784.434
+          "cod_pueblo": 284,
+          "nom_pueblo": "EMBERA-DOBIDA",
+          "con_disc": 27,
+          "total": 1059,
+          "prevalencia_x_1000": 25.5,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ANDABÚ",
-          "mpio": "URRAO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 16503.252
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 18,
+          "total": 113,
+          "prevalencia_x_1000": 159.29,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHAQUENODA",
-          "mpio": "FRONTINO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 15141.489
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 13,
+          "total": 264,
+          "prevalencia_x_1000": 49.24,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHIMURRO Y NENDÓ",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 13335.311
+          "cod_pueblo": 240,
+          "nom_pueblo": "CUNA-TULE",
+          "con_disc": 11,
+          "total": 1697,
+          "prevalencia_x_1000": 6.48,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GUAGUANDÓ",
-          "mpio": "VIGÍA DEL FUERTE",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 12802.482
+          "cod_pueblo": 285,
+          "nom_pueblo": "NUTABE",
+          "con_disc": 10,
+          "total": 168,
+          "prevalencia_x_1000": 59.52,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "YABERARADÓ",
-          "mpio": "CHIGORODÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 11755.398
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 9,
+          "total": 93,
+          "prevalencia_x_1000": 96.77,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SEVER",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 10201.743
+          "cod_pueblo": 330,
+          "nom_pueblo": "CAÑAMOMO-LOMAPRIETA",
+          "con_disc": 5,
+          "total": 70,
+          "prevalencia_x_1000": 71.43,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHONTADURAL CAÑERO",
-          "mpio": "MUTATÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 9117.107
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 5,
+          "total": 67,
+          "prevalencia_x_1000": 74.63,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CAIMÁN NUEVO",
-          "mpio": "TURBO",
-          "pueblo_onic": "GUANADULE - TULE - CUNA",
-          "area_pg_ha": 9066.202
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 4,
+          "total": 33,
+          "prevalencia_x_1000": 121.21,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "VALLE DE PERDIDAS",
-          "mpio": "URRAO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 8679.291
+          "cod_pueblo": 350,
+          "nom_pueblo": "KAMËNTSA",
+          "con_disc": 4,
+          "total": 29,
+          "prevalencia_x_1000": 137.93,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "VALLES DEL SOL",
-          "mpio": "EL BAGRE",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 7214.787
+          "cod_pueblo": 840,
+          "nom_pueblo": "KICHWA",
+          "con_disc": 3,
+          "total": 86,
+          "prevalencia_x_1000": 34.88,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MAJORÉ - AMBURÁ",
-          "mpio": "URRAO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 6799.308
+          "cod_pueblo": 40,
+          "nom_pueblo": "ARHUACO",
+          "con_disc": 3,
+          "total": 94,
+          "prevalencia_x_1000": 31.91,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL SALADO",
-          "mpio": "VIGÍA DEL FUERTE",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 6089.585
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 3,
+          "total": 53,
+          "prevalencia_x_1000": 56.6,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RÍO JARAPETÓ",
-          "mpio": "VIGÍA DEL FUERTE",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 5651.804
+          "cod_pueblo": 750,
+          "nom_pueblo": "YANACONA",
+          "con_disc": 3,
+          "total": 20,
+          "prevalencia_x_1000": 150.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CAÑAVERALES - ANTADÓ",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 4988.81
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 2,
+          "total": 120,
+          "prevalencia_x_1000": 16.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "JAIDEZAVI",
-          "mpio": "TARAZÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 4907.478
+          "cod_pueblo": 830,
+          "nom_pueblo": "OTAVALEÑO",
+          "con_disc": 2,
+          "total": 13,
+          "prevalencia_x_1000": 153.85,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHUSCAL Y TUGURIDOCITO",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 4748.518
+          "cod_pueblo": 960,
+          "nom_pueblo": "INDIGENAS-BOLIVIA",
+          "con_disc": 2,
+          "total": 5,
+          "prevalencia_x_1000": 400.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "JENGADÓ APARTADÓ",
-          "mpio": "VIGÍA DEL FUERTE",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 4478.287
+          "cod_pueblo": 680,
+          "nom_pueblo": "TUKANO",
+          "con_disc": 2,
+          "total": 4,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "POLINES",
-          "mpio": "CHIGORODÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 3382.477
+          "cod_pueblo": 880,
+          "nom_pueblo": "CALIMA",
+          "con_disc": 2,
+          "total": 6,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHOROMANDÓ ALTO Y MEDIO",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 3053.972
+          "cod_pueblo": 710,
+          "nom_pueblo": "WOUNAN",
+          "con_disc": 2,
+          "total": 15,
+          "prevalencia_x_1000": 133.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PABLO MUERA",
-          "mpio": "ZARAGOZA",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 2118.468
+          "cod_pueblo": 410,
+          "nom_pueblo": "MAKUNA",
+          "con_disc": 1,
+          "total": 3,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "TAGUAL - LA PO",
-          "mpio": "SEGOVIA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 1836.673
+          "cod_pueblo": 565,
+          "nom_pueblo": "QUILLACINGA",
+          "con_disc": 1,
+          "total": 28,
+          "prevalencia_x_1000": 35.71,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "JAI-DUKAMA",
-          "mpio": "ITUANGO",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 1285.094
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 1,
+          "total": 11,
+          "prevalencia_x_1000": 90.91,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CRISTIANÍA",
-          "mpio": "ANDES",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 1121.185
+          "cod_pueblo": 30,
+          "nom_pueblo": "ANDOKE",
+          "con_disc": 1,
+          "total": 27,
+          "prevalencia_x_1000": 37.04,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "VEGAS DE SEGOVIA",
-          "mpio": "CÁCERES",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 1062.707
+          "cod_pueblo": 310,
+          "nom_pueblo": "GUANANO",
+          "con_disc": 1,
+          "total": 3,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "DOKERAZAVI",
-          "mpio": "TURBO",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 684.686
+          "cod_pueblo": 320,
+          "nom_pueblo": "JIW",
+          "con_disc": 1,
+          "total": 6,
+          "prevalencia_x_1000": 166.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "JENATURADÓ",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 595.389
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 1,
+          "total": 19,
+          "prevalencia_x_1000": 52.63,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ZENÚ DE EL VOLAO",
-          "mpio": "NECOCLÍ",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 289.716
+          "cod_pueblo": 90,
+          "nom_pueblo": "BETOYE",
+          "con_disc": 1,
+          "total": 3,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NARIKIZAVI",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 275.776
+          "cod_pueblo": 150,
+          "nom_pueblo": "ETTE-E'NEKA",
+          "con_disc": 1,
+          "total": 17,
+          "prevalencia_x_1000": 58.82,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NUSIDÓ",
-          "mpio": "FRONTINO",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 260.873
+          "cod_pueblo": 431,
+          "nom_pueblo": "KAKUA",
+          "con_disc": 1,
+          "total": 5,
+          "prevalencia_x_1000": 200.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LAS PLAYAS",
-          "mpio": "APARTADÓ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 200.738
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 1,
+          "total": 40,
+          "prevalencia_x_1000": 25.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MONZHOMANDO",
-          "mpio": "DABEIBA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 187.046
+          "cod_pueblo": 860,
+          "nom_pueblo": "CHITARERO",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL NOVENTA",
-          "mpio": "EL BAGRE",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 169.617
+          "cod_pueblo": 900,
+          "nom_pueblo": "INDIGENAS-ECUADOR-",
+          "con_disc": 1,
+          "total": 22,
+          "prevalencia_x_1000": 45.45,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LOS ALMENDROS",
-          "mpio": "SAN JUAN DE URABÁ",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 167.568
+          "cod_pueblo": 501,
+          "nom_pueblo": "POLINDARA",
+          "con_disc": 1,
+          "total": 8,
+          "prevalencia_x_1000": 125.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA MARÍA",
-          "mpio": "VALPARAÍSO",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 158.511
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "KARAMANDU",
-          "mpio": "PUERTO BERRÍO",
-          "pueblo_onic": "EMBERA",
-          "area_pg_ha": 145.98
+          "cod_pueblo": 670,
+          "nom_pueblo": "TSIRIPU",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL CHARCÓN",
-          "mpio": "URAMITA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 137.362
+          "cod_pueblo": 690,
+          "nom_pueblo": "U`WA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "HERMEREGILDO CHAKIAMA",
-          "mpio": "CIUDAD BOLÍVAR",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 117.848
+          "cod_pueblo": 700,
+          "nom_pueblo": "TUYUKA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA PALMA",
-          "mpio": "APARTADÓ",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 115.868
+          "cod_pueblo": 740,
+          "nom_pueblo": "YAGUA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SOHAIBADO",
-          "mpio": "EL BAGRE",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 114.18
+          "cod_pueblo": 810,
+          "nom_pueblo": "GUANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RIO ALTO DE SAN JUAN (COMPUESTO POR 3 COMUNIDADES: EBANO TACANAL, EL POLVILLO Y NARANJAL)",
-          "mpio": "SAN PEDRO DE URABÁ",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 107.337
+          "cod_pueblo": 820,
+          "nom_pueblo": "MOKANA",
+          "con_disc": 0,
+          "total": 9,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CORIBI BEDADO",
-          "mpio": "MUTATÁ",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 105.319
+          "cod_pueblo": 850,
+          "nom_pueblo": "KANKUAMO",
+          "con_disc": 0,
+          "total": 12,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA LUCHA DE LOS PUEBLOS ZENÚ",
-          "mpio": "EL BAGRE",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 84.219
+          "cod_pueblo": 855,
+          "nom_pueblo": "TAYRONAS",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "KORODO-ITE",
-          "mpio": "REMEDIOS",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 75.108
+          "cod_pueblo": 870,
+          "nom_pueblo": "QUIMBAYA",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ALTOS DEL TIGRE",
-          "mpio": "CÁCERES",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 73.549
+          "cod_pueblo": 910,
+          "nom_pueblo": "INDIGENAS-PERU",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 920,
+          "nom_pueblo": "INDIGENAS-VENEZUELA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 930,
+          "nom_pueblo": "INDIGENAS-MEXICO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 950,
+          "nom_pueblo": "INDIGENAS-PANAMA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 970,
+          "nom_pueblo": "MAYA-",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 0,
+          "total": 9,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 70,
+          "nom_pueblo": "BARASANO",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 80,
+          "nom_pueblo": "BARI",
+          "con_disc": 0,
+          "total": 13,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 100,
+          "nom_pueblo": "BORA",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 110,
+          "nom_pueblo": "CABIYARI",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 140,
+          "nom_pueblo": "CARIJONA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 160,
+          "nom_pueblo": "CHIRICOA",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 170,
+          "nom_pueblo": "COCAMA",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 180,
+          "nom_pueblo": "COCONUCO",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 190,
+          "nom_pueblo": "COREGUAJE",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 210,
+          "nom_pueblo": "AWA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 230,
+          "nom_pueblo": "CUIBA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 270,
+          "nom_pueblo": "DUJOS",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 283,
+          "nom_pueblo": "EPERARA-SIAPIDARA",
+          "con_disc": 0,
+          "total": 13,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 291,
+          "nom_pueblo": "AMBALO",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 292,
+          "nom_pueblo": "QUIZGO",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 360,
+          "nom_pueblo": "COFAN",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 370,
+          "nom_pueblo": "KOGUI",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 380,
+          "nom_pueblo": "LETUAMO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 401,
+          "nom_pueblo": "MACAGUANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 434,
+          "nom_pueblo": "JUDPA",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 460,
+          "nom_pueblo": "MIRAÑA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 490,
+          "nom_pueblo": "OCAINA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 510,
+          "nom_pueblo": "PIAPOCO",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 520,
+          "nom_pueblo": "PIAROA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 540,
+          "nom_pueblo": "PISAMIRA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 550,
+          "nom_pueblo": "PUINAVE",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 25,
+          "nom_pueblo": "YAMALERO",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 590,
+          "nom_pueblo": "SIONA",
+          "con_disc": 0,
+          "total": 23,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 600,
+          "nom_pueblo": "SIRIANO",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 610,
+          "nom_pueblo": "TAIWANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 620,
+          "nom_pueblo": "TANIMUKA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 630,
+          "nom_pueblo": "TARIANO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 650,
+          "nom_pueblo": "TOTORO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        5.418558388850213,
-        -77.12783197062322,
-        8.873973719836652,
-        -73.88128210201819
-      ],
-      "nombre_dpto": "ANTIOQUIA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 2519,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 2519,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 1851
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 151
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 147
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 114
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 47
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 37
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 37
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 33
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 27
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 26
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 1851
-      },
-      "pct_hecho_principal": 73.5
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.216,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.215,
-        "conflicto_norm": 0.504
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:42:08",
+  "fecha_generacion": "2026-05-10T04:15:41.447100+00:00",
   "periodo": "2018",
-  "_input_hash": "5e0f2ede8a21aabf"
+  "_input_hash": "d13afbdb95634987",
+  "_generador": "render_informes.py"
 }

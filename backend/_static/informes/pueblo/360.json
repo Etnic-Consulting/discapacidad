@@ -1,568 +1,151 @@
 {
   "tipo": "pueblo",
   "id": "360",
-  "nombre": "Kofán",
+  "nombre": "COFAN",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1816,
-        "_meta": {
-          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
-          "table": "visor_dane.piramide_pueblo",
-          "period": "2018",
-          "n": 1816,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hombres": {
-        "value": 944,
-        "_meta": {
-          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
-          "table": "visor_dane.piramide_pueblo",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "mujeres": {
-        "value": 872,
-        "_meta": {
-          "query": "SELECT edad AS grupo_edad, sexo, poblacion_2018 AS valor\n        FROM visor_dane.piramide_pueblo WHERE cod_pueblo=%s ORDER BY edad, sexo",
-          "table": "visor_dane.piramide_pueblo",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "razon_masculinidad": {
-        "value": 108.3,
-        "_meta": {
-          "query": "calc h/m*100",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "indice_dependencia": {
-        "value": 60.9,
-        "_meta": {
-          "query": "calc dep",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "indice_envejecimiento": {
-        "value": 11.5,
-        "_meta": {
-          "query": "calc env",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "grupos_edad": {
-        "0-14": {
-          "h": 311,
-          "m": 305,
-          "total": 616
-        },
-        "15-64": {
-          "h": 596,
-          "m": 533,
-          "total": 1129
-        },
-        "65+": {
-          "h": 37,
-          "m": 34,
-          "total": 71
-        }
-      },
-      "piramide": [
-        {
-          "grupo_edad": "0-4",
-          "sexo": "HOMBRE",
-          "valor": 100
-        },
-        {
-          "grupo_edad": "0-4",
-          "sexo": "MUJER",
-          "valor": 93
-        },
-        {
-          "grupo_edad": "10-14",
-          "sexo": "HOMBRE",
-          "valor": 109
-        },
-        {
-          "grupo_edad": "10-14",
-          "sexo": "MUJER",
-          "valor": 115
-        },
-        {
-          "grupo_edad": "15-19",
-          "sexo": "HOMBRE",
-          "valor": 124
-        },
-        {
-          "grupo_edad": "15-19",
-          "sexo": "MUJER",
-          "valor": 100
-        },
-        {
-          "grupo_edad": "20-24",
-          "sexo": "HOMBRE",
-          "valor": 120
-        },
-        {
-          "grupo_edad": "20-24",
-          "sexo": "MUJER",
-          "valor": 76
-        },
-        {
-          "grupo_edad": "25-29",
-          "sexo": "HOMBRE",
-          "valor": 74
-        },
-        {
-          "grupo_edad": "25-29",
-          "sexo": "MUJER",
-          "valor": 77
-        },
-        {
-          "grupo_edad": "30-34",
-          "sexo": "HOMBRE",
-          "valor": 69
-        },
-        {
-          "grupo_edad": "30-34",
-          "sexo": "MUJER",
-          "valor": 73
-        },
-        {
-          "grupo_edad": "35-39",
-          "sexo": "HOMBRE",
-          "valor": 57
-        },
-        {
-          "grupo_edad": "35-39",
-          "sexo": "MUJER",
-          "valor": 63
-        },
-        {
-          "grupo_edad": "40-44",
-          "sexo": "HOMBRE",
-          "valor": 45
-        },
-        {
-          "grupo_edad": "40-44",
-          "sexo": "MUJER",
-          "valor": 46
-        },
-        {
-          "grupo_edad": "45-49",
-          "sexo": "HOMBRE",
-          "valor": 33
-        },
-        {
-          "grupo_edad": "45-49",
-          "sexo": "MUJER",
-          "valor": 33
-        },
-        {
-          "grupo_edad": "50-54",
-          "sexo": "HOMBRE",
-          "valor": 21
-        },
-        {
-          "grupo_edad": "50-54",
-          "sexo": "MUJER",
-          "valor": 24
-        },
-        {
-          "grupo_edad": "55-59",
-          "sexo": "HOMBRE",
-          "valor": 44
-        },
-        {
-          "grupo_edad": "55-59",
-          "sexo": "MUJER",
-          "valor": 22
-        },
-        {
-          "grupo_edad": "5-9",
-          "sexo": "HOMBRE",
-          "valor": 102
-        },
-        {
-          "grupo_edad": "5-9",
-          "sexo": "MUJER",
-          "valor": 97
-        },
-        {
-          "grupo_edad": "60-64",
-          "sexo": "HOMBRE",
-          "valor": 9
-        },
-        {
-          "grupo_edad": "60-64",
-          "sexo": "MUJER",
-          "valor": 19
-        },
-        {
-          "grupo_edad": "65-69",
-          "sexo": "HOMBRE",
-          "valor": 17
-        },
-        {
-          "grupo_edad": "65-69",
-          "sexo": "MUJER",
-          "valor": 13
-        },
-        {
-          "grupo_edad": "70-74",
-          "sexo": "HOMBRE",
-          "valor": 9
-        },
-        {
-          "grupo_edad": "70-74",
-          "sexo": "MUJER",
-          "valor": 6
-        },
-        {
-          "grupo_edad": "75-79",
-          "sexo": "HOMBRE",
-          "valor": 5
-        },
-        {
-          "grupo_edad": "75-79",
-          "sexo": "MUJER",
-          "valor": 8
-        },
-        {
-          "grupo_edad": "80-84",
-          "sexo": "HOMBRE",
-          "valor": 4
-        },
-        {
-          "grupo_edad": "80-84",
-          "sexo": "MUJER",
-          "valor": 6
-        },
-        {
-          "grupo_edad": "85-121",
-          "sexo": "HOMBRE",
-          "valor": 2
-        },
-        {
-          "grupo_edad": "85-121",
-          "sexo": "MUJER",
-          "valor": 1
-        }
-      ]
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
-        "value": 300,
+        "value": 150,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
+          "query": "SELECT con_discapacidad FROM pueblo.disc_nacional WHERE cod_pueblo = %s AND periodo='2018'",
+          "table": "pueblo.disc_nacional",
           "period": "2018",
-          "n": 300,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "ALTA"
         }
       },
       "poblacion_referencia": {
-        "value": 3614,
+        "value": 1807,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_pueblo=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "pueblo.disc_nacional",
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 83.0,
+        "value": 83.01,
         "_meta": {
-          "query": "calc x1000",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "tasa_x_1000 from pueblo.disc_nacional"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      }
+    },
+    "demografia": {
+      "piramide_capacidades_diversas": {
+        "value": [
+          {
+            "grupo_edad": "00-04",
+            "hombres": 4,
+            "mujeres": 2
+          },
+          {
+            "grupo_edad": "05-09",
+            "hombres": 5,
+            "mujeres": 1
+          },
+          {
+            "grupo_edad": "10-14",
+            "hombres": 3,
+            "mujeres": 6
+          },
+          {
+            "grupo_edad": "15-19",
+            "hombres": 11,
+            "mujeres": 7
+          },
+          {
+            "grupo_edad": "20-24",
+            "hombres": 8,
+            "mujeres": 2
+          },
+          {
+            "grupo_edad": "25-29",
+            "hombres": 3,
+            "mujeres": 3
+          },
+          {
+            "grupo_edad": "30-34",
+            "hombres": 3,
+            "mujeres": 2
+          },
+          {
+            "grupo_edad": "35-39",
+            "hombres": 3,
+            "mujeres": 7
+          },
+          {
+            "grupo_edad": "40-44",
+            "hombres": 6,
+            "mujeres": 4
+          },
+          {
+            "grupo_edad": "45-49",
+            "hombres": 7,
+            "mujeres": 4
+          },
+          {
+            "grupo_edad": "50-54",
+            "hombres": 4,
+            "mujeres": 4
+          },
+          {
+            "grupo_edad": "55-59",
+            "hombres": 11,
+            "mujeres": 6
+          },
+          {
+            "grupo_edad": "60-64",
+            "hombres": 3,
+            "mujeres": 4
+          },
+          {
+            "grupo_edad": "65-69",
+            "hombres": 5,
+            "mujeres": 3
+          },
+          {
+            "grupo_edad": "70-74",
+            "hombres": 3,
+            "mujeres": 3
+          },
+          {
+            "grupo_edad": "75-79",
+            "hombres": 4,
+            "mujeres": 3
+          },
+          {
+            "grupo_edad": "80-84",
+            "hombres": 1,
+            "mujeres": 5
+          }
+        ],
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
+          "table": "pueblo.piramide_disc",
           "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "n_grupos_edad": 17
         }
-      },
-      "tipos_limitacion": []
+      }
     },
     "territorial": {
-      "departamentos": [
-        {
-          "cod_dpto": "99",
-          "nom_dpto": "VICHADA",
-          "total": 1807,
-          "con_discapacidad": 150,
-          "tasa_x_1000": "83.01",
-          "confiabilidad": "CONFIABLE"
-        },
-        {
-          "cod_dpto": "86",
-          "nom_dpto": "PUTUMAYO",
-          "total": 1396,
-          "con_discapacidad": 117,
-          "tasa_x_1000": "83.81",
-          "confiabilidad": "CONFIABLE"
-        },
-        {
-          "cod_dpto": "52",
-          "nom_dpto": "NARINO",
-          "total": 217,
-          "con_discapacidad": 27,
-          "tasa_x_1000": "124.42",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "76",
-          "nom_dpto": "VALLE DEL CAUCA",
-          "total": 132,
-          "con_discapacidad": 6,
-          "tasa_x_1000": "45.45",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "11",
-          "nom_dpto": "BOGOTA D.C.",
-          "total": 25,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "18",
-          "nom_dpto": "CAQUETA",
-          "total": 10,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "19",
-          "nom_dpto": "CAUCA",
-          "total": 9,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "41",
-          "nom_dpto": "HUILA",
-          "total": 9,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "05",
-          "nom_dpto": "ANTIOQUIA",
-          "total": 3,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "25",
-          "nom_dpto": "CUNDINAMARCA",
-          "total": 3,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "68",
-          "nom_dpto": "SANTANDER",
-          "total": 1,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "73",
-          "nom_dpto": "TOLIMA",
-          "total": 1,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        },
-        {
-          "cod_dpto": "63",
-          "nom_dpto": "QUINDIO",
-          "total": 1,
-          "con_discapacidad": 0,
-          "tasa_x_1000": "0.00",
-          "confiabilidad": "NO_CONFIABLE"
-        }
-      ],
-      "n_departamentos": 13,
-      "departamento_principal": {
-        "cod_dpto": "99",
-        "nom_dpto": "VICHADA",
-        "total": 1807,
-        "con_discapacidad": 150,
-        "tasa_x_1000": "83.01",
-        "confiabilidad": "CONFIABLE"
-      },
-      "resguardos": [
-        {
-          "nombre": "Santa Rosa del Guamuez (1510)",
-          "poblacion": 214,
-          "dpto": "PUTUMAYO",
-          "mpio": "VALLE DEL GUAMUEZ"
-        },
-        {
-          "nombre": "Yarinal-San Marcelino (1509)",
-          "poblacion": 179,
-          "dpto": "PUTUMAYO",
-          "mpio": "SAN MIGUEL"
-        },
-        {
-          "nombre": "Santa Rosa de Sucumbios y El Diviso (1511)",
-          "poblacion": 124,
-          "dpto": "NARIÑO",
-          "mpio": "IPIALES"
-        },
-        {
-          "nombre": "Afilador-Campoalegre (1512)",
-          "poblacion": 121,
-          "dpto": "PUTUMAYO",
-          "mpio": "SAN MIGUEL"
-        },
-        {
-          "nombre": "Bocana de Luzon (1758)",
-          "poblacion": 112,
-          "dpto": "PUTUMAYO",
-          "mpio": "ORITO"
-        },
-        {
-          "nombre": "Ukumari Kankhe (1590)",
-          "poblacion": 53,
-          "dpto": "NARIÑO",
-          "mpio": "IPIALES"
-        },
-        {
-          "nombre": "Ipiales   (1357)",
-          "poblacion": 7,
-          "dpto": null,
-          "mpio": null
-        },
-        {
-          "nombre": "Nasa Chamb (1776)",
-          "poblacion": 6,
-          "dpto": "PUTUMAYO",
-          "mpio": "PUERTO ASÍS"
-        },
-        {
-          "nombre": "El Espingo (1731)",
-          "poblacion": 2,
-          "dpto": "PUTUMAYO",
-          "mpio": "ORITO"
-        },
-        {
-          "nombre": "Huellas (1521)",
-          "poblacion": 1,
-          "dpto": "CAUCA",
-          "mpio": "CALOTO"
-        },
-        {
-          "nombre": "Mandiyaco (1698)",
-          "poblacion": 1,
-          "dpto": "CAUCA",
-          "mpio": "SANTA ROSA"
-        }
-      ],
-      "n_resguardos": 11,
-      "bbox": [
-        0.24314401600003066,
-        -77.35631173599995,
-        0.5439253310000254,
-        -76.73525555799995
-      ]
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/mpio"
     },
     "lengua": {
-      "pct_habla": 0.0,
-      "pct_entiende": 0.0,
-      "n_total": 1816,
-      "habla_total": 0,
-      "entiende_total": 0
+      "_sin_datos": true,
+      "_nota": "no disponible en CNPV 2018"
     },
     "nbi": {
-      "pct_nbi": {
-        "value": 33.98,
-        "_meta": {
-          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
-          "table": "visor_dane.nbi_pueblo",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pct_miseria": {
-        "value": 7.14,
-        "_meta": {
-          "query": "SELECT pct_nbi, pct_miseria, nbi_vivienda, nbi_servicios,\n               nbi_hacinamiento, nbi_inasistencia, nbi_dependencia, total_personas\n        FROM visor_dane.nbi_pueblo WHERE cod_pueblo=%s",
-          "table": "visor_dane.nbi_pueblo",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "componentes": {
-        "vivienda": 2.49,
-        "servicios": 23.13,
-        "hacinamiento": 6.47,
-        "inasistencia": 4.04,
-        "dependencia": 6.53
-      },
-      "n_personas": 1807,
-      "promedio_indigena_nbi": 67.6
+      "_sin_datos": true,
+      "_nota": "ver indicadores nacionales"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND UPPER(pueblo_imputado)=UPPER(%s)",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [],
-      "hecho_principal": null,
-      "pct_hecho_principal": null
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.26,
-      "componentes": {
-        "nbi_norm": 0.34,
-        "prevalencia_norm": 0.415,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T10:42:28",
+  "fecha_generacion": "2026-05-10T04:16:08.922680+00:00",
   "periodo": "2018",
-  "_input_hash": "e8a78433209844fe"
+  "_input_hash": "9bc9a8f4534751f9",
+  "_generador": "render_informes.py"
 }

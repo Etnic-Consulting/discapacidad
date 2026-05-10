@@ -3,218 +3,79 @@
   "id": "19110",
   "nombre": "BUENOS AIRES",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 6428,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 425,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 6428,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 14,
-      "top": [
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 6372
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 23
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "251",
-          "pueblo": "BANIBA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "285",
-          "pueblo": "NUTABE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "500",
-        "pueblo": "NASA",
-        "poblacion": 6372
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 6421,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 66.19,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "LAS DELICIAS (DE BUENOS AIRES)",
+          "nombre_resguardo": "LA PAILA - NAYA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 1676.268
+          "area_ha": 362.333
         },
         {
-          "nombre": "LA PAILA - NAYA",
+          "nombre_resguardo": "LAS DELICIAS (DE BUENOS AIRES)",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 362.333
+          "area_ha": 1676.268
         },
         {
-          "nombre": "PUEBLO NUEVO CERAL",
+          "nombre_resguardo": "PUEBLO NUEVO CERAL",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 44.13
+          "area_ha": 44.13
         }
       ],
-      "bbox": [
-        2.8709151803122457,
-        -76.8171433677976,
-        3.233705680832586,
-        -76.55640488863457
-      ],
-      "nombre_mpio": "BUENOS AIRES",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 192,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 192,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 135
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 31
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 8
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 5
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 4
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 3
-        },
-        {
-          "hecho": "Tortura",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 135
-      },
-      "pct_hecho_principal": 70.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.012,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.038
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:45:36",
+  "fecha_generacion": "2026-05-10T04:15:49.942678+00:00",
   "periodo": "2018",
-  "_input_hash": "e183db75fbb45d14"
+  "_input_hash": "ea0e0b62c557b2b5",
+  "_generador": "render_informes.py"
 }

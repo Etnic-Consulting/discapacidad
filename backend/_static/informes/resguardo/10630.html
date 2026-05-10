@@ -1,240 +1,41 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · RESGUARDO BELTRÁN · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe del resguardo · BELTRÁN</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left;width:30%}
+td{padding:.5rem;border-bottom:1px solid #eee}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.nota{padding:.75rem 1rem;background:#fef3c7;border-left:4px solid #92400e;margin:1rem 0;font-size:.9rem}
+</style></head>
 <body>
+<h1>Informe del resguardo · BELTRÁN</h1>
+<p><span class="kpi">Población total (CNPV) · <b>0</b></span>
+<span class="kpi">Pueblo · <b>PIJAO</b></span>
+<span class="kpi">Área (ha) · <b>227.5</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>RESGUARDO BELTRÁN</h1>
-  <div class="subtitle">Informe de territorio indígena · Capacidades Diversas</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
+<h2>Información básica</h2>
+<table>
+<tr><th>Departamento</th><td>TOLIMA (73)</td></tr>
+<tr><th>Municipio</th><td>NATAGAIMA (73483)</td></tr>
+<tr><th>Macrorregión</th><td>CENTRO - ORIENTE</td></tr>
+<tr><th>Pueblo ONIC</th><td>PIJAO</td></tr>
+<tr><th>Organización Regional</th><td>CRIT</td></tr>
+<tr><th>Área (hectáreas)</th><td>227.5</td></tr>
+</table>
+
+<div class="nota">
+<b>Capacidades diversas a nivel resguardo:</b> sin datos disponibles en CNPV 2018.
+El censo registra discapacidad por dpto y por pueblo, no por resguardo individual.
+Para una aproximación, ver el informe del pueblo <b>PIJAO</b> o del municipio <b>NATAGAIMA</b>.
 </div>
 
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El resguardo indígena BELTRÁN, ubicado en el municipio de Natagaima (Tolima), alberga una población de 99 habitantes según el DANE-CNPV 2018. Su territorio de 227.54 hectáreas, habitado por el pueblo PIJAO, enfrenta una crisis humanitaria crítica con 407 víctimas de violencia estructural entre 1985-2024. El desplazamiento forzado representa el 75.9% de los hechos victimizantes, evidenciando una afectación territorial sistemática que amenaza la pervivencia física y cultural de este pueblo.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">99</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">—</div><div class="sub">prevalencia —‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">— resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.024</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La población total del resguardo BELTRÁN asciende a 99 habitantes según datos oficiales. No se dispone de información sobre pirámide etaria ni estructura por edades en este nivel de desagregación. Los datos demográficos disponibles no permiten analizar dinámicas generacionales ni presión poblacional en el territorio.</p>
-  <div class="sin-datos">población de la fuente DANE-CNPV cruzada por código de territorio</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <div class="sin-datos">datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>El resguardo BELTRÁN ocupa 227.54 hectáreas en el municipio de Natagaima (Tolima). Su delimitación geográfica está definida por coordenadas que confirman su carácter de territorio colectivo. Este pequeño territorio enfrenta presiones externas que requieren fortalecer su delimitación y protección legal.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>No se dispone de datos sobre lengua materna o uso de idiomas ancestrales en este resguardo. La ausencia de información lingüística impide evaluar la vitalidad cultural y los procesos de revitalización del pueblo PIJAO en su territorio histórico.</p>
-  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>No existen datos disponibles sobre Necesidades Básicas Insatisfechas (NBI) para este resguardo. El promedio indígena nacional de NBI es 67.6%, pero no puede establecerse la brecha específica para BELTRÁN. Se requiere sistematizar indicadores socioeconómicos a nivel territorial para orientar políticas diferenciadas.</p>
-  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El resguardo BELTRÁN registra 407 víctimas de violencia entre 1985-2024, con 309 casos de desplazamiento forzado (75.9% del total). Los hechos victimizantes incluyen amenazas, homicidios y despojo de tierras, configurando un patrón de violencia estructural contra el pueblo PIJAO. La concentración de hechos en el municipio de Natagaima exige acciones urgentes de protección territorial.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">407</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">75,9% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">309</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 19.1%"></div></div><div class="num">59</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 4.9%"></div></div><div class="num">15</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Acto terrorista / Atentados / Combates / Enfrentamientos / H</div><div class="track"><div class="fill" style="width: 2.3%"></div></div><div class="num">7</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Abandono o Despojo Forzado de Tierras</div><div class="track"><div class="fill" style="width: 1.0%"></div></div><div class="num">3</div></div>
-
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Condiciones de Vida (ICV) del resguardo BELTRÁN es 0.024, con componente dominante de conflicto (0.081). Este valor refleja condiciones de vida críticas, donde la violencia sistemática impacta más que los indicadores socioeconómicos. La posición relativa es crítica frente a otros territorios indígenas.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.081</td><td class="num">0.30</td><td class="num"><b>0.024</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.024</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Implementar un plan de protección territorial urgente para el resguardo BELTRÁN, priorizando la prevención del desplazamiento forzado que afecta al 75.9% de las víctimas registradas.</li>
-      <li>Fortalecer la delimitación y titulación del territorio de 227.54 hectáreas mediante gestiones ante la ANC y la Defensoría del Pueblo para garantizar seguridad jurídica.</li>
-      <li>Establecer un sistema de alerta temprana en Natagaima para monitorear hechos victimizantes, con énfasis en desplazamiento y amenazas contra líderes PIJAO.</li>
-      <li>Diseñar un programa de salud intercultural que aborde las necesidades no cubiertas, considerando la ausencia de datos epidemiológicos en el territorio.</li>
-      <li>Promover la revitalización lingüística y cultural del pueblo PIJAO mediante proyectos educativos comunitarios, ante la falta de información sobre lengua materna.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/resguardo/10630/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[3.5777333010000234, -75.24845965199995], [3.5989379830000416, -75.23368180099999]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[3.5777333010000234, -75.24845965199995], [3.5989379830000416, -75.23368180099999]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([3.5883356420000325, -75.24107072649997]).addTo(map)
-    .bindPopup('<b>RESGUARDO BELTRÁN</b>');
-</script>
-</body>
-</html>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `smt_geo.resguardos` · `visor_dane.resguardo_pueblo`. Generado
+el 2026-05-10T04:16:26.844237+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

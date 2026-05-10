@@ -1,161 +1,169 @@
 {
   "tipo": "dpto",
   "id": "88",
-  "nombre": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+  "nombre": "ARCHIPIÉLAGO DE SAN ANDRÉS, PROVIDENCIA Y SANTA CATALINA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 20,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 20,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 0,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 0,
-          "confiabilidad": "NO_CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
       "poblacion_referencia": {
         "value": 20,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
         "value": 0.0,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "NO_CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "010",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "con_disc": 0,
-          "total": 2
-        },
-        {
-          "cod_pueblo": "240",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "291",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "320",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "600",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "720",
-          "con_disc": 0,
-          "total": 4
-        },
-        {
-          "cod_pueblo": "730",
-          "con_disc": 0,
-          "total": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "con_disc": 0,
-          "total": 2
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 0,
-      "resguardos": [],
-      "bbox": [
-        12.480296347178351,
-        -81.73562055563303,
-        13.394727761593455,
-        -81.34909505607453
+      "macro": "—",
+      "n_pueblos": 13,
+      "pueblos": [
+        {
+          "cod_pueblo": 10,
+          "nom_pueblo": "ACHAGUA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 240,
+          "nom_pueblo": "CUNA-TULE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 291,
+          "nom_pueblo": "AMBALO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 320,
+          "nom_pueblo": "JIW",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 600,
+          "nom_pueblo": "SIRIANO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 810,
+          "nom_pueblo": "GUANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 820,
+          "nom_pueblo": "MOKANA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        }
       ],
-      "nombre_dpto": "SAN ANDRES, PROVIDENCIA Y SANTA CATALINA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [],
-      "hecho_principal": null,
-      "pct_hecho_principal": null
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:59:24",
+  "fecha_generacion": "2026-05-10T04:15:42.078136+00:00",
   "periodo": "2018",
-  "_input_hash": "89f40f73eba818a1"
+  "_input_hash": "584240fe5cbdee5d",
+  "_generador": "render_informes.py"
 }

@@ -3,19 +3,6 @@
   "id": "10031",
   "nombre": "CHUSCAL Y TUGURIDOCITO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 666,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 666,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "CHUSCAL Y TUGURIDOCITO",
       "dpto": "ANTIOQUIA",
@@ -24,69 +11,48 @@
       "cod_mpio": "05234",
       "macro": "OCCIDENTE",
       "pueblo_onic": "EMBERA",
-      "organizacion_nacional": "ONIC",
       "organizacion_regional": "OIA",
       "area_hectareas": 4748.518
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        6.810037671000032,
-        -76.40245960799996,
-        6.88381436800006,
-        -76.28213327199995
-      ],
-      "area_hectareas": 4748.518,
-      "macro": "OCCIDENTE",
-      "dpto": "ANTIOQUIA",
-      "mpio": "DABEIBA"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [],
-      "hecho_principal": null,
-      "pct_hecho_principal": null
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T10:39:20",
+  "fecha_generacion": "2026-05-10T04:16:11.748821+00:00",
   "periodo": "2018",
-  "_input_hash": "fbf8f3eb9131653b"
+  "_input_hash": "5595598f1824ca95",
+  "_generador": "render_informes.py"
 }

@@ -1,506 +1,609 @@
 {
   "tipo": "dpto",
   "id": "52",
-  "nombre": "NARINO",
+  "nombre": "NARIÑO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 206239,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 206239,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 20010,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 20010,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 206239,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 97.0,
+        "value": 97.02,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "560",
-          "con_disc": 15781,
-          "total": 155098
-        },
-        {
-          "cod_pueblo": "210",
-          "con_disc": 2900,
-          "total": 38955
-        },
-        {
-          "cod_pueblo": "565",
-          "con_disc": 546,
-          "total": 5689
-        },
-        {
-          "cod_pueblo": "340",
-          "con_disc": 510,
-          "total": 2183
-        },
-        {
-          "cod_pueblo": "999",
-          "con_disc": 164,
-          "total": 1397
-        },
-        {
-          "cod_pueblo": "283",
-          "con_disc": 36,
-          "total": 2137
-        },
-        {
-          "cod_pueblo": "360",
-          "con_disc": 27,
-          "total": 217
-        },
-        {
-          "cod_pueblo": "500",
-          "con_disc": 14,
-          "total": 197
-        },
-        {
-          "cod_pueblo": "350",
-          "con_disc": 5,
-          "total": 71
-        },
-        {
-          "cod_pueblo": "080",
-          "con_disc": 2,
-          "total": 9
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 62,
-      "resguardos": [
+      "macro": "OCCIDENTE",
+      "n_pueblos": 68,
+      "pueblos": [
         {
-          "nombre": "EL GRAN SÁBALO",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 42482.522
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 15781,
+          "total": 155098,
+          "prevalencia_x_1000": 101.75,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "NULPE MEDIO - ALTO Y RÍO SAN JUAN",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 37887.346
+          "cod_pueblo": 210,
+          "nom_pueblo": "AWA",
+          "con_disc": 2900,
+          "total": 38955,
+          "prevalencia_x_1000": 74.44,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "LA TURBIA",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 28627.987
+          "cod_pueblo": 565,
+          "nom_pueblo": "QUILLACINGA",
+          "con_disc": 546,
+          "total": 5689,
+          "prevalencia_x_1000": 95.97,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "TORTUGAÑA, TELEMBÍ, PUNDE, PITADERO, BRAVO, TRONQUERÍA Y ZABALETA",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 22118.439
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 510,
+          "total": 2183,
+          "prevalencia_x_1000": 233.62,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "UKUMARI KANKHE",
-          "mpio": "IPIALES",
-          "pueblo_onic": "KOFÁN",
-          "area_pg_ha": 19500.25
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 164,
+          "total": 1397,
+          "prevalencia_x_1000": 117.39,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "GRAN ROSARIO",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 17341.664
+          "cod_pueblo": 283,
+          "nom_pueblo": "EPERARA-SIAPIDARA",
+          "con_disc": 36,
+          "total": 2137,
+          "prevalencia_x_1000": 16.85,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "GUALCALÁ",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 17175.495
+          "cod_pueblo": 360,
+          "nom_pueblo": "COFAN",
+          "con_disc": 27,
+          "total": 217,
+          "prevalencia_x_1000": 124.42,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PINGULLO - SARDINERO",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 12047.741
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 14,
+          "total": 197,
+          "prevalencia_x_1000": 71.07,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "TRONQUERÍA, PULGANDE - PALICITO",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 10428.625
+          "cod_pueblo": 350,
+          "nom_pueblo": "KAMËNTSA",
+          "con_disc": 5,
+          "total": 71,
+          "prevalencia_x_1000": 70.42,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GRAN TESCUAL",
-          "mpio": "PUERRES",
-          "pueblo_onic": "PASTO",
-          "area_pg_ha": 10174.192
+          "cod_pueblo": 30,
+          "nom_pueblo": "ANDOKE",
+          "con_disc": 2,
+          "total": 5,
+          "prevalencia_x_1000": 400.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NUNALBÍ ALTO ULBÍ",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 9632.469
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 2,
+          "total": 12,
+          "prevalencia_x_1000": 166.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LA FLORESTA, SANTA ROSA Y SAN FRANCISCO",
-          "mpio": "OLAYA HERRERA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 9396.485
+          "cod_pueblo": 40,
+          "nom_pueblo": "ARHUACO",
+          "con_disc": 2,
+          "total": 25,
+          "prevalencia_x_1000": 80.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL SANDE",
-          "mpio": "SANTACRUZ",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 8734.75
+          "cod_pueblo": 80,
+          "nom_pueblo": "BARI",
+          "con_disc": 2,
+          "total": 9,
+          "prevalencia_x_1000": 222.22,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PALMAR IMBI",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 7837.31
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 2,
+          "total": 12,
+          "prevalencia_x_1000": 166.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SAUNDE GUIGUAY",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 7505.635
+          "cod_pueblo": 520,
+          "nom_pueblo": "PIAROA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "AWÁ ÑAMBÍ PIEDRA VERDE",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 7330.714
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 1,
+          "total": 10,
+          "prevalencia_x_1000": 100.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INDA ZABALETA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 6226.933
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 1,
+          "total": 24,
+          "prevalencia_x_1000": 41.67,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ISHU AWÁ",
-          "mpio": "IPIALES",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 6017.618
+          "cod_pueblo": 770,
+          "nom_pueblo": "YUKUNA",
+          "con_disc": 1,
+          "total": 5,
+          "prevalencia_x_1000": 200.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GUADUAL, CUMBAS, MAGÜÍ, INVINA Y ARRAYÁN",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 5166.155
+          "cod_pueblo": 780,
+          "nom_pueblo": "YUKPA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL CEDRO, LAS PEÑAS, LA BRAVA, PILVÍ Y LA PINTADA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4970.115
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 1,
+          "total": 8,
+          "prevalencia_x_1000": 125.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RAMOS - MONGÓN - MANCHURIA",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4781.225
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ALTO CARTAGENA",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4564.979
+          "cod_pueblo": 170,
+          "nom_pueblo": "COCAMA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUAYQUER DEL ALTO ALBI",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4337.381
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 1,
+          "total": 7,
+          "prevalencia_x_1000": 142.86,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUALQUER INTEGRADO LA MILAGROSA",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4132.251
+          "cod_pueblo": 900,
+          "nom_pueblo": "INDIGENAS-ECUADOR-",
+          "con_disc": 1,
+          "total": 7,
+          "prevalencia_x_1000": 142.86,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INTEGRADO EL CHARCO",
-          "mpio": "EL CHARCO",
-          "pueblo_onic": "EPERARA SIA",
-          "area_pg_ha": 3806.211
+          "cod_pueblo": 970,
+          "nom_pueblo": "MAYA-",
+          "con_disc": 1,
+          "total": 17,
+          "prevalencia_x_1000": 58.82,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RUMIYACO",
-          "mpio": "IPIALES",
-          "pueblo_onic": "PASTO",
-          "area_pg_ha": 3705.525
+          "cod_pueblo": 291,
+          "nom_pueblo": "AMBALO",
+          "con_disc": 1,
+          "total": 4,
+          "prevalencia_x_1000": 250.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHAGÜÍ CHIMBUZA VEGAS Y OTROS",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 3456.108
+          "cod_pueblo": 501,
+          "nom_pueblo": "POLINDARA",
+          "con_disc": 1,
+          "total": 3,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "NASA UH",
-          "mpio": "POTOSÍ",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 3365.582
+          "cod_pueblo": 310,
+          "nom_pueblo": "GUANANO",
+          "con_disc": 1,
+          "total": 4,
+          "prevalencia_x_1000": 250.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PIALAPÍ - PUEBLO VIEJO - SAN MIGUEL - YARÉ",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 3278.932
+          "cod_pueblo": 610,
+          "nom_pueblo": "TAIWANO",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PLANADAS TELEMBÍ",
-          "mpio": "SAMANIEGO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 3046.752
+          "cod_pueblo": 650,
+          "nom_pueblo": "TOTORO",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INGA DE SAN PEDRO",
-          "mpio": "EL TABLÓN DE GÓMEZ",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 2648.238
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 1,
+          "total": 12,
+          "prevalencia_x_1000": 83.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "RÍO SATINGA",
-          "mpio": "OLAYA HERRERA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 2639.271
+          "cod_pueblo": 10,
+          "nom_pueblo": "ACHAGUA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PIPALTA - PALBI - YAGUAPÍ",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 2607.151
+          "cod_pueblo": 820,
+          "nom_pueblo": "MOKANA",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "GUELMAMBÍ CARAÑO",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 2586.133
+          "cod_pueblo": 840,
+          "nom_pueblo": "KICHWA",
+          "con_disc": 0,
+          "total": 16,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUCHILLA - PALMAR",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 2568.78
+          "cod_pueblo": 870,
+          "nom_pueblo": "QUIMBAYA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUAMBI - YASLAMBI",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 2534.753
+          "cod_pueblo": 880,
+          "nom_pueblo": "CALIMA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "KEJUAMBI FELICIANA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 1828.627
+          "cod_pueblo": 890,
+          "nom_pueblo": "PANCHES",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PIEDRA SELLADA - QUEBRADA TRONQUERÍA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 1686.23
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INGA DE COLÓN",
-          "mpio": "BUESACO",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 1531.525
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 0,
+          "total": 12,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "INDA GUACARAY",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 1228.093
+          "cod_pueblo": 100,
+          "nom_pueblo": "BORA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUASBIL - LA FALDADA",
-          "mpio": "BARBACOAS",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 1162.015
+          "cod_pueblo": 110,
+          "nom_pueblo": "CABIYARI",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SANTA ROSA SUCUMBÍOS EL DIVISO",
-          "mpio": "IPIALES",
-          "pueblo_onic": "KOFÁN",
-          "area_pg_ha": 1093.297
+          "cod_pueblo": 180,
+          "nom_pueblo": "COCONUCO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PULGANDE CAMPOALEGRE",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 1015.667
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MORRITO",
-          "mpio": "EL CHARCO",
-          "pueblo_onic": "EPERARA SIA",
-          "area_pg_ha": 904.625
+          "cod_pueblo": 230,
+          "nom_pueblo": "CUIBA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHINGUIRITO MIRA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 797.145
+          "cod_pueblo": 240,
+          "nom_pueblo": "CUNA-TULE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "QUEBRADA GRANDE",
-          "mpio": "SANTA BÁRBARA",
-          "pueblo_onic": "EPERARA SIA",
-          "area_pg_ha": 771.877
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "SANQUIANGUITA",
-          "mpio": "MOSQUERA",
-          "pueblo_onic": "EPERARA SIA",
-          "area_pg_ha": 651.212
+          "cod_pueblo": 280,
+          "nom_pueblo": "EMBERA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUASCUABI - PALDUBI",
-          "mpio": "RICAURTE",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 572.646
+          "cod_pueblo": 281,
+          "nom_pueblo": "EMBERA-KATIO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "REFUGIO EL SOL",
-          "mpio": "PASTO",
-          "pueblo_onic": "QUILLACINGA",
-          "area_pg_ha": 530.171
+          "cod_pueblo": 282,
+          "nom_pueblo": "EMBERA-CHAMI",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PIGUAMBÍ PALANGALA",
-          "mpio": "SAN ANDRÉS DE TUMACO",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 490.715
+          "cod_pueblo": 292,
+          "nom_pueblo": "QUIZGO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 320,
+          "nom_pueblo": "JIW",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 380,
+          "nom_pueblo": "LETUAMO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 390,
+          "nom_pueblo": "MAKAGUAJE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 401,
+          "nom_pueblo": "MACAGUANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 430,
+          "nom_pueblo": "NUKAK-MAKU",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 434,
+          "nom_pueblo": "JUDPA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 440,
+          "nom_pueblo": "MASIGUARE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 480,
+          "nom_pueblo": "NONUYA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 550,
+          "nom_pueblo": "PUINAVE",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 585,
+          "nom_pueblo": "MAPAYERRI",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 590,
+          "nom_pueblo": "SIONA",
+          "con_disc": 0,
+          "total": 7,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 600,
+          "nom_pueblo": "SIRIANO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 0,
+          "total": 9,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 690,
+          "nom_pueblo": "U`WA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 700,
+          "nom_pueblo": "TUYUKA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 750,
+          "nom_pueblo": "YANACONA",
+          "con_disc": 0,
+          "total": 18,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        0.3613480790898137,
-        -79.01021097538194,
-        2.6838980690981256,
-        -76.83368053711024
-      ],
-      "nombre_dpto": "NARINO"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 5165,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 5165,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3232
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 412
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 387
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 356
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 315
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 101
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 101
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 77
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 69
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 33
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3232
-      },
-      "pct_hecho_principal": 62.6
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.446,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.485,
-        "conflicto_norm": 1.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:52:18",
+  "fecha_generacion": "2026-05-10T04:15:41.843883+00:00",
   "periodo": "2018",
-  "_input_hash": "f482bcce2e6ca600"
+  "_input_hash": "8cfe94e4997f0a25",
+  "_generador": "render_informes.py"
 }

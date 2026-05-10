@@ -3,129 +3,63 @@
   "id": "52585",
   "nombre": "PUPIALES",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1294,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 198,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1294,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 5,
-      "top": [
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1289
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "520",
-          "pueblo": "PIAROA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "560",
-        "pueblo": "PASTOS",
-        "poblacion": 1289
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1294,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 153.01,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        0.8426002588233973,
-        -77.68869097482843,
-        0.9943705718467966,
-        -77.56650560600951
-      ],
-      "nombre_mpio": "PUPIALES",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 18,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 18,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 7
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 6
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 5
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 7
-      },
-      "pct_hecho_principal": 38.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.004
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:53:40",
+  "fecha_generacion": "2026-05-10T04:16:00.081124+00:00",
   "periodo": "2018",
-  "_input_hash": "c0692e6b6c60aa17"
+  "_input_hash": "02cd3103925e9bb1",
+  "_generador": "render_informes.py"
 }

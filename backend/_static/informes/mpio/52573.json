@@ -3,148 +3,69 @@
   "id": "52573",
   "nombre": "PUERRES",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 520,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 48,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 520,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 6,
-      "top": [
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 506
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "560",
-        "pueblo": "PASTOS",
-        "poblacion": 506
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 520,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 92.31,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "GRAN TESCUAL",
+          "nombre_resguardo": "GRAN TESCUAL",
           "pueblo_onic": "PASTO",
-          "area_pg_ha": 10174.192
+          "area_ha": 10174.192
         }
       ],
-      "bbox": [
-        0.6711097527439581,
-        -77.54149513301064,
-        0.9279427653593042,
-        -77.1591553350575
-      ],
-      "nombre_mpio": "PUERRES",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 15,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 15,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 7
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 4
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 2
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 7
-      },
-      "pct_hecho_principal": 46.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.003
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:53:31",
+  "fecha_generacion": "2026-05-10T04:16:00.050827+00:00",
   "periodo": "2018",
-  "_input_hash": "ba6a56f6ef8e3281"
+  "_input_hash": "7b1e2c725555dd50",
+  "_generador": "render_informes.py"
 }

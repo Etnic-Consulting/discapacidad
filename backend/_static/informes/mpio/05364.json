@@ -3,155 +3,63 @@
   "id": "05364",
   "nombre": "JARDIN",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1487,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 190,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1487,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 11,
-      "top": [
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 1467
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "240",
-          "pueblo": "CUNA-TULE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "283",
-          "pueblo": "EPERARA-SIAPIDARA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "282",
-        "pueblo": "EMBERA-CHAMI",
-        "poblacion": 1467
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1475,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 128.81,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        5.4798592184648145,
-        -75.9061201543779,
-        5.655256071433155,
-        -75.72991730444085
-      ],
-      "nombre_mpio": "JARDIN",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 4,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 4,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3
-      },
-      "pct_hecho_principal": 75.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:04:47",
+  "fecha_generacion": "2026-05-10T04:15:43.558884+00:00",
   "periodo": "2018",
-  "_input_hash": "d7af9deb41a41baf"
+  "_input_hash": "cfce2deb15b6850e",
+  "_generador": "render_informes.py"
 }

@@ -3,237 +3,99 @@
   "id": "44078",
   "nombre": "BARRANCAS",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 9430,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 107,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 9430,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 17,
-      "top": [
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 9337
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 38
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "434",
-          "pueblo": "JUDPA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "020",
-          "pueblo": "AMORUA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "370",
-          "pueblo": "KOGUI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "021",
-          "pueblo": "WIPIWI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "455",
-          "pueblo": "JE´ERURIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "780",
-          "pueblo": "YUKPA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "910",
-          "pueblo": "INDIGENAS-PERU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "720",
-        "pueblo": "WAYUU",
-        "poblacion": 9337
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 9430,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 11.35,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "44",
+      "nom_dpto": "LA GUAJIRA",
       "n_resguardos": 7,
       "resguardos": [
         {
-          "nombre": "TRUPIOGACHO Y LA MESETA",
+          "nombre_resguardo": "CERRODEO",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 2212.532
+          "area_ha": 1457.4
         },
         {
-          "nombre": "CERRODEO",
+          "nombre_resguardo": "EL ZAHINO GUAYABITO MURIAYTUY",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1457.4
+          "area_ha": 1149.492
         },
         {
-          "nombre": "EL ZAHINO GUAYABITO MURIAYTUY",
+          "nombre_resguardo": "NUEVO ESPINAL",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1149.492
+          "area_ha": 421.745
         },
         {
-          "nombre": "PROVINCIAL",
+          "nombre_resguardo": "PROVINCIAL",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 511.991
+          "area_ha": 511.991
         },
         {
-          "nombre": "NUEVO ESPINAL",
+          "nombre_resguardo": "SAN FRANCISCO",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 421.745
+          "area_ha": 50.692
         },
         {
-          "nombre": "TAMAQUITO II",
+          "nombre_resguardo": "TAMAQUITO II",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 299.7
+          "area_ha": 299.7
         },
         {
-          "nombre": "SAN FRANCISCO",
+          "nombre_resguardo": "TRUPIOGACHO Y LA MESETA",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 50.692
+          "area_ha": 2212.532
         }
       ],
-      "bbox": [
-        10.819337841854264,
-        -72.91242468827375,
-        11.136620875526596,
-        -72.48151290018313
-      ],
-      "nombre_mpio": "BARRANCAS",
-      "cod_dpto": "44"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 46,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 46,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 34
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 4
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 3
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 3
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 34
-      },
-      "pct_hecho_principal": 73.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.003,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.009
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:37:53",
+  "fecha_generacion": "2026-05-10T04:15:56.897896+00:00",
   "periodo": "2018",
-  "_input_hash": "74e14d30154375f2"
+  "_input_hash": "8034975aaff8794e",
+  "_generador": "render_informes.py"
 }

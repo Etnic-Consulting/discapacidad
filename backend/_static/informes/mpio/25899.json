@@ -3,183 +3,63 @@
   "id": "25899",
   "nombre": "ZIPAQUIRA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 92,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 6,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 92,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 19,
-      "top": [
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 29
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "320",
-          "pueblo": "JIW",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "470",
-        "pueblo": "MUISCA",
-        "poblacion": 29
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 91,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 65.93,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "25",
+      "nom_dpto": "CUNDINAMARCA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        4.963167079243982,
-        -74.0953309170003,
-        5.158694184962783,
-        -73.91242018518426
-      ],
-      "nombre_mpio": "ZIPAQUIRA",
-      "cod_dpto": "25"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [],
-      "hecho_principal": null,
-      "pct_hecho_principal": null
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:28:30",
+  "fecha_generacion": "2026-05-10T04:15:55.095909+00:00",
   "periodo": "2018",
-  "_input_hash": "0f71af52a26fe8d0"
+  "_input_hash": "1a35c98db81c1a6f",
+  "_generador": "render_informes.py"
 }

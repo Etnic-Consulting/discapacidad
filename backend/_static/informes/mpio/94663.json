@@ -1,0 +1,65 @@
+{
+  "tipo": "mpio",
+  "id": "94663",
+  "nombre": "MAPIRIPANA",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 7,
+        "_meta": {
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 568,
+        "_meta": {
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 12.32,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
+        }
+      }
+    },
+    "territorial": {
+      "cod_dpto": "94",
+      "nom_dpto": "GUAINÍA",
+      "n_resguardos": 0,
+      "resguardos": [],
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
+    },
+    "icv": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
+    }
+  },
+  "fecha_generacion": "2026-05-10T04:16:07.137418+00:00",
+  "periodo": "2018",
+  "_input_hash": "1acccc04dbef7f45",
+  "_generador": "render_informes.py"
+}

@@ -3,19 +3,6 @@
   "id": "10243",
   "nombre": "ALTO BONITO VIRA VIRA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 367,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 367,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "ALTO BONITO VIRA VIRA",
       "dpto": "CHOCÓ",
@@ -24,81 +11,48 @@
       "cod_mpio": "27205",
       "macro": "OCCIDENTE",
       "pueblo_onic": "EMBERA",
-      "organizacion_nacional": "ONIC",
       "organizacion_regional": "ASOREWA - CRICH",
       "area_hectareas": 3666.044
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        5.07730628500002,
-        -76.42291425299999,
-        5.156072639000058,
-        -76.33063864699994
-      ],
-      "area_hectareas": 3666.044,
-      "macro": "OCCIDENTE",
-      "dpto": "CHOCÓ",
-      "mpio": "CONDOTO"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 4,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 4,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3
-      },
-      "pct_hecho_principal": 75.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T11:22:24",
+  "fecha_generacion": "2026-05-10T04:16:17.274341+00:00",
   "periodo": "2018",
-  "_input_hash": "161da12c0acd4895"
+  "_input_hash": "572729dabc2116b2",
+  "_generador": "render_informes.py"
 }

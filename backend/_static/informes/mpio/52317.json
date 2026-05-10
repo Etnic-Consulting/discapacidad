@@ -3,171 +3,69 @@
   "id": "52317",
   "nombre": "GUACHUCAL",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 15495,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1146,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 15495,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 15477
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "560",
-        "pueblo": "PASTOS",
-        "poblacion": 15477
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 15495,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 73.96,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "MUELLAMUÉZ",
+          "nombre_resguardo": "MUELLAMUÉZ",
           "pueblo_onic": "PASTO",
-          "area_pg_ha": 70.971
+          "area_ha": 70.971
         }
       ],
-      "bbox": [
-        0.9093568498651885,
-        -77.83094571572661,
-        1.0400025812257734,
-        -77.61322097729948
-      ],
-      "nombre_mpio": "GUACHUCAL",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 23,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 23,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 8
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 5
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 4
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 3
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 8
-      },
-      "pct_hecho_principal": 34.8
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.005
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:50:19",
+  "fecha_generacion": "2026-05-10T04:15:59.480427+00:00",
   "periodo": "2018",
-  "_input_hash": "967a7ce527b4a49c"
+  "_input_hash": "fe6538e065255bc2",
+  "_generador": "render_informes.py"
 }

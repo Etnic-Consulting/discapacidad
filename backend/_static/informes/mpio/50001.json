@@ -3,234 +3,69 @@
   "id": "50001",
   "nombre": "VILLAVICENCIO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1630,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 122,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1630,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 210
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 161
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 121
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 104
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 91
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 88
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 86
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 82
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 63
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 56
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 47
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 47
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 35
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 31
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 31
-        },
-        {
-          "cod_pueblo": "320",
-          "pueblo": "JIW",
-          "poblacion": 25
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 21
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 19
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 18
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "220",
-        "pueblo": "CUBEO",
-        "poblacion": 210
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1562,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 78.1,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "50",
+      "nom_dpto": "META",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "MAGUARÉ",
+          "nombre_resguardo": "MAGUARÉ",
           "pueblo_onic": "COCAMA",
-          "area_pg_ha": 44.252
+          "area_ha": 44.252
         }
       ],
-      "bbox": [
-        3.935022405840541,
-        -73.76823910533722,
-        4.288501692137808,
-        -73.17499109586788
-      ],
-      "nombre_mpio": "VILLAVICENCIO",
-      "cod_dpto": "50"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 38,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 38,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 14
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 8
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 7
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 2
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Tortura",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 14
-      },
-      "pct_hecho_principal": 36.8
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.002,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.008
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:43:33",
+  "fecha_generacion": "2026-05-10T04:15:58.132023+00:00",
   "periodo": "2018",
-  "_input_hash": "63e5e881e291ec8d"
+  "_input_hash": "3a73c595eb640c59",
+  "_generador": "render_informes.py"
 }

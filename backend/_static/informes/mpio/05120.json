@@ -3,208 +3,94 @@
   "id": "05120",
   "nombre": "CACERES",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1674,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 167,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1674,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1577
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 37
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 29
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "060",
-          "pueblo": "BARA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "800",
-        "pueblo": "ZENU",
-        "poblacion": 1577
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1673,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 99.82,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 6,
       "resguardos": [
         {
-          "nombre": "VEGAS DE SEGOVIA",
+          "nombre_resguardo": "ALTOS DEL TIGRE",
           "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 1062.707
+          "area_ha": 73.549
         },
         {
-          "nombre": "ALTOS DEL TIGRE",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 73.549
-        },
-        {
-          "nombre": "PUERTO BÉLGICA",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 48.182
-        },
-        {
-          "nombre": "LEONARDO JOSÉ CAMPANARIO",
-          "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 44.83
-        },
-        {
-          "nombre": "CARUPIA (EMBERA CHAMÍ)",
+          "nombre_resguardo": "CARUPIA (EMBERA CHAMÍ)",
           "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 38.196
+          "area_ha": 38.196
         },
         {
-          "nombre": "OMAGÁ",
+          "nombre_resguardo": "LEONARDO JOSÉ CAMPANARIO",
           "pueblo_onic": "ZENÚ",
-          "area_pg_ha": 27.757
+          "area_ha": 44.83
+        },
+        {
+          "nombre_resguardo": "OMAGÁ",
+          "pueblo_onic": "ZENÚ",
+          "area_ha": 27.757
+        },
+        {
+          "nombre_resguardo": "PUERTO BÉLGICA",
+          "pueblo_onic": "ZENÚ",
+          "area_ha": 48.182
+        },
+        {
+          "nombre_resguardo": "VEGAS DE SEGOVIA",
+          "pueblo_onic": "ZENÚ",
+          "area_ha": 1062.707
         }
       ],
-      "bbox": [
-        7.35116449498166,
-        -75.48522642135362,
-        7.95763463797246,
-        -74.99360811513895
-      ],
-      "nombre_mpio": "CACERES",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 276,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 276,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 222
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 25
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 14
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Sin informacion",
-          "total": 2
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 222
-      },
-      "pct_hecho_principal": 80.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.017,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.055
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T15:59:44",
+  "fecha_generacion": "2026-05-10T04:15:42.766853+00:00",
   "periodo": "2018",
-  "_input_hash": "32e51316ea9409de"
+  "_input_hash": "1878d0d2e05c9b7f",
+  "_generador": "render_informes.py"
 }

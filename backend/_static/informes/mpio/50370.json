@@ -3,186 +3,74 @@
   "id": "50370",
   "nombre": "URIBE",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 413,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 27,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 413,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 11,
-      "top": [
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 229
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 68
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 52
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 43
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "500",
-        "pueblo": "NASA",
-        "poblacion": 229
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 402,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 67.16,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "50",
+      "nom_dpto": "META",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "LOS PLANES",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 2087.48
+          "nombre_resguardo": "LA JULIA",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 205.58
         },
         {
-          "nombre": "LA JULIA",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 205.58
+          "nombre_resguardo": "LOS PLANES",
+          "pueblo_onic": "NASA",
+          "area_ha": 2087.48
         }
       ],
-      "bbox": [
-        2.5071432399174793,
-        -74.93334680961107,
-        3.787382934264201,
-        -73.93356168034143
-      ],
-      "nombre_mpio": "URIBE",
-      "cod_dpto": "50"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 37,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 37,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 13
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 11
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 7
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 13
-      },
-      "pct_hecho_principal": 35.1
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.002,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.007
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:45:42",
+  "fecha_generacion": "2026-05-10T04:15:58.586547+00:00",
   "periodo": "2018",
-  "_input_hash": "319238e0d80e2d36"
+  "_input_hash": "8f47bef710c09d1f",
+  "_generador": "render_informes.py"
 }

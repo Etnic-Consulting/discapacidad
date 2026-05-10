@@ -3,19 +3,6 @@
   "id": "11658",
   "nombre": "CERRITO BONGO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "CERRITO BONGO",
       "dpto": "VALLE DEL CAUCA",
@@ -24,113 +11,48 @@
       "cod_mpio": "76109",
       "macro": "OCCIDENTE",
       "pueblo_onic": "WOUNAN",
-      "organizacion_nacional": "ONIC",
       "organizacion_regional": "Por definir",
       "area_hectareas": 2405.381
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        4.030885660000024,
-        -77.34632784299998,
-        4.132248760000039,
-        -77.28367142899998
-      ],
-      "area_hectareas": 2405.381,
-      "macro": "OCCIDENTE",
-      "dpto": "VALLE DEL CAUCA",
-      "mpio": "BUENAVENTURA"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 182,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 182,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 136
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 20
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 6
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 5
-        },
-        {
-          "hecho": "Confinamiento",
-          "total": 4
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 136
-      },
-      "pct_hecho_principal": 74.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.011,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.036
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:56:48",
+  "fecha_generacion": "2026-05-10T04:16:31.802651+00:00",
   "periodo": "2018",
-  "_input_hash": "8ea5a5eaf06c564f"
+  "_input_hash": "a53a51c7f1237274",
+  "_generador": "render_informes.py"
 }

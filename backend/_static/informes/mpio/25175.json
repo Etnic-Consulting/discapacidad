@@ -3,202 +3,69 @@
   "id": "25175",
   "nombre": "CHIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2060,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 132,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 2060,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 1918
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 23
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 21
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "880",
-          "pueblo": "CALIMA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "740",
-          "pueblo": "YAGUA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "690",
-          "pueblo": "U`WA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "920",
-          "pueblo": "INDIGENAS-VENEZUELA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "470",
-        "pueblo": "MUISCA",
-        "poblacion": 1918
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 2059,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 64.11,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "25",
+      "nom_dpto": "CUNDINAMARCA",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "MUISCA DE FONQUETÁ Y CERCA DE PIEDRA",
+          "nombre_resguardo": "MUISCA DE FONQUETÁ Y CERCA DE PIEDRA",
           "pueblo_onic": "MUISCA",
-          "area_pg_ha": 200.274
+          "area_ha": 200.274
         }
       ],
-      "bbox": [
-        4.820760707101229,
-        -74.0941942283581,
-        4.917868119623662,
-        -73.98144390662316
-      ],
-      "nombre_mpio": "CHIA",
-      "cod_dpto": "25"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 1,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 1,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 1
-      },
-      "pct_hecho_principal": 100.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:12:30",
+  "fecha_generacion": "2026-05-10T04:15:52.725563+00:00",
   "periodo": "2018",
-  "_input_hash": "724bada14e3d35b4"
+  "_input_hash": "8400754d42864f93",
+  "_generador": "render_informes.py"
 }

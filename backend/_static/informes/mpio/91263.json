@@ -3,165 +3,63 @@
   "id": "91263",
   "nombre": "EL ENCANTO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1437,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 116,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1437,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 13,
-      "top": [
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1127
-        },
-        {
-          "cod_pueblo": "731",
-          "pueblo": "MUINANE",
-          "poblacion": 116
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 91
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 28
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 19
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "490",
-          "pueblo": "OCAINA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "380",
-          "pueblo": "LETUAMO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "480",
-          "pueblo": "NONUYA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "730",
-        "pueblo": "MURUI",
-        "poblacion": 1127
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1251,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 92.73,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "91",
+      "nom_dpto": "AMAZONAS",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        -2.49278797850147,
-        -73.54153484329322,
-        -1.5028721162516594,
-        -71.7691734973705
-      ],
-      "nombre_mpio": "EL ENCANTO",
-      "cod_dpto": "91"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 14,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 14,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 10
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 4
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 10
-      },
-      "pct_hecho_principal": 71.4
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.003
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:37:48",
+  "fecha_generacion": "2026-05-10T04:16:06.811687+00:00",
   "periodo": "2018",
-  "_input_hash": "c8df5d26b4215bd1"
+  "_input_hash": "61cc80cb11215036",
+  "_generador": "render_informes.py"
 }

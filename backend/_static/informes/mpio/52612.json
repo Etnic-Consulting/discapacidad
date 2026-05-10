@@ -3,213 +3,114 @@
   "id": "52612",
   "nombre": "RICAURTE",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 13613,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 880,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 13613,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 6,
-      "top": [
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 13492
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 88
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 30
-        },
-        {
-          "cod_pueblo": "360",
-          "pueblo": "COFAN",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "210",
-        "pueblo": "AWA",
-        "poblacion": 13492
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 13613,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 64.64,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "52",
+      "nom_dpto": "NARIÑO",
       "n_resguardos": 10,
       "resguardos": [
         {
-          "nombre": "NULPE MEDIO - ALTO Y RÍO SAN JUAN",
+          "nombre_resguardo": "ALTO CARTAGENA",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 37887.346
+          "area_ha": 4564.979
         },
         {
-          "nombre": "GUALCALÁ",
+          "nombre_resguardo": "CUALQUER INTEGRADO LA MILAGROSA",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 17175.495
+          "area_ha": 4132.251
         },
         {
-          "nombre": "PALMAR IMBI",
+          "nombre_resguardo": "CUASCUABI - PALDUBI",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 7837.31
+          "area_ha": 572.646
         },
         {
-          "nombre": "GUADUAL, CUMBAS, MAGÜÍ, INVINA Y ARRAYÁN",
+          "nombre_resguardo": "CUCHILLA - PALMAR",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 5166.155
+          "area_ha": 2568.78
         },
         {
-          "nombre": "RAMOS - MONGÓN - MANCHURIA",
+          "nombre_resguardo": "GUADUAL, CUMBAS, MAGÜÍ, INVINA Y ARRAYÁN",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4781.225
+          "area_ha": 5166.155
         },
         {
-          "nombre": "ALTO CARTAGENA",
+          "nombre_resguardo": "GUALCALÁ",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4564.979
+          "area_ha": 17175.495
         },
         {
-          "nombre": "CUALQUER INTEGRADO LA MILAGROSA",
+          "nombre_resguardo": "NULPE MEDIO - ALTO Y RÍO SAN JUAN",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 4132.251
+          "area_ha": 37887.346
         },
         {
-          "nombre": "PIALAPÍ - PUEBLO VIEJO - SAN MIGUEL - YARÉ",
+          "nombre_resguardo": "PALMAR IMBI",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 3278.932
+          "area_ha": 7837.31
         },
         {
-          "nombre": "CUCHILLA - PALMAR",
+          "nombre_resguardo": "PIALAPÍ - PUEBLO VIEJO - SAN MIGUEL - YARÉ",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 2568.78
+          "area_ha": 3278.932
         },
         {
-          "nombre": "CUASCUABI - PALDUBI",
+          "nombre_resguardo": "RAMOS - MONGÓN - MANCHURIA",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 572.646
+          "area_ha": 4781.225
         }
       ],
-      "bbox": [
-        1.0046734478820682,
-        -78.2909422755593,
-        1.4894962037466384,
-        -77.82528008432536
-      ],
-      "nombre_mpio": "RICAURTE",
-      "cod_dpto": "52"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 485,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 485,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 338
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 41
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 29
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 26
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 17
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 11
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 9
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 7
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 4
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 338
-      },
-      "pct_hecho_principal": 69.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.029,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.097
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:53:47",
+  "fecha_generacion": "2026-05-10T04:16:00.095015+00:00",
   "periodo": "2018",
-  "_input_hash": "970ccbc5386dc062"
+  "_input_hash": "23c0e81f1850a50e",
+  "_generador": "render_informes.py"
 }

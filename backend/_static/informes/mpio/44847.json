@@ -3,201 +3,69 @@
   "id": "44847",
   "nombre": "URIBIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 154898,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1632,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 154898,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 15,
-      "top": [
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 154856
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "920",
-          "pueblo": "INDIGENAS-VENEZUELA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "370",
-          "pueblo": "KOGUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "550",
-          "pueblo": "PUINAVE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "710",
-          "pueblo": "WOUNAN",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "941",
-          "pueblo": "YERAL",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "720",
-        "pueblo": "WAYUU",
-        "poblacion": 154856
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 152554,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 10.7,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "44",
+      "nom_dpto": "LA GUAJIRA",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "ALTA Y MEDIA GUAJIRA",
+          "nombre_resguardo": "ALTA Y MEDIA GUAJIRA",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 1085157.71
+          "area_ha": 1085157.71
         }
       ],
-      "bbox": [
-        11.523329854319678,
-        -72.38023202021782,
-        12.459443307577596,
-        -71.11295839529242
-      ],
-      "nombre_mpio": "URIBIA",
-      "cod_dpto": "44"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 36,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 36,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 29
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Sin informacion",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 29
-      },
-      "pct_hecho_principal": 80.6
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.002,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.007
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:39:17",
+  "fecha_generacion": "2026-05-10T04:15:57.179857+00:00",
   "periodo": "2018",
-  "_input_hash": "9380f01afae68961"
+  "_input_hash": "0c3df17cf1f036fb",
+  "_generador": "render_informes.py"
 }

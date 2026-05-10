@@ -1,323 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · PUEBLO Emberá Chamí · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe del pueblo · EMBERA-CHAMI</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.piramide-bar-h{display:inline-block;background:#02432D;height:1rem;vertical-align:middle}
+.piramide-bar-m{display:inline-block;background:#a78bfa;height:1rem;vertical-align:middle}
+.piramide td{font-size:.85rem}
+.piramide td.lbl{text-align:center;font-variant-numeric:tabular-nums}
+.piramide td.h{text-align:right}
+.piramide td.m{text-align:left}
+</style></head>
 <body>
+<h1>Informe del pueblo · EMBERA-CHAMI</h1>
+<p><span class="kpi">Población total · <b>77,229</b></span>
+<span class="kpi">Con cap. diversas · <b>6,713</b></span>
+<span class="kpi">Prevalencia · <b>86.9‰</b></span>
+<span class="kpi">Confiabilidad · <b>ALTA</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>PUEBLO Emberá Chamí</h1>
-  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El pueblo Emberá Chamí, con una población de 77,714 personas, representa una de las demografías indígenas más significativas del país. Este informe revela una situación compleja: si bien sus condiciones de vida, medidas por el Índice de Necesidades Básicas Insatisfechas (33.35%), son considerablemente mejores que el promedio indígena nacional (67.6%), enfrentan una crisis de salud específica. La prevalencia de discapacidad es la cifra más crítica, alcanzando 86.9 casos por cada 1,000 habitantes, muy por encima de la media indígena de 60.</p><p></p><p>Esta alta tasa de discapacidad, que afecta a 6,713 miembros del pueblo, es el principal factor de vulnerabilidad, superando las presiones económicas o del conflicto armado, según los datos disponibles. La mayor parte de la población se concentra en el departamento de Caldas, con 43,826 personas, aunque su presencia se extiende a 27 departamentos, mostrando una amplia diáspora territorial que se organiza en 71 resguardos.</p><p></p><p>La lectura clave de estos datos es que el pueblo Emberá Chamí no enfrenta una crisis de pobreza generalizada, sino desafíos focalizados que demandan una respuesta estatal y organizativa igualmente específica. Las políticas deben centrarse en la salud pública, la atención a la discapacidad y el fortalecimiento de la vivienda para el 16.04% de la población que vive en hacinamiento, asegurando así que la resiliencia económica del pueblo se traduzca en un bienestar integral para todos sus miembros.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">77.714</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">6.713</div><div class="sub">prevalencia 86,9‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">27</div><div class="sub">71 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.264</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La estructura demográfica del pueblo Emberá Chamí, que cuenta con 77,714 miembros, es característica de una población joven y en crecimiento. La base de la pirámide poblacional es ancha, con 23,297 personas en el rango de 0 a 14 años, lo que garantiza la vitalidad demográfica del pueblo a futuro. Sin embargo, esta juventud implica un alto índice de dependencia del 61.4%, lo que significa que por cada 100 personas en edad de trabajar, hay aproximadamente 61 personas dependientes (niños y ancianos). Esta carga económica sobre la población activa es un factor estructural clave para entender las dinámicas socioeconómicas de sus comunidades y planificar políticas de apoyo familiar y generacional.</p>
-  
-  <table>
-    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
-    <tbody>
-      <tr><td>0-14 años</td><td class="num">11.794</td><td class="num">11.503</td><td class="num"><b>23.297</b></td><td class="num">30.0%</td></tr>
-      <tr><td>15-64 años</td><td class="num">23.973</td><td class="num">24.173</td><td class="num"><b>48.146</b></td><td class="num">62.0%</td></tr>
-      <tr><td>65+ años</td><td class="num">2.918</td><td class="num">3.353</td><td class="num"><b>6.271</b></td><td class="num">8.1%</td></tr>
-      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>38.685</b></td><td class="num"><b>39.029</b></td><td class="num"><b>77.714</b></td><td class="num">100,0%</td></tr>
-    </tbody>
-  </table>
-  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
-    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">99,1</div><div class="sub">H por 100 M</div></div>
-    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">61,4</div><div class="sub">por 100 productivos</div></div>
-    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">26,9</div><div class="sub">65+ / 0-14 × 100</div></div>
-  </div>
-  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>La prevalencia de discapacidad en el pueblo Emberá Chamí es alarmantemente alta, situándose en 86.9 por cada 1,000 personas, una cifra que supera significativamente el promedio nacional indígena de 60.0. En total, 6,713 personas viven con algún tipo de limitación funcional. Las dificultades más comunes son las relacionadas con la visión, que representan el 33.0% de los casos, y las de movilidad (caminar), con un 32.1%. Esta concentración en dos tipos de limitaciones sugiere la posible existencia de factores de riesgo comunes, ya sean ambientales, genéticos o de acceso a la salud, y subraya la necesidad urgente de programas de salud pública focalizados en la prevención, diagnóstico y tratamiento de afecciones visuales y musculoesqueléticas.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia Emberá Chamí</div>
-      <div class="num-big">86,9‰</div>
-      <div class="lbl">6.713 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: -26,9‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="bar"><div class="lbl">Ver</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">2.193</div></div>
-<div class="bar"><div class="lbl">Caminar</div><div class="track"><div class="fill" style="width: 97.2%"></div></div><div class="num">2.132</div></div>
-<div class="bar"><div class="lbl">Oir</div><div class="track"><div class="fill" style="width: 33.7%"></div></div><div class="num">739</div></div>
-<div class="bar"><div class="lbl">Relacionarse</div><div class="track"><div class="fill" style="width: 26.7%"></div></div><div class="num">585</div></div>
-<div class="bar"><div class="lbl">Agarrar</div><div class="track"><div class="fill" style="width: 16.3%"></div></div><div class="num">357</div></div>
-
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>El pueblo Emberá Chamí muestra una notable dispersión geográfica, con presencia en 27 departamentos del país, lo que evidencia su amplia movilidad histórica y actual. A pesar de esta dispersión, existe un núcleo territorial claro: el departamento de Caldas alberga a la mayor parte de la población, con 43,826 personas. La vida comunitaria se organiza a través de 71 resguardos legalmente constituidos. El resguardo Unificado Chamí Río San Juan, en Risaralda, es el de mayor población con 10,669 habitantes. Esta estructura territorial, que combina un centro demográfico principal con una extensa diáspora, plantea desafíos significativos para la gobernanza interna, la coordinación política y la implementación de planes de vida a escala de pueblo.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  <h3>Departamentos con mayor presencia</h3>
-  <table>
-    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
-    <tbody>
-      <tr><td>CALDAS</td><td class="num">43.826</td><td class="num">5.046</td><td class="num">115,1‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>RISARALDA</td><td class="num">20.597</td><td class="num">937</td><td class="num">45,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>VALLE DEL CAUCA</td><td class="num">4.565</td><td class="num">168</td><td class="num">36,8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>ANTIOQUIA</td><td class="num">4.413</td><td class="num">382</td><td class="num">86,6‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>QUINDIO</td><td class="num">1.225</td><td class="num">52</td><td class="num">42,5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>PUTUMAYO</td><td class="num">1.041</td><td class="num">48</td><td class="num">46,1‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>CHOCO</td><td class="num">359</td><td class="num">6</td><td class="num">16,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CAQUETA</td><td class="num">298</td><td class="num">21</td><td class="num">70,5‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>META</td><td class="num">227</td><td class="num">13</td><td class="num">57,3‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>BOGOTA D.C.</td><td class="num">226</td><td class="num">15</td><td class="num">66,4‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-    </tbody></table>
-  
-  <h3>Resguardos asociados</h3>
-  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
-      <tr><td>Unificado Chami Rio San Juan</td><td>RISARALDA</td><td>MISTRATÓ</td><td class="num">10.669</td></tr>
-      <tr><td>Cañamomo-Lomaprieta</td><td>—</td><td>—</td><td class="num">10.391</td></tr>
-      <tr><td>San Lorenzo</td><td>CALDAS</td><td>RIOSUCIO</td><td class="num">8.557</td></tr>
-      <tr><td>La Montaña</td><td>—</td><td>—</td><td class="num">5.613</td></tr>
-      <tr><td>Cristiania</td><td>ANTIOQUIA</td><td>ANDES</td><td class="num">1.436</td></tr>
-      <tr><td>Escopetera-Pirza</td><td>CALDAS</td><td>RIOSUCIO</td><td class="num">1.163</td></tr>
-      <tr><td>Embera Chami de Suratena</td><td>RISARALDA</td><td>MARSELLA</td><td class="num">663</td></tr>
-      <tr><td>Embera Chami La Loma de Citabara, Palestina, Atarraya y La Albania</td><td>RISARALDA</td><td>MISTRATÓ</td><td class="num">564</td></tr>
-      <tr><td>Embera Chami de Altomira</td><td>RISARALDA</td><td>MARSELLA</td><td class="num">378</td></tr>
-      <tr><td>Tagual-La Po</td><td>ANTIOQUIA</td><td>SEGOVIA</td><td class="num">359</td></tr>
-    </tbody></table>
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos oficiales disponibles reportan que cero personas, de una población total de 77,714, hablan la lengua Emberá Chamí. Esta cifra es estadísticamente inverosímil y no refleja la realidad cultural del pueblo. Debe ser interpretada como un grave error en la recolección de datos censales o una falla metodológica en la fuente, y no como la extinción de la lengua. La vitalidad del idioma Emberá Chamí es un hecho conocido en los territorios y un pilar de su identidad. Esta inconsistencia de los datos oficiales evidencia la incapacidad del Estado para medir adecuadamente la diversidad lingüística del país y la necesidad urgente de fortalecer los sistemas de información propios para la protección etnolingüística.</p>
-  
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-  </div>
-
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>El pueblo Emberá Chamí presenta un Índice de Necesidades Básicas Insatisfechas (NBI) del 33.35%, un indicador notablemente más favorable que el promedio nacional indígena, que se sitúa en un 67.6%. Esto sugiere, en términos comparativos, mejores condiciones de vida. Sin embargo, un análisis de los componentes del NBI revela desafíos persistentes. El hacinamiento es el problema más acuciante, afectando al 16.04% de la población. Adicionalmente, un 14.99% vive en condiciones de miseria. Aunque la situación general es mejor que la de otros pueblos, es crucial implementar políticas de vivienda y programas de superación de la pobreza extrema para cerrar estas brechas internas y garantizar el buen vivir de todos.</p>
-  
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">NBI Emberá Chamí</div>
-      <div class="num-big">33,4%</div>
-      <div class="lbl">Necesidades básicas insatisfechas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">67,6%</div>
-      <div class="lbl">Brecha</div>
-    </div>
-  </div>
-  <h3>Componentes del NBI (% personas afectadas)</h3>
-  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 42.5%"></div></div><div class="num">6,8%</div></div>
-  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 71.5%"></div></div><div class="num">11,5%</div></div>
-  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">16,0%</div></div>
-  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 38.1%"></div></div><div class="num">6,1%</div></div>
-  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 90.5%"></div></div><div class="num">14,5%</div></div>
-
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>Según los datos del Registro Único de Víctimas (RUV) consultados, se reportan cero víctimas con discapacidad pertenecientes al pueblo Emberá Chamí. Esta cifra debe ser manejada con extrema cautela. En lugar de indicar una ausencia de afectación, es altamente probable que refleje un profundo subregistro y barreras significativas para que las personas con discapacidad en los territorios accedan a las rutas de declaración y justicia. El impacto desproporcionado del conflicto armado en los pueblos indígenas es un hecho documentado, por lo que la ausencia de registros en una población de 77,714 personas, con presencia en 27 departamentos, señala una grave falla institucional en la visibilización y atención a estas víctimas.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Vulnerabilidad Crítica (ICV) para el pueblo Emberá Chamí es de 0.264. El análisis de sus componentes revela un perfil de vulnerabilidad particular: el principal factor de riesgo no es la pobreza estructural ni el conflicto, sino las condiciones de salud. El componente de prevalencia de discapacidad (normalizado a 0.435) es el que más pesa en el índice, seguido por el NBI (normalizado a 0.334). El componente de conflicto, según los datos disponibles, es de 0.0. Este resultado indica que las estrategias para reducir la vulnerabilidad del pueblo Emberá Chamí deben priorizar la salud pública, la prevención y la inclusión efectiva de las 6,713 personas con discapacidad.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.334</td><td class="num">0.40</td><td class="num"><b>0.134</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.435</td><td class="num">0.30</td><td class="num"><b>0.131</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.264</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Priorizar la inversión en salud pública para atender la elevada prevalencia de discapacidad (86.9 por 1,000), enfocando los esfuerzos en las limitaciones para ver (33.0%) y caminar (32.1%) mediante brigadas de diagnóstico, entrega de ayudas técnicas y rehabilitación.</li>
-      <li>Implementar un plan de construcción y mejoramiento de vivienda culturalmente pertinente para mitigar el hacinamiento, que constituye el principal componente del NBI (16.04%) y afecta a una parte significativa de la población.</li>
-      <li>Exigir y apoyar la realización de un censo sociolingüístico propio que corrija el dato oficial de 0 hablantes y sirva de base para una política de protección y revitalización de la lengua Emberá Chamí, fundamental para la pervivencia cultural del pueblo de 77,714 personas.</li>
-      <li>Instar a la Unidad para las Víctimas a realizar jornadas de registro y declaración en los 71 resguardos del pueblo, con un enfoque diferencial para personas con discapacidad, para corregir el alarmante subregistro de 0 víctimas y garantizar su acceso a la reparación.</li>
-      <li>Fortalecer los programas de desarrollo económico y seguridad alimentaria en los hogares en condición de miseria, que representan el 14.99% de la población, para reducir las brechas de inequidad internas.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/282/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[0.4221602160000657, -77.12413095699998], [7.861460037000029, -73.97572519499994]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[0.4221602160000657, -77.12413095699998], [7.861460037000029, -73.97572519499994]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([4.141810126500047, -75.54992807599996]).addTo(map)
-    .bindPopup('<b>PUEBLO Emberá Chamí</b>');
-</script>
-</body>
-</html>
+<h2>Pirámide de capacidades diversas (edad × sexo)</h2>
+<table class="piramide">
+<thead><tr><th style="text-align:right">Hombres</th><th>Grupo edad</th><th>Mujeres</th></tr></thead>
+<tbody>
+    <tr><td class="h">48 <span class="piramide-bar-h" style="width:14%"></span></td><td class="lbl">00-04</td><td class="m"><span class="piramide-bar-m" style="width:10%"></span> 36</td></tr>
+    <tr><td class="h">152 <span class="piramide-bar-h" style="width:45%"></span></td><td class="lbl">05-09</td><td class="m"><span class="piramide-bar-m" style="width:24%"></span> 82</td></tr>
+    <tr><td class="h">147 <span class="piramide-bar-h" style="width:44%"></span></td><td class="lbl">10-14</td><td class="m"><span class="piramide-bar-m" style="width:43%"></span> 145</td></tr>
+    <tr><td class="h">162 <span class="piramide-bar-h" style="width:48%"></span></td><td class="lbl">15-19</td><td class="m"><span class="piramide-bar-m" style="width:41%"></span> 139</td></tr>
+    <tr><td class="h">123 <span class="piramide-bar-h" style="width:37%"></span></td><td class="lbl">20-24</td><td class="m"><span class="piramide-bar-m" style="width:36%"></span> 121</td></tr>
+    <tr><td class="h">139 <span class="piramide-bar-h" style="width:41%"></span></td><td class="lbl">25-29</td><td class="m"><span class="piramide-bar-m" style="width:35%"></span> 119</td></tr>
+    <tr><td class="h">145 <span class="piramide-bar-h" style="width:43%"></span></td><td class="lbl">30-34</td><td class="m"><span class="piramide-bar-m" style="width:31%"></span> 104</td></tr>
+    <tr><td class="h">143 <span class="piramide-bar-h" style="width:43%"></span></td><td class="lbl">35-39</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 136</td></tr>
+    <tr><td class="h">141 <span class="piramide-bar-h" style="width:42%"></span></td><td class="lbl">40-44</td><td class="m"><span class="piramide-bar-m" style="width:54%"></span> 181</td></tr>
+    <tr><td class="h">214 <span class="piramide-bar-h" style="width:64%"></span></td><td class="lbl">45-49</td><td class="m"><span class="piramide-bar-m" style="width:79%"></span> 265</td></tr>
+    <tr><td class="h">226 <span class="piramide-bar-h" style="width:68%"></span></td><td class="lbl">50-54</td><td class="m"><span class="piramide-bar-m" style="width:100%"></span> 332</td></tr>
+    <tr><td class="h">234 <span class="piramide-bar-h" style="width:70%"></span></td><td class="lbl">55-59</td><td class="m"><span class="piramide-bar-m" style="width:90%"></span> 300</td></tr>
+    <tr><td class="h">258 <span class="piramide-bar-h" style="width:77%"></span></td><td class="lbl">60-64</td><td class="m"><span class="piramide-bar-m" style="width:85%"></span> 284</td></tr>
+    <tr><td class="h">254 <span class="piramide-bar-h" style="width:76%"></span></td><td class="lbl">65-69</td><td class="m"><span class="piramide-bar-m" style="width:85%"></span> 283</td></tr>
+    <tr><td class="h">240 <span class="piramide-bar-h" style="width:72%"></span></td><td class="lbl">70-74</td><td class="m"><span class="piramide-bar-m" style="width:82%"></span> 274</td></tr>
+    <tr><td class="h">210 <span class="piramide-bar-h" style="width:63%"></span></td><td class="lbl">75-79</td><td class="m"><span class="piramide-bar-m" style="width:88%"></span> 294</td></tr>
+    <tr><td class="h">175 <span class="piramide-bar-h" style="width:52%"></span></td><td class="lbl">80-84</td><td class="m"><span class="piramide-bar-m" style="width:64%"></span> 215</td></tr>
+    <tr><td class="h">166 <span class="piramide-bar-h" style="width:50%"></span></td><td class="lbl">85+</td><td class="m"><span class="piramide-bar-m" style="width:68%"></span> 226</td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_nacional` × `pueblo.piramide_disc`. Generado
+el 2026-05-10T04:16:08.630142+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

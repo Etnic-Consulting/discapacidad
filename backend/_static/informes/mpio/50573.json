@@ -3,214 +3,69 @@
   "id": "50573",
   "nombre": "PUERTO LOPEZ",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1310,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 62,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1310,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 747
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 364
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 67
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 26
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 26
-        },
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 21
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "026",
-          "pueblo": "YARURO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "700",
-          "pueblo": "TUYUKA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "790",
-          "pueblo": "YURUTI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "020",
-          "pueblo": "AMORUA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "010",
-        "pueblo": "ACHAGUA",
-        "poblacion": 747
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1300,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 47.69,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "50",
+      "nom_dpto": "META",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "EL TURPIAL LA VICTORIA (UMAPO)",
+          "nombre_resguardo": "EL TURPIAL LA VICTORIA (UMAPO)",
           "pueblo_onic": "ACHAGUA",
-          "area_pg_ha": 4112.867
+          "area_ha": 4112.867
         }
       ],
-      "bbox": [
-        3.637223602764573,
-        -73.26026170119394,
-        4.441549763551415,
-        -72.06844354173967
-      ],
-      "nombre_mpio": "PUERTO LOPEZ",
-      "cod_dpto": "50"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 12,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 12,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 9
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 9
-      },
-      "pct_hecho_principal": 75.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.002
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:46:13",
+  "fecha_generacion": "2026-05-10T04:15:58.664711+00:00",
   "periodo": "2018",
-  "_input_hash": "a16f23c0b2e05b3f"
+  "_input_hash": "5173fe3d3863a256",
+  "_generador": "render_informes.py"
 }

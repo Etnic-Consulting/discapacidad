@@ -3,132 +3,74 @@
   "id": "27495",
   "nombre": "NUQUI",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1533,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 43,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1533,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 1,
-      "top": [
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 1533
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "280",
-        "pueblo": "EMBERA",
-        "poblacion": 1533
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1533,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 28.05,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "27",
+      "nom_dpto": "CHOCÓ",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "RÍO NUQUÍ",
+          "nombre_resguardo": "RÍO NUQUÍ",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 9905.129
+          "area_ha": 9905.129
         },
         {
-          "nombre": "RÍO PANGÜÍ",
+          "nombre_resguardo": "RÍO PANGÜÍ",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 6603.812
+          "area_ha": 6603.812
         }
       ],
-      "bbox": [
-        5.485646330036887,
-        -77.52327253513397,
-        6.0059510865775705,
-        -77.13787623675381
-      ],
-      "nombre_mpio": "NUQUI",
-      "cod_dpto": "27"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 49,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 49,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Confinamiento",
-          "total": 21
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 18
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 7
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Confinamiento",
-        "total": 21
-      },
-      "pct_hecho_principal": 42.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.003,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.01
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:31:22",
+  "fecha_generacion": "2026-05-10T04:15:55.748010+00:00",
   "periodo": "2018",
-  "_input_hash": "fdb9b8d1ddc35591"
+  "_input_hash": "112ff7f53716aa13",
+  "_generador": "render_informes.py"
 }

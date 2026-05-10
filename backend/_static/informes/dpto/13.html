@@ -1,255 +1,105 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · DEPARTAMENTO BOLIVAR · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe departamental · BOLÍVAR</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+</style></head>
 <body>
+<h1>Informe departamental · BOLÍVAR</h1>
+<p><span class="kpi">Población indígena · <b>5,199</b></span>
+<span class="kpi">Con cap. diversas · <b>291</b></span>
+<span class="kpi">Prevalencia · <b>56.0‰</b></span>
+<span class="kpi">Pueblos · <b>70</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>DEPARTAMENTO BOLIVAR</h1>
-  <div class="subtitle">Informe territorial · Capacidades Diversas y población indígena</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>Bolívar se lee aquí como departamento: un territorio donde la información disponible agrega población indígena y hechos territoriales, pero no permite reconstruir todos los detalles locales. Para 2018, el registro reporta 5199 personas indígenas como población de referencia.</p><p></p><p>La cifra crítica en capacidades diversas es 291 personas indígenas con discapacidad, con una prevalencia de 56.0 por cada 1000, frente al promedio indígena nacional de 60.0. La lectura no debe reducirse a atención individual, sino a garantías colectivas en salud, movilidad, cuidado y acceso institucional.</p><p></p><p>En conflicto armado, el RUV registra 860 víctimas con discapacidad entre 1985-2024; 731 corresponden a desplazamiento forzado, equivalente al 85.0. Este patrón exige una respuesta territorial con enfoque indígena.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">5.199</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">291</div><div class="sub">prevalencia 56,0‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">0 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.136</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La demografía departamental disponible para Bolívar corresponde a una agregación indígena de 2018 y reporta 5199 personas. El propio extractor advierte que la pirámide etaria indígena por departamento no está disponible, por lo que no es posible interpretar con rigor la distribución por edades, envejecimiento, dependencia o composición generacional. Para ONIC, esta ausencia no es menor: limita la planeación diferencial de educación, salud propia, cuidado comunitario y accesibilidad. La lectura demográfica debe concentrarse, entonces, en el volumen poblacional agregado y en la necesidad de mejorar el detalle territorial. Sin datos etarios, cualquier afirmación sobre niñez, juventud o mayores sería especulativa y no debe incorporarse como conclusión.</p>
-  <div class="sin-datos">demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>En Bolívar se registran 291 personas indígenas con discapacidad sobre una población de referencia de 5199, con una prevalencia de 56.0 por cada 1000. El valor se ubica por debajo del promedio indígena nacional de 60.0, pero esa diferencia debe interpretarse con cautela: una prevalencia menor no significa necesariamente menor afectación, pues puede reflejar barreras de registro, subreporte o dificultades de acceso institucional. La concentración por pueblos muestra que el código 800 agrupa 229 casos sobre 4251 personas, por lo que allí se ubica el mayor volumen registrado. Otros códigos presentan bases pequeñas, como 150 con total 21 o 460 con total 3, y no deben orientar conclusiones principales.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia BOLIVAR</div>
-      <div class="num-big">56,0‰</div>
-      <div class="lbl">291 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: 4,0‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>La sección territorial identifica a Bolívar como departamento y reporta 0 resguardos en el conjunto de datos utilizado. Esto no debe leerse como ausencia de territorialidad indígena, sino como ausencia de resguardos registrados en esta extracción para el nivel departamental. La caja espacial entregada va de 6.999159856381856 a 10.781876373126396 en latitud y de -76.19048219287413 a -73.74578008334049 en longitud, lo que delimita el ámbito geográfico de la consulta. Para una lectura ONIC, el dato central es la brecha entre población indígena agregada, 5199 personas, y falta de identificación de territorios colectivos en la salida. Esa brecha dificulta priorizar acciones por territorio, autoridad y comunidad.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos de lengua a nivel departamental no están disponibles en esta extracción. El JSON marca explícitamente la sección con _sin_datos: true y señala que no hay tabla de lengua agregada por departamento. Por tanto, no es posible afirmar cuántas personas hablan lengua propia, qué lenguas están presentes, ni si existen diferencias entre población con y sin discapacidad en transmisión lingüística. Desde la perspectiva ONIC, esta ausencia debe tratarse como un vacío de información relevante, porque la discapacidad y la accesibilidad también deben pensarse en lengua, comunicación comunitaria y formas propias de orientación. Cualquier mención a vitalidad lingüística específica en Bolívar sería inventada y queda excluida.</p>
-  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>La información de NBI para Bolívar no está disponible en esta extracción: la sección aparece con _sin_datos: true. El único valor comparativo incluido es el promedio indígena nacional de NBI, 67.6, pero el extractor advierte que el agregado departamental requiere ponderación poblacional y no está disponible. En consecuencia, no se puede estimar una brecha departamental frente a 67.6 ni identificar componentes de NBI predominantes para la población indígena con discapacidad en Bolívar. La lectura territorial debe ser prudente: la ausencia del dato impide afirmar condiciones de vivienda, servicios, dependencia económica o hacinamiento. Para ONIC, el vacío confirma la necesidad de producir mediciones departamentales ponderadas y comparables.</p>
-  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El RUV registra en Bolívar 860 víctimas con discapacidad para el periodo 1985-2024. El hecho principal es desplazamiento forzado, con 731 casos y una participación de 85.0, lo que muestra un patrón territorial marcado por expulsión, ruptura comunitaria y pérdida de condiciones para permanecer en el territorio. Otros hechos registrados incluyen amenaza con 38 casos, homicidio con 22 y delitos contra la libertad e integridad sexual en desarrollo del conflicto armado con 15. Desde una lectura ONIC, la prioridad no es solo reparar daños individuales, sino reconstruir garantías colectivas de retorno, permanencia, protección, accesibilidad y atención culturalmente pertinente para familias y autoridades indígenas afectadas.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">860</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">85,0% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">731</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 5.2%"></div></div><div class="num">38</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 3.0%"></div></div><div class="num">22</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Delitos contra la libertad y la integridad sexual en desarro</div><div class="track"><div class="fill" style="width: 2.1%"></div></div><div class="num">15</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Lesiones Personales Psicologicas</div><div class="track"><div class="fill" style="width: 1.4%"></div></div><div class="num">10</div></div>
-
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Condición de Vulnerabilidad reportado para Bolívar es 0.136. Su fórmula combina NBI, prevalencia y conflicto, con ponderaciones de 0.4, 0.3 y 0.3 respectivamente. En los componentes disponibles, nbi_norm aparece en 0.0, prevalencia_norm en 0.28 y conflicto_norm en 0.172. La dimensión que más pesa en la lectura efectiva del resultado es prevalencia_norm, seguida por conflicto_norm, aunque el componente de NBI no debe interpretarse como ausencia de necesidad básica insatisfecha, porque la sección de NBI departamental está marcada sin datos. La posición relativa solo puede describirse internamente a esta ficha: el ICV sintetiza vulnerabilidad moderada según los componentes incorporados, no una comparación externa.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.28</td><td class="num">0.30</td><td class="num"><b>0.084</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.172</td><td class="num">0.30</td><td class="num"><b>0.052</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.136</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Fortalecer el registro departamental indígena de discapacidad en Bolívar, partiendo de las 291 personas registradas sobre 5199, para reducir subregistro y asegurar que autoridades y organizaciones propias validen la información.</li>
-      <li>Priorizar rutas de atención y reparación para víctimas indígenas con discapacidad, dado que el RUV reporta 860 víctimas y 731 casos de desplazamiento forzado, con enfoque de retorno, permanencia territorial y accesibilidad.</li>
-      <li>Construir una medición departamental ponderada de NBI indígena para Bolívar, porque el promedio indígena nacional disponible es 67.6 pero el dato departamental está marcado sin datos y no permite calcular brechas.</li>
-      <li>Cruzar la prevalencia de 56.0 por cada 1000 con acciones comunitarias de búsqueda activa, ya que está por debajo del promedio indígena nacional de 60.0 y puede estar ocultando barreras de registro.</li>
-      <li>Revisar territorialmente la extracción que reporta 0 resguardos para Bolívar, pues existen 5199 personas indígenas agregadas y la planeación ONIC requiere ubicar autoridades, comunidades y territorios de referencia.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/dpto/13/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[6.999159856381856, -76.19048219287413], [10.781876373126396, -73.74578008334049]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[6.999159856381856, -76.19048219287413], [10.781876373126396, -73.74578008334049]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([8.890518114754126, -74.96813113810731]).addTo(map)
-    .bindPopup('<b>DEPARTAMENTO BOLIVAR</b>');
-</script>
-</body>
-</html>
+<h2>Pueblos del departamento</h2>
+<table>
+<thead><tr><th>Pueblo</th><th>Población indígena</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+<tbody>
+    <tr><td>ZENU</td><td class="num">4.251</td><td class="num">229</td><td class="num">53.9‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>INDIGENA-SIN-INFORMACION</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WAYUU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ETTE-E'NEKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-KATIO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ARHUACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-ECUADOR-</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MIRAÑA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KANKUAMO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WIWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BORA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CHIRICOA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIJAO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-CHAMI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EPERARA-SIAPIDARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MUISCA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIRIANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TANIMUKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TATUYO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TIKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MURUI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YANACONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MOKANA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KICHWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-PERU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JIW</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CAÑAMOMO-LOMAPRIETA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INGA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KOGUI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>LETUAMO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KAKUA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JUDPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BETOYE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>OTAVALEÑO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>OCAINA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>NASA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>POLINDARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIRATAPUYO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PUINAVE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PASTOS</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIKUANI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-BOLIVIA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YAMALERO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TAYRONAS</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ANDOKE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TSIRIPU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TUKANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TUYUKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-VENEZUELA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MUINANE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-MEXICO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YUKPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCONUCO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COREGUAJE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARASANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUBEO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUNA-TULE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CURRIPACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCAMA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>GUANE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YERAL</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-DOBIDA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MISAK</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>AMBALO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>GUANANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_dpto`. Generado
+el 2026-05-10T04:15:41.504380+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

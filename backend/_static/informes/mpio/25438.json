@@ -3,160 +3,63 @@
   "id": "25438",
   "nombre": "MEDINA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 43,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 4,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 43,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 12,
-      "top": [
-        {
-          "cod_pueblo": "455",
-          "pueblo": "JE´ERURIWA",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "760",
-          "pueblo": "YAUNA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "320",
-          "pueblo": "JIW",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "540",
-          "pueblo": "PISAMIRA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "700",
-          "pueblo": "TUYUKA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "455",
-        "pueblo": "JE´ERURIWA",
-        "poblacion": 13
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 43,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 93.02,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "25",
+      "nom_dpto": "CUNDINAMARCA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        4.276241626287298,
-        -73.60348582821649,
-        4.6789504619476645,
-        -73.19065013164612
-      ],
-      "nombre_mpio": "MEDINA",
-      "cod_dpto": "25"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 2,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 2,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Amenaza",
-        "total": 1
-      },
-      "pct_hecho_principal": 50.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.0
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:20:26",
+  "fecha_generacion": "2026-05-10T04:15:53.737801+00:00",
   "periodo": "2018",
-  "_input_hash": "05e18ae6a9e885ab"
+  "_input_hash": "d901482e596daac6",
+  "_generador": "render_informes.py"
 }

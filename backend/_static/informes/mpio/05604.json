@@ -3,179 +3,69 @@
   "id": "05604",
   "nombre": "REMEDIOS",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 96,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 6,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 96,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 13,
-      "top": [
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 45
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 17
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "830",
-          "pueblo": "OTAVALEÑO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "150",
-          "pueblo": "ETTE-E'NEKA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "283",
-          "pueblo": "EPERARA-SIAPIDARA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "285",
-          "pueblo": "NUTABE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "282",
-        "pueblo": "EMBERA-CHAMI",
-        "poblacion": 45
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 96,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 62.5,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "KORODO-ITE",
+          "nombre_resguardo": "KORODO-ITE",
           "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 75.108
+          "area_ha": 75.108
         }
       ],
-      "bbox": [
-        6.699926624113648,
-        -74.85826089876599,
-        7.266838552475694,
-        -74.2410336255736
-      ],
-      "nombre_mpio": "REMEDIOS",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 16,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 16,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 10
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 3
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 2
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 10
-      },
-      "pct_hecho_principal": 62.5
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.003
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:07:46",
+  "fecha_generacion": "2026-05-10T04:15:44.104817+00:00",
   "periodo": "2018",
-  "_input_hash": "48538b10d5f8fb84"
+  "_input_hash": "a1be384e4d3227aa",
+  "_generador": "render_informes.py"
 }

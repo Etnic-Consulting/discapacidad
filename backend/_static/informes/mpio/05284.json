@@ -3,173 +3,79 @@
   "id": "05284",
   "nombre": "FRONTINO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 3812,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 37,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 3812,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 3663
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 120
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 16
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "281",
-        "pueblo": "EMBERA-KATIO",
-        "poblacion": 3663
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 3776,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 9.8,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "MURRÍ - PANTANOS",
+          "nombre_resguardo": "CHAQUENODA",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 31727.254
+          "area_ha": 15141.489
         },
         {
-          "nombre": "CHAQUENODA",
+          "nombre_resguardo": "MURRÍ - PANTANOS",
           "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 15141.489
+          "area_ha": 31727.254
         },
         {
-          "nombre": "NUSIDÓ",
+          "nombre_resguardo": "NUSIDÓ",
           "pueblo_onic": "EMBERA",
-          "area_pg_ha": 260.873
+          "area_ha": 260.873
         }
       ],
-      "bbox": [
-        6.48964186636613,
-        -76.57752933016076,
-        6.920499514734213,
-        -76.07670526034303
-      ],
-      "nombre_mpio": "FRONTINO",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 80,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 80,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 76
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 76
-      },
-      "pct_hecho_principal": 95.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.005,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.016
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:03:02",
+  "fecha_generacion": "2026-05-10T04:15:43.278275+00:00",
   "periodo": "2018",
-  "_input_hash": "1641d7aee17f43d8"
+  "_input_hash": "59ef4293339e65a5",
+  "_generador": "render_informes.py"
 }

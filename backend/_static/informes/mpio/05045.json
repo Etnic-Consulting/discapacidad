@@ -3,243 +3,74 @@
   "id": "05045",
   "nombre": "APARTADO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 810,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 48,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 810,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 347
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 189
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 122
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 97
-        },
-        {
-          "cod_pueblo": "240",
-          "pueblo": "CUNA-TULE",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "285",
-          "pueblo": "NUTABE",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "150",
-          "pueblo": "ETTE-E'NEKA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "320",
-          "pueblo": "JIW",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "330",
-          "pueblo": "CAÑAMOMO-LOMAPRIETA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "670",
-          "pueblo": "TSIRIPU",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "281",
-        "pueblo": "EMBERA-KATIO",
-        "poblacion": 347
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 806,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 59.55,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "05",
+      "nom_dpto": "ANTIOQUIA",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "LAS PLAYAS",
-          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
-          "area_pg_ha": 200.738
+          "nombre_resguardo": "LA PALMA",
+          "pueblo_onic": "EMBERA CHAMÍ",
+          "area_ha": 115.868
         },
         {
-          "nombre": "LA PALMA",
-          "pueblo_onic": "EMBERA CHAMÍ",
-          "area_pg_ha": 115.868
+          "nombre_resguardo": "LAS PLAYAS",
+          "pueblo_onic": "EMBERA EYABIDA - EMBERA KATÍO",
+          "area_ha": 200.738
         }
       ],
-      "bbox": [
-        7.769169625520915,
-        -76.75315157511079,
-        8.072997788146617,
-        -76.41157371097302
-      ],
-      "nombre_mpio": "APARTADO",
-      "cod_dpto": "05"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 123,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 123,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 96
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 12
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 5
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 96
-      },
-      "pct_hecho_principal": 78.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.007,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.025
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T15:58:01",
+  "fecha_generacion": "2026-05-10T04:15:42.497808+00:00",
   "periodo": "2018",
-  "_input_hash": "f36bbf41e6f75b7b"
+  "_input_hash": "b524885f8fc2e392",
+  "_generador": "render_informes.py"
 }

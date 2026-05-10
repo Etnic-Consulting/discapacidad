@@ -1,0 +1,156 @@
+{
+  "tipo": "pueblo",
+  "id": "040",
+  "nombre": "ARHUACO",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1172,
+        "_meta": {
+          "query": "SELECT con_discapacidad FROM pueblo.disc_nacional WHERE cod_pueblo = %s AND periodo='2018'",
+          "table": "pueblo.disc_nacional",
+          "period": "2018",
+          "confiabilidad": "ALTA"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 34384,
+        "_meta": {
+          "table": "pueblo.disc_nacional",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 34.09,
+        "_meta": {
+          "formula": "tasa_x_1000 from pueblo.disc_nacional"
+        }
+      }
+    },
+    "demografia": {
+      "piramide_capacidades_diversas": {
+        "value": [
+          {
+            "grupo_edad": "00-04",
+            "hombres": 36,
+            "mujeres": 20
+          },
+          {
+            "grupo_edad": "05-09",
+            "hombres": 39,
+            "mujeres": 28
+          },
+          {
+            "grupo_edad": "10-14",
+            "hombres": 36,
+            "mujeres": 27
+          },
+          {
+            "grupo_edad": "15-19",
+            "hombres": 35,
+            "mujeres": 39
+          },
+          {
+            "grupo_edad": "20-24",
+            "hombres": 36,
+            "mujeres": 19
+          },
+          {
+            "grupo_edad": "25-29",
+            "hombres": 30,
+            "mujeres": 20
+          },
+          {
+            "grupo_edad": "30-34",
+            "hombres": 27,
+            "mujeres": 42
+          },
+          {
+            "grupo_edad": "35-39",
+            "hombres": 32,
+            "mujeres": 35
+          },
+          {
+            "grupo_edad": "40-44",
+            "hombres": 41,
+            "mujeres": 29
+          },
+          {
+            "grupo_edad": "45-49",
+            "hombres": 38,
+            "mujeres": 58
+          },
+          {
+            "grupo_edad": "50-54",
+            "hombres": 40,
+            "mujeres": 57
+          },
+          {
+            "grupo_edad": "55-59",
+            "hombres": 35,
+            "mujeres": 41
+          },
+          {
+            "grupo_edad": "60-64",
+            "hombres": 28,
+            "mujeres": 33
+          },
+          {
+            "grupo_edad": "65-69",
+            "hombres": 29,
+            "mujeres": 51
+          },
+          {
+            "grupo_edad": "70-74",
+            "hombres": 39,
+            "mujeres": 31
+          },
+          {
+            "grupo_edad": "75-79",
+            "hombres": 28,
+            "mujeres": 33
+          },
+          {
+            "grupo_edad": "80-84",
+            "hombres": 15,
+            "mujeres": 20
+          },
+          {
+            "grupo_edad": "85+",
+            "hombres": 11,
+            "mujeres": 13
+          }
+        ],
+        "_meta": {
+          "table": "pueblo.piramide_disc",
+          "period": "2018",
+          "n_grupos_edad": 18
+        }
+      }
+    },
+    "territorial": {
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/mpio"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no disponible en CNPV 2018"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores nacionales"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
+    },
+    "icv": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
+    }
+  },
+  "fecha_generacion": "2026-05-10T04:16:07.870272+00:00",
+  "periodo": "2018",
+  "_input_hash": "4c634b80a2f50780",
+  "_generador": "render_informes.py"
+}

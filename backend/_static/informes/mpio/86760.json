@@ -3,171 +3,74 @@
   "id": "86760",
   "nombre": "SANTIAGO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 4004,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 587,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 4004,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 8,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 3453
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 474
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 33
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 25
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 3453
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 3991,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 147.08,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "86",
+      "nom_dpto": "PUTUMAYO",
       "n_resguardos": 2,
       "resguardos": [
         {
-          "nombre": "INGA DE SAN ANDRÉS",
+          "nombre_resguardo": "INGA DE SAN ANDRÉS",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 13364.703
+          "area_ha": 13364.703
         },
         {
-          "nombre": "INGA DE SANTIAGO",
+          "nombre_resguardo": "INGA DE SANTIAGO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 6353.067
+          "area_ha": 6353.067
         }
       ],
-      "bbox": [
-        0.9789144566702909,
-        -77.1014539139224,
-        1.2016578449350874,
-        -76.85357975556258
-      ],
-      "nombre_mpio": "SANTIAGO",
-      "cod_dpto": "86"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 97,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 97,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 85
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 5
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 2
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 85
-      },
-      "pct_hecho_principal": 87.6
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.006,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.019
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:36:55",
+  "fecha_generacion": "2026-05-10T04:16:06.703137+00:00",
   "periodo": "2018",
-  "_input_hash": "bba3568251f7e2e3"
+  "_input_hash": "8b36eb31ee281b8e",
+  "_generador": "render_informes.py"
 }

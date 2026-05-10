@@ -3,189 +3,63 @@
   "id": "66594",
   "nombre": "QUINCHIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 7487,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 755,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 7487,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 13,
-      "top": [
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 3888
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 3506
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 38
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 23
-        },
-        {
-          "cod_pueblo": "330",
-          "pueblo": "CAÑAMOMO-LOMAPRIETA",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "284",
-          "pueblo": "EMBERA-DOBIDA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "240",
-          "pueblo": "CUNA-TULE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "283",
-          "pueblo": "EPERARA-SIAPIDARA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "280",
-        "pueblo": "EMBERA",
-        "poblacion": 3888
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 7485,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 100.87,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "66",
+      "nom_dpto": "RISARALDA",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        5.255170906889595,
-        -75.77939514565293,
-        5.3976922643786835,
-        -75.64813963020077
-      ],
-      "nombre_mpio": "QUINCHIA",
-      "cod_dpto": "66"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 213,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 213,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 164
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 26
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 14
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Tortura",
-          "total": 2
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 2
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 164
-      },
-      "pct_hecho_principal": 77.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.013,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.043
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T19:11:23",
+  "fecha_generacion": "2026-05-10T04:16:01.770740+00:00",
   "periodo": "2018",
-  "_input_hash": "3c8ed61eb35fa4f1"
+  "_input_hash": "68de758b6794a6cc",
+  "_generador": "render_informes.py"
 }

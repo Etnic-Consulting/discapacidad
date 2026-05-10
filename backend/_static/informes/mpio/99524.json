@@ -3,200 +3,79 @@
   "id": "99524",
   "nombre": "LA PRIMAVERA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2106,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 47,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 2106,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 16,
-      "top": [
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 1710
-        },
-        {
-          "cod_pueblo": "510",
-          "pueblo": "PIAPOCO",
-          "poblacion": 190
-        },
-        {
-          "cod_pueblo": "021",
-          "pueblo": "WIPIWI",
-          "poblacion": 46
-        },
-        {
-          "cod_pueblo": "230",
-          "pueblo": "CUIBA",
-          "poblacion": 39
-        },
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 35
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 24
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 18
-        },
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "020",
-          "pueblo": "AMORUA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "026",
-          "pueblo": "YARURO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "240",
-          "pueblo": "CUNA-TULE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "550",
-          "pueblo": "PUINAVE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "830",
-          "pueblo": "OTAVALEÑO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "580",
-        "pueblo": "SIKUANI",
-        "poblacion": 1710
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1935,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 24.29,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "99",
+      "nom_dpto": "VICHADA",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "LA LLANURA",
+          "nombre_resguardo": "CAMPO ALEGRE Y RIPIALITO",
           "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 66146.509
+          "area_ha": 6906.167
         },
         {
-          "nombre": "LA PASCUA",
+          "nombre_resguardo": "LA LLANURA",
           "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 18836.28
+          "area_ha": 66146.509
         },
         {
-          "nombre": "CAMPO ALEGRE Y RIPIALITO",
+          "nombre_resguardo": "LA PASCUA",
           "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 6906.167
+          "area_ha": 18836.28
         }
       ],
-      "bbox": [
-        4.875818647453153,
-        -70.6520206051078,
-        6.221712996452863,
-        -68.81352787541579
-      ],
-      "nombre_mpio": "LA PRIMAVERA",
-      "cod_dpto": "99"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 9,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 9,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 6
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 6
-      },
-      "pct_hecho_principal": 66.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.002
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:42:10",
+  "fecha_generacion": "2026-05-10T04:16:07.621049+00:00",
   "periodo": "2018",
-  "_input_hash": "754e088849b88285"
+  "_input_hash": "507c8ef00ef4e283",
+  "_generador": "render_informes.py"
 }

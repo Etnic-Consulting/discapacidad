@@ -3,214 +3,69 @@
   "id": "91405",
   "nombre": "LA CHORRERA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 2049,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 196,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 2049,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1466
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 260
-        },
-        {
-          "cod_pueblo": "490",
-          "pueblo": "OCAINA",
-          "poblacion": 123
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 66
-        },
-        {
-          "cod_pueblo": "480",
-          "pueblo": "NONUYA",
-          "poblacion": 27
-        },
-        {
-          "cod_pueblo": "380",
-          "pueblo": "LETUAMO",
-          "poblacion": 18
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "731",
-          "pueblo": "MUINANE",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "450",
-          "pueblo": "MATAPI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "740",
-          "pueblo": "YAGUA",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "730",
-        "pueblo": "MURUI",
-        "poblacion": 1466
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1563,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 125.4,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "91",
+      "nom_dpto": "AMAZONAS",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "PREDIO PUTUMAYO",
+          "nombre_resguardo": "PREDIO PUTUMAYO",
           "pueblo_onic": "UITOTO",
-          "area_pg_ha": 5829227.495
+          "area_ha": 5829227.495
         }
       ],
-      "bbox": [
-        -2.1850901463313024,
-        -73.84131793299804,
-        -0.3804340689765887,
-        -71.99815931676432
-      ],
-      "nombre_mpio": "LA CHORRERA",
-      "cod_dpto": "91"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 23,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 23,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Amenaza",
-          "total": 12
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 7
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 2
-        },
-        {
-          "hecho": "Tortura",
-          "total": 2
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Amenaza",
-        "total": 12
-      },
-      "pct_hecho_principal": 52.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.001,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.005
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:37:56",
+  "fecha_generacion": "2026-05-10T04:16:06.842038+00:00",
   "periodo": "2018",
-  "_input_hash": "6185d6fb7b6372e4"
+  "_input_hash": "9ecc6b52f5d4bbf5",
+  "_generador": "render_informes.py"
 }

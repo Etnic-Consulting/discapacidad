@@ -3,263 +3,94 @@
   "id": "19743",
   "nombre": "SILVIA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 28200,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 2780,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 28200,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 10918
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 10511
-        },
-        {
-          "cod_pueblo": "292",
-          "pueblo": "QUIZGO",
-          "poblacion": 3412
-        },
-        {
-          "cod_pueblo": "291",
-          "pueblo": "AMBALO",
-          "poblacion": 2671
-        },
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 641
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "501",
-          "pueblo": "POLINDARA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "431",
-          "pueblo": "KAKUA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "740",
-          "pueblo": "YAGUA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "150",
-          "pueblo": "ETTE-E'NEKA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "190",
-          "pueblo": "COREGUAJE",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "500",
-        "pueblo": "NASA",
-        "poblacion": 10918
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 28170,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 98.69,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 6,
       "resguardos": [
         {
-          "nombre": "GUAMBÍA",
+          "nombre_resguardo": "AMBALÓ",
+          "pueblo_onic": "MISAK Y NASA",
+          "area_ha": 2745.781
+        },
+        {
+          "nombre_resguardo": "GUAMBÍA",
           "pueblo_onic": "MISAK",
-          "area_pg_ha": 19460.368
+          "area_ha": 19460.368
         },
         {
-          "nombre": "KIZGÓ",
+          "nombre_resguardo": "KIZGÓ",
           "pueblo_onic": "MISAK Y NASA",
-          "area_pg_ha": 4282.201
+          "area_ha": 4282.201
         },
         {
-          "nombre": "QUICHAYA",
+          "nombre_resguardo": "QUICHAYA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 4027.73
+          "area_ha": 4027.73
         },
         {
-          "nombre": "AMBALÓ",
-          "pueblo_onic": "MISAK Y NASA",
-          "area_pg_ha": 2745.781
-        },
-        {
-          "nombre": "TOTORÓ",
+          "nombre_resguardo": "TOTORÓ",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 1262.04
+          "area_ha": 1262.04
         },
         {
-          "nombre": "TUMBURAO",
+          "nombre_resguardo": "TUMBURAO",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 727.935
+          "area_ha": 727.935
         }
       ],
-      "bbox": [
-        2.517338478831354,
-        -76.51626168972712,
-        2.7897043955731475,
-        -76.17418407892382
-      ],
-      "nombre_mpio": "SILVIA",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 151,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 151,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 73
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 25
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 18
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 16
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 7
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 6
-        },
-        {
-          "hecho": "Tortura",
-          "total": 3
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 73
-      },
-      "pct_hecho_principal": 48.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.009,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.03
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:49:10",
+  "fecha_generacion": "2026-05-10T04:15:50.659140+00:00",
   "periodo": "2018",
-  "_input_hash": "8aa1678a88721c55"
+  "_input_hash": "6d7c06c5b22651a0",
+  "_generador": "render_informes.py"
 }

@@ -3,216 +3,287 @@
   "id": "47",
   "nombre": "MAGDALENA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 20536,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 20536,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 955,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 955,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 20536,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
         "value": 46.5,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "370",
-          "con_disc": 432,
-          "total": 5420
-        },
-        {
-          "cod_pueblo": "040",
-          "con_disc": 296,
-          "total": 10534
-        },
-        {
-          "cod_pueblo": "999",
-          "con_disc": 80,
-          "total": 899
-        },
-        {
-          "cod_pueblo": "720",
-          "con_disc": 60,
-          "total": 1419
-        },
-        {
-          "cod_pueblo": "050",
-          "con_disc": 43,
-          "total": 655
-        },
-        {
-          "cod_pueblo": "150",
-          "con_disc": 23,
-          "total": 1335
-        },
-        {
-          "cod_pueblo": "800",
-          "con_disc": 8,
-          "total": 77
-        },
-        {
-          "cod_pueblo": "850",
-          "con_disc": 6,
-          "total": 74
-        },
-        {
-          "cod_pueblo": "500",
-          "con_disc": 2,
-          "total": 8
-        },
-        {
-          "cod_pueblo": "920",
-          "con_disc": 2,
-          "total": 47
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 2,
-      "resguardos": [
+      "macro": "NORTE",
+      "n_pueblos": 28,
+      "pueblos": [
         {
-          "nombre": "ARHUACO DE LA SIERRA NEVADA",
-          "mpio": "ARACATACA",
-          "pueblo_onic": "IJKU - ARHUACO",
-          "area_pg_ha": 202739.14
+          "cod_pueblo": 370,
+          "nom_pueblo": "KOGUI",
+          "con_disc": 432,
+          "total": 5420,
+          "prevalencia_x_1000": 79.7,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "CHIMILAS O CACAHUEROS DE SAN ANGEL",
-          "mpio": "SABANAS DE SAN ÁNGEL",
-          "pueblo_onic": "CHIMILAS - ETTE ENEKA",
-          "area_pg_ha": 1445.627
+          "cod_pueblo": 40,
+          "nom_pueblo": "ARHUACO",
+          "con_disc": 296,
+          "total": 10534,
+          "prevalencia_x_1000": 28.1,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 80,
+          "total": 899,
+          "prevalencia_x_1000": 88.99,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 60,
+          "total": 1419,
+          "prevalencia_x_1000": 42.28,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 43,
+          "total": 655,
+          "prevalencia_x_1000": 65.65,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 150,
+          "nom_pueblo": "ETTE-E'NEKA",
+          "con_disc": 23,
+          "total": 1335,
+          "prevalencia_x_1000": 17.23,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 8,
+          "total": 77,
+          "prevalencia_x_1000": 103.9,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 850,
+          "nom_pueblo": "KANKUAMO",
+          "con_disc": 6,
+          "total": 74,
+          "prevalencia_x_1000": 81.08,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 2,
+          "total": 8,
+          "prevalencia_x_1000": 250.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 920,
+          "nom_pueblo": "INDIGENAS-VENEZUELA",
+          "con_disc": 2,
+          "total": 47,
+          "prevalencia_x_1000": 42.55,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 1,
+          "total": 3,
+          "prevalencia_x_1000": 333.33,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 1,
+          "total": 13,
+          "prevalencia_x_1000": 76.92,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 1,
+          "total": 7,
+          "prevalencia_x_1000": 142.86,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 820,
+          "nom_pueblo": "MOKANA",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 855,
+          "nom_pueblo": "TAYRONAS",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 0,
+          "total": 14,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 565,
+          "nom_pueblo": "QUILLACINGA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 30,
+          "nom_pueblo": "ANDOKE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 690,
+          "nom_pueblo": "U`WA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 731,
+          "nom_pueblo": "MUINANE",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 770,
+          "nom_pueblo": "YUKUNA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 780,
+          "nom_pueblo": "YUKPA",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 810,
+          "nom_pueblo": "GUANE",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        8.936489178684505,
-        -74.94659965927087,
-        11.348912068772798,
-        -73.54183790726381
-      ],
-      "nombre_dpto": "MAGDALENA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 490,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 490,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 393
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 31
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 25
-        },
-        {
-          "hecho": "Sin informacion",
-          "total": 13
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 10
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 8
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 6
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 2
-        },
-        {
-          "hecho": "Tortura",
-          "total": 1
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 393
-      },
-      "pct_hecho_principal": 80.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.099,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.233,
-        "conflicto_norm": 0.098
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T08:50:55",
+  "fecha_generacion": "2026-05-10T04:15:41.791004+00:00",
   "periodo": "2018",
-  "_input_hash": "dea79e059b9d1fa9"
+  "_input_hash": "fdef02b3abe59e89",
+  "_generador": "render_informes.py"
 }

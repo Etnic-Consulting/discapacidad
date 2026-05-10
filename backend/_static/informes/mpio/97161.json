@@ -3,230 +3,69 @@
   "id": "97161",
   "nombre": "CARURU",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1966,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 171,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1966,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 702
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 561
-        },
-        {
-          "cod_pueblo": "700",
-          "pueblo": "TUYUKA",
-          "poblacion": 89
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 84
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 81
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 74
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 66
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 63
-        },
-        {
-          "cod_pueblo": "630",
-          "pueblo": "TARIANO",
-          "poblacion": 59
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 53
-        },
-        {
-          "cod_pueblo": "410",
-          "pueblo": "MAKUNA",
-          "poblacion": 41
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 23
-        },
-        {
-          "cod_pueblo": "790",
-          "pueblo": "YURUTI",
-          "poblacion": 22
-        },
-        {
-          "cod_pueblo": "430",
-          "pueblo": "NUKAK-MAKU",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "320",
-          "pueblo": "JIW",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "070",
-          "pueblo": "BARASANO",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "060",
-          "pueblo": "BARA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 2
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "680",
-        "pueblo": "TUKANO",
-        "poblacion": 702
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1542,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 110.89,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "97",
+      "nom_dpto": "VAUPÉS",
       "n_resguardos": 1,
       "resguardos": [
         {
-          "nombre": "ARARA, BACATI, CARURÚ Y MIRAFLORES",
+          "nombre_resguardo": "ARARA, BACATI, CARURÚ Y MIRAFLORES",
           "pueblo_onic": "TUKANO",
-          "area_pg_ha": 289762.373
+          "area_ha": 289762.373
         }
       ],
-      "bbox": [
-        0.5574902159595712,
-        -71.80335101565453,
-        1.7389392045168774,
-        -70.9938611916412
-      ],
-      "nombre_mpio": "CARURU",
-      "cod_dpto": "97"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 58,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 58,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 39
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 6
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 4
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 3
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 39
-      },
-      "pct_hecho_principal": 67.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.003,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.012
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:41:17",
+  "fecha_generacion": "2026-05-10T04:16:07.463244+00:00",
   "periodo": "2018",
-  "_input_hash": "f487f67a982580ed"
+  "_input_hash": "3707bd5ffb90babe",
+  "_generador": "render_informes.py"
 }

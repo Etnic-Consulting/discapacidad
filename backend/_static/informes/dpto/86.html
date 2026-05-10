@@ -1,282 +1,117 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · DEPARTAMENTO PUTUMAYO · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe departamental · PUTUMAYO</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+</style></head>
 <body>
+<h1>Informe departamental · PUTUMAYO</h1>
+<p><span class="kpi">Población indígena · <b>50,013</b></span>
+<span class="kpi">Con cap. diversas · <b>5,314</b></span>
+<span class="kpi">Prevalencia · <b>106.2‰</b></span>
+<span class="kpi">Pueblos · <b>82</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>DEPARTAMENTO PUTUMAYO</h1>
-  <div class="subtitle">Informe territorial · Capacidades Diversas y población indígena</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>Putumayo se presenta como un departamento con presencia indígena amplia y territorialmente diversa: el registro de 2018 agrega 50013 personas indígenas y reconoce 74 resguardos. Esta escala exige leer la discapacidad no como un dato aislado, sino como una condición situada en territorios colectivos, movilidad histórica y brechas de acceso acumuladas.</p><p></p><p>La cifra crítica es la prevalencia de capacidades diversas: 5314 personas, equivalentes a 106.3 por cada 1000 indígenas, frente al promedio indígena nacional de 60.0. La diferencia señala una carga territorial superior que debe orientar respuestas diferenciales.</p><p></p><p>El conflicto refuerza esa lectura: 3580 víctimas con discapacidad en el RUV entre 1985 y 2024, con desplazamiento forzado como hecho principal.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">50.013</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">5.314</div><div class="sub">prevalencia 106,3‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">74 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.374</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La demografía disponible para Putumayo permite dimensionar la población indígena agregada, pero no reconstruir una pirámide etaria departamental. El JSON reporta 50013 personas indígenas en 2018 y advierte que la pirámide etaria no está disponible para indígenas por departamento. Por tanto, no es metodológicamente válido inferir envejecimiento, dependencia infantil, juventud relativa ni razones por edad a partir de esta base.
-
-La lectura ONIC debe concentrarse en la escala poblacional: 50013 personas indígenas constituyen una base suficiente para exigir planeación departamental diferencial. La ausencia de estructura etaria es en sí misma una limitación de información pública para ajustar salud, educación, cuidado y accesibilidad por ciclos de vida.</p>
-  <div class="sin-datos">demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>La prevalencia de capacidades diversas en la población indígena de Putumayo es alta dentro del marco reportado: 5314 personas con discapacidad sobre una población de referencia de 50013, equivalentes a 106.3 por cada 1000. El contraste con el promedio indígena nacional de 60.0 por cada 1000 muestra una brecha importante y convierte al departamento en un territorio prioritario para acciones diferenciales.
-
-La distribución por pueblos muestra concentración de casos: los códigos de pueblo 340, 350 y 560 registran 1436, 962 y 958 personas con discapacidad, respectivamente. Sin nombres de pueblo en esta sección, la interpretación debe mantenerse prudente, pero el patrón sugiere focalización intercultural sin perder cobertura departamental.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia PUTUMAYO</div>
-      <div class="num-big">106,3‰</div>
-      <div class="lbl">5.314 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: -46,3‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>El componente territorial identifica 74 resguardos en Putumayo, lo que confirma una presencia indígena dispersa y de alta complejidad institucional. La información listada muestra territorios en municipios como Puerto Guzmán, Mocoa, Villagarzón, Orito, Puerto Leguízamo, San Francisco, Santiago, Puerto Caicedo, Puerto Asís y San Miguel, entre otros. Esta amplitud impide respuestas concentradas en una sola cabecera.
-
-También hay fuertes diferencias de escala territorial. Villa Catalina de Puerto Rosario registra 68176.494 hectáreas, Kaméntsá Biya de Sibundoy 42630.2 y Nukanchipa Alpa Amukunapa Wasi 30803.067. La política departamental debe reconocer tanto resguardos extensos de difícil acceso como territorios más pequeños con demandas específicas de atención y gobierno propio.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  
-  <h3>Resguardos asociados</h3>
-  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
-      <tr><td>VILLA CATALINA DE PUERTO ROSARIO</td><td>—</td><td>PUERTO GUZMÁN</td><td class="num">68.176,5</td></tr>
-      <tr><td>KAMÉNTSÁ BIYA DE SIBUNDOY</td><td>—</td><td>MOCOA</td><td class="num">42.630,2</td></tr>
-      <tr><td>NUKANCHIPA ALPA AMUKUNAPA WASI</td><td>—</td><td>VILLAGARZÓN</td><td class="num">30.803,1</td></tr>
-      <tr><td>YUNGILLO</td><td>—</td><td>MOCOA</td><td class="num">26.663,5</td></tr>
-      <tr><td>SAN FRANCISCO</td><td>—</td><td>SAN FRANCISCO</td><td class="num">17.419,9</td></tr>
-      <tr><td>SIMORNA</td><td>—</td><td>ORITO</td><td class="num">13.375,0</td></tr>
-      <tr><td>INGA DE SAN ANDRÉS</td><td>—</td><td>SANTIAGO</td><td class="num">13.364,7</td></tr>
-      <tr><td>LA PRIMAVERA ETNIA HUITOTO</td><td>—</td><td>PUERTO LEGUÍZAMO</td><td class="num">12.831,5</td></tr>
-      <tr><td>ALTO ORITO</td><td>—</td><td>ORITO</td><td class="num">12.269,6</td></tr>
-      <tr><td>LA FLORIDA</td><td>—</td><td>SAN FRANCISCO</td><td class="num">8.481,3</td></tr>
-    </tbody></table>
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos de lengua a nivel departamental no están disponibles en el JSON. La sección viene marcada con _sin_datos: true y la nota indica que no hay tabla de lengua agregada por departamento. Por esta razón, no se debe inferir vitalidad lingüística, número de hablantes, transmisión intergeneracional ni pérdida de lengua para Putumayo con esta fuente.
-
-La ausencia de información lingüística es relevante para la planeación ONIC: un departamento con 50013 personas indígenas y 74 resguardos requiere mediciones que permitan diseñar atención, comunicación pública y procesos de accesibilidad en lenguas propias cuando corresponda. En este informe, sin embargo, esa lectura debe quedar como necesidad de información, no como diagnóstico cuantitativo.</p>
-  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>Los datos de NBI para Putumayo no están disponibles a este nivel. El JSON marca la sección nbi con _sin_datos: true y precisa que el agregado departamental requiere ponderación poblacional no disponible. Por tanto, no es válido afirmar un porcentaje departamental de necesidades básicas insatisfechas ni estimar componentes como vivienda, servicios, hacinamiento, dependencia económica o asistencia escolar.
-
-El único punto de referencia reportado es el promedio indígena nacional de NBI de 67.6%. Ese valor sirve como marco comparativo general, pero no como brecha calculada para Putumayo. La lectura responsable es que el departamento requiere una medición ponderada propia para conectar discapacidad, condiciones de vida y garantías territoriales.</p>
-  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El RUV reporta 3580 víctimas con discapacidad asociadas a hechos ocurridos en Putumayo entre 1985 y 2024. El hecho principal es el desplazamiento forzado, con 2414 registros, equivalente al 67.4% del total. Esta concentración muestra que la discapacidad debe leerse junto con desarraigo, ruptura territorial y afectaciones a redes familiares y comunitarias.
-
-Después del desplazamiento aparecen homicidio con 358 registros y amenaza con 316, seguidos por desaparición forzada con 111 y acciones armadas con 95. Para un departamento con 74 resguardos, estos datos obligan a articular reparación, retorno, protección colectiva y accesibilidad, evitando tratar la discapacidad como un asunto separado del conflicto armado.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">3.580</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">67,4% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">2.414</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Homicidio</div><div class="track"><div class="fill" style="width: 14.8%"></div></div><div class="num">358</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 13.1%"></div></div><div class="num">316</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desaparición forzada</div><div class="track"><div class="fill" style="width: 4.6%"></div></div><div class="num">111</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Acto terrorista / Atentados / Combates / Enfrentamientos / H</div><div class="track"><div class="fill" style="width: 3.9%"></div></div><div class="num">95</div></div>
-
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Criticidad y Vulnerabilidad reportado para Putumayo es 0.374. Su composición muestra que el componente de conflicto_norm alcanza 0.716 y el de prevalencia_norm 0.531, mientras nbi_norm aparece como 0.0 por ausencia de información disponible para NBI departamental. La lectura principal, por tanto, debe centrarse en la combinación de alta prevalencia y fuerte afectación por conflicto.
-
-La fórmula declarada asigna 0.4 a NBI, 0.3 a prevalencia y 0.3 a conflicto. Como el NBI no está disponible, el ICV puede subestimar condiciones materiales de vida. Aun así, el peso de 3580 víctimas con discapacidad y una prevalencia de 106.3 por cada 1000 justifica prioridad departamental.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.531</td><td class="num">0.30</td><td class="num"><b>0.159</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.716</td><td class="num">0.30</td><td class="num"><b>0.215</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.374</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Priorizar un plan departamental indígena de discapacidad para Putumayo, partiendo de las 5314 personas con discapacidad y la prevalencia de 106.3 por cada 1000, superior al promedio indígena nacional de 60.0.</li>
-      <li>Diseñar rutas móviles e interculturales para los 74 resguardos registrados, con énfasis en territorios extensos como Villa Catalina de Puerto Rosario, de 68176.494 hectáreas, y Kaméntsá Biya de Sibundoy, de 42630.2 hectáreas.</li>
-      <li>Integrar reparación y accesibilidad en la atención a víctimas, considerando 3580 víctimas con discapacidad y 2414 registros por desplazamiento forzado, que representan el 67.4% de los hechos reportados.</li>
-      <li>Mejorar la información pública departamental: no hay pirámide etaria indígena por departamento, no hay datos agregados de lengua y el NBI requiere ponderación; estas brechas afectan la planeación para 50013 personas indígenas.</li>
-      <li>Focalizar acciones con pueblos de mayor carga registrada sin perder cobertura universal: los códigos de pueblo 340, 350 y 560 concentran 1436, 962 y 958 personas con discapacidad, respectivamente.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/dpto/86/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[-0.5622775888021904, -77.18680573240476], [1.4673152680449035, -73.84131793299804]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[-0.5622775888021904, -77.18680573240476], [1.4673152680449035, -73.84131793299804]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([0.4525188396213566, -75.5140618327014]).addTo(map)
-    .bindPopup('<b>DEPARTAMENTO PUTUMAYO</b>');
-</script>
-</body>
-</html>
+<h2>Pueblos del departamento</h2>
+<table>
+<thead><tr><th>Pueblo</th><th>Población indígena</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
+<tbody>
+    <tr><td>INGA</td><td class="num">12.323</td><td class="num">1.436</td><td class="num">116.5‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>KAMËNTSA</td><td class="num">6.999</td><td class="num">962</td><td class="num">137.4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>PASTOS</td><td class="num">6.091</td><td class="num">958</td><td class="num">157.3‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>AWA</td><td class="num">5.096</td><td class="num">399</td><td class="num">78.3‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>NASA</td><td class="num">4.380</td><td class="num">317</td><td class="num">72.4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>QUILLACINGA</td><td class="num">1.391</td><td class="num">304</td><td class="num">218.6‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>SIONA</td><td class="num">2.074</td><td class="num">210</td><td class="num">101.2‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>MURUI</td><td class="num">3.549</td><td class="num">146</td><td class="num">41.1‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>KICHWA</td><td class="num">2.448</td><td class="num">130</td><td class="num">53.1‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>COFAN</td><td class="num">1.396</td><td class="num">117</td><td class="num">83.8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>YANACONA</td><td class="num">952</td><td class="num">114</td><td class="num">119.8‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>INDIGENA-SIN-INFORMACION</td><td class="num">747</td><td class="num">71</td><td class="num">95.0‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>EMBERA-CHAMI</td><td class="num">1.041</td><td class="num">48</td><td class="num">46.1‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
+    <tr><td>COREGUAJE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIJAO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ANDAKIES</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PISAMIRA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-KATIO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CAÑAMOMO-LOMAPRIETA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YUKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>DESANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CARIJONA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>DUJOS</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MISAK</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCAMA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ARHUACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIAROA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAKAGUAJE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CHITARERO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BORA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUNA-TULE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUBEO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EMBERA-DOBIDA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIKUANI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WAYUU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ETTE-E'NEKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WIWA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-BOLIVIA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>OCAINA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ZENU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BARI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>BETOYE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CABIYARI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CARAPANA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CHIRICOA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>COCONUCO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CUIBA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>CURRIPACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>EPERARA-SIAPIDARA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>AMBALO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>GUANACO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KOGUI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>HITNU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MACAGUANE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KAKUA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>JUDPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAKU</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MIRAÑA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIAPOCO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PIRATAPUYO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>PUINAVE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SALIBA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>SIRIANO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TANIMUKA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TOTORO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>TIKUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>U`WA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>WOUNAN</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MUINANE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YAGUA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YAUNA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YUKPA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>YURUTI</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>ANDOKE</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MOKANA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>KANKUAMO</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>QUIMBAYA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-ECUADOR-</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>INDIGENAS-PANAMA</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+    <tr><td>MAYA-</td><td class="num">—</td><td class="num">—</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_dpto`. Generado
+el 2026-05-10T04:15:42.056955+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

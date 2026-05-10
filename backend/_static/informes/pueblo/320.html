@@ -1,318 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · PUEBLO Guayabero · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe del pueblo · JIW</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.piramide-bar-h{display:inline-block;background:#02432D;height:1rem;vertical-align:middle}
+.piramide-bar-m{display:inline-block;background:#a78bfa;height:1rem;vertical-align:middle}
+.piramide td{font-size:.85rem}
+.piramide td.lbl{text-align:center;font-variant-numeric:tabular-nums}
+.piramide td.h{text-align:right}
+.piramide td.m{text-align:left}
+</style></head>
 <body>
+<h1>Informe del pueblo · JIW</h1>
+<p><span class="kpi">Población total · <b>2,894</b></span>
+<span class="kpi">Con cap. diversas · <b>64</b></span>
+<span class="kpi">Prevalencia · <b>22.1‰</b></span>
+<span class="kpi">Confiabilidad · <b>ALTA</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>PUEBLO Guayabero</h1>
-  <div class="subtitle">Informe territorial · Personas con Capacidades Diversas</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El pueblo Guayabero, con una población de 2.960 personas, enfrenta una situación de extrema vulnerabilidad marcada por la pobreza sistémica y la fragilidad demográfica. Su estructura poblacional es excepcionalmente joven, con un índice de dependencia de 120.9, lo que significa que hay más personas en edad de dependencia (niños y ancianos) que en edad productiva. Esta presión demográfica se agrava por condiciones de vida alarmantes: el 91.36% de la población vive con Necesidades Básicas Insatisfechas (NBI), una cifra que casi triplica la de miseria (79.82%) y supera con creces el promedio indígena nacional.</p><p></p><p>A pesar de una notable dispersión territorial que abarca 24 departamentos, la vida del pueblo Guayabero se concentra principalmente en Guaviare y Meta. La prevalencia de discapacidad registrada (22.1 por 1.000) es considerablemente baja en comparación con la media nacional indígena, lo que sugiere un posible subregistro severo en lugar de una menor incidencia. Este dato, junto con la ausencia de hablantes de la lengua propia registrados, enciende las alarmas sobre la integridad cultural y el bienestar físico del pueblo.</p><p></p><p>La lectura clave de estos datos es la de un pueblo en una encrucijada crítica, luchando por su supervivencia cultural y material. La juventud de su población representa tanto una esperanza como un desafío inmenso, cuya viabilidad depende de acciones urgentes para revertir la pobreza extrema y la pérdida de su patrimonio lingüístico. El Estado y las organizaciones indígenas deben priorizar intervenciones estructurales centradas en el saneamiento básico, la vivienda y la revitalización cultural.</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">2.960</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">64</div><div class="sub">prevalencia 22,1‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">24</div><div class="sub">14 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.399</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La estructura demográfica del pueblo Guayabero es la de una población extremadamente joven y en proceso de expansión. De un total de 2.960 miembros, el 52.3% (1.547 personas) son menores de 15 años, mientras que solo el 2.5% (73 personas) supera los 65 años. Esta composición da como resultado un índice de envejecimiento muy bajo de 4.7 y, a su vez, un altísimo índice de dependencia de 120.9, lo que indica una fuerte presión sobre la población en edad de trabajar (1.340 personas) para sostener a niños y mayores. La razón de masculinidad es de 100.3, mostrando un equilibrio casi perfecto entre hombres (1.482) y mujeres (1.478).</p>
-  
-  <table>
-    <thead><tr><th>Grupo de edad</th><th>Hombres</th><th>Mujeres</th><th>Total</th><th>%</th></tr></thead>
-    <tbody>
-      <tr><td>0-14 años</td><td class="num">790</td><td class="num">757</td><td class="num"><b>1.547</b></td><td class="num">52.3%</td></tr>
-      <tr><td>15-64 años</td><td class="num">651</td><td class="num">689</td><td class="num"><b>1.340</b></td><td class="num">45.3%</td></tr>
-      <tr><td>65+ años</td><td class="num">41</td><td class="num">32</td><td class="num"><b>73</b></td><td class="num">2.5%</td></tr>
-      <tr style="background: #f5efe0;"><td><b>Total</b></td><td class="num"><b>1.482</b></td><td class="num"><b>1.478</b></td><td class="num"><b>2.960</b></td><td class="num">100,0%</td></tr>
-    </tbody>
-  </table>
-  <div class="kpis" style="grid-template-columns: repeat(3, 1fr); margin-top: 8px;">
-    <div class="kpi"><div class="label">Razón masculinidad</div><div class="val">100,3</div><div class="sub">H por 100 M</div></div>
-    <div class="kpi"><div class="label">Índice dependencia</div><div class="val">120,9</div><div class="sub">por 100 productivos</div></div>
-    <div class="kpi"><div class="label">Índice envejecimiento</div><div class="val">4,7</div><div class="sub">65+ / 0-14 × 100</div></div>
-  </div>
-  <div class="fuente">Fuente: visor_dane.piramide_pueblo · CNPV 2018 (DANE)</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <p>Se registra una prevalencia de discapacidad de 22.1 por cada 1.000 personas en el pueblo Guayabero, lo que corresponde a 64 individuos identificados. Esta cifra es significativamente inferior al promedio nacional indígena de 60 por 1.000, lo que levanta sospechas sobre un posible subregistro importante. Dada la altísima incidencia de pobreza (91.36% NBI) y las precarias condiciones de vida, es probable que la prevalencia real sea mayor. La falta de datos sobre los tipos de limitación impide un análisis más detallado. Es crucial interpretar esta baja cifra con cautela, ya que podría estar ocultando barreras de acceso al diagnóstico y registro, más que una menor incidencia de la discapacidad.</p>
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">Prevalencia Guayabero</div>
-      <div class="num-big">22,1‰</div>
-      <div class="lbl">64 personas registradas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">60,0‰</div>
-      <div class="lbl">Brecha: 37,9‰</div>
-    </div>
-  </div>
-  <h3>Tipos de limitación</h3>
-  <div class="sin-datos">Tipos de limitación detallados no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: pueblo.piramide_disc_tipo (Washington Group · CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>El pueblo Guayabero muestra un patrón de asentamiento mayoritariamente concentrado, a pesar de su presencia en 24 departamentos, lo que sugiere un fuerte proceso de diáspora y movilidad. Los núcleos poblacionales principales se encuentran en los departamentos de Meta, con 1.488 personas, y Guaviare, con 1.284. Juntos, estos dos departamentos albergan al 93.6% de la población total. Existen al menos 14 resguardos constituidos donde habita el pueblo, siendo el más grande el de Guayaberos de Barrancón en Guaviare, con 838 habitantes. Esta dispersión, aunque con núcleos definidos, plantea desafíos para la gobernanza propia, la cohesión cultural y la articulación de una defensa territorial unificada.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  <h3>Departamentos con mayor presencia</h3>
-  <table>
-    <thead><tr><th>Departamento</th><th>Población</th><th>Con cap. diversas</th><th>Prevalencia</th><th>Confiabilidad</th></tr></thead>
-    <tbody>
-      <tr><td>META</td><td class="num">1.488</td><td class="num">6</td><td class="num">4,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>GUAVIARE</td><td class="num">1.284</td><td class="num">48</td><td class="num">37,4‰</td><td><span class="badge ok">CONFIABLE</span></td></tr>
-      <tr><td>BOGOTA D.C.</td><td class="num">24</td><td class="num">2</td><td class="num">83,3‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>GUAINIA</td><td class="num">23</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>VAUPES</td><td class="num">11</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CUNDINAMARCA</td><td class="num">10</td><td class="num">4</td><td class="num">400,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>VALLE DEL CAUCA</td><td class="num">8</td><td class="num">1</td><td class="num">125,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>SUCRE</td><td class="num">7</td><td class="num">0</td><td class="num">—‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>ANTIOQUIA</td><td class="num">6</td><td class="num">1</td><td class="num">166,7‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-      <tr><td>CASANARE</td><td class="num">5</td><td class="num">1</td><td class="num">200,0‰</td><td><span class="badge warn">n&lt;30</span></td></tr>
-    </tbody></table>
-  
-  <h3>Resguardos asociados</h3>
-  <table><thead><tr><th>Resguardo</th><th>Departamento</th><th>Municipio</th><th>Población</th></tr></thead><tbody>
-      <tr><td>Guayaberos de Barrancón</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">838</td></tr>
-      <tr><td>La Sal</td><td>META</td><td>PUERTO CONCORDIA</td><td class="num">306</td></tr>
-      <tr><td>Naexit Put</td><td>META</td><td>PUERTO CONCORDIA</td><td class="num">114</td></tr>
-      <tr><td>La Fuga</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">86</td></tr>
-      <tr><td>Macuare</td><td>—</td><td>—</td><td class="num">57</td></tr>
-      <tr><td>Barranco Ceiba-Laguna Araguato</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">48</td></tr>
-      <tr><td>Barranco Colorado</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">45</td></tr>
-      <tr><td>La Maria</td><td>ANTIOQUIA</td><td>VALPARAÍSO</td><td class="num">44</td></tr>
-      <tr><td>Nukak-Maku</td><td>GUAVIARE</td><td>SAN JOSÉ DEL GUAVIARE</td><td class="num">20</td></tr>
-      <tr><td>Bacati-Arara Carurú y Miraflores</td><td>VAUPÉS</td><td>CARURÚ</td><td class="num">8</td></tr>
-    </tbody></table>
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>Los datos disponibles indican una situación de máxima alerta para la supervivencia de la lengua del pueblo Guayabero. Según la fuente consultada, se registra que el 0% de la población habla o entiende su idioma ancestral. Dentro de una comunidad de 2.960 personas, no registrar ni un solo hablante, ni siquiera parcial, señala un estado de silenciamiento lingüístico casi total. Esta cifra, de ser precisa, representa una pérdida catastrófica del patrimonio inmaterial y un indicador crítico de la fragilidad cultural del pueblo. Es imperativo confirmar y entender las causas de este fenómeno y activar mecanismos de emergencia para la recuperación y revitalización lingüística.</p>
-  
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Habla la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-    <div class="kpi"><div class="label">Entiende la lengua</div><div class="val">0,0%</div><div class="sub">0 personas</div></div>
-  </div>
-
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>Las condiciones de vida del pueblo Guayabero son de una precariedad extrema. El 91.36% de la población vive con Necesidades Básicas Insatisfechas (NBI), un indicador que supera por un margen alarmante el ya elevado promedio indígena nacional del 67.6%. La situación es aún más grave si se considera que el 79.82% se encuentra en la miseria. Los componentes que más inciden en esta pobreza estructural son la calidad de la vivienda, que afecta al 80.41% de la población, el hacinamiento crítico, con un 62.3%, y la falta de acceso a servicios básicos, que impacta al 56.53%. Estos datos reflejan un abandono histórico y una exclusión social y económica severa.</p>
-  
-  <div class="comp">
-    <div class="box pueblo">
-      <div class="lbl">NBI Guayabero</div>
-      <div class="num-big">91,4%</div>
-      <div class="lbl">Necesidades básicas insatisfechas</div>
-    </div>
-    <div class="box benchmark">
-      <div class="lbl">Promedio indígena nacional</div>
-      <div class="num-big">67,6%</div>
-      <div class="lbl">Brecha</div>
-    </div>
-  </div>
-  <h3>Componentes del NBI (% personas afectadas)</h3>
-  <div class="bar"><div class="lbl">Vivienda</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">80,4%</div></div>
-  <div class="bar"><div class="lbl">Servicios</div><div class="track"><div class="fill" style="width: 70.3%"></div></div><div class="num">56,5%</div></div>
-  <div class="bar"><div class="lbl">Hacinamiento</div><div class="track"><div class="fill" style="width: 77.5%"></div></div><div class="num">62,3%</div></div>
-  <div class="bar"><div class="lbl">Inasistencia</div><div class="track"><div class="fill" style="width: 27.8%"></div></div><div class="num">22,4%</div></div>
-  <div class="bar"><div class="lbl">Dependencia</div><div class="track"><div class="fill" style="width: 50.2%"></div></div><div class="num">40,4%</div></div>
-
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>Según los datos del Registro Único de Víctimas (RUV), no se reportan personas del pueblo Guayabero que hayan sido reconocidas como víctimas del conflicto armado con una discapacidad. El contador de víctimas con discapacidad se encuentra en cero. Aunque este dato podría sugerir una baja afectación en esta intersección específica, debe ser tomado con extrema precaución. La ausencia de registros puede deberse a barreras significativas para el acceso a la justicia y la declaración en los territorios, invisibilizando el impacto real del conflicto. La falta de información sobre los principales hechos victimizantes impide un análisis más profundo sobre cómo la violencia ha afectado al pueblo Guayabero en su conjunto.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">0</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">—</div><div class="sub">—% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="sin-datos">No se registran víctimas con discapacidad en el cruce RUV para este nivel.</div>
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El pueblo Guayabero presenta un Índice de Vulnerabilidad Compuesta (ICV) de 0.399, lo que lo clasifica en una categoría de alta vulnerabilidad. El análisis de sus componentes muestra que la dimensión socioeconómica es abrumadoramente la más crítica, con un valor normalizado de NBI de 0.914, cercano al máximo posible. Esto confirma que la pobreza estructural es el principal factor que fragiliza al pueblo. En contraste, el componente de prevalencia de discapacidad tiene un impacto bajo (0.111) y el de conflicto es nulo (0.0), cifras que probablemente subestiman la realidad debido a problemas de registro. El ICV, por tanto, refleja principalmente una emergencia social y económica.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.914</td><td class="num">0.40</td><td class="num"><b>0.366</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.111</td><td class="num">0.30</td><td class="num"><b>0.033</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.399</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Diseñar e implementar un plan de choque contra la pobreza extrema, apuntando a reducir el NBI del 91.36% mediante la construcción de vivienda adecuada (déficit del 80.41%) y la expansión de servicios básicos (déficit del 56.53%) en Guaviare y Meta.</li>
-      <li>Iniciar una caracterización de salud y discapacidad para entender la brecha entre la prevalencia reportada de 22.1 por 1.000 y el promedio nacional indígena (60.0), garantizando el acceso a diagnóstico y atención diferencial.</li>
-      <li>Crear un programa de emergencia para la revitalización de la lengua guayabero, ante el alarmante dato de 0 hablantes, enfocado en la población joven, que constituye el 52.3% del total (1.547 personas).</li>
-      <li>Fortalecer la gobernanza y la unidad territorial entre los 14 resguardos y la población dispersa en 24 departamentos, concentrando esfuerzos en los núcleos de Meta (1.488 personas) y Guaviare (1.284 personas).</li>
-      <li>Desarrollar programas de formación y generación de ingresos para la población en edad de trabajar, para aliviar la carga del alto índice de dependencia de 120.9 y mejorar el sostenimiento de niños y mayores.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/pueblo/320/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[2.536874770000054, -72.69037821399996], [2.9338000010000655, -71.53459847899995]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[2.536874770000054, -72.69037821399996], [2.9338000010000655, -71.53459847899995]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([2.73533738550006, -72.11248834649996]).addTo(map)
-    .bindPopup('<b>PUEBLO Guayabero</b>');
-</script>
-</body>
-</html>
+<h2>Pirámide de capacidades diversas (edad × sexo)</h2>
+<table class="piramide">
+<thead><tr><th style="text-align:right">Hombres</th><th>Grupo edad</th><th>Mujeres</th></tr></thead>
+<tbody>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:60%"></span></td><td class="lbl">00-04</td><td class="m"><span class="piramide-bar-m" style="width:60%"></span> 3</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:20%"></span></td><td class="lbl">05-09</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 2</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:20%"></span></td><td class="lbl">10-14</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 2</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:40%"></span></td><td class="lbl">20-24</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 2</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:60%"></span></td><td class="lbl">30-34</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 2</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:20%"></span></td><td class="lbl">40-44</td><td class="m"><span class="piramide-bar-m" style="width:100%"></span> 5</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:40%"></span></td><td class="lbl">45-49</td><td class="m"><span class="piramide-bar-m" style="width:80%"></span> 4</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:40%"></span></td><td class="lbl">50-54</td><td class="m"><span class="piramide-bar-m" style="width:20%"></span> 1</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:20%"></span></td><td class="lbl">55-59</td><td class="m"><span class="piramide-bar-m" style="width:80%"></span> 4</td></tr>
+    <tr><td class="h">3 <span class="piramide-bar-h" style="width:60%"></span></td><td class="lbl">60-64</td><td class="m"><span class="piramide-bar-m" style="width:80%"></span> 4</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:40%"></span></td><td class="lbl">65-69</td><td class="m"><span class="piramide-bar-m" style="width:20%"></span> 1</td></tr>
+    <tr><td class="h">1 <span class="piramide-bar-h" style="width:20%"></span></td><td class="lbl">70-74</td><td class="m"><span class="piramide-bar-m" style="width:40%"></span> 2</td></tr>
+    <tr><td class="h">2 <span class="piramide-bar-h" style="width:40%"></span></td><td class="lbl">80-84</td><td class="m"><span class="piramide-bar-m" style="width:20%"></span> 1</td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `pueblo.disc_nacional` × `pueblo.piramide_disc`. Generado
+el 2026-05-10T04:16:08.819248+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

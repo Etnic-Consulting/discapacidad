@@ -3,199 +3,63 @@
   "id": "85410",
   "nombre": "TAURAMENA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 45,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 0,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 45,
-          "confiabilidad": "CONFIABLE"
+          "confiabilidad": "BAJA"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 19,
-      "top": [
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "520",
-          "pueblo": "PIAROA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "021",
-          "pueblo": "WIPIWI",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "690",
-          "pueblo": "U`WA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "810",
-          "pueblo": "GUANE",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "940",
-          "pueblo": "INDIGENAS-BRASIL",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "999",
-        "pueblo": "INDIGENA-SIN-INFORMACION",
-        "poblacion": 9
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 45,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 0.0,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "85",
+      "nom_dpto": "CASANARE",
       "n_resguardos": 0,
       "resguardos": [],
-      "bbox": [
-        4.300719522763254,
-        -72.916151009043,
-        5.1849098449946025,
-        -72.25784565229554
-      ],
-      "nombre_mpio": "TAURAMENA",
-      "cod_dpto": "85"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 3,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 3,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 1
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desaparición forzada",
-        "total": 1
-      },
-      "pct_hecho_principal": 33.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:35:01",
+  "fecha_generacion": "2026-05-10T04:16:06.408668+00:00",
   "periodo": "2018",
-  "_input_hash": "b5e856535dfdbdde"
+  "_input_hash": "71b0e8c8df369cdd",
+  "_generador": "render_informes.py"
 }

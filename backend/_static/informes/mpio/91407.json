@@ -3,226 +3,89 @@
   "id": "91407",
   "nombre": "LA PEDRERA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 3144,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 125,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 3144,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "770",
-          "pueblo": "YUKUNA",
-          "poblacion": 674
-        },
-        {
-          "cod_pueblo": "620",
-          "pueblo": "TANIMUKA",
-          "poblacion": 437
-        },
-        {
-          "cod_pueblo": "410",
-          "pueblo": "MAKUNA",
-          "poblacion": 404
-        },
-        {
-          "cod_pueblo": "460",
-          "pueblo": "MIRAÑA",
-          "poblacion": 370
-        },
-        {
-          "cod_pueblo": "450",
-          "pueblo": "MATAPI",
-          "poblacion": 189
-        },
-        {
-          "cod_pueblo": "380",
-          "pueblo": "LETUAMO",
-          "poblacion": 173
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 145
-        },
-        {
-          "cod_pueblo": "731",
-          "pueblo": "MUINANE",
-          "poblacion": 117
-        },
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 111
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 81
-        },
-        {
-          "cod_pueblo": "070",
-          "pueblo": "BARASANO",
-          "poblacion": 78
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 78
-        },
-        {
-          "cod_pueblo": "760",
-          "pueblo": "YAUNA",
-          "poblacion": 78
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 42
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 35
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 32
-        },
-        {
-          "cod_pueblo": "740",
-          "pueblo": "YAGUA",
-          "poblacion": 21
-        },
-        {
-          "cod_pueblo": "060",
-          "pueblo": "BARA",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "610",
-          "pueblo": "TAIWANO",
-          "poblacion": 9
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "770",
-        "pueblo": "YUKUNA",
-        "poblacion": 674
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 2935,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 42.59,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "91",
+      "nom_dpto": "AMAZONAS",
       "n_resguardos": 5,
       "resguardos": [
         {
-          "nombre": "YAIGOJÉ - RÍO APAPORIS",
+          "nombre_resguardo": "CAMARITAGUA",
+          "pueblo_onic": "YUKUNA",
+          "area_ha": 30634.67
+        },
+        {
+          "nombre_resguardo": "COMEYAFU",
+          "pueblo_onic": "YUKUNA",
+          "area_ha": 30702.062
+        },
+        {
+          "nombre_resguardo": "CURARE LOS INGLESES",
+          "pueblo_onic": "YUKUNA",
+          "area_ha": 249880.288
+        },
+        {
+          "nombre_resguardo": "PUERTO CÓRDOBA",
+          "pueblo_onic": "YUKUNA",
+          "area_ha": 53411.834
+        },
+        {
+          "nombre_resguardo": "YAIGOJÉ - RÍO APAPORIS",
           "pueblo_onic": "TANIMUCA",
-          "area_pg_ha": 1037974.374
-        },
-        {
-          "nombre": "CURARE LOS INGLESES",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 249880.288
-        },
-        {
-          "nombre": "PUERTO CÓRDOBA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 53411.834
-        },
-        {
-          "nombre": "COMEYAFU",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 30702.062
-        },
-        {
-          "nombre": "CAMARITAGUA",
-          "pueblo_onic": "YUKUNA",
-          "area_pg_ha": 30634.67
+          "area_ha": 1037974.374
         }
       ],
-      "bbox": [
-        -2.003434421262087,
-        -70.49656009529144,
-        -0.3863480299543699,
-        -69.39549619440413
-      ],
-      "nombre_mpio": "LA PEDRERA",
-      "cod_dpto": "91"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 5,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 5,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 3
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 2
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 3
-      },
-      "pct_hecho_principal": 60.0
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.0,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.001
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:38:04",
+  "fecha_generacion": "2026-05-10T04:16:06.874043+00:00",
   "periodo": "2018",
-  "_input_hash": "1e4097ed687a977b"
+  "_input_hash": "f56f7dc67235f320",
+  "_generador": "render_informes.py"
 }

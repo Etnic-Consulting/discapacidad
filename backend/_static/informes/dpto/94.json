@@ -1,328 +1,417 @@
 {
   "tipo": "dpto",
   "id": "94",
-  "nombre": "GUAINIA",
+  "nombre": "GUAINÍA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 27780,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 27780,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 1194,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 1194,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 27780,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 43.0,
+        "value": 42.98,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "250",
-          "con_disc": 448,
-          "total": 7940
-        },
-        {
-          "cod_pueblo": "550",
-          "con_disc": 304,
-          "total": 6913
-        },
-        {
-          "cod_pueblo": "510",
-          "con_disc": 171,
-          "total": 5828
-        },
-        {
-          "cod_pueblo": "580",
-          "con_disc": 134,
-          "total": 4398
-        },
-        {
-          "cod_pueblo": "220",
-          "con_disc": 36,
-          "total": 689
-        },
-        {
-          "cod_pueblo": "941",
-          "con_disc": 32,
-          "total": 522
-        },
-        {
-          "cod_pueblo": "680",
-          "con_disc": 17,
-          "total": 324
-        },
-        {
-          "cod_pueblo": "260",
-          "con_disc": 10,
-          "total": 100
-        },
-        {
-          "cod_pueblo": "570",
-          "con_disc": 7,
-          "total": 34
-        },
-        {
-          "cod_pueblo": "530",
-          "con_disc": 6,
-          "total": 72
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 23,
-      "resguardos": [
+      "macro": "AMAZONIA",
+      "n_pueblos": 44,
+      "pueblos": [
         {
-          "nombre": "CUENCA MEDIA Y ALTA DEL RÍO INIRÍDA",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 2245012.375
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 448,
+          "total": 7940,
+          "prevalencia_x_1000": 56.42,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "TONINA, SEJAL, SAN JOSÉ Y OTRAS",
-          "mpio": "PUERTO COLOMBIA",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 923145.445
+          "cod_pueblo": 550,
+          "nom_pueblo": "PUINAVE",
+          "con_disc": 304,
+          "total": 6913,
+          "prevalencia_x_1000": 43.98,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "RÍOS CUIARI E ISANA",
-          "mpio": "PANA PANA",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 918882.099
+          "cod_pueblo": 510,
+          "nom_pueblo": "PIAPOCO",
+          "con_disc": 171,
+          "total": 5828,
+          "prevalencia_x_1000": 29.34,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "BAJO RÍO GUAINÍA Y RÍO NEGRO",
-          "mpio": "SAN FELIPE",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 756690.006
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 134,
+          "total": 4398,
+          "prevalencia_x_1000": 30.47,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "RÍO ATABAPO E INÍRIDA",
-          "mpio": "CACAHUAL",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 522435.093
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 36,
+          "total": 689,
+          "prevalencia_x_1000": 52.25,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "PARTE ALTA DEL RÍO GUAINÍA",
-          "mpio": "PANA PANA",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 427800.932
+          "cod_pueblo": 941,
+          "nom_pueblo": "YERAL",
+          "con_disc": 32,
+          "total": 522,
+          "prevalencia_x_1000": 61.3,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "LAGUNA NIÑAL, COCUY, LOMA BAJA Y LOMA ALTA DEL CAÑO GUARIBEN",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 142376.872
+          "cod_pueblo": 680,
+          "nom_pueblo": "TUKANO",
+          "con_disc": 17,
+          "total": 324,
+          "prevalencia_x_1000": 52.47,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "BACHACO BUENAVISTA",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 83489.459
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 10,
+          "total": 100,
+          "prevalencia_x_1000": 100.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "REMANSO - CHORRO BOCÓN",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 76086.631
+          "cod_pueblo": 570,
+          "nom_pueblo": "SALIBA",
+          "con_disc": 7,
+          "total": 34,
+          "prevalencia_x_1000": 205.88,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PAUJIL",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 54376.749
+          "cod_pueblo": 310,
+          "nom_pueblo": "GUANANO",
+          "con_disc": 6,
+          "total": 139,
+          "prevalencia_x_1000": 43.17,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "PUEBLO NUEVO - LAGUNA COLORADA",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "PIAPOCO",
-          "area_pg_ha": 46039.441
+          "cod_pueblo": 530,
+          "nom_pueblo": "PIRATAPUYO",
+          "con_disc": 6,
+          "total": 72,
+          "prevalencia_x_1000": 83.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CARANACOA YURI - LAGUNA MOROCOTO",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 45003.755
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 4,
+          "total": 26,
+          "prevalencia_x_1000": 153.85,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MINITAS - MIRALINDO",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "PIAPOCO",
-          "area_pg_ha": 35407.63
+          "cod_pueblo": 251,
+          "nom_pueblo": "BANIBA",
+          "con_disc": 3,
+          "total": 158,
+          "prevalencia_x_1000": 18.99,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "EL VENADO",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 34213.385
+          "cod_pueblo": 252,
+          "nom_pueblo": "GUARIQUEMA",
+          "con_disc": 3,
+          "total": 52,
+          "prevalencia_x_1000": 57.69,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ALMIDÓN LA CEIBA",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 32235.496
+          "cod_pueblo": 70,
+          "nom_pueblo": "BARASANO",
+          "con_disc": 3,
+          "total": 113,
+          "prevalencia_x_1000": 26.55,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CUMARAL - GUAMUCO",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 29026.063
+          "cod_pueblo": 200,
+          "nom_pueblo": "PIJAO",
+          "con_disc": 2,
+          "total": 8,
+          "prevalencia_x_1000": 250.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CHIGÜIRO",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "PIAPOCO",
-          "area_pg_ha": 15947.437
+          "cod_pueblo": 520,
+          "nom_pueblo": "PIAROA",
+          "con_disc": 2,
+          "total": 260,
+          "prevalencia_x_1000": 7.69,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "COAYARE EL COCO",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "PUINAVE",
-          "area_pg_ha": 11341.837
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 2,
+          "total": 60,
+          "prevalencia_x_1000": 33.33,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "CARRIZAL",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 9801.804
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "MURCIÉLAGO ALTAMIRA",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "PIAPOCO",
-          "area_pg_ha": 7246.612
+          "cod_pueblo": 910,
+          "nom_pueblo": "INDIGENAS-PERU",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "ARRECIFAL",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 4372.949
+          "cod_pueblo": 790,
+          "nom_pueblo": "YURUTI",
+          "con_disc": 1,
+          "total": 16,
+          "prevalencia_x_1000": 62.5,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "LAGUNA - CURVINA SAPUARA",
-          "mpio": "BARRANCOMINAS",
-          "pueblo_onic": "SIKUANI",
-          "area_pg_ha": 3312.002
+          "cod_pueblo": 800,
+          "nom_pueblo": "ZENU",
+          "con_disc": 1,
+          "total": 10,
+          "prevalencia_x_1000": 100.0,
+          "k_anonimato_aplicado": true
         },
         {
-          "nombre": "TIERRA ALTA",
-          "mpio": "INÍRIDA",
-          "pueblo_onic": "CURRIPAKO",
-          "area_pg_ha": 265.947
+          "cod_pueblo": 840,
+          "nom_pueblo": "KICHWA",
+          "con_disc": 0,
+          "total": 22,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 26,
+          "nom_pueblo": "YARURO",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 50,
+          "nom_pueblo": "WIWA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 110,
+          "nom_pueblo": "CABIYARI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 140,
+          "nom_pueblo": "CARIJONA",
+          "con_disc": 0,
+          "total": 9,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 170,
+          "nom_pueblo": "COCAMA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 320,
+          "nom_pueblo": "JIW",
+          "con_disc": 0,
+          "total": 23,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 340,
+          "nom_pueblo": "INGA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 410,
+          "nom_pueblo": "MAKUNA",
+          "con_disc": 0,
+          "total": 6,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 430,
+          "nom_pueblo": "NUKAK-MAKU",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 450,
+          "nom_pueblo": "MATAPI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 600,
+          "nom_pueblo": "SIRIANO",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 770,
+          "nom_pueblo": "YUKUNA",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 10,
+          "nom_pueblo": "ACHAGUA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 900,
+          "nom_pueblo": "INDIGENAS-ECUADOR-",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 940,
+          "nom_pueblo": "INDIGENAS-BRASIL",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        1.1656333332606355,
-        -70.94249237997775,
-        4.045025830855876,
-        -66.8472154266633
-      ],
-      "nombre_dpto": "GUAINIA"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 148,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 148,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 115
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 22
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 4
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 3
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 2
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 115
-      },
-      "pct_hecho_principal": 77.7
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.073,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.215,
-        "conflicto_norm": 0.03
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T09:00:37",
+  "fecha_generacion": "2026-05-10T04:15:42.141656+00:00",
   "periodo": "2018",
-  "_input_hash": "66094df3f773b2e8"
+  "_input_hash": "0d4ae35a3988a5d5",
+  "_generador": "render_informes.py"
 }

@@ -3,278 +3,109 @@
   "id": "86885",
   "nombre": "VILLAGARZON",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 3948,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 326,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 3948,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 1470
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 879
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 830
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 294
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 199
-        },
-        {
-          "cod_pueblo": "505",
-          "pueblo": "ANDAKIES",
-          "poblacion": 48
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 46
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 34
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 23
-        },
-        {
-          "cod_pueblo": "540",
-          "pueblo": "PISAMIRA",
-          "poblacion": 19
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 17
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 17
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "790",
-          "pueblo": "YURUTI",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "360",
-          "pueblo": "COFAN",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "100",
-          "pueblo": "BORA",
-          "poblacion": 4
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 1470
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 3858,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 84.5,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "86",
+      "nom_dpto": "PUTUMAYO",
       "n_resguardos": 9,
       "resguardos": [
         {
-          "nombre": "NUKANCHIPA ALPA AMUKUNAPA WASI",
+          "nombre_resguardo": "ALBANIA",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 30803.067
+          "area_ha": 261.412
         },
         {
-          "nombre": "PLAYA LARGA",
+          "nombre_resguardo": "AWÁ MAYASQUER",
           "pueblo_onic": "AWÁ",
-          "area_pg_ha": 669.341
+          "area_ha": 203.287
         },
         {
-          "nombre": "RESGUARDO INDÍGENA AWÁ LA TURBIA",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 659.199
-        },
-        {
-          "nombre": "CHALUAYACO",
+          "nombre_resguardo": "BLASIAKU",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 538.664
+          "area_ha": 58.041
         },
         {
-          "nombre": "SAN MIGUEL DE LA CASTELLANA",
+          "nombre_resguardo": "CHALUAYACO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 488.476
+          "area_ha": 538.664
         },
         {
-          "nombre": "ALBANIA",
+          "nombre_resguardo": "NUKANCHIPA ALPA AMUKUNAPA WASI",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 261.412
+          "area_ha": 30803.067
         },
         {
-          "nombre": "AWÁ MAYASQUER",
-          "pueblo_onic": "AWÁ",
-          "area_pg_ha": 203.287
-        },
-        {
-          "nombre": "PIEDRA SAGRADA LA GRAN FAMILIA DE LOS PASTOS",
+          "nombre_resguardo": "PIEDRA SAGRADA LA GRAN FAMILIA DE LOS PASTOS",
           "pueblo_onic": "PASTO",
-          "area_pg_ha": 132.525
+          "area_ha": 132.525
         },
         {
-          "nombre": "BLASIAKU",
+          "nombre_resguardo": "PLAYA LARGA",
+          "pueblo_onic": "AWÁ",
+          "area_ha": 669.341
+        },
+        {
+          "nombre_resguardo": "RESGUARDO INDÍGENA AWÁ LA TURBIA",
+          "pueblo_onic": "AWÁ",
+          "area_ha": 659.199
+        },
+        {
+          "nombre_resguardo": "SAN MIGUEL DE LA CASTELLANA",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 58.041
+          "area_ha": 488.476
         }
       ],
-      "bbox": [
-        0.7693426033988926,
-        -77.07874437225456,
-        1.075531861170884,
-        -76.46516640899745
-      ],
-      "nombre_mpio": "VILLAGARZON",
-      "cod_dpto": "86"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 263,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 263,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 189
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 32
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 16
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 14
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 4
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 3
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 2
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 1
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 189
-      },
-      "pct_hecho_principal": 71.9
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.016,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.053
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:37:14",
+  "fecha_generacion": "2026-05-10T04:16:06.746899+00:00",
   "periodo": "2018",
-  "_input_hash": "5750ea41f799ecdc"
+  "_input_hash": "8ecacb14a88e0b85",
+  "_generador": "render_informes.py"
 }

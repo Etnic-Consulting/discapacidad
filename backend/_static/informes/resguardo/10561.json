@@ -3,19 +3,6 @@
   "id": "10561",
   "nombre": "BUENAVISTA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 0,
-        "_meta": {
-          "query": "SELECT SUM(poblacion) AS pob FROM visor_dane.resguardo_pueblo\n        WHERE resguardo ILIKE %s",
-          "table": "visor_dane.resguardo_pueblo",
-          "period": "2018",
-          "n": 0,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "población de la fuente DANE-CNPV cruzada por código de territorio"
-    },
     "info_basica": {
       "nombre": "BUENAVISTA",
       "dpto": "PUTUMAYO",
@@ -24,113 +11,48 @@
       "cod_mpio": "86568",
       "macro": "AMAZONIA",
       "pueblo_onic": "SIONA",
-      "organizacion_nacional": "OPIAC",
       "organizacion_regional": "OZIP",
       "area_hectareas": 4504.099
     },
+    "demografia": {
+      "poblacion_total": {
+        "value": 0,
+        "_meta": {
+          "query": "SELECT SUM(poblacion) FROM visor_dane.resguardo_pueblo WHERE resguardo ILIKE %s",
+          "table": "visor_dane.resguardo_pueblo",
+          "period": "2018",
+          "confiabilidad": "BAJA"
+        }
+      },
+      "_nota": "población de la fuente DANE-CNPV cruzada por nombre de territorio"
+    },
     "capacidades_diversas": {
       "_sin_datos": true,
-      "_nota": "datos discapacidad por resguardo no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      }
+      "_nota": "datos discapacidad por resguardo no disponibles en CNPV 2018 · ver informe pueblo+dpto"
     },
     "territorial": {
-      "bbox": [
-        0.4012806060000571,
-        -76.26732169099995,
-        0.5036074180000583,
-        -76.21697802699998
-      ],
-      "area_hectareas": 4504.099,
-      "macro": "AMAZONIA",
-      "dpto": "PUTUMAYO",
-      "mpio": "PUERTO ASÍS"
+      "_sin_datos": true,
+      "_nota": "ver bbox en geo.resguardos"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 486,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s AND pueblo_imputado ILIKE %s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 486,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 331
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 46
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 33
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 20
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 20
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 8
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 7
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 5
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 5
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 4
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 331
-      },
-      "pct_hecho_principal": 68.1
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.029,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.097
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:47:58",
+  "fecha_generacion": "2026-05-10T04:16:25.018641+00:00",
   "periodo": "2018",
-  "_input_hash": "110148ad6cb5ec4b"
+  "_input_hash": "97411b9f17e24c0c",
+  "_generador": "render_informes.py"
 }

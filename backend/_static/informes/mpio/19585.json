@@ -3,198 +3,84 @@
   "id": "19585",
   "nombre": "PURACE",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 11359,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 1479,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 11359,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 9,
-      "top": [
-        {
-          "cod_pueblo": "180",
-          "pueblo": "COCONUCO",
-          "poblacion": 10508
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 795
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 47
-        },
-        {
-          "cod_pueblo": "431",
-          "pueblo": "KAKUA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "650",
-          "pueblo": "TOTORO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "292",
-          "pueblo": "QUIZGO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "180",
-        "pueblo": "COCONUCO",
-        "poblacion": 10508
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 11337,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 130.46,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 4,
       "resguardos": [
         {
-          "nombre": "KOKONUCO",
+          "nombre_resguardo": "JUAN TAMA",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 8990.64
+          "area_ha": 925.316
         },
         {
-          "nombre": "PALETARÁ",
+          "nombre_resguardo": "KOKONUCO",
+          "pueblo_onic": "NASA",
+          "area_ha": 8990.64
+        },
+        {
+          "nombre_resguardo": "PALETARÁ",
           "pueblo_onic": "KOKONUKO - YANACONA",
-          "area_pg_ha": 5807.34
+          "area_ha": 5807.34
         },
         {
-          "nombre": "PURACÉ",
+          "nombre_resguardo": "PURACÉ",
           "pueblo_onic": "NASA",
-          "area_pg_ha": 2044.391
-        },
-        {
-          "nombre": "JUAN TAMA",
-          "pueblo_onic": "NASA",
-          "area_pg_ha": 925.316
+          "area_ha": 2044.391
         }
       ],
-      "bbox": [
-        2.1000076278753395,
-        -76.55731405898678,
-        2.4235421378121775,
-        -76.1211353292037
-      ],
-      "nombre_mpio": "PURACE",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 128,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 128,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 56
-        },
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 29
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 15
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 12
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 5
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 3
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-        "total": 56
-      },
-      "pct_hecho_principal": 43.8
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.008,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.026
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:48:31",
+  "fecha_generacion": "2026-05-10T04:15:50.535601+00:00",
   "periodo": "2018",
-  "_input_hash": "3754c106000d379c"
+  "_input_hash": "f8eb8aa684c08d2f",
+  "_generador": "render_informes.py"
 }

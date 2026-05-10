@@ -3,283 +3,114 @@
   "id": "86001",
   "nombre": "MOCOA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 7311,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 594,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 7311,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 3873
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 865
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 841
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 574
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 491
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 146
-        },
-        {
-          "cod_pueblo": "210",
-          "pueblo": "AWA",
-          "poblacion": 142
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 130
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 118
-        },
-        {
-          "cod_pueblo": "730",
-          "pueblo": "MURUI",
-          "poblacion": 36
-        },
-        {
-          "cod_pueblo": "840",
-          "pueblo": "KICHWA",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 10
-        },
-        {
-          "cod_pueblo": "360",
-          "pueblo": "COFAN",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "710",
-          "pueblo": "WOUNAN",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "282",
-          "pueblo": "EMBERA-CHAMI",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "030",
-          "pueblo": "ANDOKE",
-          "poblacion": 3
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 3873
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 7244,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 82.0,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "86",
+      "nom_dpto": "PUTUMAYO",
       "n_resguardos": 10,
       "resguardos": [
         {
-          "nombre": "KAMÉNTSÁ BIYA DE SIBUNDOY",
+          "nombre_resguardo": "INGA DE CONDAGUA",
+          "pueblo_onic": "INGA",
+          "area_ha": 3324.862
+        },
+        {
+          "nombre_resguardo": "INGA DE MOCOA",
+          "pueblo_onic": "INGA",
+          "area_ha": 114.111
+        },
+        {
+          "nombre_resguardo": "INGA KAMSA",
+          "pueblo_onic": "INGA",
+          "area_ha": 114.419
+        },
+        {
+          "nombre_resguardo": "KAMÉNTSÁ BIYA DE SIBUNDOY",
           "pueblo_onic": "KAMËNTSA",
-          "area_pg_ha": 42630.2
+          "area_ha": 42630.2
         },
         {
-          "nombre": "YUNGILLO",
+          "nombre_resguardo": "KAMÉNTSÁ BIYA DE SIBUNDOY",
+          "pueblo_onic": "KAMËNTSA",
+          "area_ha": 77.056
+        },
+        {
+          "nombre_resguardo": "MUSU RUNAKUNA",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 26663.539
+          "area_ha": 68.451
         },
         {
-          "nombre": "INGA DE CONDAGUA",
+          "nombre_resguardo": "PUERTO LIMÓN",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 3324.862
+          "area_ha": 256.933
         },
         {
-          "nombre": "VILLA MARÍA DE ANAMÚ",
+          "nombre_resguardo": "VILLA MARÍA DE ANAMÚ",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 1495.568
+          "area_ha": 1495.568
         },
         {
-          "nombre": "WASIPUNGO",
+          "nombre_resguardo": "WASIPUNGO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 719.439
+          "area_ha": 719.439
         },
         {
-          "nombre": "PUERTO LIMÓN",
+          "nombre_resguardo": "YUNGILLO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 256.933
-        },
-        {
-          "nombre": "INGA KAMSA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 114.419
-        },
-        {
-          "nombre": "INGA DE MOCOA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 114.111
-        },
-        {
-          "nombre": "KAMÉNTSÁ BIYA DE SIBUNDOY",
-          "pueblo_onic": "KAMËNTSA",
-          "area_pg_ha": 77.056
-        },
-        {
-          "nombre": "MUSU RUNAKUNA",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 68.451
+          "area_ha": 26663.539
         }
       ],
-      "bbox": [
-        0.8685283661069526,
-        -76.92165273438144,
-        1.4673152680449035,
-        -76.41003424708089
-      ],
-      "nombre_mpio": "MOCOA",
-      "cod_dpto": "86"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 212,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 212,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 122
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 48
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 19
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 10
-        },
-        {
-          "hecho": "Vinculación de Niños Niñas y Adolescentes a Actividades Relacionadas con grupos armados",
-          "total": 3
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Abandono o Despojo Forzado de Tierras",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 1
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 122
-      },
-      "pct_hecho_principal": 57.5
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.013,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.042
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:35:25",
+  "fecha_generacion": "2026-05-10T04:16:06.470330+00:00",
   "periodo": "2018",
-  "_input_hash": "3643fa19e5588c61"
+  "_input_hash": "798fc7be630a633e",
+  "_generador": "render_informes.py"
 }

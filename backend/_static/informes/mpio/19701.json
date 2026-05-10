@@ -3,209 +3,89 @@
   "id": "19701",
   "nombre": "SANTA ROSA",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1261,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 210,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1261,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 11,
-      "top": [
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 802
-        },
-        {
-          "cod_pueblo": "750",
-          "pueblo": "YANACONA",
-          "poblacion": 396
-        },
-        {
-          "cod_pueblo": "280",
-          "pueblo": "EMBERA",
-          "poblacion": 16
-        },
-        {
-          "cod_pueblo": "500",
-          "pueblo": "NASA",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "350",
-          "pueblo": "KAMËNTSA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "565",
-          "pueblo": "QUILLACINGA",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "590",
-          "pueblo": "SIONA",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "560",
-          "pueblo": "PASTOS",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "290",
-          "pueblo": "MISAK",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "360",
-          "pueblo": "COFAN",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "340",
-        "pueblo": "INGA",
-        "poblacion": 802
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1226,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 171.29,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "19",
+      "nom_dpto": "CAUCA",
       "n_resguardos": 5,
       "resguardos": [
         {
-          "nombre": "INGA DE APONTE",
+          "nombre_resguardo": "INGA DE APONTE",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 21833.179
+          "area_ha": 21833.179
         },
         {
-          "nombre": "MANDIYACO",
+          "nombre_resguardo": "MANDIYACO",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 16416.479
+          "area_ha": 16416.479
         },
         {
-          "nombre": "SAN JOSÉ",
+          "nombre_resguardo": "SAN JOAQUÍN",
           "pueblo_onic": "INGA",
-          "area_pg_ha": 2747.424
+          "area_ha": 135.319
         },
         {
-          "nombre": "SANTA MARTA",
+          "nombre_resguardo": "SAN JOSÉ",
+          "pueblo_onic": "INGA",
+          "area_ha": 2747.424
+        },
+        {
+          "nombre_resguardo": "SANTA MARTA",
           "pueblo_onic": "YANAKONA - YANAKUNA",
-          "area_pg_ha": 653.642
-        },
-        {
-          "nombre": "SAN JOAQUÍN",
-          "pueblo_onic": "INGA",
-          "area_pg_ha": 135.319
+          "area_ha": 653.642
         }
       ],
-      "bbox": [
-        1.0756557910496016,
-        -76.9320577516412,
-        1.8681582456776398,
-        -76.1989023656605
-      ],
-      "nombre_mpio": "SANTA ROSA",
-      "cod_dpto": "19"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 120,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 120,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 89
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 18
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 4
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 2
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 2
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Tortura",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 89
-      },
-      "pct_hecho_principal": 74.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.007,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.024
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T16:49:02",
+  "fecha_generacion": "2026-05-10T04:15:50.629128+00:00",
   "periodo": "2018",
-  "_input_hash": "694b3b1e71f1c74d"
+  "_input_hash": "f80de2d9abe610ec",
+  "_generador": "render_informes.py"
 }

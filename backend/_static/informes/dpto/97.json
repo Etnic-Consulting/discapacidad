@@ -1,218 +1,473 @@
 {
   "tipo": "dpto",
   "id": "97",
-  "nombre": "VAUPES",
+  "nombre": "VAUPÉS",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 24102,
-        "_meta": {
-          "query": "SELECT SUM(total) AS total FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
-          "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": 24102,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "_nota": "demografía dpto: población indígena total agregada de pueblo.disc_dpto · pirámide etaria no disponible para indígenas por dpto"
-    },
     "capacidades_diversas": {
       "con_discapacidad": {
         "value": 1613,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
+          "query": "SELECT SUM(con_discapacidad) FROM pueblo.disc_dpto WHERE cod_dpto = %s AND periodo='2018'",
           "table": "pueblo.disc_dpto",
           "period": "2018",
-          "n": 1613,
           "confiabilidad": "CONFIABLE"
         }
       },
       "poblacion_referencia": {
         "value": 24102,
         "_meta": {
-          "query": "SELECT SUM(con_discapacidad), SUM(total) FROM pueblo.disc_dpto WHERE cod_dpto=%s AND periodo=%s",
           "table": "pueblo.disc_dpto",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "period": "2018"
         }
       },
       "prevalencia_x_1000": {
-        "value": 66.9,
+        "value": 66.92,
         "_meta": {
-          "query": "calc",
-          "table": "—",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "formula": "con_disc/total*1000"
         }
-      },
-      "promedio_indigena_nacional": {
-        "value": 60.0,
-        "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "pueblos_top": [
-        {
-          "cod_pueblo": "220",
-          "con_disc": 603,
-          "total": 9028
-        },
-        {
-          "cod_pueblo": "680",
-          "con_disc": 220,
-          "total": 2109
-        },
-        {
-          "cod_pueblo": "310",
-          "con_disc": 193,
-          "total": 2320
-        },
-        {
-          "cod_pueblo": "260",
-          "con_disc": 156,
-          "total": 2343
-        },
-        {
-          "cod_pueblo": "600",
-          "con_disc": 80,
-          "total": 1133
-        },
-        {
-          "cod_pueblo": "700",
-          "con_disc": 66,
-          "total": 1024
-        },
-        {
-          "cod_pueblo": "130",
-          "con_disc": 38,
-          "total": 665
-        },
-        {
-          "cod_pueblo": "110",
-          "con_disc": 35,
-          "total": 339
-        },
-        {
-          "cod_pueblo": "530",
-          "con_disc": 33,
-          "total": 510
-        },
-        {
-          "cod_pueblo": "410",
-          "con_disc": 33,
-          "total": 1082
-        }
-      ]
+      }
     },
     "territorial": {
-      "n_resguardos": 2,
-      "resguardos": [
+      "macro": "AMAZONIA",
+      "n_pueblos": 51,
+      "pueblos": [
         {
-          "nombre": "VAUPÉS",
-          "mpio": "MITÚ",
-          "pueblo_onic": "KUBEO",
-          "area_pg_ha": 3895776.278
+          "cod_pueblo": 220,
+          "nom_pueblo": "CUBEO",
+          "con_disc": 603,
+          "total": 9028,
+          "prevalencia_x_1000": 66.79,
+          "k_anonimato_aplicado": false
         },
         {
-          "nombre": "ARARA, BACATI, CARURÚ Y MIRAFLORES",
-          "mpio": "CARURÚ",
-          "pueblo_onic": "TUKANO",
-          "area_pg_ha": 289762.373
+          "cod_pueblo": 680,
+          "nom_pueblo": "TUKANO",
+          "con_disc": 220,
+          "total": 2109,
+          "prevalencia_x_1000": 104.31,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 310,
+          "nom_pueblo": "GUANANO",
+          "con_disc": 193,
+          "total": 2320,
+          "prevalencia_x_1000": 83.19,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 260,
+          "nom_pueblo": "DESANO",
+          "con_disc": 156,
+          "total": 2343,
+          "prevalencia_x_1000": 66.58,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 600,
+          "nom_pueblo": "SIRIANO",
+          "con_disc": 80,
+          "total": 1133,
+          "prevalencia_x_1000": 70.61,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 700,
+          "nom_pueblo": "TUYUKA",
+          "con_disc": 66,
+          "total": 1024,
+          "prevalencia_x_1000": 64.45,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 130,
+          "nom_pueblo": "CARAPANA",
+          "con_disc": 38,
+          "total": 665,
+          "prevalencia_x_1000": 57.14,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 110,
+          "nom_pueblo": "CABIYARI",
+          "con_disc": 35,
+          "total": 339,
+          "prevalencia_x_1000": 103.24,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 410,
+          "nom_pueblo": "MAKUNA",
+          "con_disc": 33,
+          "total": 1082,
+          "prevalencia_x_1000": 30.5,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 530,
+          "nom_pueblo": "PIRATAPUYO",
+          "con_disc": 33,
+          "total": 510,
+          "prevalencia_x_1000": 64.71,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 790,
+          "nom_pueblo": "YURUTI",
+          "con_disc": 31,
+          "total": 619,
+          "prevalencia_x_1000": 50.08,
+          "k_anonimato_aplicado": false
+        },
+        {
+          "cod_pueblo": 70,
+          "nom_pueblo": "BARASANO",
+          "con_disc": 26,
+          "total": 369,
+          "prevalencia_x_1000": 70.46,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 640,
+          "nom_pueblo": "TATUYO",
+          "con_disc": 25,
+          "total": 596,
+          "prevalencia_x_1000": 41.95,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 60,
+          "nom_pueblo": "BARA",
+          "con_disc": 24,
+          "total": 452,
+          "prevalencia_x_1000": 53.1,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 540,
+          "nom_pueblo": "PISAMIRA",
+          "con_disc": 9,
+          "total": 137,
+          "prevalencia_x_1000": 65.69,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 630,
+          "nom_pueblo": "TARIANO",
+          "con_disc": 7,
+          "total": 151,
+          "prevalencia_x_1000": 46.36,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 999,
+          "nom_pueblo": "INDIGENA-SIN-INFORMACION",
+          "con_disc": 7,
+          "total": 30,
+          "prevalencia_x_1000": 233.33,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 250,
+          "nom_pueblo": "CURRIPACO",
+          "con_disc": 7,
+          "total": 541,
+          "prevalencia_x_1000": 12.94,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 620,
+          "nom_pueblo": "TANIMUKA",
+          "con_disc": 6,
+          "total": 276,
+          "prevalencia_x_1000": 21.74,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 550,
+          "nom_pueblo": "PUINAVE",
+          "con_disc": 3,
+          "total": 44,
+          "prevalencia_x_1000": 68.18,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 251,
+          "nom_pueblo": "BANIBA",
+          "con_disc": 3,
+          "total": 14,
+          "prevalencia_x_1000": 214.29,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 770,
+          "nom_pueblo": "YUKUNA",
+          "con_disc": 2,
+          "total": 149,
+          "prevalencia_x_1000": 13.42,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 660,
+          "nom_pueblo": "TIKUNA",
+          "con_disc": 1,
+          "total": 10,
+          "prevalencia_x_1000": 100.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 470,
+          "nom_pueblo": "MUISCA",
+          "con_disc": 1,
+          "total": 1,
+          "prevalencia_x_1000": 1000.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 731,
+          "nom_pueblo": "MUINANE",
+          "con_disc": 1,
+          "total": 8,
+          "prevalencia_x_1000": 125.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 140,
+          "nom_pueblo": "CARIJONA",
+          "con_disc": 1,
+          "total": 14,
+          "prevalencia_x_1000": 71.43,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 100,
+          "nom_pueblo": "BORA",
+          "con_disc": 1,
+          "total": 2,
+          "prevalencia_x_1000": 500.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 730,
+          "nom_pueblo": "MURUI",
+          "con_disc": 1,
+          "total": 21,
+          "prevalencia_x_1000": 47.62,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 570,
+          "nom_pueblo": "SALIBA",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 180,
+          "nom_pueblo": "COCONUCO",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 280,
+          "nom_pueblo": "EMBERA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 282,
+          "nom_pueblo": "EMBERA-CHAMI",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 290,
+          "nom_pueblo": "MISAK",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 320,
+          "nom_pueblo": "JIW",
+          "con_disc": 0,
+          "total": 11,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 350,
+          "nom_pueblo": "KAMËNTSA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 380,
+          "nom_pueblo": "LETUAMO",
+          "con_disc": 0,
+          "total": 5,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 431,
+          "nom_pueblo": "KAKUA",
+          "con_disc": 0,
+          "total": 8,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 450,
+          "nom_pueblo": "MATAPI",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 460,
+          "nom_pueblo": "MIRAÑA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 490,
+          "nom_pueblo": "OCAINA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 500,
+          "nom_pueblo": "NASA",
+          "con_disc": 0,
+          "total": 3,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 510,
+          "nom_pueblo": "PIAPOCO",
+          "con_disc": 0,
+          "total": 9,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 560,
+          "nom_pueblo": "PASTOS",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 20,
+          "nom_pueblo": "AMORUA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 580,
+          "nom_pueblo": "SIKUANI",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 610,
+          "nom_pueblo": "TAIWANO",
+          "con_disc": 0,
+          "total": 45,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 720,
+          "nom_pueblo": "WAYUU",
+          "con_disc": 0,
+          "total": 4,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 750,
+          "nom_pueblo": "YANACONA",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 760,
+          "nom_pueblo": "YAUNA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 840,
+          "nom_pueblo": "KICHWA",
+          "con_disc": 0,
+          "total": 2,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
+        },
+        {
+          "cod_pueblo": 940,
+          "nom_pueblo": "INDIGENAS-BRASIL",
+          "con_disc": 0,
+          "total": 1,
+          "prevalencia_x_1000": 0.0,
+          "k_anonimato_aplicado": true
         }
       ],
-      "bbox": [
-        -1.227884199260747,
-        -72.03319222322165,
-        2.0804010601151535,
-        -69.1156408563628
-      ],
-      "nombre_dpto": "VAUPES"
+      "_meta": {
+        "fuente": "pueblo.disc_dpto",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "lengua": {
       "_sin_datos": true,
-      "_nota": "no hay tabla de lengua agregada por departamento"
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6,
-      "_nota": "NBI agregado por dpto requiere ponderación poblacional · no disponible"
+      "_nota": "ver informe por pueblo"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 571,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND LEFT(cod_mpio_ocurrencia, 2)=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 571,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 376
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 92
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 49
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 16
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 9
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 7
-        },
-        {
-          "hecho": "Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado",
-          "total": 6
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 6
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 5
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 4
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 376
-      },
-      "pct_hecho_principal": 65.8
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por pueblo"
     },
     "icv": {
-      "score": 0.135,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.335,
-        "conflicto_norm": 0.114
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     }
   },
-  "fecha_generacion": "2026-05-07T09:01:54",
+  "fecha_generacion": "2026-05-10T04:15:42.204396+00:00",
   "periodo": "2018",
-  "_input_hash": "898197907971ea61"
+  "_input_hash": "a537148f88cec105",
+  "_generador": "render_informes.py"
 }

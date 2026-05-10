@@ -3,232 +3,79 @@
   "id": "95015",
   "nombre": "CALAMAR",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 409,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 32,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 409,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 96
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 74
-        },
-        {
-          "cod_pueblo": "200",
-          "pueblo": "PIJAO",
-          "poblacion": 71
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 58
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 31
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 15
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "010",
-          "pueblo": "ACHAGUA",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 7
-        },
-        {
-          "cod_pueblo": "630",
-          "pueblo": "TARIANO",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "900",
-          "pueblo": "INDIGENAS-ECUADOR-",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "430",
-          "pueblo": "NUKAK-MAKU",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "550",
-          "pueblo": "PUINAVE",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "470",
-          "pueblo": "MUISCA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "070",
-          "pueblo": "BARASANO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "220",
-        "pueblo": "CUBEO",
-        "poblacion": 96
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 368,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 86.96,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "95",
+      "nom_dpto": "GUAVIARE",
       "n_resguardos": 3,
       "resguardos": [
         {
-          "nombre": "LLANOS DEL YARÍ - YAGUARÁ II",
-          "pueblo_onic": "PIJAO",
-          "area_pg_ha": 146488.678
-        },
-        {
-          "nombre": "BARRANQUILLITA",
+          "nombre_resguardo": "BARRANQUILLITA",
           "pueblo_onic": "TUKANO",
-          "area_pg_ha": 22204.564
+          "area_ha": 22204.564
         },
         {
-          "nombre": "EL ITILLA",
+          "nombre_resguardo": "EL ITILLA",
           "pueblo_onic": "CARAPANA",
-          "area_pg_ha": 8477.529
+          "area_ha": 8477.529
+        },
+        {
+          "nombre_resguardo": "LLANOS DEL YARÍ - YAGUARÁ II",
+          "pueblo_onic": "PIJAO",
+          "area_ha": 146488.678
         }
       ],
-      "bbox": [
-        0.8944293056197273,
-        -73.66390880277658,
-        2.191574241682912,
-        -72.2916491962389
-      ],
-      "nombre_mpio": "CALAMAR",
-      "cod_dpto": "95"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 28,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 28,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 18
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 4
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 3
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 1
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 18
-      },
-      "pct_hecho_principal": 64.3
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.002,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.006
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:40:44",
+  "fecha_generacion": "2026-05-10T04:16:07.339878+00:00",
   "periodo": "2018",
-  "_input_hash": "9b76ae5a7334add2"
+  "_input_hash": "9b31c695a993698d",
+  "_generador": "render_informes.py"
 }

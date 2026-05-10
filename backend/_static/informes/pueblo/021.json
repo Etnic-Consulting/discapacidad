@@ -1,0 +1,65 @@
+{
+  "tipo": "pueblo",
+  "id": "021",
+  "nombre": "WIPIWI",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 8,
+        "_meta": {
+          "query": "SELECT con_discapacidad FROM pueblo.disc_nacional WHERE cod_pueblo = %s AND periodo='2018'",
+          "table": "pueblo.disc_nacional",
+          "period": "2018",
+          "confiabilidad": "ALTA"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 249,
+        "_meta": {
+          "table": "pueblo.disc_nacional",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 32.13,
+        "_meta": {
+          "formula": "tasa_x_1000 from pueblo.disc_nacional"
+        }
+      }
+    },
+    "demografia": {
+      "piramide_capacidades_diversas": {
+        "value": [],
+        "_meta": {
+          "table": "pueblo.piramide_disc",
+          "period": "2018",
+          "n_grupos_edad": 0
+        }
+      }
+    },
+    "territorial": {
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/mpio"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no disponible en CNPV 2018"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores nacionales"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
+    },
+    "icv": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
+    }
+  },
+  "fecha_generacion": "2026-05-10T04:16:07.775681+00:00",
+  "periodo": "2018",
+  "_input_hash": "e23168694fe1f50a",
+  "_generador": "render_informes.py"
+}

@@ -1,0 +1,101 @@
+{
+  "tipo": "pueblo",
+  "id": "070",
+  "nombre": "BARASANO",
+  "secciones": {
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 36,
+        "_meta": {
+          "query": "SELECT con_discapacidad FROM pueblo.disc_nacional WHERE cod_pueblo = %s AND periodo='2018'",
+          "table": "pueblo.disc_nacional",
+          "period": "2018",
+          "confiabilidad": "ALTA"
+        }
+      },
+      "poblacion_referencia": {
+        "value": 622,
+        "_meta": {
+          "table": "pueblo.disc_nacional",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 57.88,
+        "_meta": {
+          "formula": "tasa_x_1000 from pueblo.disc_nacional"
+        }
+      }
+    },
+    "demografia": {
+      "piramide_capacidades_diversas": {
+        "value": [
+          {
+            "grupo_edad": "10-14",
+            "hombres": 1,
+            "mujeres": 1
+          },
+          {
+            "grupo_edad": "35-39",
+            "hombres": 1,
+            "mujeres": 2
+          },
+          {
+            "grupo_edad": "40-44",
+            "hombres": 3,
+            "mujeres": 2
+          },
+          {
+            "grupo_edad": "45-49",
+            "hombres": 2,
+            "mujeres": 1
+          },
+          {
+            "grupo_edad": "50-54",
+            "hombres": 1,
+            "mujeres": 1
+          },
+          {
+            "grupo_edad": "55-59",
+            "hombres": 1,
+            "mujeres": 4
+          },
+          {
+            "grupo_edad": "70-74",
+            "hombres": 2,
+            "mujeres": 1
+          }
+        ],
+        "_meta": {
+          "table": "pueblo.piramide_disc",
+          "period": "2018",
+          "n_grupos_edad": 7
+        }
+      }
+    },
+    "territorial": {
+      "_sin_datos": true,
+      "_nota": "ver informe por dpto/mpio"
+    },
+    "lengua": {
+      "_sin_datos": true,
+      "_nota": "no disponible en CNPV 2018"
+    },
+    "nbi": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores nacionales"
+    },
+    "conflicto": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
+    },
+    "icv": {
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
+    }
+  },
+  "fecha_generacion": "2026-05-10T04:16:07.964074+00:00",
+  "periodo": "2018",
+  "_input_hash": "3527d01063cf41a6",
+  "_generador": "render_informes.py"
+}

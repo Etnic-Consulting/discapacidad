@@ -1,237 +1,38 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8" />
-<title>SMT-ONIC · MUNICIPIO APIA · 2026-05-07</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<html lang="es"><head><meta charset="utf-8">
+<title>Informe municipal · APIA</title>
 <style>
-  :root {
-    --primary: #014a30; --green-mid: #2e7d4f; --gold: #c9a227;
-    --ink: #1a1a1a; --ink-muted: #555; --bg: #fafaf7;
-    --bg-card: #ffffff; --border: #e0ddd6;
-  }
-  * { box-sizing: border-box; }
-  body { font-family: 'Georgia','Times New Roman',serif; margin: 0; padding: 0;
-         background: var(--bg); color: var(--ink); line-height: 1.55; }
-  .pagina { max-width: 880px; margin: 24px auto; background: var(--bg-card);
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06); padding: 56px 64px;
-            border-top: 6px solid var(--primary); }
-  .cover { text-align: center; min-height: 380px; padding-top: 80px; }
-  .cover h1 { font-size: 2.4rem; margin: 24px 0 12px; color: var(--primary);
-              letter-spacing: 1px; font-weight: 700; }
-  .cover .subtitle { font-size: 1.1rem; color: var(--ink-muted); margin-bottom: 40px; }
-  .cover .meta { font-size: 0.85rem; color: var(--ink-muted); margin-top: 60px; }
-  .cover .org { font-size: 0.95rem; font-weight: 600; color: var(--primary); margin-bottom: 8px; }
-  h2 { color: var(--primary); border-bottom: 2px solid var(--primary);
-       padding-bottom: 6px; margin: 36px 0 16px;
-       font-size: 1.35rem; font-weight: 700; }
-  h3 { color: var(--green-mid); margin: 24px 0 8px; font-size: 1.05rem; }
-  p { text-align: justify; margin: 0 0 12px; }
-  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 24px; }
-  .kpi { background: linear-gradient(180deg,#ffffff 0%,#f7f4ec 100%);
-         padding: 14px 16px; border-left: 4px solid var(--primary); border-radius: 4px; }
-  .kpi .label { font-size: 0.7rem; text-transform: uppercase; color: var(--ink-muted); letter-spacing: 0.5px; }
-  .kpi .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin: 4px 0; font-family: sans-serif; }
-  .kpi .sub { font-size: 0.72rem; color: var(--ink-muted); }
-  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
-  th, td { padding: 7px 10px; border-bottom: 1px solid var(--border); text-align: left; }
-  th { background: var(--primary); color: #fff; font-weight: 600;
-       text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.5px; }
-  tr:nth-child(even) { background: #f9f8f4; }
-  td.num { text-align: right; font-family: sans-serif; }
-  .bar { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 0.82rem; }
-  .bar .lbl { flex: 0 0 130px; }
-  .bar .track { flex: 1; background: #eee; height: 18px; border-radius: 3px; position: relative; }
-  .bar .fill { background: linear-gradient(90deg, var(--green-mid), var(--gold)); height: 100%; border-radius: 3px; }
-  .bar .num { flex: 0 0 70px; text-align: right; font-family: sans-serif; font-weight: 600; color: var(--primary); }
-  #mapa { height: 380px; width: 100%; border: 1px solid var(--border); border-radius: 4px; margin: 12px 0; }
-  .fuente { font-size: 0.72rem; color: var(--ink-muted); margin: 6px 0 18px; font-style: italic; }
-  .recomendaciones ol { margin: 0; padding-left: 22px; }
-  .recomendaciones li { margin-bottom: 12px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
-  .badge.ok { background: #e7f3eb; color: var(--green-mid); }
-  .badge.warn { background: #fdf3d3; color: #8a6914; }
-  .comp { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
-  .comp .box { padding: 14px; border-radius: 4px; text-align: center; }
-  .comp .box.pueblo { background: #e7f3eb; border: 2px solid var(--green-mid); }
-  .comp .box.benchmark { background: #f5f5f5; border: 1px dashed #999; }
-  .comp .num-big { font-size: 1.8rem; font-weight: 700; color: var(--primary); font-family: sans-serif; }
-  .comp .lbl { font-size: 0.78rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; }
-  .pie-footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border);
-                font-size: 0.72rem; color: var(--ink-muted); text-align: center; }
-  .sin-datos { background: #fdf3d3; border-left: 4px solid var(--gold);
-               padding: 12px 16px; margin: 12px 0; font-size: 0.85rem; color: #8a6914; }
-  .contraportada h2 { text-align: center; border: none; color: var(--primary);
-                       font-size: 1.4rem; letter-spacing: 1.5px; margin: 0 0 8px; }
-  .contraportada .org-line { text-align: center; font-size: 0.85rem; color: var(--ink-muted);
-                              margin-bottom: 36px; letter-spacing: 0.5px; }
-  .contraportada .seccion-titulo { text-align: center; color: var(--green-mid); font-size: 0.78rem;
-                                    text-transform: uppercase; letter-spacing: 2px;
-                                    margin: 28px 0 14px; padding-bottom: 6px;
-                                    border-bottom: 1px solid var(--border); }
-  .contraportada .coord { text-align: center; margin: 0 0 32px; }
-  .contraportada .coord .nombre { font-size: 1rem; color: var(--ink); font-weight: 700; margin: 6px 0 2px; }
-  .contraportada .coord .cargo { font-size: 0.78rem; color: var(--ink-muted); font-style: italic; }
-  .contraportada .consejero { margin: 0 0 16px; padding: 8px 12px;
-                              border-left: 3px solid var(--gold); background: #fbf9f2; }
-  .contraportada .consejero .cargo { font-size: 0.72rem; color: var(--green-mid); text-transform: uppercase;
-                                      letter-spacing: 0.8px; font-weight: 600; }
-  .contraportada .consejero .nombre { font-size: 0.95rem; color: var(--ink); font-weight: 600; margin-top: 3px; }
-  .contraportada .pie-cierre { text-align: center; margin-top: 48px; padding-top: 20px;
-                               border-top: 2px solid var(--primary);
-                               font-size: 0.75rem; color: var(--ink-muted); }
-  @media print {
-    body { background: white; }
-    .pagina { box-shadow: none; max-width: 100%; padding: 30px; }
-    #mapa { height: 280px; }
-    h2 { break-after: avoid; }
-    table { break-inside: avoid; }
-  }
-</style>
-</head>
+body{font-family:system-ui,sans-serif;max-width:900px;margin:2rem auto;padding:1rem;color:#222;line-height:1.6}
+h1{color:#02432D;border-bottom:3px solid #02432D;padding-bottom:.5rem}
+h2{color:#02432D;margin-top:2rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0}
+th{background:#02432D;color:#fff;padding:.5rem;text-align:left}
+td{padding:.5rem;border-bottom:1px solid #eee}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{padding:.15rem .5rem;border-radius:4px;font-size:.8rem}
+.badge.warn{background:#fef3c7;color:#92400e}
+.badge.ok{background:#d1fae5;color:#065f46}
+.fuente{font-size:.8rem;color:#666;margin-top:.5rem;font-style:italic}
+.kpi{display:inline-block;margin:0 1rem .5rem 0;padding:.5rem 1rem;background:#f3f4f6;border-radius:6px}
+.kpi b{color:#02432D;font-size:1.2rem}
+.dpto-tag{font-weight:normal;font-size:1rem;color:#666}
+</style></head>
 <body>
+<h1>Informe municipal · APIA <span class="dpto-tag">(RISARALDA)</span></h1>
+<p><span class="kpi">Población indígena · <b>147</b></span>
+<span class="kpi">Con cap. diversas · <b>4</b></span>
+<span class="kpi">Prevalencia · <b>27.2‰</b></span>
+<span class="kpi">Confiabilidad · <b>BAJA</b></span>
+<span class="kpi">Resguardos · <b>0</b></span></p>
 
-<div class="pagina cover">
-  <div class="org">ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA — ONIC</div>
-  <div style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 60px;">
-    Sistema de Monitoreo Territorial · Módulo Capacidades Diversas
-  </div>
-  <h1>MUNICIPIO APIA</h1>
-  <div class="subtitle">Informe territorial · Capacidades Diversas y población indígena</div>
-  <div class="meta"><p>CNPV 2018 · Generado: 2026-05-07</p></div>
-</div>
-
-<div class="pagina contraportada">
-  <h2>ORGANIZACIÓN NACIONAL INDÍGENA DE COLOMBIA</h2>
-  <div class="org-line">Sistema de Monitoreo Territorial · SMT-ONIC</div>
-  <div class="seccion-titulo">Consejería Mayor de Gobierno</div>
-  <div class="consejero"><div class="cargo">Consejero Mayor</div><div class="nombre">ROSELINO GUARUPE JOROPA</div></div>
-  <div class="consejero"><div class="cargo">Consejería Secretaría General</div><div class="nombre">GUILLIANA PATRICIA ARRIETA MAURY</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planeación, Administración y Finanzas</div><div class="nombre">Sandra Dulfay Perdomo Prieto</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Sistemas de Investigación, Información y Comunicaciones</div><div class="nombre">Milton Piranga Cruz</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Derechos de los Pueblos Indígenas, Derechos Humanos y Paz</div><div class="nombre">RIDER PAY NASTACÚAS</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Educación Propia e Intercultural</div><div class="nombre">Yeferson David Domicó</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Mujer, Familia y Generación</div><div class="nombre">Dora Liseth Garcés Aguablanca</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Planes de Vida y Desarrollo Propio</div><div class="nombre">Verónica Solís Fuentes</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Medicina Tradicional y Salud Occidental</div><div class="nombre">Johny Jefferson Ramírez</div></div>
-  <div class="consejero"><div class="cargo">Consejería de Territorio, Recursos Naturales y Biodiversidad</div><div class="nombre" style="text-transform: lowercase;">arlenys ester alvarado epiayu</div></div>
-  <div class="seccion-titulo">Coordinación Técnica</div>
-  <div class="coord">
-    <div class="nombre">Wilson Fernando Herrera Baltán</div>
-    <div class="cargo">Coordinador Técnico Sistema de Monitoreo Territorial SMT-ONIC</div>
-    <div class="nombre" style="margin-top: 18px;">Eudo Fidel Cuarán Hernández</div>
-    <div class="cargo">Coordinador Social</div>
-  </div>
-  <div class="pie-cierre">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>poblacion@onic.org.co · Datos abiertos CC BY 4.0</p>
-  </div>
-</div>
-
-<div class="pagina">
-  <h2>§ 2. Resumen ejecutivo</h2>
-  <p>El municipio de Apía (Risaralda) registra una población indígena de 147 personas, distribuida en ocho pueblos, con predominio del pueblo Emberá (74 personas) y Emberá-Chamí (58). La ausencia de resguardos en el territorio municipal sugiere una concentración en zonas no tituladas o urbanas, lo que incrementa su vulnerabilidad. El 88.9% de las víctimas del conflicto armado en esta población corresponde a desplazamiento forzado (8 casos), evidenciando un patrón histórico de despojo territorial. El Índice de Condiciones de Vida (ICV) de 0.001 refleja la urgencia de abordar brechas estructurales en un contexto de alta dispersión étnica y falta de datos clave como necesidades básicas insatisfechas (NBI).</p>
-  
-  <div class="kpis">
-    <div class="kpi"><div class="label">Población indígena</div><div class="val">147</div><div class="sub">CNPV 2018</div></div>
-    <div class="kpi"><div class="label">Cap. diversas</div><div class="val">—</div><div class="sub">prevalencia —‰</div></div>
-    <div class="kpi"><div class="label">Departamentos</div><div class="val">—</div><div class="sub">0 resguardos</div></div>
-    <div class="kpi"><div class="label">ICV (vulnerabilidad)</div><div class="val">0.001</div><div class="sub">escala 0-1 · mayor = mayor</div></div>
-  </div>
-
-  <h2>§ 3. Demografía</h2>
-  <p>La población indígena de Apía se caracteriza por su diversidad étnica, con ocho pueblos presentes, aunque el 89.8% se concentra en dos: Emberá (50.3%) y Emberá-Chamí (39.5%). La presencia minoritaria de pueblos como Arhuaco, Wiwa y Cañamomo-Lomaprieta (1 persona cada uno) sugiere dinámicas migratorias recientes o procesos de reasentamiento. La ausencia de datos etarios impide analizar la pirámide poblacional, pero la baja densidad demográfica (147 personas en 98 km²) podría indicar fragilidad en la transmisión cultural y acceso a servicios diferenciados. La categoría 'Indígena-sin-información' (9 personas) refleja limitaciones en la identificación étnica en censos locales.</p>
-  <div class="sin-datos">población indígena del municipio agregada por pueblo (CNPV 2018)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 4. Capacidades diversas</h2>
-  <div class="sin-datos">datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 5. Distribución territorial</h2>
-  <p>Apía carece de resguardos titulados, lo que sitúa a su población indígena en una condición de alta vulnerabilidad territorial. La concentración de 147 personas en un área de 98 km² (con coordenadas entre 5.04°N y -76.06°W) evidencia una dispersión que dificulta la implementación de políticas públicas con enfoque diferencial. El 50.3% de la población pertenece al pueblo Emberá, pero la ausencia de territorios colectivos limita su autonomía para la gestión ambiental y cultural. La superposición con el municipio de Risaralda (código 66) exige estrategias interinstitucionales para garantizar derechos territoriales en contextos no titulados.</p>
-  <h3>Mapa de presencia</h3>
-  <div id="mapa"></div>
-  
-  
-  <div class="fuente">Fuente: pueblo.disc_dpto + smt_geo.resguardos + geo.departamentos (MGN 2025 DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 6. Lengua y cultura</h2>
-  <p>No se dispone de datos sobre lenguas indígenas en Apía, lo que impide analizar su vitalidad lingüística o la presencia de procesos de revitalización. La diversidad étnica reportada (8 pueblos) sugiere la posible coexistencia de variantes emberá y lenguas minoritarias, pero la falta de información dificulta la planificación de educación bilingüe o la protección de patrimonios inmateriales. Esta brecha refleja la necesidad de incluir variables lingüísticas en censos municipales y sistemas de información territorial.</p>
-  <div class="sin-datos">Datos de lengua no disponibles a este nivel.</div>
-  <div class="fuente">Fuente: visor_dane.lengua_pueblo · CNPV 2018</div>
-  <h2>§ 7. Condiciones de vida (NBI)</h2>
-  <p>Los datos sobre Necesidades Básicas Insatisfechas (NBI) no están disponibles para Apía, lo que impide comparar su situación con el promedio indígena nacional (67.6%). Sin embargo, la ausencia de resguardos, el desplazamiento forzado (8 casos) y el ICV de 0.001 sugieren condiciones de vida precarias, especialmente en acceso a vivienda, servicios públicos y seguridad alimentaria. La dispersión poblacional y la falta de titulación territorial agravan estas brechas, requiriendo enfoques diferenciados que prioricen la participación de los pueblos Emberá y Emberá-Chamí en la planificación local.</p>
-  <div class="sin-datos">Datos NBI no disponibles a este nivel · ver informes por pueblo.</div>
-  <div class="fuente">Fuente: visor_dane.nbi_pueblo · CNPV 2018 (DANE)</div>
-</div>
-
-<div class="pagina">
-  <h2>§ 8. Conflicto armado</h2>
-  <p>El conflicto armado en Apía ha afectado a 9 personas indígenas con discapacidad, con un patrón dominante de desplazamiento forzado (88.9% de los casos). Este hecho, concentrado entre 1985 y 2024, refleja dinámicas de despojo en zonas sin resguardos, donde la población indígena carece de protección territorial. La amenaza (1 caso) como segundo hecho más frecuente indica riesgos persistentes para líderes y comunidades. La correlación entre discapacidad y victimización sugiere impactos diferenciados en salud mental y movilidad, agravados por la falta de rutas de atención con enfoque étnico.</p>
-  <div class="kpis" style="grid-template-columns: repeat(2, 1fr);">
-    <div class="kpi"><div class="label">Víctimas con cap. diversas</div><div class="val">9</div><div class="sub">RUV cruzado · 1985-2024</div></div>
-    <div class="kpi"><div class="label">Hecho principal</div><div class="val" style="font-size: 1rem;">Desplazamiento forzado</div><div class="sub">88,9% del total</div></div>
-  </div>
-  <h3>Top 5 hechos victimizantes</h3>
-  <div class="bar"><div class="lbl" style="flex: 0 0 240px;">Desplazamiento forzado</div><div class="track"><div class="fill" style="width: 100.0%"></div></div><div class="num">8</div></div>
-<div class="bar"><div class="lbl" style="flex: 0 0 240px;">Amenaza</div><div class="track"><div class="fill" style="width: 12.5%"></div></div><div class="num">1</div></div>
-
-  <div class="fuente">Fuente: victimas.universo (UARIV) · cruce con discapacidad post-K04</div>
-  <h2>§ 9. Indicador Compuesto de Vulnerabilidad (ICV)</h2>
-  <p>El Índice de Condiciones de Vida (ICV) de Apía (0.001) es extremadamente bajo, explicado por la ausencia de datos en NBI y prevalencia de discapacidad, que anulan dos de los tres componentes del índice. El único factor ponderado (conflicto) registra un valor de 0.002, reflejando el impacto del desplazamiento forzado en la población indígena. Este resultado posiciona a Apía en una situación crítica, donde la falta de información no debe interpretarse como ausencia de necesidades, sino como una alerta para priorizar la recolección de datos con enfoque diferencial y territorial.</p>
-  
-  <table>
-    <thead><tr><th>Componente</th><th>Valor normalizado</th><th>Peso</th><th>Aporte ICV</th></tr></thead>
-    <tbody>
-      <tr><td>NBI</td><td class="num">0.0</td><td class="num">0.40</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Prevalencia disc.</td><td class="num">0.0</td><td class="num">0.30</td><td class="num"><b>0.000</b></td></tr>
-      <tr><td>Conflicto</td><td class="num">0.002</td><td class="num">0.30</td><td class="num"><b>0.001</b></td></tr>
-      <tr style="background: #f5efe0;"><td colspan="3"><b>ICV Total</b></td><td class="num"><b>0.001</b></td></tr>
-    </tbody>
-  </table>
-  <div class="fuente">Fórmula: ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm</div>
-
-</div>
-
-<div class="pagina">
-  <h2>§ 10. Recomendaciones de política pública</h2>
-  <div class="recomendaciones"><ol>
-      <li>Realizar un censo municipal con enfoque étnico que incluya variables lingüísticas, etarias y de discapacidad, priorizando a los 147 indígenas registrados, para superar el subregistro en pueblos minoritarios como Wiwa y Arhuaco.</li>
-      <li>Implementar mesas interinstitucionales con la Gobernación de Risaralda (código 66) para avanzar en la titulación de territorios colectivos, considerando que el 50.3% de la población pertenece al pueblo Emberá y carece de resguardos.</li>
-      <li>Diseñar rutas de atención psicosocial y reparación integral para las 9 víctimas con discapacidad, con énfasis en los 8 casos de desplazamiento forzado, incorporando saberes tradicionales de los pueblos Emberá y Emberá-Chamí.</li>
-      <li>Incluir cláusulas de consulta previa en los planes de desarrollo municipal para garantizar la participación de los 8 pueblos presentes, especialmente en proyectos que afecten las zonas identificadas en el bbox territorial (5.04°N a -76.06°W).</li>
-      <li>Fortalecer sistemas de información local para monitorear NBI y prevalencia de discapacidad, alineados con el promedio indígena nacional (67.6% NBI), y evitar que la falta de datos perpetúe brechas como las reflejadas en el ICV de 0.001.</li>
-  </ol></div>
-  <h2>§ 11. Metodología</h2>
-  <p><b>Fuentes:</b> Censo Nacional de Población y Vivienda 2018 (DANE) · Registro Único de Víctimas (UARIV) · MGN 2025 DANE · catálogos canónicos ONIC.</p>
-  <p><b>Período:</b> 2018 para indicadores demográficos y de capacidades diversas. Período histórico 1985-2024 para registro de víctimas.</p>
-  <p><b>Limitaciones:</b> los KPIs marcados como "n&lt;30" tienen alta varianza y se reportan como NO_CONFIABLES. La prevalencia indígena tiene un patrón documentado de sub-registro relacionado con concepciones culturales del cuerpo y la diversidad funcional.</p>
-  <p><b>Trazabilidad:</b> cada cifra de este informe está taggeada con metadata <code>{value, query, table, period, n, confiabilidad}</code> consultable vía endpoint <code>GET /api/v1/informes/mpio/66045/data</code>.</p>
-  <div class="pie-footer">
-    <p>SMT-ONIC · Sistema de Monitoreo Territorial · 2026-05-07</p>
-    <p>Datos abiertos bajo CC BY 4.0 · poblacion@onic.org.co</p>
-  </div>
-</div>
-
-<script>
-  const map = L.map('mapa').fitBounds([[5.040725564452297, -76.06048640391509], [5.2365405211602845, -75.88378225681907]]);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors © CARTO',
-    maxZoom: 19
-  }).addTo(map);
-  L.rectangle([[5.040725564452297, -76.06048640391509], [5.2365405211602845, -75.88378225681907]], {
-    color: '#014a30', weight: 2, fillOpacity: 0.08
-  }).addTo(map);
-  L.marker([5.1386330428062905, -75.97213433036708]).addTo(map)
-    .bindPopup('<b>MUNICIPIO APIA</b>');
-</script>
-</body>
-</html>
+<h2>Resguardos asociados</h2>
+<table>
+<thead><tr><th>Resguardo</th><th>Pueblo ONIC</th><th>Área (ha)</th></tr></thead>
+<tbody>
+    <tr><td colspan="3" class="fuente">El municipio no tiene resguardos ONIC registrados.</td></tr>
+</tbody>
+</table>
+<p class="fuente">Fuente: DANE-CNPV 2018 · `cnpv.disc_indigena_mpio` × `smt_geo.resguardos`. Generado
+el 2026-05-10T04:16:01.482306+00:00. Pipeline reemplaza al generador histórico que producía tablas con cifras vacías.
+Sin links absolutos a localhost · seguro para distribución offline.</p>
+</body></html>

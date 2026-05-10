@@ -366,7 +366,8 @@ def render_dpto(cod_id: str, output_root: Path, dry_run: bool = False) -> dict:
             r = cur.fetchone()
             if not r:
                 raise ValueError(f"Departamento cod_dpto={cod_dpto_id} no existe")
-            nom_dpto, macro_nombre = r[0].strip(), r[1].strip()
+            nom_dpto = (r[0] or "").strip() or f"Dpto {cod_dpto_id}"
+            macro_nombre = (r[1] or "").strip() or "—"
 
             cur.execute(
                 """
@@ -559,7 +560,9 @@ def render_mpio(cod_id: str, output_root: Path, dry_run: bool = False) -> dict:
             r = cur.fetchone()
             if not r:
                 raise ValueError(f"Municipio cod_mpio={cod_mpio_id} no existe en geo.municipios")
-            nom_mpio, cod_dpto, nom_dpto = r[0].strip(), r[1].strip(), r[2].strip()
+            nom_mpio = (r[0] or "").strip() or f"Mpio {cod_mpio_id}"
+            cod_dpto = (r[1] or "").strip()
+            nom_dpto = (r[2] or "").strip() or f"Dpto {cod_dpto}"
 
             cur.execute(
                 """
@@ -1091,7 +1094,7 @@ def _ids_para_nivel(nivel: str, conn) -> list:
         "dpto": "SELECT DISTINCT cod_dpto FROM geo.macro_dptos ORDER BY cod_dpto",
         "mpio": "SELECT cod_mpio FROM cnpv.disc_indigena_mpio WHERE periodo = '2018' ORDER BY cod_mpio",
         "pueblo": "SELECT cod_pueblo FROM pueblo.disc_nacional WHERE periodo = '2018' ORDER BY cod_pueblo",
-        "resguardo": "SELECT cod_resguardo FROM cnpv.disc_resguardo WHERE periodo = '2018' ORDER BY cod_resguardo",
+        "resguardo": "SELECT id_resguar FROM smt_geo.resguardos WHERE id_resguar IS NOT NULL ORDER BY id_resguar",
     }
     sql = queries.get(nivel)
     if not sql:
@@ -1149,14 +1152,16 @@ def _run_nivel(nivel: str, ids: Iterable | None, output_root: Path, dry_run: boo
         finally:
             conn.close()
 
-    print(f"W12-RENDER · nivel={nivel} · output_root={output_root} · n_ids={len(list(ids)) if not isinstance(ids, list) else len(ids)}")
     ids_list = list(ids)
+    print(f"W12-RENDER · nivel={nivel} · output_root={output_root} · n_ids={len(ids_list)}")
     errores = 0
+    procesados = 0
     for cod_id in ids_list:
         try:
             info = renderer(cod_id, output_root, dry_run=dry_run)
             nombre = info.get("nombre", "")
             print(f"  OK {nivel} {info.get('id', cod_id)} · {nombre}")
+            procesados += 1
         except NotImplementedError as e:
             print(f"  PENDIENTE {nivel} {cod_id}: {e}", file=sys.stderr)
             errores += 1
@@ -1164,7 +1169,8 @@ def _run_nivel(nivel: str, ids: Iterable | None, output_root: Path, dry_run: boo
         except Exception as e:  # noqa: BLE001
             print(f"  ERR {nivel} {cod_id}: {e}", file=sys.stderr)
             errores += 1
-    return 2 if errores else 0
+    print(f"  resumen {nivel}: procesados={procesados} errores={errores}")
+    return 2 if errores and procesados == 0 else 0
 
 
 def main(argv: list[str] | None = None) -> int:

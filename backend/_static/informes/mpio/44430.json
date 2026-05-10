@@ -3,251 +3,94 @@
   "id": "44430",
   "nombre": "MAICAO",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 67326,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 780,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 67326,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "720",
-          "pueblo": "WAYUU",
-          "poblacion": 66586
-        },
-        {
-          "cod_pueblo": "800",
-          "pueblo": "ZENU",
-          "poblacion": 579
-        },
-        {
-          "cod_pueblo": "040",
-          "pueblo": "ARHUACO",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "999",
-          "pueblo": "INDIGENA-SIN-INFORMACION",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "050",
-          "pueblo": "WIWA",
-          "poblacion": 17
-        },
-        {
-          "cod_pueblo": "920",
-          "pueblo": "INDIGENAS-VENEZUELA",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "281",
-          "pueblo": "EMBERA-KATIO",
-          "poblacion": 12
-        },
-        {
-          "cod_pueblo": "850",
-          "pueblo": "KANKUAMO",
-          "poblacion": 11
-        },
-        {
-          "cod_pueblo": "020",
-          "pueblo": "AMORUA",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "060",
-          "pueblo": "BARA",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "670",
-          "pueblo": "TSIRIPU",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "090",
-          "pueblo": "BETOYE",
-          "poblacion": 6
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 5
-        },
-        {
-          "cod_pueblo": "340",
-          "pueblo": "INGA",
-          "poblacion": 3
-        },
-        {
-          "cod_pueblo": "431",
-          "pueblo": "KAKUA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "150",
-          "pueblo": "ETTE-E'NEKA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "434",
-          "pueblo": "JUDPA",
-          "poblacion": 2
-        },
-        {
-          "cod_pueblo": "170",
-          "pueblo": "COCAMA",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "080",
-          "pueblo": "BARI",
-          "poblacion": 1
-        },
-        {
-          "cod_pueblo": "070",
-          "pueblo": "BARASANO",
-          "poblacion": 1
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "720",
-        "pueblo": "WAYUU",
-        "poblacion": 66586
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 67217,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 11.6,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "44",
+      "nom_dpto": "LA GUAJIRA",
       "n_resguardos": 6,
       "resguardos": [
         {
-          "nombre": "WOPUMUIN JUNAIN MAIKOU",
+          "nombre_resguardo": "ALBERTO PUSHAINA",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 809.673
+          "area_ha": 225.911
         },
         {
-          "nombre": "NUKAT MALEIWUA - NAPAJANAIN MALEIWA = BENDICION DE DIOS (PUIPUREN, YAWOLIA, GUANAPAIMANA, CHICHITUY, UJOLMANA, WARRALALAIN, JIRRUMANA)",
+          "nombre_resguardo": "NUKAT MALEIWUA - NAPAJANAIN MALEIWA = BENDICION DE DIOS (PUIPUREN, YAWOLIA, GUANAPAIMANA, CHICHITUY, UJOLMANA, WARRALALAIN, JIRRUMANA)",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 375.277
+          "area_ha": 375.277
         },
         {
-          "nombre": "OKOCHI",
+          "nombre_resguardo": "NUMAIN MALEIWA (TIERRA DE DIOS)  (INTEGRADO POR KASISKA-ICHITU-PATAJATAMANA)",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 243.822
+          "area_ha": 173.859
         },
         {
-          "nombre": "ALBERTO PUSHAINA",
+          "nombre_resguardo": "OKOCHI",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 225.911
+          "area_ha": 243.822
         },
         {
-          "nombre": "NUMAIN MALEIWA (TIERRA DE DIOS)  (INTEGRADO POR KASISKA-ICHITU-PATAJATAMANA)",
+          "nombre_resguardo": "SUMAIN WAYUÚ UULIANA",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 173.859
+          "area_ha": 84.619
         },
         {
-          "nombre": "SUMAIN WAYUÚ UULIANA",
+          "nombre_resguardo": "WOPUMUIN JUNAIN MAIKOU",
           "pueblo_onic": "WAYUÚ",
-          "area_pg_ha": 84.619
+          "area_ha": 809.673
         }
       ],
-      "bbox": [
-        11.115282767743818,
-        -72.64845460623394,
-        11.694500102660797,
-        -71.97591734138797
-      ],
-      "nombre_mpio": "MAICAO",
-      "cod_dpto": "44"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 125,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 125,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 89
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 12
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 10
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 6
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 5
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 2
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 89
-      },
-      "pct_hecho_principal": 71.2
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.007,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.025
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T17:38:52",
+  "fecha_generacion": "2026-05-10T04:15:57.104640+00:00",
   "periodo": "2018",
-  "_input_hash": "8d887be64d0195f6"
+  "_input_hash": "1cd4a276752fa524",
+  "_generador": "render_informes.py"
 }

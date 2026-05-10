@@ -3,278 +3,109 @@
   "id": "95200",
   "nombre": "MIRAFLORES",
   "secciones": {
-    "demografia": {
-      "poblacion_total": {
-        "value": 1750,
+    "capacidades_diversas": {
+      "con_discapacidad": {
+        "value": 175,
         "_meta": {
-          "query": "SELECT SUM(poblacion) AS total FROM pueblo.pueblo_municipio WHERE cod_mpio=%s",
-          "table": "pueblo.pueblo_municipio",
+          "query": "SELECT con_disc FROM cnpv.disc_indigena_mpio WHERE cod_mpio = %s AND periodo='2018'",
+          "table": "cnpv.disc_indigena_mpio",
           "period": "2018",
-          "n": 1750,
           "confiabilidad": "CONFIABLE"
         }
       },
-      "_nota": "población indígena del municipio agregada por pueblo (CNPV 2018)"
-    },
-    "pueblos_indigenas": {
-      "n_pueblos": 20,
-      "top": [
-        {
-          "cod_pueblo": "220",
-          "pueblo": "CUBEO",
-          "poblacion": 499
-        },
-        {
-          "cod_pueblo": "680",
-          "pueblo": "TUKANO",
-          "poblacion": 433
-        },
-        {
-          "cod_pueblo": "140",
-          "pueblo": "CARIJONA",
-          "poblacion": 226
-        },
-        {
-          "cod_pueblo": "260",
-          "pueblo": "DESANO",
-          "poblacion": 143
-        },
-        {
-          "cod_pueblo": "310",
-          "pueblo": "GUANANO",
-          "poblacion": 94
-        },
-        {
-          "cod_pueblo": "530",
-          "pueblo": "PIRATAPUYO",
-          "poblacion": 72
-        },
-        {
-          "cod_pueblo": "600",
-          "pueblo": "SIRIANO",
-          "poblacion": 67
-        },
-        {
-          "cod_pueblo": "435",
-          "pueblo": "MAKU",
-          "poblacion": 41
-        },
-        {
-          "cod_pueblo": "130",
-          "pueblo": "CARAPANA",
-          "poblacion": 38
-        },
-        {
-          "cod_pueblo": "660",
-          "pueblo": "TIKUNA",
-          "poblacion": 20
-        },
-        {
-          "cod_pueblo": "580",
-          "pueblo": "SIKUANI",
-          "poblacion": 16
-        },
-        {
-          "cod_pueblo": "700",
-          "pueblo": "TUYUKA",
-          "poblacion": 14
-        },
-        {
-          "cod_pueblo": "430",
-          "pueblo": "NUKAK-MAKU",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "550",
-          "pueblo": "PUINAVE",
-          "poblacion": 13
-        },
-        {
-          "cod_pueblo": "110",
-          "pueblo": "CABIYARI",
-          "poblacion": 9
-        },
-        {
-          "cod_pueblo": "250",
-          "pueblo": "CURRIPACO",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "630",
-          "pueblo": "TARIANO",
-          "poblacion": 8
-        },
-        {
-          "cod_pueblo": "570",
-          "pueblo": "SALIBA",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "610",
-          "pueblo": "TAIWANO",
-          "poblacion": 4
-        },
-        {
-          "cod_pueblo": "640",
-          "pueblo": "TATUYO",
-          "poblacion": 4
-        }
-      ],
-      "principal": {
-        "cod_pueblo": "220",
-        "pueblo": "CUBEO",
-        "poblacion": 499
-      }
-    },
-    "capacidades_diversas": {
-      "_sin_datos": true,
-      "_nota": "datos de discapacidad por municipio no disponibles · solo a nivel pueblo+dpto",
-      "promedio_indigena_nacional": {
-        "value": 60.0,
+      "poblacion_referencia": {
+        "value": 1584,
         "_meta": {
-          "query": "doctrina",
-          "table": "constante",
-          "period": "2018",
-          "n": null,
-          "confiabilidad": "CONFIABLE"
+          "table": "cnpv.disc_indigena_mpio",
+          "period": "2018"
+        }
+      },
+      "prevalencia_x_1000": {
+        "value": 110.48,
+        "_meta": {
+          "formula": "tasa_x_1000 from cnpv.disc_indigena_mpio"
         }
       }
     },
     "territorial": {
+      "cod_dpto": "95",
+      "nom_dpto": "GUAVIARE",
       "n_resguardos": 9,
       "resguardos": [
         {
-          "nombre": "LAGOS DEL DORADO, LAGOS DEL PASO Y EL REMANSO",
-          "pueblo_onic": "TUKANO",
-          "area_pg_ha": 41125.808
-        },
-        {
-          "nombre": "VUELTA DEL ALIVIO",
-          "pueblo_onic": "GUANANO",
-          "area_pg_ha": 40803.127
-        },
-        {
-          "nombre": "YAVILLA II",
+          "nombre_resguardo": "CENTRO MIRAFLORES",
           "pueblo_onic": "KUBEO",
-          "area_pg_ha": 31084.268
+          "area_ha": 689.885
         },
         {
-          "nombre": "PUERTO NARE",
-          "pueblo_onic": "KARIJONA",
-          "area_pg_ha": 19695.103
-        },
-        {
-          "nombre": "PUERTO VIEJO Y PUERTO ESPERANZA",
-          "pueblo_onic": "KUBEO",
-          "area_pg_ha": 10072.733
-        },
-        {
-          "nombre": "LA YUQUERA",
+          "nombre_resguardo": "LAGOS DEL DORADO, LAGOS DEL PASO Y EL REMANSO",
           "pueblo_onic": "TUKANO",
-          "area_pg_ha": 8247.295
+          "area_ha": 41125.808
         },
         {
-          "nombre": "TUCÁN DE CAÑO GIRIZA Y PUERTO LA PALMA",
-          "pueblo_onic": "DESANO",
-          "area_pg_ha": 5408.029
+          "nombre_resguardo": "LA YUQUERA",
+          "pueblo_onic": "TUKANO",
+          "area_ha": 8247.295
         },
         {
-          "nombre": "PUERTO MONFORTH",
+          "nombre_resguardo": "PUERTO MONFORTH",
           "pueblo_onic": "TUBÚ - SIRIANO",
-          "area_pg_ha": 905.983
+          "area_ha": 905.983
         },
         {
-          "nombre": "CENTRO MIRAFLORES",
+          "nombre_resguardo": "PUERTO NARE",
+          "pueblo_onic": "KARIJONA",
+          "area_ha": 19695.103
+        },
+        {
+          "nombre_resguardo": "PUERTO VIEJO Y PUERTO ESPERANZA",
           "pueblo_onic": "KUBEO",
-          "area_pg_ha": 689.885
+          "area_ha": 10072.733
+        },
+        {
+          "nombre_resguardo": "TUCÁN DE CAÑO GIRIZA Y PUERTO LA PALMA",
+          "pueblo_onic": "DESANO",
+          "area_ha": 5408.029
+        },
+        {
+          "nombre_resguardo": "VUELTA DEL ALIVIO",
+          "pueblo_onic": "GUANANO",
+          "area_ha": 40803.127
+        },
+        {
+          "nombre_resguardo": "YAVILLA II",
+          "pueblo_onic": "KUBEO",
+          "area_ha": 31084.268
         }
       ],
-      "bbox": [
-        0.655412580757105,
-        -72.72623594028823,
-        1.9992454526397414,
-        -71.38884802302857
-      ],
-      "nombre_mpio": "MIRAFLORES",
-      "cod_dpto": "95"
+      "_meta": {
+        "fuente": "smt_geo.resguardos",
+        "period": "2018"
+      }
+    },
+    "demografia": {
+      "_sin_datos": true,
+      "_nota": "ver informe nacional o por dpto"
     },
     "lengua": {
-      "_sin_datos": true
+      "_sin_datos": true,
+      "_nota": "ver informe por pueblo"
     },
     "nbi": {
       "_sin_datos": true,
-      "promedio_indigena_nbi": 67.6
+      "_nota": "ver indicadores.icv_municipal"
     },
     "conflicto": {
-      "victimas_total_disc": {
-        "value": 228,
-        "_meta": {
-          "query": "SELECT COUNT(*) FROM victimas.universo\n        WHERE discapacidad='1' AND cod_mpio_ocurrencia=%s",
-          "table": "victimas.universo",
-          "period": "1985-2024",
-          "n": 228,
-          "confiabilidad": "CONFIABLE"
-        }
-      },
-      "hechos_top": [
-        {
-          "hecho": "Desplazamiento forzado",
-          "total": 129
-        },
-        {
-          "hecho": "Acto terrorista / Atentados / Combates / Enfrentamientos / Hostigamientos",
-          "total": 39
-        },
-        {
-          "hecho": "Perdida de Bienes Muebles o Inmuebles",
-          "total": 15
-        },
-        {
-          "hecho": "Homicidio",
-          "total": 14
-        },
-        {
-          "hecho": "Amenaza",
-          "total": 14
-        },
-        {
-          "hecho": "Desaparición forzada",
-          "total": 9
-        },
-        {
-          "hecho": "Lesiones Personales Psicologicas",
-          "total": 3
-        },
-        {
-          "hecho": "Secuestro",
-          "total": 2
-        },
-        {
-          "hecho": "Lesiones Personales Fisicas",
-          "total": 1
-        },
-        {
-          "hecho": "Minas Antipersonal, Munición sin Explotar y Artefacto Explosivo improvisado",
-          "total": 1
-        }
-      ],
-      "hecho_principal": {
-        "hecho": "Desplazamiento forzado",
-        "total": 129
-      },
-      "pct_hecho_principal": 56.6
+      "_sin_datos": true,
+      "_nota": "ver informe nacional"
     },
     "icv": {
-      "score": 0.014,
-      "componentes": {
-        "nbi_norm": 0.0,
-        "prevalencia_norm": 0.0,
-        "conflicto_norm": 0.046
-      },
-      "_formula": "ICV = 0.4*nbi_norm + 0.3*prev_norm + 0.3*conflicto_norm"
+      "_sin_datos": true,
+      "_nota": "ver indicadores.icv_municipal"
     }
   },
-  "fecha_generacion": "2026-05-07T18:41:07",
+  "fecha_generacion": "2026-05-10T04:16:07.402129+00:00",
   "periodo": "2018",
-  "_input_hash": "31f4044ad6c5fa3b"
+  "_input_hash": "e269d8a119a45b91",
+  "_generador": "render_informes.py"
 }
