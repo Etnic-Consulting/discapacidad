@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   db:
     image: postgis/postgis:16-3.4
@@ -8,7 +6,7 @@ services:
     environment:
       POSTGRES_DB: smt_onic
       POSTGRES_USER: smt_admin
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-smt_onic_2026}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - "5450:5432"
     volumes:
@@ -28,8 +26,8 @@ services:
     container_name: smt-onic-api
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgresql+asyncpg://smt_admin:${DB_PASSWORD:-smt_onic_2026}@db:5432/smt_onic
-      DATABASE_URL_SYNC: postgresql://smt_admin:${DB_PASSWORD:-smt_onic_2026}@db:5432/smt_onic
+      DATABASE_URL: postgresql+asyncpg://smt_admin:${DB_PASSWORD}@db:5432/smt_onic
+      DATABASE_URL_SYNC: postgresql://smt_admin:${DB_PASSWORD}@db:5432/smt_onic
       CORS_ORIGINS: '["http://localhost:3000","http://localhost:5173","http://localhost:5174","http://localhost:5175","http://localhost:5176","http://127.0.0.1:5173","http://127.0.0.1:5174","http://127.0.0.1:5175"]'
     ports:
       - "8095:8000"
@@ -37,8 +35,8 @@ services:
       - ./backend/app:/code/app
       - ./backend/scripts:/code/scripts
       - ./backend/_static:/code/_static
-      - ${DISCAPACIDAD_DIR:-C:/Users/wilso/Desktop/discapacidad}:/data/discapacidad:ro
-      - ${VICTIMAS_DIR:-D:/1.Programacion/1.onic-smt-dashboard/victimas}:/data/victimas:ro
+      - ${DISCAPACIDAD_DIR:-./data/discapacidad}:/data/discapacidad:ro
+      - ${VICTIMAS_DIR:-./data/victimas}:/data/victimas:ro
     depends_on:
       db:
         condition: service_healthy

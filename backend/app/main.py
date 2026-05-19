@@ -269,19 +269,21 @@ async def health():
     db_gen = get_db()
     try:
         db = await db_gen.__anext__()
-        # Schemas críticos
-        for schema, tabla, esperado_min in [
-            ("cnpv", "resumen_nacional_etnico", 1),
-            ("pueblo", "disc_nacional", 100),
-            ("pueblo", "piramide_disc", 1000),
-            ("smt_geo", "resguardos", 800),
-            ("smt_geo", "macrorregiones", 5),
-            ("visor_dane", "piramide_pueblo", 5000),
-            ("indicadores", "definiciones", 12),
-            ("proyecciones", "fac", 5),
-            ("proyecciones", "escenarios", 100),
-            ("smt", "resumen", 30),
-        ]:
+        # (schema, tabla, min_esperado, critica)
+        # critica=False → tabla opcional (REDATAM, shapefiles, SMT forms); su ausencia no degrada status
+        TABLE_CHECKS = [
+            ("cnpv", "resumen_nacional_etnico", 1, True),
+            ("pueblo", "disc_nacional", 100, True),
+            ("indicadores", "definiciones", 12, True),
+            ("proyecciones", "fac", 5, True),
+            ("proyecciones", "escenarios", 100, True),
+            ("pueblo", "piramide_disc", 1000, False),   # cargado vía scraper REDATAM
+            ("smt_geo", "resguardos", 800, False),       # cargado vía shapefiles
+            ("smt_geo", "macrorregiones", 5, False),     # cargado vía shapefiles
+            ("visor_dane", "piramide_pueblo", 5000, False),  # datos DANE adicionales
+            ("smt", "resumen", 30, False),               # calculado desde formularios SMT
+        ]
+        for schema, tabla, esperado_min, critica in TABLE_CHECKS:
             try:
                 r = await db.execute(text(f"SELECT COUNT(*) FROM {schema}.{tabla}"))
                 cnt = r.scalar() or 0
@@ -289,14 +291,21 @@ async def health():
                     "rows": cnt,
                     "min_expected": esperado_min,
                     "ok": cnt >= esperado_min,
+                    "optional": not critica,
                 }
-                if cnt < esperado_min:
+                if cnt < esperado_min and critica:
                     db_ok = False
                     db_errors.append(f"{schema}.{tabla} tiene {cnt} filas < esperado {esperado_min}")
             except Exception as e:
-                db_ok = False
-                db_errors.append(f"{schema}.{tabla}: {str(e)[:80]}")
-                checks[f"{schema}.{tabla}"] = {"ok": False, "error": str(e)[:80]}
+                # Rollback para evitar InFailedSqlTransaction en queries siguientes
+                try:
+                    await db.rollback()
+                except Exception:
+                    pass
+                if critica:
+                    db_ok = False
+                    db_errors.append(f"{schema}.{tabla}: {str(e)[:80]}")
+                checks[f"{schema}.{tabla}"] = {"ok": False, "optional": not critica, "error": str(e)[:80]}
     except Exception as e:
         db_ok = False
         db_errors.append(f"db connection: {str(e)[:120]}")

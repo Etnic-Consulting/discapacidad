@@ -4,12 +4,16 @@ Run inside the api container:
     docker exec -it smt-onic-api python -m scripts.seed_auth
 """
 import hashlib
+import os
 import secrets
 import sys
 
 from sqlalchemy import create_engine, text
 
-DATABASE_URL_SYNC = "postgresql://smt_admin:smt_onic_2026@db:5432/smt_onic"
+DATABASE_URL_SYNC = os.environ.get(
+    "DATABASE_URL_SYNC",
+    "postgresql://smt_admin:smt_onic_2026@db:5432/smt_onic",
+)
 
 
 def hash_password(password: str) -> tuple[str, str]:
